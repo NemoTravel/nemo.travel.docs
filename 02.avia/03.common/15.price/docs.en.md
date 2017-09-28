@@ -12,12 +12,12 @@ Contains the full information about the price and its formation for the reservat
 
 -   **TotalPrice** - The total cost of this reservation or order in the agent's selling currency. The data type is [Money](/avia/common/money).
 -   **ExpectedTicketCount** - The expected number of tickets to be issued for this reservation. The data type is int32.
--   **FOPPrices** - Contains the price difference for specific FOPs relative to the price of the reservation without specifying the planned FOP. The data type is complex.
+-   **FOPPrices** - Contains the price difference for specific FOPs relative to the price of the reservation without specifying the planned FOP. The custom data type.
 -   **FOPPrices.FOPPrice** - Contains the price difference for a particular FOP relative to the price of the reservation without specifying the planned FOP. The data type is an array.
 -   **FOPPrices.FOPPrice.FOP** - FOP, for which the price difference is represented. The data type is a string.
 -   **FOPPrices.FOPPrice.Price** - The price difference for this FOP. The data type is [Money](/avia/common/money).
 -   **PriceBreakdown** - The breackdown with the formation of the price of the object. The data type is the PricePart array.
--   **PricePart** - The part of the price of the object, usually for one of the services in this order. The data type is complex.
+-   **PricePart** - The part of the price of the object, usually for one of the services in this order. The custom data type.
 -   **PricePart.ServiceRef** - A reference to the services in the reservation / order for which this price applies. Not indicated if the price applies to all services in the reservation / order. The data type is [Reflist](/avia/common/reflist).
 -   **PricePart.SegmentRef** - A reference to the flight segments to which this price applies. Specificity of issuing several tickets for one flight. The data type is [Reflist](/avia/common/reflist).
 -   **PricePart.TotalPrice** - The total cost of this part of the price. The data type is [Money](/avia/common/money).
@@ -29,17 +29,17 @@ Contains the full information about the price and its formation for the reservat
     -   PenaltiesApplies
 -   **PricePart.PrivateFareInd** - A sign of the presence of private faresin the formation of prices. The data type is bool.
 -   **PricePart.PassengerTypePriceBreakdown** - VI. The data type is the PassengerTypePrice array.
--   **PassengerTypePrice** - The formation of the price for a certain type of the traveler. The data type is complex.
+-   **PassengerTypePrice** - The formation of the price for a certain type of the traveler. The custom data type.
 -   **PassengerTypePrice.TravellerRef** - A reference to travelers. The data type is [Reflist](/avia/common/reflist).
 -   **PassengerTypePrice.PricingType** - The type of passenger for which this price is formed may not coincide with the type of a traveler in the corresponding section. The data type is a string.
 -   **PassengerTypePrice.BaseFare** - The price at the fares in the currency of their establishment. The data type is [Money](/avia/common/money).
 -   **PassengerTypePrice.EquiveFare** - The price by fares in the currency of sale from GDS. The data type is [Money](/avia/common/money).
 -   **PassengerTypePrice.TotalFare** - The full price in the currency of sale from GDS. The data type is [Money](/avia/common/money).
 -   **PassengerTypePrice.Taxes** - Taxes. The data type is the Tax array.
--   **Tax** - The information about a specific tax. The data type is complex, the heir [Money](/avia/common/money).
+-   **Tax** - The information about a specific tax. The custom data type, the heir [Money](/avia/common/money).
 -   **Tax.TaxCode** - The tax code. The data type is a string.
 -   **PassengerTypePrice.Tariffs** - Tariffs. The data type is the Tariff array.
--   **Tariff** - The description of the tariff, which takes part in the formation of this price. The data type is complex, the description is given for AirTariff.
+-   **Tariff** - The description of the tariff, which takes part in the formation of this price. The custom data type, the description is given for AirTariff.
 -   **Tariff.Code** - The tariff code. The data type is a string.
 -   **Tariff.Type** - The tariff type. The data type is enumeration, possible values:
     -   Public

@@ -11,20 +11,20 @@ Search for v 1.2
 
 #### Request
 
--  **RequestedFlightInfo** - contains information about the flight segments you want to find. The data type is complex.
+-  **RequestedFlightInfo** - contains information about the flight segments you want to find. The custom data type.
 -  **RequestedFlightInfo.Direct** - the indicator of search of only direct flights. The data type is boolean.
 -  **RequestedFlightInfo.AroundDates** - a value for searching by district dates. The data type is an unsigned integer 32-bit number.
--  **RequestedFlightInfo.ODPairs** - contains information about the segments of the flight that you want to find. The data type is complex.
--  **RequestedFlightInfo.ODPair** - the segment of the flight you want to find. The data type is complex.
+-  **RequestedFlightInfo.ODPairs** - contains information about the segments of the flight that you want to find. The custom data type.
+-  **RequestedFlightInfo.ODPair** - the segment of the flight you want to find. The custom data type.
 -  **RequestedFlightInfo.ODPair.DepDate** - the date and time from which the desired departure time begins. The data type is a string, the format is yyyy-MM-ddTHH: mm: ss.
 -  **RequestedFlightInfo.ODPair.MaxDepatureTime** - the maximum-allowed departure time. The data type is a string, the format is HH: mm.
--  **RequestedFlightInfo.ODPair.DepaturePoint** - Contains information about the departure point. The data type is complex.
+-  **RequestedFlightInfo.ODPair.DepaturePoint** - Contains information about the departure point. The custom data type.
 -  **RequestedFlightInfo.ODPair.DepaturePoint.Code** - a 3 letter code of the airport / city of departure. The data type is a string.
 -  **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** - a sign that the airport code of the airport city is indicated as the departure point. The data type is boolean.
--  **RequestedFlightInfo.ODPair.ArrivalPoint** - Contains information about the arrival point. The data type is complex. The format is similar to the element *DepaturePoint*
+-  **RequestedFlightInfo.ODPair.ArrivalPoint** - Contains information about the arrival point. The custom data type. The format is similar to the element *DepaturePoint*
 -  **RequestedFlightInfo.ODPair.ID** - The identifier of the element. Used when searching for options for exchange.
 -  **Passengers** - an array of information about passengers for whom you want to find a flight. The data type is an array.
--  **Passengers.Passenger** - the information about the type of passengers for whom you want to find a flight. The data type is complex.
+-  **Passengers.Passenger** - the information about the type of passengers for whom you want to find a flight. The custom data type.
 -  **Passengers.Passenger.Type** - the type of passengers for which you want to find a flight. Data type - enumeration, possible values:
     - ADT - adult - a passenger over 12 years (default)
 	- UNN - child - a passenger older than 2 and under 12 years of age - unaccompanied by an adult
@@ -37,7 +37,7 @@ Search for v 1.2
 	- STU - a student
 	- YTH - youth
 -  **Passengers.Passenger.Count** - the number of passengers of this type for which you want to find a flight. The data type is an integer 32-bit number. It can not be less than 1.
--  **Restrictions** - contains various restrictions applied to search results. The data type is complex.
+-  **Restrictions** - contains various restrictions applied to search results. The custom data type.
 -  **Restrictions.CurrencyCode** - a 3-letter code for the currency of the search results output. Data type - string
 -  **Restrictions.CompanyFilter** - an array of filters for an airline. The data type is an array.
 -  **Restrictions.CompanyFilter.Company** - the information about filtering on the airline. The data type is an array.
@@ -45,7 +45,7 @@ Search for v 1.2
 -  **Restrictions.CompanyFilter.Company.Include** - the type of filtering. The data type is boolean. If *** false *** is specified, the specified airline will be excluded from the search results if *** true *** is specified - only this airline will be present in the issuance, except the other airline specified in filter parameters with the parameter *** true *** .
 -  **Restrictions.CompanyFilter.Company.SegmentNumber** - the number of the requested flight segment (numbering in this case from 1), for which this a / k is required. The data type is an integer 32-bit number.
 -  **Restrictions.PrivateFaresOnly** - search only for private tariffs, default will be sought and private and public, where it is supported. The data type is boolean.
--  **Restrictions.ClassPreference** - Contains a list of preferred flight classes. The data type is complex.
+-  **Restrictions.ClassPreference** - Contains a list of preferred flight classes. The custom data type.
 -  **Restrictions.ClassPreference.ClassOfService** - the type of preferred flight class. Data type - enumeration, possible values:
 	- Economy - only economy class (default)
 	- Business - only business class
@@ -61,15 +61,15 @@ Search for v 1.2
 	- Simple - (by default) simple grouping, the output is in the format GroupSearch v1.1
 	- Advanced - (not supported) advanced grouping
 	- None - without grouping, the output is in the format Search v1.1
--  **Restrictions.SourcePreference** (*debugging parameter, when the release is removed*) - the list of preferred sources of flights. The data type is complex.
+-  **Restrictions.SourcePreference** (*debugging parameter, when the release is removed*) - the list of preferred sources of flights. The custom data type.
 -  **Restrictions.SourcePreference.Source** (*debugging parameter, when the release is removed*) - the ID of the preferred source of flights. The data type is an integer 32-bit number.
 -  **Restrictions.RequestorTags** - Tags of the sender of the request. The data type is an array.
 -  **Restrictions.RequestorTags.Tag** - One of the labels of the sender of the request, describing it by some criterion. The data type is a string.
 -  **Restrictions.MaxResultCount** - Maximum number of flights in the GDS response. The data type is an integer 32 bit number.
 -  **Restrictions.AsyncSearch** - Query mode: (default) false - synchronous search as before, true - asynchronous search with the ability to pull out the portions of supplier responses. The data type is bool.
 -  **Restrictions.Nemo2Pricing** - A sign of the need for pricing. The data type is bool.
--  **EndUserData** - End user data. The data type is complex, the format is similar to the element * EndUserData * from the [DataItem](/avia/common/dataitem)
--  **SellingPointDescription** - The description of the point of sale. the data type is complex, the format is similar to the element **SellingPointDescription** from [DataItem](/avia/common/dataitem)
+-  **EndUserData** - End user data. The custom data type, the format is similar to the element * EndUserData * from the [DataItem](/avia/common/dataitem)
+-  **SellingPointDescription** - The description of the point of sale. The custom data type, the format is similar to the element **SellingPointDescription** from [DataItem](/avia/common/dataitem)
 
 ##### Example
 
@@ -135,16 +135,16 @@ Search for v 1.2
 
 #### Response
 
--  **SearchData** - The search data. The data type is complex.
+-  **SearchData** - The search data. The custom data type.
 -  **SearchData.StartTime** - the date and time the search began on the server. The data type is DateTime.
 -  **SearchData.EndTime** - the end date and time of the search on the server. The data type is DateTime.
 -  **SearchData.IsAsync** - an attribute of asynchronous search. The data type is bool.
 -  **SearchData.Sources** - the  about the sources (packages), where the results were obtained. The data type is an array.
--  **SearchData.Sources.SourceInfo** - a description of the source from which the results were obtained. The data type is complex.
+-  **SearchData.Sources.SourceInfo** - a description of the source from which the results were obtained. The custom data type.
 -  **SearchData.Sources.SourceInfo.ID** - the source ID, where the results were obtained. The data type is int64.
 -  **SearchData.Sources.SourceInfo.Supplier** - a suoolkier from this source. The data type is an enumeration with air carriers.
 -  **SearchData.SearchThreads** - The data about search threads with requests to suppliers. The data type is an array.
--  **SearchData.SearchThreads.SearchThreadInfo** - The data about one of the search threads. The data type is complex.
+-  **SearchData.SearchThreads.SearchThreadInfo** - The data about one of the search threads. The custom data type.
 -  **SearchThreadInfo.SourceID** - The ID, in which the search thread was launched. The data type is int64.
 -  **SearchThreadInfo.IsComplete** - a sign that the thread has completed its work. The data type is bool.
 -  **SearchThreadInfo.StartTime** - The date and time of the thread start. The data type is DateTime.
@@ -152,7 +152,7 @@ Search for v 1.2
 -  **SearchThreadInfo.FromCache** - a sign that the results for this thread are taken from the cache. The data type is bool.
 -  **SearchThreadInfo.OriginalSearchID** - The ID of the original search, within which results were received from the vendor. The data type is int64.
 -  **PlaneFlights** - Contains search output (Flight elements) in the Search v1.1 format. The data type is an array of elements [Flight](/avia/common/flight).
--  **SimpleGroupedFlights** - Contains search output in the format [GroupSearch](/avia/grouping). The data type is complex.
+-  **SimpleGroupedFlights** - Contains search output in the format [GroupSearch](/avia/grouping). The custom data type.
 -  **Subsidies Information** - The information on subsidies. If the fare is subsidized in the flight, then it will have a link to the element in this array. The data type is the same as ***SubsidiesInformation*** in the object [Flight](/avia/common/flight).
 
 ##### Example

@@ -47,15 +47,15 @@ Get airline's routing grid.
 ##### Format Description
 
 
--   **RoutingGrid** — the list of elements with information about the routes. The data type is complex.
+-   **RoutingGrid** — the list of elements with information about the routes. The custom data type.
 -   **RoutingGrid.Routes** — the list of routes. Data type - array.
--   **RoutingGrid.Routes.Departure** — the point of departure. The data type is complex.
+-   **RoutingGrid.Routes.Departure** — the point of departure. The custom data type.
 -   **RoutingGrid.Routes.Departure.Code** — the airport code of departure point. Data type - string.
 -   **RoutingGrid.Routes.Departure.CityCode** — the city code of the point of departure. Data type - string.
 -   **RoutingGrid.Routes.Arrival** — the list of  arrival points. Data type - array.
--   **RoutingGrid.Routes.Arrival.Route** — the arrival point of the route. The data type is complex.
+-   **RoutingGrid.Routes.Arrival.Route** — the arrival point of the route. The custom data type.
 -   **RoutingGrid.Routes.Arrival.IsDirect** — a sign of a direct route. The data type is Boolean.
--   **RoutingGrid.Routes.Arrival.ArrPoint** — the arrival point of the route. The data type is complex.
+-   **RoutingGrid.Routes.Arrival.ArrPoint** — the arrival point of the route. The custom data type.
 -   **RoutingGrid.Routes.Arrival.ArrPoint.Code** — the airport code of the arrival point. Data type - string.
 -   **RoutingGrid.Routes.Arrival.ArrPoint.CityCode** —the city code of the arrival point. Data type - string.
 

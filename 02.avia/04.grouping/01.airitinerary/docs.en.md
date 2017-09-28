@@ -10,12 +10,12 @@ taxonomy:
 Contains the following parameters:
 
 -   **ID** - The unique number of this air itinerary, according to which the system will differ it from others. The data type is an integer 64-bit number.
--   **DepAirp** - The Departure airport information for this segment. The data type is complex.
+-   **DepAirp** - The Departure airport information for this segment. The custom data type.
 -   **DepAirp.AirportCode** - The airport code. The data type is a string.
 -   **DepAirp.CityCode** - The city code (the aggregation code). The data type is a string.
 -   **DepAirp.UTC** - The time zone of the airport. The data type is a string.
 -   **DepAirp.Terminal** - The terminal code. The data type is a string.
--   **ArrAirp** - The arrival airport information for this segment. The data type is complex. The format is similar to the departure airport.
+-   **ArrAirp** - The arrival airport information for this segment. The custom data type. The format is similar to the departure airport.
 -   **StopNum** - The number of stops on this segment of the flight. The data type is an integer 32-bit number.
 -   **ETicket** - A sign of the possibility of ticketing an electronic ticket on this segment. The data type is boolean.
 

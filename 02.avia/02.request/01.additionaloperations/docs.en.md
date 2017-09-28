@@ -11,10 +11,10 @@ Request for execution before version 1.1
 
 #### Request
 
--  **ObjectForOperations** - Contains the identifier of the object for which you want to perform additional operations. The data type is complex. You can specify only one of the nested elements.
+-  **ObjectForOperations** - Contains the identifier of the object for which you want to perform additional operations. The custom data type. You can specify only one of the nested elements.
 -  **ObjectForOperations.FlightID** - The flight ID for which you want to perform additional operations. The data type is an integer 128 bit number.
 -  **ObjectForOperations.BookID** - The booking ID for which you want to perform additional operations. The data type is an integer 64-bit number.
--  **Operations** - The list of additional operations that you want to perform. The data type is complex.
+-  **Operations** - The list of additional operations that you want to perform. The custom data type.
 -  **Operations.Operation** - One of the operations that you want to perform. The data type is enumeration. Possible values are:
 	- CheckAvailability - An availability check. It is only for the flight.
 	- GetFareRules - Get tariff rules.
@@ -26,15 +26,15 @@ Request for execution before version 1.1
 	- ActualizeFlight - Actualize the flight
 	- GetFareFamilies - Getting a variant of the flight cost estimation from different families
 	- GetSubsidizedTariffs - Getting a list of subsidized fares for a flight
--  **OperationsRestrictions** - An additional information for performing the specified operations. The data type is complex.
+-  **OperationsRestrictions** - An additional information for performing the specified operations. The custom data type.
 -  **OperationsRestrictions.CheckAvailabilityWithBookingRequest** - Use the request to take places to check the availability of the flight for booking. The data type is boolean.
--  **OperationsRestrictions.PricingInfo** - An additional information about the price component of the flight, for which you need to perform additional operations. The data type is complex.
--  **OperationsRestrictions.PricingInfo.BookingClassCodes** - The information about the flight classes for which you want to find the price of the flight. The data type is complex.
--  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment** - The information about the flight class for a particular segment. The data type is complex.
+-  **OperationsRestrictions.PricingInfo** - An additional information about the price component of the flight, for which you need to perform additional operations. The custom data type.
+-  **OperationsRestrictions.PricingInfo.BookingClassCodes** - The information about the flight classes for which you want to find the price of the flight. The custom data type.
+-  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment** - The information about the flight class for a particular segment. The custom data type.
 -  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment.SegmentNumber** - The segment number in the flight. The data type is an integer 32-bit number.
 -  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment.BookingClassCode** - The class of the flight class for this segment. The data type is a string.
--  **OperationsRestrictions.PricingInfo.Passengers** - Contains information about passengers for whom you want to find the price of the flight. The data type is complex.
--  **OperationsRestrictions.PricingInfo.Passengers.Passenger** - Contains information about one of the types of passengers for whom you want to find the price of the flight. The data type is complex.
+-  **OperationsRestrictions.PricingInfo.Passengers** - Contains information about passengers for whom you want to find the price of the flight. The custom data type.
+-  **OperationsRestrictions.PricingInfo.Passengers.Passenger** - Contains information about one of the types of passengers for whom you want to find the price of the flight. The custom data type.
 -  **OperationsRestrictions.PricingInfo.Passengers.Passenger.Type** - The passenger type. The data type is enumeration.
 -  **OperationsRestrictions.PricingInfo.Passengers.Passenger.Count** - The number of passengers of this type. The data type is an integer 32-bit number.
 -  **OperationsRestrictions.PricingInfo.CurrencyCode** - ISO Alpha3 is the currency code in which you want to find the price. The data type is a string.

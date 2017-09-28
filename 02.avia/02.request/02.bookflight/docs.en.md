@@ -14,16 +14,16 @@ An operation to create a flight booking working with a 2.0 booking structure.
 -  **FlightID** - The flight ID, which will be booked. The data type is a string.
 -  **Travelers** - travelers for whom a flight reservation is created. The data type is an array[Traveller](/avia/common/traveller).
 - **DataItems** - content to create the booking. The data type is an array of [DataItem](/avia/common/dataitem).
-- **AdditionalActions** - An additional actions to be performed with the flight reservation. The data type is complex.
+- **AdditionalActions** - An additional actions to be performed with the flight reservation. The custom data type.
 - **AdditionalActions.QueueNum** - the number of the queue to which to place the reservation after its creation. The data type is a string.
 - **AdditionalActions.CalculatePrice** - A sign of the need to calculate pricing. The data type is bool.
 - **AdditionalActions.HostCommandsToExecute** - The terminal commands set (Optional, only supported for uAPI). Data type is an array of strings.
-- **PricingOptions** - additional options for charging the reservation. The data type is complex.
+- **PricingOptions** - additional options for charging the reservation. The custom data type.
 - **PricingOptions.FOPsForAlternativePrices** - FOPs for which you need to get an additional estimate of the booking. The data type is an array.
 - **PricingOptions.FOPsForAlternativePrices.Type** - FOPs, for which you need to get an estimate of the booking. The data type is a string.
 - **PricingOptions.BookSubsidyTariffs** - Includes reservation of subsidized tariffs. The data type is bool.
 - **AncillaryServices** - The list of ancillary services for booking. The data type is an array.
-- **AncillaryServices.AncillaryService** -The ancillary service. The data type is complex.
+- **AncillaryServices.AncillaryService** -The ancillary service. The custom data type.
 - **AncillaryServices.AncillaryService.ID** - The ID of the variable ancillary service (not taken into account when booking). The data type is int.
 - **AncillaryServices.AncillaryService.RFIC** - RFIC of ancillary service. The data type is a string.
 - **AncillaryServices.AncillaryService.RFISC** - RFISC of ancillary services. The data type is a string.

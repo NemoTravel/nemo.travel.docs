@@ -16,7 +16,7 @@ Used to get currency rates from GDS.
 
 #### Response
 
--  **Conversions** - Rates of the specified currency. The data type is complex.
--  **Conversions.Conversion** - The currency rate. The data type is complex.
+-  **Conversions** - Rates of the specified currency. The custom data type.
+-  **Conversions.Conversion** - The currency rate. The custom data type.
 -  **Conversions.Conversion.CurrencyCode** - The code of the currency whose rate is indivated. The data type is ISO Alpha3 string.
 -  **Conversions.Conversion.Rate** - The rate of the indicated currency. The data type is a 32-bit floating-point number.

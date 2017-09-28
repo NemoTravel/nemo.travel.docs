@@ -11,18 +11,18 @@ taxonomy:
 
 ##### Format Description
 
-- ** RequestedFlightInfo ** - contains information about the flight segments you want to find. The data type is complex.
+- ** RequestedFlightInfo ** - contains information about the flight segments you want to find. The custom data type.
 - ** RequestedFlightInfo.Direct ** - the indicator of search of only direct flights. The data type is bool.
-- ** RequestedFlightInfo.ODPair ** - the segment of the flight you want to find. The data type is complex.
+- ** RequestedFlightInfo.ODPair ** - the segment of the flight you want to find. The custom data type.
 - ** RequestedFlightInfo.ODPair.DepatureDateTime ** - The departure date or start date of the period and time (optional), from which the desired departure time begins. The data type is a string, the format is <code>yyyy-MM-dd\[THH:mm:ss\]</code>.
 - ** RequestedFlightInfo.ODPair.DepatureDateTime2 ** - the end date of the period. The data type is a string, the format is yyyy-MM-dd.
 - ** RequestedFlightInfo.ODPair.MaxDepatureTime ** - the maximum-allowed departure time. The data type is a string, the format is HH: mm.
-- ** RequestedFlightInfo.ODPair.DepaturePoint ** - Contains information about the origin point. The data type is complex.
+- ** RequestedFlightInfo.ODPair.DepaturePoint ** - Contains information about the origin point. The custom data type.
 - ** RequestedFlightInfo.ODPair.DepaturePoint.Code ** - a 3 letter code of the airport / city of departure. The data type is a string.
 - ** RequestedFlightInfo.ODPair.DepaturePoint.IsCity ** - a sign that the airport code of the airport city is indicated as the departure point. The data type is boolean.
-- ** RequestedFlightInfo.ODPair.ArrivalPoint ** - Contains information about the arrival point. The data type is complex. The format is similar to the element * DepaturePoint *
+- ** RequestedFlightInfo.ODPair.ArrivalPoint ** - Contains information about the arrival point. The custom data type. The format is similar to the element * DepaturePoint *
 - ** Restrictions ** - Similar to the * Restrictions * parameter from the  [Search\_1\_2](/avia/request/search).
-- ** EndUserData ** - End user data. The data type is complex, the format is similar to the element * EndUserData * from the [DataItem](/avia/common/dataitem).
+- ** EndUserData ** - End user data. The custom data type, the format is similar to the element * EndUserData * from the [DataItem](/avia/common/dataitem).
 
 ##### Example
 
@@ -68,20 +68,20 @@ taxonomy:
 
 #### Response
 
-- ** Flights ** - Container for search results. The data type is complex.
-- ** Flights.ScheduleFlight ** - The Flight founded in the schedule. The data type is complex. The format is similar to the Flight element from the [Search\_1\_2](/avia/request/search), but instead of the Segments property, the ScheduleSegments property described below.
-- ** ScheduleFlight.ScheduleSegments ** - An array of ScheduleSegment elements. The data type is complex.
-- ** ScheduleSegment ** - The information about the flight segment. The data type is complex.
+- ** Flights ** - Container for search results. The custom data type.
+- ** Flights.ScheduleFlight ** - The Flight founded in the schedule. The custom data type. The format is similar to the Flight element from the [Search\_1\_2](/avia/request/search), but instead of the Segments property, the ScheduleSegments property described below.
+- ** ScheduleFlight.ScheduleSegments ** - An array of ScheduleSegment elements. The custom data type.
+- ** ScheduleSegment ** - The information about the flight segment. The custom data type.
 - ** ScheduleSegment.ID ** - Sequence number of this segment on the flight. The data type is an integer 32-bit number.
-- ** ScheduleSegment.DepAirp ** - The information about the departure airport for this segment. The data type is complex.
+- ** ScheduleSegment.DepAirp ** - The information about the departure airport for this segment. The custom data type.
 - ** ScheduleSegment.DepAirp.AirportCode ** - The airport code. The data type is a string.
 - ** ScheduleSegment.DepAirp.CityCode ** - The city code (aggregation code). The data type is a string.
 - ** ScheduleSegment.DepAirp.UTC ** - Time zone of the airport. The data type is a string.
 - ** ScheduleSegment.DepAirp.Terminal ** - The terminal code. The data type is a string.
-- ** ScheduleSegment.ArrAirp ** - The Arrival airport information for this segment. The data type is complex. The format is similar to the departure airport
+- ** ScheduleSegment.ArrAirp ** - The Arrival airport information for this segment. The custom data type. The format is similar to the departure airport
 - ** ScheduleSegment.ETicket ** - A sign of the possibility of issuing an electronic ticket on this segment. The data type is boolean.
-- ** ScheduleSegment.StopPoints ** - The list of stop points on this segment of the flight. The data type is complex.
-- ** ScheduleSegment.StopPoints.StopPoint ** - The information about one of the stop points on this segment of the flight. The data type is complex.
+- ** ScheduleSegment.StopPoints ** - The list of stop points on this segment of the flight. The custom data type.
+- ** ScheduleSegment.StopPoints.StopPoint ** - The information about one of the stop points on this segment of the flight. The custom data type.
 - ** ScheduleSegment.StopPoints.StopPoint.AirportCode ** - The airport code of the stop point. The data type is a string.
 - ** ScheduleSegment.StopPoints.StopPoint.CityCode ** - The code for the city of the stop point. The data type is a string.
 - ** ScheduleSegment.StopPoints.StopPoint.UTC ** - The time zone of the stop point. The data type is a string.
@@ -99,7 +99,7 @@ taxonomy:
 - ** ScheduleSegment.ArrivalDaysChange ** - Offset of the day of arrival relative to the departure day. The data type is an integer 32-bit number.
 - ** ScheduleSegment.StartDate ** - Start date of the departure period in the format yyyy-MM-dd. The data type is a string.
 - ** ScheduleSegment.EndDate ** - End date of the departure period in the format yyyy-MM-dd. The data type is a string.
-- ** ScheduleSegment.OperatedDaysOfWeek ** - An array of departure days. The data type is complex.
+- ** ScheduleSegment.OperatedDaysOfWeek ** - An array of departure days. The custom data type.
 - ** ScheduleSegment.OperatedDaysOfWeek.DayOfWeek ** - The day of the week in which the flight will take place. Data type - enumeration, possible values:
     - Sunday - Sunday.
     - Monday - Monday.
@@ -108,7 +108,7 @@ taxonomy:
     - Thursday - Thursday.
     - Friday - Friday.
     - Saturday - Saturday.
-- ** ScheduleSegment.BaseClasses ** - An array with available base flight classes. The data type is complex.
+- ** ScheduleSegment.BaseClasses ** - An array with available base flight classes. The custom data type.
 - ** ScheduleSegment.BaseClasses.BaseClass ** - The base flight class. The data type is enumeration. Possible values ​​are:
     Economy - Economy class (both standard and premium).
     - Business - Business class (both standard and premium).

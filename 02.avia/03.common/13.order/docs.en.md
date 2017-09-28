@@ -12,14 +12,14 @@ Order
 An order with a set of booked services, which can correspond to several reservation in the systems of service suppliers.
 
 -   **ID** - the unique ID of this order. The data type is a string.
--   **OwnerInfo** - The information about the source of the order. The data type is complex.
+-   **OwnerInfo** - The information about the source of the order. The custom data type.
 -   **OwnerInfo.EngineVersion** - the type of the order engine in which it was created. Data type - enumeration, possible values:
     -   NEMO\_NET
     -   NEMO\_PHP
 -   **OwnerInfo.OwnerID** - The owner of the order ID in the system. The data type is int32.
 -   **OwnerInfo.UserHierarchy** - The hierarchy of the owner of the order. The data type is an array.
 -   **OwnerInfo.UserHierarchy.ID** - The ID of a group in the order owner hierarchy. The data type is int32.
--   **OwnerInfo.UTMSource** - The source of the transition to create an order in the system. The data type is complex.
+-   **OwnerInfo.UTMSource** - The source of the transition to create an order in the system. The custom data type.
 -   **Type** - the type of the order. Data type - enumeration, possible values:
     -   Online - contains only online services - live in conditions of interaction with supplier systems
     -   Offline - contains only offline services - live without interaction with the supplier systems, structured or not - do not matter
@@ -49,7 +49,7 @@ An order with a set of booked services, which can correspond to several reservat
 -   **AncillaryServices** - the list of ancillary services from the supplier booked for this order. The data type is the  [Service](/avia/common/service) array.
 -   **ProcessingServices** - the list of order processing services provided under this order. The data type is an array [OrderProcessingService] (# OrderProcessingService "wikilink").
 -   **ServiceGroups** - groups of services in the order. The data type is the * ServiceGroup * array.
--   **ServiceGroup** - a group of services. The data type is complex.
+-   **ServiceGroup** - a group of services. The custom data type.
 -   **ServiceGroup.ServiceRef** - the list of services, united in this service. The data type is the RefList array.
 -   **ServiceGroup.GroupType** - a type / base grouping. Data type - enumeration, possible values:
     -   SingleBook - one booking in the supplier system, as a rule,used by  groupings of base and ancillary services, which are presented in the form of a unified reservation.
@@ -57,7 +57,7 @@ An order with a set of booked services, which can correspond to several reservat
 -   **ServiceGroup.BookID** - The booking  ID. The data type is long.
 -   **Price** - the price of the order. The data type is [Price](/avia/common/price).
 -   **PaymentTransactions** - the list of payment transactions for the order. The data type is the * Transaction * array.
--   **Transaction** - The payment transaction for the order. The data type is complex.
+-   **Transaction** - The payment transaction for the order. The custom data type.
 -   **Transaction.ID** '''- The transaction identifier in the payment system component. The data type is long.
 -   **Transaction.Status** - the status of the transaction. Data type - enumeration, possible values:
     -   Initialized

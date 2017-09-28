@@ -13,15 +13,15 @@ Used to make changes to the booking with [booking version 2.0](/avia/common/book
 
 -  **BookID** - The booking ID in which you want to make changes. The data type is long.
 -  **Travelers** - The information about the travelers that needs to be changed. The data type is an array.
--  **Travellers.Traveller** - The information about the traveler that needs to be changed. The data type is complex.
+-  **Travellers.Traveller** - The information about the traveler that needs to be changed. The custom data type.
 -  **Travellers.Traveller.Action** - The action with the traveler that you want to perform. As of 03.09.2015 it is supported only by changing the already existing traveler. Data type - enumeration, possible values:
 	- Add
 	- Modify
 	- Remove
 -  **Travellers.Traveller.Traveller** - The new traveler's data for making a reservation. The data type is [Traveler](/avia/common/traveller).
--  **Flight** - contains information about the changes in the flight that you want to make to the reservation. The data type is complex.
+-  **Flight** - contains information about the changes in the flight that you want to make to the reservation. The custom data type.
 -  **Flight.Segments** - The information about actions with flight segments. The data type is an array.
--  **Flight.Segments.Segment** - contains information about changes in one of the flight segments. The data type is complex.
+-  **Flight.Segments.Segment** - contains information about changes in one of the flight segments. The custom data type.
 -  **Segment.Action** - An action with the segment that you want to execute. As of September 3, 2015, actions are not supported. Data type - enumeration, possible values:
 	- Add
 	- Modify
@@ -34,14 +34,14 @@ Used to make changes to the booking with [booking version 2.0](/avia/common/book
 -  **Segment.DepatureDateTime** - date and time of departure. The data type is the date and time in the format yyyy-MM-ddTHH: mm: ss.
 -  **Segment.BookingClassCode** - the class book of booking. The data type is a string.
 -  **DataItems** - contains information about changes in the content of the reservation. The data type is an array.
--  **DataItems.ModifyDataItem** - contains information about changes in one of the blocks of content data. The data type is complex.
+-  **DataItems.ModifyDataItem** - contains information about changes in one of the blocks of content data. The custom data type.
 -  **ModifyDataItem.Action** - An action with the content that you want to perform. As of 03/09/2015, it is supported only by changing existing content. Data type - enumeration, possible values:
 	- Add
 	- Modify
 	- Remove
 -  **ModifyDataItem.DataItem** - contains the actual data on the content. The data type is [DataItem](/avia/common/dataitem).
 -  **AncillaryServices** - contains information about the variable admissions. The data type is an array.
--  **ModifyAncillaryService** - contains information about one of the variable admissions. The data type is complex.
+-  **ModifyAncillaryService** - contains information about one of the variable admissions. The custom data type.
 -  **Action** - An action with content that you want to perform (Modify is not allowed for admissions) The format is similar to other data blocks. Additional services with EMDs can be removed from the reservation only after entering their EMD.
 - **AncillaryService** - An ancillary services on which there will be a change in the reservation. The data type, format and filling logic, in case of booking, is similar to AncillaryService in the [booking request](/avia/request/bookflight). In case of deletion, only the ID is the required element.
 -  **CalculatePrice** - a sign of necessity of calculation of pricing after modification. The data type is bool.
