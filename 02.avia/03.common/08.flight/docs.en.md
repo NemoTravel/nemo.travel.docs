@@ -1,0 +1,134 @@
+---
+title: Flight
+taxonomy:
+    category:
+        - docs
+---
+
+### Flight
+
+Flight presentation format 1.1.
+
+-   **Flight** — The root element, inside of which there are flight data. The data type is complex.
+-   **Flight.ID** — The Flight ID.  The data type is an integer 128-bit number.
+-   **Flight.SourceID** — the identifier of the package of requisites from which this flight was received. The data type is an integer 32-bit number.
+-   **Flight.TypeInfo** —the typification of the flight according to various criteria. The data type is complex.
+-   **Flight.TypeInfo.Type** — The type of flight. Data type - enumeration, possible values:
+    -   **Regular** — regular flight;
+    -   **Charter** — charter;
+    -   **LowCost** — low cost (LCC).
+-   **Flight.TypeInfo.MultyOWLeg** — a sign that this flight is the flight leg of a multi-flight flight. The data type is boolean.
+-   **Flight.TypeInfo.DirectionType** — The type of flight route. Data type - enumeration, possible values:
+	- **OW** - one way flight   - simple flight consisting of one segment;
+	- **RT** - roundtrip flight - flight from 2 segments, where the departure point of the first segment coincides with the arrival point of the second segment and the arrival point of the first segment coincides with the departure point of the second segment;
+	- **CT** - complex route - some random set of segments;
+	- **SingleOJ** - single Open Jaw - a flight from 2 segments, where the departure point of the first segment coincides with the arrival point of the second segment or the arrival point of the first segment coincides with the departure point of the second segment;
+	- **DoubleOJ** - double Open Jaw - a flight from 2 segments, in which the departure point of the first segment does not coincide with the arrival point of the second segment and the point of arrival of the first segment does not coincide with the departure point of the second segment;
+	- **hRT** - RT / 2 - a simple OW flight was requested, but on the basis of the settings of a certain package of requisites RT / 2 search was launched;
+	- **mOW** - multipleOW - OW + OW + - the requested flight from several segments was found as a set of separate search results.
+-   **Flight.MandatoryLatinNames** - a sign of the obligation to create a reservation with the full name in Latin. The data type is boolean.
+-   **Flight.Segments** - The container for flight segments. The data type is complex.
+-   **Flight.Segments.Segment** - The information about the flight segment. The data type is complex.
+-   **Segment.ID** - the serial number of this segment in the flight. The data type is an integer 32-bit number.
+-   **Segment.DepAirp** - The information about the departure airport for this segment. The data type is complex.
+-   **Segment.DepAirp.AirportCode** - The airport code. The data type is a string.
+-   **Segment.DepAirp.CityCode** - The city code (airport aggregator). The data type is a string.
+-   **Segment.DepAirp.UTC** - The time zone of the airport. The data type is a string.
+-   **Segment.DepAirp.Terminal** - The terminal code. The data type is a string.
+-   **Segment.ArrAirp** - The information about the arrival airport for this segment. The data type is complex. The format is the same as the departure airport
+-   **Segment.ETicket** - a sign of the possibility of ticketing an electronic ticket on this segment. The data type is boolean.
+-   **Segment.StopPoints** - The list of stop points on this segment of the flight. The data type is complex.
+-   **Segment.StopPoints.StopPoint** - The information about one of the stop points on this segment of the flight. The data type is complex.
+-   **Segment.StopPoints.StopPoint.AirportCode** - The airport stop code. The data type is a string.
+-   **Segment.StopPoints.StopPoint.CityCode** - The city code of the stop point. The data type is a string.
+- 	**Segment.StopPoints.StopPoint.UTC** - the time zone of the stop point. The data type is a string.
+-   **Segment.StopPoints.StopPoint.Terminal** - The terminal at the airport. The data type is a string.
+-   **Segment.StopPoints.StopPoint.ArrDateTime** - the date and time of arrival at the stop point in the format </code> yyyy-MM-ddTHH: mm: ss </code>. The data type is a string.
+-   **Segment.StopPoints.StopPoint.DepDateTime** - the date and time of departure from the stop point in the format </code> yyyy-MM-ddTHH: mm: ss </code>. The data type is a string.
+-	**Segment.FlightNumber** - The flight number for this segment of flight. The data type is an integer 32-bit number.
+-   **Segment.FlightTime** - The time in transit in minutes. The data type is an integer 32-bit number.
+-	**Segment.OpAirline** - the code of the airline directly performing this flight. The data type is a string.
+-   **Segment.MarkAirline** - the code of the airline providing this flight. The data type is a string.
+-   **Segment.AircraftType** - the type code of the aircraft. The data type is a string.
+-	**Segment.DepDateTime** - The departure date and time in the format </code> yyyy-MM-ddTHH: mm: ss </code>. The data type is a string.
+- 	**Segment.ArrDateTime** - The date and time of arrival in the format </code> yyyy-MM-ddTHH: mm: ss </code>. The data type is a string.
+- 	**Segment.BookingClass** - The information about the flight class for this segment of the flight. The data type is complex.
+- 	**Segment.BookingClass.BaseClass** - the base class of the flight. The data type is an enumeration. Possible values ​​are:
+	- **Economy** - economy class;
+	- **PremiumEconomy** - premium economy;
+	- **Business** - business class;
+	- **First** - first class;
+	- **Other** - all other classes that do not belong to any of the above.
+-   **Segment.BookingClass.BookingClassCode** - the class code of the flight. The data type is a string.
+-   **Segment.BookingClass.FreeSeatCount** - the number of available seats for this class of flight. The data type is an integer 32-bit number.
+-   **Segment.BookingClass.MealType** - The available type of meal for this class of flight. The data type is a string.
+-   **Flight.PriceInfo** - The information about the prices for this flight. The data type is complex.
+-   **Flight.PriceInfo.Price** - The information about the specific price for a given flight. The data type is complex.
+-   **Flight.PriceInfo.Price.ID** - the serial number of the price within the flight. The data type is an integer 32-bit number.
+-   **Flight.PriceInfo.Price.ValidatingCompany** - the code of the validating carrier providing this price. The data type is a string.
+-   **Flight.PriceInfo.Price.Refundable** - The type of refund ticket for the flight with a given price. Data type - enumeration, possible values:
+	- **Unknown** - unknown;
+	- **Refundable** - refundable;
+	- **NonRefundable** - non-refundable;
+-   **PenaltiesApplies** - refundable with penalties.
+-   **Flight.PriceInfo.Price.PrivateFareInd** - a sign of the presence of private tariffs in this price. The data type is boolean.
+-   **Flight.PriceInfo.Price.TicketTimeLimit** - the time-limit for this price (the price is valid until) in the format </code> yyyy-MM-ddTHH: mm: ss </ code>. The data type is a string.
+-   **Flight.PriceInfo.Price.PassengerFares** - an array of price components for passenger types. The data type is complex.
+-   **Flight.PriceInfo.Price.PassengerFares.PassengerFare** - The price component for a particular type of passenger. The data type is complex.
+-   **PassengerFare.SegmentRef** - links to the segments to which this passenger-price applies. If there is no - it means that the price is applied to all segments. The data type is an array.
+-   **PassengerFare.SegmentRef.Ref** - The reference to the segment to which this passenger-price applies. The data type is an integer 32-bit number.
+-   **PassengerFare.Type** - The passenger type for which this component is applied. Data type - enumeration, possible values:
+	- **ADT** - adult - a passenger over 12 years of age;
+	- **UNN** - child - a passenger older than 2 years and under 12 years of age without accompanying adults;
+	- **CNN** - child - a passenger older than 2 years and under 12 years of age;
+	- **INF** - a baby is a passenger under 2 years of age who does not occupy seats in the airplane;
+	- **MIL** - a military;
+	- **SEA** - a seaman;
+	- **SRC** - an elderly passenger (pensioner);
+	- **STU** - the student;
+	- **YTH** - youth.
+-   **PassengerFare.Quantity** - the number of passengers of this type. The data type is an integer 32-bit number.
+-   **PassengerFare.PricedAs** - the price type of the passenger for whom the price was received for this type of passenger from GDS. The data type is a string.
+-   **PassengerFare.BaseFare** - the basic price (pure tariffs without taxes) for 1 passenger of this type. The data type is [Money](/avia/common/money).
+-   **PassengerFare.BaseFare.Currency** - the code of the base price currency. The data type is a string.
+-   **PassengerFare.BaseFare.Amount** - the amount of the base price. The data type is a fractional number. ->
+-   **PassengerFare.EquiveFare** - The base price in equivalent currency for 1 passenger of this type. The data type is [Money](/avia/common/money).
+-   **PassengerFare.TotalFare** - The full price (tariffs + taxes) for 1 passenger of this type in an equivalent currency. The data type is [Money](/avia/common/money).
+-   **PassengerFare.Taxes** - The container for the price of this price component. The data type is complex.
+-   **PassengerFare.Taxes.Tax** - The information about a specific taxes. The data type is complex.
+-   **PassengerFare.Taxes.Tax.Currency** - The currency code of the tax. The data type is a string.
+-   **PassengerFare.Taxes.Tax.Amount** - the amount of the tax. The data type is a fractional number.
+-   **PassengerFare.Taxes.Tax.TaxCode** - the code of the tax. The data type is a string.
+-   **PassengerFare.Tariffs** - The container for tariffs of this price component. The data type is complex.
+-   **PassengerFare.Tariffs.Tariff** - The information about one of the tariffs of this price component. The data type is complex.
+-   **PassengerFare.Tariffs.Tariff.Code** - The tariff code. The data type is a string.
+-   **PassengerFare.Tariffs.Tariff.Type** - The type of tariff. Data type - enumeration, possible values:
+	- **Public** - the public (non-private) tariff;
+	- **Coded** - the tariff received through the corporate (corporate) identifier, account code (account code), turkod, etc .;
+	- **Cat35** - category 35, contractual tariffs;
+	- **NonCat35** - tariffs that are not suitable for issue in category 35;
+	- **Private** - all other private tariffs.
+-   **Flight.PriceInfo.Price.PassengerFares.PassengerFare.Tariffs.Tariff.SegNum** - The segment number for which this tariff is applied. The data type is an integer 32-bit number.
+-   **Flight.PriceInfo.Price.PassengerFares.PassengerFare.Tariffs.Tariff.FreeBaggage** - The contains information about free baggage at this fare. The data type is complex.
+-   **Flight.PriceInfo.Price.PassengerFares.PassengerFare.Tariffs.Tariff.FreeBaggage.Measure** - Theunit baggage measure. Data type - enumeration, possible values:
+    - **Kilograms** - kilos;
+	- **Pounds** - pounds;
+	- **Pieces** - the amount of carry-on baggage;
+	- **SpecialCharge** - special charge;
+	- **Size** - the size of the baggage;
+	- **Weight** - weight.
+-   **PassengerFare.Tariffs.Tariff.FreeBaggage.Value** - the amount of free baggage at this fare. The data type is a string.
+-   **PassengerFare.Tariffs.Tariff.FareFamilyDescID** - the identifier of the fare families descriptions. The data type is an integer.
+-   **PassengerFare.Tariffs.Tariff.FareFamilyCode** - the airline code of the fare families. The data type is a string.
+-   **PassengerFare.Commission** - the information about the commission for this price component from GDS. The data type is complex.
+-   **PassengerFare.Commission.Amount** - the absolute value of the commission. The data type is a fractional number.
+-   **PassengerFare.Commission.Percent** - The commission value in percent. The data type is a fractional number.
+-   **PassengerFare.Commission.Currency** - the currency code of the commission. The data type is a string.
+-   **PassengerFare.FareCalc** - the string for calculating the price. The data type is a string.
+-   **PassengerFare.ExchangePriceInfo** - the total exchange fare (the item will only be on receipt of exchange options). The data type is complex
+-   **PassengerFare.ExchangePriceInfo.AirlinePenalty** - the airline's penalty for the exchange. The data type is complex.
+-   **PassengerFare.ExchangePriceInfo.AirlinePenalty.Currency** - The penalty currency code. The data type is a string.
+-   **PassengerFare.ExchangePriceInfo.AirlinePenalty.Amount** - the amount of the penalty. The data type is a fractional number.
+-   **PassengerFare.ExchangePriceInfo.FlightPriceDifference** - the difference in the cost with the flight in the reservation. If the flight is cheaper, the difference will be with a "-" sign. The data type is [Money](/avia/common/money).
+-   **Flight.FareFamiliesDescription** - contains descriptions of the tfare families presenting in the flight. The data type is [Description](/avia/common/ff-description).
+

@@ -1,0 +1,84 @@
+---
+title: Price
+taxonomy:
+    category:
+        - docs
+---
+
+Price
+-----
+
+Contains the full information about the price and its formation for the reservation or order.
+
+-   **TotalPrice** - The total cost of this reservation or order in the agent's selling currency. The data type is [Money](/avia/common/money).
+-   **ExpectedTicketCount** - The expected number of tickets to be issued for this reservation. The data type is int32.
+-   **FOPPrices** - Contains the price difference for specific FOPs relative to the price of the reservation without specifying the planned FOP. The data type is complex.
+-   **FOPPrices.FOPPrice** - Contains the price difference for a particular FOP relative to the price of the reservation without specifying the planned FOP. The data type is an array.
+-   **FOPPrices.FOPPrice.FOP** - FOP, for which the price difference is represented. The data type is a string.
+-   **FOPPrices.FOPPrice.Price** - The price difference for this FOP. The data type is [Money](/avia/common/money).
+-   **PriceBreakdown** - The breackdown with the formation of the price of the object. The data type is the PricePart array.
+-   **PricePart** - The part of the price of the object, usually for one of the services in this order. The data type is complex.
+-   **PricePart.ServiceRef** - A reference to the services in the reservation / order for which this price applies. Not indicated if the price applies to all services in the reservation / order. The data type is [Reflist](/avia/common/reflist).
+-   **PricePart.SegmentRef** - A reference to the flight segments to which this price applies. Specificity of issuing several tickets for one flight. The data type is [Reflist](/avia/common/reflist).
+-   **PricePart.TotalPrice** - The total cost of this part of the price. The data type is [Money](/avia/common/money).
+-   **PricePart.ValidatingCompany** - The validating carrier. The data type is a string.
+-   **PricePart.Refundable** - The type of refundable money at this price of the service. The data type is enumeration, possible values:
+    -   Unknown
+    -   Refundable
+    -   NonRefundable
+    -   PenaltiesApplies
+-   **PricePart.PrivateFareInd** - A sign of the presence of private faresin the formation of prices. The data type is bool.
+-   **PricePart.PassengerTypePriceBreakdown** - VI. The data type is the PassengerTypePrice array.
+-   **PassengerTypePrice** - The formation of the price for a certain type of the traveler. The data type is complex.
+-   **PassengerTypePrice.TravellerRef** - A reference to travelers. The data type is [Reflist](/avia/common/reflist).
+-   **PassengerTypePrice.PricingType** - The type of passenger for which this price is formed may not coincide with the type of a traveler in the corresponding section. The data type is a string.
+-   **PassengerTypePrice.BaseFare** - The price at the fares in the currency of their establishment. The data type is [Money](/avia/common/money).
+-   **PassengerTypePrice.EquiveFare** - The price by fares in the currency of sale from GDS. The data type is [Money](/avia/common/money).
+-   **PassengerTypePrice.TotalFare** - The full price in the currency of sale from GDS. The data type is [Money](/avia/common/money).
+-   **PassengerTypePrice.Taxes** - Taxes. The data type is the Tax array.
+-   **Tax** - The information about a specific tax. The data type is complex, the heir [Money](/avia/common/money).
+-   **Tax.TaxCode** - The tax code. The data type is a string.
+-   **PassengerTypePrice.Tariffs** - Tariffs. The data type is the Tariff array.
+-   **Tariff** - The description of the tariff, which takes part in the formation of this price. The data type is complex, the description is given for AirTariff.
+-   **Tariff.Code** - The tariff code. The data type is a string.
+-   **Tariff.Type** - The tariff type. The data type is enumeration, possible values:
+    -   Public
+    -   Cat35
+    -   Cat25
+    -   InclusiveTour
+    -   PersonalCompanySite
+    -   Private
+-   **Tariff.ClassOfService** - The class of service for this tariff. The data type is enumeration, possible values:
+    -   Economy
+    -   Business
+    -   First
+    -   PremiumEconomy
+    -   Other
+-   **Tariff.BookingClassCode** - Class booking letters. The data type is a string.
+-   **Tariff.SegmentID** - The ID of the segment of the flight to which this tariff applies. The data type is Int32.
+-   **Tariff.FreeBaggage** - The information about a free baggage at this fare. The data type is Baggage.
+-   **Tariff.FreeBaggage.Value** - The value of the measure of free baggage. The data type is a string.
+-   **Tariff.FreeBaggage.Measure** - The unit of measure of free baggage. The data type is enumeration, possible values:
+    -   Kilograms
+    -   Pounds
+    -   Pieces
+    -   SpecialCharge
+    -   Size
+    -   ValueOfMeasure
+    -   Weight
+-   **Tariff.FreeBaggage.Size** - The information on the size restrictions imposed on baggage. The data type is a string.
+-   **Tariff.FreeMeal** - Free meals at this rate. The data type is the MealType array.
+-   **MealType** - The type of free meals according to the tariff. Data type - enumeration, possible values:
+    -   AlcoholBeverages
+    -   Beverages
+    -   Breakfast
+    -   ColdMeal
+    -   ContinentalBreakfast
+    -   Dinner
+    -   HotMeal
+    -   Lunch
+    -   Meal
+    -   Refreshment
+    -   Snack
+-   **Tariff.IsSystemTransfer** - A sign of the system transfer. The data type is bool.
+-   **PassengerTypePrice.FareCalc** - The line for calculating the price. The data type is a string.
