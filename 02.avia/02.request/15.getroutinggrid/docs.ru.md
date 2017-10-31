@@ -1,5 +1,5 @@
 ---
-title: 'GetRoutingGrid'
+title: GetRoutingGrid
 taxonomy:
     category:
         - docs

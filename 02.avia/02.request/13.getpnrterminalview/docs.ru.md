@@ -1,5 +1,5 @@
 ---
-title: 'GetPNRTerminalView'
+title: GetPNRTerminalView
 taxonomy:
     category:
         - docs
