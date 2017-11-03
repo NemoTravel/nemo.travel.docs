@@ -1,5 +1,5 @@
 ---
-title: 'Nemo Connect Авиа'
+title: 'Nemo Connect Avia'
 taxonomy:
     category:
         - docs
@@ -8,6 +8,6 @@ child_type: docs
 
 ### Chapter 2
 
-# Nemo Connect Авиа
+# Nemo Connect Avia
 
 Документация по Nemo Connect
