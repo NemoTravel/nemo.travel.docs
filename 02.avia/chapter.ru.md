@@ -1,5 +1,5 @@
 ---
-title: 'Nemo2 API Авиа'
+title: 'Nemo Connect Авиа'
 taxonomy:
     category:
         - docs
@@ -8,6 +8,6 @@ child_type: docs
 
 ### Chapter 2
 
-# Nemo2 API Авиа
+# Nemo Connect Авиа
 
-Документация по Nemo2 API
+Документация по Nemo Connect

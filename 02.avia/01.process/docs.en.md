@@ -8,7 +8,7 @@ process:
     twig: true
 ---
 
-To issue a ticket using the Nemo web service, need to perform several operations in sequence:
+To issue a ticket using the Nemo Connect web service, need to perform several operations in sequence:
 
 - Search and selection of a flight with a suitable fare
 - Reservation of the selected flight

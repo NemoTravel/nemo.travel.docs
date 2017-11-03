@@ -5,11 +5,11 @@ taxonomy:
         - docs
 ---
 
-The Nemo2 Web service is written using .NET Framework technologies and located on IIS servers. To interact with the service an interaction protocol [SOAP](https://en.wikipedia.org/wiki/SOAP) is used, to work with the service you need to implement the work on its side with the right methods, it is not necessary to make the support of all the available methods.
+The Nemo Connect web services is written using .NET Framework technologies and located on IIS servers. To interact with the service an interaction protocol [SOAP](https://en.wikipedia.org/wiki/SOAP) is used, to work with the service you need to implement the work on its side with the right methods, it is not necessary to make the support of all the available methods.
 
 In the process of integration is recommended to use the tool [SoapUI OpenSource](https://www.soapui.org/downloads/soapui.html) to test requests.
 
-An example of implementing a connection to the Nemo2 service using SoapClient in the PHP5 programming language
+An example of implementing a connection to the Nemo Connect using SoapClient in the PHP5 programming language
 
 ```php
 $request = [
