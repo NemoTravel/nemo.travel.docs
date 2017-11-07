@@ -50,8 +50,7 @@ taxonomy:
 ||
 | InternationalPassportTJ          | The International passport of a citizen of Tajikistan                                        | A                 | ZB                                                                                                                                              |
 ||
-| InternationalPassportRU          | 
-The International passport of a Russian citizen                                                  | A                 | PSP                                                                                                                                             |
+| InternationalPassportRU          | The International passport of a Russian citizen                                                  | A                 | PSP                                                                                                                                             |
 ||
 | InternationalPassport            | The International passport                                                              | A                 | ZC                                                                                                                                              |
 ||
