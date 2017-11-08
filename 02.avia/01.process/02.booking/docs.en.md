@@ -9,7 +9,7 @@ taxonomy:
 
 - [BookFlight](/avia/request/bookflight) - The main method of the booking. 
 - [ModifyBook_2_0](/avia/request/modifybook) -  The modification of the order allows to add some passenger data that were not included in the booking, for example, information about passenger documents.
-- [UpdateBook_2_0](/avia/request/updatebook) - The synchronization witch allows to get the current status of the booking from GDS.
+- [UpdateBook_2_0](/avia/request/updatebook) - The synchronization which allows to get the current status of the booking from GDS.
 - [CancelBook](/avia/request/cancelbook) - The cancel of the booking.
 
 ### The list of document types supported during the booking
