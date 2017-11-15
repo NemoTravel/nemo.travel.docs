@@ -32,6 +32,7 @@ Describes personal information about the traveler. It consists of the following 
 	- F   - female
 -  **LinkedTo** - Binding a passenger to another passenger, makes sense and is mandatory only for infants without a seat. The data type is Int32.
 -  **IsDisabled** - A sign of a disabled passenger. The data type is bool.
+-  **ExternalID** - Custom passenger id in the external system. The data type is string, without using Cyrillic, special characters are not recommended.
 
 ### Example
 
@@ -44,4 +45,5 @@ Describes personal information about the traveler. It consists of the following 
        <DateOfBirth>13.04.1994</DateOfBirth>
        <Nationality>RU</Nationality>
        <Gender>M</Gender>
+       <ExternalID>PASS1234</ExternalID>
     </Traveller>
