@@ -32,6 +32,7 @@ Traveller
     -   F - женский
 -   **LinkedTo** - Привязка пассажира к другому пассажиру, имеет смысл и обязателен только для младенцев без места. Тип данных - Int32.
 -   **IsDisabled** - Признак пассажира-инвалида. Тип данных - bool.
+-   **ExternalID** - Произвольный id пассажира во внешней системе. Тип данных - string, без использования кириллицы, спец символы не рекомендуются.
 
 ### Пример
 
@@ -44,4 +45,5 @@ Traveller
        <DateOfBirth>13.04.1994</DateOfBirth>
        <Nationality>RU</Nationality>
        <Gender>M</Gender>
+       <ExternalID>PASS1234</ExternalID>
     </Traveller>
