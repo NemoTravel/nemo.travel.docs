@@ -21,7 +21,10 @@ Search for v 1.2
 -  **RequestedFlightInfo.ODPair.DepaturePoint** - Contains information about the departure point. The custom data type.
 -  **RequestedFlightInfo.ODPair.DepaturePoint.Code** - a 3 letter code of the airport / city of departure. The data type is a string.
 -  **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** - a sign that the airport code of the airport city is indicated as the departure point. The data type is boolean.
--  **RequestedFlightInfo.ODPair.ArrivalPoint** - Contains information about the arrival point. The custom data type. The format is similar to the element *DepaturePoint*
+-  **RequestedFlightInfo.ODPair.DepatureAltPoints** - Contains a list of alternative departure airports / cities. The custom data type.
+-  **RequestedFlightInfo.ODPair.DepatureAltPoints.AltPoint** - Contains information about the flight point. The custom data type. The format is similar to the element **DepaturePoint**
+-  **RequestedFlightInfo.ODPair.ArrivalPoint** - Contains information about the arrival point. The custom data type. The format is similar to the element **DepaturePoint**
+-  **RequestedFlightInfo.ODPair.ArrivalAltPoints** - Contains a list of alternative arrival airports / cities. The custom data type. The format is similar to the element **DepatureAltPoints**
 -  **RequestedFlightInfo.ODPair.ID** - The identifier of the element. Used when searching for options for exchange.
 -  **Passengers** - an array of information about passengers for whom you want to find a flight. The data type is an array.
 -  **Passengers.Passenger** - the information about the type of passengers for whom you want to find a flight. The custom data type.
