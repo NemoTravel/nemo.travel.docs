@@ -9,7 +9,7 @@ taxonomy:
 
 Search for v 1.2
 
->>>> When requesting alternative airports, alternative classes / flight rates will not be requested for the Saber GDS - the restriction of the GDS.
+>>>> GDS restriction: requesting alternative airports alternative flight classes / fares  will not be requested for Sabre SEB
 
 #### Request
 
