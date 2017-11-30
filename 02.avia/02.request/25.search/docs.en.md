@@ -9,6 +9,8 @@ taxonomy:
 
 Search for v 1.2
 
+>>>> When requesting alternative airports, alternative classes / flight rates will not be requested for the Saber GDS - the restriction of the GDS.
+
 #### Request
 
 -  **RequestedFlightInfo** - contains information about the flight segments you want to find. The custom data type.
