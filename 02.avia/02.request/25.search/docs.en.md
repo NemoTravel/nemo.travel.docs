@@ -29,6 +29,7 @@ Search for v 1.2
 -  **Passengers** - an array of information about passengers for whom you want to find a flight. The data type is an array.
 -  **Passengers.Passenger** - the information about the type of passengers for whom you want to find a flight. The custom data type.
 -  **Passengers.Passenger.Type** - the type of passengers for which you want to find a flight. Data type - enumeration, possible values:
+    
     - ADT - adult - a passenger over 12 years (default)
 	- UNN - child - a passenger older than 2 and under 12 years of age - unaccompanied by an adult
 	- CNN - child - a passenger over 2 and under 12 years of age
