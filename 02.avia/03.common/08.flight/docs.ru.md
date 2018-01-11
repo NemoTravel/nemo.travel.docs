@@ -109,9 +109,9 @@ taxonomy:
     -   **NonCat35** — тарифы, неподходящие для выписки в категории 35; 
 <!--  Не особо понятно что это, но такой тип есть в GDS Sabre (дословно из документации «Ticketing ineligible Category 35 fares»); -->
     -   **Private** — все прочие приватные тарифы.
--   **Flight.PriceInfo.Price.PassengerFares.PassengerFare.Tariffs.Tariff.SegNum** — номер сегмента, для которого применяется данный тариф. Тип данных — целое 32-битное число.
--   **Flight.PriceInfo.Price.PassengerFares.PassengerFare.Tariffs.Tariff.FreeBaggage** — содержит информацию о бесплатном багаже по данному тарифу. Тип данных — сложный.
--   **Flight.PriceInfo.Price.PassengerFares.PassengerFare.Tariffs.Tariff.FreeBaggage.Measure** — единица измерения багажа. Тип данных — перечисление, возможные значения:
+-   **PassengerFare.Tariffs.Tariff.SegNum** — номер сегмента, для которого применяется данный тариф. Тип данных — целое 32-битное число.
+-   **PassengerFare.Tariffs.Tariff.FreeBaggage** — содержит информацию о бесплатном багаже по данному тарифу. Тип данных — сложный.
+-   **PassengerFare.Tariffs.Tariff.FreeBaggage.Measure** — единица измерения багажа. Тип данных — перечисление, возможные значения:
     -   **Kilograms** — килограммы;
     -   **Pounds** — фунты;
     -   **Pieces** — количество ручной клади;
@@ -132,23 +132,23 @@ taxonomy:
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty.Currency** — код валюты штрафа. Тип данных — строка.
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty.Amount** — сумма штрафа. Тип данных — дробное число.
 -   **PassengerFare.ExchangePriceInfo.FlightPriceDifference** — разница в стоимости с перелётом в бронировании. Если найденный перелёт стоит дешевле, то разница будет со знаком «-». Тип данных — [Money](/avia/common/money).
+-   **PassengerFare.Markup** - сумма сбора для данной цены. Тип данных — [Money](/avia/common/money).
+-   **Flight.Price.AgencyMarkup** - сбор агентсва за весь перелёт. Тип данных — [Money](/avia/common/money).
 -   **Flight.Price.DiscountByPromoAction** — скидка по промо-коду (расчитана по правилам ценообразования). Тип данных — [Money](/avia/common/money).
-<!-- Это блок ЦО:
-**Flight.Price.PricingData** — результаты расчета ценообразования. Тип данных — сложный.
-**Flight.Price.PricingData.PricingRule** — идентификатор применившегося правила ценообразования. Тип данных — целое число.
-**Flight.Price.PricingData.Code** — валидирующий перевозчик, определённый по правилам ценообразования. Тип данных — строка.
-**Flight.Price.PricingData.AirlineCommission** — коммиссия авиакомпании. Тип данных — CommissionDataItem.
-**Flight.Price.PricingData.AgencyProfit** — прибыль агенства. Тип данных — CommissionDataItem.
-**Flight.Price.PricingData.TicketDesignator** — тикет-десигнатор. Тип данных — строка.
-**Flight.Price.PricingData.Endorsment** — эндорсменты. Тип данных — строка.
-**Flight.Price.PricingData.TourCode** — туркод. Тип данных — строка.
-**Flight.Price.PricingData.Discount** — скидка. Тип данных — строка.
-**Flight.Price.PricingData.AgencyCommission** — комиссия агенства. Тип данных — [Money](/avia/common/money).
-**Flight.Price.PricingData.Bonus** — бонус. Тип данных — [Money](/avia/common/money).
-**Flight.Price.RoundingChargePart** — округляющий сбор (расчитан по правилам ценообразования). Тип данных — [Money](/avia/common/money).
-**Flight.Price.ChargeBreakdown** — разбивка составляющих сбора по правилам (расчитан по правилам ценообразования). Тип данных — сложный.
-**Flight.Price.ChargeBreakdown.Charge** — компонент сбора. Тип данных — сложный.
-**Flight.Price.ChargeBreakdown.Charge.RuleID** — идентификатор правила, из которого взят сбор (для округляющего сбора идентификатор правила — «-1»). Тип данных — целое число.
-**Flight.Price.ChargeBreakdown.Charge.Amount** — значение сбора. Тип данных — дробное число.
-**Flight.Price.ChargeBreakdown.Charge.Currency** — валюта сбора. Тип данных — строка. -->
+-   **Flight.Price.PricingData** — результаты расчета ценообразования. Тип данных — сложный.
+-   **Flight.Price.PricingData.PricingRule** — идентификатор применившегося правила ценообразования. Тип данных — целое число.
+-   **Flight.Price.PricingData.Code** — валидирующий перевозчик, определённый по правилам ценообразования. Тип данных — строка.
+-   **Flight.Price.PricingData.AirlineCommission** — коммиссия авиакомпании. Тип данных — [CommissionDataItem](/avia/common/dataitem).
+-   **Flight.Price.PricingData.AgencyProfit** — прибыль агенства. Тип данных — [CommissionDataItem](/avia/common/dataitem).
+-   **Flight.Price.PricingData.TicketDesignator** — тикет-десигнатор. Тип данных — строка.
+-   **Flight.Price.PricingData.Endorsment** — эндорсменты. Тип данных — строка.
+-   **Flight.Price.PricingData.TourCode** — туркод. Тип данных — строка.
+-   **Flight.Price.PricingData.Discount** — скидка. Тип данных — строка.
+-   **Flight.Price.PricingData.AgencyCommission** — комиссия агенства. Тип данных — [Money](/avia/common/money).
+-   **Flight.Price.PricingData.Bonus** — бонус авиакомпании. Тип данных — [Money](/avia/common/money).
+-   **Flight.Price.PricingData.AuthCode** — код авторизации. Тип данных — строка.
+-   **Flight.Price.RoundingChargePart** — округляющий сбор (расчитан по правилам ценообразования). Тип данных — [Money](/avia/common/money).
+-   **Flight.Price.ChargeBreakdown** — разбивка составляющих сбора по правилам (расчитан по правилам ценообразования). Тип данных — [ChargeBreakdown](/avia/common/chargebreakdown).
+-   **Flight.Price.SubAgentMarkup** - сбор субагента за весь перелёт. Тип данных — [Money](/avia/common/money).
+-   **Flight.Price.SubAgentChargeBreakdown** — разбивка составляющих сбора субагента по правилам (расчитан по правилам ценообразования). Тип данных — [ChargeBreakdown](/avia/common/chargebreakdown).
 -   **Flight.FareFamiliesDescription** — содержит описания семейств тарифов, присутствующих в перелёте. Тип данных — [Description](/avia/common/ff-description).
