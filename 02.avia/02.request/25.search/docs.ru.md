@@ -18,7 +18,7 @@ taxonomy:
 -   **RequestedFlightInfo.AroundDates** — значение для поиска по окружным датам. Тип данных — целое беззнаковое 32-битное число.
 -   **RequestedFlightInfo.ODPairs** — содержит информацию о сегментах перелёта, который требуется найти. Тип данных — сложный.
 -   **RequestedFlightInfo.ODPair** — сегмент перелёта, который требуется найти. Тип данных — сложный.
--   **RequestedFlightInfo.ODPair.DepDate** — дата и время, с которого начинается желаемое время вылета. Тип данных — строка, формат — <code>yyyy-MM-ddTHH:mm:ss</code>.
+-   **RequestedFlightInfo.ODPair.DepatureDateTime** — дата и время, с которого начинается желаемое время вылета. Тип данных — строка, формат — <code>yyyy-MM-ddTHH:mm:ss</code>.
 -   **RequestedFlightInfo.ODPair.MaxDepatureTime** — максимально допустимое время вылета. Тип данных — строка, формат — <code>HH:mm</code>.
 -   **RequestedFlightInfo.ODPair.DepaturePoint** — содержит информацию о точки отправления. Тип данных — сложный.
 -   **RequestedFlightInfo.ODPair.DepaturePoint.Code** — 3-х буквенный код аэропорта или города отправления. Тип данных — строка.
