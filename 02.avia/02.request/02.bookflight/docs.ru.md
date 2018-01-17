@@ -329,3 +329,23 @@ taxonomy:
   </s:Body>
 </s:Envelope>
 ```
+
+### BookFlight_2_1
+
+Операция по созданию брони перелёта работающая с 2.1 структурой брони.
+
+#### Запрос
+
+Аналогичен предыдущей версии, отличие только в плоском формате дополнительных услуг:
+
+-   **AncillaryServices** - Список дополнительных услуг для бронирования. Тип данных - массив.
+-   **AncillaryServices.AncillaryService** - Дополнительная услуга. Тип данных - сложный.
+-   **AncillaryServices.AncillaryService.ID** - идентификатор изменяемой дополнительной услуги (Не учитывается при бронировании). Тип данных - int.
+-   **AncillaryServices.AncillaryService.RFIC** - RFIC дополнительной услуги. Тип данных - строка.
+-   **AncillaryServices.AncillaryService.RFISC** - RFISC дополнительной усулги. Тип данных - строка.
+-   **AncillaryServices.AncillaryService.SSRCode** - SSR код для бронируемой дополнительной услуги (Необязательный) Тип данных - строка.
+-   **AncillaryServices.AncillaryService.SSRDescription** - Описание для SSR бронируемой допуслуги (Необязательный) Тип данных - строка.
+-   **AncillaryServices.AncillaryService.Type** - Тип дополнительной услуги (Обязателен только для Сирены). Тип данных - строка.
+-   **AncillaryServices.AncillaryService.TravellerRef** - идентификатор пассажира для которого добавляется дополнительная услуга. Тип данных - int.
+-   **AncillaryServices.AncillaryService.SegmentRef** - Cсылка на сегмент на который добавляется дополнительная услуга. Тип данных - int.
+-   **AncillaryServices.AncillaryService.Quantity** - Количество повторений данной дополнительной услуги. Тип данных - int.
