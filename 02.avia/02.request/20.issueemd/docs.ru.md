@@ -59,7 +59,7 @@ taxonomy:
 
 #### Формат ответа
 
-[Бронь 2.0](/avia/common/book))
+[Бронь 2.0](/avia/common/book)
 
 ##### Пример
 
