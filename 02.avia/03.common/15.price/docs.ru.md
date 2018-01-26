@@ -82,3 +82,4 @@ Price
     -   Snack
 -   **Tariff.IsSystemTransfer** - Признак системного трансфера. Тип данных - bool.
 -   **PassengerTypePrice.FareCalc** - Строка рассчёта цены. Тип данных - строка.
+-   **PassengerTypePrice.Markup** - Сбор. Тип данных - [Money](/avia/common/money).
