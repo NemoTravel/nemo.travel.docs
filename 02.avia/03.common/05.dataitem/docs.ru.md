@@ -169,15 +169,16 @@ taxonomy:
     -   **TicketRefund**;
     -   **ExchangeRefundBalance**.
 -   **ElectronicDocument.IssueDateTime** — время генерации электронного документа. Тип данных — дата и время с указанием часового пояса.
+-   **ElectronicDocument.NotStoredInPNR** - Признак что данный билет не сохранён в ПНРе. Тип данных — булевский.
 -   **ElectronicDocument.ExecutionTimeLimit** — таймлимит на предоставление услуги по данному электронному документу. Тип данных — дата и время с указанием часового пояса.
--   **ElectronicDocument.VAT** — НДС по услуге данного электронного документа. Тип данных — [Money](/avia/common/money).
--   **ElectronicDocument.VATBreakdown** — структура НДС по услуге данного электронного документа. Тип данных — сложный.
 -   **ElectronicDocument.EMDSpecificData** — содержит специфичные для EMD данные. Тип данных — сложный.
 -   **ElectronicDocument.EMDSpecificData.EMDType** — тип EMD. Тип данных — перечисление, возможные значения:
     -   **A** — associated;
     -   **S** — standalone.
 -   **ElectronicDocument.EMDSpecificData.ParentTicket** — номер билета, в привязке к которому выписан данный EMD. В основном имеет смысл только для EMD-А. Тип данных — строка.
 -   **ElectronicDocument.EMDSpecificData.Description** — текстовое описание услуги данного электронного документа (специфично для некоторых видов EMD). Тип данных — строка.
+-   **ElectronicDocument.VAT** — НДС по услуге данного электронного документа. Тип данных — [Money](/avia/common/money).
+-   **ElectronicDocument.VATBreakdown** — структура НДС по услуге данного электронного документа. Тип данных — сложный.
 -   **PaperDocument** — бумажный документ. Тип данных — сложный.
 -   **PaperDocument.Type** — тип документ. Тип данных — перечисление, возможные значения:
     -   **ItinReceipt** — маршрут-квитанция;
@@ -192,11 +193,11 @@ taxonomy:
 -   **Endorsements.EndorsementText** — текст эндорсментов. Тип данных — массив.
 -   **Endorsements.EndorsementText.Text** — одна строка из эндорсментов. Тип данных — строка.
 -   **Visa** — данные визы. Тип данных — сложный.
--   **Visa.Number** — номер визы. Тип данных — строка.
--   **Visa.BirthPlace** — место рождения путешественника, которому выдали визу. Тип данных — строка.
--   **Visa.IssuePlace** — место выдачи визы. Тип данных — строка.
--   **Visa.IssueDate** — дата выдачи визы. Тип данных — дата в формате <code>dd.mm.yyyy</code>.
 -   **Visa.ApplicableCountry** — ISO Alpha2 или ISO Alpha3 код страны, на которую действует виза. Тип данных — строка.
+-   **Visa.BirthPlace** — место рождения путешественника, которому выдали визу. Тип данных — строка.
+-   **Visa.IssueDate** — дата выдачи визы. Тип данных — дата в формате <code>dd.mm.yyyy</code>.
+-   **Visa.IssuePlace** — место выдачи визы. Тип данных — строка.
+-   **Visa.Number** — номер визы. Тип данных — строка.
 -   **ArrivalAddress** — адрес пребывания. Тип данных — сложный.
 -   **ArrivalAddress.CountryCode** — ISO Alpha2 или ISO Alpha3 код страны пребывания. Тип данных — строка.
 -   **ArrivalAddress.City** — город пребывания. Тип данных — строка.
@@ -268,6 +269,14 @@ taxonomy:
 -   **Discount.Amount** — сумма скидки. Тип данных — дробное число.
 -   **Discount.Currency** — код валюты скидки. Тип данных — строка.
 -   **Discount.AuthCode** — код авторизации скидки, как правило отображается в качестве тикет-десигнатора в тарифе. Тип данных — строка.
+-   **FareSourceCode** -  Информация об уникальном коде тарифа (Специфика Mystifly). Тип данных — сложный.
+-   **FareSourceCode.Code** - код тарифа, определяющий перелёт в системе Mystifly. Тип данных — строка.
+-   **AdditionalLocators** - используется в uAPI и NemoNetwork для отображение локатора, по которому можно прочитать ПНР в терминале ГРС. Тип данных — сложный.
+-   **AdditionalLocators.GalileoHostLocator** - локатор в терминале Галилео. Тип данных — строка.
+-   **AdditionalLocators.Other** - прочие локаторы в ПНРе uAPI. Тип данных — массив.
+-   **AdditionalLocators.Other.Locator** - локатор в ПНРе uAPI. Тип данных — строка.
+-   **AdditionalLocators.HostLocator** - локатор брони в терминале ГДС. Тип данных — строка.
+-   **AdditionalLocators.HostSupplier** - ГДС, к которой относится предыдущий параметр. Тип данных - перечисление поддерживаемых Немо поставищков
 -   **EndUserData** — данные конечного пользователя системы. Тип данных — сложный.
 -   **EndUserData.EndUserIP** — IP адрес конечного пользователя. Тип данных — строка.
 -   **EndUserData.EndUserBrowserAgent** — идентификация ПО-клиента конечного пользователя. Тип данных — строка.
