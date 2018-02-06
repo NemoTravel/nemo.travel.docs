@@ -16,7 +16,7 @@ Contains the following parameters:
 - ** Flights ** - An array of flights that are based on this set of segments. The custom data type.
 - ** Flights.Flight ** - Contains information about one flight based on a given set of segments. The custom data type.
 - ** Flights.Flight.FlightID ** - The flight number, in fact, is the identifier of a certain combination of a set of flight segments, each of which is uniquely associated with a certain itinerary, and a certain price. Booking a flight is made on it. The data type is a string.
-- ** Flights.Flight.PriceID ** - The price ID on which this flight is based. The data type is an integer 64-bit number.
+- ** Flights.Flight.PriceID ** - The [price](/avia/grouping/groupedprice) ID on which this flight is based. The data type is an integer 64-bit number.
 - ** Flights.Flight.TypeInfo.Type ** - The type of flight. Data type - enumeration, possible values:
     -   0 (Regular) - Regular flight.
     -   1 (Charter) - Charter.
