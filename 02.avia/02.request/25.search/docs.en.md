@@ -59,10 +59,6 @@ Search for v 1.2
 	- PremiumEconomy - premium economy
 	- All - all classes
 -  **Restrictions.MaxConnectionTime** - The maximum time to connection in minutes. The data type is an integer 32 bit number.
--  **Restrictions.PriceRefundType** - The search price type in the searche request. Data type - enumeration, possible values:
-	-   AnyLowest - lowest prices (default)
-	-   Refundable - the lowest prices with the possibility of a free refund
-	-   Both - a set of search retrieval searches for minimum and minimum return prices
 -  **Restrictions.ResultsGrouping** - The grouping type of the issue. Data type - enumeration, possible values:
 	- Simple - (by default) simple grouping, the output is in the format GroupSearch v1.1
 	- Advanced - (not supported) advanced grouping
@@ -72,6 +68,10 @@ Search for v 1.2
 -  **Restrictions.RequestorTags** - Tags of the sender of the request. The data type is an array.
 -  **Restrictions.RequestorTags.Tag** - One of the labels of the sender of the request, describing it by some criterion. The data type is a string.
 -  **Restrictions.MaxResultCount** - Maximum number of flights in the GDS response. The data type is an integer 32 bit number.
+-  **Restrictions.PriceRefundType** - The search price type in the searche request. Data type - enumeration, possible values:
+	-   AnyLowest - lowest prices (default)
+	-   Refundable - the lowest prices with the possibility of a free refund
+	-   Both - a set of search retrieval searches for minimum and minimum return prices
 -  **Restrictions.AsyncSearch** - Query mode: (default) false - synchronous search as before, true - asynchronous search with the ability to pull out the portions of supplier responses. The data type is bool.
 -  **Restrictions.Nemo2Pricing** - A sign of the need for pricing. The data type is bool.
 -  **EndUserData** - End user data. The custom data type, the format is similar to the element * EndUserData * from the [DataItem](/avia/common/dataitem)
