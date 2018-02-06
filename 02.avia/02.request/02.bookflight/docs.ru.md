@@ -17,7 +17,7 @@ taxonomy:
 -   **AncillaryServices.AncillaryServiceRQ_1_1** - Дополнительная услуга. Тип данных - сложный.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.ID** - идентификатор изменяемой дополнительной услуги (Не учитывается при бронировании). Тип данных - int.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.RFIC** - RFIC дополнительной услуги. Тип данных - строка.
--   **AncillaryServices.AncillaryServiceRQ_1_1.RFISC** - RFISC дополнительной усулги. Тип данных - строка.
+-   **AncillaryServices.AncillaryServiceRQ_1_1.RFISC** - RFISC дополнительной услуги. Тип данных - строка.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.SSRCode** - SSR код для бронируемой дополнительной услуги (Необязательный) Тип данных - строка.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.SSRDescription** - Описание для SSR бронируемой допуслуги (Необязательный) Тип данных - строка.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.Type** - Тип дополнительной услуги (Обязателен только для Сирены). Тип данных - строка.
