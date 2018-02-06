@@ -18,7 +18,7 @@ Search for v 1.2
 -  **RequestedFlightInfo.AroundDates** - a value for searching by district dates. The data type is an unsigned integer 32-bit number.
 -  **RequestedFlightInfo.ODPairs** - contains information about the segments of the flight that you want to find. The custom data type.
 -  **RequestedFlightInfo.ODPair** - the segment of the flight you want to find. The custom data type.
--  **RequestedFlightInfo.ODPair.DepDate** - the date and time from which the desired departure time begins. The data type is a string, the format is yyyy-MM-ddTHH: mm: ss.
+-  **RequestedFlightInfo.ODPair.DepatureDateTime** - the date and time from which the desired departure time begins. The data type is a string, the format is yyyy-MM-ddTHH: mm: ss.
 -  **RequestedFlightInfo.ODPair.MaxDepatureTime** - the maximum-allowed departure time. The data type is a string, the format is HH: mm.
 -  **RequestedFlightInfo.ODPair.DepaturePoint** - Contains information about the departure point. The custom data type.
 -  **RequestedFlightInfo.ODPair.DepaturePoint.Code** - a 3 letter code of the airport / city of departure. The data type is a string.
