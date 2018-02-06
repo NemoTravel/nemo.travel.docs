@@ -9,10 +9,10 @@ taxonomy:
 
 Within the grouping of flights, the following structural elements were singled out:
 
-* **AirItinerary (AirItinerary)** - information about air itinerary between a certain pair of airports provided by a certain airline.
-* **FlightSegment (FlightSegment)** - information about a certain flight on a certain itinerary. For one itinerary there can be several segments (for example, an airplane with the same flight flying several times a day).
-* **Price (PriceInfo)** - information about the price of a certain set of itineraries.
-* **Flight (FlightPriceGroup)** - the link between a certain set of segments is a de facto flight along a certain itinerary (including a composite one), and one or more prices that apply to this flight. 
+* **AirItinerary ([AirItinerary](/avia/grouping/airitinerary))** - information about air itinerary between a certain pair of airports provided by a certain airline.
+* **FlightSegment ([FlightSegment](/avia/grouping/flightsegment))** - information about a certain flight on a certain itinerary. For one itinerary there can be several segments (for example, an airplane with the same flight flying several times a day).
+* **Price ([GroupedPrice](/avia/grouping/groupedprice))** - information about the price of a certain set of itineraries.
+* **Flight ([FlightPriceGroup](/avia/grouping/flightpricegroup))** - the link between a certain set of segments is a de facto flight along a certain itinerary (including a composite one), and one or more prices that apply to this flight. 
 
 ##### Examples:
 
