@@ -10,7 +10,7 @@ taxonomy:
 Contains the following parameters:
 
 -   **ID** - The flight segment unique ID, according to which the system will differ it from others. The data type is an integer 64-bit number.
--   **ItineraryID** - The number of the itinerary to which this segment of the flight belongs. The data type is an integer 64-bit number.
+-   **ItineraryID** - The number of the [itinerary](/avia/grouping/airitinerary) to which this segment of the flight belongs. The data type is an integer 64-bit number.
 -   **OperatingCompany** - An airline code directly executing this flight. The data type is a string.
 -   **MarketingCompany** - An airline code for the given flight. The data type is a string.
 -   **FlightNumber** - The flight number code. The data type is a string.
