@@ -60,10 +60,11 @@ To store different booking content.
 -  **TimeLimits** - Time limits. The custom data type.
 -  **TimeLimits.EffectiveTimeLimit** - Effective TL is defined as the minimum of all TLs except TLA for entering. The data type is the date and time with the time zone specified.
 -  **TimeLimits.PriceTimeLimit** - TL from the GDS price. The data type is the date and time with the time zone specified.
--  **TimeLimits.SegmentsTimeLimit** - TL segments, currently not used. The data type is the date and time with the time zone specified.
+<!--  **TimeLimits.SegmentsTimeLimit** - TL segments, currently not used. The data type is the date and time with the time zone specified.-->
 -  **TimeLimits.TicketingTimeLimit** - TL statements. The data type is the date and time with the time zone specified.
 -  **TimeLimits.AgencyTimeLimit** - An agency TL. The data type is the date and time with the time zone specified.
 -  **TimeLimits.VoidTimeLimit** - TL to enter from the GDS. The data type is the date and time with the time zone specified.
+-  **TimeLimits.AdvancedPurchaseTimeLimit** -  Time limit from the Advanced Purchase section of terms of tariff application (if the setting is enabled, then we will parse time limit, which comes in the text of the tariff rules). The data type is the date and time with the time zone specified.
 -  **SSR** - SSR item. The data type is SSRDataItem.
 -  **SSR.Code** - SSR code. The data type is a string.
 -  **SSR.Text** - The text. The data type is a string.
@@ -77,7 +78,7 @@ To store different booking content.
     -   Rejected
 -  **SSR.StatusCode** - The industrial status code. The data type is a string.
 -  **Commission** - The airline commission. The data type is CommissionDataItem.
-Commission in%. The data type is float.
+-  **Commission.Percent** - Commission in%. The data type is float.
 -  **Commission.Amount** - The commission amount. The data type is float.
 -  **Commission.Currency** - The currency code for the amount. The data type is a string.
 -  **FOPInfo** - The form of payment for transfer to the system of the service provider. The custom data type.
@@ -98,7 +99,7 @@ Commission in%. The data type is float.
 -  **FOPInfo.FOPs.FOP.Number** - The document number of the payment form (credit card or document for payment). The data type is a string.
 -  **FOPInfo.FOPs.FOP.ExpireDate** - The expiration date of the card. Data type - date in MM.yyyy format
 -  **FOPInfo.FOPs.FOP.ManualApprovalCode** - The code of the payment transaction for which the funds are to be debited. The data type is a string.
--  **FOPInfo.FOPs.FOP.Subtype** - FOP subtype, used when specifying "stl: PaymentOrderFOP". The data type is a string.
+<!--  **FOPInfo.FOPs.FOP.Subtype** - FOP subtype, used when specifying "stl: PaymentOrderFOP". The data type is a string.-->
 -  **SourceInfo** - The information about the source where the service reservation was created. The custom data type.
 -  **SourceInfo.ID** - The ID of the package of details. The data type is Int32.
 -  **SourceInfo.BookingSupplierAgencyID** - The ID of the details in the provider system in which the service reservation is created. The data type is a string.
@@ -168,6 +169,7 @@ Commission in%. The data type is float.
     - TicketRefund
     - ExchangeRefundBalance
 - **ElectronicDocument.IssueDateTime** - The time of generation of ED. The data type is the date and time with the time zone specified.
+- **ElectronicDocument.NotStoredInPNR** - A sign that this ticket was not saved in PNR. The data type is bool.
 - **ElectronicDocument.ExecutionTimeLimit** - TL to provide services for this ED. The data type is the date and time with the time zone specified.
 - **ElectronicDocument.VAT** - VAT for this ED service. The data type is [Money](/avia/common/money).
 - **ElectronicDocument.VATBreakdown** - The structure of VAT for the service of this ED. The custom data type.
@@ -189,11 +191,11 @@ Commission in%. The data type is float.
 - **Endorsements.EndorsementText** - The text of endorsments. The data type is an array.
 - **Endorsements.EndorsementText.Text** - One line of endorsments. The data type is a string.
 - **Visa** - The Visa details. The custom data type.
-- **Visa.Number** - The Visa number. The data type is a string.
-- **Visa.BirthPlace** - The place of birth of the traveler, who was issued a visa. The data type is a string.
-- **Visa.IssuePlace** - The place of issue of the visa. The data type is a string.
-- **Visa.IssueDate** - The date of issue of the visa. The data type is the date in dd.mm.yyyy format.
 - **Visa.ApplicableCountry** - ISO Alpha2 or ISO Alpha3 country code for which the visa is valid. The data type is a string.
+- **Visa.BirthPlace** - The place of birth of the traveler, who was issued a visa. The data type is a string.
+- **Visa.IssueDate** - The date of issue of the visa. The data type is the date in dd.mm.yyyy format.
+- **Visa.IssuePlace** - The place of issue of the visa. The data type is a string.
+- **Visa.Number** - The Visa number. The data type is a string.
 - **ArrivalAddress** - The address of the stay. The custom data type.
 - **ArrivalAddress.CountryCode** - ISO Alpha2 or ISO Alpha3 country code of the host country. The data type is a string.
 - **ArrivalAddress.City** - The City of arrival. The data type is a string.
@@ -216,21 +218,6 @@ Commission in%. The data type is float.
 - **ValidatingCompany** - The information about the validating carrier. The custom data type.
 - **ValidatingCompany.Code** - The company code. The data type is a string.
 - **ValidatingCompany.IsForced** - A sign of the redefined validating covpany. The data type is bool.
-- **CashValueForMultiFOPProxing** - Contains the value of the amount for the cash part when multiplexing GDDS processing through third-party PN. The custom data type.
-- **CashValueForMultiFOPProxing.CashValue** - a value of the amount for the cash part for multi-FDD GDS processing via third-party PN. The data type is [Money](/avia/common/money).
-- **PNRFOP** - Contains the form of payment in the reservation. The custom data type. It is used only in the answers for the transfer of the actually stated form of payment in PNR.
-- **PNRFOP.FOPs** - Contains a list of payment forms for prescribing to the reservation. The data type is an array.
-- **PNRFOP.FOPs.FOP** - One of the forms of payment in the reservation. The custom data type.
-- **PNRFOP.FOPs.FOP.Type** - The type of this FOP. Data type - enumeration, possible values:
-    - CA - cash
-    - CC - a credit card
-    - CK - a check, bank check
-    - IN - an invoice
-- **PNRFOP.FOPs.FOP.CreditCardNumber** - Masked credit card number, if the payment formats are a credit card. The data type is a string.
-- **PNRFOP.FOPs.FOP.Number** - FOP number in PNRe
-- **SubagentCommission** - The Subagent commission. The data type is CommissionDataItem:
-- **TicketDesignator** - The information about the ticket designator for prescribing to the reservation. The custom data type.
-- **TicketDesignator.Value** - The value of the ticket designator for prescription in the reservation. The data type is a string.
 - **TourCode** - The tour code. The custom data type.
 - **TourCode.Type** - Type of the tour code. Data type - enumeration, possible values:
     - Default
@@ -239,38 +226,19 @@ Commission in%. The data type is float.
     - BulkTour
     - BSPInclusiveTour
 - **TourCode.Value** - The value of the tour code. The data type is a string.
-- **Markup** - The information about the collection of the agent. The custom data type.
-- **Markup.MarkupValue** - The value of the agent collection. The data type is [Money](/avia/common/money).
-- **Markup.VAT** - VAT data. The custom data type.
-- **Markup.VAT.VATValue** - The amount of VAT. The data type is [Money](/avia/common/money).
-- **Markup.VAT.VATRate** - VAT rate in%. The data type is double.
-- **TicketingProxy** - The data for ticketing proxy throught the payment gateway. The custom data type.
-- **TicketingProxy.Gateway** - The payment gateway through which payment was made. Data type - enumeration, valid value:
-    - platron
-    - uniteller
-- **TicketingProxy.ProxingParams** - Get parameters necessary to correctly ticketing proxy. The data type is a string.
-- **CRMIntegration** - This is for prescribing in PNR for integration with CRM / BO systems working with supplier systems. The custom data type.
-- **CRMIntegration.ClientID** - The agent / subagent ID in the CRM / BO system. The data type is a string.
-- **CRMIntegration.NemoClientID** - The agent / subagent ID in Nemo. The data type is int.
-- **CRMIntegration.OrderID** - The order ID in Nemo. The data type is a string.
-- **CRMIntegration.PricingRuleID** - The ID of the worked out price rule in Nemo. The data type is int.
-- **CRMIntegration.PaymentGateway** - The  payment gateway / Payment method. The data type is a string.
-- **CRMIntegration.PaymentGatewayMarkup** - The payment gateway markup. The custom data type.
-- **CRMIntegration.SalesChannel** - The sales channel. The data type is enumeration, valid value:
-    - Meta
-    - API
-    - AgentSite
 - **Discount** - The discount from the fare. The custom data type.
 - **Discount.Percent** - The discount value in%. The data type is float.
 - **Discount.Amount** - The discount amount. The data type is float.
 - **Discount.Currency** - The discount currency code. The data type is a string.
 - **Discount.AuthCode** - The discount authorization code, as a rule, is displayed as a ticket of the designator in the fare. The data type is a string.
-- **EndUserData** - End user data of the system. The custom data type.
-- **EndUserData.EndUserIP** - The IP address of the end user. The data type is a string.
-- **EndUserData.EndUserBrowserAgent** - Identify the client software of the final user. The data type is a string.
-- **EndUserData.RequestOrigin** - The origin source of the transition. The data type is a string.
-- **SellingPointDescription** - The description of the point of sale. The custom data type.
-- **SellingPointDescription.SubAgencyID** - The ID of the extrabudgetary subagency. The data type is an integer 32-bit number.
+- **FareSourceCode** - The information about the unique tariff code (Specificity Mystifly). The custom data type.
+- **FareSourceCode.Code** - The tariff code determining the flight in the system Mystifly. The data type is a string.
+- **AdditionalLocators** - Use in uAPI and NemoNetwork to display the locator by which you can read the PNR in the terminal of the GDS. The custom data type.
+- **AdditionalLocators.GalileoHostLocator** - The locator in Galileo terminal. The data type is a string.
+- **AdditionalLocators.Other** - Other locators in PNR uAPI. The data type is an array.
+- **AdditionalLocators.Other.Locator** - locator in PNR uAPI. The data type is a string.
+- **AdditionalLocators.HostLocator** - booking locator in the GDS terminal. The data type is a string.
+- **AdditionalLocators.HostSupplier** - GDS, which refers to the previous parameter. The data type is enumeration supported by Nemo providers.
 - **OSI** - (Other Service Information) The aditional information sent to airline. The custom data type.
 - **OSI.Text** - Th text with the information. The data type is a string.
 - **ReferencedBooks** - The data on connected booking (parent and child). Appear after the separation of the booking.
@@ -310,6 +278,48 @@ Commission in%. The data type is float.
 	- **CN** - AN AWARDS CODE 
 - **DiscountDocument.Number** - The basis document number of the subsidy / discount. The data type is a string.
 - **DiscountDocument.ElapsedTime** - The elapsed time of the subsidy / discount basis document. The data type is the date in dd.mm.yyyy format.
+- **CashValueForMultiFOPProxing** - Contains the value of the amount for the cash part when multiplexing GDDS processing through third-party PN. The custom data type.
+- **CashValueForMultiFOPProxing.CashValue** - a value of the amount for the cash part for multi-FDD GDS processing via third-party PN. The data type is [Money](/avia/common/money).
+- **PNRFOP** - Contains the form of payment in the reservation. The custom data type. It is used only in the answers for the transfer of the actually stated form of payment in PNR.
+- **PNRFOP.FOPs** - Contains a list of payment forms for prescribing to the reservation. The data type is an array.
+- **PNRFOP.FOPs.FOP** - One of the forms of payment in the reservation. The custom data type.
+- **PNRFOP.FOPs.FOP.Type** - The type of this FOP. Data type - enumeration, possible values:
+    - CA - cash
+    - CC - a credit card
+    - CK - a check, bank check
+    - IN - an invoice
+- **PNRFOP.FOPs.FOP.CreditCardNumber** - Masked credit card number, if the payment formats are a credit card. The data type is a string.
+- **PNRFOP.FOPs.FOP.Number** - FOP number in PNRe
+- **SubagentCommission** - The Subagent commission. The data type is CommissionDataItem:
+- **TicketDesignator** - The information about the ticket designator for prescribing to the reservation. The custom data type.
+- **TicketDesignator.Value** - The value of the ticket designator for prescription in the reservation. The data type is a string.
+- **Markup** - The information about the collection of the agent. The custom data type.
+- **Markup.MarkupValue** - The value of the agent collection. The data type is [Money](/avia/common/money).
+- **Markup.VAT** - VAT data. The custom data type.
+- **Markup.VAT.VATValue** - The amount of VAT. The data type is [Money](/avia/common/money).
+- **Markup.VAT.VATRate** - VAT rate in%. The data type is double.
+- **TicketingProxy** - The data for ticketing proxy throught the payment gateway. The custom data type.
+- **TicketingProxy.Gateway** - The payment gateway through which payment was made. Data type - enumeration, valid value:
+    - platron
+    - uniteller
+- **TicketingProxy.ProxingParams** - Get parameters necessary to correctly ticketing proxy. The data type is a string.
+- **CRMIntegration** - This is for prescribing in PNR for integration with CRM / BO systems working with supplier systems. The custom data type.
+- **CRMIntegration.ClientID** - The agent / subagent ID in the CRM / BO system. The data type is a string.
+- **CRMIntegration.NemoClientID** - The agent / subagent ID in Nemo. The data type is int.
+- **CRMIntegration.OrderID** - The order ID in Nemo. The data type is a string.
+- **CRMIntegration.PricingRuleID** - The ID of the worked out price rule in Nemo. The data type is int.
+- **CRMIntegration.PaymentGateway** - The  payment gateway / Payment method. The data type is a string.
+- **CRMIntegration.PaymentGatewayMarkup** - The payment gateway markup. The custom data type.
+- **CRMIntegration.SalesChannel** - The sales channel. The data type is enumeration, valid value:
+    - Meta
+    - API
+    - AgentSite
+- **EndUserData** - End user data of the system. The custom data type.
+- **EndUserData.EndUserIP** - The IP address of the end user. The data type is a string.
+- **EndUserData.EndUserBrowserAgent** - Identify the client software of the final user. The data type is a string.
+- **EndUserData.RequestOrigin** - The origin source of the transition. The data type is a string.
+- **SellingPointDescription** - The description of the point of sale. The custom data type.
+- **SellingPointDescription.SubAgencyID** - The ID of the extrabudgetary subagency. The data type is an integer 32-bit number.
 
 #### Example
 
