@@ -82,3 +82,4 @@ Contains the full information about the price and its formation for the reservat
     -   Snack
 -   **Tariff.IsSystemTransfer** - A sign of the system transfer. The data type is bool.
 -   **PassengerTypePrice.FareCalc** - The line for calculating the price. The data type is a string.
+-   **PassengerTypePrice.Markup** - The tax. The data type is [Money](/avia/common/money).
