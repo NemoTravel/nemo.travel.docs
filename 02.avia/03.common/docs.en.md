@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-   **RequestType** - тип инициализатора запроса. The data type is enumeration, possible values:
+   **RequestType** - request initializer type. The data type is enumeration, possible values:
 
 *     0 (U) - user (default)
 *     1 (F) - background
