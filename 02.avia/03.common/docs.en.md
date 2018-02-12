@@ -24,7 +24,7 @@ taxonomy:
   <UserID>30328</UserID>
   <RequestType>P</RequestType>
     ```  
-    Orders are exported when authorizing through the Nemo.Travel with the request type U. Other types of requests will not be exported to Nemo.Travel.
+     When authorizing via Nemo.Travel, orders are exported on condition that the request type was different from **P**.
     
  **Example**
    ```xml    
