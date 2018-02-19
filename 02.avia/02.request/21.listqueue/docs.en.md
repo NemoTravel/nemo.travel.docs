@@ -13,7 +13,7 @@ If the request does not indicate the packages for which it is necessary to read 
 
 ##### Format Description
 
--  **Packages** - The list of ID packets for which you want to read queues. The custom data type
+-  **Packages** - The list of ID packets for which you want to read queues. The custom data type. Optional. If not specified, then a survey is carried out for all the included packages that have the requisites of the booking without binding to the airline.
 -  **PackageID** - The package requisites ID. The data type is an int array.
 -  **QueueList** - The list of queues to check. The custom data type
 -  **Queue** - The name of the queue. Data type is an array of the QueueName enumeration. Possible values ​​are:
