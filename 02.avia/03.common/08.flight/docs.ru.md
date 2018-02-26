@@ -144,7 +144,7 @@ taxonomy:
 	- **PriceRule** - сбор из таблицы ценообразования;
 	- **TaxRound** - размер округления, полученный путем конвертации значения такс в валюту агентства;
 	- **FareRound** - размер округления, полученный путем конвертации стоимости тарифа в валюту агентства;
--   **PassengerFare.TotalAgencyFaren** - сумма тарифа и такс в валюте агентства. Тип данных — [Money](/avia/common/money).
+-   **PassengerFare.TotalAgencyFare** - сумма тарифа и такс в валюте агентства. Тип данных — [Money](/avia/common/money).
 -   **Flight.Price.AgencyMarkup** - сбор агентсва за весь перелёт. Тип данных — [Money](/avia/common/money).
 -   **Flight.Price.DiscountByPromoAction** — скидка по промо-коду (расчитана по правилам ценообразования). Тип данных — [Money](/avia/common/money).
 -   **Flight.Price.PricingData** — результаты расчета ценообразования. Тип данных — сложный.
