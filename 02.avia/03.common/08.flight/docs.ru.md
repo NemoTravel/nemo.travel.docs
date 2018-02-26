@@ -135,7 +135,7 @@ taxonomy:
 -   **PassengerFare.ExchangePriceInfo.FlightPriceDifference** — разница в стоимости с перелётом в бронировании. Если найденный перелёт стоит дешевле, то разница будет со знаком «-». Тип данных — [Money](/avia/common/money).
 -   **PassengerFare.Markup** - сумма сбора для данной цены. Тип данных — [Money](/avia/common/money).
 -   **PassengerFare.AgencyFare** - стоимость тарифа в валюте агентства. Тип данных — [Money](/avia/common/money).
--   **PassengerFare.ChargeBreakdown** - разбивка составляющих сбора из ценообразования на пассажира, размер округления за конвертацию в валюте агентства.
+-   **PassengerFare.ChargeBreakdown** - содерджит разбивку составляющих сбора из ценообразования на пассажира, размер округления за конвертацию в валюте агентства.
 -   **PassengerFare.ChargeBreakdown.Charge** - информация о конкретном сборе. Тип данных — сложный.
 -   **PassengerFare.ChargeBreakdown.Charge.Amount** - абсолютное значение сбора, округления на пассажира. Тип данных — дробное число.
 -   **PassengerFare.ChargeBreakdown.Charge.Currency** - код валюты агентства. Тип данных — строка.
