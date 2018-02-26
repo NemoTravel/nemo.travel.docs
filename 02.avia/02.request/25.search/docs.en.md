@@ -90,20 +90,21 @@ Search for v 1.2
           <ns1:Password>PASSWORD</ns1:Password>
         </ns1:Requisites>
         <ns1:UserID>11111</ns1:UserID>
+        <ns1:RequestType>P</ns1:RequestType>
         <ns1:RequestBody>
           <ns2:RequestedFlightInfo>
             <ns2:Direct>false</ns2:Direct>
             <ns2:AroundDates>0</ns2:AroundDates>
             <ns2:ODPairs>
               <ns2:ODPair>
-                <ns2:DepatureDateTime>2017-10-13T00:00:00</ns2:DepatureDateTime>
+                <ns2:DepatureDateTime>2018-03-14T00:00:00</ns2:DepatureDateTime>
                 <ns2:DepaturePoint>
-                  <ns2:Code>OVB</ns2:Code>
-                  <ns2:IsCity>false</ns2:IsCity>
-                </ns2:DepaturePoint>
-                <ns2:ArrivalPoint>
                   <ns2:Code>MOW</ns2:Code>
                   <ns2:IsCity>true</ns2:IsCity>
+                </ns2:DepaturePoint>
+                <ns2:ArrivalPoint>
+                  <ns2:Code>LED</ns2:Code>
+                  <ns2:IsCity>false</ns2:IsCity>
                 </ns2:ArrivalPoint>
               </ns2:ODPair>
             </ns2:ODPairs>
@@ -118,7 +119,7 @@ Search for v 1.2
             <ns2:ClassPreference>
               <ns2:ClassOfService>Economy</ns2:ClassOfService>
             </ns2:ClassPreference>
-            <ns2:ResultsGrouping>Simple</ns2:ResultsGrouping>
+            <ns2:ResultsGrouping>None</ns2:ResultsGrouping>
             <ns2:RequestorTags>
               <ns1:Tag>b2c</ns1:Tag>
               <ns1:Tag>usr</ns1:Tag>
