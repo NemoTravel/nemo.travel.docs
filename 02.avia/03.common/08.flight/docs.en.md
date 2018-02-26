@@ -99,6 +99,7 @@ Flight presentation format 1.1.
 -   **PassengerFare.Taxes.Tax.Currency** - The currency code of the tax. The data type is a string.
 -   **PassengerFare.Taxes.Tax.Amount** - the amount of the tax. The data type is a fractional number.
 -   **PassengerFare.Taxes.Tax.TaxCode** - the code of the tax. The data type is a string.
+-   **PassengerFare.Taxes.Tax.AgencyAmount** - the amount of the tax in agency currency. The data type is a fractional number.
 -   **PassengerFare.Tariffs** - The container for tariffs of this price component. The custom data type.
 -   **PassengerFare.Tariffs.Tariff** - The information about one of the tariffs of this price component. The custom data type.
 -   **PassengerFare.Tariffs.Tariff.Code** - The tariff code. The data type is a string.
