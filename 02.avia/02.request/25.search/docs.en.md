@@ -169,38 +169,38 @@ Search for v 1.2
   <s:Body>
     <Search_1_2Response xmlns="http://nemo-ibe.com/Avia">
       <Search_1_2Result xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-        <a:RequestID>138256961</a:RequestID>
+        <a:RequestID>142444204</a:RequestID>
         <a:ResponseBody>
           <SearchData>
-            <Now>2017-09-07 18:29:23  03:00</Now>
-            <StartTime>2017-09-07 18:29:19  03:00</StartTime>
-            <EndTime>2017-09-07 18:29:23  03:00</EndTime>
+            <Now>2018-02-26 14:55:36  03:00</Now>
+            <StartTime>2018-02-26 14:55:29  03:00</StartTime>
+            <EndTime>2018-02-26 14:55:36  03:00</EndTime>
             <IsComplete>true</IsComplete>
             <IsAsync>false</IsAsync>
             <Sources>
               <SourceInfo>
                 <ID>112233</ID>
-                <Supplier>Amadeus</Supplier>
+                <Supplier>Sabre</Supplier>
               </SourceInfo>
               <SourceInfo>
                 <ID>223344</ID>
-                <Supplier>Sabre</Supplier>
+                <Supplier>Amadeus</Supplier>
               </SourceInfo>
             </Sources>
             <SearchThreads>
               <SearchThreadInfo>
                 <SourceID>112233</SourceID>
                 <IsComplete>true</IsComplete>
-                <StartTime>2017-09-07 18:29:19  03:00</StartTime>
-                <Duration>00:00:03.6937033</Duration>
+                <StartTime>2018-02-26 14:55:30  03:00</StartTime>
+                <Duration>00:00:05.8445027</Duration>
                 <FromCache>false</FromCache>
-                <OriginalSearchID>138256961</OriginalSearchID>
+                <OriginalSearchID>142444204</OriginalSearchID>
               </SearchThreadInfo>
             </SearchThreads>
           </SearchData>
           <PlaneFlights>
             <Flight>
-              <a:ID>138256961010000</a:ID>
+              <a:ID>142444204040000</a:ID>
               <SourceID>112233</SourceID>
               <TypeInfo>
                 <Type>Regular</Type>
@@ -210,53 +210,27 @@ Search for v 1.2
                 <Segment>
                   <a:ID>1</a:ID>
                   <DepAirp>
-                    <AirportCode>OVB</AirportCode>
-                    <CityCode>OVB</CityCode>
-                    <UTC>7</UTC>
-                    <Terminal>A</Terminal>
-                  </DepAirp>
-                  <ArrAirp>
-                    <AirportCode>TJM</AirportCode>
-                    <UTC>5</UTC>
-                  </ArrAirp>
-                  <FlightNumber>240</FlightNumber>
-                  <FlightTime>175</FlightTime>
-                  <OpAirline>UT</OpAirline>
-                  <MarkAirline>UT</MarkAirline>
-                  <AircraftType>AT7</AircraftType>
-                  <DepDateTime>2017-10-13T19:35:00</DepDateTime>
-                  <ArrDateTime>2017-10-13T20:30:00</ArrDateTime>
-                  <BookingClass>
-                    <BaseClass>Economy</BaseClass>
-                    <BookingClassCode>P</BookingClassCode>
-                    <FreeSeatCount>9</FreeSeatCount>
-                  </BookingClass>
-                  <ETicket>true</ETicket>
-                  <RequestedSegment>0</RequestedSegment>
-                </Segment>
-                <Segment>
-                  <a:ID>2</a:ID>
-                  <DepAirp>
-                    <AirportCode>TJM</AirportCode>
-                    <UTC>5</UTC>
-                  </DepAirp>
-                  <ArrAirp>
-                    <AirportCode>VKO</AirportCode>
+                    <AirportCode>DME</AirportCode>
                     <CityCode>MOW</CityCode>
                     <UTC>3</UTC>
-                    <Terminal>A</Terminal>
+                  </DepAirp>
+                  <ArrAirp>
+                    <AirportCode>LED</AirportCode>
+                    <CityCode>LED</CityCode>
+                    <UTC>3</UTC>
+                    <Terminal>1</Terminal>
                   </ArrAirp>
-                  <FlightNumber>464</FlightNumber>
-                  <FlightTime>170</FlightTime>
-                  <OpAirline>UT</OpAirline>
-                  <MarkAirline>UT</MarkAirline>
-                  <AircraftType>735</AircraftType>
-                  <DepDateTime>2017-10-13T21:35:00</DepDateTime>
-                  <ArrDateTime>2017-10-13T22:25:00</ArrDateTime>
+                  <FlightNumber>91</FlightNumber>
+                  <FlightTime>80</FlightTime>
+                  <OpAirline>U6</OpAirline>
+                  <MarkAirline>U6</MarkAirline>
+                  <AircraftType>320</AircraftType>
+                  <DepDateTime>2018-03-14T12:05:00</DepDateTime>
+                  <ArrDateTime>2018-03-14T13:25:00</ArrDateTime>
                   <BookingClass>
                     <BaseClass>Economy</BaseClass>
-                    <BookingClassCode>H</BookingClassCode>
-                    <FreeSeatCount>5</FreeSeatCount>
+                    <BookingClassCode>O</BookingClassCode>
+                    <FreeSeatCount>4</FreeSeatCount>
                   </BookingClass>
                   <ETicket>true</ETicket>
                   <RequestedSegment>0</RequestedSegment>
@@ -265,54 +239,156 @@ Search for v 1.2
               <PriceInfo>
                 <Price>
                   <a:ID>1</a:ID>
-                  <ValidatingCompany>UT</ValidatingCompany>
+                  <ValidatingCompany>U6</ValidatingCompany>
                   <Refundable>NonRefundable</Refundable>
                   <PrivateFareInd>false</PrivateFareInd>
-                  <TicketTimeLimit>2017-09-10T23:59:00</TicketTimeLimit>
+                  <TicketTimeLimit>2018-03-02T07:59:00</TicketTimeLimit>
                   <PassengerFares>
                     <PassengerFare>
                       <Type>ADT</Type>
-                      <Quantity>1</Quantity>
+                      <Quantity>2</Quantity>
                       <BaseFare>
-                        <a:Amount>20803</a:Amount>
-                        <a:Currency>KZT</a:Currency>
+                        <a:Amount>450</a:Amount>
+                        <a:Currency>RUB</a:Currency>
                       </BaseFare>
                       <EquiveFare>
-                        <a:Amount>20803</a:Amount>
-                        <a:Currency>KZT</a:Currency>
+                        <a:Amount>8</a:Amount>
+                        <a:Currency>USD</a:Currency>
                       </EquiveFare>
                       <TotalFare>
-                        <a:Amount>43219</a:Amount>
-                        <a:Currency>KZT</a:Currency>
+                        <a:Amount>35.9</a:Amount>
+                        <a:Currency>USD</a:Currency>
                       </TotalFare>
                       <Taxes>
                         <Tax>
-                          <a:Amount>22416</a:Amount>
-                          <a:Currency>KZT</a:Currency>
-                          <TaxCode>XT</TaxCode>
+                          <a:Amount>17.8</a:Amount>
+                          <a:Currency>USD</a:Currency>
+                          <TaxCode>YQF</TaxCode>
+                          <AgencyAmount>1029</AgencyAmount>
+                        </Tax>
+                        <Tax>
+                          <a:Amount>7.1</a:Amount>
+                          <a:Currency>USD</a:Currency>
+                          <TaxCode>YRI</TaxCode>
+                          <AgencyAmount>411</AgencyAmount>
+                        </Tax>
+                        <Tax>
+                          <a:Amount>1.3</a:Amount>
+                          <a:Currency>USD</a:Currency>
+                          <TaxCode>RI3</TaxCode>
+                          <AgencyAmount>76</AgencyAmount>
+                        </Tax>
+                        <Tax>
+                          <a:Amount>1.7</a:Amount>
+                          <a:Currency>USD</a:Currency>
+                          <TaxCode>RI4</TaxCode>
+                          <AgencyAmount>99</AgencyAmount>
                         </Tax>
                       </Taxes>
                       <Tariffs>
                         <Tariff>
-                          <Code>PLTOW30</Code>
+                          <Code>OPROW</Code>
                           <Type>Public</Type>
                           <SegNum>1</SegNum>
-                          <FareFamilyDescID>0</FareFamilyDescID>
-                        </Tariff>
-                        <Tariff>
-                          <Code>HLTOW</Code>
-                          <Type>Public</Type>
-                          <SegNum>2</SegNum>
+                          <FreeBaggage>
+                            <a:Value>10</a:Value>
+                            <a:Measure>Kilograms</a:Measure>
+                          </FreeBaggage>
                           <FareFamilyDescID>0</FareFamilyDescID>
                         </Tariff>
                       </Tariffs>
+                      <FareCalc>MOW U6 LED450RUB450END</FareCalc>
+                      <Markup>
+                        <a:Amount>218</a:Amount>
+                        <a:Currency>RUB</a:Currency>
+                      </Markup>
+                      <AgencyFare>
+                        <a:Amount>463</a:Amount>
+                        <a:Currency>RUB</a:Currency>
+                      </AgencyFare>
+                      <ChargeBreakdown>
+                        <a:Charge>
+                          <a:Amount>118</a:Amount>
+                          <a:Currency>RUB</a:Currency>
+                          <a:RuleID>1507060</a:RuleID>
+                          <a:Type>PriceRule</a:Type>
+                        </a:Charge>
+                        <a:Charge>
+                          <a:Amount>100</a:Amount>
+                          <a:Currency>RUB</a:Currency>
+                          <a:RuleID>1507166</a:RuleID>
+                          <a:Type>PriceRule</a:Type>
+                        </a:Charge>
+                        <a:Charge>
+                          <a:Amount>-3.21411361694334</a:Amount>
+                          <a:Currency>RUB</a:Currency>
+                          <a:Type>TaxRound</a:Type>
+                        </a:Charge>
+                        <a:Charge>
+                          <a:Amount>-0.83917236328125</a:Amount>
+                          <a:Currency>RUB</a:Currency>
+                          <a:Type>FareRound</a:Type>
+                        </a:Charge>
+                      </ChargeBreakdown>
+                      <TotalAgencyFare>
+                        <a:Amount>2078</a:Amount>
+                        <a:Currency>RUB</a:Currency>
+                      </TotalAgencyFare>
                     </PassengerFare>
                   </PassengerFares>
+                  <AgencyMarkup>
+                    <a:Amount>436.1</a:Amount>
+                    <a:Currency>RUB</a:Currency>
+                  </AgencyMarkup>
+                  <PricingData>
+                    <PricingRule>1507060</PricingRule>
+                    <Code>U6</Code>
+                    <AirlineCommission>
+                      <Money>
+                        <a:Amount>20</a:Amount>
+                        <a:Currency>RUB</a:Currency>
+                      </Money>
+                      <Type>Money</Type>
+                    </AirlineCommission>
+                    <AgencyProfit>
+                      <Percent>0</Percent>
+                      <Type>Percent</Type>
+                    </AgencyProfit>
+                    <AgencyCommission>
+                      <a:Amount>0</a:Amount>
+                      <a:Currency>USD</a:Currency>
+                    </AgencyCommission>
+                    <Bonus>
+                      <a:Amount>6</a:Amount>
+                      <a:Currency>RUB</a:Currency>
+                    </Bonus>
+                  </PricingData>
+                  <RoundingChargePart>
+                    <a:Amount>0.100000000000364</a:Amount>
+                    <a:Currency>RUB</a:Currency>
+                  </RoundingChargePart>
+                  <ChargeBreakdown>
+                    <a:Charge>
+                      <a:Amount>236</a:Amount>
+                      <a:Currency>RUB</a:Currency>
+                      <a:RuleID>1507060</a:RuleID>
+                    </a:Charge>
+                    <a:Charge>
+                      <a:Amount>200</a:Amount>
+                      <a:Currency>RUB</a:Currency>
+                      <a:RuleID>1507166</a:RuleID>
+                    </a:Charge>
+                    <a:Charge>
+                      <a:Amount>0.100000000000364</a:Amount>
+                      <a:Currency>RUB</a:Currency>
+                      <a:RuleID>-1</a:RuleID>
+                    </a:Charge>
+                  </ChargeBreakdown>
                 </Price>
               </PriceInfo>
             </Flight>
             <Flight>
-              <a:ID>138256961010001</a:ID>
+              <a:ID>142444204040001</a:ID>
               <SourceID>112233</SourceID>
               <TypeInfo>
                 <Type>Regular</Type>
@@ -322,52 +398,27 @@ Search for v 1.2
                 <Segment>
                   <a:ID>1</a:ID>
                   <DepAirp>
-                    <AirportCode>OVB</AirportCode>
-                    <CityCode>OVB</CityCode>
-                    <UTC>7</UTC>
-                    <Terminal>A</Terminal>
-                  </DepAirp>
-                  <ArrAirp>
-                    <AirportCode>TJM</AirportCode>
-                    <UTC>5</UTC>
-                  </ArrAirp>
-                  <FlightNumber>240</FlightNumber>
-                  <FlightTime>175</FlightTime>
-                  <OpAirline>UT</OpAirline>
-                  <MarkAirline>UT</MarkAirline>
-                  <AircraftType>AT7</AircraftType>
-                  <DepDateTime>2017-10-13T19:35:00</DepDateTime>
-                  <ArrDateTime>2017-10-13T20:30:00</ArrDateTime>
-                  <BookingClass>
-                    <BaseClass>Economy</BaseClass>
-                    <BookingClassCode>P</BookingClassCode>
-                    <FreeSeatCount>9</FreeSeatCount>
-                  </BookingClass>
-                  <ETicket>true</ETicket>
-                  <RequestedSegment>0</RequestedSegment>
-                </Segment>
-                <Segment>
-                  <a:ID>2</a:ID>
-                  <DepAirp>
-                    <AirportCode>TJM</AirportCode>
-                    <UTC>5</UTC>
-                  </DepAirp>
-                  <ArrAirp>
                     <AirportCode>VKO</AirportCode>
                     <CityCode>MOW</CityCode>
                     <UTC>3</UTC>
                     <Terminal>A</Terminal>
+                  </DepAirp>
+                  <ArrAirp>
+                    <AirportCode>LED</AirportCode>
+                    <CityCode>LED</CityCode>
+                    <UTC>3</UTC>
+                    <Terminal>1</Terminal>
                   </ArrAirp>
-                  <FlightNumber>454</FlightNumber>
-                  <FlightTime>165</FlightTime>
+                  <FlightNumber>381</FlightNumber>
+                  <FlightTime>85</FlightTime>
                   <OpAirline>UT</OpAirline>
                   <MarkAirline>UT</MarkAirline>
-                  <AircraftType>734</AircraftType>
-                  <DepDateTime>2017-10-14T07:15:00</DepDateTime>
-                  <ArrDateTime>2017-10-14T08:00:00</ArrDateTime>
+                  <AircraftType>735</AircraftType>
+                  <DepDateTime>2018-03-14T17:00:00</DepDateTime>
+                  <ArrDateTime>2018-03-14T18:25:00</ArrDateTime>
                   <BookingClass>
                     <BaseClass>Economy</BaseClass>
-                    <BookingClassCode>H</BookingClassCode>
+                    <BookingClassCode>K</BookingClassCode>
                     <FreeSeatCount>9</FreeSeatCount>
                   </BookingClass>
                   <ETicket>true</ETicket>
@@ -380,46 +431,130 @@ Search for v 1.2
                   <ValidatingCompany>UT</ValidatingCompany>
                   <Refundable>NonRefundable</Refundable>
                   <PrivateFareInd>false</PrivateFareInd>
-                  <TicketTimeLimit>2017-09-10T23:59:00</TicketTimeLimit>
+                  <TicketTimeLimit>2018-03-02T07:59:00</TicketTimeLimit>
                   <PassengerFares>
                     <PassengerFare>
                       <Type>ADT</Type>
-                      <Quantity>1</Quantity>
+                      <Quantity>2</Quantity>
                       <BaseFare>
-                        <a:Amount>20803</a:Amount>
-                        <a:Currency>KZT</a:Currency>
+                        <a:Amount>305</a:Amount>
+                        <a:Currency>RUB</a:Currency>
                       </BaseFare>
                       <EquiveFare>
-                        <a:Amount>20803</a:Amount>
-                        <a:Currency>KZT</a:Currency>
+                        <a:Amount>5</a:Amount>
+                        <a:Currency>USD</a:Currency>
                       </EquiveFare>
                       <TotalFare>
-                        <a:Amount>43219</a:Amount>
-                        <a:Currency>KZT</a:Currency>
+                        <a:Amount>43.8</a:Amount>
+                        <a:Currency>USD</a:Currency>
                       </TotalFare>
                       <Taxes>
                         <Tax>
-                          <a:Amount>22416</a:Amount>
-                          <a:Currency>KZT</a:Currency>
-                          <TaxCode>XT</TaxCode>
+                          <a:Amount>26.5</a:Amount>
+                          <a:Currency>USD</a:Currency>
+                          <TaxCode>YQF</TaxCode>
+                          <AgencyAmount>1531</AgencyAmount>
+                        </Tax>
+                        <Tax>
+                          <a:Amount>12.3</a:Amount>
+                          <a:Currency>USD</a:Currency>
+                          <TaxCode>YRI</TaxCode>
+                          <AgencyAmount>711</AgencyAmount>
                         </Tax>
                       </Taxes>
                       <Tariffs>
                         <Tariff>
-                          <Code>PLTOW30</Code>
+                          <Code>KLTOW</Code>
                           <Type>Public</Type>
                           <SegNum>1</SegNum>
-                          <FareFamilyDescID>0</FareFamilyDescID>
-                        </Tariff>
-                        <Tariff>
-                          <Code>HLTOW</Code>
-                          <Type>Public</Type>
-                          <SegNum>2</SegNum>
-                          <FareFamilyDescID>0</FareFamilyDescID>
+                          <FreeBaggage>
+                            <a:Value>0</a:Value>
+                            <a:Measure>Pieces</a:Measure>
+                          </FreeBaggage>
+                          <FareFamilyDescID>1</FareFamilyDescID>
                         </Tariff>
                       </Tariffs>
+                      <FareCalc>MOW UT LED305RUB305END</FareCalc>
+                      <Markup>
+                        <a:Amount>100</a:Amount>
+                        <a:Currency>RUB</a:Currency>
+                      </Markup>
+                      <AgencyFare>
+                        <a:Amount>289</a:Amount>
+                        <a:Currency>RUB</a:Currency>
+                      </AgencyFare>
+                      <ChargeBreakdown>
+                        <a:Charge>
+                          <a:Amount>100</a:Amount>
+                          <a:Currency>RUB</a:Currency>
+                          <a:RuleID>1507166</a:RuleID>
+                          <a:Type>PriceRule</a:Type>
+                        </a:Charge>
+                        <a:Charge>
+                          <a:Amount>-0.519985961914017</a:Amount>
+                          <a:Currency>RUB</a:Currency>
+                          <a:Type>TaxRound</a:Type>
+                        </a:Charge>
+                        <a:Charge>
+                          <a:Amount>-0.149482727050781</a:Amount>
+                          <a:Currency>RUB</a:Currency>
+                          <a:Type>FareRound</a:Type>
+                        </a:Charge>
+                      </ChargeBreakdown>
+                      <TotalAgencyFare>
+                        <a:Amount>2531</a:Amount>
+                        <a:Currency>RUB</a:Currency>
+                      </TotalAgencyFare>
                     </PassengerFare>
                   </PassengerFares>
+                  <AgencyMarkup>
+                    <a:Amount>200.33</a:Amount>
+                    <a:Currency>RUB</a:Currency>
+                  </AgencyMarkup>
+                  <PricingData>
+                    <PricingRule>1507164</PricingRule>
+                    <Code>UT</Code>
+                    <AirlineCommission>
+                      <Money>
+                        <a:Amount>40</a:Amount>
+                        <a:Currency>RUB</a:Currency>
+                      </Money>
+                      <Type>Money</Type>
+                    </AirlineCommission>
+                    <AgencyProfit>
+                      <Percent>0</Percent>
+                      <Type>Percent</Type>
+                    </AgencyProfit>
+                    <AgencyCommission>
+                      <a:Amount>0</a:Amount>
+                      <a:Currency>USD</a:Currency>
+                    </AgencyCommission>
+                    <Bonus>
+                      <a:Amount>30</a:Amount>
+                      <a:Currency>RUB</a:Currency>
+                    </Bonus>
+                  </PricingData>
+                  <RoundingChargePart>
+                    <a:Amount>0.329999999999927</a:Amount>
+                    <a:Currency>RUB</a:Currency>
+                  </RoundingChargePart>
+                  <ChargeBreakdown>
+                    <a:Charge>
+                      <a:Amount>0</a:Amount>
+                      <a:Currency>RUB</a:Currency>
+                      <a:RuleID>1507164</a:RuleID>
+                    </a:Charge>
+                    <a:Charge>
+                      <a:Amount>200</a:Amount>
+                      <a:Currency>RUB</a:Currency>
+                      <a:RuleID>1507166</a:RuleID>
+                    </a:Charge>
+                    <a:Charge>
+                      <a:Amount>0.329999999999927</a:Amount>
+                      <a:Currency>RUB</a:Currency>
+                      <a:RuleID>-1</a:RuleID>
+                    </a:Charge>
+                  </ChargeBreakdown>
                 </Price>
               </PriceInfo>
             </Flight>
@@ -427,25 +562,25 @@ Search for v 1.2
           <FareFamiliesDescription>
             <a:Description>
               <a:ID>0</a:ID>
-              <a:Name>Лайт</a:Name>
-              <a:Carryon>1 сумка до 10 кг</a:Carryon>
+              <a:Name>Промо</a:Name>
+              <a:Carryon>1 место до 5 кг</a:Carryon>
               <a:Refundable>NonRefundable</a:Refundable>
-              <a:FlownMiles>25</a:FlownMiles>
+              <a:Exchangable>true</a:Exchangable>
               <a:UniversalParameters>
                 <a:FareFamilyParameter>
-                  <a:Code>description</a:Code>
+                  <a:Code>carry_on</a:Code>
                   <a:ShortDescription>
                     <a:LangItem>
                       <a:Code>EN</a:Code>
-                      <a:Value>Light</a:Value>
+                      <a:Value>up to 5 kg</a:Value>
                     </a:LangItem>
                     <a:LangItem>
                       <a:Code>DE</a:Code>
-                      <a:Value>Licht</a:Value>
+                      <a:Value>bis zu 5 kg</a:Value>
                     </a:LangItem>
                     <a:LangItem>
                       <a:Code>RU</a:Code>
-                      <a:Value>Лайт</a:Value>
+                      <a:Value>5 кг </a:Value>
                     </a:LangItem>
                   </a:ShortDescription>
                   <a:FullDescription/>
@@ -453,15 +588,19 @@ Search for v 1.2
                   <a:Priority>0</a:Priority>
                 </a:FareFamilyParameter>
                 <a:FareFamilyParameter>
-                  <a:Code>miles</a:Code>
+                  <a:Code>baggage</a:Code>
                   <a:ShortDescription>
                     <a:LangItem>
                       <a:Code>EN</a:Code>
-                      <a:Value>25% Miles</a:Value>
+                      <a:Value>1 item up to 10 kg</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>DE</a:Code>
+                      <a:Value>eine Tasche bis zu 10 kg</a:Value>
                     </a:LangItem>
                     <a:LangItem>
                       <a:Code>RU</a:Code>
-                      <a:Value>25% миль</a:Value>
+                      <a:Value>один чемодан 10 кг</a:Value>
                     </a:LangItem>
                   </a:ShortDescription>
                   <a:FullDescription/>
@@ -473,28 +612,32 @@ Search for v 1.2
                   <a:ShortDescription>
                     <a:LangItem>
                       <a:Code>EN</a:Code>
-                      <a:Value>Exchange</a:Value>
+                      <a:Value>Exchange before departure</a:Value>
                     </a:LangItem>
                     <a:LangItem>
                       <a:Code>DE</a:Code>
-                      <a:Value>Ticketbörse</a:Value>
+                      <a:Value>Änderungen am Ticket vor der Abreise</a:Value>
                     </a:LangItem>
                     <a:LangItem>
                       <a:Code>RU</a:Code>
-                      <a:Value>Обмен билета</a:Value>
+                      <a:Value>Изменения в билете до вылета</a:Value>
                     </a:LangItem>
                   </a:ShortDescription>
                   <a:FullDescription>
                     <a:LangItem>
                       <a:Code>EN</a:Code>
-                      <a:Value>Non-exchangeable.</a:Value>
+                      <a:Value>Changes to the ticket before departure (40 minutes before the end of registration) are allowed with an additional charge for each segment.</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>DE</a:Code>
+                      <a:Value>Änderungen am Ticket vor der Abreise (40 Minuten vor dem Ende der Anmeldung) sind mit einem Aufpreis für jedes Segment erlaubt.</a:Value>
                     </a:LangItem>
                     <a:LangItem>
                       <a:Code>RU</a:Code>
-                      <a:Value>Обмен билета не разрешен.</a:Value>
+                      <a:Value>Изменения в билете до вылета (за 40 мин. до окончания регистрации) разрешены со сбором за каждый сегмент.</a:Value>
                     </a:LangItem>
                   </a:FullDescription>
-                  <a:NeedToPay>NotAvailable</a:NeedToPay>
+                  <a:NeedToPay>Charge</a:NeedToPay>
                   <a:Priority>0</a:Priority>
                 </a:FareFamilyParameter>
                 <a:FareFamilyParameter>
@@ -516,7 +659,7 @@ Search for v 1.2
                   <a:FullDescription>
                     <a:LangItem>
                       <a:Code>EN</a:Code>
-                      <a:Value>Non-refundable.</a:Value>
+                      <a:Value>Fare is completely non-refundable.</a:Value>
                     </a:LangItem>
                     <a:LangItem>
                       <a:Code>DE</a:Code>
@@ -531,19 +674,19 @@ Search for v 1.2
                   <a:Priority>0</a:Priority>
                 </a:FareFamilyParameter>
                 <a:FareFamilyParameter>
-                  <a:Code>carry_on</a:Code>
+                  <a:Code>description</a:Code>
                   <a:ShortDescription>
                     <a:LangItem>
                       <a:Code>EN</a:Code>
-                      <a:Value>1 item up to 10 kg</a:Value>
+                      <a:Value>Promo</a:Value>
                     </a:LangItem>
                     <a:LangItem>
                       <a:Code>DE</a:Code>
-                      <a:Value>1 Beutel bis 10 kg</a:Value>
+                      <a:Value>Promo</a:Value>
                     </a:LangItem>
                     <a:LangItem>
                       <a:Code>RU</a:Code>
-                      <a:Value>1 сумка до 10 кг</a:Value>
+                      <a:Value>Промо</a:Value>
                     </a:LangItem>
                   </a:ShortDescription>
                   <a:FullDescription/>
@@ -551,19 +694,155 @@ Search for v 1.2
                   <a:Priority>0</a:Priority>
                 </a:FareFamilyParameter>
                 <a:FareFamilyParameter>
-                  <a:Code>baggage</a:Code>
+                  <a:Code>meal</a:Code>
                   <a:ShortDescription>
                     <a:LangItem>
                       <a:Code>EN</a:Code>
-                      <a:Value>no free baggage allowance</a:Value>
+                      <a:Value>Complimentary meals</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>DE</a:Code>
+                      <a:Value>Mahlzeiten an Bord</a:Value>
                     </a:LangItem>
                     <a:LangItem>
                       <a:Code>RU</a:Code>
-                      <a:Value>платный</a:Value>
+                      <a:Value>Питание на борту</a:Value>
                     </a:LangItem>
                   </a:ShortDescription>
                   <a:FullDescription/>
-                  <a:NeedToPay>Charge</a:NeedToPay>
+                  <a:NeedToPay>Free</a:NeedToPay>
+                  <a:Priority>0</a:Priority>
+                </a:FareFamilyParameter>
+                <a:FareFamilyParameter>
+                  <a:Code>seats_registration</a:Code>
+                  <a:ShortDescription>
+                    <a:LangItem>
+                      <a:Code>EN</a:Code>
+                      <a:Value>First row seats</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>DE</a:Code>
+                      <a:Value>Erste Reihe Sitze</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>RU</a:Code>
+                      <a:Value>Рассадка на первых рядах</a:Value>
+                    </a:LangItem>
+                  </a:ShortDescription>
+                  <a:FullDescription>
+                    <a:LangItem>
+                      <a:Code>EN</a:Code>
+                      <a:Value>First row seats — not available.</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>DE</a:Code>
+                      <a:Value>Erste Reihe Sitze — nicht verfügbar.</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>RU</a:Code>
+                      <a:Value>Рассадка на первых рядах — недоступно.</a:Value>
+                    </a:LangItem>
+                  </a:FullDescription>
+                  <a:NeedToPay>NotAvailable</a:NeedToPay>
+                  <a:Priority>0</a:Priority>
+                </a:FareFamilyParameter>
+                <a:FareFamilyParameter>
+                  <a:Code>vip_service</a:Code>
+                  <a:ShortDescription>
+                    <a:LangItem>
+                      <a:Code>EN</a:Code>
+                      <a:Value>Priority check-in</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>DE</a:Code>
+                      <a:Value>Vorrangiger Check-in für einen Flug</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>RU</a:Code>
+                      <a:Value>Приоритетная регистрация на рейс</a:Value>
+                    </a:LangItem>
+                  </a:ShortDescription>
+                  <a:FullDescription>
+                    <a:LangItem>
+                      <a:Code>EN</a:Code>
+                      <a:Value>Priority check-in — not available.</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>DE</a:Code>
+                      <a:Value>Vorrangiger Check-in für einen Flug — nicht verfügbar.</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>RU</a:Code>
+                      <a:Value>Приоритетная регистрация на рейс — недоступно.</a:Value>
+                    </a:LangItem>
+                  </a:FullDescription>
+                  <a:NeedToPay>NotAvailable</a:NeedToPay>
+                  <a:Priority>0</a:Priority>
+                </a:FareFamilyParameter>
+                <a:FareFamilyParameter>
+                  <a:Code>vip_service</a:Code>
+                  <a:ShortDescription>
+                    <a:LangItem>
+                      <a:Code>EN</a:Code>
+                      <a:Value>Priority boarding</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>DE</a:Code>
+                      <a:Value>Vorrangiges Einsteigen</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>RU</a:Code>
+                      <a:Value>Приоритетная посадка в самолёт</a:Value>
+                    </a:LangItem>
+                  </a:ShortDescription>
+                  <a:FullDescription>
+                    <a:LangItem>
+                      <a:Code>EN</a:Code>
+                      <a:Value>Priority boarding — not available.</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>DE</a:Code>
+                      <a:Value>Vorrangiges Einsteigen — nicht verfügbar.</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>RU</a:Code>
+                      <a:Value>Приоритетная посадка в самолёт — недоступно.</a:Value>
+                    </a:LangItem>
+                  </a:FullDescription>
+                  <a:NeedToPay>NotAvailable</a:NeedToPay>
+                  <a:Priority>0</a:Priority>
+                </a:FareFamilyParameter>
+                <a:FareFamilyParameter>
+                  <a:Code>miles</a:Code>
+                  <a:ShortDescription>
+                    <a:LangItem>
+                      <a:Code>EN</a:Code>
+                      <a:Value>«Wings» bonuses</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>DE</a:Code>
+                      <a:Value>«Wings» Boni</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>RU</a:Code>
+                      <a:Value>Начисление бонусов</a:Value>
+                    </a:LangItem>
+                  </a:ShortDescription>
+                  <a:FullDescription>
+                    <a:LangItem>
+                      <a:Code>EN</a:Code>
+                      <a:Value>All members of «Wings Loyalty Program» get points to Wings Loyalty account (about 5% of the applicable tariff).</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>DE</a:Code>
+                      <a:Value>Alle Mitglieder von «Wings Loyalty Program» bekommen Punkte zu Wings Loyalty Account (ca. 5% des geltenden Tarifs).</a:Value>
+                    </a:LangItem>
+                    <a:LangItem>
+                      <a:Code>RU</a:Code>
+                      <a:Value>Участники программы «Крылья» получают на свой счет бонусы (5% от оплаченного тарифа).</a:Value>
+                    </a:LangItem>
+                  </a:FullDescription>
+                  <a:NeedToPay>Free</a:NeedToPay>
                   <a:Priority>0</a:Priority>
                 </a:FareFamilyParameter>
               </a:UniversalParameters>
