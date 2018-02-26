@@ -125,7 +125,7 @@ Flight presentation format 1.1.
 -   **PassengerFare.Commission.Percent** - The commission value in percent. The data type is a fractional number.
 -   **PassengerFare.Commission.Currency** - the currency code of the commission. The data type is a string.
 -   **PassengerFare.FareCalc** - the string for calculating the price. The data type is a string.
--   **PassengerFare.Markup** - 
+-   **PassengerFare.Markup** - the amount charge for this price. Тип данных — [Money](/avia/common/money).
 -   **PassengerFare.AgencyFare** - price of the tariff in the agency currency. The data type is a fractional number.
 -   **PassengerFare.ChargeBreakdown** - breakdown of the components of the charge from the pricing on the passenger, the amount of rounding for conversion in the currency of the agency.
 -   **PassengerFare.ChargeBreakdown.Charge** - The container for charge. The custom data type.
