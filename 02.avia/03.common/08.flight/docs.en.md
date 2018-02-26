@@ -125,6 +125,17 @@ Flight presentation format 1.1.
 -   **PassengerFare.Commission.Percent** - The commission value in percent. The data type is a fractional number.
 -   **PassengerFare.Commission.Currency** - the currency code of the commission. The data type is a string.
 -   **PassengerFare.FareCalc** - the string for calculating the price. The data type is a string.
+-   **PassengerFare.Markup** - 
+-   **PassengerFare.AgencyFare** - price of the tariff in the agency currency. The data type is a fractional number.
+-   **PassengerFare.ChargeBreakdown** - breakdown of the components of the charge from the pricing on the passenger, the amount of rounding for conversion in the currency of the agency.
+-   **PassengerFare.ChargeBreakdown.Charge** - The container for charge. The custom data type.
+-   **PassengerFare.ChargeBreakdown.Charge.Amount** - The absolute value of the charge, roundings. The data type is a fractional number.
+-   **PassengerFare.ChargeBreakdown.Charge.RuleID** - The Rule ID. The data type is an integer.
+-   **PassengerFare.ChargeBreakdown.Charge.Type** - The type of charge. Data type - enumeration, possible values:
+	- **PriceRule** -  Сharge from the pricing table;
+	- **TaxRound** - The rounding amount received by converting value the tax to agency currency;
+	- **FareRound** - The rounding amount received by converting value the tariff to agency currency;
+-   **PassengerFare.TotalAgencyFaren** - The amount tariff and charge in the agency currency.The data type is [Money](/avia/common/money).
 -   **PassengerFare.ExchangePriceInfo** - the total exchange fare (the item will only be on receipt of exchange options). The custom data type
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty** - the airline's penalty for the exchange. The custom data type.
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty.Currency** - The penalty currency code. The data type is a string.
