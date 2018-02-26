@@ -99,6 +99,7 @@ taxonomy:
 -   **PassengerFare.Taxes.Tax.Currency** — код валюты таксы. Тип данных — строка.
 -   **PassengerFare.Taxes.Tax.Amount** — сумма таксы. Тип данных — дробное число.
 -   **PassengerFare.Taxes.Tax.TaxCode** — код таксы. Тип данных — строка.
+-   **PassengerFare.Taxes.Tax.AgencyAmount** - сумма таксы в валюте агентства. Тип данных — дробное число.
 -   **PassengerFare.Tariffs** — контейнер для тарифов данной ценовой составляющей. Тип данных — сложный.
 -   **PassengerFare.Tariffs.Tariff** — информация об одном из тарифов данной ценовой составляющей. Тип данных — сложный.
 -   **PassengerFare.Tariffs.Tariff.Code** — код тарифа. Тип данных — строка.
@@ -133,6 +134,17 @@ taxonomy:
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty.Amount** — сумма штрафа. Тип данных — дробное число.
 -   **PassengerFare.ExchangePriceInfo.FlightPriceDifference** — разница в стоимости с перелётом в бронировании. Если найденный перелёт стоит дешевле, то разница будет со знаком «-». Тип данных — [Money](/avia/common/money).
 -   **PassengerFare.Markup** - сумма сбора для данной цены. Тип данных — [Money](/avia/common/money).
+-   **PassengerFare.AgencyFare** - стоимость тарифа в валюте агентства. Тип данных — [Money](/avia/common/money).
+-   **PassengerFare.ChargeBreakdown** - разбивка составляющих сбора из ценообразования на пассажира, размер округления за конвертацию в валюте агентства.
+-   **PassengerFare.ChargeBreakdown.Charge** - информация о конкретном сборе. Тип данных — сложный.
+-   **PassengerFare.ChargeBreakdown.Charge.Amount** - абсолютное значение сбора на пассажира. Тип данных — дробное число.
+-   **PassengerFare.ChargeBreakdown.Charge.Currency** - код валюты сбора. Тип данных — строка.
+-   **PassengerFare.ChargeBreakdown.Charge.RuleID** - идентификатор сработавшего правила ценообразования. Тип данных — целое число.
+-   **PassengerFare.ChargeBreakdown.Charge.Type** - тип сбора. Тип данных — перечисление, возможные значения:
+	- **PriceRule** - сбор из таблицы ценообразования;
+	- **TaxRound** - размер округления по таксам полученный путем конвертации в валюту агентства;
+	- **FareRound** - размер округления по тарифу полученный путем конвертации в валюту агентства;
+-   **PassengerFare.TotalAgencyFaren** - сумма тарифа и такс в валюте агентства. Тип данных — [Money](/avia/common/money).
 -   **Flight.Price.AgencyMarkup** - сбор агентсва за весь перелёт. Тип данных — [Money](/avia/common/money).
 -   **Flight.Price.DiscountByPromoAction** — скидка по промо-коду (расчитана по правилам ценообразования). Тип данных — [Money](/avia/common/money).
 -   **Flight.Price.PricingData** — результаты расчета ценообразования. Тип данных — сложный.
