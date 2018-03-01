@@ -3,6 +3,7 @@ title: 'Nemo BackOffice API'
 taxonomy:
     category:
         - docs
+child_type: docs
 ---
 
 ### Chapter 3
