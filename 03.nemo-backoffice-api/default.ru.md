@@ -1,5 +1,8 @@
 ---
 title: 'Nemo BackOffice API'
+taxonomy:
+    category:
+        - docs
 ---
 
 ### Chapter 3
