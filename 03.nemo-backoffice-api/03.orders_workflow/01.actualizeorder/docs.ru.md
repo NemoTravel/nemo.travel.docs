@@ -4,12 +4,12 @@ title: ActualizeOrder
 
 ### ActualizeOrder
 
-Для актуализации статуса заказа, используется запрос ActualizeOrder. С помощбю него можно как обновлять информацию об авиабронировании, так и обновлять статус платежной транзакции.
+Для актуализации статуса заказа, используется запрос ActualizeOrder. С помощью него можно как обновлять информацию о заказе из бэк-офиса Nemo.travel, так и обновлять статус платежных транзакций.
 #### Запрос
-* OrderID - номер заказа в Nemo 1.0, значение возвращается в ответе на запрос GetOrder параметре OrderID. Чтобы получить значение параметра для заказа необходимо выполнить запрос GetOrder с указанием параметра FlightsBookingID.
+* OrderID - номер заказа из бэк-офиса Nemo.travel, значение возвращается в ответе на запрос создания заказа GetOrder в параметре OrderID. Чтобы получить значение параметра для заказа необходимо выполнить запрос GetOrder с указанием параметра FlightsBookingID (ID бронирования из Nemo Connect).
 * ActualizePayment - позволяет отправить запрос в платежную систему для обновления статуса платежной транзакции. Значения: true/false.
 * ActualizeFlightsBooking - инициирует отправку запроса [UpdateBook](/avia/request/updatebook) в Nemo Connect. Значения: true/false.
-* CallbackUrl - адрес, на который будет возвращен callback от Nemo.travel с информацией о статусе заказа. Формат: http(s)://domain.
+* CallbackUrl - адрес, на который будет возвращен callback от Nemo.travel с информацией о статусе заказа при его изменении. Формат: http(s)://domain.
 * NemoOneAuthToken - API ключ, выдается сотрудниками Nemo.travel.
 * UserID - ID пользователя в системе Nemo.travel, выдается сотрудниками Nemo.travel.
 
@@ -25,12 +25,12 @@ title: ActualizeOrder
                <ActualizePayment>true</ActualizePayment>
                <ActualizeFlightsBooking>true</ActualizeFlightsBooking>
                <CallbackUrl>http://nemo2.mlsd.ru/l?log</CallbackUrl>
-                   </RequestBody>
+            </RequestBody>
             <Requisites>
                <NemoOneAuthToken>YOUR_TOKKEN</NemoOneAuthToken>
-		            </Requisites>
+		    </Requisites>
             <UserID>YOUR_ID</UserID>
-		         </Request>
+		 </Request>
       </ver:ActualizeOrder>
    </soapenv:Body>
 </soapenv:Envelope>
