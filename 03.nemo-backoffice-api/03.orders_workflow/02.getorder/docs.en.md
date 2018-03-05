@@ -1,17 +1,21 @@
 ---
-title: ActualizeOrder
+title: GetOrder
 taxonomy:
     category:
         - docs
 ---
 
-### ActualizeOrder
+### GetOrder
 
-Для актуализации статуса заказа, используется запрос ActualizeOrder. С помощью него можно как обновлять информацию о заказе из бэк-офиса Nemo.travel, так и обновлять статус платежных транзакций.
+После создания бронирования (отправки запроса [BookFlight](/avia/request/bookflight) и получения ответа на него) вам необходимо отправить в Nemo.travel специальный запрос GetOrder для создания заказа в Бэк-офисе.
+В ответе на данный запрос Nemo.travel передаст вам:
+*  адрес для передачи данных карты в платежную систему в параметре UrlForCardDataSubmit; 
+*  контент запроса, в котором необходимо заменить placeholder на данные карты и отправить по адресу, который также будет в ответе; в параметре CardDataRequestContent
+*  список доступных дополнительных услуг (сервисные пакеты, программы страхования) в параметре Services. 
+
 #### Запрос
-* OrderID - номер заказа из бэк-офиса Nemo.travel. Чтобы получить значение параметра для заказа, необходимо выполнить запрос GetOrder с указанием параметра FlightsBookingID (ID бронирования из Nemo Connect).
-* ActualizePayment - позволяет отправить запрос в платежную систему для обновления статуса платежной транзакции. Значения: true/false.
-* ActualizeFlightsBooking - инициирует отправку запроса [UpdateBook](/avia/request/updatebook) в Nemo Connect. Значения: true/false.
+* OrderID - номер заказа в бэк-офисе Nemo.travel, значение возвращается в ответе на запрос GetOrder параметре OrderID. Чтобы получить значение параметра для заказа необходимо выполнить запрос GetOrder с указанием параметра FlightsBookingID (идентификатора бронирования системы Nemo Connect).
+* FlightsBookingID - ID бронирования Nemo Connect, значение возвращается в ответе на запрос GetBook параметре ID.
 * CallbackUrl - адрес, на который будет возвращен callback от Nemo.travel с информацией о статусе заказа при его изменении. Формат: http(s)://domain.
 * NemoOneAuthToken - API ключ, выдается сотрудниками Nemo.travel.
 * UserID - ID пользователя в системе Nemo.travel, выдается сотрудниками Nemo.travel.
@@ -19,28 +23,26 @@ taxonomy:
 #### Пример запроса
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="***">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ver:ActualizeOrder>
-         <Request>
-            <RequestBody>
-               <OrderID>500243</OrderID>
-               <ActualizePayment>true</ActualizePayment>
-               <ActualizeFlightsBooking>true</ActualizeFlightsBooking>
-               <CallbackUrl>http://nemo2.mlsd.ru/l?log</CallbackUrl>
-            </RequestBody>
-            <Requisites>
-               <NemoOneAuthToken>YOUR_TOKKEN</NemoOneAuthToken>
-		    </Requisites>
-            <UserID>YOUR_ID</UserID>
-		 </Request>
-      </ver:ActualizeOrder>
-   </soapenv:Body>
+	<soapenv:Header/>
+	<soapenv:Body>
+		<ver:GetOrder>
+			<Request>
+				<RequestBody>
+					<OrderID>500243</OrderID
+					<CallbackUrl>http://nemo2.mlsd.ru/l?log</CallbackUrl>
+				</RequestBody>
+				<Requisites>
+					<NemoOneAuthToken>YOUR_TOKKEN</NemoOneAuthToken>
+				</Requisites>
+				<UserID>YOUR_USER_ID</UserID>
+			</Request>
+		</ver:GetOrder>
+	</soapenv:Body>
 </soapenv:Envelope>
 ```
 #### Пример ответа
 ```xml
-<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="***" xmlns:xsi="***">
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="***" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
       <ns1:GetOrderResponse>
          <ResponseBin>
