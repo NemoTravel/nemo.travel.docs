@@ -7,20 +7,20 @@ taxonomy:
 
 ### GetOrder
 
-После создания бронирования (отправки запроса [BookFlight](/avia/request/bookflight) и получения ответа на него) вам необходимо отправить в Nemo.travel специальный запрос GetOrder для создания заказа в Бэк-офисе.
-В ответе на данный запрос Nemo.travel передаст вам:
-*  адрес для передачи данных карты в платежную систему в параметре UrlForCardDataSubmit; 
-*  контент запроса, в котором необходимо заменить placeholder на данные карты и отправить по адресу, который также будет в ответе; в параметре CardDataRequestContent
-*  список доступных дополнительных услуг (сервисные пакеты, программы страхования) в параметре Services. 
+After creating the booking (sending the  [BookFlight](and / avia / request / bookflight) request and getting a response to it) request, you need to send a special request GetOrder to Nemo.travel to create an order in the Back-office.
+In response to this request Nemo.travel will return the following parameters:
+*  address for transferring card data to the payment system in the parameter UrlForCardDataSubmit; 
+*  the request content, in which you should replace the placeholder with the card data and send it to the address that will also be in the reply in the CardDataRequestContent parameter.
+*  list of available additional services (service packs, insurance programs) in the Services parameter. 
 
-#### Запрос
-* OrderID - номер заказа в бэк-офисе Nemo.travel, значение возвращается в ответе на запрос GetOrder параметре OrderID. Чтобы получить значение параметра для заказа необходимо выполнить запрос GetOrder с указанием параметра FlightsBookingID (идентификатора бронирования системы Nemo Connect).
-* FlightsBookingID - ID бронирования Nemo Connect, значение возвращается в ответе на запрос GetBook параметре ID.
-* CallbackUrl - адрес, на который будет возвращен callback от Nemo.travel с информацией о статусе заказа при его изменении. Формат: http(s)://domain.
-* NemoOneAuthToken - API ключ, выдается сотрудниками Nemo.travel.
-* UserID - ID пользователя в системе Nemo.travel, выдается сотрудниками Nemo.travel.
+#### Request  
+* **OrderID** - the order number from the back office of Nemo.travel. To get the parameter value for an order, you must run a GetOrder request with the parameters FlightsBookingID (Booking ID from Nemo Connect).
+* **FlightsBookingID** - Nemo Connect booking ID, the value is returned in the GetBook response in ID parameter.
+* **CallbackUrl** - The callback from Nemo.travel will be returned information about order status when it is changed to this address. Example: http(s)://domain.
+* **NemoOneAuthToken** -  API key, issued by Nemo.travel staff.
+* **UserID** - User ID in the Nemo.travel system, issued by Nemo.travel staff.
 
-#### Пример запроса
+#### Request example
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="***">
 	<soapenv:Header/>
@@ -40,7 +40,7 @@ taxonomy:
 	</soapenv:Body>
 </soapenv:Envelope>
 ```
-#### Пример ответа
+#### Response example
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="***" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
