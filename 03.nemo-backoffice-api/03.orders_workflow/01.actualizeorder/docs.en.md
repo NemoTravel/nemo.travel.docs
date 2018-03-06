@@ -9,12 +9,12 @@ taxonomy:
 
 To update the order status, use the ActualizeOrder request. This request can update order information from the Nemo.travel back-office or update the status of payment transactions.
 #### Request
-* OrderID - the order number from the back office of Nemo.travel. To get the parameter value for an order, you must run a GetOrder request with the parameters FlightsBookingID (Booking ID from Nemo Connect).
-* ActualizePayment - allows you to send a request to the payment system to update the status of the payment transaction. Possible values: true / false.
-* ActualizeFlightsBooking - initiates a  [UpdateBook](/avia/request/updatebook) request to Nemo Connect. Possible values: true / false.
-* CallbackUrl - The callback from Nemo.travel will be returned information about order status when it is changed to this address. Example: http(s)://domain.
-* NemoOneAuthToken - API key, issued by Nemo.travel staff.
-* UserID - User ID in the Nemo.travel system, issued by Nemo.travel staff.
+* **OrderID** - the order number from the back office of Nemo.travel. To get the parameter value for an order, you must run a GetOrder request with the parameters FlightsBookingID (Booking ID from Nemo Connect).
+* **ActualizePayment** - allows you to send a request to the payment system to update the status of the payment transaction. Possible values: true / false.
+* **ActualizeFlightsBooking** - initiates a  [UpdateBook](/avia/request/updatebook) request to Nemo Connect. Possible values: true / false.
+* **CallbackUrl** - The callback from Nemo.travel will be returned information about order status when it is changed to this address. Example: http(s)://domain.
+* **NemoOneAuthToken** - API key, issued by Nemo.travel staff.
+* **UserID** - User ID in the Nemo.travel system, issued by Nemo.travel staff.
 
 #### Request example 
 ```xml
