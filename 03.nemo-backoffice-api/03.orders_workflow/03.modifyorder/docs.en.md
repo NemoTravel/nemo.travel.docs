@@ -7,16 +7,16 @@ taxonomy:
 
 ### ModifyOrder
 
-Этот запрос предназначен для изменнеия уже созданного заказа в бэк-офисе, в частности, с помощью него можно добавить сервисный пакет к заказу.
+This request is designed to change the already created order in the back-office, for example, you can add a service package to the order.
 
-#### Запрос
-* OrderID - номер заказа из бэк-офиса Nemo.travel. Чтобы получить значение параметра для заказа, необходимо выполнить запрос GetOrder с указанием параметра FlightsBookingID.
-* SelectedPackageId - номер сервисного пакета, который требуется выбрать в заказе. Значение возвращается в ответе на запросы GetOrder и ActualizeOrder параметре Services.Service.ServicePack.Packages.Package.ID
-* CallbackUrl - адрес, на который будет возвращен callback от Nemo.travel с информацией о статусе заказа (при его изменении). Формат: http(s)://domain.
-* NemoOneAuthToken - API ключ, выдается сотрудниками Nemo.travel.
-* UserID - ID пользователя в системе Nemo.travel, выдается сотрудниками Nemo.travel.
+#### Request
+* **OrderID** -  the order number from the back office of Nemo.travel. To get the parameter value for an order, you should run a GetOrder request with the parameters FlightsBookingID (Booking ID from Nemo Connect).
+* **SelectedPackageId** - the number of the service package that you want to select in the order. The value is returned in the GetOrder and ActualizeOrder responses in the Services.Service.ServicePack.Packages.Package.ID parameter.
+* **CallbackUrl** - The callback from Nemo.travel will be returned information about order status when it is changed to this address. Example: http(s)://domain.
+* **NemoOneAuthToken** -  API key, issued by Nemo.travel staff.
+* **UserID** - User ID in the Nemo.travel system, issued by Nemo.travel staff.
 
-#### Пример запроса
+#### Request example
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://DOMAIN/nemoflights/?version%3D2.0%26for%3DOrders">
 	<soapenv:Header/>
@@ -44,7 +44,7 @@ taxonomy:
 	</soapenv:Body>
 </soapenv:Envelope>
 ```
-#### Пример ответа
+#### Response example
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1=*** xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
