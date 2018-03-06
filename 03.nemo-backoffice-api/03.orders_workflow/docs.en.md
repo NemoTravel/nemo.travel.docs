@@ -1,16 +1,16 @@
 ---
-title: 'Работа с заказами'
+title: 'Orders Workflow'
 taxonomy:
     category:
         - docs
 ---
 
-Система Nemo.travel реализует возможности стандартного бэк-офиса и позволяет:
+The Nemo.travel system implements the capabilities of a standard back-office and allows you to:
 
-- Работать с заказами через веб-интерфейс (поиск, просмотр, изменение).
-- Проведение оплаты по заказу различными методами.
-- Создание отчетов и документов по заказу.
-- Статистика и аналитика.
-- Автоматическая интеграция со сторонними бэк-офисам.
+- Work with orders via the web interface (search, view, change).
+- Carrying out of payment of the order with various methods.
+- Creating reports and ordering documents.
+- Statistics and analytics.
+- Automatic integration with third-party back office.
 
-При необходимости все бронирования, выполненные в системе Nemo Connect, могут быть автоматически выгружены в Nemo.travel Бэк-офис. Но есть дополнительные запросы для возможности управлять процессами вручную.
+All bookings made in the system Nemo Connect server can be automatically uploaded to the Nemo.travel Back office. But there are additional requests to be able to manage processes manually.
