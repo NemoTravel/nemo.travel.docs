@@ -7,11 +7,11 @@ taxonomy:
 
 ### GetOrder
 
-After creating the booking (sending the  [BookFlight](and / avia / request / bookflight) request and getting a response to it) request, you need to send a special request GetOrder to Nemo.travel to create an order in the Back-office.
+After creating the booking (sending the  [BookFlight](and/avia/request/bookflight) request and getting a response to it) request, you need to send a special request GetOrder to Nemo.travel to create an order in the Back-office.
 In response to this request Nemo.travel will return the following parameters:
 *  Address for transferring card data to the payment system in the parameter UrlForCardDataSubmit; 
 *  The request content, in which you should replace the placeholder with the card data and send it to the address that will also be in the reply in the CardDataRequestContent parameter;
-*  List of available additional services (service packs, insurance programs) in the Services parameter. 
+*  List of available additional services (service package, insurance programs) in the Services parameter. 
 
 #### Request  
 * **OrderID** - the order number from the back office of Nemo.travel. To get the parameter value for an order, you should run a GetOrder request with the parameters FlightsBookingID (Booking ID from Nemo Connect).
