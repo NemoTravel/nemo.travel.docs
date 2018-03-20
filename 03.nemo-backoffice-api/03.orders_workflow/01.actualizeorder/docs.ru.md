@@ -28,6 +28,7 @@ taxonomy:
                <ActualizePayment>true</ActualizePayment>
                <ActualizeFlightsBooking>true</ActualizeFlightsBooking>
                <CallbackUrl>http://nemo2.mlsd.ru/l?log</CallbackUrl>
+               <PaymentBackRedirectUrl>http://release.mlsd.ru</PaymentBackRedirectUrl>
             </RequestBody>
             <Requisites>
                <NemoOneAuthToken>YOUR_TOKKEN</NemoOneAuthToken>
