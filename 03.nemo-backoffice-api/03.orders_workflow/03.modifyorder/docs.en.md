@@ -35,6 +35,7 @@ This request is designed to change the already created order in the back-office,
 					</Services>
 
 					<CallbackUrl>http://nemo2.mlsd.ru/l?log</CallbackUrl>
+                    <PaymentBackRedirectUrl>http://release.mlsd.ru</PaymentBackRedirectUrl>
 				</RequestBody>
 				<Requisites>
 					<NemoOneAuthToken>YOUR_TOKKEN</NemoOneAuthToken>
