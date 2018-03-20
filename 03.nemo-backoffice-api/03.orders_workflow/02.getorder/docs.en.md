@@ -19,7 +19,7 @@ In response to this request Nemo.travel will return the following parameters:
 * **CallbackUrl** - the callback from Nemo.travel will be returned information about order status when it is changed to this address. Example: http(s)://domain.
 * **NemoOneAuthToken** -  API key, issued by Nemo.travel staff.
 * **UserID** - User ID in the Nemo.travel system, issued by Nemo.travel staff.
-* **PaymentBackRedirectUrl** -  URL address, for further redirect after payment. Example: http(s)://domain.
+* **PaymentBackRedirectUrl** -  URL address for further redirect after payment. Example: http(s)://domain.
 * 
 #### Request example
 ```xml
