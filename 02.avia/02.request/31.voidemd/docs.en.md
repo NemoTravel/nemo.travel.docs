@@ -9,6 +9,41 @@ taxonomy:
 
 Used to void the EMD for various ancillary services in the booking.
 
+### VoidEMD_1_1
+#### Request format
+* **BookID** - ID of the reservation for which the operation is performed. The data type is long.
+* **ServiceRefs** - List of IDs of the ancillary services  in the reservation for which an operation is required. The data type is an integer array.
+* **ServiceRefs.Ref** - ID of the ancillary service in the reservation for which the operation is required. The data type is integer.
+#### Request example 
+
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avia="http://nemo-ibe.com/Avia" xmlns:stl="http://nemo-ibe.com/STL">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<avia:VoidEMD_1_1>
+			<!--Optional:-->
+			<avia:Request>
+				<stl:Requisites>
+					<!--Optional:-->
+					<stl:Login>LOGIN</stl:Login>
+					<!--Optional:-->
+					<stl:Password>PASSWORD</stl:Password>
+				</stl:Requisites>
+				<stl:UserID>30328</stl:UserID>
+				<stl:RequestBody>
+					<avia:BookID>522160</avia:BookID>
+					<avia:ServiceRefs>
+						<!--Zero or more repetitions:-->
+						<stl:Ref>1</stl:Ref>
+					</avia:ServiceRefs>
+				</stl:RequestBody>
+			</avia:Request>
+		</avia:VoidEMD_1_1>
+	</soapenv:Body>
+</soapenv:Envelope>
+    ```
+ ### VoidEMD_1_0
+
 #### Request Format
 
 -  **BookID** - The booking ID , including the EMD, which you need to void. The data type is long.
