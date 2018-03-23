@@ -9,8 +9,43 @@ taxonomy:
 
 Используется для войдирования ЕМД для различных допуслуг в брони.
 
+### VoidEMD_1_1
 #### Формат запроса
+* **BookID** - ID брони, для которой производится операция. Тип данных - long.
+* **ServiceRefs** - Список ИД допуслуг в брони для которых требуется произвести операцию. Тип данных - массив int.
+* **ServiceRefs.Ref** - ID допуслуги в брони, для которой требуется произвести операцию. Тип данных - int.
+#### Пример запроса 
 
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avia="http://nemo-ibe.com/Avia" xmlns:stl="http://nemo-ibe.com/STL">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <avia:VoidEMD_1_1>
+         <!--Optional:-->
+         <avia:Request>
+            <stl:Requisites>
+               <!--Optional:-->
+               <stl:Login>LOGIN</stl:Login>
+               <!--Optional:-->
+               <stl:Password>PASSWORD</stl:Password>
+                    </stl:Requisites>
+            <stl:UserID>30328</stl:UserID>
+                  <stl:RequestBody>
+               <avia:BookID>522160</avia:BookID>
+               <avia:ServiceRefs>
+                  <!--Zero or more repetitions:-->
+                  <stl:Ref>1</stl:Ref>
+               </avia:ServiceRefs>
+            </stl:RequestBody>
+         </avia:Request>
+      </avia:VoidEMD_1_1>
+   </soapenv:Body>
+</soapenv:Envelope>
+'''
+
+### VoidEMD_1_0
+
+#### Формат запроса
 -   **BookID** - ID брони, к которой относятся ЕМД, которые требуется провойдировать. Тип данных - long.
 -   **AncillaryServices** - Список допуслуг для войда. Тип данных аналогичен - AncillaryServices из запроса [IssueEMD](/avia/request/issueemd)
 
