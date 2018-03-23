@@ -15,17 +15,15 @@ taxonomy:
 * **ServiceRefs** - Список ИД допуслуг в брони для которых требуется произвести операцию. Тип данных - массив int.
 * **ServiceRefs.Ref** - ID допуслуги в брони, для которой требуется произвести операцию. Тип данных - int.
 #### Пример запроса 
-
-```xml
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avia="http://nemo-ibe.com/Avia" xmlns:stl="http://nemo-ibe.com/STL">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <avia:VoidEMD_1_1>
-         <!--Optional:-->
-         <avia:Request>
-            <stl:Requisites>
+	<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avia="http://nemo-ibe.com/Avia" xmlns:stl="http://nemo-ibe.com/STL">
+  	 <soapenv:Header/>
+ 		  <soapenv:Body>
+   		   <avia:VoidEMD_1_1>
+     	    <!--Optional:-->
+             	<avia:Request>
+         		   <stl:Requisites>
                <!--Optional:-->
-               <stl:Login>LOGIN</stl:Login>
+           	    <stl:Login>LOGIN</stl:Login>
                <!--Optional:-->
                <stl:Password>PASSWORD</stl:Password>
                     </stl:Requisites>
@@ -36,22 +34,19 @@ taxonomy:
                   <!--Zero or more repetitions:-->
                   <stl:Ref>1</stl:Ref>
                </avia:ServiceRefs>
-            </stl:RequestBody>
-         </avia:Request>
-      </avia:VoidEMD_1_1>
-   </soapenv:Body>
-</soapenv:Envelope>
-'''
+      	      </stl:RequestBody>
+      	   </avia:Request>
+    	  </avia:VoidEMD_1_1>
+       </soapenv:Body>
+	</soapenv:Envelope>
+ ### VoidEMD 1_0
 
-### VoidEMD_1_0
+ #### Формат запроса
+*  **BookID** - ID брони, к которой относятся ЕМД, которые требуется провойдировать. Тип данных - long.
+*  **AncillaryServices** - Список допуслуг для войда. Тип данных аналогичен - AncillaryServices из запроса [IssueEMD](/avia/request/issueemd)
 
-#### Формат запроса
--   **BookID** - ID брони, к которой относятся ЕМД, которые требуется провойдировать. Тип данных - long.
--   **AncillaryServices** - Список допуслуг для войда. Тип данных аналогичен - AncillaryServices из запроса [IssueEMD](/avia/request/issueemd)
+ #### Пример
 
-##### Пример
-
-```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
   <SOAP-ENV:Body>
@@ -78,7 +73,7 @@ taxonomy:
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 
-```
+
 
 #### Формат ответа
 
@@ -86,7 +81,6 @@ taxonomy:
 
 ##### Пример
 
-```xml
 <?xml version="1.0"?>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
   <s:Body>
@@ -356,4 +350,3 @@ D 98J РАЗНЫЕ ПЛАТЫ </a:Description>
   </s:Body>
 </s:Envelope>
 
-```
