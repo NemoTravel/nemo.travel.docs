@@ -12,7 +12,7 @@ Ancillary services, consist of the following elements:
 * **ID** - Service ID in the supplier system. The data type is integer.
 * **Status** - The current status of the ancillary service. The data type is a string.
 * **TravellerRef** -  A reference to passengers in the reservation, to which the ancillary service applies. The data type is custom.
-* **TravellerRef.Ref** -The number of the passenger in the reservation to which this item belongs.The data type is integer.
+* **TravellerRef.Ref** -The number of the passenger in the reservation to which this item belongs. The data type is integer.
 * **Name** - Description of the ancillary service. The data type is a string.
 * **Group** - Group of ancillary service. The data type is a string.
 * **SubGroup** - Subgroup of ancillary service. The data type is a string.
