@@ -24,6 +24,7 @@ taxonomy:
 * **Quantity** - Количество повторений данной услуги. Тип данных - int.
 
 ### Пример Sirena
+```xml
         <AncillaryServiceRS>
           <ID>3</ID>
           <Name>BREAKFAST</Name>
@@ -34,4 +35,5 @@ taxonomy:
           <Type>F</Type>
           <CompanyCode>UT</CompanyCode>
         </AncillaryServiceRS>
+ ```
 ### Пример Amadeus
