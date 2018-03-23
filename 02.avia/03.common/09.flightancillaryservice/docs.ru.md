@@ -57,7 +57,7 @@ taxonomy:
         </AncillaryServiceRS>
    ```
    
-  Добавить услугу можно через запрос [BookFlight](/avia/request/bookflight), либо, если бронь уже создана, через запрос [ModifyBook](/avia/request/modifybook). 
+  Добавить услугу в бронь можно через запрос [BookFlight](/avia/request/bookflight), либо, если бронь уже создана, через запрос [ModifyBook](/avia/request/modifybook). 
    ### Пример запроса ModifyBook.
               <Action>Add</Action>
               <AncillaryService>
@@ -91,3 +91,72 @@ taxonomy:
               <Quantity>1</Quantity>
             </Service>
    ```
+   
+     ### Пример запроса BookFlight.
+     ```xml
+      <a:AncillaryServiceRQ_1_1>
+        <a:ID>0</a:ID>
+        <a:Name i:nil="true"/>
+        <a:RFIC>G</a:RFIC>
+        <a:RFISC>BF1</a:RFISC>
+        <a:Type>F</a:Type>
+        <a:TravellerRef>1</a:TravellerRef>
+        <a:SegmentRef>1</a:SegmentRef>
+        <a:Quantity>1</a:Quantity>
+      </a:AncillaryServiceRQ_1_1>
+      <a:AncillaryServiceRQ_1_1>
+        <a:ID>0</a:ID>
+        <a:Name i:nil="true"/>
+        <a:RFIC>G</a:RFIC>
+        <a:RFISC>BF1</a:RFISC>
+        <a:Type>F</a:Type>
+        <a:TravellerRef>1</a:TravellerRef>
+        <a:SegmentRef>2</a:SegmentRef>
+        <a:Quantity>1</a:Quantity>
+      </a:AncillaryServiceRQ_1_1>
+        ```
+    ### Пример ответа BookFlight.  
+    
+    ```xml
+      <AncillaryServices>
+      <Service i:type="FlightAncillaryService">
+        <ID>1</ID>
+        <Status>Booked</Status>
+        <TravellerRef>
+          <Ref>1</Ref>
+        </TravellerRef>
+        <SegmentRef>0</SegmentRef>
+        <CompanyCode>UT</CompanyCode>
+        <Name>БЛИНЧИКИ</Name>
+        <TypeCode>F</TypeCode>
+        <RFIC>G</RFIC>
+        <RFISC>BF1</RFISC>
+        <Quantity>1</Quantity>
+      </Service>
+      <Service i:type="FlightAncillaryService">
+        <ID>2</ID>
+        <Status>Booked</Status>
+        <TravellerRef>
+          <Ref>1</Ref>
+        </TravellerRef>
+        <SegmentRef>1</SegmentRef>
+        <CompanyCode>UT</CompanyCode>
+        <Name>БЛИНЧИКИ</Name>
+        <TypeCode>F</TypeCode>
+        <RFIC>G</RFIC>
+        <RFISC>BF1</RFISC>
+        <Quantity>1</Quantity>
+      </Service>
+    </AncillaryServices>
+     ```         
+            
+   
+   
+   Если в процессе выписки билета произошла ошибка выписки допуслуги, ее можно выпискать отдельно через запрос ISSUE.
+   Для отмены допуслуги используется запрос VOID и CANCEL для войдирования и отмены соответственно.
+   GetEMDRefundData Используется для получения рассчёта возврата ЭМД. 
+   RefundEMD Используется для выполнения возврата ЭМД.
+  
+    
+   
+   
