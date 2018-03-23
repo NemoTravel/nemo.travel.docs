@@ -76,18 +76,18 @@ taxonomy:
         
    ### Ответ
 ```xml
-      <a:Service i:type="a:FlightAncillaryService">
-              <a:ID>7</a:ID>
-              <a:Status>Requested</a:Status>
-              <a:TravellerRef>
-                <a:Ref>2</a:Ref>
-              </a:TravellerRef>
-              <a:SegmentRef>0</a:SegmentRef>
-              <a:CompanyCode>UT</a:CompanyCode>
-              <a:Name>BREAKFAST</a:Name>
-              <a:TypeCode>F</a:TypeCode>
-              <a:RFIC>G</a:RFIC>
-              <a:RFISC>0AI</a:RFISC>
-              <a:Quantity>1</a:Quantity>
-            </a:Service>
+           <Service i:type="a:FlightAncillaryService">
+              <ID>7</ID>
+              <Status>Requested</Status>
+              <TravellerRef>
+                <Ref>2</Ref>
+              </TravellerRef>
+              <SegmentRef>0</SegmentRef>
+              <CompanyCode>UT</CompanyCode>
+              <Name>BREAKFAST</Name>
+              <TypeCode>F</TypeCode>
+              <RFIC>G</RFIC>
+              <RFISC>0AI</RFISC>
+              <Quantity>1</Quantity>
+            </Service>
    ```
