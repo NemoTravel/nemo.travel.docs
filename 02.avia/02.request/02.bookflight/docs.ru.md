@@ -25,6 +25,30 @@ taxonomy:
 -   **AncillaryServices.AncillaryServiceRQ_1_1.SegmentRef** - Cсылка на сегмент на который добавляется дополнительная услуга. Тип данных - int.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.Quantity** - Количество повторений данной дополнительной услуги. Тип данных - int.
 
+##### Пример запроса Book, содержащий контейнер с допуслугами.
+  ```xml
+      <a:AncillaryServiceRQ_1_1>
+        <a:ID>0</a:ID>
+        <a:Name i:nil="true"/>
+        <a:RFIC>G</a:RFIC>
+        <a:RFISC>BF1</a:RFISC>
+        <a:Type>F</a:Type>
+        <a:TravellerRef>1</a:TravellerRef>
+        <a:SegmentRef>1</a:SegmentRef>
+        <a:Quantity>1</a:Quantity>
+      </a:AncillaryServiceRQ_1_1>
+      <a:AncillaryServiceRQ_1_1>
+        <a:ID>0</a:ID>
+        <a:Name i:nil="true"/>
+        <a:RFIC>G</a:RFIC>
+        <a:RFISC>BF1</a:RFISC>
+        <a:Type>F</a:Type>
+        <a:TravellerRef>1</a:TravellerRef>
+        <a:SegmentRef>2</a:SegmentRef>
+        <a:Quantity>1</a:Quantity>
+      </a:AncillaryServiceRQ_1_1>
+    ```
+
 ### BookFlight_2_0
 
 Операция по созданию брони перелёта работающая с 2.0 структурой брони.
