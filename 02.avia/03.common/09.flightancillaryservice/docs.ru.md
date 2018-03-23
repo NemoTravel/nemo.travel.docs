@@ -155,8 +155,11 @@ taxonomy:
    
    
    Если в процессе выписки билета произошла ошибка выписки допуслуги, ее можно выпискать отдельно через запрос [IssueEMD](/avia/request/issueemd).
+   
    Для войдирования допуслуги используется запрос [VoidEMD](/avia/request/voidemd).
+   
    Для получения рассчёта возврата ЭМД используется запрос [GetEMDRefundData](/avia/request/getemdrefunddata).
+   
    Для выполнения возврата ЭМД используется запрос [RefundEMD](/avia/request/refundemd).
   
     
