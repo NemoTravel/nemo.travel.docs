@@ -57,8 +57,8 @@ taxonomy:
         </AncillaryServiceRS>
    ```
    
-   Пример запроса и ответа на добавление услуги к заказу.
-   ### Запрос
+  Добавить услугу можно через запрос [BookFlight](/avia/request/bookflight), либо, если бронь уже создана, через запрос [ModifyBook](/avia/request/modifybook). 
+   ### Пример запроса ModifyBook.
               <Action>Add</Action>
               <AncillaryService>
                 <Name xsi:nil="true"/>
@@ -74,7 +74,7 @@ taxonomy:
                 <Quantity>1</Quantity>
               </AncillaryService>
         
-   ### Ответ
+   ### Пример ответа ModifyBook. 
 ```xml
            <Service i:type="a:FlightAncillaryService">
               <ID>7</ID>
