@@ -57,3 +57,37 @@ taxonomy:
         </AncillaryServiceRS>
    ```
    
+   Пример запроса и ответа на добавление услуги к заказу.
+   ### Запрос
+              <Action>Add</Action>
+              <AncillaryService>
+                <Name xsi:nil="true"/>
+                <Group xsi:nil="true"/>
+                <SubGroup xsi:nil="true"/>
+                <RFIC>G</RFIC>
+                <RFISC>0AI</RFISC>
+                <SSRCode xsi:nil="true"/>
+                <SSRDescription xsi:nil="true"/>
+                <Type>F</Type>
+                <TravellerRef>2</TravellerRef>
+                <SegmentRef>0</SegmentRef>
+                <Quantity>1</Quantity>
+              </AncillaryService>
+        
+   ### Ответ
+```xml
+      <a:Service i:type="a:FlightAncillaryService">
+              <a:ID>7</a:ID>
+              <a:Status>Requested</a:Status>
+              <a:TravellerRef>
+                <a:Ref>2</a:Ref>
+              </a:TravellerRef>
+              <a:SegmentRef>0</a:SegmentRef>
+              <a:CompanyCode>UT</a:CompanyCode>
+              <a:Name>BREAKFAST</a:Name>
+              <a:TypeCode>F</a:TypeCode>
+              <a:RFIC>G</a:RFIC>
+              <a:RFISC>0AI</a:RFISC>
+              <a:Quantity>1</a:Quantity>
+            </a:Service>
+   ```
