@@ -25,7 +25,7 @@ taxonomy:
 -   **AncillaryServices.AncillaryServiceRQ_1_1.SegmentRef** - Cсылка на сегмент на который добавляется дополнительная услуга. Тип данных - int.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.Quantity** - Количество повторений данной дополнительной услуги. Тип данных - int.
 
-##### Пример запроса Book, содержащий контейнер с допуслугами.
+##### Пример контейнера  с допуслугами из запроса Book.  .
   ```xml
       <a:AncillaryServiceRQ_1_1>
         <a:ID>0</a:ID>
