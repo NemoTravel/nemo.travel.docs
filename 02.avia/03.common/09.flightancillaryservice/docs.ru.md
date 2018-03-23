@@ -22,3 +22,16 @@ taxonomy:
 * **Refundability** - Возвратна или невозвратна услуга.  Тип данных - строка.
 * **SSRDescriptionRequired** - Нужно ли передавать SSRCode? Тип данных - булев.
 * **Quantity** - Количество повторений данной услуги. Тип данных - int.
+
+### Пример Sirena
+        <AncillaryServiceRS>
+          <ID>3</ID>
+          <Name>BREAKFAST</Name>
+          <Group>ML</Group>
+          <SubGroup>BR</SubGroup>
+          <RFIC>G</RFIC>
+          <RFISC>0AI</RFISC>
+          <Type>F</Type>
+          <CompanyCode>UT</CompanyCode>
+        </AncillaryServiceRS>
+### Пример Amadeus
