@@ -7,7 +7,7 @@ taxonomy:
 
 ### ModifyBook_2_1
 Аналогичен предыдущей версии, отличие только в плоском формате допуслуг из запроса [Book_2_1](/avia/request/bookflight)
- ### Пример запроса ModifyBook.
+ ### Пример контейнера с допуслугами из запроса ModifyBook_2_1.
  ```xml
               <Action>Add</Action>
               <AncillaryService>
