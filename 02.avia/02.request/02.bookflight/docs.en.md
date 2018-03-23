@@ -23,6 +23,30 @@ Similar to the previous version of BookFlight_2_0, the difference is only in the
 - **AncillaryServices.AncillaryServiceRQ_1_1.SegmentRef** - A reference to a segment to which the ancillary service is added. The data type is int.
 - **AncillaryServices.AncillaryServiceRQ_1_1.Quantity** - The number of repetitions of this ancillary service. The data type is int. 
 
+##### ПContainer with ancillary services from the BookFlight_2_1 request.  .
+  ```xml
+      <a:AncillaryServiceRQ_1_1>
+        <a:ID>0</a:ID>
+        <a:Name i:nil="true"/>
+        <a:RFIC>G</a:RFIC>
+        <a:RFISC>BF1</a:RFISC>
+        <a:Type>F</a:Type>
+        <a:TravellerRef>1</a:TravellerRef>
+        <a:SegmentRef>1</a:SegmentRef>
+        <a:Quantity>1</a:Quantity>
+      </a:AncillaryServiceRQ_1_1>
+      <a:AncillaryServiceRQ_1_1>
+        <a:ID>0</a:ID>
+        <a:Name i:nil="true"/>
+        <a:RFIC>G</a:RFIC>
+        <a:RFISC>BF1</a:RFISC>
+        <a:Type>F</a:Type>
+        <a:TravellerRef>1</a:TravellerRef>
+        <a:SegmentRef>2</a:SegmentRef>
+        <a:Quantity>1</a:Quantity>
+      </a:AncillaryServiceRQ_1_1>
+    ```
+    
 ### BookFlight_2_0
 
 An operation to create a flight booking working with a 2.0 booking structure.
