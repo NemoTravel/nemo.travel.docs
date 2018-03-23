@@ -5,6 +5,25 @@ taxonomy:
         - docs
 ---
 
+### ModifyBook_2_1
+Аналогичен предыдущей версии, отличие только в плоском формате допуслуг из запроса [Book_2_1](/avia/request/bookflight)
+ ### Пример запроса ModifyBook.
+ ```xml
+              <Action>Add</Action>
+              <AncillaryService>
+                <Name xsi:nil="true"/>
+                <Group xsi:nil="true"/>
+                <SubGroup xsi:nil="true"/>
+                <RFIC>G</RFIC>
+                <RFISC>0AI</RFISC>
+                <SSRCode xsi:nil="true"/>
+                <SSRDescription xsi:nil="true"/>
+                <Type>F</Type>
+                <TravellerRef>2</TravellerRef>
+                <SegmentRef>0</SegmentRef>
+                <Quantity>1</Quantity>
+              </AncillaryService>
+ ```
 ### ModifyBook_2_0
 
 Используется для внесения изменений в бронь с [бронью версии 2.0](/avia/common/book) в качестве ответа. Включает в себя функциональность ModifyBook и AddInformation более ранних версий.
