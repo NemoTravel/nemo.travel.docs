@@ -92,8 +92,8 @@ taxonomy:
             </Service>
    ```
    
-     ### Пример запроса BookFlight.
-     ```xml
+   ### Пример запроса BookFlight.
+   ```xml
       <a:AncillaryServiceRQ_1_1>
         <a:ID>0</a:ID>
         <a:Name i:nil="true"/>
@@ -114,10 +114,10 @@ taxonomy:
         <a:SegmentRef>2</a:SegmentRef>
         <a:Quantity>1</a:Quantity>
       </a:AncillaryServiceRQ_1_1>
-        ```
-    ### Пример ответа BookFlight.  
+    ```
+  ### Пример ответа BookFlight.  
     
-    ```xml
+  ```xml
       <AncillaryServices>
       <Service i:type="FlightAncillaryService">
         <ID>1</ID>
@@ -148,7 +148,7 @@ taxonomy:
         <Quantity>1</Quantity>
       </Service>
     </AncillaryServices>
-     ```         
+   ```         
             
    
    
