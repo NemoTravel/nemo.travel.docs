@@ -58,41 +58,7 @@ taxonomy:
    ```
    
   Добавить услугу в бронь можно через запрос [BookFlight](/avia/request/bookflight), либо, если бронь уже создана, через запрос [ModifyBook](/avia/request/modifybook). 
-   ### Пример запроса ModifyBook.
-              <Action>Add</Action>
-              <AncillaryService>
-                <Name xsi:nil="true"/>
-                <Group xsi:nil="true"/>
-                <SubGroup xsi:nil="true"/>
-                <RFIC>G</RFIC>
-                <RFISC>0AI</RFISC>
-                <SSRCode xsi:nil="true"/>
-                <SSRDescription xsi:nil="true"/>
-                <Type>F</Type>
-                <TravellerRef>2</TravellerRef>
-                <SegmentRef>0</SegmentRef>
-                <Quantity>1</Quantity>
-              </AncillaryService>
-        
-   ### Пример ответа ModifyBook. 
-```xml
-           <Service i:type="a:FlightAncillaryService">
-              <ID>7</ID>
-              <Status>Requested</Status>
-              <TravellerRef>
-                <Ref>2</Ref>
-              </TravellerRef>
-              <SegmentRef>0</SegmentRef>
-              <CompanyCode>UT</CompanyCode>
-              <Name>BREAKFAST</Name>
-              <TypeCode>F</TypeCode>
-              <RFIC>G</RFIC>
-              <RFISC>0AI</RFISC>
-              <Quantity>1</Quantity>
-            </Service>
-   ```
-   
-   ### Пример запроса BookFlight.
+     ### Пример запроса BookFlight.
    ```xml
       <a:AncillaryServiceRQ_1_1>
         <a:ID>0</a:ID>
@@ -149,6 +115,42 @@ taxonomy:
       </Service>
     </AncillaryServices>
    ```         
+   
+   ### Пример запроса ModifyBook.
+              <Action>Add</Action>
+              <AncillaryService>
+                <Name xsi:nil="true"/>
+                <Group xsi:nil="true"/>
+                <SubGroup xsi:nil="true"/>
+                <RFIC>G</RFIC>
+                <RFISC>0AI</RFISC>
+                <SSRCode xsi:nil="true"/>
+                <SSRDescription xsi:nil="true"/>
+                <Type>F</Type>
+                <TravellerRef>2</TravellerRef>
+                <SegmentRef>0</SegmentRef>
+                <Quantity>1</Quantity>
+              </AncillaryService>
+        
+   ### Пример ответа ModifyBook. 
+```xml
+           <Service i:type="a:FlightAncillaryService">
+              <ID>7</ID>
+              <Status>Requested</Status>
+              <TravellerRef>
+                <Ref>2</Ref>
+              </TravellerRef>
+              <SegmentRef>0</SegmentRef>
+              <CompanyCode>UT</CompanyCode>
+              <Name>BREAKFAST</Name>
+              <TypeCode>F</TypeCode>
+              <RFIC>G</RFIC>
+              <RFISC>0AI</RFISC>
+              <Quantity>1</Quantity>
+            </Service>
+   ```
+   
+
             
    
    
