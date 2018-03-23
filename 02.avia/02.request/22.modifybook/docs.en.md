@@ -5,6 +5,25 @@ taxonomy:
         - docs
 ---
 
+### ModifyBook_2_1
+Similar to the previous version, the difference is only in the flat format of the ancillary service from the [Book_2_1](/avia/request/bookflight) request.
+ ### Container with ancillary services from the ModifyBook_2_1 request.
+ ```xml
+              <Action>Add</Action>
+              <AncillaryService>
+                <Name xsi:nil="true"/>
+                <Group xsi:nil="true"/>
+                <SubGroup xsi:nil="true"/>
+                <RFIC>G</RFIC>
+                <RFISC>0AI</RFISC>
+                <SSRCode xsi:nil="true"/>
+                <SSRDescription xsi:nil="true"/>
+                <Type>F</Type>
+                <TravellerRef>2</TravellerRef>
+                <SegmentRef>0</SegmentRef>
+                <Quantity>1</Quantity>
+              </AncillaryService>
+ ```
 ### ModifyBook_2_0
 
 Used to make changes to the booking with [booking version 2.0](/avia/common/book) as the response. Includes the functionality of ModifyBook and AddInformation of earlier versions.
