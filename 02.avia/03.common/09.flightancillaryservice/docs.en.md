@@ -32,7 +32,7 @@ Ancillary services, consist of the following elements:
 
 The list of available ancillary services is triggered by the SearchAncillaryServices parameter in the  [AdditionalOperations](/avia/request/additionaloperations) request. In response to this request you will receive a list of services available on current flight.
 
-### Пример Sirena
+### Sirena response example
 ```xml
         <AncillaryServiceRS>
           <ID>3</ID>
@@ -45,7 +45,7 @@ The list of available ancillary services is triggered by the SearchAncillaryServ
           <CompanyCode>UT</CompanyCode>
         </AncillaryServiceRS>
  ```
-### Пример Amadeus
+###  Amadeus response example
 ```xml
        <AncillaryServiceRS>
           <ID>1</ID>
