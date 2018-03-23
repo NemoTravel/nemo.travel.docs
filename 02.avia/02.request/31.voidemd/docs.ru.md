@@ -17,32 +17,32 @@ taxonomy:
 #### Пример запроса 
 
 ```xml
-	<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avia="http://nemo-ibe.com/Avia" xmlns:stl="http://nemo-ibe.com/STL">
-  	 <soapenv:Header/>
- 		  <soapenv:Body>
-   		   <avia:VoidEMD_1_1>
-     	    <!--Optional:-->
-             	<avia:Request>
-         		   <stl:Requisites>
-               <!--Optional:-->
-           	    <stl:Login>LOGIN</stl:Login>
-               <!--Optional:-->
-               <stl:Password>PASSWORD</stl:Password>
-                    </stl:Requisites>
-            <stl:UserID>30328</stl:UserID>
-                  <stl:RequestBody>
-               <avia:BookID>522160</avia:BookID>
-               <avia:ServiceRefs>
-                  <!--Zero or more repetitions:-->
-                  <stl:Ref>1</stl:Ref>
-               </avia:ServiceRefs>
-      	      </stl:RequestBody>
-      	   </avia:Request>
-    	  </avia:VoidEMD_1_1>
-       </soapenv:Body>
-	</soapenv:Envelope>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avia="http://nemo-ibe.com/Avia" xmlns:stl="http://nemo-ibe.com/STL">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<avia:VoidEMD_1_1>
+			<!--Optional:-->
+			<avia:Request>
+				<stl:Requisites>
+					<!--Optional:-->
+					<stl:Login>LOGIN</stl:Login>
+					<!--Optional:-->
+					<stl:Password>PASSWORD</stl:Password>
+				</stl:Requisites>
+				<stl:UserID>30328</stl:UserID>
+				<stl:RequestBody>
+					<avia:BookID>522160</avia:BookID>
+					<avia:ServiceRefs>
+						<!--Zero or more repetitions:-->
+						<stl:Ref>1</stl:Ref>
+					</avia:ServiceRefs>
+				</stl:RequestBody>
+			</avia:Request>
+		</avia:VoidEMD_1_1>
+	</soapenv:Body>
+</soapenv:Envelope>
     ```
- ### VoidEMD 1_0
+ ### VoidEMD_1_0
 
  #### Формат запроса
 *  **BookID** - ID брони, к которой относятся ЕМД, которые требуется провойдировать. Тип данных - long.
