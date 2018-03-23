@@ -37,3 +37,15 @@ taxonomy:
         </AncillaryServiceRS>
  ```
 ### Пример Amadeus
+```xml
+       <AncillaryServiceRS>
+          <ID>1</ID>
+          <Name>PRE PAID BAGGAGE</Name>
+          <RFIC>C</RFIC>
+          <RFISC>0AA</RFISC>
+          <SSRCode>PDBG</SSRCode>
+          <Type>BG</Type>
+          <CompanyCode>AY</CompanyCode>
+          <Refundability>NonRefundable</Refundability>
+        </AncillaryServiceRS>
+   ```
