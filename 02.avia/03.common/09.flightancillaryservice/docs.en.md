@@ -17,7 +17,7 @@ Ancillary services, consist of the following elements:
 * **Group** - Group of ancillary service. The data type is a string.
 * **SubGroup** - Subgroup of ancillary service. The data type is a string.
 * **Type** - The code for the type of ancillary service. The data type is a string.
-* **RFIC** - Ancillary services RFIC ( Reason For Issuance Codes), consists of one symbol and is used to indicate the basis (cause) of the design of EMD. The data type is a string. List of RFIC Design Codes:
+* **RFIC** - Ancillary services RFIC ( Reason For Issuance Codes), consists of one symbol and is used to indicate the basis (cause) of the design of EMD. The data type is a string. List of RFIC Codes:
     -   **A** — Air Transportation;
     -   **B** — Surface Transportation/Non Air Services;
     -   **C** — Baggage ;
