@@ -17,8 +17,15 @@ Ancillary services, consist of the following elements:
 * **Group** - Group of ancillary service. The data type is a string.
 * **SubGroup** - Subgroup of ancillary service. The data type is a string.
 * **Type** - The code for the type of ancillary service. The data type is a string.
-* **RFIC** - Ancillary services RFIC. The data type is a string.
-* **RFISC** - Ancillary services RFISC. The data type is a string.
+* **RFIC** - Ancillary services RFIC ( Reason For Issuance Codes), consists of one symbol and is used to indicate the basis (cause) of the design of EMD. The data type is a string. List of RFIC Design Codes:
+    -   **A** — Air Transportation;
+    -   **B** — Surface Transportation/Non Air Services;
+    -   **C** — Baggage ;
+    -   **D** — Financial Impact;
+    -   **E** — Airport Services;
+    -   **F** — Merchandise;
+    -   **G** — In-flight Services.
+* **RFISC** - Ancillary services RFISC ((Reason For Issuance Sub-Codes), consisting of three symbols. RFISC Sub-codes are established by the airline itself and determine the specific type of service, for example, 0DG - payment for excess baggage, 0B3 - provision of special meals. The data type is a string.
 * **SSRCode** -The SSR code associated with the given ancillary service, which must be added to the PNR in case of the reservation of this ancillary service. The data type is a string.
 * **SSRText** - The SSR text associated with the given ancillary service. The data type is a string.
 * **SegmentRef** - A reference to the segment on which the ancillary service is added. The data type is integer.
