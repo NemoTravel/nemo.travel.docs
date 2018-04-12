@@ -12,7 +12,7 @@ Ticketing for the reservation with the support of API 2.0.
 #### Request
 
 -  **BookID** - The booking ID that should be ticketed. The data type is long.
--  **DataItems** - the booking content required for a correct ticketing. The data type is an array of [DataItem](/avia/common/dataitem).
+-  **DataItems** - the booking content required for a correct ticketing (optional). The data type is an array of [DataItem](/avia/common/dataitem).
 
 ##### Example
 
