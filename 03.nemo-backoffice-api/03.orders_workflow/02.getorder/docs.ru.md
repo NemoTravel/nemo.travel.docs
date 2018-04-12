@@ -49,13 +49,13 @@ taxonomy:
 * Gateway.UrlToCatch - адрес, на который будут отправляться нотификации об изменениях в заказе.
 * Gateway.UrlForCardDataSubmit - адрес, на который необходимо отправить данные банковской карты. Формат запроса указан в параметре CardDataRequestContent (для host2host интеграции).
 * CardDataRequestContent - содержимое запроса, в котором необходимо заменить placeholder на данные банковской карты (для host2host интеграции)
-** proxy-placeholder-cardNumber - номер банковской карты. Формат: цифры, без пробелов 
-** proxy-placeholder-validThruYear - год истечения срока действия карты. Формат: YYYY
-** proxy-placeholder-validThruMonth - месяц истечения срока действия карты. Формат: MM
-** proxy-placeholder-securityCode - код CVC2/CVV2/4DBC. Не используется только в случае, если банковская карта не имеет данного кода. Пример: 123
-** proxy-placeholder-holderName - имя и фамилия держателя банковской карты (на латинице). Пример: Ivan Ivanov 
-** proxy-placeholder-customerIp - IP адрес, с которого пользователем были введены данные банковской карты. Формат: IP v4 address
-** proxy-placeholder-customerAgent - название браузера клиента (User-Agent HTTP header). Пример: Mozilla
+* CardDataRequestContent.proxy-placeholder-cardNumber - номер банковской карты. Формат: цифры, без пробелов 
+* CardDataRequestContent.proxy-placeholder-validThruYear - год истечения срока действия карты. Формат: YYYY
+* CardDataRequestContent.proxy-placeholder-validThruMonth - месяц истечения срока действия карты. Формат: MM
+* CardDataRequestContent.proxy-placeholder-securityCode - код CVC2/CVV2/4DBC. Не используется только в случае, если банковская карта не имеет данного кода. Пример: 123
+* CardDataRequestContent.proxy-placeholder-holderName - имя и фамилия держателя банковской карты (на латинице). Пример: Ivan Ivanov 
+* CardDataRequestContent.proxy-placeholder-customerIp - IP адрес, с которого пользователем были введены данные банковской карты. Формат: IP v4 address
+* CardDataRequestContent.proxy-placeholder-customerAgent - название браузера клиента (User-Agent HTTP header). Пример: Mozilla
 RequestType - тип запроса. Доступные значения: POST/GET.
 
 #### Пример запроса
