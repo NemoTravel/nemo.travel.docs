@@ -56,7 +56,7 @@ taxonomy:
 * CardDataRequestContent.proxy-placeholder-holderName - имя и фамилия держателя банковской карты (на латинице). Пример: Ivan Ivanov 
 * CardDataRequestContent.proxy-placeholder-customerIp - IP адрес, с которого пользователем были введены данные банковской карты. Формат: IP v4 address
 * CardDataRequestContent.proxy-placeholder-customerAgent - название браузера клиента (User-Agent HTTP header). Пример: Mozilla
-RequestType - тип запроса. Доступные значения: POST/GET.
+* RequestType - тип запроса. Доступные значения: POST/GET.
 
 #### Пример запроса
 ```xml
