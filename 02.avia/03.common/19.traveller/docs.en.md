@@ -21,18 +21,18 @@ Describes personal information about the traveler. It consists of the following 
 	-   SEA - a seaman
 	-   SRC - an elderly passenger
 	-   STU - a student
--  **NamePrefix** - The prefix / title of this passenger. The data type is a string.
+-  **NamePrefix** - The prefix / title of this passenger (optional). The data type is a string.
 -  **Name** - The name of the passenger. The data type is a string.
 -  **LastName** - The last name of the passenger. The data type is a string.
--  **MiddleName** - The middle name of the passenger. The data type is a string.
+-  **MiddleName** - The middle name of the passenger (optional). The data type is a string.
 -  **DateOfBirth** - The date of birth of the passenger.
 -  **Nationality** - The nationality of the passenger. The data type is string, ISO Alpha2 or ISO Alpha3 country code
 -  **Gender** - The sex of the passenger. The data type is  enumeration, possible values:
 	- M   - male
 	- F   - female
--  **LinkedTo** - Binding a passenger to another passenger, makes sense and is mandatory only for infants without a seat. The data type is Int32.
--  **IsDisabled** - A sign of a disabled passenger. The data type is bool.
--  **ExternalID** - Custom passenger id in the external system. The data type is string, without using Cyrillic, special characters are not recommended.
+-  **LinkedTo** - Binding a passenger to another passenger, makes sense and is mandatory only for infants without a seat (optional). The data type is Int32.
+-  **IsDisabled** - A sign of a disabled passenger (optional). The data type is bool.
+-  **ExternalID** - Custom passenger id in the external system (optional). The data type is string, without using Cyrillic, special characters are not recommended.
 
 ### Example
 
