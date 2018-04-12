@@ -66,7 +66,7 @@ taxonomy:
 -   **PricingOptions.FOPsForAlternativePrices** — FOP'ы (Form Of Payment), для которых нужно получить дополнительную оценку брони. Тип данных — массив.
 -   **PricingOptions.FOPsForAlternativePrices.Type** — FOP, для которой нужно получить допоценку брони. Тип данных — строка.
 -   **PricingOptions.BookSubsidyTariffs** — включает бронирование субсидированных тарифов. Тип данных — булевский.
--   **AncillaryServices** — список дополнительных услуг для бронирования. Тип данных — массив.
+-   **AncillaryServices** — список дополнительных услуг для бронирования (необязательный). Тип данных — массив.
 -   **AncillaryServices.AncillaryService** — дополнительная услуга. Тип данных — сложный.
 -   **AncillaryServices.AncillaryService.ID** — идентификатор изменяемой дополнительной услуги (не учитывается при бронировании). Тип данных — целое число.
 -   **AncillaryServices.AncillaryService.RFIC** — RFIC-код дополнительной услуги. Тип данных — строка.
