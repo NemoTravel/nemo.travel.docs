@@ -23,30 +23,30 @@ In response to this request Nemo.travel will return the following parameters:
 
 #### Response
 * Item.ID - the service ID in the service package.
-* Item.Price - стоимость услуги.(Так же содержит параметр Currency - валюта, в которой указана стоимость услуги)
-* Item.Name - название услуги.
-* Item.ShortDescription - краткое описание услуги.
-* Item.FullDescription - полное описание услуги.
-* Package.ID - индентификатор сервисного пакета.
-* Package.Price - общая стоимость сервисного пакета.(Так же содержит параметр Currency - валюта, в которой указана стоимость услуги)
-* Package.Name - название сервисного пакета
-* Package.ShortDescription - краткое описание сервисного пакета 
-* Package.FullDescription - полное описание сервисного пакета
-* IsEditable - наличие возможности выбора сервисного пакета через запрос ModifyOrder. Значения: true/false
-* SelectedPackageId - идентификатор выбранного сервисного пакета
-* FlightsBookingID - ID заказа Nemo Connect
-* OrderStatus - статус заказа. Возможные значения: New, Booked, Cancelled, Confirmed
-* PaymentStatus - статус оплаты. Возможные значения: NotPaid, PartiallyPaid, FullPaid
-* Transaction.ID - номер платежной транзакции.
-* Transaction.Status - статус платежной транзакции. Возможные значения: New, Cancelled, Refunded, PreAuthorized, Paid.
-* Transaction.GatewayName - название платежного шлюза, заведенное агентом в настройках.
-* Transaction.MoneyPaid - сумма, которая уже была внесена в рамках данной транзакции. (Так же содержит параметр Currency - валюта, в которой указана стоимость услуги)
-* Transaction.PaymentDateTime - дата и время поступления оплаты по платежной транзакции. Формат: YYYY-MM-DDTHH:MM:SS
-* Transaction.CreateDateTime - дата и время создания платежной транзакции. Формат: YYYY-MM-DDTHH:MM:SS
-* Gateway.PaymentMethodId - идентификатор платежного шлюза.
-* Gateway.PaymentCharge - сумма сбора платежной системы. (Так же содержит параметр Currency - валюта, в которой указана стоимость услуги)
-* Gateway.RedirectUrl - адрес для перенаправления на страницу платежной системы.
-* Gateway.UrlToCatch - адрес, на который будут отправляться нотификации об изменениях в заказе.
+* Item.Price - cost of service (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
+* Item.Name - name of the service.
+* Item.ShortDescription - short description of the service.
+* Item.FullDescription - full description of the service.
+* Package.ID - id of service package.
+* Package.Price - total cost of service package (also contains the Currency parameter  - the currency in which the cost of the service is indicated)
+* Package.Name - name of the  service package.
+* Package.ShortDescription -  short description of the service package.
+* Package.FullDescription - full description of the service package.
+* IsEditable - presence of possibility of a choice of a service package via ModifyOrder request. Values: true / false.
+* SelectedPackageId - identifier of the selected service package.
+* FlightsBookingID - Nemo Connect booking ID.
+* OrderStatus - order status. Possible values: New, Booked, Canceled, Confirmed
+* PaymentStatus - payment status. Possible values: NotPaid, PartiallyPaid, FullPaid
+* Transaction.ID - the number of payment transaction.
+* Transaction.Status - status of payment transaction. Possible values: New, Cancelled, Refunded, PreAuthorized, Paid.
+* Transaction.GatewayName - the name of the payment gateway, entered by the agent in the settings.
+* Transaction.MoneyPaid - the amount that has already been paid in this transaction (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
+* Transaction.PaymentDateTime - date and time of receipt of payment for the transaction. Format: YYYY-MM-DDTHH: MM: SS
+* Transaction.CreateDateTime - the date and time the payment transaction was created. Format: YYYY-MM-DDTHH: MM: SS
+* Gateway.PaymentMethodId - payment gateway ID.
+* Gateway.PaymentCharge - amount of the payment system fee (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
+* Gateway.RedirectUrl - address for redirection to the payment system page.
+* Gateway.UrlToCatch - the address to which notifications about changes in the order will be sent.
 * Gateway.UrlForCardDataSubmit - адрес, на который необходимо отправить данные банковской карты. Формат запроса указан в параметре CardDataRequestContent (для host2host интеграции).
 * CardDataRequestContent - содержимое запроса, в котором необходимо заменить placeholder на данные банковской карты (для host2host интеграции)
 * CardDataRequestContent.proxy-placeholder-cardNumber - номер банковской карты. Формат: цифры, без пробелов 
