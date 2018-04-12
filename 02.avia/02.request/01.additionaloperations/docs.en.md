@@ -26,7 +26,7 @@ Request for execution before version 1.1
 	- ActualizeFlight - Actualize the flight
 	- GetFareFamilies - Getting a variant of the flight cost estimation from different families
 	- GetSubsidizedTariffs - Getting a list of subsidized fares for a flight
--  **OperationsRestrictions** - An additional information for performing the specified operations. The custom data type.
+-  **OperationsRestrictions** - An additional information for performing the specified operations (optional). The custom data type.
 -  **OperationsRestrictions.CheckAvailabilityWithBookingRequest** - Use the request to take places to check the availability of the flight for booking. The data type is boolean.
 -  **OperationsRestrictions.PricingInfo** - An additional information about the price component of the flight, for which you need to perform additional operations. The custom data type.
 -  **OperationsRestrictions.PricingInfo.BookingClassCodes** - The information about the flight classes for which you want to find the price of the flight. The custom data type.
