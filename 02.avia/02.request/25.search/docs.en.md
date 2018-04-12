@@ -14,20 +14,20 @@ Search for v 1.2
 #### Request
 
 -  **RequestedFlightInfo** - contains information about the flight segments you want to find. The custom data type.
--  **RequestedFlightInfo.Direct** - the indicator of search of only direct flights. The data type is boolean.
--  **RequestedFlightInfo.AroundDates** - a value for searching by district dates. The data type is an unsigned integer 32-bit number.
+-  **RequestedFlightInfo.Direct** - the indicator of search of only direct flights (optional). The data type is boolean.
+-  **RequestedFlightInfo.AroundDates** - a value for searching by district dates (optional). The data type is an unsigned integer 32-bit number.
 -  **RequestedFlightInfo.ODPairs** - contains information about the segments of the flight that you want to find. The custom data type.
 -  **RequestedFlightInfo.ODPair** - the segment of the flight you want to find. The custom data type.
 -  **RequestedFlightInfo.ODPair.DepatureDateTime** - the date and time from which the desired departure time begins. The data type is a string, the format is yyyy-MM-ddTHH: mm: ss.
--  **RequestedFlightInfo.ODPair.MaxDepatureTime** - the maximum-allowed departure time. The data type is a string, the format is HH: mm.
+-  **RequestedFlightInfo.ODPair.MaxDepatureTime** - the maximum-allowed departure time (optional). The data type is a string, the format is HH: mm.
 -  **RequestedFlightInfo.ODPair.DepaturePoint** - Contains information about the departure point. The custom data type.
 -  **RequestedFlightInfo.ODPair.DepaturePoint.Code** - a 3 letter code of the airport / city of departure. The data type is a string.
--  **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** - a sign that the airport code of the airport city is indicated as the departure point. The data type is boolean.
--  **RequestedFlightInfo.ODPair.DepatureAltPoints** - Contains a list of alternative departure airports / cities. The custom data type.
+-  **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** - a sign that the airport code of the airport city is indicated as the departure point (optional). The data type is boolean.
+-  **RequestedFlightInfo.ODPair.DepatureAltPoints** - Contains a list of alternative departure airports / cities. The custom data type (optional).
 -  **RequestedFlightInfo.ODPair.DepatureAltPoints.AltPoint** - Contains information about the flight point. The custom data type. The format is similar to the element **DepaturePoint**
 -  **RequestedFlightInfo.ODPair.ArrivalPoint** - Contains information about the arrival point. The custom data type. The format is similar to the element **DepaturePoint**
 -  **RequestedFlightInfo.ODPair.ArrivalAltPoints** - Contains a list of alternative arrival airports / cities. The custom data type. The format is similar to the element **DepatureAltPoints**
--  **RequestedFlightInfo.ODPair.ID** - The identifier of the element. Used when searching for options for exchange.
+-  **RequestedFlightInfo.ODPair.ID** - The identifier of the element. Used when searching for options for exchange (optional).
 -  **Passengers** - an array of information about passengers for whom you want to find a flight. The data type is an array.
 -  **Passengers.Passenger** - the information about the type of passengers for whom you want to find a flight. The custom data type.
 -  **Passengers.Passenger.Type** - the type of passengers for which you want to find a flight. Data type - enumeration, possible values:
@@ -43,7 +43,7 @@ Search for v 1.2
 	- STU - a student
 	- YTH - youth
 -  **Passengers.Passenger.Count** - the number of passengers of this type for which you want to find a flight. The data type is an integer 32-bit number. It can not be less than 1.
--  **Restrictions** - contains various restrictions applied to search results. The custom data type.
+-  **Restrictions** - contains various restrictions applied to search results (optional). The custom data type.
 -  **Restrictions.CurrencyCode** - a 3-letter code for the currency of the search results output. Data type - string
 -  **Restrictions.CompanyFilter** - an array of filters for an airline. The data type is an array.
 -  **Restrictions.CompanyFilter.Company** - the information about filtering on the airline. The data type is an array.
@@ -74,8 +74,8 @@ Search for v 1.2
 	-   Both - a set of search retrieval searches for minimum and minimum return prices
 -  **Restrictions.AsyncSearch** - Query mode: (default) false - synchronous search as before, true - asynchronous search with the ability to pull out the portions of supplier responses. The data type is bool.
 -  **Restrictions.Nemo2Pricing** - A sign of the need for pricing. The data type is bool.
--  **EndUserData** - End user data. The custom data type, the format is similar to the element * EndUserData * from the [DataItem](/avia/common/dataitem)
--  **SellingPointDescription** - The description of the point of sale. The custom data type, the format is similar to the element **SellingPointDescription** from [DataItem](/avia/common/dataitem)
+-  **EndUserData** - End user data (optional). The custom data type, the format is similar to the element * EndUserData * from the [DataItem](/avia/common/dataitem)
+-  **SellingPointDescription** - The description of the point of sale (optional). The custom data type, the format is similar to the element **SellingPointDescription** from [DataItem](/avia/common/dataitem)
 
 ##### Example
 
