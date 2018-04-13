@@ -22,41 +22,41 @@ taxonomy:
 * **PaymentBackRedirectUrl** -  URL адрес для дальнейшего редиректа после оплаты. Формат: http(s)://domain.
 
 #### Ответ
-* Item.ID - идентификатор услуги в сервисном пакете.
-* Item.Price - стоимость услуги.(Также содержит параметр Currency - валюта, в которой указана стоимость услуги)
-* Item.Name - название услуги.
-* Item.ShortDescription - краткое описание услуги.
-* Item.FullDescription - полное описание услуги.
-* Package.ID - индентификатор сервисного пакета.
-* Package.Price - общая стоимость сервисного пакета.(Также содержит параметр Currency - валюта, в которой указана стоимость услуги)
-* Package.Name - название сервисного пакета
-* Package.ShortDescription - краткое описание сервисного пакета 
-* Package.FullDescription - полное описание сервисного пакета
-* IsEditable - наличие возможности выбора сервисного пакета через запрос ModifyOrder. Значения: true/false
-* SelectedPackageId - идентификатор выбранного сервисного пакета
-* FlightsBookingID - ID заказа Nemo Connect
-* OrderStatus - статус заказа. Возможные значения: New, Booked, Cancelled, Confirmed
-* PaymentStatus - статус оплаты. Возможные значения: NotPaid, PartiallyPaid, FullPaid
-* Transaction.ID - номер платежной транзакции.
-* Transaction.Status - статус платежной транзакции. Возможные значения: New, Cancelled, Refunded, PreAuthorized, Paid.
-* Transaction.GatewayName - название платежного шлюза, заведенное агентом в настройках.
-* Transaction.MoneyPaid - сумма, которая уже была внесена в рамках данной транзакции. (Также содержит параметр Currency - валюта, в которой указана стоимость услуги)
-* Transaction.PaymentDateTime - дата и время поступления оплаты по платежной транзакции. Формат: YYYY-MM-DDTHH:MM:SS
-* Transaction.CreateDateTime - дата и время создания платежной транзакции. Формат: YYYY-MM-DDTHH:MM:SS
-* Gateway.PaymentMethodId - идентификатор платежного шлюза.
-* Gateway.PaymentCharge - сумма сбора платежной системы. (Также содержит параметр Currency - валюта, в которой указана стоимость услуги)
-* Gateway.RedirectUrl - адрес для перенаправления на страницу платежной системы.
-* Gateway.UrlToCatch - адрес, на который будут отправляться нотификации об изменениях в заказе.
-* Gateway.UrlForCardDataSubmit - адрес, на который необходимо отправить данные банковской карты. Формат запроса указан в параметре CardDataRequestContent (для host2host интеграции).
-* CardDataRequestContent - содержимое запроса, в котором необходимо заменить placeholder на данные банковской карты (для host2host интеграции)
-* CardDataRequestContent.proxy-placeholder-cardNumber - номер банковской карты. Формат: цифры, без пробелов 
-* CardDataRequestContent.proxy-placeholder-validThruYear - год истечения срока действия карты. Формат: YYYY
-* CardDataRequestContent.proxy-placeholder-validThruMonth - месяц истечения срока действия карты. Формат: MM
-* CardDataRequestContent.proxy-placeholder-securityCode - код CVC2/CVV2/4DBC. Не используется только в случае, если банковская карта не имеет данного кода. Пример: 123
-* CardDataRequestContent.proxy-placeholder-holderName - имя и фамилия держателя банковской карты (на латинице). Пример: Ivan Ivanov 
-* CardDataRequestContent.proxy-placeholder-customerIp - IP адрес, с которого пользователем были введены данные банковской карты. Формат: IP v4 address
-* CardDataRequestContent.proxy-placeholder-customerAgent - название браузера клиента (User-Agent HTTP header). Пример: Mozilla
-* RequestType - тип запроса. Доступные значения: POST/GET.
+* **Item.ID** - идентификатор услуги в сервисном пакете.
+* **Item.Price** - стоимость услуги.(Также содержит параметр Currency - валюта, в которой указана стоимость услуги)
+* **Item.Name** - название услуги.
+* **Item.ShortDescription** - краткое описание услуги.
+* **Item.FullDescription** - полное описание услуги.
+* **Package.ID** - индентификатор сервисного пакета.
+* **Package.Price** - общая стоимость сервисного пакета.(Также содержит параметр Currency - валюта, в которой указана стоимость услуги)
+* **Package.Name** - название сервисного пакета
+* **Package.ShortDescription** - краткое описание сервисного пакета 
+* **Package.FullDescription** - полное описание сервисного пакета
+* **IsEditable** - наличие возможности выбора сервисного пакета через запрос ModifyOrder. Значения: true/false
+* **SelectedPackageId** - идентификатор выбранного сервисного пакета
+* **FlightsBookingID** - ID заказа Nemo Connect
+* **OrderStatus** - статус заказа. Возможные значения: New, Booked, Cancelled, Confirmed
+* **PaymentStatus** - статус оплаты. Возможные значения: NotPaid, PartiallyPaid, FullPaid
+* **Transaction.ID** - номер платежной транзакции.
+* **Transaction.Status** - статус платежной транзакции. Возможные значения: New, Cancelled, Refunded, PreAuthorized, Paid.
+* **Transaction.GatewayName** - название платежного шлюза, заведенное агентом в настройках.
+* **Transaction.MoneyPaid** - сумма, которая уже была внесена в рамках данной транзакции. (Также содержит параметр Currency - валюта, в которой указана стоимость услуги)
+* **Transaction.PaymentDateTime** - дата и время поступления оплаты по платежной транзакции. Формат: YYYY-MM-DDTHH:MM:SS
+* **Transaction.CreateDateTime** - дата и время создания платежной транзакции. Формат: YYYY-MM-DDTHH:MM:SS
+* **Gateway.PaymentMethodId** - идентификатор платежного шлюза.
+* **Gateway.PaymentCharge** - сумма сбора платежной системы. (Также содержит параметр Currency - валюта, в которой указана стоимость услуги)
+* **Gateway.RedirectUrl** - адрес для перенаправления на страницу платежной системы.
+* **Gateway.UrlToCatch** - адрес, на который будут отправляться нотификации об изменениях в заказе.
+* **Gateway.UrlForCardDataSubmit** - адрес, на который необходимо отправить данные банковской карты. Формат запроса указан в параметре CardDataRequestContent (для host2host интеграции).
+* **CardDataRequestContent** - содержимое запроса, в котором необходимо заменить placeholder на данные банковской карты (для host2host интеграции)
+* **CardDataRequestContent.proxy-placeholder-cardNumber** - номер банковской карты. Формат: цифры, без пробелов 
+* **CardDataRequestContent.proxy-placeholder-validThruYear** - год истечения срока действия карты. Формат: YYYY
+* **CardDataRequestContent.proxy-placeholder-validThruMonth** - месяц истечения срока действия карты. Формат: MM
+* **CardDataRequestContent.proxy-placeholder-securityCode** - код CVC2/CVV2/4DBC. Не используется только в случае, если банковская карта не имеет данного кода. Пример: 123
+* **CardDataRequestContent.proxy-placeholder-holderName** - имя и фамилия держателя банковской карты (на латинице). Пример: Ivan Ivanov 
+* **CardDataRequestContent.proxy-placeholder-customerIp** - IP адрес, с которого пользователем были введены данные банковской карты. Формат: IP v4 address
+* **CardDataRequestContent.proxy-placeholder-customerAgent** - название браузера клиента (User-Agent HTTP header). Пример: Mozilla
+* **RequestType** - тип запроса. Доступные значения: POST/GET.
 
 #### Пример запроса
 ```xml
