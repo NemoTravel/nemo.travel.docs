@@ -9,13 +9,16 @@ taxonomy:
 
 This request is designed to change the already created order in the back-office, for example, you can add a service package to the order.
 
-#### Request
+#### Request  parameters
 * **OrderID** -  the order number from the back office of Nemo.travel. To get the parameter value for an order, you should run a GetOrder request with the parameters FlightsBookingID (Booking ID from Nemo Connect).
 * **SelectedPackageId** - the number of the service package that you want to select in the order. The value is returned in the GetOrder and ActualizeOrder responses in the Services.Service.ServicePack.Packages.Package.ID parameter.
 * **CallbackUrl** - The callback from Nemo.travel will be returned information about order status when it is changed to this address. Example: http(s)://domain.
 * **NemoOneAuthToken** -  API key, issued by Nemo.travel staff.
 * **UserID** - User ID in the Nemo.travel system, issued by Nemo.travel staff.
 * **PaymentBackRedirectUrl** - URL address for further redirect after payment. Example: http(s)://domain.
+
+#### Response parameters
+Identical to the parameters from [GetOrder](/nemo-backoffice-api/orders_workflow/getorder).
 
 #### Request example
 ```xml
