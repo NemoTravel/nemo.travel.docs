@@ -8,7 +8,7 @@ taxonomy:
 ### ActualizeOrder
 
 Для актуализации статуса заказа, используется запрос ActualizeOrder. С помощью него можно как обновлять информацию о заказе из бэк-офиса Nemo.travel, так и обновлять статус платежных транзакций.
-#### Запрос
+#### Параметры запроса
 * **OrderID** - номер заказа из бэк-офиса Nemo.travel. Чтобы получить значение параметра для заказа, необходимо выполнить запрос GetOrder с указанием параметра FlightsBookingID (ID бронирования из Nemo Connect).
 * **ActualizePayment** - позволяет отправить запрос в платежную систему для обновления статуса платежной транзакции. Значения: true/false.
 * **ActualizeFlightsBooking** - инициирует отправку запроса [UpdateBook](/avia/request/updatebook) в Nemo Connect. Значения: true/false.
@@ -16,6 +16,9 @@ taxonomy:
 * **NemoOneAuthToken** - API ключ, выдается сотрудниками Nemo.travel.
 * **UserID** - ID пользователя в системе Nemo.travel, выдается сотрудниками Nemo.travel.
 * **PaymentBackRedirectUrl** -  URL адрес для дальнейшего редиректа после оплаты. Формат: http(s)://domain.
+
+#### Параметры ответа
+Идентичны параметрам из [GetOrder](/nemo-backoffice-api/orders_workflow/getorder).
 
 #### Пример запроса
 ```xml
