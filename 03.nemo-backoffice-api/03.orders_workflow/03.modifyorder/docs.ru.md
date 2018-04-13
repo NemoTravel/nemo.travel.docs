@@ -9,13 +9,16 @@ taxonomy:
 
 Этот запрос предназначен для изменнеия уже созданного заказа в бэк-офисе, в частности, с помощью него можно добавить сервисный пакет к заказу.
 
-#### Запрос
+#### Параметры запроса
 * **OrderID** - номер заказа из бэк-офиса Nemo.travel. Чтобы получить значение параметра для заказа, необходимо выполнить запрос GetOrder с указанием параметра FlightsBookingID.
 * **SelectedPackageId** - номер сервисного пакета, который требуется выбрать в заказе. Значение возвращается в ответе на запросы GetOrder и ActualizeOrder параметре Services.Service.ServicePack.Packages.Package.ID
 * **CallbackUrl** - адрес, на который будет возвращен callback от Nemo.travel с информацией о статусе заказа (при его изменении). Формат: http(s)://domain.
 * **NemoOneAuthToken** - API ключ, выдается сотрудниками Nemo.travel.
 * **UserID** - ID пользователя в системе Nemo.travel, выдается сотрудниками Nemo.travel.
 * **PaymentBackRedirectUrl** -  URL адрес для дальнейшего редиректа после оплаты. Формат: http(s)://domain.
+
+#### Параметры ответа
+Идентичны параметрам из [GetOrder](/nemo-backoffice-api/orders_workflow/getorder).
 
 #### Пример запроса
 ```xml
