@@ -22,41 +22,41 @@ In response to this request Nemo.travel will return the following parameters:
 * **PaymentBackRedirectUrl** -  URL address for further redirect after payment. Example: http(s)://domain.
 
 #### Response
-* Item.ID - the service ID in the service package.
-* Item.Price - cost of service (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
-* Item.Name - name of the service.
-* Item.ShortDescription - short description of the service.
-* Item.FullDescription - full description of the service.
-* Package.ID - id of service package.
-* Package.Price - total cost of service package (also contains the Currency parameter  - the currency in which the cost of the service is indicated)
-* Package.Name - name of the  service package.
-* Package.ShortDescription -  short description of the service package.
-* Package.FullDescription - full description of the service package.
-* IsEditable - presence of possibility of a choice of a service package via ModifyOrder request. Values: true / false.
-* SelectedPackageId - identifier of the selected service package.
-* FlightsBookingID - Nemo Connect booking ID.
-* OrderStatus - order status. Possible values: New, Booked, Canceled, Confirmed
-* PaymentStatus - payment status. Possible values: NotPaid, PartiallyPaid, FullPaid
-* Transaction.ID - the number of payment transaction.
-* Transaction.Status - status of payment transaction. Possible values: New, Cancelled, Refunded, PreAuthorized, Paid.
-* Transaction.GatewayName - the name of the payment gateway, entered by the agent in the settings.
-* Transaction.MoneyPaid - the amount that has already been paid in this transaction (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
-* Transaction.PaymentDateTime - date and time of receipt of payment for the transaction. Format: YYYY-MM-DDTHH: MM: SS
-* Transaction.CreateDateTime - the date and time the payment transaction was created. Format: YYYY-MM-DDTHH: MM: SS
-* Gateway.PaymentMethodId - payment gateway ID.
-* Gateway.PaymentCharge - amount of the payment system fee (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
-* Gateway.RedirectUrl - address for redirection to the payment system page.
-* Gateway.UrlToCatch - the address to which notifications about changes in the order will be sent.
-* Gateway.UrlForCardDataSubmit - адрес, на который необходимо отправить данные банковской карты. Формат запроса указан в параметре CardDataRequestContent (для host2host интеграции).
-* CardDataRequestContent - содержимое запроса, в котором необходимо заменить placeholder на данные банковской карты (для host2host интеграции)
-* CardDataRequestContent.proxy-placeholder-cardNumber - номер банковской карты. Формат: цифры, без пробелов 
-* CardDataRequestContent.proxy-placeholder-validThruYear - год истечения срока действия карты. Формат: YYYY
-* CardDataRequestContent.proxy-placeholder-validThruMonth - месяц истечения срока действия карты. Формат: MM
-* CardDataRequestContent.proxy-placeholder-securityCode - код CVC2/CVV2/4DBC. Не используется только в случае, если банковская карта не имеет данного кода. Пример: 123
-* CardDataRequestContent.proxy-placeholder-holderName - имя и фамилия держателя банковской карты (на латинице). Пример: Ivan Ivanov 
-* CardDataRequestContent.proxy-placeholder-customerIp - IP адрес, с которого пользователем были введены данные банковской карты. Формат: IP v4 address
-* CardDataRequestContent.proxy-placeholder-customerAgent - название браузера клиента (User-Agent HTTP header). Пример: Mozilla
-* RequestType - тип запроса. Доступные значения: POST/GET.
+* **Item.ID** - the service ID in the service package.
+* **Item.Price** - cost of service (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
+* **Item.Name** - name of the service.
+* **Item.ShortDescription** - short description of the service.
+* **Item.FullDescription** - full description of the service.
+* **Package.ID** - id of service package.
+* **Package.Price** - total cost of service package (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
+* **Package.Name** - name of the  service package.
+* **Package.ShortDescription** -  short description of the service package.
+* **Package.FullDescription** - full description of the service package.
+* **IsEditable** - presence of possibility of a choice of a service package via ModifyOrder request. Values: true / false.
+* **SelectedPackageId** - identifier of the selected service package.
+* **FlightsBookingID** - Nemo Connect booking ID.
+* **OrderStatus** - order status. Possible values: New, Booked, Canceled, Confirmed.
+* **PaymentStatus** - payment status. Possible values: NotPaid, PartiallyPaid, FullPaid.
+* **Transaction.ID** - the number of payment transaction.
+* **Transaction.Status** - status of payment transaction. Possible values: New, Cancelled, Refunded, PreAuthorized, Paid.
+* **Transaction.GatewayName** - the name of the payment gateway, entered by the agent in the settings.
+* **Transaction.MoneyPaid** - the amount that has already been paid in this transaction (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
+* **Transaction.PaymentDateTime** - date and time of receipt of payment for the transaction. Format: YYYY-MM-DDTHH: MM: SS.
+* **Transaction.CreateDateTime** - the date and time the payment transaction was created. Format: YYYY-MM-DDTHH: MM: SS.
+* **Gateway.PaymentMethodId** - payment gateway ID.
+* **Gateway.PaymentCharge** - amount of the payment system fee (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
+* **Gateway.RedirectUrl** - address for redirection to the payment system page.
+* **Gateway.UrlToCatch** - the address to which notifications about changes in the order will be sent.
+* **Gateway.UrlForCardDataSubmit** - address to which you need to send bank card details. The request format is specified in the CardDataRequestContent parameter (for host2host integration).
+* **CardDataRequestContent** - the content of the request, in which it is necessary to replace the placeholder with the bank card data (for host2host integration).
+* **CardDataRequestContent.proxy-placeholder-cardNumber** - Bankcard number. Format: numbers, without gaps.
+* **CardDataRequestContent.proxy-placeholder-validThruYear** - year of expiry of the card. Format: YYYY.
+* **CardDataRequestContent.proxy-placeholder-validThruMonth** - month of expiry of the card. Format: MM.
+* **CardDataRequestContent.proxy-placeholder-securityCode** - code CVC2 / CVV2 / 4DBC. Not used only if the bank card does not have this code. Example: 123.
+* **CardDataRequestContent.proxy-placeholder-holderName** - name and surname of the holder of the bank card (in Latin). Example: Ivan Ivanov.
+* **CardDataRequestContent.proxy-placeholder-customerIp** - The IP address from which the user entered bank card data. Format: IP v4 address.
+* **CardDataRequestContent.proxy-placeholder-customerAgent** - name of the client browser (User-Agent HTTP header). Example: Mozilla.
+* **RequestType** - type of request. The available values are: POST / GET.
 
 
 #### Request example
