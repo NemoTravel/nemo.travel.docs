@@ -9,6 +9,9 @@ The Nemo Connect web services is written using .NET Framework technologies and l
 
 In the process of integration is recommended to use the tool [SoapUI OpenSource](https://www.soapui.org/downloads/soapui.html) to test requests.
 
+Address for requests:
+https://avia.prod.backend.nemo.travel/Avia.svc, scheme: https://avia.prod.backend.nemo.travel/Avia.svc?singleWsdl
+
 An example of implementing a connection to the Nemo Connect using SoapClient in the PHP5 programming language
 
 ```php
