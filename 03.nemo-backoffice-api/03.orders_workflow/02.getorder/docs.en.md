@@ -13,7 +13,7 @@ In response to this request Nemo.travel will return the following parameters:
 *  The request content, in which you should replace the placeholder with the card data and send it to the address that will also be in the reply in the CardDataRequestContent parameter;
 *  List of available additional services (service package, insurance programs) in the Services parameter. 
 
-#### Request  
+#### Request parameters
 * **OrderID** - the order number in the back office of Nemo.travel. To get the parameter value for an order, you should run a GetOrder request with the parameters FlightsBookingID (Booking ID from Nemo Connect).
 * **FlightsBookingID** - Nemo Connect booking ID, the value is returned in the GetBook response in ID parameter.
 * **CallbackUrl** - the callback from Nemo.travel will be returned information about order status when it is changed to this address. Example: http(s)://domain.
@@ -21,7 +21,7 @@ In response to this request Nemo.travel will return the following parameters:
 * **UserID** - User ID in the Nemo.travel system, issued by Nemo.travel staff.
 * **PaymentBackRedirectUrl** -  URL address for further redirect after payment. Example: http(s)://domain.
 
-#### Response
+#### Response parameters
 * **Item.ID** - the service ID in the service package.
 * **Item.Price** - cost of service (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
 * **Item.Name** - name of the service.
