@@ -19,6 +19,7 @@ The body of the any request consists of three basic elements.
 * **Requisites.Login** - The login to access the server. The data type is a string.
 * **Requisites.Password** is the password for accessing the server. The data type is a string.
 * **Requisites.AuthToken** - the key of access to the server. The data type is a string. You either need to specify an access key or a login string with a password.
+* **Requisites.NemoOneAuthToken** - the key for authorization by user ID in Nemo 1. The data type is a string.
 
 
 ##### User ID
