@@ -29,6 +29,36 @@ Price
     -   PenaltiesApplies
 -   **PricePart.PrivateFareInd** - Признак наличия приватных тарифов при формировании цены. Тип данных - bool.
 -   **PricePart.PassengerTypePriceBreakdown** - ВП. Тип данных - массив PassengerTypePrice.
+-   **PricePart.PricingDebug.RulesDebugInfo** - Список результатов проверки правил ценообразования. Тип данных - сложный.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData** - Результат проверки правила ценообразования. Тип данных - сложный.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ID** - ID правила. Тип данных - целое 32 битное число.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ValCompany** - Валидирующий перевозчик. Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Commission** - Комиссия авиакомпании (как указано в правиле). Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ComResult** - Коммиссия авиакомпании (рассчитанная). Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AgencyCommission** - комиссия агенства. Тип данных — строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Bonus** - Бонус авиакомпании (как в правиле). Тип данных — строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BonusResult** - Бонус АК (рассчитанный). Тип данных — строка. 
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ChargeExt** - Признак доп. сбора. Тип данных - строка. 
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Charge** - Сбор (как в правиле). Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ChargeValue** - Сбор (рассчитанный). Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.MinProfit** - Минимальная прибыль. Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.MinProfitPriority** - Приоритет минимальной прибыли. Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.MinProfitEnable** - Признак применения минимальной прибыли. Тип данных - булевский.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Discount** - скидка от тарифа. Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AuthCode** — код авторизации. Тип данных — строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.TourCode** - туркод. Тип данных — строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AcquiringMode** - Признак применения прямого эквайринга. Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.IsAutoticketingDisabled** - Признак необходимости отключения автовыписки. Тип данных - булевский.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BestRule** - Признак наиболее подходящего правила. Тип данных — булевский.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Success** - Признак прохождения всех проверок правилом. Тип данных — булевский.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults** - Список результатов проверки правила. Тип данных - сложный.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check** -Результат проверки. Тип данных - сложный.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Name** - Название проверяемого параметра. Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info** - Данные проверки. Тип данных - сложный.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info.Value** - Значение параметра правила. Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info.Result** - Результат проверки параметра. Тип данных - булевский.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CorpRule** - Признак правила для предоставления скидки по тур. коду конкретным клиентам. Тип данных — булевский.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BestCorpRule** - Признак наиболее подходящего правила для предоставления скидки по тур. коду. Тип данных — булевский.
 -   **PassengerTypePrice** - Формирование цены на определённый тип путешественника. Тип данных - сложный.
 -   **PassengerTypePrice.TravellerRef** - Ссылка на путешественников. Тип данных - [Reflist](/avia/common/reflist).
 -   **PassengerTypePrice.PricingType** - Тип пассажира, по которому сформирована данная цена, может не совпадать с типом путешественника в соответствующем разделе. Тип данных - строка.
