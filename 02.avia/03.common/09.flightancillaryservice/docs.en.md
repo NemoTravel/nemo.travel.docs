@@ -65,6 +65,26 @@ The list of available ancillary services is triggered by the SearchAncillaryServ
           <Refundability>NonRefundable</Refundability>
         </AncillaryServiceRS>
    ```
+   The price of the service is returned in the block AncillaryServicePrice
+   ```xml
+        <AncillaryServicePrice>
+          <Value>
+            <a:Amount>10109</a:Amount>
+            <a:Currency>KZT</a:Currency>
+          </Value>
+          <ServiceRef>
+            <a:Ref>3</a:Ref>
+          </ServiceRef>
+          <SegmentRef>
+            <a:Ref>1</a:Ref>
+          </SegmentRef>
+          <TravellersTypes>
+            <a:PassTypes>ADT</a:PassTypes>
+          </TravellersTypes>
+        </AncillaryServicePrice>
+  ```
+ In the above example, the price matches the service with ID 3 (displayed in the ServiceRef parameter) on the first segment displayed in the SegmentRef parameter).
+   
    
   You can add a service to the reservation via a [BookFlight](/avia/request/bookflight) request, or, if the reservation has already been created, through a [ModifyBook](/avia/request/modifybook) request.
      ### A BookFlight request example.
