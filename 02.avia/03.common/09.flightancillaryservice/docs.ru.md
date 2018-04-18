@@ -58,7 +58,7 @@ taxonomy:
 ### Пример Amadeus
 ```xml
        <AncillaryServiceRS>
-          <ID>1</ID>
+          <ID>3</ID>
           <Name>PRE PAID BAGGAGE</Name>
           <RFIC>C</RFIC>
           <RFISC>0AA</RFISC>
@@ -68,7 +68,25 @@ taxonomy:
           <Refundability>NonRefundable</Refundability>
         </AncillaryServiceRS>
    ```
-   
+   Цена услуги возвращается в блоке <AncillaryServicePrice>
+ ```xml
+ <AncillaryServicePrice>
+                <Value>
+                  <a:Amount>10109</a:Amount>
+                  <a:Currency>KZT</a:Currency>
+                </Value>
+                <ServiceRef>
+                  <a:Ref>3</a:Ref>
+                </ServiceRef>
+                <SegmentRef>
+                  <a:Ref>1</a:Ref>
+                </SegmentRef>
+                <TravellersTypes>
+                  <a:PassTypes>ADT</a:PassTypes>
+                </TravellersTypes>
+              </AncillaryServicePrice>
+  ```
+ В примере выше цена соответствует услуге с ID 3 (указывается в ServiceRef)  на первом сегменте(указывается в SegmentRef).    
   Добавить услугу в бронь можно через запрос [BookFlight](/avia/request/bookflight), либо, если бронь уже создана, через запрос [ModifyBook](/avia/request/modifybook). 
      ### Пример запроса BookFlight.
    ```xml
