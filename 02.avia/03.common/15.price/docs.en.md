@@ -59,6 +59,7 @@ Contains the full information about the price and its formation for the reservat
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info.Result** - The result of parameter check. The data type is bool.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CorpRule** - A sign of the rule for granting discounts for tour code to specific customers. The data type is bool.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BestCorpRule** - A sign of the most appropriate rule for granting a discount for tour code. The data type is bool.
+-   **FareFamiliesDescription** - contains descriptions of the tfare families presenting in the flight. The data type is [Description](/avia/common/ff-description).
 -   **PassengerTypePrice** - The formation of the price for a certain type of the traveler. The custom data type.
 -   **PassengerTypePrice.TravellerRef** - A reference to travelers. The data type is [Reflist](/avia/common/reflist).
 -   **PassengerTypePrice.PricingType** - The type of passenger for which this price is formed may not coincide with the type of a traveler in the corresponding section. The data type is a string.
