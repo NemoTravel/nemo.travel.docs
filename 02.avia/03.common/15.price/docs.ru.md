@@ -35,7 +35,7 @@ Price
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ValCompany** - Валидирующий перевозчик. Тип данных - строка.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Commission** - Комиссия авиакомпании (как указано в правиле). Тип данных - строка.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ComResult** - Коммиссия авиакомпании (рассчитанная). Тип данных - строка.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AgencyCommission** - комиссия агенства. Тип данных — строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AgencyCommission** - Комиссия агенства. Тип данных — строка.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Bonus** - Бонус авиакомпании (как в правиле). Тип данных — строка.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BonusResult** - Бонус АК (рассчитанный). Тип данных — строка. 
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ChargeExt** - Признак доп. сбора. Тип данных - строка. 
@@ -44,9 +44,9 @@ Price
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.MinProfit** - Минимальная прибыль. Тип данных - строка.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.MinProfitPriority** - Приоритет минимальной прибыли. Тип данных - строка.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.MinProfitEnable** - Признак применения минимальной прибыли. Тип данных - булевский.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Discount** - скидка от тарифа. Тип данных - строка.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AuthCode** — код авторизации. Тип данных — строка.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.TourCode** - туркод. Тип данных — строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Discount** - Скидка от тарифа. Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AuthCode** — Код авторизации. Тип данных — строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.TourCode** - Туркод. Тип данных — строка.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AcquiringMode** - Признак применения прямого эквайринга. Тип данных - строка.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.IsAutoticketingDisabled** - Признак необходимости отключения автовыписки. Тип данных - булевский.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BestRule** - Признак наиболее подходящего правила. Тип данных — булевский.
