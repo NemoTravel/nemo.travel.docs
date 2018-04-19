@@ -13,7 +13,7 @@ Getting the results of a certain search from an air server.
 
 - ** SearchID ** - The ID of the search occasion which results need to get. The data type is long.
 - ** FlightID ** - The flight ID that need to get. The data type is a string.
-- ** RawData ** - A sign of getting xml content of search requests to the supplier. The data type is bool.
+- ** RawData ** - A sign of getting xml content of search requests to the supplier (optional). The data type is bool.
 
 #### Response
 
