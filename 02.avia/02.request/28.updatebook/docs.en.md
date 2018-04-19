@@ -11,7 +11,7 @@ Used to update the flight booking information from [Book version 2.0](/avia/comm
 
 #### Request
 
--  **BookID** - The booking ID that you want to cancel. The data type is long.
+-  **BookID** - The booking ID that you want to update. The data type is long.
 -  **CancelPayment** - A sign of the need to cancel the old payment of the reservation. The data type is boolean.
 -  **PricingOptions** - additional options for charging the reservation. The custom data type.
 -  **PricingOptions.FOPsForAlternativePrices** - FOP for which you need to get an additional estimate of the booking. The data type is an array.
