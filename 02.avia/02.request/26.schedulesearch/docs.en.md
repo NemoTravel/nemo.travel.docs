@@ -21,8 +21,8 @@ taxonomy:
 - ** RequestedFlightInfo.ODPair.DepaturePoint.Code ** - a 3 letter code of the airport / city of departure. The data type is a string.
 - ** RequestedFlightInfo.ODPair.DepaturePoint.IsCity ** - a sign that the airport code of the airport city is indicated as the departure point. The data type is boolean.
 - ** RequestedFlightInfo.ODPair.ArrivalPoint ** - Contains information about the arrival point. The custom data type. The format is similar to the element * DepaturePoint *
-- ** Restrictions ** - Similar to the * Restrictions * parameter from the  [Search\_1\_2](/avia/request/search).
-- ** EndUserData ** - End user data. The custom data type, the format is similar to the element * EndUserData * from the [DataItem](/avia/common/dataitem).
+- ** Restrictions ** - Similar to the * Restrictions * parameter from the  [Search\_1\_2](/avia/request/search) (optional).
+- ** EndUserData ** - End user data. The custom data type, the format is similar to the element * EndUserData * from the [DataItem](/avia/common/dataitem) (optional).
 
 ##### Example
 

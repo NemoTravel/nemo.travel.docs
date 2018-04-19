@@ -21,8 +21,8 @@ taxonomy:
 -   **RequestedFlightInfo.ODPair.DepaturePoint.Code** — трехбуквенный код аэропорта/города отправления. Тип данных — строка.
 -   **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** — признак что в качестве точки отправления указан код города-агрегатора аэропортов. Тип данных — булевский.
 -   **RequestedFlightInfo.ODPair.ArrivalPoint** — содержит информацию о точки прибытия. Тип данных — сложный. Формат аналогичен элементу **DepaturePoint**.
--   **Restrictions** — аналогичен параметру **Restrictions** из запроса [Search\_1\_2](/avia/request/search).
--   **EndUserData** — данные конечного пользователя. Тип данных — сложный, формат аналогичен элементу **EndUserData** из [DataItem](/avia/common/dataitem).
+-   **Restrictions** — аналогичен параметру **Restrictions** из запроса [Search\_1\_2](/avia/request/search) (необязательный).
+-   **EndUserData** — данные конечного пользователя. Тип данных — сложный, формат аналогичен элементу **EndUserData** из [DataItem](/avia/common/dataitem) (необязательный).
 
 ##### Пример
 
