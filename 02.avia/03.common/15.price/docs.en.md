@@ -29,6 +29,36 @@ Contains the full information about the price and its formation for the reservat
     -   PenaltiesApplies
 -   **PricePart.PrivateFareInd** - A sign of the presence of private faresin the formation of prices. The data type is bool.
 -   **PricePart.PassengerTypePriceBreakdown** - VI. The data type is the PassengerTypePrice array.
+-   **PricePart.PricingDebug.RulesDebugInfo** - The list of results of checking pricing rules. The custom data type.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData** - The result of checking the pricing rule. The custom data type.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ID** - The rule ID. The data type is int32.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ValCompany** - The validating carrier. The data type is a string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Commission** - The airline commission (as specified in the rule). The data type is a string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ComResult** - The airline commissions (calculated). The data type is a string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AgencyCommission** - The agency commission. The data type is a string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Bonus** - The airline Bonus (as in the rule). The data type is a string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BonusResult** - The airline Bonus (calculated). The data type is a string. 
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ChargeExt** - A sign of of additional collection. The data type is a string. 
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Charge** - The collection (as in the rule). The data type is a string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ChargeValue** - The collection (calculated). The data type is a string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.MinProfit** - The minimal profit. The data type is a string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.MinProfitPriority** - The priority of the minimum profit. The data type is a string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.MinProfitEnable** - A sign of  applying a minimum profit. The data type is bool.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Discount** - The discount from tariff. The data type is a string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AuthCode** — The authorization code. The data type is a string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.TourCode** - The tour code. The data type is a string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AcquiringMode** - A sign of using direct acquiring. The data type is a string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.IsAutoticketingDisabled** - A sign that you need to turn off auto ticketing. The data type is bool.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BestRule** - A sign of the most appropriate rule. The data type is bool.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Success** - A sign of the passage of all checks by the rule. The data type is bool.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults** - The list of rule verification results. The custom data type.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check** - The result of checking. The custom data type.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Name** - The name of the parameter to be checked. The data type is a string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info** - Verification data. The custom data type.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info.Value** - The rule parameter value. The data type is a string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info.Result** - The result of parameter check. The data type is bool.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CorpRule** - A sign of the rule for granting discounts for tour code to specific customers. The data type is bool.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BestCorpRule** - A sign of the most appropriate rule for granting a discount for tour code. The data type is bool.
 -   **PassengerTypePrice** - The formation of the price for a certain type of the traveler. The custom data type.
 -   **PassengerTypePrice.TravellerRef** - A reference to travelers. The data type is [Reflist](/avia/common/reflist).
 -   **PassengerTypePrice.PricingType** - The type of passenger for which this price is formed may not coincide with the type of a traveler in the corresponding section. The data type is a string.
