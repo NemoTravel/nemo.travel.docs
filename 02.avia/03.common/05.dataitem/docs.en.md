@@ -126,7 +126,7 @@ To store different booking content.
 - **Document.ElapsedTime** - The document expiration date. The data type is the date in dd.mm.yyyy format.
 - **Document.AddedAsDOCS** - A sign of the document entry as SSR DOCS in the NDP. The data type is bool.
 - **Document.AddedAsFOID** - A sign of entering the document as SSR FOID in the NDP. The data type is bool.
-- **ContactInfo** - Contact details (optional). The custom data type.
+- **ContactInfo** - Contact details (in the case of booking in Farelogix and using SirenaAviaPlus, the contact information is necessarily). The custom data type.
 - **ContactInfo.EmailID** - E-mail. The data type is a string.
 - **ContactInfo.Telephone** - Thecontact phone. The custom data type.
 - **ContactInfo.Telephone.Type** - The phone type. Data type - enumeration, possible values:
