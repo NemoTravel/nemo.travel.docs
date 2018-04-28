@@ -21,7 +21,7 @@ Flight presentation format 1.1.
 -   **Flight.TypeInfo.DirectionType** — The type of flight route. Data type - enumeration, possible values:
 	- **OW** - one way flight   - simple flight consisting of one leg;
 	- **RT** - roundtrip flight - flight from 2 legs, where the departure point of the first leg coincides with the arrival point of the second leg and the arrival point of the first leg coincides with the departure point of the second leg;
-	- **CT** - complex route - some random set of leg;
+	- **CT** - complex route - some random set of legs;
 	- **SingleOJ** - single Open Jaw - a flight from 2 legs, where the departure point of the first leg coincides with the arrival point of the second leg or the arrival point of the first leg coincides with the departure point of the second leg;
 	- **DoubleOJ** - double Open Jaw - a flight from 2 legs, in which the departure point of the first leg does not coincide with the arrival point of the second leg and the point of arrival of the first leg does not coincide with the departure point of the second leg;
 	- **hRT** - RT / 2 - a simple OW flight was requested, but on the basis of the settings of a certain package of requisites RT / 2 search was launched;
