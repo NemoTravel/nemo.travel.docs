@@ -67,7 +67,6 @@ taxonomy:
 * **ResponseBody** — контейнер для тела ответа. Тип данных — сложный.
 
 ##### Пример блока авторизации по AuthToken
-​
 ```xml
         <ns1:Requisites>
           <stl:AuthToken>****</stl:AuthToken>
