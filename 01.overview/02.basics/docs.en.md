@@ -65,3 +65,10 @@ The main elements of the any response
 ##### The response body
 
 * **ResponseBody** - The container for the response body. The custom data type.
+
+##### Example of autorization block by AuthToken
+```xml
+        <ns1:Requisites>
+          <stl:AuthToken>****</stl:AuthToken>
+        </ns1:Requisites>
+        <ns1:UserID>11111</ns1:UserID>
