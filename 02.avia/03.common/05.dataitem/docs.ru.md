@@ -292,6 +292,10 @@ taxonomy:
 	-   **IN** — счет (invoice).
 -   **PNRFOP.FOPs.FOP.CreditCardNumber** — маскированный номер кредитной карты, в случае если форматы оплаты — кредитка. Тип данных — строка.
 -   **PNRFOP.FOPs.FOP.Number** — номер FOP в PNR.
+-   **PNRFOP.FOPs.FOP.VendorCode** - код типа карты. Тип данных - строка. Например: CA - MASTERCARD/EUROCARD; VI - VISA.
+-   **PNRFOP.FOPs.FOP.ExpireDate** - дата истечения срока действия карты. Тип данных - дата в формате 'MM.YYYY'.
+-   **PNRFOP.FOPs.FOP.AuthorizationCode** - код авторизации. Тип данных - строка.
+-   **PNRFOP.FOPs.FOP.Amount** - сумма оплаты. Тип данных - [Money](/avia/common/money).
 -   **SubagentCommission** — субагентская комиссия (необязательный). Тип данных — CommissionDataItem.
 -   **TicketDesignator** — информация о тикет-десигнаторе для прописывания в бронь (необязательный). Тип данных — сложный.
 -   **TicketDesignator.Value** — значение тикет-десигнатора для прописывания в бронь. Тип данных — строка.
