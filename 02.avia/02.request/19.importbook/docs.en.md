@@ -19,7 +19,7 @@ Used to create the booking based on PNR from the GDS.
 - ** WithReprice ** - A sign of the need to actualize the booking price after the creation. The data type is a Boolean value.
 - ** ValidatingCompany ** - The validating company of the booking, needed to the correctly booking import in case of situations when different requisites are used in a package for the different airlines. The data type is a string.
 - ** UseFlexFares ** - A sign of using flex fare families while the booking import (specificity of SITA Gabriel) The data type is a boolean value.
-- **SourceDescription.Supplier** - Supplier. The data type is enumeration with air supplier.
+- **SourceDescription.Supplier** - Supplier. The data type is enumeration with air suppliers.
 - **SourceDescription.SupplierRequisiteID** - Reservation ID package for the specified supplier, e.g. PCC. The data type is a non-negative integer 32-bit number.
 
 ##### Example
