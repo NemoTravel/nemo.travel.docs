@@ -55,7 +55,7 @@ taxonomy:
 * **data.products.ID_FLT_N.info.nemoConnect.status** — статус перелёта. Тип данных — строка.
 * **data.products.ID_FLT_N.info.nemoConnect.subStatus** — подстатус перелёта. Тип данных — строка.
 * **data.products.ID_FLT_N.info.nemoConnect.possibleActions** — список доступных действий с перелётом. Тип данных - массив строк.
-* **data.products.ID_FLT_N.info.supplier — контейнер с информацией о поставщике. Тип данных — сложный.
+* **data.products.ID_FLT_N.info.supplier** — контейнер с информацией о поставщике. Тип данных — сложный.
 * **data.products.ID_FLT_N.info.supplier.system** — наименование поставщика. Тип данных — строка.
 * **data.products.ID_FLT_N.info.supplier.id** — идентификатор у поставщика. Тип данных — строка.
 * **data.products.ID_FLT_N.info.supplier.environment** — среда выполнения. Тип данных — строка.
@@ -77,12 +77,12 @@ taxonomy:
 * **data.products.ID_FLT_N.segments.ID_SEG_N** — контейнер с информацией об N-м сегменте. Тип данных — сложный.
 * **data.products.ID_FLT_N.segments.ID_SEG_N.index** — идентификатор сегмента. Тип данных — целое 64-битное число.
 * **data.products.ID_FLT_N.segments.ID_SEG_N.leg** — идентификатор плеча. Тип данных — целое 64-битное число.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.departure ** — контейнер с информацией о пункте отправления. Тип данных — сложный.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.departure** — контейнер с информацией о пункте отправления. Тип данных — сложный.
 * **data.products.ID_FLT_N.segments.ID_SEG_N.departure.date** — время отправления. Тип данных — строка.
 * **data.products.ID_FLT_N.segments.ID_SEG_N.departure.airport** — IATA код аэропорта отправления. Тип данных — строка.
 * **data.products.ID_FLT_N.segments.ID_SEG_N.departure.terminal** — терминал отправления. Тип данных — строка.
 * **data.products.ID_FLT_N.segments.ID_SEG_N.departure.country** — страна отправления. Тип данных  — строка.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.arrival ** — контейнер с информацией о пункте прибытия. Тип данных — сложный.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.arrival** — контейнер с информацией о пункте прибытия. Тип данных — сложный.
 * **data.products.ID_FLT_N.segments.ID_SEG_N.arrival.date** — время прибытия. Тип данных — строка.
 * **data.products.ID_FLT_N.segments.ID_SEG_N.arrival.airport** — IATA код аэропорта прибытия. Тип данных — строка.
 * **data.products.ID_FLT_N.segments.ID_SEG_N.arrival.terminal** — терминал прибытия. Тип данных — строка.
