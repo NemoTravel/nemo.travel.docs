@@ -111,10 +111,10 @@ taxonomy:
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.pricingType** — код ценового типа пассажира полученного из ГРС. Тип данных — строка.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.passCount** — число пассажиров. Тип данных — целое 64-битное число.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare** — контейнер с информацией о базовой стоимости тарифа (без учета такс). Тип данных - сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare.amount — сумма базовой стоимости.Тип данных — строка.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare.amount** — сумма базовой стоимости.Тип данных — строка.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare.currency** — код валюты базовой стоимости. Тип данных — строка.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.equiveFare** — контейнер с информацией о базовой стоимости тарифа (без учета такс) в эквивалентной валюте. Тип данных - сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.equiveFare.amount — сумма базовой стоимости в эквивалентной валюте .Тип данных — строка.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.equiveFare.amount** — сумма базовой стоимости в эквивалентной валюте .Тип данных — строка.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.equiveFare.currency** — код эквивалентной валюты базовой стоимости. Тип данных — строка.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.totalFare** — контейнер с информацией о полной стоимости тарифа с учетом такс. Тип данных — сложный.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.totalFare.amount** — сумма полной стоимости.Тип данных — строка.
@@ -136,7 +136,7 @@ taxonomy:
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax.currency** — код валюты таксы. Тип данных — строка.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].type** — тип таксы. Тип данных — строка.
 * **data.products.ID_EXT_N** — контейнер с информацией о дополнительных услугах. Тип данных — сложный.
-* **data.products.ID_EXT_N.type ** — тип дополнительной услуги. Тип данных — строка.
+* **data.products.ID_EXT_N.type** — тип дополнительной услуги. Тип данных — строка.
 * **data.price** — контейнер с данными о полной стоимости. Тип данных — сложный.
 * **data.price.amount** — cумма полной стоимости. Тип данных — строка.
 * **data.price.currency** — код валюты полной стоимости. Тип данных — строка.
@@ -160,26 +160,26 @@ taxonomy:
 * **data.price.components.charges.components.agencyProfit.components** — контейнер с информацией о составляющих прибыли агентства. Тип данных — сложный.
 * **data.price.components.charges.components.agencyProfit.components.pricingMarkup** — контейнер с информацией об оценке агентского сбора. Тип данных — сложный.
 * **data.price.components.charges.components.agencyProfit.components.pricingMarkup.amount** — сумма агентского сбора. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.pricingMarkup.currency ** — код суммы агентского сбора. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.pricingMarkup.components ** — контейнер с информацией о составляющих агентского сбора. Тип данных — сложный.
+* **data.price.components.charges.components.agencyProfit.components.pricingMarkup.currency** — код суммы агентского сбора. Тип данных — строка.
+* **data.price.components.charges.components.agencyProfit.components.pricingMarkup.components** — контейнер с информацией о составляющих агентского сбора. Тип данных — сложный.
 * **data.price.components.charges.components.agencyProfit.components.pricingMarkup.components.ID_PCG_N** — контейнер с информацией о стоимости из N-й оценки перелёта. Тип данных — сложный.
 * **data.price.components.charges.components.agencyProfit.components.pricingMarkup.components.ID_PCG_N.amount** — сумма N-й оценки перелёта.  Тип данных — строка.
 * **data.price.components.charges.components.agencyProfit.components.pricingMarkup.components.ID_PCG_N.currency** — код валюты N-й оценки перелёта. Тип данных — строка.
 * **data.price.components.charges.components.agencyProfit.components.fixingPriceMarkup** — контейнер с информацией о фиксирующем  сборе. Тип данных — сложный.
 * **data.price.components.charges.components.agencyProfit.components.fixingPriceMarkup.amount** — сумма фиксирующего  сбора. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.fixingPriceMarkup.currency ** — код валюты  суммы фиксирующего сбора. Тип данных — строка.
+* **data.price.components.charges.components.agencyProfit.components.fixingPriceMarkup.currency** — код валюты  суммы фиксирующего сбора. Тип данных — строка.
 * **data.price.components.charges.components.agencyProfit.components.problemDiscount** — контейнер с информацией о толерантном сборе. Тип данных — сложный.
 * **data.price.components.charges.components.agencyProfit.components.problemDiscount.amount** — сумма толерантного сбора. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.problemDiscount.currency ** — код валюты толерантного сбора. Тип данных — строка.
+* **data.price.components.charges.components.agencyProfit.components.problemDiscount.currency** — код валюты толерантного сбора. Тип данных — строка.
 * **data.price.components.charges.components.agencyProfit.components.subagentDiscount** — контейнер с информацией о субагентской скидке. Тип данных — сложный.
 * **data.price.components.charges.components.agencyProfit.components.subagentDiscount.amount** — сумма субагентской скидки. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.subagentDiscount.currency ** — код валюты суммы субагентской  скидки. Тип данных — строка.
+* **data.price.components.charges.components.agencyProfit.components.subagentDiscount.currency** — код валюты суммы субагентской  скидки. Тип данных — строка.
 * **data.price.components.charges.components.agencyProfit.components.promoDiscount** — контейнер с информацией о скидке по промокоду. Тип данных — сложный
 * **data.price.components.charges.components.agencyProfit.components.promoDiscount.amount** — сумма скидки по промокоду. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.promoDiscount.currency ** — код валюты суммы скидки по промокоду. Тип данных — строка.
+* **data.price.components.charges.components.agencyProfit.components.promoDiscount.currency** — код валюты суммы скидки по промокоду. Тип данных — строка.
 * **data.price.components.charges.components.agencyProfit.components.roundingMarkup** — контейнер с информацией о округляющем сборе Тип данных — сложный
 * **data.price.components.charges.components.agencyProfit.components.roundingMarkup.amount** — размер округляющего сбора. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.roundingMarkup.currency ** — код валюты округлящего сбора. Тип данных — строка.
+* **data.price.components.charges.components.agencyProfit.components.roundingMarkup.currency** — код валюты округлящего сбора. Тип данных — строка.
 * **data.price.components.charges.components.subagencyProfit** — контейнер с информацией о прибыли субагентства. Тип данных — сложный.
 * **data.price.components.charges.components.subagencyProfit.amount** — сумма прибыли субагентства. Тип данных — строка.
 * **data.price.components.charges.components.subagencyProfit.currency** — код валюты суммы прибыли субагентства. Тип данных — строка.
@@ -187,8 +187,8 @@ taxonomy:
 * **data.price.components.charges.components.gatewayProfit.amount** — размер комиссии за прием платежа. Тип данных — строка.
 * **data.price.components.charges.components.gatewayProfit.currency** — код валюты комиссии за прием платежа. Тип данных — строка.
 * **data.payments** — контейнер с информацией о платежных шлюзах. Тип данных — сложный.
-* **data.payments.ID_PAY_N ** — контейнер с информаций об N-й платежной транзакции. Тип данных — сложный.
-* **data.payments.ID_PAY_N.id ** — идентификатор плтаженой транзакции Nemo.Travel. Тип данных — строка.
+* **data.payments.ID_PAY_N** — контейнер с информаций об N-й платежной транзакции. Тип данных — сложный.
+* **data.payments.ID_PAY_N.id** — идентификатор плтаженой транзакции Nemo.Travel. Тип данных — строка.
 * **data.payments.ID_PAY_N.gatewayId** — внутренний идентификатор Nemo.Travel. Тип данных — строка.
 * **data.payments.ID_PAY_N.methodId** — идентификатор платежного шлюза Nemo.Travel. Тип данных — целое 64-битное число.
 * **data.payments.ID_PAY_N.name** — наименование платежного шлюза Nemo.Travel. Тип данных — строка.
