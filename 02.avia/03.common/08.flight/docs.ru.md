@@ -115,7 +115,7 @@ taxonomy:
 -   **PassengerFare.Tariffs.Tariff.FreeBaggage.Measure** — единица измерения багажа. Тип данных — перечисление, возможные значения:
     -   **Kilograms** — килограммы;
     -   **Pounds** — фунты;
-    -   **Pieces** — количество ручной клади;
+    -   **Pieces** — сумки / места багажа;
     -   **SpecialCharge** — спецкладь;
     -   **Size** — размер багажа;
 <!--     -   **ValueOfMeasure** — какое-то значение, взято из документации GDS; -->
