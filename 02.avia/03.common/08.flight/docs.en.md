@@ -114,7 +114,7 @@ Flight presentation format 1.1.
 -   **Flight.PriceInfo.Price.PassengerFares.PassengerFare.Tariffs.Tariff.FreeBaggage.Measure** - Theunit baggage measure. Data type - enumeration, possible values:
     - **Kilograms** - kilos;
 	- **Pounds** - pounds;
-	- **Pieces** - the amount of carry-on baggage;
+	- **Pieces** - bags;
 	- **SpecialCharge** - special charge;
 	- **Size** - the size of the baggage;
 	- **Weight** - weight.
