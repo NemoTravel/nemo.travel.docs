@@ -112,7 +112,7 @@ Flight presentation format 1.1.
 -   **Flight.PriceInfo.Price.PassengerFares.PassengerFare.Tariffs.Tariff.SegNum** - The segment number for which this tariff is applied. The data type is an integer 32-bit number.
 -   **Flight.PriceInfo.Price.PassengerFares.PassengerFare.Tariffs.Tariff.FreeBaggage** - The contains information about free baggage at this fare. The custom data type.
 -   **Flight.PriceInfo.Price.PassengerFares.PassengerFare.Tariffs.Tariff.FreeBaggage.Measure** - Theunit baggage measure. Data type - enumeration, possible values:
-    - **Kilograms** - kilos;
+	- **Kilograms** - kilos;
 	- **Pounds** - pounds;
 	- **Pieces** - bags;
 	- **SpecialCharge** - special charge;
