@@ -29,7 +29,7 @@ taxonomy:
     -   **NoValidFare** — у PNR'а в GDS нет активной и валидной цены (специфика GDS Galileo);
     -   **UnremovedVoidedTicketElements** — специфично в GDS Amadeus;
     -   **PaidBook** — PNR оплачен через платежный шлюз GDS Sirena, но ещё не выписан;
-    -   **FaildToActualizePrice** — не удалось получить актуальную цены для брони;
+    -   **FailedToActualizePrice** — не удалось получить актуальную цены для брони;
     -   **UnconfirmedInfant** — неподтвержденный младенец, требуется ручная обработка;
     -   **UnconfirmedLoyaltyCard** — неподтвержденная карточка лояльности.
 -   **TravellerRef** — ссылка на пассажиров, к которым относится данная услуга. Если услуга применяется для всех путешественников, то элемент не указывается. Тип данных — массив [RefList](/avia/common/reflist).
