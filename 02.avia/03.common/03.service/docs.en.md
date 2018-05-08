@@ -29,7 +29,7 @@ Each of the base and ancillary services is inherited from the BaseService class 
 	-   NoValidFare - the NDP in the GDS has no active and valid price, Galileo's specifics in general
 	-   UnremovedVoidedTicketElements - specific in Amadeus
 	-   PaidBook - Siren, when the NDP was paid through their PN, but for some reason he did not sign out yet.
-	-   FaildToActualizePrice - Failed to get the current price for the reservation
+	-   FailedToActualizePrice - Failed to get the current price for the reservation
 	-   UnconfirmedInfant - the unconfirmed baby, manual processing is required.
 	-   UnconfirmedLoyaltyCard - the unconfirmed loyalty card.
 -   **TravelerRef** - the reference to the travelers to whom the service belongs. If the service is applied to all travelers, then the element is not specified. The data type is the [RefList](/avia/common/reflist) array.
