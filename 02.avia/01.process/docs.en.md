@@ -19,3 +19,5 @@ Each operation can be carried out using one or more requests to the web service.
 ![](Nemo2workflowEN2.png)
 
 More details on the various processes and information for each request will be described in the following articles.
+
+>>>> Please use the newest versions of the requests.
