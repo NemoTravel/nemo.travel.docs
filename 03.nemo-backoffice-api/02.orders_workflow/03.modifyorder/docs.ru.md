@@ -15,7 +15,8 @@ taxonomy:
 * **CallbackUrl** - адрес, на который будет возвращен callback от Nemo.travel с информацией о статусе заказа (при его изменении). Формат: http(s)://domain.
 * **NemoOneAuthToken** - API ключ, выдается сотрудниками Nemo.travel.
 * **UserID** - ID пользователя в системе Nemo.travel, выдается сотрудниками Nemo.travel.
-* **PaymentBackRedirectUrl** -  URL адрес для дальнейшего редиректа после оплаты. Формат: http(s)://domain.
+* **PaymentBackRedirectUrl** -  URL адрес для дальнейшего редиректа после оплаты. Формат: http(s)://domain/query?parameters.
+* **PaymentBackRedirectUrlFailure** - URL адрес для редиректа после неуспешный оплаты (необязательный, если не задан, будет использован PaymentBackRedirectUrl)
 
 #### Параметры ответа
 Идентичны параметрам из [GetOrder](/nemo-backoffice-api/orders_workflow/getorder).
