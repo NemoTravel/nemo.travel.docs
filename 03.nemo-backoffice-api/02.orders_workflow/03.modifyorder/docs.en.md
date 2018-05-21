@@ -15,7 +15,8 @@ This request is designed to change the already created order in the back-office,
 * **CallbackUrl** - The callback from Nemo.travel will be returned information about order status when it is changed to this address. Example: http(s)://domain.
 * **NemoOneAuthToken** -  API key, issued by Nemo.travel staff.
 * **UserID** - User ID in the Nemo.travel system, issued by Nemo.travel staff.
-* **PaymentBackRedirectUrl** - URL address for further redirect after payment. Example: http(s)://domain.
+* **PaymentBackRedirectUrl** - URL address for redirect after a successful payment. http(s)://domain/query?parameters.
+* **PaymentBackRedirectUrlFailure** - URL address for redirect after a failed payment (optional parameter).
 
 #### Response parameters
 Identical to the parameters from [GetOrder](/nemo-backoffice-api/orders_workflow/getorder).
