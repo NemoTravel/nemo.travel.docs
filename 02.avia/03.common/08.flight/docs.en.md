@@ -45,7 +45,7 @@ Flight presentation format 1.1.
 -   **Segment.StopPoints.StopPoint.Terminal** - The terminal at the airport. The data type is a string.
 -   **Segment.StopPoints.StopPoint.ArrDateTime** - the date and time of arrival at the stop point in the format </code> yyyy-MM-ddTHH: mm: ss </code>. The data type is a string.
 -   **Segment.StopPoints.StopPoint.DepDateTime** - the date and time of departure from the stop point in the format </code> yyyy-MM-ddTHH: mm: ss </code>. The data type is a string.
--	**Segment.FlightNumber** - The flight number for this segment of flight. The data type is an integer 32-bit number.
+-	**Segment.FlightNumber** - The flight number for this segment of flight. The data type is a string.
 -   **Segment.FlightTime** - The time in transit in minutes. The data type is an integer 32-bit number.
 -	**Segment.OpAirline** - the code of the airline directly performing this flight. The data type is a string.
 -   **Segment.MarkAirline** - the code of the airline providing this flight. The data type is a string.

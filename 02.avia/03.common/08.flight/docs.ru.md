@@ -45,7 +45,7 @@ taxonomy:
 -   **Segment.StopPoints.StopPoint.Terminal** — терминал в аэропорте. Тип данных — строка.
 -   **Segment.StopPoints.StopPoint.ArrDateTime** — дата и время прибытия в точку остановки в формате <code>yyyy-MM-ddTHH:mm:ss</code>. Тип данных — строка.
 -   **Segment.StopPoints.StopPoint.DepDateTime** — дата и время отправления из точки остановки в формате <code>yyyy-MM-ddTHH:mm:ss</code>. Тип данных — строка.
--   **Segment.FlightNumber** — номер рейса для данного сегмента перелёта. Тип данных — целое 32-битное число.
+-   **Segment.FlightNumber** — номер рейса для данного сегмента перелёта. Тип данных — строка.
 -   **Segment.FlightTime** — время в пути в минутах. Тип данных — целое 32-битное число.
 -   **Segment.OpAirline** — код авиакомпании, непосредственно выполняющей данный рейс. Тип данных — строка.
 -   **Segment.MarkAirline** — код авиакомпании, предоставляющей данный рейс. Тип данных — строка.
