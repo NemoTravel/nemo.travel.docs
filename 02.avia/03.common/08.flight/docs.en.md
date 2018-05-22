@@ -10,7 +10,7 @@ taxonomy:
 Flight presentation format 1.1.
 
 -   **Flight** — The root element, inside of which there are flight data. The custom data type.
--   **Flight.ID** — The Flight ID.  The data type is an integer 128-bit number.
+-   **Flight.ID** — The Flight ID.  The data type is a string.
 -   **Flight.SourceID** — the identifier of the package of requisites from which this flight was received. The data type is an integer 32-bit number.
 -   **Flight.TypeInfo** —the typification of the flight according to various criteria. The custom data type.
 -   **Flight.TypeInfo.Type** — The type of flight. Data type - enumeration, possible values:
