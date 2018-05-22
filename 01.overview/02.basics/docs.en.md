@@ -46,7 +46,7 @@ The main elements of the any response
 * **APIFormat** - the error level of the request validation.
 * **Supplier** - The error received from the service provider or external data source
 * **Runtime** - The error while processing request
-* **Errors.Error.Code** - the code of the error that occurred. The data type is an integer 32-bit number.
+* **Errors.Error.Code** - the code of the error that occurred. The data type is a 16-bit unsigned integral (ushort).
 * **Errors.Error.Message** - The server error message. The data type is a string.
 * **Errors.Error.ServiceErrorMessage** - The error message received from the provider. The data type is a string.
 * **Errors.Error.AdditionalInfo** - contains various additional information about the error. The custom data type.
@@ -59,7 +59,7 @@ The main elements of the any response
 
 * **Warnings** - an array of important information messages about the specifics of request processing. The data type is an array.
 * **Warnings.Warning** - The information message about the specifics of request processing. The custom data type.
-* **Warnings.Warning.Code** - The message type code. The data type is an integer 32-bit number.
+* **Warnings.Warning.Code** - The message type code. The data type is a 16-bit unsigned integral (ushort).
 * **Warnings.Warning.Message** - the text of the message. The data type is a string.
 
 ##### The response body
