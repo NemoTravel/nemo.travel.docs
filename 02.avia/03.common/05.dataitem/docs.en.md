@@ -33,7 +33,7 @@ To store different booking content.
 	-   Visa
 	-   ArrivalAddress
 	-   BookedSeat
-	-   ValidatingCompany - mandatory for booking flights, except for the actual VP code, you can specify the sign of the overridden VP
+	-   ValidatingCompany - validating carrier. You can also specify the sign of the overridden validating carrier
 	-   SubagentCommission
 	-   TicketDesignator
 	-   TourCode
