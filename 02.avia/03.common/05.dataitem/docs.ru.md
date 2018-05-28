@@ -46,6 +46,7 @@ taxonomy:
     -   **OSI** — (Other Service Information);
     -   **ReferencedBooks**;
     -   **DiscountDocument**.
+    <!--   **LinkedBooks**.-->
 -   **Remark** — текстовая ремарка (необязательный). Тип данных — сложный.
 -   **Remark.Type** — тип ремарки. Тип данных — перечисление, возможные значения:
     -   **General**;
