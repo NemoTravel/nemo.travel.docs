@@ -58,7 +58,7 @@ Search for v 1.2
 	- First - first class only
 	- PremiumEconomy - premium economy
 	- All - all classes
--  **Restrictions.MaxConnectionTime** - The maximum time to connection in minutes. The data type is an integer 32 bit number.
+-  **Restrictions.MaxConnectionTime** - The maximum time to connection in minutes. The data type is an integer 32 bit number. Only for GWS (Galileo Web Services).
 -  **Restrictions.ResultsGrouping** - The grouping type of the issue. Data type - enumeration, possible values:
 	- Simple - (by default) simple grouping, the output is in the format GroupSearch v1.1
 	- Advanced - (not supported) advanced grouping
