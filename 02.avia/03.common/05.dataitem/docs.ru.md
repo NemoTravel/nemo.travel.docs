@@ -326,12 +326,17 @@ taxonomy:
 -   **EndUserData.RequestOrigin** — исходный источник перехода. Тип данных — строка.
 -   **SellingPointDescription** — описание точки продажи (необязательный). Тип данных — сложный.
 -   **SellingPointDescription.SubAgencyID** — идентификатор внешнего субагентства. Тип данных — целое 32-битное число.
--   **LinkedBooks**
--   **LinkedBooks.BooksData**
--   **LinkedBooks.BooksData.Book**
--   **LinkedBooks.BooksData.Book.ServicesLinks**
--   **LinkedBooks.BooksData.Book.ServicesLinks.GlobalID**
--   **LinkedBooks.BooksData.Book.ServicesLinks.OriginalID**
+-   **LinkedBooks** - информациях о связанных заказах, используется в mOW заказе для хранения и отображения данных по OW подзаказам. Тип данных - сложный.
+-   **LinkedBooks.BooksData** - содержит список данных по подзаказам. Тип данных - массив.
+-   **LinkedBooks.BooksData.Book** - данные по подзаказу. Тип данных - сложный.
+-   **LinkedBooks.BooksData.Book.ServicesLinks** - список связей ID сервисов общего заказа и подзаказа. Тип данных - массив.
+-   **LinkedBooks.BooksData.Book.ServicesLinks.IDLink** - связь ID сервиса в общем заказе и в подзаказе. Тип данных - сложный.
+-   **LinkedBooks.BooksData.Book.ServicesLinks.IDLink.GlobalID** - глобальный ID сервиса (ID из общего заказа). Тип данных - целое 32-битное число.
+-   **LinkedBooks.BooksData.Book.ServicesLinks.IDLink.OriginalID** - оригинальный ID сервиса (ID из подзаказа). Тип данных - целое 32-битное число.
+-   **LinkedBooks.BooksData.Book.DataItemsLinks** - список связей ID блоков данных общего заказа и подзаказа. Тип данных - массив.
+-   **LinkedBooks.BooksData.Book.DataItemsLinks.IDLink** - связь ID блока данных в общем заказе и в подзаказе. Тип данных - сложный.
+-   **LinkedBooks.BooksData.Book.DataItemsLinks.GlobalID** - глобальный ID блока данных (ID из общего заказа). Тип данных - целое 32-битное число.
+-   **LinkedBooks.BooksData.Book.DataItemsLinks.IDLink.OriginalID** - оригинальный ID блока данных (ID из подзаказа). Тип данных - целое 32-битное число.
 
 #### Пример
 
