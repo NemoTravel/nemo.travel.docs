@@ -326,6 +326,12 @@ taxonomy:
 -   **EndUserData.RequestOrigin** — исходный источник перехода. Тип данных — строка.
 -   **SellingPointDescription** — описание точки продажи (необязательный). Тип данных — сложный.
 -   **SellingPointDescription.SubAgencyID** — идентификатор внешнего субагентства. Тип данных — целое 32-битное число.
+-   **LinkedBooks**
+-   **LinkedBooks.BooksData**
+-   **LinkedBooks.BooksData.Book**
+-   **LinkedBooks.BooksData.Book.ServicesLinks**
+-   **LinkedBooks.BooksData.Book.ServicesLinks.GlobalID**
+-   **LinkedBooks.BooksData.Book.ServicesLinks.OriginalID**
 
 #### Пример
 
