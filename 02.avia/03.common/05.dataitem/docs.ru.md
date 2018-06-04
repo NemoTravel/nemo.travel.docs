@@ -166,9 +166,10 @@ taxonomy:
     -   **Flight**;
     -   **Ancillary**;
     -   **TicketIssuance**;
-    -   **TicketExchange**;
-    -   **TicketRefund**;
-    -   **ExchangeRefundBalance**.
+    -   **Penalty**;
+    -   **ResidualValue**;
+    -   **FinancialImpact**
+    -   **RefundDocument**.
 -   **ElectronicDocument.IssueDateTime** — время генерации электронного документа. Тип данных — дата и время с указанием часового пояса.
 -   **ElectronicDocument.NotStoredInPNR** - Признак что данный билет не сохранён в ПНРе. Тип данных — булевский.
 -   **ElectronicDocument.ExecutionTimeLimit** — таймлимит на предоставление услуги по данному электронному документу. Тип данных — дата и время с указанием часового пояса.
