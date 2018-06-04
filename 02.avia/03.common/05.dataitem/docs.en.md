@@ -162,12 +162,13 @@ To store different booking content.
     - Refuned
     - Exchanged
 - **ElectronicDocument.ServiceType** - The type of service provided by this ED. Data type - enumeration, possible values:
-    - Flight
-    - Ancillary
-    - TicketIssuance
-    - TicketExchange
-    - TicketRefund
-    - ExchangeRefundBalance
+    -   **Flight**;
+    -   **Ancillary**;
+    -   **TicketIssuance**;
+    -   **Penalty**;
+    -   **ResidualValue**;
+    -   **FinancialImpact**
+    -   **RefundDocument**.
 - **ElectronicDocument.IssueDateTime** - The time of generation of ED. The data type is the date and time with the time zone specified.
 - **ElectronicDocument.NotStoredInPNR** - A sign that this ticket was not saved in PNR. The data type is bool.
 - **ElectronicDocument.ExecutionTimeLimit** - TL to provide services for this ED. The data type is the date and time with the time zone specified.
