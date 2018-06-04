@@ -44,7 +44,7 @@ Search for v 1.2
 	- YTH - youth
 -  **Passengers.Passenger.Count** - the number of passengers of this type for which you want to find a flight. The data type is an integer 32-bit number. It can not be less than 1.
 -  **Restrictions** - contains various restrictions applied to search results (optional). The custom data type.
--  **Restrictions.CurrencyCode** - a 3-letter code for the currency of the search results output. Data type - string
+-  **Restrictions.CurrencyCode** - a 3-letter code for the currency of the search results output. Data type - string. Parameter is no longer supported.
 -  **Restrictions.CompanyFilter** - an array of filters for an airline. The data type is an array.
 -  **Restrictions.CompanyFilter.Company** - the information about filtering on the airline. The data type is an array.
 - **Restrictions.CompanyFilter.Company.Code** - a 2-letter airline code, which will trigger the filter criteria. The data type is a string.
