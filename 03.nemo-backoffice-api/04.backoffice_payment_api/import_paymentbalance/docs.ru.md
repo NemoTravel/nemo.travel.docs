@@ -48,7 +48,7 @@ visible: true
 -   **data.balance.credit** — контейнер с данными о состоянии максимального овердрафта. Тип данных — сложный.
 -   **data.balance.credit.amount** — сумма максимального овердрафта. Тип данных — строка.
 -   **data.balance.credit.currency** — код валюты максимального овердрафта. Тип данных — строка.
--   **data.balance.paymentExtraInfo** — дополнительные данные. Тип данных — сложный.
+-   **data.balance.paymentExtraInfo** — дополнительная платежная информация. Тип данных — сложный.
 -   **data.balance.paymentExtraInfo.type** — тип объекта. Тип данных — строка.
 -   **data.balance.paymentExtraInfo.name** — наименование. Тип данных — строка.
 -   **data.balance.paymentExtraInfo.money** — денежное выражение. Тип данных — сложный.
