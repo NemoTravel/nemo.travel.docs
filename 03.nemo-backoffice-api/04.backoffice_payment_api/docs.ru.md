@@ -1,5 +1,5 @@
 ---
-title: 'BackOffice Payment API'
+title: 'Midoffice API Toolkit'
 ---
 
 Сразу после бронирования заказа отправляется запрос на регистрацию оплаты ([payment.register](/nemo-backoffice-api/backoffice_payment_api/payment_register)), в ответе приходят имена сформированных документов по заказу. После [получения списка документов](/nemo-backoffice-api/backoffice_payment_api/import_documentslist), на странице заказа отображаются ссылки на просмотр полученных документов ([import.document](/nemo-backoffice-api/backoffice_payment_api/import_document)). При попытке оформления закзаза отправляется запрос на блокировку средств на лицевом счете ([payment.begin](/nemo-backoffice-api/backoffice_payment_api/payment_begin)) по последней актуальной транзакции. В случае успешности запроса на блокировку денежных средств на счете субагента, Nemo запускает оформление заказа, по факту завершения оформления, отправляется запрос на списание средств со счета ([payment.complete](/nemo-backoffice-api/backoffice_payment_api/payment_complete)), если это требуется по ответу на запрос блокировки ([payment.begin](/nemo-backoffice-api/backoffice_payment_api/payment_begin)).
