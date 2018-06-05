@@ -44,3 +44,25 @@ taxonomy:
 -   **Conversions.Conversion** - Курс валюты. Тип данных - сложный.
 -   **Conversions.Conversion.CurrencyCode** - Код валюты, чей курс указан. Тип данных - ISO Alpha3 строка.
 -   **Conversions.Conversion.Rate** - Курс указанной валюты. Тип данных - 32битное число с плавающей точкой.
+
+##### Пример
+
+```xml
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <GetCurrencyConversionResponse xmlns="http://nemo-ibe.com/Avia">
+         <GetCurrencyConversionResult xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:RequestID>123</a:RequestID>
+            <a:ResponseBody>
+               <Conversions>
+                  <Conversion>
+                     <CurrencyCode>EUR</CurrencyCode>
+                     <Rate>29.9137</Rate>
+                  </Conversion>
+               </Conversions>
+            </a:ResponseBody>
+         </GetCurrencyConversionResult>
+      </GetCurrencyConversionResponse>
+   </s:Body>
+</s:Envelope>
+```
