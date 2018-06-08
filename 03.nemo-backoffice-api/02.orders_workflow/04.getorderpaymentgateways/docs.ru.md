@@ -6,6 +6,10 @@ visible: true
 ### GetOrderPaymentGateways
 
 Для получения данных о доступных способах оплаты используется запрос GetOrderPaymentGateways.
+В ответе на данный запрос Nemo.travel передаст вам:
+*  адрес для передачи данных карты в платежную систему в параметре UrlForCardDataSubmit; 
+*  контент запроса, в котором необходимо заменить placeholder на данные карты и отправить по адресу, который также будет в ответе в параметре CardDataRequestContent.
+
 #### Параметры запроса
 * **OrderID** - номер заказа из бэк-офиса Nemo.travel. Чтобы получить значение параметра для заказа, необходимо выполнить запрос GetOrder с указанием параметра FlightsBookingID (ID бронирования из Nemo Connect).
 * **NemoOneAuthToken** - API ключ, выдается сотрудниками Nemo.travel.
