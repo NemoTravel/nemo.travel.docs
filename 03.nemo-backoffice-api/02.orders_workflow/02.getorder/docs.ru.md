@@ -191,28 +191,6 @@ taxonomy:
             <OrderStatus>Booked</OrderStatus>
             <PaymentStatus>NotPaid</PaymentStatus>
             <PaymentTransactions/>
-            <PaymentGateways>
-               <Gateway>
-                  <PaymentMethodId>2346</PaymentMethodId>
-                  <GatewayName>Оплата для менеджеров и экспертов</GatewayName>
-                  <PaymentCharge Currency="RUB">0</PaymentCharge>
-                  <RedirectUrl>***</RedirectUrl>
-                  <UrlToCatch xsi:nil="true"/>
-                  <UrlForCardDataSubmit xsi:nil="true"/>
-                  <CardDataRequestContent xsi:nil="true"/>
-                  <RequestType xsi:nil="true"/>
-               </Gateway>
-               <Gateway>
-                  <PaymentMethodId>2344</PaymentMethodId>
-                  <GatewayName>Тестовая оплата по кнопке</GatewayName>
-                  <PaymentCharge Currency="RUB">0</PaymentCharge>
-                  <RedirectUrl>***</RedirectUrl>
-                  <UrlToCatch xsi:nil="true"/>
-                  <UrlForCardDataSubmit xsi:nil="true"/>
-                  <CardDataRequestContent xsi:nil="true"/>
-                  <RequestType xsi:nil="true"/>
-               </Gateway>
-            </PaymentGateways>
          </ResponseBin>
       </ns1:GetOrderResponse>
    </SOAP-ENV:Body>
