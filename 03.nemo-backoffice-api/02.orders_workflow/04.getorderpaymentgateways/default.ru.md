@@ -1,5 +1,6 @@
 ---
 title: GetOrderPaymentGateways
+visible: true
 ---
 
 ### GetOrderPaymentGateways

@@ -190,7 +190,30 @@ taxonomy:
             </PriceBreakdown>
             <OrderStatus>Booked</OrderStatus>
             <PaymentStatus>NotPaid</PaymentStatus>
-            <PaymentTransactions/>
+            <PaymentTransactions>
+               <Transaction>
+                  <Id>117916756</Id>
+                  <ClientTransactionId/>
+                  <Status>Cancelled</Status>
+                  <GatewayName>Оплата банковской картой</GatewayName>
+                  <MoneyPaid Currency="RUB">0</MoneyPaid>
+                  <PaymentDateTime/>
+                  <CreateDateTime>2018-06-08T19:08:23</CreateDateTime>
+                  <Description/>
+                  <PaymentMethodId>2308</PaymentMethodId>
+               </Transaction>
+               <Transaction>
+                  <Id>117916755</Id>
+                  <ClientTransactionId/>
+                  <Status>New</Status>
+                  <GatewayName>Оплата банковской картой 2</GatewayName>
+                  <MoneyPaid Currency="RUB">0</MoneyPaid>
+                  <PaymentDateTime/>
+                  <CreateDateTime>2018-06-08T19:08:23</CreateDateTime>
+                  <Description/>
+                  <PaymentMethodId>2340</PaymentMethodId>
+               </Transaction>
+            </PaymentTransactions>
          </ResponseBin>
       </ns1:GetOrderResponse>
    </SOAP-ENV:Body>
