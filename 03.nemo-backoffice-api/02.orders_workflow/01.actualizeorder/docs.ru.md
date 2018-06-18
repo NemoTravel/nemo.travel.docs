@@ -49,7 +49,7 @@ taxonomy:
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="***" xmlns:xsi="***">
    <SOAP-ENV:Body>
-      <ns1:GetOrderResponse>
+      <ns1:ActualizeOrderResponse>
          <ResponseBin>
             <OrderID>500243</OrderID>
             <Services>
@@ -193,7 +193,7 @@ taxonomy:
                </Gateway>
             </PaymentGateways>
          </ResponseBin>
-      </ns1:GetOrderResponse>
+      </ns1:ActualizeOrderResponse>
    </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```

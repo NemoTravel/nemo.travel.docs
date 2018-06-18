@@ -12,10 +12,11 @@ To update the order status, use the ActualizeOrder request. This request can upd
 * **ActualizePayment** - allows you to send a request to the payment system to update the status of the payment transaction. Possible values: true / false.
 * **ActualizeFlightsBooking** - initiates a  [UpdateBook](/avia/request/updatebook) request to Nemo Connect. Possible values: true / false.
 * **CallbackUrl** - the callback from Nemo.travel will be returned information about order status when it is changed to this address. Example: http(s)://domain.
-* **NemoOneAuthToken** - API key, issued by Nemo.travel staff.
-* **UserID** - User ID in the Nemo.travel system, issued by Nemo.travel staff.
 * **PaymentBackRedirectUrl** - URL address for redirect after a successful payment. http(s)://domain/query?parameters.
 * **PaymentBackRedirectUrlFailure** - URL address for redirect after a failed payment (optional parameter).
+* **NemoOneAuthToken** - API key, issued by Nemo.travel staff (out-of-date parameter, recommended to use AuthToken).
+* **AuthToken** - API key, issued by Nemo.travel staff.
+* **UserID** - User ID in the Nemo.travel system, issued by Nemo.travel staff.
 
 #### Response parameters
 Identical to the parameters from [GetOrder](/nemo-backoffice-api/orders_workflow/getorder).
@@ -31,11 +32,11 @@ Identical to the parameters from [GetOrder](/nemo-backoffice-api/orders_workflow
                <OrderID>500243</OrderID>
                <ActualizePayment>true</ActualizePayment>
                <ActualizeFlightsBooking>true</ActualizeFlightsBooking>
-               <CallbackUrl>http://nemo2.mlsd.ru/l?log</CallbackUrl>
-               <PaymentBackRedirectUrl>http://release.mlsd.ru</PaymentBackRedirectUrl>
+               <CallbackUrl>http://callbackurl.ru</CallbackUrl>
+               <PaymentBackRedirectUrl>http://test.ru</PaymentBackRedirectUrl>
             </RequestBody>
             <Requisites>
-               <NemoOneAuthToken>YOUR_TOKKEN</NemoOneAuthToken>
+               <AuthToken>YOUR_TOKKEN</AuthToken>
 		    </Requisites>
             <UserID>YOUR_ID</UserID>
 		 </Request>
@@ -47,7 +48,7 @@ Identical to the parameters from [GetOrder](/nemo-backoffice-api/orders_workflow
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="***" xmlns:xsi="***">
    <SOAP-ENV:Body>
-      <ns1:GetOrderResponse>
+      <ns1:ActualizeOrderResponse>
          <ResponseBin>
             <OrderID>500243</OrderID>
             <Services>
@@ -59,69 +60,46 @@ Identical to the parameters from [GetOrder](/nemo-backoffice-api/orders_workflow
                               <Item>
                                  <ID>167</ID>
                                  <Price Currency="RUB">400</Price>
-                                 <Name>Первая услуга "Тестового сервисного пакета 1"</Name>
-                                 <ShortDescription>Краткое описание первой услуги "Тестового сервисного пакета 1"</ShortDescription>
-                                 <FullDescription>&lt;p>Полное описание первой услуги "Тестового сервисного пакета 1"&lt;/p></FullDescription>
+                                 <Name>Service 1</Name>
+                                 <ShortDescription>Short description of service 1</ShortDescription>
+                                 <FullDescription>Full description of service 1</FullDescription>
                               </Item>
                               <Item>
                                  <ID>168</ID>
                                  <Price Currency="RUB">0</Price>
-                                 <Name>Вторая услуга "Тестового сервисного пакета 1"</Name>
-                                 <ShortDescription>Краткое описание второй услуги "Тестового сервисного пакета 1"</ShortDescription>
-                                 <FullDescription>&lt;p>Полное описание второй услуги "Тестового сервисного пакета 1"&lt;/p></FullDescription>
+                                 <Name>Service 2</Name>
+                                 <ShortDescription>Short description of service 2</ShortDescription>
+                                 <FullDescription>Full description of service 2</FullDescription>
                               </Item>
                            </Items>
                            <ID>120</ID>
                            <Price Currency="RUB">0</Price>
-                           <Name>Тестовый сервисный пакет 1</Name>
-                           <ShortDescription>Краткое описание тестового сервисного пакета 1</ShortDescription>
-                           <FullDescription>&lt;p>Полное описание тестового сервисного пакета 1&lt;/p></FullDescription>
+                           <Name>Service package 1</Name>
+                           <ShortDescription>Short description of service package 1</ShortDescription>
+                           <FullDescription>Full description of service package 1</FullDescription>
                         </Package>
                         <Package>
                            <Items>
-                              <Item>
+                              <Item>-
                                  <ID>169</ID>
                                  <Price Currency="RUB">0</Price>
-                                 <Name>Первая услуга "Тестового сервисного пакета 2"</Name>
-                                 <ShortDescription>Краткое описание первой услуги "Тестового сервисного пакета 2"</ShortDescription>
-                                 <FullDescription>&lt;p>Полное описание первой услуги "Тестового сервисного пакета 2"&lt;/p></FullDescription>
+                                 <Name>Service 1</Name>
+                                 <ShortDescription>Short description of service 1</ShortDescription>
+                                 <FullDescription>Full description of service 1</FullDescription>
                               </Item>
                               <Item>
                                  <ID>170</ID>
                                  <Price Currency="RUB">0</Price>
-                                 <Name>Вторая услуга "Тестового сервисного пакета 2"</Name>
-                                 <ShortDescription>Краткое описание второй услуги "Тестового сервисного пакета 2"</ShortDescription>
-                                 <FullDescription>&lt;p>Полное описание второй услуги "Тестового сервисного пакета 2"&lt;/p></FullDescription>
+                                 <Name>Service 2</Name>
+                                 <ShortDescription>Short description of service 2</ShortDescription>
+                                 <FullDescription>Full description of service 2</FullDescription>
                               </Item>
                            </Items>
                            <ID>121</ID>
                            <Price Currency="RUB">1000</Price>
-                           <Name>Тестовый сервисный пакет 2</Name>
-                           <ShortDescription>Краткое описание тестового сервисного пакета 2</ShortDescription>
-                           <FullDescription>&lt;p>Полное описание тестового сервисного пакета 2&lt;/p></FullDescription>
-                        </Package>
-                        <Package>
-                           <Items>
-                              <Item>
-                                 <ID>171</ID>
-                                 <Price Currency="RUB">0</Price>
-                                 <Name>Первая услуга "Тестового сервисного пакета 3"</Name>
-                                 <ShortDescription>Краткое описание первой услуги "Тестового сервисного пакета 3"</ShortDescription>
-                                 <FullDescription>&lt;p>Полное описание первой услуги "Тестового сервисного пакета 3"&lt;/p></FullDescription>
-                              </Item>
-                              <Item>
-                                 <ID>172</ID>
-                                 <Price Currency="RUB">150</Price>
-                                 <Name>Вторая услуга "Тестового сервисного пакета 3"</Name>
-                                 <ShortDescription>Краткое описание второй услуги "Тестового сервисного пакета 3"</ShortDescription>
-                                 <FullDescription>&lt;p>Полное описание второй услуги "Тестового сервисного пакета 3"&lt;/p></FullDescription>
-                              </Item>
-                           </Items>
-                           <ID>122</ID>
-                           <Price Currency="RUB">930</Price>
-                           <Name>Тестовый сервисный пакет 3 (проценты)</Name>
-                           <ShortDescription>Краткое описание тестового сервисного пакета 3</ShortDescription>
-                           <FullDescription>&lt;p>Полное описание тестового сервисного пакета 3&lt;/p></FullDescription>
+                           <Name>Service package 2</Name>
+                           <ShortDescription>Short description of service package 2</ShortDescription>
+                           <FullDescription>Full description of service package 2</FullDescription>
                         </Package>
                      </Packages>
                      <IsEditable>true</IsEditable>
@@ -167,31 +145,32 @@ Identical to the parameters from [GetOrder](/nemo-backoffice-api/orders_workflow
             </PriceBreakdown>
             <OrderStatus>Booked</OrderStatus>
             <PaymentStatus>NotPaid</PaymentStatus>
-            <PaymentTransactions/>
-            <PaymentGateways>
-               <Gateway>
-                  <PaymentMethodId>2346</PaymentMethodId>
-                  <GatewayName>Оплата для менеджеров и экспертов</GatewayName>
-                  <PaymentCharge Currency="RUB">0</PaymentCharge>
-                  <RedirectUrl>***</RedirectUrl>
-                  <UrlToCatch xsi:nil="true"/>
-                  <UrlForCardDataSubmit xsi:nil="true"/>
-                  <CardDataRequestContent xsi:nil="true"/>
-                  <RequestType xsi:nil="true"/>
-               </Gateway>
-               <Gateway>
-                  <PaymentMethodId>2344</PaymentMethodId>
-                  <GatewayName>Тестовая оплата по кнопке</GatewayName>
-                  <PaymentCharge Currency="RUB">0</PaymentCharge>
-                  <RedirectUrl>***</RedirectUrl>
-                  <UrlToCatch xsi:nil="true"/>
-                  <UrlForCardDataSubmit xsi:nil="true"/>
-                  <CardDataRequestContent xsi:nil="true"/>
-                  <RequestType xsi:nil="true"/>
-               </Gateway>
-            </PaymentGateways>
+            <PaymentTransactions>
+               <Transaction>
+                  <Id>117916756</Id>
+                  <ClientTransactionId/>
+                  <Status>Cancelled</Status>
+                  <GatewayName>Card payment</GatewayName>
+                  <MoneyPaid Currency="RUB">0</MoneyPaid>
+                  <PaymentDateTime/>
+                  <CreateDateTime>2018-06-08T19:08:23</CreateDateTime>
+                  <Description/>
+                  <PaymentMethodId>2308</PaymentMethodId>
+               </Transaction>
+               <Transaction>
+                  <Id>117916755</Id>
+                  <ClientTransactionId/>
+                  <Status>New</Status>
+                  <GatewayName>Card payment 2</GatewayName>
+                  <MoneyPaid Currency="RUB">0</MoneyPaid>
+                  <PaymentDateTime/>
+                  <CreateDateTime>2018-06-08T19:08:23</CreateDateTime>
+                  <Description/>
+                  <PaymentMethodId>2340</PaymentMethodId>
+               </Transaction>
+            </PaymentTransactions>
          </ResponseBin>
-      </ns1:GetOrderResponse>
+      </ns1:ActualizeOrderResponse>
    </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
