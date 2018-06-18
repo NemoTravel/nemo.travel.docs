@@ -60,7 +60,7 @@ In response to this request Nemo.travel will return the following parameters:
                     <PaymentBackRedirectUrl>http://release.mlsd.ru</PaymentBackRedirectUrl>
 				</RequestBody>
 				<Requisites>
-					<NemoOneAuthToken>YOUR_TOKKEN</NemoOneAuthToken>
+					<AuthToken>YOUR_TOKKEN</AuthToken>
 				</Requisites>
 				<UserID>YOUR_USER_ID</UserID>
 			</Request>
@@ -84,69 +84,46 @@ In response to this request Nemo.travel will return the following parameters:
                               <Item>
                                  <ID>167</ID>
                                  <Price Currency="RUB">400</Price>
-                                 <Name>Первая услуга "Тестового сервисного пакета 1"</Name>
-                                 <ShortDescription>Краткое описание первой услуги "Тестового сервисного пакета 1"</ShortDescription>
-                                 <FullDescription>&lt;p>Полное описание первой услуги "Тестового сервисного пакета 1"&lt;/p></FullDescription>
+                                 <Name>Service 1</Name>
+                                 <ShortDescription>Short description of service 1</ShortDescription>
+                                 <FullDescription>Full description of service 1</FullDescription>
                               </Item>
                               <Item>
                                  <ID>168</ID>
                                  <Price Currency="RUB">0</Price>
-                                 <Name>Вторая услуга "Тестового сервисного пакета 1"</Name>
-                                 <ShortDescription>Краткое описание второй услуги "Тестового сервисного пакета 1"</ShortDescription>
-                                 <FullDescription>&lt;p>Полное описание второй услуги "Тестового сервисного пакета 1"&lt;/p></FullDescription>
+                                 <Name>Service 2</Name>
+                                 <ShortDescription>Short description of service 2</ShortDescription>
+                                 <FullDescription>Full description of service 2</FullDescription>
                               </Item>
                            </Items>
                            <ID>120</ID>
                            <Price Currency="RUB">0</Price>
-                           <Name>Тестовый сервисный пакет 1</Name>
-                           <ShortDescription>Краткое описание тестового сервисного пакета 1</ShortDescription>
-                           <FullDescription>&lt;p>Полное описание тестового сервисного пакета 1&lt;/p></FullDescription>
+                           <Name>Service package 1</Name>
+                           <ShortDescription>Short description of service package 1</ShortDescription>
+                           <FullDescription>Full description of service package 1</FullDescription>
                         </Package>
                         <Package>
                            <Items>
                               <Item>
                                  <ID>169</ID>
                                  <Price Currency="RUB">0</Price>
-                                 <Name>Первая услуга "Тестового сервисного пакета 2"</Name>
-                                 <ShortDescription>Краткое описание первой услуги "Тестового сервисного пакета 2"</ShortDescription>
-                                 <FullDescription>&lt;p>Полное описание первой услуги "Тестового сервисного пакета 2"&lt;/p></FullDescription>
+                                 <Name>Service 1</Name>
+                                 <ShortDescription>Short description of service 1</ShortDescription>
+                                 <FullDescription>Full description of service 1</FullDescription>
                               </Item>
                               <Item>
                                  <ID>170</ID>
                                  <Price Currency="RUB">0</Price>
-                                 <Name>Вторая услуга "Тестового сервисного пакета 2"</Name>
-                                 <ShortDescription>Краткое описание второй услуги "Тестового сервисного пакета 2"</ShortDescription>
-                                 <FullDescription>&lt;p>Полное описание второй услуги "Тестового сервисного пакета 2"&lt;/p></FullDescription>
+                                 <Name>Service 2</Name>
+                                 <ShortDescription>Short description of service 2</ShortDescription>
+                                 <FullDescription>Full description of service 2</FullDescription>
                               </Item>
                            </Items>
                            <ID>121</ID>
                            <Price Currency="RUB">1000</Price>
-                           <Name>Тестовый сервисный пакет 2</Name>
-                           <ShortDescription>Краткое описание тестового сервисного пакета 2</ShortDescription>
-                           <FullDescription>&lt;p>Полное описание тестового сервисного пакета 2&lt;/p></FullDescription>
-                        </Package>
-                        <Package>
-                           <Items>
-                              <Item>
-                                 <ID>171</ID>
-                                 <Price Currency="RUB">0</Price>
-                                 <Name>Первая услуга "Тестового сервисного пакета 3"</Name>
-                                 <ShortDescription>Краткое описание первой услуги "Тестового сервисного пакета 3"</ShortDescription>
-                                 <FullDescription>&lt;p>Полное описание первой услуги "Тестового сервисного пакета 3"&lt;/p></FullDescription>
-                              </Item>
-                              <Item>
-                                 <ID>172</ID>
-                                 <Price Currency="RUB">150</Price>
-                                 <Name>Вторая услуга "Тестового сервисного пакета 3"</Name>
-                                 <ShortDescription>Краткое описание второй услуги "Тестового сервисного пакета 3"</ShortDescription>
-                                 <FullDescription>&lt;p>Полное описание второй услуги "Тестового сервисного пакета 3"&lt;/p></FullDescription>
-                              </Item>
-                           </Items>
-                           <ID>122</ID>
-                           <Price Currency="RUB">930</Price>
-                           <Name>Тестовый сервисный пакет 3 (проценты)</Name>
-                           <ShortDescription>Краткое описание тестового сервисного пакета 3</ShortDescription>
-                           <FullDescription>&lt;p>Полное описание тестового сервисного пакета 3&lt;/p></FullDescription>
+                           <Name>Service package 2</Name>
+                           <ShortDescription>Short description of service package 2</ShortDescription>
+                           <FullDescription>Full description of service package 2</FullDescription>
                         </Package>
                      </Packages>
                      <IsEditable>true</IsEditable>
@@ -192,7 +169,30 @@ In response to this request Nemo.travel will return the following parameters:
             </PriceBreakdown>
             <OrderStatus>Booked</OrderStatus>
             <PaymentStatus>NotPaid</PaymentStatus>
-            <PaymentTransactions/>
+            <PaymentTransactions>
+               <Transaction>
+                  <Id>117916756</Id>
+                  <ClientTransactionId/>
+                  <Status>Cancelled</Status>
+                  <GatewayName>Card payment</GatewayName>
+                  <MoneyPaid Currency="RUB">0</MoneyPaid>
+                  <PaymentDateTime/>
+                  <CreateDateTime>2018-06-08T19:08:23</CreateDateTime>
+                  <Description/>
+                  <PaymentMethodId>2308</PaymentMethodId>
+               </Transaction>
+               <Transaction>
+                  <Id>117916755</Id>
+                  <ClientTransactionId/>
+                  <Status>New</Status>
+                  <GatewayName>Card payment 2</GatewayName>
+                  <MoneyPaid Currency="RUB">0</MoneyPaid>
+                  <PaymentDateTime/>
+                  <CreateDateTime>2018-06-08T19:08:23</CreateDateTime>
+                  <Description/>
+                  <PaymentMethodId>2340</PaymentMethodId>
+               </Transaction>
+            </PaymentTransactions>
          </ResponseBin>
       </ns1:GetOrderResponse>
    </SOAP-ENV:Body>

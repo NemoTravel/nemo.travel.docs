@@ -59,7 +59,7 @@ taxonomy:
                     <PaymentBackRedirectUrl>http://release.mlsd.ru</PaymentBackRedirectUrl>
 				</RequestBody>
 				<Requisites>
-					<NemoOneAuthToken>YOUR_TOKKEN</NemoOneAuthToken>
+					<AuthToken>YOUR_TOKKEN</AuthToken>
 				</Requisites>
 				<UserID>YOUR_USER_ID</UserID>
 			</Request>
