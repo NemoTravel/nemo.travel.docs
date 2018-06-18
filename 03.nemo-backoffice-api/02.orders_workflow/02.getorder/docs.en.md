@@ -45,20 +45,6 @@ In response to this request Nemo.travel will return the following parameters:
 * **Transaction.MoneyPaid** - the amount that has already been paid in this transaction (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
 * **Transaction.PaymentDateTime** - date and time of receipt of payment for the transaction. Format: YYYY-MM-DDTHH: MM: SS.
 * **Transaction.CreateDateTime** - the date and time the payment transaction was created. Format: YYYY-MM-DDTHH: MM: SS.
-* **Gateway.PaymentMethodId** - payment gateway ID.
-* **Gateway.PaymentCharge** - amount of the payment system fee (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
-* **Gateway.RedirectUrl** - address for redirection to the payment system page.
-* **Gateway.UrlToCatch** - the address to which notifications about changes in the order will be sent.
-* **Gateway.UrlForCardDataSubmit** - address to which you need to send bank card details. The request format is specified in the CardDataRequestContent parameter (for host2host integration).
-* **CardDataRequestContent** - the content of the request, in which it is necessary to replace the placeholder with the bank card data (for host2host integration).
-* **CardDataRequestContent.proxy-placeholder-cardNumber** - Bankcard number. Format: numbers, without gaps.
-* **CardDataRequestContent.proxy-placeholder-validThruYear** - year of expiry of the card. Format: YYYY.
-* **CardDataRequestContent.proxy-placeholder-validThruMonth** - month of expiry of the card. Format: MM.
-* **CardDataRequestContent.proxy-placeholder-securityCode** - code CVC2 / CVV2 / 4DBC. Not used only if the bank card does not have this code. Example: 123.
-* **CardDataRequestContent.proxy-placeholder-holderName** - name and surname of the holder of the bank card (in Latin). Example: Ivan Ivanov.
-* **CardDataRequestContent.proxy-placeholder-customerIp** - The IP address from which the user entered bank card data. Format: IP v4 address.
-* **CardDataRequestContent.proxy-placeholder-customerAgent** - name of the client browser (User-Agent HTTP header). Example: Mozilla.
-* **RequestType** - type of request. The available values are: POST / GET.
 
 
 #### Request example
@@ -207,28 +193,6 @@ In response to this request Nemo.travel will return the following parameters:
             <OrderStatus>Booked</OrderStatus>
             <PaymentStatus>NotPaid</PaymentStatus>
             <PaymentTransactions/>
-            <PaymentGateways>
-               <Gateway>
-                  <PaymentMethodId>2346</PaymentMethodId>
-                  <GatewayName>Оплата для менеджеров и экспертов</GatewayName>
-                  <PaymentCharge Currency="RUB">0</PaymentCharge>
-                  <RedirectUrl>***</RedirectUrl>
-                  <UrlToCatch xsi:nil="true"/>
-                  <UrlForCardDataSubmit xsi:nil="true"/>
-                  <CardDataRequestContent xsi:nil="true"/>
-                  <RequestType xsi:nil="true"/>
-               </Gateway>
-               <Gateway>
-                  <PaymentMethodId>2344</PaymentMethodId>
-                  <GatewayName>Тестовая оплата по кнопке</GatewayName>
-                  <PaymentCharge Currency="RUB">0</PaymentCharge>
-                  <RedirectUrl>***</RedirectUrl>
-                  <UrlToCatch xsi:nil="true"/>
-                  <UrlForCardDataSubmit xsi:nil="true"/>
-                  <CardDataRequestContent xsi:nil="true"/>
-                  <RequestType xsi:nil="true"/>
-               </Gateway>
-            </PaymentGateways>
          </ResponseBin>
       </ns1:GetOrderResponse>
    </SOAP-ENV:Body>
