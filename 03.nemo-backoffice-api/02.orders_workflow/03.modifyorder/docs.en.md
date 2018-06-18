@@ -42,7 +42,7 @@ Identical to the parameters from [GetOrder](/nemo-backoffice-api/orders_workflow
                     <PaymentBackRedirectUrl>http://test.ru</PaymentBackRedirectUrl>
 				</RequestBody>
 				<Requisites>
-					<NemoOneAuthToken>YOUR_TOKKEN</NemoOneAuthToken>
+					<AuthToken>YOUR_TOKKEN</AuthToken>
 				</Requisites>
 				<UserID>YOUR_ID</UserID>
 			</Request>
