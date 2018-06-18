@@ -15,7 +15,8 @@ visible: true
 * **CallbackUrl** - адрес, на который будет возвращен callback от Nemo.travel с информацией о статусе заказа при его изменении. Формат: http(s)://domain.
 * **PaymentBackRedirectUrl** -  URL адрес для дальнейшего редиректа после оплаты. Формат: http(s)://domain/query?parameters.
 * **PaymentBackRedirectUrlFailure** - URL адрес для редиректа после неуспешный оплаты (необязательный, если не задан, будет использован PaymentBackRedirectUrl)
-* **NemoOneAuthToken** - API ключ, выдается сотрудниками Nemo.travel.
+* **NemoOneAuthToken** - API ключ, выдается сотрудниками Nemo.travel (устаревший параметр, рекомендуется использовать AuthToken).
+* **AuthToken** - API ключ, выдается сотрудниками Nemo.travel.
 * **UserID** - ID пользователя в системе Nemo.travel, выдается сотрудниками Nemo.travel.
 
 #### Параметры ответа
@@ -45,7 +46,7 @@ visible: true
                <OrderID>509576</OrderID>
             </RequestBody>
             <Requisites>
-               <NemoOneAuthToken>YOUR_TOKKEN</NemoOneAuthToken>
+               <AuthToken>YOUR_TOKKEN</AuthToken>
             </Requisites>
             <UserID>YOUR_ID</UserID>
          </Request>
