@@ -56,8 +56,8 @@ In response to this request Nemo.travel will return the following parameters:
 			<Request>
 				<RequestBody>
 					<OrderID>500243</OrderID
-					<CallbackUrl>http://nemo2.mlsd.ru/l?log</CallbackUrl>
-                    <PaymentBackRedirectUrl>http://release.mlsd.ru</PaymentBackRedirectUrl>
+					<CallbackUrl>http://callbackurl.ru</CallbackUrl>
+                    <PaymentBackRedirectUrl>http://test.ru</PaymentBackRedirectUrl>
 				</RequestBody>
 				<Requisites>
 					<AuthToken>YOUR_TOKKEN</AuthToken>
