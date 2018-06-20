@@ -54,17 +54,17 @@ Request for data on the counterparty.
 -   **data.info.phone** — phone of the agency. The data type is a string.
 -   **data.info.email** — e-mail address. The data type is a string.
 -   **data.info.taxType** — type of taxation. The data type is a string.
--   **data.info.bankRequisites** — банковские реквизиты. Тип данных — сложный.
--   **data.info.bankRequisites.recipient** — получатель. Тип данных — строка.
--   **data.info.bankRequisites.tin** — ИНН. Тип данных — целое 32 битное число.
--   **data.info.bankRequisites.bik** — БИК. Тип данных — целое 32 битное число.
--   **data.info.bankRequisites.bill** — счет банка получателя. Тип данных — целое 32 битное число.
--   **data.info.bankRequisites.okpo** — ОКПО. Тип данных — целое 32 битное число.
--   **data.info.bankRequisites.okved** — ОКВЭД. Тип данных — целое 32 битное число.
--   **data.info.manager** — информация о руководителе. Тип данных — сложный.
--   **data.info.manager.first_name** — имя руководителя. Тип данных — строка.
--   **data.info.manager.last_name** — фамилия менеджера. Тип данных — строка.
--   **data.info.manager.phone** — контактный номер телефона руководителя. Тип данных — строка.
+-   **data.info.bankRequisites** — bank details. The custom data type.
+-   **data.info.bankRequisites.recipient** — recipient. The data type is a string.
+-   **data.info.bankRequisites.tin** — TIN. The data type is Int32.
+-   **data.info.bankRequisites.bik** — Bank Identification Code. The data type is Int32.
+-   **data.info.bankRequisites.bill** — beneficiary bank account. The data type is Int32.
+-   **data.info.bankRequisites.okpo** — code on the all-Russian classifier of enterprises and organizations. The data type is Int32.
+-   **data.info.bankRequisites.okved** — code on the all-Russian classifier of economic activities. The data type is Int32.
+-   **data.info.manager** — information about the manager. The custom data type.
+-   **data.info.manager.first_name** — manager's name. The data type is a string.
+-   **data.info.manager.last_name** — manager's surname. The data type is a string.
+-   **data.info.manager.phone** — manager's contact phone number. The data type is a string.
 
 ##### Пример
 ```json
