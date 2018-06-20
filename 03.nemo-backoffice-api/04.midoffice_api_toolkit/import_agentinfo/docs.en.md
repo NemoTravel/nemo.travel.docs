@@ -3,19 +3,19 @@ title: 'Получение данных о контрагенте'
 visible: true
 ---
 
-### Получение данных о контрагенте
+### Receiving data on the counterparty
 
-Запрос на получение данных о контрагенте.
+Request for data on the counterparty.
 
 #### Запрос
 
--   **method** — содержит информацию о типе запроса. Тип данных — строка.
--   **apiVersion** — содержит информацию о версии API. Тип данных — строка. 
--   **params** — параметры объекта. Тип данных — сложный.
--   **params.type** — тип объекта. Тип данных — строка.
--   **params.companyId** — ID субагентства. Тип данных — целое 32 битное число. 
--   **params.requestId** — идентификатор заказа. Тип данных — строка.
--   **params.sign** — подпись запроса. Тип данных — строка.
+-   **method** — information about the type of request. The data type is a string.
+-   **apiVersion** — information about the API version. The data type is a string. 
+-   **params** — parameters of the object. The custom data type.
+-   **params.type** — object type. The data type is a string.
+-   **params.companyId** — subagency ID. The data type is Int32. 
+-   **params.requestId** — order ID. The data type is a string.
+-   **params.sign** — request signature. The data type is a string.
 
 ##### Пример
 ```json
@@ -33,27 +33,27 @@ visible: true
 
 #### Ответ
 
--   **method** — содержит информацию о типе запроса. Тип данных — строка.
--   **apiVersion** — содержит информацию о версии API. Тип данных — строка. 
--   **params** — параметры объекта. Тип данных — сложный.
--   **params.type** — тип объекта. Тип данных — строка.
--   **params.companyId** — ID субагентства. Тип данных — целое 32 битное число.
--   **params.requestId** — идентификатор заказа. Тип данных — строка.
--   **data** — контейнер с данными. Тип данных — сложный. 
--   **data.success** — признак успешности. Тип данных — булевский.
--   **data.info** — информация о контрагенте. Тип данных — сложный.
--   **data.info.name** — Название компании. Тип данных — строка.
--   **data.info.tin** — ИНН. Тип данных — целое 32 битное число.
--   **data.info.ogrn** — ОГРН.  Тип данных — целое 32 битное число.
--   **data.info.currency** — валюта. Тип данных — строка.
--   **data.info.country** — страна. Тип данных — строка.
--   **data.info.city** — город. Тип данных — строка.
--   **data.info.street** — улица.  Тип данных — строка.
--   **data.info.house** — номер дома.  Тип данных — строка.
--   **data.info.office** — офис. Тип данных — строка.
--   **data.info.phone** — телефон агентства. Тип данных — строка.
--   **data.info.email** — адрес электронной почты. Тип данных — строка.
--   **data.info.taxType** — тип налогообложения. Тип данных — строка.
+-   **method** — information about the type of request. The data type is a string.
+-   **apiVersion** — information about the API version. The data type is a string. 
+-   **params** — parameters of the object. The custom data type.
+-   **params.type** — object type. The data type is a string.
+-   **params.companyId** — subagency ID. The data type is Int32.
+-   **params.requestId** — order ID. The data type is a string.
+-   **data** — data container. The custom data type. 
+-   **data.success** — sign of success. The data type is bool.
+-   **data.info** — information about the counterparty. The custom data type.
+-   **data.info.name** — company name. The data type is a string.
+-   **data.info.tin** — TIN. The data type is Int32.
+-   **data.info.ogrn** — OGRN.  The data type is Int32.
+-   **data.info.currency** — currency. The data type is a string.
+-   **data.info.country** — country. The data type is a string.
+-   **data.info.city** — city. The data type is a string.
+-   **data.info.street** — street.  The data type is a string.
+-   **data.info.house** — house number.  The data type is a string.
+-   **data.info.office** — office. The data type is a string.
+-   **data.info.phone** — phone of the agency. The data type is a string.
+-   **data.info.email** — e-mail address. The data type is a string.
+-   **data.info.taxType** — type of taxation. The data type is a string.
 -   **data.info.bankRequisites** — банковские реквизиты. Тип данных — сложный.
 -   **data.info.bankRequisites.recipient** — получатель. Тип данных — строка.
 -   **data.info.bankRequisites.tin** — ИНН. Тип данных — целое 32 битное число.
