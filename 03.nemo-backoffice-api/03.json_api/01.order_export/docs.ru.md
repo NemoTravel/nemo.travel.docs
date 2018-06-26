@@ -39,8 +39,7 @@ taxonomy:
 * **data.passengers.ID_PAS_N.docExpiryDate** — дата окончания срока действия документа. Тип данных — строка.
 * **data.passengers.ID_PAS_N.phone** — номер телефона пассажира. Тип данных — строка.
 * **data.passengers.ID_PAS_N.email** — электронная почта пассажира. Тип данных — строка.
-* **data.products** — контейнер с данными об услуге. Тип данных — сложный.
-* **data.products.ID_FLT_N** — контейнер с информацией об N-м перелёте. Тип данных — сложный.
+* **data.products** — контейнер с данными об услуге. Тип данных — сложный.* **data.products.ID_FLT_N** — контейнер с информацией об N-м перелёте. Тип данных — сложный.
 * **data.products.ID_FLT_N.info** — контейнер с информацией о данном перелёте. Тип данных — сложный.
 * **data.products.ID_FLT_N.info.nemo** — контейнер с информацией по перелёту из Nemo.Travel. Тип данных — сложный.
 * **data.products.ID_FLT_N.info.nemo.flightId** — идентификатор перелёта. Тип данных — целое 64-битное число.
@@ -73,7 +72,7 @@ taxonomy:
 * **data.products.ID_FLT_N.dates.timelimit.ticketing** — таймлимит на выписку. Тип данных — строка.
 * **data.products.ID_FLT_N.dates.timelimit.advancedPurchase** — таймлимит из УПТ. Тип данных — строка.
 * **data.products.ID_FLT_N.dates.timelimit.effective** — минимальный таймлимит с применением правил Nemo.Travel. Тип данных — строка.
-* **data.products.ID_FLT_N.segments** — контейнер с информацией о сегментах. Тип данных — сложный.
+* * **data.products.ID_FLT_N.segments** — контейнер с информацией о сегментах. Тип данных — сложный.
 * **data.products.ID_FLT_N.segments.ID_SEG_N** — контейнер с информацией об N-м сегменте. Тип данных — сложный.
 * **data.products.ID_FLT_N.segments.ID_SEG_N.index** — идентификатор сегмента. Тип данных — целое 64-битное число.
 * **data.products.ID_FLT_N.segments.ID_SEG_N.leg** — идентификатор плеча. Тип данных — целое 64-битное число.
@@ -137,6 +136,41 @@ taxonomy:
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].type** — тип таксы. Тип данных — строка.
 * **data.products.ID_EXT_N** — контейнер с информацией о дополнительных услугах. Тип данных — сложный.
 * **data.products.ID_EXT_N.type** — тип дополнительной услуги. Тип данных — строка.
+* **data.products.ID_TRN_N** — контейнер с информацией об N-м заказе Тип данных — сложный.
+* **data.products.ID_TRN_N.info** — контейнер с информацией о данном заказе. Тип данных — сложный.
+* **data.products.ID_TRN_N.info.nemo** — контейнер с информацией по заказу из Nemo.Travel. Тип данных — сложный.
+* **data.products.ID_TRN_N.info.nemo.flightId** — идентификатор заказа. Тип данных — целое 64-битное число.
+* **data.products.ID_TRN_N.info.nemo.searchId** — идентификатор поиска. Тип данных — целое 64-битное число.
+* **data.products.ID_TRN_N.info.nemo.status** — статус заказа. Тип данных — строка.
+* **data.products.ID_TRN_N.info.nemo.utmSource** — источник перехода. Тип данных — строка.
+* **data.products.ID_TRN_N.info.nemoConnect** — контейнер с информацией по заказу из Nemo.Connect. Тип данных — сложный.
+* **data.products.ID_TRN_N.info.nemoConnect.system** — инстанс к которому принадлежит заказ. Тип данных — строка.
+* **data.products.ID_TRN_N.info.nemoConnect.id** — идентификатор объекта выгрузки Nemo.Connect. Тип данных — целое 64-битное число.
+* **data.products.ID_TRN_N.info.nemoConnect.status** — статус заказа. Тип данных — строка.
+* **data.products.ID_TRN_N.info.nemoConnect.subStatus** — подстатус заказа. Тип данных — строка.
+* **data.products.ID_TRN_N.dates** — контейнер с информацией по датам. Тип данных — сложный.
+* **data.products.ID_TRN_N.dates.creation** — время создания заказа. Тип данных — строка.
+* **data.products.ID_TRN_N.dates.booking** — время бронирования заказа. Тип данных — строка.
+* **data.products.ID_TRN_N.dates.ticketing** — время выписки заказа. Тип данных — строка.
+* **data.products.ID_TRN_N.dates.void** — время войдирования заказа. Тип данных — строка.
+* **data.products.ID_TRN_N.dates.cancellation** — время аннулирования заказа. Тип данных — строка.
+* **data.products.ID_TRN_N.segments** — контейнер с информацией о сегментах. Тип данных — сложный.
+* **data.products.ID_TRN_N.segments.ID_SEG_N** — контейнер с информацией об N-м сегменте. Тип данных — сложный.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.trainNumber** — идентификатор сегмента. Тип данных — целое 64-битное число.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.trainName** — идентификатор плеча. Тип данных — целое 64-битное число.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.trainCategory** — контейнер с информацией о пункте отправления. Тип данных — сложный.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.timeInRoad** - время в пути. Тип данных — строка.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.carNumber** - номер вагона. Тип данных — строка.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.carType** - тип вагона. Тип данных — строка.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.choosenRange** — контейнер с информацией о диапазоне мест. Тип данных — сложный.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.choosenRange.start** - начало диапазона мест. Тип данных — строка.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.choosenRange.end** - конец диапазона мест. Тип данных — строка.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.departure** — контейнер с информацией о пункте отправления. Тип данных — сложный.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.departure.date** — время отправления. Тип данных — строка.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.departure.station** — код станции отправления. Тип данных — строка.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.arrival**— контейнер с информацией о пункте прибытия. Тип данных — сложный.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.arrival.date** — время прибытия. Тип данных — строка.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.arrival.station** — код станции прибытия. Тип данных — строка.
 * **data.price** — контейнер с данными о полной стоимости. Тип данных — сложный.
 * **data.price.amount** — cумма полной стоимости. Тип данных — строка.
 * **data.price.currency** — код валюты полной стоимости. Тип данных — строка.
