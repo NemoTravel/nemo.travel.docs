@@ -267,8 +267,8 @@ taxonomy:
         "customer": {
             "userId": 3599,
             "agencyId": 3598,
-            "comapnyId": 3598,
-            "backofficeComapnyId": "bf643b56-4ef2-11e6-8476-001517d86995",
+            "companyId": 3598,
+            "backofficeCompanyId": "bf643b56-4ef2-11e6-8476-001517d86995",
             "name": "Иванов Иван",
             "phone": "+79871234567",
             "email": "ivanov@ivan.com"
