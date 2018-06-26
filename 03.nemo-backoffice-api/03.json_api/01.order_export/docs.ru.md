@@ -39,7 +39,8 @@ taxonomy:
 * **data.passengers.ID_PAS_N.docExpiryDate** — дата окончания срока действия документа. Тип данных — строка.
 * **data.passengers.ID_PAS_N.phone** — номер телефона пассажира. Тип данных — строка.
 * **data.passengers.ID_PAS_N.email** — электронная почта пассажира. Тип данных — строка.
-* **data.products** — контейнер с данными об услуге. Тип данных — сложный.* **data.products.ID_FLT_N** — контейнер с информацией об N-м перелёте. Тип данных — сложный.
+* **data.products** — контейнер с данными об услуге. Тип данных — сложный.
+* **data.products.ID_FLT_N** — контейнер с информацией об N-м перелёте. Тип данных — сложный.
 * **data.products.ID_FLT_N.info** — контейнер с информацией о данном перелёте. Тип данных — сложный.
 * **data.products.ID_FLT_N.info.nemo** — контейнер с информацией по перелёту из Nemo.Travel. Тип данных — сложный.
 * **data.products.ID_FLT_N.info.nemo.flightId** — идентификатор перелёта. Тип данных — целое 64-битное число.
@@ -72,7 +73,7 @@ taxonomy:
 * **data.products.ID_FLT_N.dates.timelimit.ticketing** — таймлимит на выписку. Тип данных — строка.
 * **data.products.ID_FLT_N.dates.timelimit.advancedPurchase** — таймлимит из УПТ. Тип данных — строка.
 * **data.products.ID_FLT_N.dates.timelimit.effective** — минимальный таймлимит с применением правил Nemo.Travel. Тип данных — строка.
-* * **data.products.ID_FLT_N.segments** — контейнер с информацией о сегментах. Тип данных — сложный.
+* **data.products.ID_FLT_N.segments** — контейнер с информацией о сегментах. Тип данных — сложный.
 * **data.products.ID_FLT_N.segments.ID_SEG_N** — контейнер с информацией об N-м сегменте. Тип данных — сложный.
 * **data.products.ID_FLT_N.segments.ID_SEG_N.index** — идентификатор сегмента. Тип данных — целое 64-битное число.
 * **data.products.ID_FLT_N.segments.ID_SEG_N.leg** — идентификатор плеча. Тип данных — целое 64-битное число.
