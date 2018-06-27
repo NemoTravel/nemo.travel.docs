@@ -1,5 +1,5 @@
 ---
-title: 'Получение документов'
+title: 'Documents receiving'
 visible: true
 ---
 
