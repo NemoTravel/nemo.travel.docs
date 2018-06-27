@@ -45,8 +45,8 @@ taxonomy:
     -   **SellingPointDescription** — описание точки продажи;
     -   **OSI** — (Other Service Information);
     -   **ReferencedBooks**;
-    -   **DiscountDocument**.
-    <!--   **LinkedBooks**.-->
+    -   **DiscountDocument**;
+    -   **LinkedBooks** - ID заказов в Nemo Connect, входящих в состав комбинированного перелета (multiOW).
 -   **Remark** — текстовая ремарка (необязательный). Тип данных — сложный.
 -   **Remark.Type** — тип ремарки. Тип данных — перечисление, возможные значения:
     -   **General**;
