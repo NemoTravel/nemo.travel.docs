@@ -1,5 +1,5 @@
 ---
-title: 'Получение данных о контрагенте'
+title: 'Receiving data on the counterparty'
 visible: true
 ---
 
@@ -7,7 +7,7 @@ visible: true
 
 Request for data on the counterparty.
 
-#### Запрос
+#### Request parameters
 
 -   **method** — information about the type of request. The data type is a string.
 -   **apiVersion** — information about the API version. The data type is a string. 
@@ -17,7 +17,7 @@ Request for data on the counterparty.
 -   **params.requestId** — order ID. The data type is a string.
 -   **params.sign** — request signature. The data type is a string.
 
-##### Пример
+##### Request example
 ```json
 {
     "method": "import",
@@ -31,7 +31,7 @@ Request for data on the counterparty.
 }
 ```
 
-#### Ответ
+#### Response parameters
 
 -   **method** — information about the type of request. The data type is a string.
 -   **apiVersion** — information about the API version. The data type is a string. 
@@ -66,7 +66,7 @@ Request for data on the counterparty.
 -   **data.info.manager.last_name** — manager's surname. The data type is a string.
 -   **data.info.manager.phone** — manager's contact phone number. The data type is a string.
 
-##### Пример
+##### Response example
 ```json
 {
     "method": "import",
