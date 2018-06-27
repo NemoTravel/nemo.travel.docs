@@ -3,25 +3,25 @@ title: 'Получение документов'
 visible: true
 ---
 
-### Получение документов
+### Documents receiving
 
-Запрос на получение контента документов по заказу.
+Request to receive document content for order.
 
-#### Запрос
+#### Request parameters
 
--   **method** — содержит информацию о типе запроса. Тип данных — строка.
--   **apiVersion** — содержит информацию о версии API. Тип данных — строка. 
--   **params** — параметры объекта. Тип данных — сложный.
--   **params.type** — тип объекта. Тип данных — строка.
--   **params.transactionId** — идентификатор транзакции из Немо1. Тип данных — целое 32 битное число. 
--   **params.orderId** — ID заказа из Немо1. Тип данных — целое 32 битное число.
--   **params.documents** — контейнер с данными о документах. Тип данных — сложный.
--   **params.documents.name** — имя документа, Тип данных — строка.
--   **params.documents.type** — тип документа. Тип данных — строка.
--   **params.requestId** — идентификатор заказа. Тип данных — строка.
--   **params.sign** — подпись запроса. Тип данных — строка.
+-   **method** — information about the type of request. The data type is a string.
+-   **apiVersion** — information about the API version. The data type is a string. 
+-   **params** — parameters of the object. The custom data type.
+-   **params.type** — object type. The data type is a string.
+-   **params.transactionId** — transaction identifier from Nemo1. The data type is Int32. 
+-   **params.orderId** — Order ID from Nemo1. The data type is Int32.
+-   **params.documents** — container with data about documents. The custom data type.
+-   **params.documents.name** — document name. The data type is a string.
+-   **params.documents.type** — document type. The data type is a string.
+-   **params.requestId** — order identifier. The data type is a string.
+-   **params.sign** — request signature. The data type is a string.
 
-##### Пример
+##### Request example
 ```json
 {
     "method": "import",
@@ -42,23 +42,23 @@ visible: true
 }
 ```
 
-#### Ответ
+#### Response parameters
 
--   **method** — содержит информацию о типе выгрузки/запроса. Тип данных — строка.
--   **apiVersion** — содержит информацию о версии API. Тип данных — строка. 
--   **params** — параметры объекта. Тип данных — сложный.
--   **params.type** — тип объекта. Тип данных — строка.
--   **params.transactionId** — идентификатор транзакции из Немо1. Тип данных — целое 32 битное число. 
--   **params.orderId** — ID заказа из Немо1. Тип данных — целое 32 битное число.
--   **params.requestId** — идентификатор заказа. Тип данных — строка.
--   **data** — контейнер с данными об объекте. Тип данных — сложный.
--   **data.success** — признак успешности. Тип данных — булевский.
--   **data.documentsList** — контейнер с данными о документах,Тип данных — сложный.
--   **data.documentsList.name** — имя сформированного документа, Тип данных — строка.
--   **data.documentsList.type** — тип сформированного документа, Тип данных — строка.
--   **data.documentsList.content** — base64 контента документа. Тип данных — строка.
+-   **method** — information about the type of request. The data type is a string.
+-   **apiVersion** — information about the API version. The data type is a string. 
+-   **params** — parameters of the object. The custom data type.
+-   **params.type** — object type. The data type is a string.
+-   **params.transactionId** — transaction identifier from Nemo1. The data type is Int32. 
+-   **params.orderId** — Order ID from Nemo1. The data type is Int32.
+-   **params.requestId** — order identifier. The data type is a string.
+-   **data** — container with data about the object. The custom data type.
+-   **data.success** — sign of success. The data type is bool.
+-   **data.documentsList** — document container. The custom data type.
+-   **data.documentsList.name** — the name of the generated document. The data type is a string.
+-   **data.documentsList.type** — type of generated document. The data type is a string.
+-   **data.documentsList.content** — base64 document content. The data type is a string.
 
-##### Пример
+##### Response example
 ```json
 {
     "method": "import",
