@@ -45,6 +45,7 @@ To store different booking content.
 	-   OSI
 	-   ReferencedBooks
 	-   DiscountDocument
+	-   LinkedBooks
 -  **Remark** - The rext note (optional). The custom data type.
 -  **Remark.Type** - The type of remark. Data type - enumeration, possible values:
     -   General
