@@ -38,9 +38,9 @@ Contains the full information about the price and its formation for the reservat
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AgencyCommission** - The agency commission. The data type is a string.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Bonus** - The airline Bonus (as in the rule). The data type is a string.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BonusResult** - The airline Bonus (calculated). The data type is a string. 
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ChargeExt** - A sign of of additional collection. The data type is a string. 
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Charge** - The collection (as in the rule). The data type is a string.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ChargeValue** - The collection (calculated). The data type is a string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ChargeExt** - A sign of of additional charge. The data type is a string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Charge** - The charge (as in the rule). The data type is a string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ChargeValue** - The charge (calculated). The data type is a string.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.MinProfit** - The minimal profit. The data type is a string.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.MinProfitPriority** - The priority of the minimum profit. The data type is a string.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.MinProfitEnable** - A sign of  applying a minimum profit. The data type is bool.

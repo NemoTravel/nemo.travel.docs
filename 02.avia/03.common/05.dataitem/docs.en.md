@@ -295,8 +295,8 @@ To store different booking content.
 - **SubagentCommission** - The Subagent commission (optional). The data type is CommissionDataItem:
 - **TicketDesignator** - The information about the ticket designator for prescribing to the reservation (optional). The custom data type.
 - **TicketDesignator.Value** - The value of the ticket designator for prescription in the reservation. The data type is a string.
-- **Markup** - The information about the collection of the agent (optional). The custom data type.
-- **Markup.MarkupValue** - The value of the agent collection. The data type is [Money](/avia/common/money).
+- **Markup** - The information about the charge of the agent (optional). The custom data type.
+- **Markup.MarkupValue** - The value of the agent charge. The data type is [Money](/avia/common/money).
 - **Markup.VAT** - VAT data. The custom data type.
 - **Markup.VAT.VATValue** - The amount of VAT. The data type is [Money](/avia/common/money).
 - **Markup.VAT.VATRate** - VAT rate in%. The data type is double.
