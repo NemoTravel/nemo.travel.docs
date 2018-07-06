@@ -150,11 +150,11 @@ taxonomy:
 * **data.products.ID_TRN_N.info.nemoConnect.status** — статус заказа. Тип данных — строка.
 * **data.products.ID_TRN_N.info.nemoConnect.subStatus** — подстатус заказа. Тип данных — строка.
 * **data.products.ID_TRN_N.dates** — контейнер с информацией по датам. Тип данных — сложный.
-* **data.products.ID_TRN_N.dates.creation** — время создания заказа. Тип данных — строка.
-* **data.products.ID_TRN_N.dates.booking** — время бронирования заказа. Тип данных — строка.
-* **data.products.ID_TRN_N.dates.ticketing** — время выписки заказа. Тип данных — строка.
-* **data.products.ID_TRN_N.dates.void** — время войдирования заказа. Тип данных — строка.
-* **data.products.ID_TRN_N.dates.cancellation** — время аннулирования заказа. Тип данных — строка.
+* **data.products.ID_TRN_N.dates.creation** — время создания заказа в формате UTC. Тип данных — строка.
+* **data.products.ID_TRN_N.dates.booking** — время бронирования заказа в формате UTC. Тип данных — строка.
+* **data.products.ID_TRN_N.dates.ticketing** — время выписки заказа в формате UTC. Тип данных — строка.
+* **data.products.ID_TRN_N.dates.void** — время войдирования заказа в формате UTC. Тип данных — строка.
+* **data.products.ID_TRN_N.dates.cancellation** — время аннулирования заказа в формате UTC. Тип данных — строка.
 * **data.products.ID_TRN_N.segments** — контейнер с информацией о сегментах. Тип данных — сложный.
 * **data.products.ID_TRN_N.segments.ID_SEG_N** — контейнер с информацией об N-м сегменте. Тип данных — сложный.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.trainNumber** — идентификатор сегмента. Тип данных — целое 64-битное число.
