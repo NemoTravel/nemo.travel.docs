@@ -172,6 +172,19 @@ taxonomy:
 * **data.products.ID_TRN_N.segments.ID_SEG_N.arrival**— контейнер с информацией о пункте прибытия. Тип данных — сложный.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.arrival.date** — время прибытия. Тип данных — строка.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.arrival.station** — код станции прибытия. Тип данных — строка.
+* **data.products.ID_FLT_N.pricingInfo** — контейнер с информацией об оценке маршрута. Тип данных — сложный.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N** — контейнер с информацией об N-й оценке маршрута. Тип данных — сложный.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare** — контейнер с информацией о тарифах.Тип данных — сложный.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N** — контейнер с информацией об N-м тарифе. Тип данных — сложный.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.pricingType** — код ценового типа пассажира полученного из ГРС. Тип данных — строка.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.passCount** — число пассажиров. Тип данных — целое 64-битное число.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare** — контейнер с информацией о базовой стоимости тарифа (без учета такс). Тип данных - сложный.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare.amount** — сумма базовой стоимости.Тип данных — строка.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare.currency** — код валюты базовой стоимости. Тип данных — строка.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.refundCharge** — контейнер с информацией о . Тип данных - сложный.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.refundCharge.amount** — сумма сбора за возврат .Тип данных — строка.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.refundCharge.currency** — код валюты сбора за возврат. Тип данных — строка.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.passengers** - идентификатор пассажира. Тип данных - сложный.
 * **data.price** — контейнер с данными о полной стоимости. Тип данных — сложный.
 * **data.price.amount** — cумма полной стоимости. Тип данных — строка.
 * **data.price.currency** — код валюты полной стоимости. Тип данных — строка.
