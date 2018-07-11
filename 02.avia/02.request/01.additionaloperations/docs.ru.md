@@ -5,9 +5,9 @@ taxonomy:
         - docs
 ---
 
-### AdditionalOperations_1_1
+### AdditionalOperations_1_2
 
-Запрос выполнения дополнительных операций версии 1.1.
+Запрос выполнения дополнительных операций версии 1.2.
 
 #### Запрос
 
@@ -79,6 +79,31 @@ taxonomy:
 -   **ActualizedFlight** — содержит актуализированный перелёт. Тип данных — [Flight](/avia/common/flight).
 -   **FlightsByFareFamily** — содержит результат операции **GetFareFamilies**. Тип данных — массив [Flight](/avia/common/flight).
 -   **SubsidizedTariffs** — содержит результат операции **GetSubsidizedTariffs**. Тип данных — массив [Flight](/avia/common/flight).
+-   **FindAdditionalServicesResult** - результат получения списка доступных допуслуг. Тип данных - сложный. 
+-   **FindAdditionalServicesResult.Services** - список доступных допуслуг. Тип данных - массив. 
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS** - допуслуга. Тип данных - сложный.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.ID** - ИД услуги в системе поставщика. Тип данных - целове 32 битное число.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Name** - описание допуслуги (ATPCO commercial name) Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Group** - группа допуслуги. Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SubGroup** - подгруппа услуги. Тип данных - строка. 
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.RFIC** - RFIC услуги. Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.RFISC** - RFISC услуги. Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRCode** - код SSR, которую необходимо добавить в ПНР в случае бронирования данной допуслуги. Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Type** - тип допуслуги(На данный момент - специфика Сирены). Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.CompanyCode** - ИАТА код а/к, предоставляющей данную допуслугу. Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Refundability** - возвратность услуги. Тип данных - перечисление.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRDescriptionRequired** - признак того, что для бронирования данной допуслуги нужно передавать её описание от пользователя. Тип данных - булево значение.
+-   **FindAdditionalServicesResult.Services.Prices** - список цен допуступных допуслуг. Тип данных - массив.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice**  - цена допуслуг. Тип данных - сложный.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value** - объект цены. Тип данных - сложный. 
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value.Amount** - сумма. Тип данных - плавающее c двойной точностью.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value.Currency** - валюта. Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.ServiceRef** - ссылки на услуги, для которых применима данная цена. Тип данных - массив. 
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.ServiceRef.Ref** - ссылка на услугу. Тип данных - целое 32 битное число.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.SegmentRef** - ссылки на сегменты, которым принадлежит услуга. Тип данных - массив. 
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.SegmentRef.Ref** - ссылка на сегмент. Тип данных - целое 32 битное число.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes** - типы пассажиров к которым применима данная цена. Тип данных - массив.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes.PassTypes** - тип пассажира. Тип - данных перечисление.
 
 >>>> В результате выполнения запроса, будет получен перелен с новым ID, именно этот ID следует использовать в дальнейших операциях, например в бронировании.
 
