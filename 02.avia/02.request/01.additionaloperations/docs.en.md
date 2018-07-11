@@ -5,9 +5,9 @@ taxonomy:
         - docs
 ---
 
-### AdditionalOperations_1_1
+### AdditionalOperations_1_2
 
-Request for execution before version 1.1
+Request for execution before version 1.2
 
 #### Request
 
