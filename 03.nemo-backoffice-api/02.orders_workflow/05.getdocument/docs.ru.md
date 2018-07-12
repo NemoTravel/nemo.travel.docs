@@ -51,7 +51,7 @@ title: GetDocument
           <Type>ItinReceiptNemo</Type>
           <Format>PDF-1.41</Format>
           <Encoding/>
-          <DocumentData>Строка в формате Base64 содержащая маршрут квитанцию</DocumentData>
+          <DocumentData>Контент документа</DocumentData>
           <IsBase64Wrapped>true</IsBase64Wrapped>
         </PaperDocument>
       </ResponseBin>
