@@ -3,26 +3,26 @@ title: GetDocument
 ---
 
 ### GetDocumet
- Запрос предназначен для получения документа из заказа системы Nemo.
+This request is designed to get the document from the order in Nemo.travel system.
 
 
-
-#### Параметры запроса
-* **OrderID** - номер заказа из бэк-офиса Nemo.travel. Чтобы получить значение параметра для заказа, необходимо выполнить запрос GetOrder с указанием параметра FlightsBookingID (ID бронирования из Nemo Connect).
-* **DocType** - Тип запрашиваемого документа, возможные значения: ItinReceiptNemo - маршрут квитанция в формате Nemo.
-* **NemoOneAuthToken** - API ключ, выдается сотрудниками Nemo.travel (устаревший параметр, рекомендуется использовать AuthToken).
-* **AuthToken** - API ключ, выдается сотрудниками Nemo.travel.
-* **UserID** - ID пользователя в системе Nemo.travel, выдается сотрудниками Nemo.travel.
+#### Request parameters
+* **OrderID** - the order number from the back office of Nemo.travel. To get the parameter value for an order, you should run a GetOrder request with the parameters FlightsBookingID (Booking ID from Nemo Connect).
+* **DocType** - the type of the requested document, possible values: ItinReceiptNemo - itinerary in Nemo format.
+* **NemoOneAuthToken** - API key, issued by Nemo.travel staff (out-of-date parameter, recommended to use AuthToken).
+* **AuthToken** - API key, issued by Nemo.travel staff.
+* **UserID** - User ID in the Nemo.travel system, issued by Nemo.travel staff.
 
 #### Параметры ответа
-* **PaperDocument.Type** - Тип возвращаемого документа.
-* **PaperDocument.Format** - Формат возвращаемого документа.
-* **PaperDocument.Encoding** - Кодировка возвращаемого документа (не используется).
-* **PaperDocument.DocumentData** - Содержимое документа .
-* **PaperDocument.IsBase64Wrapped** - Параметр указывает, закодировано ли содержимое документа в Base64.
+* **PaperDocument.Type** - type of the returned document.
+* **PaperDocument.Format** - format of the returned document.
+* **PaperDocument.Encoding** - encoding of the returned document (is not used).
+* **PaperDocument.DocumentData** - the document data.
+* **PaperDocument.IsBase64Wrapped** - indicates if the contents of the document is encoded in Base64.
 
-#### Пример запроса
+#### Request example
 ```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="***">
   <soapenv:Header/>
   <soapenv:Body>
     <ver:GetDocument>
@@ -41,7 +41,7 @@ title: GetDocument
   </soapenv:Body>
 </soapenv:Envelope>
 ```
-#### Пример ответа
+#### Response example
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="***">
   <SOAP-ENV:Body>
@@ -51,7 +51,7 @@ title: GetDocument
           <Type>ItinReceiptNemo</Type>
           <Format>PDF-1.41</Format>
           <Encoding/>
-          <DocumentData>Контент документа</DocumentData>
+          <DocumentData>Document content</DocumentData>
           <IsBase64Wrapped>true</IsBase64Wrapped>
         </PaperDocument>
       </ResponseBin>
