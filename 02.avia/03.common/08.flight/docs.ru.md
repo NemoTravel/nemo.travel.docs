@@ -165,3 +165,4 @@ taxonomy:
 -   **Flight.Price.SubAgentMarkup** - сбор субагента за весь перелёт. Тип данных — [Money](/avia/common/money).
 -   **Flight.Price.SubAgentChargeBreakdown** — разбивка составляющих сбора субагента по правилам (расчитан по правилам ценообразования). Тип данных — [ChargeBreakdown](/avia/common/chargebreakdown).
 -   **Flight.FareFamiliesDescription** — содержит описания семейств тарифов, присутствующих в перелёте. Тип данных — [Description](/avia/common/ff-description).
+-   **Flight.BookingURL** - URL, на который будет перенаправлен пользователь для последующего оформления перелета. Тип данных - строка.
