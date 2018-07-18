@@ -384,6 +384,7 @@ taxonomy:
                   </ChargeBreakdown>
                 </Price>
               </PriceInfo>
+              <BookingURL>http://agency.nemo.travel/flights__from_meta?flight_id=143439091020001&amp;external_subject_id=10444</BookingURL>
             </Flight>
             <Flight>
               <a:ID>142444204040001</a:ID>
@@ -555,6 +556,7 @@ taxonomy:
                   </ChargeBreakdown>
                 </Price>
               </PriceInfo>
+              <BookingURL>http://agency.nemo.travel/flights__from_meta?flight_id=143439091020002&amp;external_subject_id=10444</BookingURL>
             </Flight>
           </PlaneFlights>
           <FareFamiliesDescription>
