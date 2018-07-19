@@ -262,6 +262,32 @@ taxonomy:
 * **data.сurrencyRates.[N]** — контейнер с информацией об N-й валюте. Тип данных — сложный.
 * **data.сurrencyRates.[N].currencyCode** — код N-й валюты. Тип данных — строка.
 * **data.сurrencyRates.[N].rate** — курс N-й валюты по отношению к валюте агентства Nemo.Travel. Тип данных — дробное число.
+* **data.linkedOrders** — контейнер с информацией о связанных заказах. Тип данных — сложный.
+* **data.linkedOrders.splitted** — идентификатор связанного заказа в системе Nemo.Travel. Тип данных — целое 64-битное число. 
+* **data.multiOrderEnvelope** — идентификатор мультизаказа в системе Nemo.Travel. Тип данных — целое 64-битное число. 
+* **data.exchangeClaims** — контейнер с информацией о обмене. Тип данных — сложный.
+* **data.exchangeClaims.data** — контейнер с данными об объекте обмена. Тип данных — сложный.
+* **data.exchangeClaims.data.id** — идентификатор связанного заказа в системе Nemo.Travel. Тип данных — целое 64-битное число.
+* **data.exchangeClaims.data.expertUserId** — идентификатор юзера обработавшего обмен. Тип данных — целое 64-битное число.
+* **data.exchangeClaims.data.price** — контейнер с информацией о стоимости обмена. Тип данных — сложный.
+* **data.exchangeClaims.data.price.amount** — cумма за обмен. Тип данных — строка.
+* **data.exchangeClaims.data.price.currency** — код валюты за обмен. Тип данных — строка.
+* **data.exchangeClaims.data.selectedElements** — контейнер с информацией об N-й валюте. Тип данных — сложный.
+* **data.exchangeClaims.data.selectedElements.passenger** — идентификатор пассажира (ID_PAS_N) для которого производится обмен. Тип данных — строка.
+* **data.exchangeClaims.data.selectedElements.segments** — идентификатор сегмента (ID_SEG_N) для которого производится обмен. Тип данных — строка.
+* **data.exchangeClaims.claimText** — текст заявки на обмен. Тип данных — строка. 
+* **data.returnClaims** — контейнер с информацией о возврате. Тип данных — сложный.
+* **data.returnClaims.data** — контейнер с данными об объекте возврата. Тип данных — сложный.
+* **data.returnClaims.data.id** — идентификатор связанного заказа в системе Nemo.Travel. Тип данных — целое 64-битное число.
+* **data.returnClaims.data.expertUserId** — идентификатор юзера обработавшего возврат. Тип данных — целое 64-битное число.
+* **data.returnClaims.data.price** — контейнер с информацией о стоимости возврата. Тип данных — сложный.
+* **data.returnClaims.data.price.amount** — cумма за возврат. Тип данных — строка.
+* **data.returnClaims.data.price.currency** — код валюты за возврат. Тип данных — строка.
+* **data.returnClaims.data.selectedElements** — контейнер с информацией об N-й валюте. Тип данных — сложный.
+* **data.returnClaims.data.selectedElements.passenger** — идентификатор пассажира (ID_PAS_N) для которого производится обмен. Тип данных — строка.
+* **data.returnClaims.data.selectedElements.segments** — идентификатор сегмента (ID_SEG_N) для которого производится возврат. Тип данных — строка.
+* **data.returnClaims.isCompelled** — признак успешности возврата. Тип данных — булевый.
+
 
 #### Пример
 ```json
