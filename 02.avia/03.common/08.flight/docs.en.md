@@ -138,6 +138,7 @@ Flight presentation format 1.1.
 	- **FareRound** - The rounding amount received by converting value the tariff to agency currency;
 	- **MarkupRound** - rounding value of the markup;
 -   **PassengerFare.TotalAgencyFare** - The amount tariff and charge in the agency currency.The data type is [Money](/avia/common/money).
+-   **Flight.Price.AgencyMarkup** - the amount of charge for the whole fight (for all the passengers). The data type is [Money](/avia/common/money).
 -   **PassengerFare.ExchangePriceInfo** - the total exchange fare (the item will only be on receipt of exchange options). The custom data type
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty** - the airline's penalty for the exchange. The custom data type.
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty.Currency** - The penalty currency code. The data type is a string.
