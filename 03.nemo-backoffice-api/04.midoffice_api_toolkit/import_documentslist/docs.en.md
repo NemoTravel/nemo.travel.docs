@@ -3,23 +3,23 @@ title: 'Получение списка документов'
 visible: true
 ---
 
-### Получение списка документов
+### List of documents receiving
 
-Запрос на получение списка документов по заказу.
+Request to receive a list of documents for the order.
 
-#### Запрос
+#### Request parameters
 
--   **method** — содержит информацию о типе выгрузки/запроса. Тип данных — строка.
--   **apiVersion** — содержит информацию о версии API. Тип данных — строка. 
--   **params** — параметры запроса. Тип данных — сложный.
--   **params.type** — тип объекта. Тип данных — строка.
--   **params.companyId** — ID субагентства. Тип данных — целое 32 битное число.
--   **params.orderId** — ID заказа из Немо1. Тип данных — целое 32 битное число.
--   **params.dateFrom/params.dateTo** — диапазон дат, за которые выставлены документы. Тип данных — строка.
--   **params.requestId** — идентификатор заказа. Тип данных — строка.
--   **params.sign** — подпись запроса. Тип данных — строка.
+-   **method** — information about the type of request. The data type is a string.
+-   **apiVersion** — information about the API version. The data type is a string.
+-   **params** — request parameters. The custom data type.
+-   **params.type** — object type. The data type is a string.
+-   **params.companyId** — subagency ID. The data type is Int32.
+-   **params.orderId** — Order ID from Nemo1. The data type is Int32.
+-   **params.dateFrom/params.dateTo** — date range for which documents are submitted. The data type is a string.
+-   **params.requestId** — order identifier. The data type is a string.
+-   **params.sign** — request signature. The data type is a string.
 
-##### Пример
+##### Request example
 ```json
 {
     "method": "import",
@@ -36,25 +36,25 @@ visible: true
 }
 ```
 
-#### Ответ
+#### Response parameters
 
--   **method** — содержит информацию о типе выгрузки/запроса. Тип данных — строка.
--   **apiVersion** — содержит информацию о версии API. Тип данных — строка. 
--   **params** — параметры запроса. Тип данных — сложный.
--   **params.type** — тип объекта. Тип данных — строка.
--   **params.companyId** — ID субагентства. Тип данных — целое 32 битное число. 
--   **params.orderId** — ID заказа из Немо1. Тип данных — целое 32 битное число.
--   **params.dateFrom/params.dateTo** — диапазон дат, за которые выставлены документы. Тип данных — строка.
--   **params.requestId** — идентификатор заказа. Тип данных — строка.
--   **data** — контейнер с данными об объекте. Тип данных — сложный.
--   **data.success** — признак успешности. Тип данных — булевский.
--   **data.documentsList** — контейнер с данными о документах.Тип данных — сложный.
--   **data.documentsList.type** — тип сформированного документа, Тип данных — строка.
--   **data.documentsList.name** — имя сформированного документа, Тип данных — строка.
--   **data.documentsList.transactionId** — идентификатор транзакции. Тип данных — целое 32 битное число.
--   **data.documentsList.downloadUrl** — ссылка на просмотр полученного документа. Тип данных — строка.
+-   **method** — contains information on the type of upload / request. The data type is a string.
+-   **apiVersion** — information about the API version. The data type is a string. 
+-   **params** — request parameters. The custom data type.
+-   **params.type** — request type. The data type is a string.
+-   **params.companyId** — subagency ID. The data type is Int32. 
+-   **params.orderId** — Order ID from Nemo1. The data type is Int32.
+-   **params.dateFrom/params.dateTo** — date range for which documents are submitted. The data type is a string.
+-   **params.requestId** — order identifier. The data type is a string.
+-   **data** — container with data about the object. The custom data type.
+-   **data.success** — sign of success. The data type is bool.
+-   **data.documentsList** — document container.The custom data type.
+-   **data.documentsList.type** — type of generated document. The data type is a string.
+-   **data.documentsList.name** — the name of the generated document. The data type is a string.
+-   **data.documentsList.transactionId** — transaction identifier. The data type is Int32.
+-   **data.documentsList.downloadUrl** — link to view the received document. The data type is a string.
 
-##### Пример
+##### Response example
 ```json
 {
     "method": "import",
