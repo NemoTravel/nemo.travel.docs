@@ -79,6 +79,42 @@ taxonomy:
 -   **ActualizedFlight** — содержит актуализированный перелёт. Тип данных — [Flight](/avia/common/flight).
 -   **FlightsByFareFamily** — содержит результат операции **GetFareFamilies**. Тип данных — массив [Flight](/avia/common/flight).
 -   **SubsidizedTariffs** — содержит результат операции **GetSubsidizedTariffs**. Тип данных — массив [Flight](/avia/common/flight).
+-   **ObjectForOperations** — содержит идентификатор объекта, для которого требуется выполнить допоперации. Тип данных - сложный. Аналогичен соответствующему элементу из запроса.
+-   **CheckAvailabilityResult** — результат проверки доступности перелёта для бронирования. Тип данных - сложный.
+-   **CheckAvailabilityResult.IsAvail** — признак доступности перелёта для бронирования. Тип данных - булевский.
+-   **CheckAvailabilityResult.SegmentsStatusInfo** — информация о статусах сегментов в случае если перелёт не доспступен для бронирования и операция выполнялась с помощью запроса взятия мест. Тип данных - строка.
+-   **GetFareRulesResult** — результат получения тарифных правил. Тип данных - сложный.
+-   **GetFareRulesResult.Rules** — массив тарифных правил, применяемых к данному объекту. Тип данных - сложный.
+-   **GetFareRulesResult.Rules.Rule** — тарифное правило. Тип данных - сложный.
+-   **GetFareRulesResult.Rules.Rule.Code** — код секции тарифного правила. Тип данных - строка.
+-   **GetFareRulesResult.Rules.Rule.Tariff** — код тарифа, к которому применяется данное правило. Тип данных - строка.
+-   **GetFareRulesResult.Rules.Rule.Name** — заголовок тарифного правила. Тип данных - строка.
+-   **GetFareRulesResult.Rules.Rule.RuleText** — текст тарифного правила. Тип данных - строка.
+-   **GetSeatMapResult** — Результат получения карты мест. Тип данных - сложный.
+-   **GetSeatMapResult.SeatMapSegments** — контейнер для карт мест по каждому из сегментов перелёта. Тип данных - сложный.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment** — карта мест для конкретного сегмента перелёта. Тип данных - сложный. Встречается 1 и более раз.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Num** — номер сегмента из перелёта. Тип данных - целое 32 битное число.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors** — контейнер для этажей в самолёте. Тип данных - сложный.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor** — карта мест для конкретного этажа в самолёте. Тип данных - сложный. Встречается 1 и более раз.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.IsUpper** — признак верхнего этажа в самолёте. Тип данных - булевский.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow** — информация по умолчанию для рядов мест на этаже самолёта. Тип данных - сложный.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Num** — номер ряда мест этажа в самолёте. Тип данных - целое 32 битное число.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats** — контейнер для информации о местах. Тип данных - сложный.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat** — информация о конкретном месте в самолёте. Тип данных - сложный. Встречается 1 и более раз.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Number** — номер места. Тип данных - строка.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Type** — положение места. Тип данных - строка. Возможные значения:
+    -   **W** — у окна;
+    -   **NPW** — у прохода (Near Passenger Way);
+    -   **M** — месту между W и NPW;
+    -   **любой тип + постфикс " NE"** — места не существует.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Characteristics** — дефолтная характеристика места. Тип данных - строка.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.IsFree** — признак что место свободно. Тип данных - bool.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Price** — цена места в случае если оно платное. Тип данных - [Money](/avia/common/money).
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Characteristics** - характеристика ряда. Тип данных - строка.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows** - контейнер для информации о рядах мест на этаже. Тип данных - сложный.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow** - информация о конкретном ряде мест на этаже в самолёте. Тип данных - сложный. Формат элемента аналогичен элементу DefaultRow
+-   **GetPriceResult** - результат получения актуальной цены перелёта. Тип данных - сложный.
+-   **GetPriceResult.Flight** - плоский перелёт v1.1. Тип данных - сложный.
 -   **FindAdditionalServicesResult** - результат получения списка доступных допуслуг. Тип данных - сложный. 
 -   **FindAdditionalServicesResult.Services** - список доступных допуслуг. Тип данных - массив. 
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS** - допуслуга. Тип данных - сложный.
@@ -104,6 +140,10 @@ taxonomy:
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.SegmentRef.Ref** - ссылка на сегмент. Тип данных - целое 32 битное число.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes** - типы пассажиров к которым применима данная цена. Тип данных - массив.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes.PassTypes** - тип пассажира. Тип - данных перечисление.
+-   **GetAllowedCCsResult** - результат получения списка кодов карт для оплаты ГДС процессингом. Тип данных - сложный.
+-   **GetAllowedCCsResult.AllowedCCs** - список кодов допустимых карт для оплаты брони ГДС процессингом. Тип данных - сложный.
+-   **GetAllowedCCsResult.AllowedCCs.Code** - код кредитной карты, которой можно оплатить указанную бронь с помощью ГДС процессинга. Тип данных - строка.
+-   **GetAllowedLoyaltyCardsResult** - массив тарифных правил, применяемых к данному перелёту. Тип данных - сложный.
 
 >>>> В результате выполнения запроса, будет получен перелен с новым ID, именно этот ID следует использовать в дальнейших операциях, например в бронировании.
 
