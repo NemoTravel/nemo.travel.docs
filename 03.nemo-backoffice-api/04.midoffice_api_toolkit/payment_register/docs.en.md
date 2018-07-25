@@ -1,27 +1,27 @@
 ---
-title: 'Регистрация заказа'
+title: 'Order registration'
 visible: true
 ---
 
-### Регистрация заказа
+### Order registration
 
-Запрос на регистрацию оплаты, в ответе приходят имена сформированных документов по заказу. Отправляется сразу после бронирования заказа в системе Nemo.travel
+Request for payment registration, in the response come the names of the formed documents for the order.Dispatched right after booking an order in Nemo.travel
 
 #### Запрос
 
--   **method** — содержит информацию о типе выгрузки/запроса. Тип данных — строка.
--   **apiVersion** — содержит информацию о версии API. Тип данных — строка. 
--   **params** — параметры объекта. Тип данных — сложный.
--   **params.type** — тип объекта. Тип данных — строка.
--   **params.companyId** — ID субагентства. Тип данных — целое 32 битное число.
--   **params.transactionId** — идентификатор транзакции из Немо1. Тип данных — целое 32 битное число. 
--   **params.orderId** — Id заказа из Немо1. Тип данных — целое 32 битное число.
--   **params.products** — идентификаторы оплачиваемых услуг. Тип данных — целое 32 битное число.
--   **params.requestId** — идентификатор заказа. Тип данных — строка.
--   **params.sign** — подпись запроса. Тип данных — строка.
--   **data** — стандартный набор полей заказа ( [см. Экспорт заказа](/nemo-backoffice-api/json_api/order_export)).
+-   **method** — contains information on the type of upload / request. The data type is a string.
+-   **apiVersion** — information about the API version. The data type is a string. 
+-   **params** — request parameters. The custom data type.
+-   **params.type** — object type. The data type is a string.
+-   **params.companyId** — subagency ID. The data type is Int32.
+-   **params.transactionId** — transaction identifier from Nemo1. The data type is Int32. 
+-   **params.orderId** — Order ID from Nemo1. The data type is Int32.
+-   **params.products** — identifiers of paid services. The data type is Int32.
+-   **params.requestId** — order identifier. The data type is a string.
+-   **params.sign** — request signature. The data type is a string.
+-   **data** — standard set of order fields ( [см. Экспорт заказа](/nemo-backoffice-api/json_api/order_export)).
 
-##### Пример
+##### Request example
 ```json
 {
     "method": "payment",
@@ -41,27 +41,27 @@ visible: true
 }
 ```
 
-#### Ответ
+#### Response parameters
 
-Включает в себя набор элементов в зависимости от вызванных операций в запросе:
+Includes a set of elements depending on the called operations in the request:
 
--   **method** — содержит информацию о типе выгрузки/запроса. Тип данных — строка.
--   **apiVersion** — содержит информацию о версии API. Тип данных — строка. 
--   **params** — параметры объекта. Тип данных — сложный.
--   **params.type** — тип объекта. Тип данных — строка.
--   **params.companyId** — ID субагентства. Тип данных — целое 32 битное число. 
--   **params.transactionId** — идентификатор транзакции. идентификатор транзакции из Немо1. Тип данных — целое 32 битное число.
--   **params.requestId** — идентификатор заказа. Тип данных — строка.
--   **data** — контейнер с данными об объекте выгрузки. Тип данных — сложный.
--   **data.success** — признак успешности. Тип данных — булевский.
--   **data.documentsList** — контейнер с данными о документах,Тип данных — сложный.
--   **data.documentsList.type** — тип сформированного документа. Тип данных — строка.
--   **data.documentsList.name** — имя сформированного документа. Тип данных — строка. 
--   **data.documentsList.transactionId** — идентификатор транзакции. Тип данных — целое 32 битное число.
--   **data.documentsList.downloadUrl** — ссылка на просмотр полученного документа. Тип данных — строка.
+-   **method** — contains information on the type of upload / request. The data type is a string.
+-   **apiVersion** — information about the API version. The data type is a string. 
+-   **params** — request parameters. The custom data type.
+-   **params.type** — object type. The data type is a string.
+-   **params.companyId** — subagency ID. The data type is Int32. 
+-   **params.transactionId** — transaction identifier from Nemo1. The data type is Int32.
+-   **params.requestId** — order identifier. The data type is a string.
+-   **data** — container with data about the object of unloading. The custom data type.
+-   **data.success** — sign of success. The data type is bool.
+-   **data.documentsList** — document container. The custom data type.
+-   **data.documentsList.type** — type of generated document. The data type is a string.
+-   **data.documentsList.name** — the name of the generated document. The data type is a string. 
+-   **data.documentsList.transactionId** — transaction identifier. The data type is Int32.
+-   **data.documentsList.downloadUrl** — link to view the received document. The data type is a string.
 
 
-##### Пример
+##### Response example
 ```json
 {
     "method": "payment",
