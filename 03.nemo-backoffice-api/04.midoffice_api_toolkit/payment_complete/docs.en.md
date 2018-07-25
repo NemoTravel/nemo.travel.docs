@@ -1,23 +1,23 @@
 ---
-title: 'Снятие средств со счета'
+title: 'Withdrawal of funds from the account'
 visible: true
 ---
 
-### Снятие средств со счета
+### Withdrawal of funds from the account
 
-Запрос на списание денежных средств с лицевого счета. 
+Request to debit money from personal account. 
 
-#### Запрос
+#### Request parameters
 
--   **method** — содержит информацию о типе запроса. Тип данных — строка.
--   **apiVersion** — содержит информацию о версии API. Тип данных — строка. 
--   **params** — параметры объекта. Тип данных — сложный.
--   **params.type** — тип объекта. Тип данных — строка.
--   **params.transactionId** — идентификатор транзакции из Немо1. Тип данных — целое 32 битное число.
--   **params.requestId** — идентификатор заказа. Тип данных — строка.
--   **params.sign** — подпись запроса. Тип данных — строка.
+-   **method** — contains information on the type of the request. The data type is a string.
+-   **apiVersion** — information about the API version. The data type is a string. 
+-   **params** — request parameters. The custom data type.
+-   **params.type** — object type. The data type is a string.
+-   **params.transactionId** — transaction identifier from Nemo1. The data type is Int32.
+-   **params.requestId** — order identifier. The data type is a string.
+-   **params.sign** — request signature. The data type is a string.
 
-##### Пример
+##### Request example
 ```json
 {
     "method": "payment",
@@ -31,18 +31,18 @@ visible: true
 }
 ```
 
-#### Ответ
+#### Response parameters
 
--   **method** — содержит информацию о типе запроса. Тип данных — строка.
--   **apiVersion** — содержит информацию о версии API. Тип данных — строка. 
--   **params** — параметры объекта. Тип данных — сложный.
--   **params.type** — тип объекта. Тип данных — строка.
--   **params.transactionId** — идентификатор транзакции из Немо1. Тип данных — целое 32 битное число.
--   **params.requestId** — идентификатор заказа. Тип данных — строка.
--   **data** — контейнер с данными. Тип данных — сложный. 
--   **data.success** — признак успешности. Тип данных — булевский.
+-   **method** — contains information on the type of the request. The data type is a string.
+-   **apiVersion** — information about the API version. The data type is a string. 
+-   **params** — request parameters. The custom data type.
+-   **params.type** — object type. The data type is a string.
+-   **params.transactionId** — transaction identifier from Nemo1. The data type is Int32.
+-   **params.requestId** — order identifier. The data type is a string.
+-   **data** — container with data. The custom data type. 
+-   **data.success** — sign of success. The data type is bool.
 
-##### Пример
+##### Response example
 ```json
 {
     "method": "payment",
