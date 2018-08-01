@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-### RefundTicket_1_1
+### RefundTicket
 
 Used for the tickets and EMD refund while its presence in the booking.
 
