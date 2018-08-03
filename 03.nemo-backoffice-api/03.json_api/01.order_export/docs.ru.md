@@ -137,6 +137,9 @@ taxonomy:
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].type** — тип таксы. Тип данных — строка.
 * **data.products.ID_EXT_N** — контейнер с информацией о дополнительных услугах. Тип данных — сложный.
 * **data.products.ID_EXT_N.type** — тип дополнительной услуги. Тип данных — строка.
+* **data.products.ID_EXT_N.insurances** - массив из контейнеров в которых информация о пассажире и его номере страховки. Тип данных - Сложный.
+* **data.products.ID_EXT_N.insurances.policyNumber** - номер электронного страхового документа. Тип данных — строка.
+* **data.products.ID_EXT_N.insurances.passengerName** - фамилия и имя пассажира, кому принадлежит страховой номер. Тип данных — строка.
 * **data.products.ID_TRN_N** — контейнер с информацией об N-м заказе Тип данных — сложный.
 * **data.products.ID_TRN_N.info** — контейнер с информацией о данном заказе. Тип данных — сложный.
 * **data.products.ID_TRN_N.info.nemo** — контейнер с информацией по заказу из Nemo.Travel. Тип данных — сложный.
@@ -258,6 +261,11 @@ taxonomy:
 * **data.documents.ID_TKT_N.info** — контейнер с дополнительной информацией о данном N-м электронном билете. Тип данных — сложный.
 * **data.documents.ID_TKT_N.info.pricingInfos** — список оценок привязанных к данному N-му электронному билету. Тип данных — массив строк.
 * **data.documents.ID_TKT_N.info.endorsements** — эндорсменты привязанные к данному N-му электронному билету. Тип данных — строка.
+* **data.documents.ID_EMD_N** - контейнер с информацией о EMD (Electronic Miscellaneous Document) по N-ой дополнительной услуге. Тип данных — сложный.
+* **data.documents.ID_EMD_N.number** — номер EMD. Тип данных — строка.
+* **data.documents.ID_EMD_N.type** — тип EMD. Тип данных — строка.
+* **data.documents.ID_EMD_N.passenger** — идентификатор пассажира (ID_PAS_N) к которому привязан данный N-й EMD. Тип данных — строка.
+* **data.documents.ID_EMD_N.product** — идентификатор услуги к которой привязан данный N-й EMD. Тип данных — строка.
 * **data.сurrencyRates** — список курсов валют. Тип данных — сложный.
 * **data.сurrencyRates.[N]** — контейнер с информацией об N-й валюте. Тип данных — сложный.
 * **data.сurrencyRates.[N].currencyCode** — код N-й валюты. Тип данных — строка.
