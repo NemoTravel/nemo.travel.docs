@@ -261,11 +261,16 @@ taxonomy:
 * **data.documents.ID_TKT_N.info** — контейнер с дополнительной информацией о данном N-м электронном билете. Тип данных — сложный.
 * **data.documents.ID_TKT_N.info.pricingInfos** — список оценок привязанных к данному N-му электронному билету. Тип данных — массив строк.
 * **data.documents.ID_TKT_N.info.endorsements** — эндорсменты привязанные к данному N-му электронному билету. Тип данных — строка.
-* **data.documents.ID_EMD_N** - контейнер с информацией о EMD (Electronic Miscellaneous Document) по N-ой дополнительной услуге. Тип данных — сложный.
+* **data.documents.ID_EMD_N** — контейнер с информацией о EMD (Electronic Miscellaneous Document) по N-ой дополнительной услуге. Тип данных — сложный.
 * **data.documents.ID_EMD_N.number** — номер EMD. Тип данных — строка.
 * **data.documents.ID_EMD_N.type** — тип EMD. Тип данных — строка.
 * **data.documents.ID_EMD_N.passenger** — идентификатор пассажира (ID_PAS_N) к которому привязан данный N-й EMD. Тип данных — строка.
 * **data.documents.ID_EMD_N.product** — идентификатор услуги к которой привязан данный N-й EMD. Тип данных — строка.
+* **data.documents.ID_PLC_N** — контейнер с информацией о стаховом полисе. Тип данных — сложный.
+* **data.documents.ID_PLC_N.number** — номер страхового полиса. Тип данных — строка.
+* **data.documents.ID_PLC_N.type** — тип страхового полиса. Тип данных — строка.
+* **data.documents.ID_PLC_N.passenger** — идентификатор пассажира (ID_PAS_N) к которому привязан данный N-й электронный билет. Тип данных — строка.
+* **data.documents.ID_PLC_N.product** — идентификатор услуги к которой привязан данный N-й электронный билет. Тип данных — строка.
 * **data.сurrencyRates** — список курсов валют. Тип данных — сложный.
 * **data.сurrencyRates.[N]** — контейнер с информацией об N-й валюте. Тип данных — сложный.
 * **data.сurrencyRates.[N].currencyCode** — код N-й валюты. Тип данных — строка.
