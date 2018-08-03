@@ -17,8 +17,8 @@ Used for the tickets and EMD refund while its presence in the booking.
 - ** Passengers ** - The number of passengers in the reservation,  for which is needed to receive the refund information. The data type is an array.
 - ** Passengers.Ref ** -  The Passenger number in the booking. The data type is an integer 32 bit number.
 - ** Involuntary ** - A sign of the involuntary refund (Optional). The data type is boolean.
-- ** SegmentsToRefund ** - Segments for the refund. The data type is an array.
-- ** SegmentsToRefund.Ref ** - The segment for he refund. The data type is an integer 32 bit number.
+<!-- - ** SegmentsToRefund ** - Segments for the refund. The data type is an array.
+- ** SegmentsToRefund.Ref ** - The segment for he refund. The data type is an integer 32 bit number.-->
 
 #### Response
 
