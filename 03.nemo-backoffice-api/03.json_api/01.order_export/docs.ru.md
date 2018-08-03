@@ -624,6 +624,7 @@ taxonomy:
 				 "passenger":"ID_PAS_1",
 				 "product":"ID_EXT_3"
             },
+            //В режиме "Разрешить выбирать сразу несколько страховых продуктов" - Выключено
             "ID_PLC_2": {
             	 "number":"Z694.198TEST.F26851608",
                  "type":"alphapolicy",
