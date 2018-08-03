@@ -484,9 +484,14 @@ taxonomy:
             "ID_EXT_2": {
 				"type":"AlphaInsurance",
 				"insurances":[	{"policyNumber":"Z694.198TEST.F26853238","passengerName":"PETROV PETR"},
-								{"policyNumber":"Z694.198.C26853239","passengerName":"PETROV PETR"}
-			 				 ]
+								{"policyNumber":"Z694.198.C26853239","passengerName":"PETROV PETR"}      ]
 			},
+            "ID_EXT_3": {
+            	"type":"ErvInsurance"
+            },
+            "ID_EXT_4": {
+            	"type":"AeroExpress"
+            }
         },
         "price": {
             "amount": "1626.00",
@@ -501,6 +506,18 @@ taxonomy:
                             "currency": "RUB"
                         },
                         "ID_EXT_1": {
+                            "amount": "0.00",
+                            "currency": "RUB"
+                        },
+                        "ID_EXT_2": {
+                            "amount": "0.00",
+                            "currency": "RUB"
+                        },
+                        "ID_EXT_3": {
+                            "amount": "0.00",
+                            "currency": "RUB"
+                        },
+                        "ID_EXT_4": {
                             "amount": "0.00",
                             "currency": "RUB"
                         }
@@ -588,19 +605,19 @@ taxonomy:
             	 "number":"458578",
 				 "type":"aeroexpressticket",
 				 "passenger":"ID_PAS_1",
-				 "product":"ID_EXT_1"
+				 "product":"ID_EXT_4"
             },
             "ID_EMD_1": {
             	 "number":"23K6165366231",
 				 "type":"aeroexpressemd",
 				 "passenger":"ID_PAS_1",
-				 "product":"ID_EXT_1"
+				 "product":"ID_EXT_4"
             },
             "ID_PLC_1": {
             	 "number":301425121,
 				 "type":"ervpolicy",
 				 "passenger":"ID_PAS_1",
-				 "product":"ID_EXT_1"
+				 "product":"ID_EXT_3"
             },     
 		},
 	},
