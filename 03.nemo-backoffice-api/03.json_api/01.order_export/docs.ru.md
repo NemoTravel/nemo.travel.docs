@@ -137,7 +137,7 @@ taxonomy:
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].type** — тип таксы. Тип данных — строка.
 * **data.products.ID_EXT_N** — контейнер с информацией о дополнительных услугах. Тип данных — сложный.
 * **data.products.ID_EXT_N.type** — тип дополнительной услуги. Тип данных — строка.
-* **data.products.ID_EXT_N.insurances** — массив из страховых услуг, в которых содержится информация о пассажире и его номере страховки. Тип данных - Сложный.
+* **data.products.ID_EXT_N.insurances** — массив из страховых услуг, в которых содержится информация о пассажире и его номере страховки. Работает в режиме "Разрешить выбирать сразу несколько страховых продуктов" - Включено. Тип данных - Сложный.
 * **data.products.ID_EXT_N.insurances.policyNumber** — номер электронного страхового документа. Тип данных — строка.
 * **data.products.ID_EXT_N.insurances.passengerName** — фамилия и имя пассажира, кому принадлежит страховой номер. Тип данных — строка.
 * **data.products.ID_TRN_N** — контейнер с информацией об N-м заказе Тип данных — сложный.
@@ -481,6 +481,7 @@ taxonomy:
             "ID_EXT_1": {
                 "type": "GDS service"
             },
+            //В режиме "Разрешить выбирать сразу несколько страховых продуктов" - Включено
             "ID_EXT_2": {
 				"type":"AlphaInsurance",
 				"insurances":[	{"policyNumber":"Z694.198TEST.F26853238","passengerName":"PETROV PETR"},
@@ -491,6 +492,10 @@ taxonomy:
             },
             "ID_EXT_4": {
             	"type":"AeroExpress"
+            },
+            //В режиме "Разрешить выбирать сразу несколько страховых продуктов" - Выключено
+            "ID_EXT_5": {
+				"type":"AlphaInsurance"
             }
         },
         "price": {
@@ -618,7 +623,13 @@ taxonomy:
 				 "type":"ervpolicy",
 				 "passenger":"ID_PAS_1",
 				 "product":"ID_EXT_3"
-            },     
+            },
+            "ID_PLC_2": {
+            	 "number":"Z694.198TEST.F26851608",
+                 "type":"alphapolicy",
+                 "passenger":"ID_PAS_1",
+                 "product":"ID_EXT_1"
+            }
 		},
 	},
         },
