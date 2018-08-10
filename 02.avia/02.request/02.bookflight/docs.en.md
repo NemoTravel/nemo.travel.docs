@@ -53,7 +53,7 @@ An operation to create a flight booking working with a 2.0 booking structure.
 
 #### Request
 
--  **FlightID** - The flight ID, which will be booked. The data type is a string.
+-  **FlightID** - The flight ID, which will be booked. It supports the format of two flight IDs with the delimiter «+». This format will allow to book compound flight from different searches and GDS. The data type is a string.
 -  **Travelers** - travelers for whom a flight reservation is created. The data type is an array[Traveller](/avia/common/traveller).
 - **DataItems** - content to create the booking (optional). The data type is an array of [DataItem](/avia/common/dataitem).
 - **AdditionalActions** - An additional actions to be performed with the flight reservation (optional). The custom data type.
