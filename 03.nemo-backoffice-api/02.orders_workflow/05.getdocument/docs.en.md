@@ -8,7 +8,7 @@ This request is designed to get the document from the order in Nemo.travel syste
 
 #### Request parameters
 * **OrderID** - the order number from the back office of Nemo.travel. To get the parameter value for an order, you should run a GetOrder request with the parameters FlightsBookingID (Booking ID from Nemo Connect).
-* **DocType** - the type of the requested document, possible values: ItinReceiptNemo - itinerary in Nemo format.
+* **DocType** - the type of the requested document, possible values: ItinReceiptNemo - avia itinerary in Nemo format. RailVoucher - A travel document at the railway. RailMCF - Receipt of various fees.
 * **NemoOneAuthToken** - API key, issued by Nemo.travel staff (out-of-date parameter, recommended to use AuthToken).
 * **AuthToken** - API key, issued by Nemo.travel staff.
 * **UserID** - User ID in the Nemo.travel system, issued by Nemo.travel staff.
