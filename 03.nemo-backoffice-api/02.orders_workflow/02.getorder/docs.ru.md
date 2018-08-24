@@ -15,7 +15,7 @@ taxonomy:
 #### Параметры запроса
 * **OrderID** - номер заказа в бэк-офисе Nemo.travel. Если этот параметр неизвестен, его можно получить, выполнив текущий запрос GetOrder с указанием параметра FlightsBookingID (описание представлено ниже).
 * **FlightsBookingID** - ID авиа бронирования Nemo Connect, значение возвращается в ответе на запрос [BookFlight](/avia/request/bookflight) параметре ID.
-* **TransBookingID** - ID ЖД бронирования Nemo Connect, значение возвращается в ответе на запрос BookTrain параметре BookID.
+* **TrainsBookingID** - ID ЖД бронирования Nemo Connect, значение возвращается в ответе на запрос BookTrain параметре BookID.
 * **CallbackUrl** - адрес, на который будет возвращен callback от Nemo.travel с информацией о статусе заказа при его изменении. Формат: http(s)://domain.
 * **PaymentBackRedirectUrl** -  URL адрес для дальнейшего редиректа после оплаты. Формат: http(s)://domain/query?parameters.
 * **PaymentBackRedirectUrlFailure** - URL адрес для редиректа после неуспешный оплаты (необязательный, если не задан, будет использован PaymentBackRedirectUrl)
