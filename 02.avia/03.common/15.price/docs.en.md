@@ -117,7 +117,7 @@ Contains the full information about the price and its formation for the reservat
 -   **PassengerTypePrice.FareCalc** - The line for calculating the price. The data type is a string.
 -   **PassengerTypePrice.Markup** - The tax. The data type is [Money](/avia/common/money).
 -   **PassengerTypePrice.AgencyFare** - Price of the tariff in the agency currency. The data type is [Money](/avia/common/money).
--   **PassengerTypePrice.TotalAgencyFare** - The amount tariff and charge in the agency currency. The data type is [Money](/avia/common/money).
+-   **PassengerTypePrice.TotalAgencyFare** - The amount tariff and tax in the agency currency. The data type is [Money](/avia/common/money).
 -   **PassengerTypePrice.ChargeBreakdown** - Charge breakdown. The data type is - array ChargeBreakdown.
 -   **ChargeBreakdown** - Contains a breakdown of the charge from pricing on passenger, the amount of rounding when converting to a currency of the agency.
 -   **ChargeBreakdown.Charge** - The container for charge. The custom data type.
