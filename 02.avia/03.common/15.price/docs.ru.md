@@ -116,12 +116,13 @@ Price
 -   **PassengerTypePrice.Markup** — Сбор. Тип данных - [Money](/avia/common/money).
 -   **PassengerTypePrice.AgencyFare** — Cумма тарифа в валюте агентства. Тип данных — [Money](/avia/common/money).
 -   **PassengerTypePrice.TotalAgencyFare** — Cумма тарифа и такс в валюте агентства. Тип данных — [Money](/avia/common/money).
--   **PassengerTypePrice.ChargeBreakdown** — Содерджит разбивку составляющих сбора из ценообразования на пассажира, а также величину округления при конвертации в валюту агентства.
--   **PassengerTypePrice.ChargeBreakdown.Charge** — Информация о конкретном сборе, величине округления. Тип данных — сложный.
--   **PassengerTypePrice.ChargeBreakdown.Charge.Amount** — Абсолютное значение сбора, округления. Тип данных — дробное число.
--   **PassengerTypePrice.ChargeBreakdown.Charge.Currency** — Код валюты агентства. Тип данных — строка. 
--   **PassengerTypePrice.ChargeBreakdown.Charge.RuleID** — Идентификатор сработавшего правила ценообразования. Тип данных — целое число.
--   **PassengerTypePrice.ChargeBreakdown.Charge.Type** — Тип сбора. Тип данных — перечисление, возможные значения: 
+-   **PassengerTypePrice.ChargeBreakdown** - Разбивка сборов. Тип данных - массив ChargeBreakdown.
+-   **ChargeBreakdown** — Содерджит разбивку составляющих сбора из ценообразования на пассажира, а также величину округления при конвертации в валюту агентства.
+-   **ChargeBreakdown.Charge** — Информация о конкретном сборе, величине округления. Тип данных — сложный.
+-   **ChargeBreakdown.Charge.Amount** — Абсолютное значение сбора, округления. Тип данных — дробное число.
+-   **ChargeBreakdown.Charge.Currency** — Код валюты агентства. Тип данных — строка. 
+-   **ChargeBreakdown.Charge.RuleID** — Идентификатор сработавшего правила ценообразования. Тип данных — целое число.
+-   **ChargeBreakdown.Charge.Type** — Тип сбора. Тип данных — перечисление, возможные значения: 
     - **PriceRule** - Сбор из таблицы ценообразования;
     - **TaxRound** - Величина округления, полученная при конвертации стоимости такс в валюту агентства;
     - **FareRound** - Величина округления, полученная при конвертации стоимости тарифа в валюту агентства;
