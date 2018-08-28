@@ -29,6 +29,8 @@ Price
     -   PenaltiesApplies
 -   **PricePart.PrivateFareInd** - Признак наличия приватных тарифов при формировании цены. Тип данных - bool.
 -   **PricePart.PassengerTypePriceBreakdown** - ВП. Тип данных - массив PassengerTypePrice.
+-   **PricePart.AgencyMarkup** - Сбор агентства на весь перелет. Тип данных - [Money](/avia/common/money).
+-   **PricePart.ChargeBreakdown** - Разбивка составляющих сбора по правилам ценообразования. Тип данных — [ChargeBreakdown](/avia/common/chargebreakdown).
 -   **PricePart.PricingDebug.RulesDebugInfo** - Список результатов проверки правил ценообразования. Тип данных - сложный.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData** - Результат проверки правила ценообразования. Тип данных - сложный.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ID** - ID правила. Тип данных - целое 32 битное число.
@@ -126,6 +128,6 @@ Price
     - **PriceRule** - Сбор из таблицы ценообразования;
     - **TaxRound** - Величина округления, полученная при конвертации стоимости такс в валюту агентства;
     - **FareRound** - Величина округления, полученная при конвертации стоимости тарифа в валюту агентства;
-    - **MarkupRound** - Величина округления сбора;
+    - **MarkupRound** - Величина округления сбора.
 
 
