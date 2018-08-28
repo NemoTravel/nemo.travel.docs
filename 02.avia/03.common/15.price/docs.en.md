@@ -29,6 +29,8 @@ Contains the full information about the price and its formation for the reservat
     -   PenaltiesApplies
 -   **PricePart.PrivateFareInd** - A sign of the presence of private faresin the formation of prices. The data type is bool.
 -   **PricePart.PassengerTypePriceBreakdown** - VI. The data type is the PassengerTypePrice array.
+-   **PricePart.AgencyMarkup** - The amount of charge for the whole fight. The data type is [Money](/avia/common/money).
+-   **PricePart.ChargeBreakdown** -  Contains a breakdown of charg from pricing rules.  The data type is [ChargeBreakdown](/avia/common/chargebreakdown).
 -   **PricePart.PricingDebug.RulesDebugInfo** - The list of results of checking pricing rules. The custom data type.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData** - The result of checking the pricing rule. The custom data type.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ID** - The rule ID. The data type is int32.
@@ -114,3 +116,15 @@ Contains the full information about the price and its formation for the reservat
 -   **Tariff.IsSystemTransfer** - A sign of the system transfer. The data type is bool.
 -   **PassengerTypePrice.FareCalc** - The line for calculating the price. The data type is a string.
 -   **PassengerTypePrice.Markup** - The tax. The data type is [Money](/avia/common/money).
+-   **PassengerTypePrice.AgencyFare** - Price of the tariff in the agency currency. The data type is [Money](/avia/common/money).
+-   **PassengerTypePrice.TotalAgencyFare** - The amount tariff and charge in the agency currency. The data type is [Money](/avia/common/money).
+-   **PassengerTypePrice.ChargeBreakdown** - Charge breakdown. The data type is - array ChargeBreakdown.
+-   **ChargeBreakdown** - Contains a breakdown of the charge from pricing on passenger, the amount of rounding when converting to a currency of the agency.
+-   **ChargeBreakdown.Charge** - The container for charge. The custom data type.
+-   **ChargeBreakdown.Charge.Amount** - The absolute value of the charge, roundings. The data type is a fractional number.
+-   **ChargeBreakdown.Charge.RuleID** - The Rule ID. The data type is an integer.
+-   **ChargeBreakdown.Charge.Type** - The type of charge. Data type - enumeration, possible values:
+    - **PriceRule**  - Сharge from the pricing table;
+    - **TaxRound** - The rounding amount received by converting value the tax to agency currency;
+    - **FareRound** - The rounding amount received by converting value the tariff to agency currency;
+    - **MarkupRound** - rounding value of the markup;
