@@ -127,4 +127,4 @@ Contains the full information about the price and its formation for the reservat
     - **PriceRule**  - Сharge from the pricing table;
     - **TaxRound** - The rounding amount received by converting value the tax to agency currency;
     - **FareRound** - The rounding amount received by converting value the tariff to agency currency;
-    - **MarkupRound** - rounding value of the markup;
+    - **MarkupRound** - rounding value of the markup.
