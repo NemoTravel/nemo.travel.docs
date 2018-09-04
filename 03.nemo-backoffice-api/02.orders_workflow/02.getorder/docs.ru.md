@@ -46,7 +46,18 @@ taxonomy:
 * **Transaction.MoneyPaid** - сумма, которая уже была внесена в рамках данной транзакции. (Также содержит параметр Currency - валюта, в которой указана стоимость услуги)
 * **Transaction.PaymentDateTime** - дата и время поступления оплаты по платежной транзакции. Формат: YYYY-MM-DDTHH:MM:SS
 * **Transaction.CreateDateTime** - дата и время создания платежной транзакции. Формат: YYYY-MM-DDTHH:MM:SS
-
+* **OrderID** - ID заказа в BackOffice API
+* **Services** - контейнер с услугами 
+* **Services.Service** контейнер с определенной услугой
+* **Services.Service.Train** - контейнер с ID бронирования поезда.
+* **Services.Service.Train.TrainsBookingID** - ID бронирования поезда 
+* **PriceBreakdown** - контейнер с ценами
+* **PriceBreakdown.Price** - цена 
+* **PriceBreakdown.Price.Currency** - валюта для цены
+* **PriceBreakdown.Price.Parts** - контейнер с ценовыми категориями
+* **PriceBreakdown.Parts.Part.Type** - название ценовогой категории
+* **PriceBreakdown.Parts.Part.Price** - цена категории 
+* 
 #### Пример запроса
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="***">
@@ -216,6 +227,59 @@ taxonomy:
                   <PaymentMethodId>2340</PaymentMethodId>
                </Transaction>
             </PaymentTransactions>
+         </ResponseBin>
+      </ns1:GetOrderResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+```
+#### Пример ответа для ЖД перевозки
+```xml
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://sirena.mlsd.ru/nemoflights/?version%3D2.0%26for%3DOrders">
+   <SOAP-ENV:Body>
+      <ns1:GetOrderResponse>
+         <ResponseBin>
+            <OrderID>476763</OrderID>
+            <Services>
+               <Service>
+                  <Train>
+                     <TrainsBookingID>158114</TrainsBookingID>
+                  </Train>
+               </Service>
+            </Services>
+            <PriceBreakdown Type="Order">
+               <Price Currency="RUB">859.9</Price>
+               <Parts>
+                  <Part Type="Service">
+                     <Price Currency="RUB">859.9</Price>
+                     <Parts>
+                        <Part Type="Train">
+                           <Price Currency="RUB">859.9</Price>
+                           <Parts/>
+                        </Part>
+                        <Part Type="Upsale">
+                           <Price Currency="RUB">0</Price>
+                           <Parts/>
+                        </Part>
+                     </Parts>
+                  </Part>
+                  <Part Type="Charge">
+                     <Price Currency="RUB">0</Price>
+                     <Parts>
+                        <Part Type="AgencyCharge">
+                           <Price Currency="RUB">0</Price>
+                           <Parts/>
+                        </Part>
+                        <Part Type="PaymentCharge">
+                           <Price Currency="RUB">0</Price>
+                           <Parts/>
+                        </Part>
+                     </Parts>
+                  </Part>
+               </Parts>
+            </PriceBreakdown>
+            <OrderStatus>Booked</OrderStatus>
+            <PaymentStatus>NotPaid</PaymentStatus>
+            <PaymentTransactions/>
          </ResponseBin>
       </ns1:GetOrderResponse>
    </SOAP-ENV:Body>
