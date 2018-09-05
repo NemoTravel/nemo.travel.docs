@@ -77,12 +77,12 @@ taxonomy:
 Включает в себя набор элементов в зависимости от вызванных операций в запросе:
 
 -   **ActualizedFlight** — содержит актуализированный перелёт. Тип данных — [Flight](/avia/common/flight).
+-   **ActualizedFlight.Segments.Segment.SupplierInfo** — информация о статусах сегментов в случае если перелёт не доступен для бронирования и операция выполнялась с помощью запроса взятия мест. Тип данных - строка. Поддерживается у GalileoUapi, Sabre, Amadeus, Galileo.
 -   **FlightsByFareFamily** — содержит результат операции **GetFareFamilies**. Тип данных — массив [Flight](/avia/common/flight).
 -   **SubsidizedTariffs** — содержит результат операции **GetSubsidizedTariffs**. Тип данных — массив [Flight](/avia/common/flight).
 -   **ObjectForOperations** — содержит идентификатор объекта, для которого требуется выполнить допоперации. Тип данных - сложный. Аналогичен соответствующему элементу из запроса.
 -   **CheckAvailabilityResult** — результат проверки доступности перелёта для бронирования. Тип данных - сложный.
 -   **CheckAvailabilityResult.IsAvail** — признак доступности перелёта для бронирования. Тип данных - булевский.
--   **CheckAvailabilityResult.Segments.Segment.SupplierInfo** — информация о статусах сегментов в случае если перелёт не доступен для бронирования и операция выполнялась с помощью запроса взятия мест. Тип данных - строка. Поддерживается GalileoUapi, Sabre, Amadeus, Galileo.
 -   **GetFareRulesResult** — результат получения тарифных правил. Тип данных - сложный.
 -   **GetFareRulesResult.Rules** — массив тарифных правил, применяемых к данному объекту. Тип данных - сложный.
 -   **GetFareRulesResult.Rules.Rule** — тарифное правило. Тип данных - сложный.
