@@ -61,6 +61,12 @@ Price
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info.Result** - Результат проверки параметра. Тип данных - булевский.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CorpRule** - Признак правила для предоставления скидки по тур. коду конкретным клиентам. Тип данных — булевский.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BestCorpRule** - Признак наиболее подходящего правила для предоставления скидки по тур. коду. Тип данных — булевский.
+-   **PricePart.SubAgentMarkup** - Суммарный сбор субагента в валюте пакета реквизитов. Тип данных - [Money](/avia/common/money).
+-   **PricePart.SubAgentChargeBreakdown** - Разбивка сбора субагента в валюте субагентства. 
+-   **SubAgentChargeBreakdown.Charge** — Информация о конкретном сборе. Тип данных — сложный.
+-   **SubAgentChargeBreakdown.Charge.Amount** — Абсолютное значение сбора. Тип данных — дробное число.
+-   **SubAgentChargeBreakdown.Charge.Currency** — Код валюты субагентства. Тип данных — строка. 
+-   **SubAgentChargeBreakdown.Charge.RuleID** — Идентификатор сработавшего правила. Тип данных — целое число.
 -   **FareFamiliesDescription** — содержит описания семейств тарифов, присутствующих в перелёте. Тип данных — [Description](/avia/common/ff-description).
 -   **PassengerTypePrice** - Формирование цены на определённый тип путешественника. Тип данных - сложный.
 -   **PassengerTypePrice.TravellerRef** - Ссылка на путешественников. Тип данных - [Reflist](/avia/common/reflist).
