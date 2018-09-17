@@ -55,7 +55,12 @@ taxonomy:
 * **PriceBreakdown.Price** - цена 
 * **PriceBreakdown.Price.Currency** - валюта для цены
 * **PriceBreakdown.Price.Parts** - контейнер с ценовыми категориями
-* **PriceBreakdown.Parts.Part.Type** - название ценовогой категории
+* **PriceBreakdown.Parts.Part.Type** - тип ценовогой категории
+* **PriceBreakdown.Parts.Part.Type.Charge** - общий сбор
+* **PriceBreakdown.Parts.Part.Type.Upsale** - дополнительные услуги
+* **PriceBreakdown.Parts.Part.Type.AgencyCharge** -  агенстский сбор 
+* **PriceBreakdown.Parts.Part.Type.PaymentCharge** - сбор платежного шлюза
+* **PriceBreakdown.Parts.Part.Type.Train** - железнодорожная перевозка
 * **PriceBreakdown.Parts.Part.Price** - цена категории 
 * 
 #### Пример запроса
