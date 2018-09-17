@@ -48,9 +48,11 @@ taxonomy:
 * **Transaction.CreateDateTime** - дата и время создания платежной транзакции. Формат: YYYY-MM-DDTHH:MM:SS
 * **OrderID** - ID заказа в BackOffice API
 * **Services** - контейнер с услугами 
-* **Services.Service** контейнер с определенной услугой
-* **Services.Service.Train** - контейнер с ID бронирования поезда.
+* **Services.Service** - контейнер определяющий ЖД или авиа 
+* **Services.Service.Train** - контейнер с ID бронирования поезда
 * **Services.Service.Train.TrainsBookingID** - ID бронирования поезда 
+* **Services.Service.Flight** -  контейнер с ID бронирования авиабилета 
+* **Services.Service.Flight.FlightsBookingID** - ID бронирования авиабилета 
 * **PriceBreakdown** - контейнер с ценами
 * **PriceBreakdown.Price** - цена 
 * **PriceBreakdown.Price.Currency** - валюта для цены
