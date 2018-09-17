@@ -59,6 +59,7 @@ taxonomy:
 * **PriceBreakdown.Parts.Part.Type.Charge** - общий сбор
 * **PriceBreakdown.Parts.Part.Type.Upsale** - сумма за все возможные дополнительные услуги
 * **PriceBreakdown.Parts.Part.Type.Upsale.GdsService** - дополнительные услуги авиакомпании
+* **PriceBreakdown.Parts.Part.Type.Upsale.ServicePack** - сервисные пакеты
 * **PriceBreakdown.Parts.Part.Type.AgencyCharge** -  агенстский сбор 
 * **PriceBreakdown.Parts.Part.Type.PaymentCharge** - сбор платежного шлюза
 * **PriceBreakdown.Parts.Part.Type.Train** - железнодорожная перевозка
