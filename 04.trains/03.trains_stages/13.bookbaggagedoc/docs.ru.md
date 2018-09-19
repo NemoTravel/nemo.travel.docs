@@ -11,7 +11,7 @@ title: 'Бронирование багажа'
 -   **BaggagesOfTickets.BaggagesOfTicket.BlankID** - ИД бланка билета, к которому будут привязаны брони на багаж. Тип данных - строка.
 -   **BaggagesOfTickets.BaggagesOfTicket.BaggageItems** - Список желаемых багажных броней. Тип данных - массив элементов BaggageItem.
 -   **BaggagesOfTickets.BaggagesOfTicket.BaggageItems.BaggageItem** - Информация о багаже. Тип данных - сложный.
--   **BaggagesOfTickets.BaggagesOfTicket.BaggageItems.BaggageItem.Kind** - Вид багажа. Тип данных - перечисление. Возможные значения: аналогичны параметру TransportDoc.Kind из ответа на запрос бронирования мест в поезде.
+-   **BaggagesOfTickets.BaggagesOfTicket.BaggageItems.BaggageItem.Kind** - Вид багажа. Тип данных - перечисление. Возможные значения: аналогичны параметру TransportDoc.Kind из ответа на [запрос бронирования мест в поезде](/trains/trains_stages/booktrain).
 -   **BaggagesOfTickets.BaggagesOfTicket.BaggageItems.BaggageItem.Weight** - Вес багажа в килограммах. Тип данных - целое 32-битное число.
 
 ##### Пример запроса (XML)
@@ -57,4 +57,4 @@ title: 'Бронирование багажа'
 
 #### Ответ
 
-Структура ответа аналогична ответу на запрос бронирования мест в поезде.
+Структура ответа аналогична ответу на [запрос бронирования мест в поезде](/trains/trains_stages/booktrain).
