@@ -57,7 +57,7 @@ taxonomy:
 * **PriceBreakdown.Price** - цена 
 * **PriceBreakdown.Price.Currency** - валюта для цены
 * **PriceBreakdown.Parts** - контейнер с ценовыми категориями
-* **PriceBreakdown.Parts.Part.Type** - тип. Возможные значения: **Flight** - цена за перелет; **Upsale** - сумма за все возможные дополнительные услуги, **ServicePack**-сервисные пакеты; **GdsService**- дополнительные услуги авиакомпании; **AgencyCharge** - агенстский сбор; **PaymentCharge** - сбор платежного шлюза; **Charge**- общий сбор; **Service** |**Order** - общая цена за заказ и услуги минус сборы.
+* **PriceBreakdown.Parts.Part.Type** - тип. Возможные значения: **Train** - цена за ж/д перевозку **Flight** - цена за перелет; **Upsale** - сумма за все возможные дополнительные услуги, **ServicePack**-сервисные пакеты; **GdsService**- дополнительные услуги авиакомпании; **AgencyCharge** - агенстский сбор; **PaymentCharge** - сбор платежного шлюза; **Charge**- общий сбор; **Order** - общая цена за заказ и услуги минус сборы.
 * **PriceBreakdown.Parts.Part.Price.Parts** - имеет такую же структуру как и **PriceBreakdown.Parts**
 * 
 #### Пример запроса
