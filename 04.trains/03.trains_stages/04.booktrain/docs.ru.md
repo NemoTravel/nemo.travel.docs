@@ -165,6 +165,9 @@ title: 'Бронирование мест в поезде'
 -   **RefundCode** - Код возврата. Тип данных - строка.
 -   **BookID** - Идентификатор брони. Тип данных - целое 32-битное число.
 -   **Passengers** - Пассажиры брони.
+-   **ReturnTrainTariffCode** -  Для поезда обратно, код тарифа поезда. Тип данных - строка.
+-   **ReturnTrainBookCode** - Для поезда обратно, код возврата. Тип данных - строка. Аналогичен параметру RefundCode.
+-   **ReturnTrainRefundCode** - Для поезда обратно, код брони в системе поставщика. Тип данных - строка. Аналогичен параметру BookCode.
 -   **Passengers.BookedPerson** - описание. Тип данных - сложный (Содержит все свойства элемента Person из [общих элементов](/trains/elements) + дополнительные свойства).
 -   **Passengers.BookedPerson.Price** - Стоимость всех билетов пассажира. Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
 -   **Passengers.BookedPerson.Tickets** - Билеты пассажира. Тип данных - массив элементов TicketInformation.
@@ -175,7 +178,8 @@ title: 'Бронирование мест в поезде'
 -   **Passengers.BookedPerson.Ticket.Status** - Статус билета. Может отличаться от общего статуса заказа. Тип данных - перечисление. Возможные значения аналогичны параметру Status.
 -   **Passengers.BookedPerson.Ticket.IsPrinted** - Признак распечатки билета. Тип данных - булев.
 -   **Passengers.BookedPerson.Ticket.TariffType** - Тип тарифа, ПОЛНЫЙ и тп. - описание из ГДС. Тип данных - строка.
--   **Passengers.BookedPerson.Ticket.RefundCode** - Ид транзакции возврата. Тип данных - строка.
+-   **Passengers.BookedPerson.Ticket.RefundCode** - ID транзакции возврата. Тип данных - строка.
+-   **Passengers.BookedPerson.Ticket.ReturnTrainRefundCode** -Для поезда обратно, ID транзакции возврата. Аналогичен параметру BookedPerson.Ticket.RefundCode.
 -   **Passengers.BookedPerson.Ticket.SeatNum** - Номер места в вагоне. Тип данных - строка.
 -   **Passengers.BookedPerson.Ticket.Services** - Дополнительные услуги. Тип данных - перечисление. Возможные значения аналогичны параметру Car.Services из ответа на запрос [поиска](/trains/trains_stages/searchtrains) (может быть несколько через пробел, может быть пустым).
 -   **Passengers.BookedPerson.Ticket.Price** - Стоимость билета. Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
