@@ -31,8 +31,10 @@ title: 'Бронирование мест в поезде'
 -   **Passengers.BookRQPerson** - Пассажир бронирования. Тип данных - сложный (Содержит все свойства элемента Person из [общих элементов](/trains/elements) + дополнительное свойство).
 -   **Passengers.BookRQPerson.NeedServices** - Доп. Тип данных - перечисление. Возможные значения аналогичны параметру Car.Services из ответа на запрос [поиска](/trains/trains_stages/searchtrains) поездов.
 -   **Passengers.BookRQPerson.ReturnTrainNeedServices** - Доп для поезда обратно, если оформляется ЖД перевозка типа "туда-обратно". Аналогичен параметру BookRQPerson.NeedServices.
+-   **Passengers.BookRQPerson.ReturnTrainRzhdBDiscountCard** - Для поезда обратно, карта РЖД Бонус для получения скидки. Тип данных - строка.Аналогичен параметру BookRQPerson.RzhdBDiscountCard.
+-   **Passengers.BookRQPerson.ReturnTrainRzhdBBonusCard**- Для поезда обратно, карта РЖД Бонус для получения скидки. Тип данных - строка. Аналогичен параметру BookRQPerson.RzhdBBonusCard.
 -   **Passengers.BookRQPerson.RzhdBBonusCard** - Карта РЖД Бонус для начисления баллов. Тип данных - строка.
--   **Passengers.BookRQPerson.RzhdBDiscountCard** - Карта РЖД Бонус для получения скидки. Тип данных - строка.
+-   **Passengers.BookRQPerson.RzhdBDiscountCard** - Карта РЖД Бонус для получения скидки. Тип данных - строка. 
 -   **Passengers.BookRQPerson.DiscountCard** - Дисконтная(универсальная) карта для получения скидки. Тип данных - строка.
 -   **BlankPrefferredType** - Предпочитаемый формат бланков маршрутных квитанций. Тип данных - перечисление. Возможные значения (может быть null):
     -   **pdf**
