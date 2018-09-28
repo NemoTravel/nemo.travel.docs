@@ -6,7 +6,7 @@ title: 'Запрос CitySearch'
 
 #### Запрос
 
-Аналогичен формату запроса RunCitySearch.
+Аналогичен формату запроса [RunCitySearch](/hotels/search_hotels/runcitysearch).
 
 ##### Пример запроса (XML)
 ```xml
@@ -54,23 +54,23 @@ title: 'Запрос CitySearch'
 
 -   **RoomsRequestData** - содержит информацию о поисковом запросе. Тип данных - сложный.
 -   **RoomsRequestData.Room** - контейнер с информацией о количестве постояльцев. Тип данных - сложный.
--   **RoomsRequestData.Room.AdultsCount** - количество взрослых постояльцев. Тип данных - целое беззнаковое 32 битное число.
--   **RoomsRequestData.Room.ChidrenCount** - количество детей. Тип данных - целое беззнаковое 32 битное число.
--   **RoomsRequestData.Room.ChildrenAges** - контейнер для указания возраста детей. Тип данных - целое беззнаковое 32 битное число.
--   **RoomsRequestData.Room.ChildrenAges.Age** - возраст детей в запросе. Тип данных - целое беззнаковое 32 битное число.
+-   **RoomsRequestData.Room.AdultsCount** - количество взрослых постояльцев. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomsRequestData.Room.ChidrenCount** - количество детей. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomsRequestData.Room.ChildrenAges** - контейнер для указания возраста детей. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomsRequestData.Room.ChildrenAges.Age** - возраст детей в запросе. Тип данных - целое беззнаковое 32-битное число.
 -   **RoomTypesGroup** - содержит информацию о найденных типах комнат. Тип данных - сложный.
 -   **RoomTypesGroup.Type** - контейнер с информацией о комнате. Тип данных - сложный.
--   **RoomTypesGroup.Type.Id** - идентификатор типа комнаты в рамках этого результата поиска. Тип данных - целое беззнаковое 32 битное число.
+-   **RoomTypesGroup.Type.Id** - идентификатор типа комнаты в рамках этого результата поиска. Тип данных - целое беззнаковое 32-битное число.
 -   **RoomTypesGroup.Type.Name** - название типа комнаты. Тип данных - строка.
 -   **RoomTypesGroup.Type.CommonName** - распространенное название комнаты. Тип данных - строка.
 -   **RoomMealsGroup** - содержит информацию о возможных типах питания. Тип данных - сложный.
 -   **RoomMealsGroup.Meal** - контейнер для информации о типе питания. Тип данных - сложный.
--   **RoomMealsGroup.Meal.Id** - идентификатор типа питания в рамках этого результата поиска. Тип данных - целое беззнаковое 32 битное число.
+-   **RoomMealsGroup.Meal.Id** - идентификатор типа питания в рамках этого результата поиска. Тип данных - целое беззнаковое 32-битное число.
 -   **RoomMealsGroup.Meal.Name** - название типа питания. Тип данных - строка.
 -   **RoomMealsGroup.Meal.CommonName** - распространенное название типа питания. Тип данных - строка.
 -   **RoomRatesGroup** - содержит информацию о стоимости комнат. Тип данных - сложный.
 -   **RoomRatesGroup.Rate** - контейнер для информации о стоимости, тариф. Тип данных - сложный.
--   **RoomRatesGroup.Rate.Id** - идентификатор тарифа в рамках этого результата поиска. Тип данных - целое беззнаковое 32 битное число.
+-   **RoomRatesGroup.Rate.Id** - идентификатор тарифа в рамках этого результата поиска. Тип данных - целое беззнаковое 32-битное число.
 -   **RoomRatesGroup.Rate.Price** - контейнер с информацией о валюте. Тип данных - сложный.
 -   **RoomRatesGroup.Rate.Price.Amount** - сумма базовый цены. Тип данных - дробное число.
 -   **RoomRatesGroup.Rate.Price.Currency** - код валюты базовой цены. Тип данных - строка.
@@ -79,33 +79,33 @@ title: 'Запрос CitySearch'
 -   **RoomRatesGroup.Rate.Availability** - доступность комнаты. Тип данных - строка.
 -   **RoomsGroup** - содержит информацию о различных вариантов комнат. Тип данных - сложный.
 -   **RoomsGroup.Room** - контейнер с идентификаторами параметров комнаты. Тип данных - сложный.
--   **RoomsGroup.Room.Id** - идентификатор комнаты. Тип данных - целое беззнаковое 32 битное число.
--   **RoomsGroup.Room.TypeId** - идентификатор типа комнаты. Тип данных - целое беззнаковое 32 битное число.
--   **RoomsGroup.Room.MealId** - идентификатор типа питания. Тип данных - целое беззнаковое 32 битное число.
--   **RoomsGroup.Room.RateId** - идентификатор тарифа. Тип данных - целое беззнаковое 32 битное число.
+-   **RoomsGroup.Room.Id** - идентификатор комнаты. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomsGroup.Room.TypeId** - идентификатор типа комнаты. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomsGroup.Room.MealId** - идентификатор типа питания. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomsGroup.Room.RateId** - идентификатор тарифа. Тип данных - целое беззнаковое 32-битное число.
 -   **Hotels** - содержит информацию об отелях в поисковой выдаче. Тип данных - сложный.
 -   **Hotels.Hotel** - контейнер для информации об отеле. Тип данных - сложный.
--   **Hotels.Hotel.HotelId** - идентификатор отеля. Тип данных - целое беззнаковое 32 битное число.
+-   **Hotels.Hotel.HotelId** - идентификатор отеля. Тип данных - целое беззнаковое 32-битное число.
 -   **Hotels.Hotel.Name** - название отеля. Тип данных - строка.
 -   **Hotels.Hotel.RoomCombinations** - контейнер со списком всех доступных комбинациях определенных номеров и комнат . Тип данных - сложный.
 -   **Hotels.Hotel.RoomCombinations.RoomCombination** - контейнер с информацией о конкретной комбинации, которую можно использовать в запросе бронирования. Тип данных - сложный.
 -   **Hotels.Hotel.RoomCombinations.RoomCombination.Room** - контейнер с информацией о комнате. Тип данных - сложный.
--   **Hotels.Hotel.RoomCombinations.RoomCombination.Room.SearchRoomId** - идентификатор порядкового номера искомой комнаты, данное значение используется в RoomData.RoomSearchIndex при бронировании. Тип данных - целое беззнаковое 32 битное число.
+-   **Hotels.Hotel.RoomCombinations.RoomCombination.Room.SearchRoomId** - идентификатор порядкового номера искомой комнаты, данное значение используется в RoomData.RoomSearchIndex при бронировании. Тип данных - целое беззнаковое 32-битное число.
 -   **Hotels.Hotel.RoomCombinations.RoomCombination.Room.RoomVariantId** - идентификатор комнаты, данное значение используется в RoomData.RoomVariantId при бронировании. Тип данных - целое беззнаковое 32 битное число.
 -   **Hotels.Hotel.RoomGroups** - информация о доступных комнатах. Тип данных - строка.
 -   **Hotels.Hotel.RoomGroups.Room** - контейнер с информацией о комнате. Тип данных - сложный.
 -   **Hotels.Hotel.RoomGroups.Room.SearchRoomId** - идентификатор порядкового номера искомой комнаты, данное значение используется в RoomData.RoomSearchIndex при бронировании. Тип данных - целое беззнаковое 32 битное число.
 -   **Hotels.Hotel.RoomGroups.Room.RoomVariants** - контейнер для номеров комнат подходящих под запрос. Тип данных - сложный.
--   **Hotels.Hotel.RoomGroups.Room.RoomVariants.RoomId** - идентификатор подходящих комнат. Тип данных - целое беззнаковое 32 битное число.
+-   **Hotels.Hotel.RoomGroups.Room.RoomVariants.RoomId** - идентификатор подходящих комнат. Тип данных - целое беззнаковое 32-битное число.
 -   **Hotels.Hotel.RoomGroups.Room.Markups** - содержит информацию о наценках, рассчитываемых в соответствии с настройками. Тип данных - сложный.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup** - контейнер для информации о наценке. Тип данных - сложный.
--   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.RoomVariantId** - идентификатор комнаты. Тип данных - целое беззнаковое 32 битное число.
+-   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.RoomVariantId** - идентификатор комнаты. Тип данных - целое беззнаковое 32-битное число.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.Sum** - контейнер с информацией о сумме и валюте наценки. Тип данных - сложный.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.Sum.Amount** - сумма наценки. Тип данных - дробное число.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.Sum.Currency** - код валюты наценки. Тип данных - строка.
 -   **Hotels.Hotel.RoomGroups.Room.AgencyCharges** - содержит информацию о сборах агенства, рассчитываемых в соответствии с настройками. Тип данных - сложный.
 -   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge** - контейнер для информации о сборе агенства. Тип данных - сложный.
--   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.RoomVariantId** - идентификатор комнаты. Тип данных - целое беззнаковое 32 битное число.
+-   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.RoomVariantId** - идентификатор комнаты. Тип данных - целое беззнаковое 32-битное число.
 -   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.Sum** - контейнер с информацией о сумме и валюте сбора. Тип данных - сложный.
 -   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.Sum.Amount** - сумма сбора. Тип данных - дробное число.
 -   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.Sum.Currency** - код валюты сбора. Тип данных - строка.
@@ -115,7 +115,7 @@ title: 'Запрос CitySearch'
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum** - контейнер с информацией о сумме и валюте сбора. Тип данных - сложный.
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum.Amount** - сумма сбора. Тип данных - дробное число.
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum.Currency** - код валюты сбора. Тип данных - строка.
--   **SearchId** - идентификатор совершившегося поиска. Тип данных - целое 32 битное число.
+-   **SearchId** - идентификатор совершившегося поиска. Тип данных - целое 32-битное число.
 
 ##### Пример ответа (XML)
 ```xml
