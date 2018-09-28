@@ -6,7 +6,7 @@ title: 'Запрос GetBook'
 
 #### Запрос
 
-Формат аналогичен формату запроса ConfirmBook.
+Формат аналогичен формату запроса [ConfirmBook](/hotels/book_hotels/confirmbook).
 
 ##### Пример запроса (XML)
 ```xml
@@ -39,7 +39,7 @@ title: 'Запрос GetBook'
 
 #### Ответ
 
-Формат аналогичен формату ответа Book.
+Формат аналогичен формату ответа [Book](/hotels/book_hotels/bookhotels).
 
 ##### Пример ответа (XML)
 ```xml
