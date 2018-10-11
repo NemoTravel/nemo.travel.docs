@@ -13,16 +13,31 @@ title: 'Получение маршрут-квитанции для опреде
 
 ##### Пример запроса (XML)
 ```xml
- <GetTicketBlank>
-    <!--Optional:-->
-    <Request>
-        <RequestBody>
-            <BookID>18561</BookID>
-            <!--Optional:-->
-            <RefundId>000B38C1-02C8FDD0-0001</RefundId>
-        </RequestBody>
-    </Request>
-</GetTicketBlank>
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Rail" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SOAP-ENV:Body>
+    <ns2:GetTicketBlank>
+      <ns2:Request>
+        <ns1:Requisites>
+          <ns1:NemoOneAuthToken>***</ns1:NemoOneAuthToken>
+          <ns1:UserContextId/>
+        </ns1:Requisites>
+        <ns1:UserID>***</ns1:UserID>
+        <ns1:RequestType>U</ns1:RequestType>
+        <ns1:RequestBody>
+          <ns2:BookID>158477</ns2:BookID>
+          <ns2:Language>ru</ns2:Language>
+          <ns2:BlankIDs>
+         	 <ns2:BlankID>91786798</ns2:BlankID>
+             <ns2:BlankID>91786797</ns2:BlankID>
+          </ns2:BlankIDs>
+        </ns1:RequestBody>
+      </ns2:Request>
+    </ns2:GetTicketBlank>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+
 ```
 
 #### Ответ
