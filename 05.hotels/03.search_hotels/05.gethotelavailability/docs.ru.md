@@ -80,7 +80,7 @@ title: 'Запрос GetHotelAvailability'
 -   **RoomRatesGroup.Rate.CancellationRules** - правила отмены. Тип данных - сложный.
 -   **RoomRatesGroup.Rate.CancellationRules.CancellationRule** - контейнер для правил отмены. Тип данных - сложный.
 -   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.Id** - идентификатор правила отмены. Тип данных - целое беззнаковое 32-битное число.
--   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.DeadLine** - крайний срок отмены брони без штрафа. Часовой пояс - EET/EEST. Тип данных - Тип данных - строка.
+-   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.DeadLine** - крайний срок отмены брони без штрафа. Часовой пояс - UTC. Тип данных - строка.
 -   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.PercentValue** - значение штрафа в процентах. Тип данных - целое беззнаковое 32-битное число.
 -   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.AbsoluteValue** - значение штрафа в заданной валюте. Тип данных - целое беззнаковое 32-битное число.
 -   **RoomsGroup** - содержит информацию о различных вариантов комнат. Тип данных - сложный.
