@@ -66,8 +66,8 @@ title: 'Запрос CitySearch'
 -   **RoomMealsGroup** - содержит информацию о возможных типах питания. Тип данных - сложный.
 -   **RoomMealsGroup.Meal** - контейнер для информации о типе питания. Тип данных - сложный.
 -   **RoomMealsGroup.Meal.Id** - идентификатор типа питания в рамках этого результата поиска. Тип данных - целое беззнаковое 32-битное число.
--   *** RO - Room only
-_	*** BB - Breakfast
+-   	*** RO - Room only
+_		*** BB - Breakfast
 _	*** HB - Half board
 _	*** FB - Full board
 _	*** AI - All inclusive
