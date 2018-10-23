@@ -1,5 +1,5 @@
 ---
-title: 'Общие положения ЖД сервера'
+title: 'Common information of the railway server'
 published: true
 ---
 
