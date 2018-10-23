@@ -21,7 +21,7 @@ While searching for trains, only basic information about the trains in the reque
 -   **TimePeriod.From** - Time from. HH:mm format. Data type - string.
 -   **TimePeriod.To** - Time to. HH:mm format. Data type - string.
 
-##### Request example (XML)
+##### Request Example (XML)
 
   ```xml
       <SearchTrains>
@@ -189,7 +189,7 @@ While searching for trains, only basic information about the trains in the reque
 </Trains>
     ```
     
-##### Пример ответа от УФС (XML)
+##### UFS Response Example (XML)
 
 ```xml
 <ResponseBody>
