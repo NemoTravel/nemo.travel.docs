@@ -57,7 +57,7 @@ title: 'RunCitySearch Request'
 
 #### Response
 
--   **SearchId** - ID of the search executed. Data type - 32-bit integer.
+-   **SearchId** - ID of the executed search. Data type - 32-bit integer.
 
 ##### Response Example (XML)
 ```xml
