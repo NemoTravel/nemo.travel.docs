@@ -2,7 +2,7 @@
 title: ChargeBreakdown
 ---
 
-### Charge Components Breakdown according to the rules
+### Charge Components Breakdown according to the Rules
 #### Format Description
 
 -   **ChargeBreakdown** — The root element, an array of charge components. Data type - complex.
