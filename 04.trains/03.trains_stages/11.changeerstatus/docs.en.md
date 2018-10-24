@@ -1,5 +1,5 @@
 ---
-title: 'Смена статуса ЭР (электронной регистрации)'
+title: 'ER (Electronic Registration) Status Change'
 ---
 
 ### ChangeERStatus
