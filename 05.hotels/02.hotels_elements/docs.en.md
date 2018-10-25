@@ -1,5 +1,5 @@
 ---
-title: 'Common Elements'
+title: 'Common elements'
 ---
 
 All the requests and responses of the hotel server have a certain set of common elements.

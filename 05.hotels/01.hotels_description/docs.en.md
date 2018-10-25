@@ -1,5 +1,5 @@
 ---
-title: 'General Hotel Server Description'
+title: 'General hotel server description'
 ---
 
 This server unifies access to the functionality of various hotel suppliers and provides a single functionality for hotel search and creating reservations for each supplier.
