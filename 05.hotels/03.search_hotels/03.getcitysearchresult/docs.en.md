@@ -38,7 +38,7 @@ title: 'GetCitySearchResult Request'
 -   **RoomsRequestData.Room.ChidrenCount** - the number of children. Data type - unsigned 32-bit integer.
 -   **RoomsRequestData.Room.ChildrenAges** - container for indicating the age of children. Data type - unsigned 32-bit integer.
 -   **RoomsRequestData.Room.ChildrenAges.Age** - age of children in the request. Data type - unsigned 32-bit integer.
--   **RoomTypesGroup** - contains information on the types of rooms found. Data type - complex.
+-   **RoomTypesGroup** - contains information on the room types found. Data type - complex.
 -   **RoomTypesGroup.Type** - container with information on the room. Data type - complex.
 -   **RoomTypesGroup.Type.Id** - ID of the room type within this search result. Data type - unsigned 32-bit integer.
 -   **RoomTypesGroup.Type.Name** - room type name. Data type - string.
@@ -52,7 +52,7 @@ title: 'GetCitySearchResult Request'
 -   **RoomRatesGroup** - contains information on the cost of rooms. Data type - complex.
 -   **RoomRatesGroup.Rate** - container for information on the cost and rate. Data type - complex.
 -   **RoomRatesGroup.Rate.Id** - rate identifier within this search result. Data type - unsigned integer 32-bit number.
--   **RoomRatesGroup.Rate.Price** - a container with currency information. Data type - complex.
+-   **RoomRatesGroup.Rate.Price** - container with currency information. Data type - complex.
 -   **RoomRatesGroup.Rate.Price.Amount** - the amount of the base price. Data type - fractional number.
 -   **RoomRatesGroup.Rate.Price.Currency** - currency code of the base price. Data type - string.
 -   **RoomRatesGroup.Rate.IsSpecialOffer** - whether this fare is a special offer. Data type - boolean.
