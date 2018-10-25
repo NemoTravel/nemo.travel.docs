@@ -11,7 +11,7 @@ Suppliers:
 * ** UFS (Universal Financial System) ** - Supplier of Russian Railways;
 * ** ITM (Universal Information Technologies) ** - Supplier of Ukraine’s railway (outdated integration);
 * ** Siren ** - data provider UFS (Universal Financial System) and OOO IM (Innovative Mobility);
-* ** KTZH ** - data provider Kazakhstan Railways;
+* ** KTZHD ** - data provider Kazakhstan Railways;
 * ** UZHD ** - data provider Ukrainian Railways.
 
 The content of some server responses may differ due to differences in communication protocols between these providers.
