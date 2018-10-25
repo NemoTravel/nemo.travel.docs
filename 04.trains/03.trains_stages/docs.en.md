@@ -8,7 +8,7 @@ title: 'Interaction stages with the railway server'
 -   [Train seats booking](/trains/trains_stages/booktrain);
 -   [Booking confirmation](/trains/trains_stages/confirmbooktrain);
 -   [Cancelling train seats booking](/trains/trains_stages/cancelbooktrain);
--   [Getting current reservation information](/trains/trains_stages/updatebooktrain);
+-   [Receiving current reservation info](/trains/trains_stages/updatebooktrain);
 -   [Getting additional information before handing over tickets](/trains/trains_stages/getrefundinfo);
 -   [Ticket return in a specific reservation](/trains/trains_stages/refundbook);
 -   [Getting itinerary receipt for a specific reservation](/trains/trains_stages/getticketblank);
