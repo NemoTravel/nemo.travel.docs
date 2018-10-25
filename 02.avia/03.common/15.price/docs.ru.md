@@ -10,17 +10,17 @@ Price
 
 Содержит полную информацию о цене и её формировании для брони или заказа.
 
--   **TotalPrice** - Полная стоимости данной брони или заказа в валюте продажи агента. Тип данных - [Money](/avia/common/money).
+-   **TotalPrice** - Полная стоимость данной брони или заказа в валюте продажи агента. Тип данных - [Money](/avia/common/money).
 -   **ExpectedTicketCount** - Ожидаемое количество билетов, которое будет выписано для данной брони. Тип данных - int32.
 -   **FOPPrices** - Содержит разницу цен для определённых ФОПов относительно цены брони без указания планируемого ФОПа. Тип данных - сложный.
 -   **FOPPrices.FOPPrice** - Содержит разницу цены для конкретного ФОПа относительно цены брони без указания планируемого ФОПа. Тип данных - массив.
 -   **FOPPrices.FOPPrice.FOP** - ФОП, для которого представлена разница цен. Тип данных - строка.
 -   **FOPPrices.FOPPrice.Price** - Разница цен для данного ФОПа. Тип данных - [Money](/avia/common/money).
--   **PriceBreakdown** - Брэкдаун с формирование цены объекта. Тип данных - массив PricePart.
+-   **PriceBreakdown** - Брэкдаун с формированием цены объекта. Тип данных - массив PricePart.
 -   **PricePart** - Часть цены объекта, как правило для одной из услуг в данном заказе. Тип данных - сложный.
--   **PricePart.ServiceRef** - Ссылка на услуги в брони/заказе, для которых применяется данная цена. Не указывается если данная цена применяется к всем услугам в брони/заказе. Тип данных - [Reflist](/avia/common/reflist).
+-   **PricePart.ServiceRef** - Ссылка на услуги в брони/заказе, для которых применяется данная цена. Не указывается если данная цена применяется ко всем услугам в брони/заказе. Тип данных - [Reflist](/avia/common/reflist).
 -   **PricePart.SegmentRef** - Ссылка на сегменты перелёта, к которым применяется данная цена. Специфика выписки нескольких билетов на один перелёт. Тип данных - [Reflist](/avia/common/reflist).
--   **PricePart.TotalPrice** - Полная стоимости данной части цены. Тип данных - [Money](/avia/common/money).
+-   **PricePart.TotalPrice** - Полная стоимость данной части цены. Тип данных - [Money](/avia/common/money).
 -   **PricePart.ValidatingCompany** - ВП. Тип данных - строка.
 -   **PricePart.Refundable** - Тип возвратности денег по данной цене услуги. Тип данных - перечисление, возможные значения:
     -   Unknown
@@ -37,7 +37,7 @@ Price
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ValCompany** - Валидирующий перевозчик. Тип данных - строка.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Commission** - Комиссия авиакомпании (как указано в правиле). Тип данных - строка.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ComResult** - Коммиссия авиакомпании (рассчитанная). Тип данных - строка.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AgencyCommission** - Комиссия агенства. Тип данных — строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AgencyCommission** - Комиссия агентства. Тип данных — строка.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Bonus** - Бонус авиакомпании (как в правиле). Тип данных — строка.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BonusResult** - Бонус АК (рассчитанный). Тип данных — строка. 
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ChargeExt** - Признак доп. сбора. Тип данных - строка. 
@@ -72,8 +72,8 @@ Price
 -   **PassengerTypePrice.TravellerRef** - Ссылка на путешественников. Тип данных - [Reflist](/avia/common/reflist).
 -   **PassengerTypePrice.PricingType** - Тип пассажира, по которому сформирована данная цена, может не совпадать с типом путешественника в соответствующем разделе. Тип данных - строка.
 -   **PassengerTypePrice.BaseFare** - Цена по тарифам в валюте их заведения. Тип данных - [Money](/avia/common/money).
--   **PassengerTypePrice.EquiveFare** - Цена по тарифам в валюте продаже из ГДС. Тип данных - [Money](/avia/common/money).
--   **PassengerTypePrice.TotalFare** - Полная цена в валюте продаже из ГДС. Тип данных - [Money](/avia/common/money).
+-   **PassengerTypePrice.EquiveFare** - Цена по тарифам в валюте продажи из ГДС. Тип данных - [Money](/avia/common/money).
+-   **PassengerTypePrice.TotalFare** - Полная цена в валюте продажи из ГДС. Тип данных - [Money](/avia/common/money).
 -   **PassengerTypePrice.Taxes** - Таксы. Тип данных - массив Tax.
 -   **Tax** - Информация об определённой таксе (сборе). Тип данных - сложный, наследник [Money](/avia/common/money).
 -   **Tax.TaxCode** - Код таксы. Тип данных - строка.
@@ -125,7 +125,7 @@ Price
 -   **PassengerTypePrice.AgencyFare** — Cумма тарифа в валюте агентства. Тип данных — [Money](/avia/common/money).
 -   **PassengerTypePrice.TotalAgencyFare** — Cумма тарифа и такс в валюте агентства. Тип данных — [Money](/avia/common/money).
 -   **PassengerTypePrice.ChargeBreakdown** - Разбивка сборов. Тип данных - массив ChargeBreakdown.
--   **ChargeBreakdown** — Содерджит разбивку составляющих сбора из ценообразования на пассажира, а также величину округления при конвертации в валюту агентства.
+-   **ChargeBreakdown** — Содержит разбивку составляющих сбора из ценообразования на пассажира, а также величину округления при конвертации в валюту агентства.
 -   **ChargeBreakdown.Charge** — Информация о конкретном сборе, величине округления. Тип данных — сложный.
 -   **ChargeBreakdown.Charge.Amount** — Абсолютное значение сбора, округления. Тип данных — дробное число.
 -   **ChargeBreakdown.Charge.Currency** — Код валюты агентства. Тип данных — строка. 
