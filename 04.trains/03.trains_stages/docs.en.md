@@ -1,5 +1,5 @@
 ---
-title: 'Interaction Stages with Railway Server'
+title: 'Interaction stages with the railway server'
 ---
 
 -   [Searching for trains](/trains/trains_stages/searchtrains);
