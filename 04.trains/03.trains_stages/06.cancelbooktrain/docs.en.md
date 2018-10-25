@@ -1,5 +1,5 @@
 ---
-title: 'Cancelling Train Seats Booking'
+title: 'Cancelling train seats booking'
 ---
 
 ### CancelBook
