@@ -1,5 +1,5 @@
 ---
-title: 'Return Tickets Booking'
+title: 'Booking return tickets'
 ---
 
 Supported only for UFS and URW providers.

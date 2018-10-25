@@ -1,5 +1,5 @@
 ---
-title: 'Baggage Booking'
+title: 'Baggage booking'
 ---
 
 ### BookBaggageDoc
