@@ -1,5 +1,5 @@
 ---
-title: 'Getting Information on the Refund before the Ticket Handover'
+title: 'Getting additional information before handing over tickets'
 ---
 
 ### GetRefundInfo
