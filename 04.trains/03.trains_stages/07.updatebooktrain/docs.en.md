@@ -1,5 +1,5 @@
 ---
-title: 'Receiving Current Reservation Info'
+title: 'Receiving current reservation info'
 ---
 
 ### UpdateBook
