@@ -1,5 +1,5 @@
 ---
-title: 'Getting Itinerary Receipt for a Specific Reservation'
+title: 'Getting itinerary receipt for a specific reservation'
 ---
 
 ### GetTicketBlank

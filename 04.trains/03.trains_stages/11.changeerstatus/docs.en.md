@@ -1,5 +1,5 @@
 ---
-title: 'ER (Electronic Registration) Status Change'
+title: 'ER (Electronic Registration) status change'
 ---
 
 ### ChangeERStatus
