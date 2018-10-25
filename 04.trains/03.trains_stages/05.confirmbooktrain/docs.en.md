@@ -1,5 +1,5 @@
 ---
-title: 'Booking Confirmation'
+title: 'Booking confirmation'
 ---
 
 ### ConfirmBook

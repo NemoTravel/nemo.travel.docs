@@ -1,5 +1,5 @@
 ---
-title: 'Train Seats Booking'
+title: 'Train seats booking'
 ---
 
 ### BookTrain
