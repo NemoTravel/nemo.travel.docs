@@ -6,7 +6,7 @@ title: 'ConfirmBook Request'
 
 #### Request
 
--   **ResponseParameters** - additional information for the answer (optional). Data type - complex.
+-   **ResponseParameters** - additional information for the response (optional). Data type - complex.
 -   **ResponseParameters.SendStaticData** - whether to send static (optional) to the response. Data type - boolean.
 -   **Bookid** - ID of the completed reservation. Data type - 32-bit integer.
 -   **CardInfo** - bank card data (optional). Data type - complex.
@@ -24,11 +24,11 @@ FCm
 -   **AdditionalActions.HostCommandsToExecute** - set of terminal commands (optional, supported only for Travelport). Data type - array of strings.
 -   **RetPath3ds** - URL to which the user will be redirected after confirming payment via 3-D Secure (required for passing 3-D Secure, only Ostrovok is supported). Data type - string.
 -   **EndUserData** - system end user data (optional, but required for the supplier Ostrovok). Data type - complex.
--   **EndUserData.EndUserIP** — the IP address of the end user. Data type - string.
+-   **EndUserData.EndUserIP** — IP address of the end user. Data type - string.
 -   **EndUserData.EndUserBrowserAgent** — ID of the end-user client software. Data type - string.
--   **EndUserData.RequestOrigin** — the source of the transition. Data type - string.
+-   **EndUserData.RequestOrigin** — source of the transition. Data type - string.
 
-##### Request Example (XML)
+##### Sample Request (XML)
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:stl="http://nemo-ibe.com/STL" xmlns:hot="http://nemo-ibe.com/Hotels" xmlns:hot1="http://schemas.datacontract.org/2004/07/HotelsEntities.ResponseParameters" xmlns:pay="http://nemo-ibe.com/Payment">
    <soapenv:Header/>
@@ -95,7 +95,7 @@ FCm
 
 Format similar to the response format [Book](/hotels/book_hotels/bookhotels).
 
-##### Response Example (XML)
+##### Sample Response (XML)
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
    <s:Body>
