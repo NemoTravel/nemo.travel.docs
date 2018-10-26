@@ -6,13 +6,13 @@ title: 'Getting itinerary receipt for a specific reservation'
 
 #### Request
 
--   **BookID** - Reservation ID. The data type is a 32-bit integer.
--   **BlankIDs** -  Identifiers of ticket blanks to be canceled. The data type is an array of string elements.
+-   **BookID** - Reservation ID. Data type - 32-bit integer.
+-   **BlankIDs** -  IDs of ticket forms to be canceled. Data type - array of string elements.
 -   **BlankIDs.BlankID** - Form id. Data type - string.
 
 If you need to receive all available reservation forms, then the BlankIDs parameter should be left blank.
 
-##### Request Example (XML)
+##### Sample Request (XML)
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Rail" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -55,7 +55,7 @@ For UIT in the TicketBlank.TBlank parameter for electronic documents, a string w
 
 -   **StationFrom** - Departure station. Data type - complex.
 -   **StationFrom.Code** - Departure station code. Data type - string.
--   **StationFrom.Name** - The name of the departure station. Data type - string.
+-   **StationFrom.Name** - Name of the departure station. Data type - string.
 -   **StationTo** - Arrival Station. Data type - complex.
 -   **StationTo.Code** - Station arrival code. Data type - string.
 -   **StationTo.Name** - Name of the arrival station. Data type - string.
@@ -78,7 +78,7 @@ For UIT in the TicketBlank.TBlank parameter for electronic documents, a string w
 -   **Fiscal.TIN** - Data type - string.
 -   **Terminal** - Terminal. Data type - string.
 
-##### Response Example (XML)
+##### Sample Response (XML)
 ```xml
  <GetTicketBlankResponse>
     <GetTicketBlankResult>
