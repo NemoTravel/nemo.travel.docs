@@ -6,9 +6,9 @@ title: 'GetCitySearchParameters Request'
 
 #### Request
 
--   **SearchId** - Completed search ID. Data type - 32-bit integer. 
+-   **SearchId** - ID of a completed search. Data type - 32-bit integer. 
 
-##### Request Example (XML)
+##### Sample Request (XML)
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:stl="http://nemo-ibe.com/STL" xmlns:hot="http://nemo-ibe.com/Hotels">
    <soapenv:Header/>
@@ -36,7 +36,7 @@ title: 'GetCitySearchParameters Request'
 
 Similar to the format of the following request: [CitySearch](/hotels/search_hotels/citysearch).
 
-##### Response example (XML)
+##### Sample Response (XML)
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
    <s:Body>
