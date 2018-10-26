@@ -8,7 +8,7 @@ title: 'GetCitySearchResult Request'
 
 -   **SearchId** - ID of the executed search. Data type - 32-bit integer.
 
-##### Request Example (XML)
+##### Sample Request (XML)
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:stl="http://nemo-ibe.com/STL" xmlns:hot="http://nemo-ibe.com/Hotels">
    <soapenv:Header/>
@@ -34,8 +34,8 @@ title: 'GetCitySearchResult Request'
 -   **isFinished** - whether the search is fully completed. Data type - boolean.
 -   **RoomsRequestData** - contains information on the search request. Data type - complex.
 -   **RoomsRequestData.Room** - container with information on the number of guests. Data type - complex.
--   **RoomsRequestData.Room.AdultsCount** - the number of adult guests. Data type - unsigned 32-bit integer.
--   **RoomsRequestData.Room.ChidrenCount** - the number of children. Data type - unsigned 32-bit integer.
+-   **RoomsRequestData.Room.AdultsCount** - number of adult guests. Data type - unsigned 32-bit integer.
+-   **RoomsRequestData.Room.ChidrenCount** - number of children. Data type - unsigned 32-bit integer.
 -   **RoomsRequestData.Room.ChildrenAges** - container for indicating the age of children. Data type - unsigned 32-bit integer.
 -   **RoomsRequestData.Room.ChildrenAges.Age** - age of children in the request. Data type - unsigned 32-bit integer.
 -   **RoomTypesGroup** - contains information on the room types found. Data type - complex.
@@ -77,13 +77,13 @@ title: 'GetCitySearchResult Request'
 -   **Hotels.Hotel.RoomGroups.Room.SearchRoomId** - ID of the requested room from the request RunCitySearch Rooms.Room. Data type - unsigned 32-bit integer.
 -   **Hotels.Hotel.RoomGroups.Room.RoomVariants** - container for rooms numbers suitable for a request. Data type - complex.
 -   **Hotels.Hotel.RoomGroups.Room.RoomVariants.RoomId** - ID of suitable rooms. Data type - unsigned 32-bit integer.
--   **Hotels.Hotel.RoomGroups.Room.Markups** - contains information on markups calculated in accordance with the settings. Data type - complex.
+-   **Hotels.Hotel.RoomGroups.Room.Markups** - contains information on the markups calculated in accordance with the settings. Data type - complex.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup** - container for information on the markup. Data type is complex.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.RoomVariantId** - room ID. Data type - unsigned 32-bit integer.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.Sum** - container with information on the amount and currency of the markup. Data type - complex.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.Sum.Amount** - markup amount. Data type - fractional number.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.Sum.Currency** - currency code of the markup. Data type - string.
--   **Hotels.Hotel.RoomGroups.Room.AgencyCharges** - contains information on agency срфкпуы, calculated in accordance with the settings. Data type - complex.
+-   **Hotels.Hotel.RoomGroups.Room.AgencyCharges** - contains information on agency charge, calculated in accordance with the settings. Data type - complex.
 -   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge** - container for information on the agency charge. Data type - complex.
 -   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.RoomVariantId** - room ID. Data type - unsigned 32-bit integer.
 -   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.Sum** - container with information on the amount and currency of the charge. Data type - complex.
@@ -93,10 +93,10 @@ title: 'GetCitySearchResult Request'
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge** - container for information on the service provider’s charge. Data type - complex.
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.RoomVariantId** - room ID. Data type - unsigned 32-bit integer.
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum** - container with information on the amount and currency of the charge. Data type - complex.
--   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum.Amount** - the amount of the charge. Data type - fractional number.
+-   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum.Amount** - amount of the charge. Data type - fractional number.
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum.Currency** - charge currency code. Data type - string.
 
-##### Response Example (XML)
+##### Sample Response (XML)
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
    <s:Body>
