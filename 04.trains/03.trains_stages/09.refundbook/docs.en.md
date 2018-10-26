@@ -8,12 +8,12 @@ title: 'Ticket return'
 
 The structure of the request is similar to the request for [obtaining additional information before the delivery of tickets](/trains/trains_stages/getrefundinfo), but with the possibility of transferring the amount of refund fees for each form.
 
--   **Charges** - Refund fees information. Data type - complex.
--   **Charges.Chargev** - Information on the return fee for a specific form. Data type - complex.
--   **Charges.Charge.Amount** - Refund fee. Data type - fractional number.
+-   **Charges** - Refund charges information. Data type - complex.
+-   **Charges.Chargev** - Information on the return charge for a specific form. Data type - complex.
+-   **Charges.Charge.Amount** - Refund charge. Data type - fractional number.
 -   **Charges.Charge.BlankID** - Form ID. Data type - string.
 
-##### Request Example (XML)
+##### Sample Request (XML)
 ```xml
     <RefundBook>
        <Request>
