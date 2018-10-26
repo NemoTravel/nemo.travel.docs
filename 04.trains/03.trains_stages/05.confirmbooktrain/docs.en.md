@@ -13,8 +13,8 @@ title: 'Booking confirmation'
     -   **IPS** - IPS (International Payment System)
     -   **Cash** - Cash
     -   **Cashless** - Cashless
-
-##### Request Example (XML)
+    -   
+##### Sample Request (XML)
 ```xml
     <ConfirmBook>
        <Request>
@@ -30,7 +30,7 @@ title: 'Booking confirmation'
 #### Response
 Similar to the response to [request for booking seats in a train](/trains/trains_stages/booktrain).
 
-##### Response Example (XML)
+##### Sample Response (XML)
 ```xml
  <ConfirmBookResponse>
     <ConfirmBookResult>
