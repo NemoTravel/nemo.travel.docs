@@ -8,7 +8,7 @@ title: 'GetBook Request'
 
 Format similar to the request format [ConfirmBook](/hotels/book_hotels/confirmbook).
 
-##### Request Example (XML)
+##### Sample Request (XML)
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:stl="http://nemo-ibe.com/STL" xmlns:hot="http://nemo-ibe.com/Hotels" xmlns:hot1="http://schemas.datacontract.org/2004/07/HotelsEntities.ResponseParameters">
    <soapenv:Header/>
@@ -41,7 +41,7 @@ Format similar to the request format [ConfirmBook](/hotels/book_hotels/confirmbo
 
 Format similar to the response format [Book](/hotels/book_hotels/bookhotels).
 
-##### Response Example (XML)
+##### Sample Response (XML)
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
    <s:Body>
