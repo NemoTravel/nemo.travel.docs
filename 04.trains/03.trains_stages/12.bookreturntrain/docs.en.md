@@ -3,7 +3,7 @@ title: 'Return tickets booking'
 ---
 
 Supported only for UFS and URW providers.
-If the request does not provide a list with information on which tickets require round-trip, they will be booked for all tickets in the linear direction.
+If the request does not provide a list with information on which tickets require round-trip, they will be booked for all tickets in the straight direction.
 If return tickets were not booked for everyone, then in the future you are able to book additional return tickets. 
 
 #### Request
@@ -16,7 +16,7 @@ The structure is similar to the ReturnTrain parameter from [booking request](/tr
 -   **BookDataList.BookReturnData.NeedServices** - Desired additional services for the return direction. Data type - enumeration. Possible values are similar to the Car.Services parameter from the response to the following request: [search](/trains/trains_stages/searchtrains) (may be several items divided by a space) (may be empty).
 -   **ForwardBookID** - Linear direction reservation ID. Data type - 32-bit integer.
 
-##### Request Example (XML)
+##### Sample Request (XML)
 ```xml
  <BookTrain>
     <Request>
