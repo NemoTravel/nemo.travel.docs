@@ -8,13 +8,13 @@ Returns 10 objects for each selected parameter (city, country, hotel), correspon
 
 #### Request
 
--   **String** - The first characters of the hotels’ or cities’ names for autocomplete. Data type - string.
--   **Language** - The language in which autocomplete will be executed. Valid values are en and ru. Data type- string.
+-   **String** - First characters of the hotels’ or cities’ names for autocomplete. Data type - string.
+-   **Language** - Language in which autocomplete will be executed. Valid values are en and ru. Data type- string.
 -   **SearchHotels** - Whether to execute autocomplete by hotels. Data type - boolean.
 -   **SearchCities** - Whether to execute autocomplete by city. Data type - boolean.
 -   **SearchCountries** - Whether to execute autocomplete by country. Data type - boolean.
 
-##### Request Example (XML)
+##### Sample Request (XML)
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:stl="http://nemo-ibe.com/STL" xmlns:hot="http://nemo-ibe.com/Hotels">
    <soapenv:Header/>
@@ -59,7 +59,7 @@ Returns 10 objects for each selected parameter (city, country, hotel), correspon
 -   **Hotel.CountryCode** - Code of the country in which the city and the hotel are located. Data type - string.
 -   **Hotel.Сity** - Name of the city in which the hotel is located. Data type - string.
 
-##### Response Example (XML)
+##### Sample Response (XML)
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
    <s:Body>
