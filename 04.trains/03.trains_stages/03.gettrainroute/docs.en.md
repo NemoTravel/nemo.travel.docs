@@ -22,7 +22,7 @@ title: 'Getting information on the route of a particular train'
 
 #### Response
 
--   **TName** - The name of the train. Data type - string.
+-   **TName** - Train name. Data type - string.
 -   **TNum** - Train number. Data type - string.
 -   **DepDate** - Departure date. The format is yyyy-MM-dd, for example 2011-05-15. Data type - string.
 -   **Items** - Stops along the route. Data type - array of TRouteItem elements.
