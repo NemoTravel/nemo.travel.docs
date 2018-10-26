@@ -11,15 +11,15 @@ title: 'RunCitySearch Request'
 -   **CityId** - ID of the city for which the search will be executed. Data type - unsigned 32-bit integer.
 -   **HotelId** - ID of the hotel for which the search will be executed. Data type - unsigned 32-bit integer .
 -   **Rooms** - contains information on the rooms required to be found. Data type - complex.
--   **Rooms.Room** - a container with information on the number of guests. Data type - complex.
--   **Rooms.Room.AdultsCount** - the number of adult guests. Data type - unsigned 32-bit integer.
--   **Rooms.Room.ChidrenCount** - the number of children. Data type - unsigned 32-bit integer.
--   **Rooms.Room.ChildrenAges** - a container for indicating the children age. Data type - unsigned 32-bit integer.
+-   **Rooms.Room** - container with information on the number of guests. Data type - complex.
+-   **Rooms.Room.AdultsCount** - number of adult guests. Data type - unsigned 32-bit integer.
+-   **Rooms.Room.ChidrenCount** - number of children. Data type - unsigned 32-bit integer.
+-   **Rooms.Room.ChildrenAges** - container for indicating the children age. Data type - unsigned 32-bit integer.
 -   **Rooms.Room.ChildrenAges.Age** - children age in the request. Data type - unsigned 32-bit integer.
 -   **Rooms.CurrencyCode** - 3-letter code of the search results currency. Data type - string.
 -   **Rooms.ClientNationality** - 2-letter code of the client’s nationality. Data type - string.
 
-##### Request Example (XML)
+##### Sample Request (XML)
   ```xml
   <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:stl="http://nemo-ibe.com/STL" xmlns:hot="http://nemo-ibe.com/Hotels">
    <soapenv:Header/>
@@ -59,7 +59,7 @@ title: 'RunCitySearch Request'
 
 -   **SearchId** - ID of the executed search. Data type - 32-bit integer.
 
-##### Response Example (XML)
+##### Sample Response (XML)
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
    <s:Body>
