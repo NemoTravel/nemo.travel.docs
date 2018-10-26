@@ -16,7 +16,7 @@ Hotel server provides the following functionality:
     -   Room reservation using the following request: [Book](/hotels/book_hotels/bookhotels)
     -   Confirmation of booking using the following request: [ConfirmBook](/hotels/book_hotels/confirmbook)
     -   Reservation cancel using the following request: [CancelBook](/hotels/book_hotels/cancelbookhotels)
--   Autocompletion
+-   Autocomplete
     -  Getting a list of cities and hotels beginning with the given characters using the following request: [Autocomplete](/hotels/autocompletehotels)
 
 Test scheme - http://www.mlsd.ru:11015/Hotels.svc?wsdl
