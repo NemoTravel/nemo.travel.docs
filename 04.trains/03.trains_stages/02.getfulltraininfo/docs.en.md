@@ -4,10 +4,10 @@ title: 'Getting complete information on a particular train'
 
 ### GetFullTrainInfo
 
-#### Запрос
+#### Request
 -  **TID** - Train ID. Data type - 64-bit integer.
 
-##### Request Example (XML)
+##### Sample Request (XML)
 
 ```xml
 <GetFullTrainInfo>
@@ -40,13 +40,13 @@ title: 'Getting complete information on a particular train'
     -   **InCompartment** - in compartment
     -   **Folding** - folding
     -   **PassWithAnimal** - for passengers with animals
-    -   **MotherWithBaby** - for mother and child
+    -   **MotherWithBaby** - for mother with a baby
     -   **WithChildren** - for passengers with children
 -   **Car.PlacePrices.PlacePrice.Places** - a list of seats related to this type, divided by commas. Data type - string.
--   **Car.PlacePrices.PlacePrice.Amount** - price per seats. Data type - fractional number.
+-   **Car.PlacePrices.PlacePrice.Amount** - price per seat. Data type - fractional number.
 
 
-##### UIT Response Example (XML)
+##### Sample UIT Response (XML)
 
 ```xml
 <GetFullTrainInfoResponse>
