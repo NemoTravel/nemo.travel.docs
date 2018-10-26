@@ -6,7 +6,7 @@ title: 'Book Request'
 
 #### Request
 
--   **SearchId** - completed search ID. Data type - 32-bit integer.
+-   **SearchId** - ID of a completed search. Data type - 32-bit integer.
 -   **HotelId** - hotel ID for availability check. Data type - 32-bit integer.
 -   **Rooms** - contains information on the rooms. Data type - complex.
 -   **Rooms.RoomData** - contains information on the room you need to book. Data type - complex.
@@ -30,7 +30,7 @@ title: 'Book Request'
 -   **CheckInParams.Time** - contains information on the selected time. Data type - complex HH:mm format.
 -   **CheckOutParams** - contains information on the selected late check-out option at the hotel from the ones provided in the GetHotelAvailability answer. Data type - complex. Identical to CheckInParams
 
-##### Request Example (XML)
+##### Sample Request (XML)
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:stl="http://nemo-ibe.com/STL" xmlns:hot="http://nemo-ibe.com/Hotels">
    <soapenv:Header/>
@@ -100,10 +100,9 @@ title: 'Book Request'
 -   **HotelId** - ID of the hotel in which the room is booked. Data type - 32-bit integer.
 -   **CityId** - ID of the city in which the hotel is located. Data type - 32-bit integer.
 -   **SearchId** - ID of the completed search. Data type - 32-bit integer.
-
--   **CheckInDate** - date of arrival in the room. Data type - string, the format is yyyy-MM-ddTHH:mm:ss.
--   **CheckOutDate** - date of departure from the room. Data type - string, the format is yyyy-MM-ddTHH:mm:ss.
--   **CheckInTime** - the time of arrival in the room. Data type - string, format HH:mm.
+-   **CheckInDate** - date of the arrival in the room. Data type - string, the format is yyyy-MM-ddTHH:mm:ss.
+-   **CheckOutDate** - date of the departure from the room. Data type - string, the format is yyyy-MM-ddTHH:mm:ss.
+-   **CheckInTime** - time of arrival in the room. Data type - string, format HH:mm.
 -   **CheckOutTime** - time of departure from the room. Data type - string, format HH:mm.
 -   **Rooms** - contains information on the rooms you need to find. Data type - complex.
 -   **Rooms.HotelRoom** - contains information on the reserved room. Data type - complex.
@@ -119,7 +118,7 @@ title: 'Book Request'
 -   **Rooms.HotelRoom.CancellationRuled** - booking cancellation policy. Data type - string.
 -   **Rooms.HotelRoom.Guests** - contains information on the guests. Data type - complex.
 -   **Rooms.HotelRoom.Guests.Guest.LastName** - guest’s last name. Data type - string.
--   **Rooms.HotelRoom.Guests.Guest.FirstName** - guest’s name. Data type - string.
+-   **Rooms.HotelRoom.Guests.Guest.FirstName** - guest’s first name. Data type - string.
 -   **Rooms.HotelRoom.Guests.Guest.Phone** - guest’s phone number. Data type - unsigned 32-bit integer.
 -   **Rooms.HotelRoom.Guests.Guest.Email** - guest's email. Data type - string.
 -   **Rooms.HotelRoom.Guests.Guest.Type** - ADT - adult if the guest’s age is over 16, otherwise CLD - child. Data type - string.
@@ -129,10 +128,10 @@ title: 'Book Request'
 -   **ContactPerson.FirstName** - name of the contact person. Data type - string.
 -   **ContactPerson.Phone** - phone number of the contact person. Data type is a 32-bit integer.
 -   **ContactPerson.Email** - e-mail of the contact person. Data type - string.
--   **Markup** - a container with information on the amount and currency of all markups. Data type - complex.
+-   **Markup** - container with information on the amount and currency of all markups. Data type - complex.
 -   **Markup.Amount** - markups amount. Data type - fractional number.
 -   **Markup.Currency** - currency code of markups. Data type - string.
--   **AgencyCharges** - a container with information on the amount and currency of agency charges. Data type - complex.
+-   **AgencyCharges** - container with information on the amount and currency of agency charges. Data type - complex.
 -   **AgencyCharges.Amount** - amount of agency fees. Data type - fractional number.
 -   **AgencyCharges.Currency** - currency code of agency fees. Data type - string.
 -   **ServiceCharges** - container with information on the amount and currency of service provider charges. Data type - complex.
@@ -141,7 +140,7 @@ title: 'Book Request'
 -   **Supplier** - supplier. Data type - string.
 
 
-##### Response Example (XML)
+##### Sample Response (XML)
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
    <s:Body>
