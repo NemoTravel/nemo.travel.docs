@@ -7,13 +7,13 @@ title: 'Cancelling train seats booking'
 #### Request
 
 -   **BookID** - Reservation ID. Data type - 32-bit integer.
--   **BlankIDs** -Ticket blanks IDs to be canceled. Data type - array of string elements.
--   **BlankIDs.BlankID** - The form ID. Data type - string.
+-   **BlankIDs** -Ticket forms IDs to be canceled. Data type - array of string elements.
+-   **BlankIDs.BlankID** - Form ID. Data type - string.
 -   
 The parameter BlankIDs is used for partial cancellation of reservation in UIT. If the parameter is empty, the entire reservation will be canceled.
 UFS does not respond to this parameter.
 
-##### Request Example (XML)
+##### Sample Request (XML)
 ```xml
     <CancelBook>
        <Request>
