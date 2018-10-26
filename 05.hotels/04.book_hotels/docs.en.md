@@ -2,4 +2,4 @@
 title: Booking
 ---
 
-Request connected to booking. 
+Requests connected to booking. 
