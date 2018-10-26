@@ -4,13 +4,13 @@ title: 'Searching for trains'
 
 ### SearchTrains
 
-While searching for trains, only basic information about the trains in the requested direction is returned in the response, so many of the described parameters in the response may be empty. Complete information on a particular train can be obtained from the request. [Getting the complete infomation on a particular train](/trains/trains_stages/getfulltraininfo).
+While searching for trains, only basic information about the trains in the requested direction is returned in the response, so many of the response's described parameters may be empty. Complete information on a particular train can be obtained from the request. [Getting the complete infomation on a particular train](/trains/trains_stages/getfulltraininfo).
 
 #### Request
 -   **Date** - Departure date. The format is dd.mm.yyyy, for example 12/30/2011 or 01/01/2012. Data type - string.
 -   **DepPoint** - Departure station code. Data type - string.
 -   **ArrPoint** - Arrival station code. Data type - string.
--   **Services** - An array of railway ticket suppliers that need to be searched. If not specified, it is searched for in all that are configured in the requisites. Data type - array of Service elements.
+-   **Services** - An array of railway ticket suppliers in which it is required to conduct a search. If not specified, it is searched for in all that are configured in the requisites. Data type - array of Service elements.
 -   **Services.Service** - Provider in which the search will occur. Data type - enumeration. Possible values:
     -   **UFS (0)** Russian Railways (Universal Financial System)
     -   **UIT (1)** Railway of Ukraine (Universal Information Technologies)  
