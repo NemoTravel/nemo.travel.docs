@@ -95,7 +95,7 @@ title: 'GetHotelAvailability Request'
 -   **Hotels.Hotel.Name** - hotel name. Data type - string.
 -   **Hotels.Hotel.RoomCombinations** - container with a list of all available combinations of certain rooms. Data type - complex.
 -   **Hotels.Hotel.RoomCombinations.RoomCombination** - container with information on a particular combination that can be used in a booking request. Data type - complex.
--   **Hotels.Hotel.RoomCombinations.RoomCombination.Room** - a container with information on the room. Data type - complex.
+-   **Hotels.Hotel.RoomCombinations.RoomCombination.Room** - container with information on the room. Data type - complex.
 -   **Hotels.Hotel.RoomCombinations.RoomCombination.Room.SearchRoomId** - ID of the sequence number of the room being searched for, this value is used in RoomData.RoomSearchIndex when booking. Data type - unsigned 32-bit integer.
 -   **Hotels.Hotel.RoomCombinations.RoomCombination.Room.RoomVariantId** - room ID, this value is used in RoomData.RoomVariantId when booking. Data type - unsigned 32-bit integer.
 -   **Hotels.Hotel.RoomGroups** - information on available rooms. Data type - string.
