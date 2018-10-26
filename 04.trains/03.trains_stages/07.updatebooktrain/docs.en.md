@@ -7,10 +7,10 @@ title: 'Receiving current reservation info'
 #### Request
 
 -   **BookID** - Reservation ID. Data type - 32-bit integer.
--   **FromSupplier** - Whether to receive information from the supplier (true). If false, the information will be returned from the database. Data type - boolean.
--   **GetBalance** - Whether to receive information about the current agent’s balance at the time of the request. Data type - boolean.
+-   **FromSupplier** - Whether to receive information from the supplier (true). If false, information will be returned from the database. Data type - boolean.
+-   **GetBalance** - Whether to receive information on the current agent’s balance at the time of the request. Data type - boolean.
 
-##### Request Example (XML)
+##### Sample Request (XML)
 ```xml
    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rail="http://nemo-ibe.com/Rail" xmlns:stl="http://nemo-ibe.com/STL">
        <soapenv:Header/>
