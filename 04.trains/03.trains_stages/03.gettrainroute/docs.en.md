@@ -8,7 +8,7 @@ title: 'Getting information on the route of a particular train'
 
 -   **TID** - Train ID. Data type - 64-bit integer.
 
-##### Request Example (XML)
+##### Sample Request (XML)
 
 ```xml
 <GetTrainRoute>
@@ -24,15 +24,15 @@ title: 'Getting information on the route of a particular train'
 
 -   **TName** - The name of the train. Data type - string.
 -   **TNum** - Train number. Data type - string.
--   **DepDate** Date of departure. The format is yyyy-MM-dd, for example 2011-05-15. Data type - string.
--   **Items** - Stops along the route. The data type - array of TRouteItem elements.
+-   **DepDate** - Departure date. The format is yyyy-MM-dd, for example 2011-05-15. Data type - string.
+-   **Items** - Stops along the route. Data type - array of TRouteItem elements.
 -   **Items.TRouteItem** - A stop. Data type - complex.
 -   **Items.TRouteItem.StationName** - Station name. Data type - string.
 -   **Items.TRouteItem.ArrTime** - Arrival time at the stop. HH:mm format, for example 13:55. Data type - string.
 -   **Items.TRouteItem.DepTime** - Departure time from a stop. HH:mm format, for example 13:55. Data type - string.
 -   **Items.TRouteItem.WaitingTime** - Stop time in minutes. The data type - 32-bit integer (may be null).
 
-##### Response Example (XML)
+##### Sample Response (XML)
 
 ```xml
  <GetTrainRouteResponse>
