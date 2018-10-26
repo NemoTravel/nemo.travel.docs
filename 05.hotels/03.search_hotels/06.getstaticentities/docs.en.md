@@ -17,7 +17,7 @@ Getting statics from the supplier.
 -   **IDs.ID** - ID of the requested object. Data type - string.
 -   **Language** - language in which statics will be obtained. Data type - string.
 
-##### Request Example (XML)
+##### Sample Request (XML)
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:stl="http://nemo-ibe.com/STL" xmlns:hot="http://nemo-ibe.com/Hotels" xmlns:hot1="http://schemas.datacontract.org/2004/07/HotelsEntities.Static">
    <soapenv:Header/>
@@ -94,8 +94,7 @@ Getting statics from the supplier.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Features.Feature.Id** - service ID. Data type - string.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Features.Feature.Info** - information on the service. Data type - string.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Description** - hotel description. Data type - string.
--   **StaticDataInfo.Hotels.HotelStaticInfo.Distances** - distance between the hotel and important points. Data type - complex.
-
+-   **StaticDataInfo.Hotels.HotelStaticInfo.Distances** - distance between the hotel and the important points. Data type - complex.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance** - container for distance description. Data type - complex.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance.Type** - point type. Data type - string.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance.Value** - numeric value of the distance to the point. Data type - integer.
@@ -112,7 +111,7 @@ Getting statics from the supplier.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.CustomerRating.ValueForMoney** - price rating. Data type - fractional number.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.CustomerRating.AverageCustomerRating** - average rating score. Data type - fractional number.
 
-##### Response Example (XML)
+##### Sample Response (XML)
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
    <s:Body>
