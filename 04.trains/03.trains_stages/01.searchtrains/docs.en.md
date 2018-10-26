@@ -13,7 +13,7 @@ While searching for trains, only basic information about the trains in the reque
 -   **Services** - An array of railway ticket suppliers in which it is required to conduct a search. If not specified, it is searched for in all that are configured in the requisites. Data type - array of Service elements.
 -   **Services.Service** - Provider in which the search will occur. Data type - enumeration. Possible values:
     -   **UFS (0)** Russian Railways (Universal Financial System)
-    -   **UIT (1)** Railway of Ukraine (Universal Information Technologies)  
+    -   **UIT (1)** Railways of Ukraine (Universal Information Technologies)  
 -   **TimePeriod** - The time range of departure / arrival of the train. Data type - complex.
 -   **TimePeriod.Type** - Time range type. Data type - enumeration. Possible values:
     -   **Departure** - On Departure
