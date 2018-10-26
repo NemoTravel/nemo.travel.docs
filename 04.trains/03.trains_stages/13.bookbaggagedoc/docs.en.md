@@ -4,7 +4,7 @@ title: 'Baggage booking'
 
 ### BookBaggageDoc
 
-Supported only for URW. 
+Supported only for UZD. 
 
 #### Request
 
@@ -16,7 +16,7 @@ Supported only for URW.
 -   **BaggagesOfTickets.BaggagesOfTicket.BaggageItems.BaggageItem.Kind** - Baggage type. Data type - enumeration. Possible values are similar to the TransportDoc.Kind parameter from the response to [request for booking seats in a train](/trains/trains_stages/booktrain).
 -   **BaggagesOfTickets.BaggagesOfTicket.BaggageItems.BaggageItem.Weight** - Baggage weight in kilograms. Data type - 32-bit integer.
 
-##### Request Example (XML)
+##### Sample Request (XML)
 ```xml
       <BookBaggageDoc>
         <Request>
