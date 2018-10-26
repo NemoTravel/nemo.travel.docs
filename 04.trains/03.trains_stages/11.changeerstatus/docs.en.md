@@ -4,7 +4,7 @@ title: 'ER (Electronic Registration) status change'
 
 ### ChangeERStatus
 
-Запрос актуален только для UFS.
+The request is relevant only for UFS.
 
 #### Request
 
@@ -13,7 +13,7 @@ title: 'ER (Electronic Registration) status change'
 -   **BlankIDs** - Form IDs in the UFS (each corresponds to its own ticket number in reality), for which you need to change the status of the ER. Data type - array of BlankID elements.
 -   **BlankIDs.BlankID** - Form ID. Data type - string.
 
-##### Request Example (XML)
+##### Sample Request (XML)
 ```xml
     <ChangeERStatus>
        <Request>
@@ -33,7 +33,7 @@ title: 'ER (Electronic Registration) status change'
 
 -   **Success** - The success of the request. Data type - boolean.
 
-##### Response Example (XML)
+##### Sample Response (XML)
 ```xml
     <ChangeERStatusResponse>
        <ChangeERStatusResult>
