@@ -1,5 +1,5 @@
 ---
-title: 'Getting complete information on a particular train'
+title: 'Getting the complete information on a particular train'
 ---
 
 ### GetFullTrainInfo
