@@ -3,7 +3,7 @@ title: 'Interaction stages with the railway server'
 ---
 
 -   [Searching for trains](/trains/trains_stages/searchtrains);
--   [Getting complete information on a particular train](/trains/trains_stages/getfulltraininfo);
+-   [Getting the complete information on a particular train](/trains/trains_stages/getfulltraininfo);
 -   [Getting information on the route of a particular train](/trains/trains_stages/gettrainroute);
 -   [Train seats booking](/trains/trains_stages/booktrain);
 -   [Booking confirmation](/trains/trains_stages/confirmbooktrain);
