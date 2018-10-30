@@ -236,62 +236,61 @@ taxonomy:
 * **data.price.components.charges.components.gatewayProfit.amount** — size of the payment acceptance fee. Data type - string.
 * **data.price.components.charges.components.gatewayProfit.currency** — currency code of the payment acceptance fee. Data type - string.
 * **data.payments** — container with information on payment gateways. Data type - complex.
-* **data.payments.ID_PAY_N** — контейнер с информаций об N-й платежной транзакции. Тип данных — сложный.
-* **data.payments.ID_PAY_N.id** — идентификатор плтаженой транзакции Nemo.Travel. Тип данных — строка.
-* **data.payments.ID_PAY_N.gatewayId** — внутренний идентификатор Nemo.Travel. Тип данных — строка.
-* **data.payments.ID_PAY_N.methodId** — идентификатор платежного шлюза Nemo.Travel. Тип данных — целое 64-битное число.
-* **data.payments.ID_PAY_N.name** — наименование платежного шлюза Nemo.Travel. Тип данных — строка.
-* **data.payments.ID_PAY_N.status** — статус платежной транзакции. Тип данных — строка.
-* **data.payments.ID_PAY_N.paymentDate** — дата создания платежной транзакции. Тип данных — строка.
-* **data.payments.ID_PAY_N.moneyPaid** — контейнер с информацией о поступивших к оплате средствах. Тип данных — строка.
-* **data.payments.ID_PAY_N.moneyPaid.amount** — сумма поступивших к оплате сердств. Тип данных — строка.
-* **data.payments.ID_PAY_N.moneyPaid.currency** — код валюты поступивших к оплате средств. Тип данных — строка.
-* **data.payments.ID_PAY_N.moneyFixed** — контейнер с информацией об успешной  оплате. Тип данных — строка.
-* **data.payments.ID_PAY_N.moneyFixed.amount** — сумма оплаты. Тип данных — строка.
-* **data.payments.ID_PAY_N.moneyFixed.currency** — код валюты оплаты. Тип данных — строка.
-* **data.documents** — контейнер с информацией об электронных билетах. Тип данных — сложный.
-* **data.documents.ID_TKT_N** — контейнер с информацией об N-м электронном билете. Тип данных — сложный.
-* **data.documents.ID_TKT_N.number** — номер электронного билета. Тип данных — строка.
-* **data.documents.ID_TKT_N.type** — тип электронного билета. Тип данных — строка.
-* **data.documents.ID_TKT_N.status** — статус электронного билета. Тип данных — строка.
-* **data.documents.ID_TKT_N.passenger** — идентификатор пассажира (ID_PAS_N) к которому привязан данный N-й электронный билет. Тип данных — строка.
-* **data.documents.ID_TKT_N.product** — идентификатор услуги к которой привязан данный N-й электронный билет.  Тип данных — строка.
-* **data.documents.ID_TKT_N.info** — контейнер с дополнительной информацией о данном N-м электронном билете. Тип данных — сложный.
-* **data.documents.ID_TKT_N.info.pricingInfos** — список оценок привязанных к данному N-му электронному билету. Тип данных — массив строк.
-* **data.documents.ID_TKT_N.info.endorsements** — эндорсменты привязанные к данному N-му электронному билету. Тип данных — строка.
-* **data.сurrencyRates** — список курсов валют. Тип данных — сложный.
-* **data.сurrencyRates.[N]** — контейнер с информацией об N-й валюте. Тип данных — сложный.
-* **data.сurrencyRates.[N].currencyCode** — код N-й валюты. Тип данных — строка.
-* **data.сurrencyRates.[N].rate** — курс N-й валюты по отношению к валюте агентства Nemo.Travel. Тип данных — дробное число.
-* **data.linkedOrders** — контейнер с информацией о связанных заказах. Тип данных — сложный.
-* **data.linkedOrders.splitted** — идентификатор связанного заказа в системе Nemo.Travel. Тип данных — целое 64-битное число. 
-* **data.multiOrderEnvelope** — идентификатор мультизаказа в системе Nemo.Travel. Тип данных — целое 64-битное число. 
-* **data.exchangeClaims** — контейнер с информацией о обмене. Тип данных — сложный.
-* **data.exchangeClaims.data** — контейнер с данными об объекте обмена. Тип данных — сложный.
-* **data.exchangeClaims.data.id** — идентификатор связанного заказа в системе Nemo.Travel. Тип данных — целое 64-битное число.
-* **data.exchangeClaims.data.expertUserId** — идентификатор юзера обработавшего обмен. Тип данных — целое 64-битное число.
-* **data.exchangeClaims.data.price** — контейнер с информацией о стоимости обмена. Тип данных — сложный.
-* **data.exchangeClaims.data.price.amount** — cумма за обмен. Тип данных — строка.
-* **data.exchangeClaims.data.price.currency** — код валюты за обмен. Тип данных — строка.
-* **data.exchangeClaims.data.selectedElements** — контейнер с информацией об N-й валюте. Тип данных — сложный.
-* **data.exchangeClaims.data.selectedElements.passenger** — идентификатор пассажира (ID_PAS_N) для которого производится обмен. Тип данных — строка.
-* **data.exchangeClaims.data.selectedElements.segments** — идентификатор сегмента (ID_SEG_N) для которого производится обмен. Тип данных — строка.
-* **data.exchangeClaims.claimText** — текст заявки на обмен. Тип данных — строка. 
-* **data.returnClaims** — контейнер с информацией о возврате. Тип данных — сложный.
-* **data.returnClaims.data** — контейнер с данными об объекте возврата. Тип данных — сложный.
-* **data.returnClaims.data.id** — идентификатор связанного заказа в системе Nemo.Travel. Тип данных — целое 64-битное число.
-* **data.returnClaims.data.expertUserId** — идентификатор юзера обработавшего возврат. Тип данных — целое 64-битное число.
-* **data.returnClaims.data.price** — контейнер с информацией о стоимости возврата. Тип данных — сложный.
-* **data.returnClaims.data.price.amount** — cумма за возврат. Тип данных — строка.
-* **data.returnClaims.data.price.currency** — код валюты за возврат. Тип данных — строка.
-* **data.returnClaims.data.selectedElements** — контейнер с информацией об N-й валюте. Тип данных — сложный.
-* **data.returnClaims.data.selectedElements.passenger** — идентификатор пассажира (ID_PAS_N) для которого производится обмен. Тип данных — строка.
-* **data.returnClaims.data.selectedElements.segments** — идентификатор сегмента (ID_SEG_N) для которого производится возврат. Тип данных — строка.
-* **data.returnClaims.isCompelled** — признак успешности возврата. Тип данных — булевый.
+* **data.payments.ID_PAY_N** — container with information on the N-th payment transaction. Data type - complex.
+* **data.payments.ID_PAY_N.id** — ID of the Nemo.Travel transaction. Data type - string.
+* **data.payments.ID_PAY_N.gatewayId** — Nemo.Travel internal ID. Data type - string.
+* **data.payments.ID_PAY_N.methodId** — Nemo.Travel payment gateway ID. Data type - 64-bit integer.
+* **data.payments.ID_PAY_N.name** — name of the Nemo.Travel payment gateway. Data type - string.
+* **data.payments.ID_PAY_N.status** — status of the payment transaction. Data type - string.
+* **data.payments.ID_PAY_N.paymentDate** — date the payment transaction was created. Data type - string.
+* **data.payments.ID_PAY_N.moneyPaid** — container with information on the funds received for payment. Data type - string.
+* **data.payments.ID_PAY_N.moneyPaid.amount** — amount of the received payments. Data type - string.
+* **data.payments.ID_PAY_N.moneyPaid.currency** — currency code of funds received for payment. Data type - string.
+* **data.payments.ID_PAY_N.moneyFixed** — container with information on a successful payment. Data type - string.
+* **data.payments.ID_PAY_N.moneyFixed.amount** — payment amount. Data type - string.
+* **data.payments.ID_PAY_N.moneyFixed.currency** — payment currency code. Data type - string.
+* **data.documents** — container with information on e-tickets. Data type -  complex.
+* **data.documents.ID_TKT_N** — container with information on the N-th e-ticket. Data type - complex.
+* **data.documents.ID_TKT_N.number** — e-ticket number. Data type - string.
+* **data.documents.ID_TKT_N.type** — e-ticket type. Data type - string.
+* **data.documents.ID_TKT_N.status** — e-ticket status. Data type - string.
+* **data.documents.ID_TKT_N.passenger** — passenger ID (ID_PAS_N) to which the given N-th electronic ticket is associated. Data type - string.
+* **data.documents.ID_TKT_N.product** — ID of the service to which the given N-th e-ticket is attached. Data type - string.
+* **data.documents.ID_TKT_N.info** — container with additional information on the given N-th e-ticket. Data type - complex.
+* **data.documents.ID_TKT_N.info.pricingInfos** — list of estimations associated with this N-th e-ticket. Data type - array of strings.
+* **data.documents.ID_TKT_N.info.endorsements** — endorsements linked to this N-th e-ticket. Data type - string.
+* **data.сurrencyRates** — list of exchange rates. Data type - complex.
+* **data.сurrencyRates.[N]** —  container with information on the N-th currency. Data type - complex.
+* **data.сurrencyRates.[N].currencyCode** — code of the N-th currency. Data type - string.
+* **data.сurrencyRates.[N].rate** — rate of the N-th currency towards the currency of the agency Nemo.Travel. Data type - fractional number.
+* **data.linkedOrders** — container with information on the related orders. Data type - complex.
+* **data.linkedOrders.splitted** — ID of the associated order in the Nemo.Travel system. Data type - 64-bit integer.
+* **data.multiOrderEnvelope** — multi-order ID in the Nemo.Travel system. Data type - 64-bit integer.
+* **data.exchangeClaims** — container with information on the exchange. Data type - complex.
+* **data.exchangeClaims.data** — container with data on the exchange object. Data type - complex.
+* **data.exchangeClaims.data.id** — ID of the associated order in the Nemo.Travel system. Data type - 64-bit integer.
+* **data.exchangeClaims.data.expertUserId** — ID of the user who processed the exchange. Data type - 64-bit integer.
+* **data.exchangeClaims.data.price** — container with information on the cost of the exchange. Data type - complex.
+* **data.exchangeClaims.data.price.amount** — amount for the exchange. Data type - string.
+* **data.exchangeClaims.data.price.currency** — currency code for the exchange. Data type - string.
+* **data.exchangeClaims.data.selectedElements** — container with information on the N-th currency. Data type - complex.
+* **data.exchangeClaims.data.selectedElements.passenger** — passenger ID (ID_PAS_N) for whom the exchange is made. Data type- string.
+* **data.exchangeClaims.data.selectedElements.segments** — segment ID (ID_SEG_N) for which the exchange is made. Data type - string.
+* **data.exchangeClaims.claimText** — exchange request text. Data type - string. 
+* **data.returnClaims** — container with information on the return. Data type - complex.
+* **data.returnClaims.data** — container with data on the return object. Data type - complex.
+* **data.returnClaims.data.id** — ID of the associated order in the Nemo.Travel system. Data type - 64-bit integer.
+* **data.returnClaims.data.expertUserId** — ID of the user that processed the return. Data type - 64-bit integer.
+* **data.returnClaims.data.price** — container with information on the return cost. Data type - complex.
+* **data.returnClaims.data.price.amount** — amount for the refund. Data type - string.
+* **data.returnClaims.data.price.currency** — currency code for the refund. Data type - string.
+* **data.returnClaims.data.selectedElements** — container with information on the N-th currency. Data type - complex.
+* **data.returnClaims.data.selectedElements.passenger** — passenger ID (ID_PAS_N) for whom the exchange is made. Data type - string.
+* **data.returnClaims.data.selectedElements.segments** — segment ID (ID_SEG_N) for which the refund is made. Data type - string.
+* **data.returnClaims.isCompelled** — attribute of a successful refund. Data type - boolean.
 
 
-
-#### Пример
+#### Sample
 ```json
 {
     "method": "export",
