@@ -1,240 +1,241 @@
 ---
-title: 'Экспорт заказа'
+title: 'Order Export'
 taxonomy:
     category:
         - docs
 ---
 
-### Экспорт заказа
+### Order Export
 
-#### Параметры 
+#### Options 
 
-* **method** — содержит информацию о типе выгрузки. Тип данных — строка.
-* **apiVersion** — содержит информацию о версии API. Тип данных — строка.
-* **params** — параметры объекта выгрузки. Тип данных — сложный.
-* **params.type** — тип объекта выгрузки. Тип данных — строка.
-* **params.id** — идентификатор объекта выгрузки Nemo.Travel. Тип данных — целое 64-битное число.
-* **data** — контейнер с данными об объекте выгрузки. Тип данных — сложный.
-* **data.system** — инстанс к которому принадлежит объект выгрузки. Тип данных — строка.
-* **data.id** — идентификатор объекта выгрузки Nemo.Travel. Тип данных — целое 64-битное число.
-* **data.lastModifiedDate** — дата последней модификации объекта выгрузки. Тип данных — строка.
-* **data.currentServerDate** — дата выгрузки по серверному времени. Тип данных — строка.
-* **data.customer** — контейнер с данными о покупателе. Тип данных — сложный.
-* **data.customer.userId** — идентификатор юзера которому принадлежит объект выгрузки. Тип данных — целое 64-битное число.
-* **data.customer.сompanyId** — идентификатор агентства которому принадлежит объект выгрузки. Тип данных — целое 64-битное число.
-* **data.customer.backofficeCompanyId** — идентификатор бэк-офиса. Тип данных — строка.
-* **data.customer.name** — имя покупателя. Тип данных — строка.
-* **data.customer.phone** — телефон покупателя. Тип данных — строка.
-* **data.customer.email** — электронный адрес покупателя. Тип данных — строка.
-* **data.passengers** — контейнер с данными о пассажире. Тип данных — сложный.
-* **data.passengers.ID_PAS_N** — контейнер с данными об N-м пассажире. Тип данных — сложный.
-* **data.passengers.ID_PAS_N.lastName** — фамилия пассажира. Тип данных — строка.
-* **data.passengers.ID_PAS_N.firstName** — имя пассажира. Тип данных — строка.
-* **data.passengers.ID_PAS_N.middleName** — отчество пассажира. Тип данных — строка.
-* **data.passengers.ID_PAS_N.gender** — пол пассажира. Тип данных — строка.
-* **data.passengers.ID_PAS_N.birthDate** — дата рождения пассажира. Тип данных — строка.
-* **data.passengers.ID_PAS_N.nationality** — национальность пассажира. Тип данных — строка.
-* **data.passengers.ID_PAS_N.docType** — тип документа пассажира. Тип данных — строка.
-* **data.passengers.ID_PAS_N.docNumber** — номер документа пассажира. Тип данных — строка.
-* **data.passengers.ID_PAS_N.docExpiryDate** — дата окончания срока действия документа. Тип данных — строка.
-* **data.passengers.ID_PAS_N.phone** — номер телефона пассажира. Тип данных — строка.
-* **data.passengers.ID_PAS_N.email** — электронная почта пассажира. Тип данных — строка.
-* **data.products** — контейнер с данными об услуге. Тип данных — сложный.
-* **data.products.ID_FLT_N** — контейнер с информацией об N-м перелёте. Тип данных — сложный.
-* **data.products.ID_FLT_N.info** — контейнер с информацией о данном перелёте. Тип данных — сложный.
-* **data.products.ID_FLT_N.info.nemo** — контейнер с информацией по перелёту из Nemo.Travel. Тип данных — сложный.
-* **data.products.ID_FLT_N.info.nemo.flightId** — идентификатор перелёта. Тип данных — целое 64-битное число.
-* **data.products.ID_FLT_N.info.nemo.searchId** — идентификатор поиска. Тип данных — целое 64-битное число.
-* **data.products.ID_FLT_N.info.nemo.pacgageId** — идентификатор пакета. Тип данных — целое 64-битное число.
-* **data.products.ID_FLT_N.info.nemo.status** — статус перелёта. Тип данных — строка.
-* **data.products.ID_FLT_N.info.nemo.utmSource** — источник перехода. Тип данных — строка.
-* **data.products.ID_FLT_N.info.nemoConnect** — контейнер с информацией по перелёту из Nemo.Connect. Тип данных — сложный.
-* **data.products.ID_FLT_N.info.nemoConnect.system** — инстанс к которому принадлежит перелёт. Тип данных — строка.
-* **data.products.ID_FLT_N.info.nemoConnect.id** — идентификатор объекта выгрузки Nemo.Connect. Тип данных — целое 64-битное число.
-* **data.products.ID_FLT_N.info.nemoConnect.packageID** — идентификатор пакета. Тип данных — целое 64-битное число.
-* **data.products.ID_FLT_N.info.nemoConnect.status** — статус перелёта. Тип данных — строка.
-* **data.products.ID_FLT_N.info.nemoConnect.subStatus** — подстатус перелёта. Тип данных — строка.
-* **data.products.ID_FLT_N.info.nemoConnect.possibleActions** — список доступных действий с перелётом. Тип данных - массив строк.
-* **data.products.ID_FLT_N.info.supplier** — контейнер с информацией о поставщике. Тип данных — сложный.
-* **data.products.ID_FLT_N.info.supplier.system** — наименование поставщика. Тип данных — строка.
-* **data.products.ID_FLT_N.info.supplier.id** — идентификатор у поставщика. Тип данных — строка.
-* **data.products.ID_FLT_N.info.supplier.environment** — среда выполнения. Тип данных — строка.
-* **data.products.ID_FLT_N.info.supplier.bookingAgencyId** — уникальный идентификатор реквизитов бронирования. Тип данных — строка.
-* **data.products.ID_FLT_N.info.supplier.ticketingAgencyId** — уникальный идентификатор реквизитов выписки. Тип данных — строка.
-* **data.products.ID_FLT_N.info.supplier.ticketingIATAValidator** — IATA валидатор билетов в данных реквизитах. Тип данных — строка.
-* **data.products.ID_FLT_N.dates** — контейнер с информацией по датам. Тип данных — сложный.
-* **data.products.ID_FLT_N.dates.creation** — время создания заказа. Тип данных — строка.
-* **data.products.ID_FLT_N.dates.booking** — время бронирования заказа. Тип данных — строка.
-* **data.products.ID_FLT_N.dates.ticketing** — время выписки заказа. Тип данных — строка.
-* **data.products.ID_FLT_N.dates.void** — время войдирования заказа. Тип данных — строка.
-* **data.products.ID_FLT_N.dates.cancellation** — время аннулирования заказа. Тип данных — строка.
-* **data.products.ID_FLT_N.dates.timelimit** — контейнер с информацией по таймлимитам. Тип данных — строка.
-* **data.products.ID_FLT_N.dates.timelimit.price** — таймлимит цены. Тип данных — строка.
-* **data.products.ID_FLT_N.dates.timelimit.ticketing** — таймлимит на выписку. Тип данных — строка.
-* **data.products.ID_FLT_N.dates.timelimit.advancedPurchase** — таймлимит из УПТ. Тип данных — строка.
-* **data.products.ID_FLT_N.dates.timelimit.effective** — минимальный таймлимит с применением правил Nemo.Travel. Тип данных — строка.
-* **data.products.ID_FLT_N.segments** — контейнер с информацией о сегментах. Тип данных — сложный.
-* **data.products.ID_FLT_N.segments.ID_SEG_N** — контейнер с информацией об N-м сегменте. Тип данных — сложный.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.index** — идентификатор сегмента. Тип данных — целое 64-битное число.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.leg** — идентификатор плеча. Тип данных — целое 64-битное число.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.departure** — контейнер с информацией о пункте отправления. Тип данных — сложный.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.departure.date** — время отправления. Тип данных — строка.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.departure.airport** — IATA код аэропорта отправления. Тип данных — строка.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.departure.terminal** — терминал отправления. Тип данных — строка.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.departure.country** — страна отправления. Тип данных  — строка.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.arrival** — контейнер с информацией о пункте прибытия. Тип данных — сложный.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.arrival.date** — время прибытия. Тип данных — строка.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.arrival.airport** — IATA код аэропорта прибытия. Тип данных — строка.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.arrival.terminal** — терминал прибытия. Тип данных — строка.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.arrival.country** — страна прибытия. Тип данных  — строка.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.UTC** — контейнер с информацией о времени отправления и прибытия в UTC. Тип данных — сложный.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.UTC.warning** — предупреждение "do not use as information for the passenger" Тип данных — строка.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.UTC.departure** — время отправления. Тип данных — строка.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.UTC.arrival** — время прибытия. Тип данных — строка.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.marketingAirline** — маркетинговый перевозчик. Тип данных — строка.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.flightNumber** — номер рейса. Тип данных — строка.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.operatingAirline** — оперирующий перевозчик. Тип данных — строка.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.eticket** — признак наличия электронного билета. Тип данных — булевый.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.RBD** — RBD(Reservation Booking Designator). Тип данных — строка.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.service** — сервисный класс. Тип данных — строка.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.status** — статус сегмента. Тип данных — строка.
-* **data.products.ID_FLT_N.segments.ID_SEG_N.supplierRef** — идентификатор сегмента в инвенторной системе авиакомпании. Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo** — контейнер с информацией об оценке перелёта. Тип данных — сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N** — контейнер с информацией об N-й оценке перелёта. Тип данных — сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.validatingCarrier** — валидирующий перевозчик. Тип данных — сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.commission** — контейнер с информацией о комиссии.  Тип данных — сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.commission.amount** — размер комиссии. Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.commission.currency** — код валюты комиссии. Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.tourCode** — применённый туристический код. Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare** — контейнер с информацией о тарифах.Тип данных — сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N** — контейнер с информацией об N-м тарифе. Тип данных — сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.pricingType** — код ценового типа пассажира полученного из ГРС. Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.passCount** — число пассажиров. Тип данных — целое 64-битное число.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare** — контейнер с информацией о базовой стоимости тарифа (без учета такс). Тип данных - сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare.amount** — сумма базовой стоимости.Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare.currency** — код валюты базовой стоимости. Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.equiveFare** — контейнер с информацией о базовой стоимости тарифа (без учета такс) в эквивалентной валюте. Тип данных - сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.equiveFare.amount** — сумма базовой стоимости в эквивалентной валюте .Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.equiveFare.currency** — код эквивалентной валюты базовой стоимости. Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.totalFare** — контейнер с информацией о полной стоимости тарифа с учетом такс. Тип данных — сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.totalFare.amount** — сумма полной стоимости.Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.totalFare.currency** — код валюты полной стоимости. Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.passengers** — список идентификаторов пассажиров (ID_PAS_N) привязанных к данному N-му тарифу. Тип данных — массив строк.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis** — список  тарифов привязанных к данному N-му перелёту. Тип данных  — сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.[N]** — контейнер с информацией об N-м тарифе. Тип данных  — сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.[N].code** — код тарифа. Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.[N].type** — тип тарифа. Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.[N].segments** — список идентификаторов сегментов (ID_SEG_N) привязанных к данному N-му тарифу. Тип данных — массив строк.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.[N].baggage** — контейнер с информацией о багаже. Тип данных — сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.[N].baggage.value** — численное значение для допустимого количества багажа Тип данных — целое 64-битное число.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.[N].baggage.measurement** — мера количества багажа. Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes** — список такс привязанных к данному N-му тарифу.. Тип данных  — сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N]** — контейнер с информацией об N-й таксе. Тип данных — сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].code** — код таксы. Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax** — контейнер с информацией о стоимости таксы. Тип данных — сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax.amount** — размер таксы. Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax.currency** — код валюты таксы. Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].type** — тип таксы. Тип данных — строка.
-* **data.products.ID_EXT_N** — контейнер с информацией о дополнительных услугах. Тип данных — сложный.
-* **data.products.ID_EXT_N.type** — тип дополнительной услуги. Тип данных — строка.
-* **data.products.ID_TRN_N** — контейнер с информацией об N-м заказе Тип данных — сложный.
-* **data.products.ID_TRN_N.info** — контейнер с информацией о данном заказе. Тип данных — сложный.
-* **data.products.ID_TRN_N.info.nemo** — контейнер с информацией по заказу из Nemo.Travel. Тип данных — сложный.
-* **data.products.ID_TRN_N.info.nemo.flightId** — идентификатор заказа. Тип данных — целое 64-битное число.
-* **data.products.ID_TRN_N.info.nemo.searchId** — идентификатор поиска. Тип данных — целое 64-битное число.
-* **data.products.ID_TRN_N.info.nemo.status** — статус заказа. Тип данных — строка.
-* **data.products.ID_TRN_N.info.nemo.utmSource** — источник перехода. Тип данных — строка.
-* **data.products.ID_TRN_N.info.nemoConnect** — контейнер с информацией по заказу из Nemo.Connect. Тип данных — сложный.
-* **data.products.ID_TRN_N.info.nemoConnect.system** — инстанс к которому принадлежит заказ. Тип данных — строка.
-* **data.products.ID_TRN_N.info.nemoConnect.id** — идентификатор объекта выгрузки Nemo.Connect. Тип данных — целое 64-битное число.
-* **data.products.ID_TRN_N.info.nemoConnect.status** — статус заказа. Тип данных — строка.
-* **data.products.ID_TRN_N.info.nemoConnect.subStatus** — подстатус заказа. Тип данных — строка.
-* **data.products.ID_TRN_N.dates** — контейнер с информацией по датам. Тип данных — сложный.
-* **data.products.ID_TRN_N.dates.creation** — время создания заказа в формате UTC. Тип данных — строка.
-* **data.products.ID_TRN_N.dates.booking** — время бронирования заказа в формате UTC. Тип данных — строка.
-* **data.products.ID_TRN_N.dates.ticketing** — время выписки заказа в формате UTC. Тип данных — строка.
-* **data.products.ID_TRN_N.dates.void** — время войдирования заказа в формате UTC. Тип данных — строка.
-* **data.products.ID_TRN_N.dates.cancellation** — время аннулирования заказа в формате UTC. Тип данных — строка.
-* **data.products.ID_TRN_N.segments** — контейнер с информацией о сегментах. Тип данных — сложный.
-* **data.products.ID_TRN_N.segments.ID_SEG_N** — контейнер с информацией об N-м сегменте. Тип данных — сложный.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.trainNumber** — идентификатор сегмента. Тип данных — целое 64-битное число.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.trainName** — идентификатор плеча. Тип данных — целое 64-битное число.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.trainCategory** — контейнер с информацией о пункте отправления. Тип данных — сложный.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.timeInRoad** - время в пути. Тип данных — строка.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.carNumber** - номер вагона. Тип данных — строка.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.carType** - тип вагона. Тип данных — строка.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.choosenRange** — контейнер с информацией о диапазоне мест. Тип данных — сложный.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.choosenRange.start** - начало диапазона мест. Тип данных — строка.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.choosenRange.end** - конец диапазона мест. Тип данных — строка.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.departure** — контейнер с информацией о пункте отправления. Тип данных — сложный.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.departure.date** — время отправления. Тип данных — строка.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.departure.station** — код станции отправления. Тип данных — строка.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.arrival**— контейнер с информацией о пункте прибытия. Тип данных — сложный.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.arrival.date** — время прибытия. Тип данных — строка.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.arrival.station** — код станции прибытия. Тип данных — строка.
-* **data.products.ID_TRN_N.pricingInfo** — контейнер с информацией об оценке маршрута. Тип данных — сложный.
-* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N** — контейнер с информацией об N-й оценке маршрута. Тип данных — сложный.
-* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare** — контейнер с информацией о тарифах.Тип данных — сложный.
-* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N** — контейнер с информацией об N-м тарифе. Тип данных — сложный.
-* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.pricingType** — код ценового типа пассажира полученного из ГРС. Тип данных — строка.
-* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.passCount** — число пассажиров. Тип данных — целое 64-битное число.
-* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare** — контейнер с информацией о базовой стоимости тарифа. Тип данных - сложный.
-* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare.amount** — сумма базовой стоимости.Тип данных — строка.
-* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare.currency** — код валюты базовой стоимости. Тип данных — строка.
-* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.refundCharge** — контейнер с информацией о сборе за возврат. Тип данных - сложный.
-* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.refundCharge.amount** — сумма сбора за возврат .Тип данных — строка.
-* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.refundCharge.currency** — код валюты сбора за возврат. Тип данных — строка.
-* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.passengers** - идентификатор пассажира. Тип данных - сложный.
-* **data.price** — контейнер с данными о полной стоимости. Тип данных — сложный.
-* **data.price.amount** — cумма полной стоимости. Тип данных — строка.
-* **data.price.currency** — код валюты полной стоимости. Тип данных — строка.
-* **data.price.components** — контейнер с информацией о составляющих цены. Тип данных — сложный.
-* **data.price.components.products** — контейнер с информацией о полной стоимости без учета сборов. Тип данных — сложный.
-* **data.price.components.products.amount** — сумма полной стоимости без учета сборов. Тип данных — строка.
-* **data.price.components.products.currency** — код валюты полной стоимости. Тип данных — строка.
-* **data.price.components.products.components.ID_FLT_N** — контейнер с информацией о стоимости N-го перелёта. Тип данных — сложный.
-* **data.price.components.products.components.ID_FLT_N.amount** — сумма полной стоимость перелёта без учета сборов. Тип данных — строка.
-* **data.price.components.products.components.ID_FLT_N.currency** — код валюты стоимости перелёта. Тип данных — строка.
-* **data.price.components.products.components.ID_EXT_N** — контейнер с информацией о стоимости N-й дополнительной услуги. Тип данных — сложный.
-* **data.price.components.products.components.ID_EXT_N.amount** — полная стоимость дополнительной услуги. Тип данных — строка.
-* **data.price.components.products.components.ID_EXT_N.currency** — код валюты стоимости дополнительной услуги. Тип данных — строка.
-* **data.price.components.charges** — контейнер с информацией о сборах. Тип данных — сложный.
-* **data.price.components.charges.amount** — сумма сборов. Тип данных — строка.
-* **data.price.components.charges.currency** — код валюты суммы сборов. Тип данных — строка.
-* **data.price.components.charges.components** — контейнер с информацией о составляющих сборов. Тип данных — сложный.
-* **data.price.components.charges.components.agencyProfit** — контейнер с информацией о прибыли агентства. Тип данных — сложный.
-* **data.price.components.charges.components.agencyProfit.amount** — сумма прибыли агентства. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.currency** — код валюты суммы прибыли агентства. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components** — контейнер с информацией о составляющих прибыли агентства. Тип данных — сложный.
-* **data.price.components.charges.components.agencyProfit.components.pricingMarkup** — контейнер с информацией об оценке агентского сбора. Тип данных — сложный.
-* **data.price.components.charges.components.agencyProfit.components.pricingMarkup.amount** — сумма агентского сбора. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.pricingMarkup.currency** — код суммы агентского сбора. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.pricingMarkup.components** — контейнер с информацией о составляющих агентского сбора. Тип данных — сложный.
-* **data.price.components.charges.components.agencyProfit.components.pricingMarkup.components.ID_PCG_N** — контейнер с информацией о стоимости из N-й оценки перелёта. Тип данных — сложный.
-* **data.price.components.charges.components.agencyProfit.components.pricingMarkup.components.ID_PCG_N.amount** — сумма N-й оценки перелёта.  Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.pricingMarkup.components.ID_PCG_N.currency** — код валюты N-й оценки перелёта. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.fixingPriceMarkup** — контейнер с информацией о фиксирующем  сборе. Тип данных — сложный.
-* **data.price.components.charges.components.agencyProfit.components.fixingPriceMarkup.amount** — сумма фиксирующего  сбора. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.fixingPriceMarkup.currency** — код валюты  суммы фиксирующего сбора. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.problemDiscount** — контейнер с информацией о толерантном сборе. Тип данных — сложный.
-* **data.price.components.charges.components.agencyProfit.components.problemDiscount.amount** — сумма толерантного сбора. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.problemDiscount.currency** — код валюты толерантного сбора. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.subagentDiscount** — контейнер с информацией о субагентской скидке. Тип данных — сложный.
-* **data.price.components.charges.components.agencyProfit.components.subagentDiscount.amount** — сумма субагентской скидки. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.subagentDiscount.currency** — код валюты суммы субагентской  скидки. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.promoDiscount** — контейнер с информацией о скидке по промокоду. Тип данных — сложный
-* **data.price.components.charges.components.agencyProfit.components.promoDiscount.amount** — сумма скидки по промокоду. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.promoDiscount.currency** — код валюты суммы скидки по промокоду. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.roundingMarkup** — контейнер с информацией о округляющем сборе Тип данных — сложный
-* **data.price.components.charges.components.agencyProfit.components.roundingMarkup.amount** — размер округляющего сбора. Тип данных — строка.
-* **data.price.components.charges.components.agencyProfit.components.roundingMarkup.currency** — код валюты округлящего сбора. Тип данных — строка.
-* **data.price.components.charges.components.subagencyProfit** — контейнер с информацией о прибыли субагентства. Тип данных — сложный.
-* **data.price.components.charges.components.subagencyProfit.amount** — сумма прибыли субагентства. Тип данных — строка.
-* **data.price.components.charges.components.subagencyProfit.currency** — код валюты суммы прибыли субагентства. Тип данных — строка.
-* **data.price.components.charges.components.gatewayProfit** — контейнер с информацией о размере комиссии за прием платежа. Тип данных — сложный.
-* **data.price.components.charges.components.gatewayProfit.amount** — размер комиссии за прием платежа. Тип данных — строка.
-* **data.price.components.charges.components.gatewayProfit.currency** — код валюты комиссии за прием платежа. Тип данных — строка.
-* **data.payments** — контейнер с информацией о платежных шлюзах. Тип данных — сложный.
+* **method** — contains information on the type of an unload. Data type - string.
+* **apiVersion** — contains information on the API version. Data type - string.
+* **params** — parameters of the unloading object. Data type - complex.
+* **params.type** — type of unload object. Data type - string.
+* **params.id** — ID of the Nemo.Travel unload object. Data type - 64-bit integer.
+* **data** — container with data on the unload object. Data type - complex.
+* **data.system** — instance to which the unload object belongs. Data type - string.
+* **data.id** — ID of the unload object Nemo.Travel. Data type - 64-bit integer.
+* **data.lastModifiedDate** — date of the last modification of the unload object. Data type - string.
+* **data.currentServerDate** — unload date by server time. Data type - string.
+* **data.customer** — container with customer data. Data type - complex..
+* **data.customer.userId** — user ID to which the unload object belongs. Data type - 64-bit integer.
+* **data.customer.сompanyId** — ID of the agency to which the unload object belongs. Data type - 64-bit integer.
+* **data.customer.backofficeCompanyId** — back office ID. Data type - string.
+* **data.customer.name** — customer's name. Data type - string.
+* **data.customer.phone** — customer's phone number. Data type - string.
+* **data.customer.email** — customer's email address. Data type - string.
+* **data.passengers** — container with passenger data. Data type - complex.
+* **data.passengers.ID_PAS_N** — container with N-th passenger data. Data type - complex.
+* **data.passengers.ID_PAS_N.lastName** —  passenger’s last name. Data type - string.
+* **data.passengers.ID_PAS_N.firstName** — passenger’s first name. Data type - string.
+* **data.passengers.ID_PAS_N.middleName** — passenger’s middle name. Data type - string.
+* **data.passengers.ID_PAS_N.gender** — passenger’s gender. Data type - string.
+* **data.passengers.ID_PAS_N.birthDate** — passenger’s date of birth. Data type - string.
+* **data.passengers.ID_PAS_N.nationality** — passenger’s nationality. Data type - string.
+* **data.passengers.ID_PAS_N.docType** — passenger’s document type. Data type - string.
+* **data.passengers.ID_PAS_N.docNumber** — passenger's document number. Data type - string.
+* **data.passengers.ID_PAS_N.docExpiryDate** — document's expiration date . Data type - string.
+* **data.passengers.ID_PAS_N.phone** — passenger's phone number. Data type - string.
+* **data.passengers.ID_PAS_N.email** — passenger's email. Data type - string.
+* **data.products** — container with data on the service. Data type - complex.
+* **data.products.ID_FLT_N** — container with information on the Nth flight. Data type - complex.
+* **data.products.ID_FLT_N.info** — container with current flight information. Data type - complex.
+* **data.products.ID_FLT_N.info.nemo** — Nemo.Travel flight information container. Data type - complex.
+* **data.products.ID_FLT_N.info.nemo.flightId** — flight ID . Data type - 64-bit integer.
+* **data.products.ID_FLT_N.info.nemo.searchId** — search ID . Data type - 64-bit integer.
+* **data.products.ID_FLT_N.info.nemo.pacgageId** — package ID. Data type - 64-bit integer.
+* **data.products.ID_FLT_N.info.nemo.status** — flight status. Data type - string.
+* **data.products.ID_FLT_N.info.nemo.utmSource** — transition source. Data type - string.
+* **data.products.ID_FLT_N.info.nemoConnect** — Nemo.Connect flight information container. Data type - complex.
+* **data.products.ID_FLT_N.info.nemoConnect.system** — instance to which the flight belongs. Data type - string.
+* **data.products.ID_FLT_N.info.nemoConnect.id** — ID of the Nemo.Connect. unload object. Data type - 64-bit integer.
+* **data.products.ID_FLT_N.info.nemoConnect.packageID** — package ID. Data type - 64-bit integer.
+* **data.products.ID_FLT_N.info.nemoConnect.status** — flight status. Data type - string.
+* **data.products.ID_FLT_N.info.nemoConnect.subStatus** — flight sub-status. Data type - string.
+* **data.products.ID_FLT_N.info.nemoConnect.possibleActions** — list of available actions with the flight. Data type - array of strings.
+* **data.products.ID_FLT_N.info.supplier** — container with information on the supplier. Data type - complex.
+* **data.products.ID_FLT_N.info.supplier.system** — supplier name. Data type - string.
+* **data.products.ID_FLT_N.info.supplier.id** — supplier's ID. Data type - string.
+* **data.products.ID_FLT_N.info.supplier.environment** — runtime. Data type - string.
+* **data.products.ID_FLT_N.info.supplier.bookingAgencyId** — booking details unique ID. Data type - string.
+* **data.products.ID_FLT_N.info.supplier.ticketingAgencyId** — ticketing details unique ID. Data type - string.
+* **data.products.ID_FLT_N.info.supplier.ticketingIATAValidator** — IATA ticket validator in given details. Data type - string.
+* **data.products.ID_FLT_N.dates** — container with date information. Data type - complex.
+* **data.products.ID_FLT_N.dates.creation** — order creation time. Data type - string.
+* **data.products.ID_FLT_N.dates.booking** — order reservation time. Data type - string.
+* **data.products.ID_FLT_N.dates.ticketing** — order ticketing time. Data type - string.
+* **data.products.ID_FLT_N.dates.void** — order void time. Data type - string.
+* **data.products.ID_FLT_N.dates.cancellation** — order revocation time. Data type - string.
+
+* **data.products.ID_FLT_N.dates.timelimit** — container with information on time limits. Data type string.
+* **data.products.ID_FLT_N.dates.timelimit.price** — time limit of the price. Data type - string.
+* **data.products.ID_FLT_N.dates.timelimit.ticketing** — time limit for ticketing. Data type - string.
+* **data.products.ID_FLT_N.dates.timelimit.advancedPurchase** — time limit from the fare rules. Data type - string.
+* **data.products.ID_FLT_N.dates.timelimit.effective** — minimum time limit using Nemo.Travel rules. Data type - string.
+* **data.products.ID_FLT_N.segments** — container with information on segments. Data type - complex.
+* **data.products.ID_FLT_N.segments.ID_SEG_N** — container with information on the N-th segment. Data type - complex.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.index** — segment ID. Data type - 64-bit integer.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.leg** — leg ID. Data type - 64-bit integer.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.departure** — container with departure point information. Data type - complex.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.departure.date** — departure time. Data type - string.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.departure.airport** — IATA code of departure airport. Data type - string.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.departure.terminal** — departure terminal. Data type - string.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.departure.country** — country of departure. Data type - string.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.arrival** — container with information on the arrival point. Data type - complex.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.arrival.date** — arrival time. Data type - string.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.arrival.airport** — IATA arrival airport code. Data type - string.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.arrival.terminal** — arrival terminal. Data type - string.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.arrival.country** — country of arrival. Data type - string.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.UTC** — container with information on the departure and arrival time in UTC. Data type - complex.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.UTC.warning** — warning "do not use as information for the passenger". Data type - string.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.UTC.departure** — departure time. Data type - string.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.UTC.arrival** — arrival time. Data type - string.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.marketingAirline** — marketing carrier. 
+* **data.products.ID_FLT_N.segments.ID_SEG_N.flightNumber** — flight number. Data type - string.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.operatingAirline** — operating carrier. Data type - string.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.eticket** — attribute of e-ticket presence. Data type - boolean.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.RBD** — RBD (Reservation Booking Designator). Data type - string.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.service** — service class. Data type - string.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.status** — segment status. Data type - string.
+* **data.products.ID_FLT_N.segments.ID_SEG_N.supplierRef** — segment ID in the airline inventory system. Data type - string.
+* **data.products.ID_FLT_N.pricingInfo** — container with flight’s assessment information. Data type - complex.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N** — container with information on the N-th flight assessment. Data type - complex.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.validatingCarrier** — validating carrier. Data type - complex.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.commission** — container with commission information. Data type - complex.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.commission.amount** — commission amount. Data type - string.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.commission.currency** — commission currency code. Data type - string.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.tourCode** — travel code applied. Data type - string. 
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare** — container with fare information. Data type - complex.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N** — container with information on the N-th fare. Data type - complex.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.pricingType** — code of the passenger’s price type received from the GDS. Data type - string.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.passCount** — number of passengers. Data type - 64-bit integer.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare** — container with information on the base fare value (excluding taxes). Data type - complex.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare.amount** — amount of the base price. Data type - string.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare.currency** — base price currency code. Data type - string.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.equiveFare** — container with information on the base fare price (excluding taxes) in an equivalent currency. Data type - complex.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.equiveFare.amount** — base price amount in the equivalent currency. Data type - string.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.equiveFare.currency** — code of the base price's equivalent currency. Data type - string.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.totalFare** — container with information on the full cost of the fare, including taxes. Data type - complex.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.totalFare.amount** — total price amount. Data type - string.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.totalFare.currency** — full price currency code. Data type - string.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.passengers** — list of passenger IDs (ID_PAS_N) associated with the given N-th fare. Data type - array of strings.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis** — list of fares associated with the given N-th flight. Data type - complex.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.[N]** — container with information on the N-th fare. Data type - complex.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.[N].code** — fare code. Data type - string.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.[N].type** — fare type. Data type - string.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.[N].segments** — the list of segment identifiers (ID_SEG_N) associated with this N-th fare. Data type - array of strings.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.[N].baggage** — container with baggage information. Data type - complex
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.[N].baggage.value** — numerical value for the allowable amount of baggage. Data type - 64-bit integer.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.[N].baggage.measurement** — measure of the baggage amount. Data type - string.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes** — list of taxes attached to the given N-th tariff. Data type - complex. 
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N]** — container with information on the N-th tax. Data type - complex.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].code** — tax code. Data type - string.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax** — container with information about the cost of taxes. Data type - complex.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax.amount** — tax size. Data type - string.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax.currency** — tax currency code. Data type - string.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].type** — tax type. Data type - string.
+* **data.products.ID_EXT_N** — container with information on the additional services. Data type - complex.
+* **data.products.ID_EXT_N.type** — additional service type. Data type - string.
+* **data.products.ID_TRN_N** — container with information on the N-th order. Data type - complex.
+* **data.products.ID_TRN_N.info** — container with information on the given order. Data type - complex.
+* **data.products.ID_TRN_N.info.nemo** — container with order information from Nemo.Travel. Data type - complex.
+* **data.products.ID_TRN_N.info.nemo.flightId** — order ID. Data type - 64-bit integer.
+* **data.products.ID_TRN_N.info.nemo.searchId** — search identifier. Data type - 64-bit integer.
+* **data.products.ID_TRN_N.info.nemo.status** — order status. Data type - string.
+* **data.products.ID_TRN_N.info.nemo.utmSource** — transition source. Data type - string.
+* **data.products.ID_TRN_N.info.nemoConnect** — container with order information from Nemo.Connect. Data type - complex.
+* **data.products.ID_TRN_N.info.nemoConnect.system** — instance to which the order belongs. Data type - string.
+* **data.products.ID_TRN_N.info.nemoConnect.id** — Nemo.Connect unload object ID. Data type - 64-bit integer.
+* **data.products.ID_TRN_N.info.nemoConnect.status** — order status. Data type - string.
+* **data.products.ID_TRN_N.info.nemoConnect.subStatus** — order sub-status. Data type - string.
+* **data.products.ID_TRN_N.dates** — container with date information. Data type - complex.
+* **data.products.ID_TRN_N.dates.creation** — order creation time in UTC. Data type - string.
+* **data.products.ID_TRN_N.dates.booking** — order booking time in UTC. Data type - string.
+* **data.products.ID_TRN_N.dates.ticketing** — order ticketing time in UTC. Data type - string.
+* **data.products.ID_TRN_N.dates.void** — order void time in UTC. Data type - string.
+* **data.products.ID_TRN_N.dates.cancellation** — order revocation time in UTC format. Data type - string.
+* **data.products.ID_TRN_N.segments** — container with information on segments. Data type - complex.
+* **data.products.ID_TRN_N.segments.ID_SEG_N** —  container with information on the N-th segment. Data type - complex.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.trainNumber** — segment ID. Data type - 64-bit integer.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.trainName** — leg ID. Data type - 64-bit integer.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.trainCategory** — container with information on the departure point. Data type - complex.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.timeInRoad** - travel time. Data type - string.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.carNumber** - car number. Data type - string.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.carType** - car type. Data type - string.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.choosenRange** — container with information on the seat range. Data type - complex.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.choosenRange.start** - beginning of the seat range. Data type - string.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.choosenRange.end** - end of the seat range. Data type - string.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.departure** — container with information on the departure point. Data type - complex.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.departure.date** — departure time. Data type - string.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.departure.station** — departure station code. Data type - string.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.arrival**— container with information on the arrival point. Data type - complex.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.arrival.date** — arrival time. Data type - string.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.arrival.station** — arrival station code. Data type - string.
+* **data.products.ID_TRN_N.pricingInfo** — container with information on the itinerary estimation. Data type - complex.
+* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N** — container with information on the N-th itinerary estimation. Data type - complex.
+* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare** — container with fare information. Data type - complex.
+* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N** — container with information on the N-th fare. Data type - complex.
+* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.pricingType** — code of the passenger's price type received from the GDS. Data type - string.
+* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.passCount** — number of passengers. Data type - 64-bit integer.
+* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare** — container with information on the base fare price. Data type - complex.
+* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare.amount** —  base price amount. Data type - string.
+* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare.currency** — base price currency code. Data type - string.
+* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.refundCharge** — container with information on the return fee. Data type - complex.
+* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.refundCharge.amount** — return fee amount. Data type - string.
+* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.refundCharge.currency** — refund fee currency code. Data type - string.
+* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.passengers** - passenger ID. Data type - complex.
+* **data.price** — container with full price data. Data type - complex.
+* **data.price.amount** — full price amount. Data type - string.
+* **data.price.currency** — full price currency code. Data type - string.
+* **data.price.components** — container with information on price components. Data type - complex.
+* **data.price.components.products** — container with information on the full price excluding fees. Data type - complex.
+* **data.price.components.products.amount** — full price amount excluding fees. Data type - string.
+* **data.price.components.products.currency** — full price currency code. Data type - string.
+* **data.price.components.products.components.ID_FLT_N** — container with information on the N-th flight price. Data type - complex.
+* **data.price.components.products.components.ID_FLT_N.amount** — amount of the full price of the flight, excluding charges. Data type - string.
+* **data.price.components.products.components.ID_FLT_N.currency** — currency code of the flight price. Data type - string.
+* **data.price.components.products.components.ID_EXT_N** — container with information on the N-th additional service price. Data type - complex.
+* **data.price.components.products.components.ID_EXT_N.amount** — total additional service price. Data type - string.
+* **data.price.components.products.components.ID_EXT_N.currency** — currency code for additional service price. Data type - string. 
+* **data.price.components.charges** — container with fee information. Data type - complex.
+* **data.price.components.charges.amount** — amount of fees. Data type - string.
+* **data.price.components.charges.currency** — currency code of the fee amount. Data type - string.
+* **data.price.components.charges.components** — container with information on fee components. Data type - complex.
+* **data.price.components.charges.components.agencyProfit** — container with information on the agency’s profit. Data type - complex.
+* **data.price.components.charges.components.agencyProfit.amount** — amount of the agency’s profit. Data type - string.
+* **data.price.components.charges.components.agencyProfit.currency** — currency code of agency’s profit amount. Data type - string.
+* **data.price.components.charges.components.agencyProfit.components** — container with information on the agency’s profit components. Data type - complex.
+* **data.price.components.charges.components.agencyProfit.components.pricingMarkup** — container with information on the agency fee assessment. Data type - complex.
+* **data.price.components.charges.components.agencyProfit.components.pricingMarkup.amount** — amount of the agency fee. Data type - string.
+* **data.price.components.charges.components.agencyProfit.components.pricingMarkup.currency** — code of the agency fee amount. Data type - string.
+* **data.price.components.charges.components.agencyProfit.components.pricingMarkup.components** — container with information on the agency fee components. Data type - complex.
+* **data.price.components.charges.components.agencyProfit.components.pricingMarkup.components.ID_PCG_N** — container with information on the price of the N-th flight estimation. Data type - complex.
+* **data.price.components.charges.components.agencyProfit.components.pricingMarkup.components.ID_PCG_N.amount** — amount of the N-th flight estimation. Data type - string.
+* **data.price.components.charges.components.agencyProfit.components.pricingMarkup.components.ID_PCG_N.currency** — currency code of the N-th flight estimation. Data type - string.
+* **data.price.components.charges.components.agencyProfit.components.fixingPriceMarkup** — container with information on the fixing fee. Data type - complex.
+* **data.price.components.charges.components.agencyProfit.components.fixingPriceMarkup.amount** — mount of the fixing fee. Data type - string.
+* **data.price.components.charges.components.agencyProfit.components.fixingPriceMarkup.currency** — currency code of the amount of the fixing fee. Data type - string.
+* **data.price.components.charges.components.agencyProfit.components.problemDiscount** — container with information on the tolerant fee. Data type - complex.
+* **data.price.components.charges.components.agencyProfit.components.problemDiscount.amount** — amount of the tolerant fee. Data type - string.
+* **data.price.components.charges.components.agencyProfit.components.problemDiscount.currency** — currency code of the tolerant fee. Data type - string.
+* **data.price.components.charges.components.agencyProfit.components.subagentDiscount** — container with information on subagent discount. Data type - complex.
+* **data.price.components.charges.components.agencyProfit.components.subagentDiscount.amount** — amount of the subagent discount. Data type - string.
+* **data.price.components.charges.components.agencyProfit.components.subagentDiscount.currency** — subagent discount amount currency code. Data type - string.
+* **data.price.components.charges.components.agencyProfit.components.promoDiscount** — container with information on the discount by the promotional code. Data type - complex.
+* **data.price.components.charges.components.agencyProfit.components.promoDiscount.amount** — discount amount by the promotional code. Data type - string.
+* **data.price.components.charges.components.agencyProfit.components.promoDiscount.currency** — currency code of the discount amount by the promotional code. Data type - string.
+* **data.price.components.charges.components.agencyProfit.components.roundingMarkup** — container with information about the rounding fee. Data type - complex.
+* **data.price.components.charges.components.agencyProfit.components.roundingMarkup.amount** — size of the rounding fee. Data type - string.
+* **data.price.components.charges.components.agencyProfit.components.roundingMarkup.currency** — currency code of the rounding fee. Data type - string.
+* **data.price.components.charges.components.subagencyProfit** — container with information on the sub-agency’s profit. Data type - complex.
+* **data.price.components.charges.components.subagencyProfit.amount** —  amount of sub-agency profit. Data type - string.
+* **data.price.components.charges.components.subagencyProfit.currency** — sub-agency profit currency code. Data type - string.
+* **data.price.components.charges.components.gatewayProfit** — container with information on the amount of payment acceptance fee. Data type - complex.
+* **data.price.components.charges.components.gatewayProfit.amount** — size of the payment acceptance fee. Data type - string.
+* **data.price.components.charges.components.gatewayProfit.currency** — currency code of the payment acceptance fee. Data type - string.
+* **data.payments** — container with information on payment gateways. Data type - complex.
 * **data.payments.ID_PAY_N** — контейнер с информаций об N-й платежной транзакции. Тип данных — сложный.
 * **data.payments.ID_PAY_N.id** — идентификатор плтаженой транзакции Nemo.Travel. Тип данных — строка.
 * **data.payments.ID_PAY_N.gatewayId** — внутренний идентификатор Nemo.Travel. Тип данных — строка.
