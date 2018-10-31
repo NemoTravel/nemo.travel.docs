@@ -32,11 +32,11 @@ title: 'Общие элементы'
 #### Ответ
 
 -	**ResponseID** - уникальный идентификатор обработанного события. Тип данных - строка.
--	**Body.NameResponce** - элемент содержит тело ответа. Под "NameResponce" подразумевается название конкретного сообщения, к примеру, AirShoppingRS, OrderViewRS, и т.д. Содержит атрибут Target и Version (описан выше). Атрибут Target  используется для указания тестовой или производственной среды.
--	**NameResponce.Document** - имя шлюза и версия внутренней реализации в системе. Тип данных - сложный.
--	**NameResponce.Document.Name** - имя шлюза. Тип данных - строка.
--	**NameResponce.Document.ReferenceVersion** - версия. Тип данных - строка.
--	**NameResponce.Success** - наличие пустого элемента указывает, что сообщение выполнено успешно. Тип данных - сложный.
--	**NameResponce.Warning** - 
--	**NameResponce.ShoppingResponseID** Тип данных - сложный.
--	**NameResponce.ShoppingResponseID.ResponseID**  - уникальный идентификатор обработанного события. Тип данных - строка.
+-	**Body.NameResponse** - элемент содержит тело ответа. Под "NameResponce" подразумевается название конкретного сообщения, к примеру, AirShoppingRS, OrderViewRS, и т.д. Содержит атрибут Target и Version (описан выше). Атрибут Target  используется для указания тестовой или производственной среды.
+-	**NameResponse.Document** - имя шлюза и версия внутренней реализации в системе. Тип данных - сложный.
+-	**NameResponse.Document.Name** - имя шлюза. Тип данных - строка.
+-	**NameResponse.Document.ReferenceVersion** - версия. Тип данных - строка.
+-	**NameResponse.Success** - наличие пустого элемента указывает, что сообщение выполнено успешно. Тип данных - сложный.
+-	**NameResponse.Warning** - 
+-	**NameResponse.ShoppingResponseID** Тип данных - сложный.
+-	**NameResponse.ShoppingResponseID.ResponseID**  - уникальный идентификатор обработанного события. Тип данных - строка.
