@@ -111,7 +111,7 @@ title: AirShopping
          <ns:Preference>
            <ns:AirlinePreferences>
                <ns:Airline PreferencesLevel="Required">
-                <ns:AirlineID>SU</ns:AirlineID>
+                <ns:AirlineID>KC</ns:AirlineID>
               </ns:Airline>
            </ns:AirlinePreferences>
             <ns:CabinPreferences>
