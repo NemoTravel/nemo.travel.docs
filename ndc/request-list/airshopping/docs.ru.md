@@ -292,14 +292,14 @@ title: AirShopping
 -	**Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.BindingKey** - ссылка на перелет. Тип данных — строка.
 -	**Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.Meals** - элемент содержит информацию о питании. Тип данных — массив значений типа Meal.
 -	**Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.Meals.Meal** - типы питания. Тип данных — строка, возможные значения: 
--   -	**B** - Breakfast;  
--   -	**C** - Alcoholic beverages;	
--   -	**D** - Dinner;
--   -	**L** - Lunch;
--   -	**M** - Meal;
--   -	**R** - Refreshment;
--	-	**S** - Snack or light meal;
--   -	**V** - Continental breakfast.
+    -**B** - Breakfast;  
+    -**C** - Alcoholic beverages;	
+    -**D** - Dinner;
+    -**L** - Lunch;
+    -**M** - Meal;
+    -**R** - Refreshment;
+	-**S** - Snack or light meal;
+    -**V** - Continental breakfast.
 
 
 
