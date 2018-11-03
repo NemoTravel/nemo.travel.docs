@@ -7,8 +7,8 @@ title: OrderCreate
 
 #### Запрос
 -	**OrderCreateRQ** - тело запроса. Тип данных - сложный.
--	**OrderCreateRQ.Document** - общие элементы.
--	**OrderCreateRQ.Party** - общие элементы. В текущем запросе элемент Party дополнен сведениями о контактных данных агента.
+-	**OrderCreateRQ.Document** - **[общие элементы.](/ndc/ndc_element)**
+-	**OrderCreateRQ.Party** - **[общие элементы.](/ndc/ndc_element)** В текущем запросе элемент Party дополнен сведениями о контактных данных агента.
 -	**OrderCreateRQ.Party.Sender.TravelAgencySender.Contacts** - контактные данные агентства (необязательный). Тип данных - сложный. 
 -	**TravelAgencySender.Contacts.Contact** - описывает контактные данные агентства. Тип данных - сложный.
 -	**TravelAgencySender.Contacts.Contact.EmailContact** - электронный адрес агентства. Тип данных - сложный.
