@@ -194,8 +194,7 @@ title: OrderCreate
 					</ns:Payment>
 				</ns:Payments>
 				<ns:Commission>
-					<ns:Amount Code="USD" Taxable="true">30.15</ns:Amount>
-					<ns:Percentage>23.28</ns:Percentage>
+					<ns:Percentage>1</ns:Percentage>
 				</ns:Commission>
 				<ns:DataLists>
 					<ns:PassengerList>
