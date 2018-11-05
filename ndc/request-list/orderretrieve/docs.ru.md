@@ -12,7 +12,7 @@ title: OrderRetrieve
 -	**OrderRetrieveRQ.Query** - **[общие элементы.](/ndc/ndc_element)**
 -	**OrderRetrieveRQ.Party** - **[общие элементы.](/ndc/ndc_element)**
 -	**Query.Filters** - содержит идентификатор брони, которую требуется обновить. Тип данных - сложный.
--	**Filters.OrderID** - уникальный идентификатор заказа в Nemo Connect. Атрибут Owner содержит код владельца (ГРС) заказа. 
+-	**Filters.OrderID** - уникальный идентификатор заказа в Nemo Connect. Атрибут Owner содержит код владельца (ГРС). 
 
 ##### Пример
 ```xml
