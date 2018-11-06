@@ -62,6 +62,7 @@ taxonomy:
 -   **AdditionalActions.QueueNum** — номер очереди, в которую нужно поместить бронь после её создания. Тип данных — строка.
 <!---   **AdditionalActions.CalculatePrice** — признак необходимости расчета ценообразования. Тип данных — булевский.-->
 -   **AdditionalActions.HostCommandsToExecute** — набор терминальных команд (необязательный, поддерживается только для Galileo uAPI). Тип данных — массив строк.
+-   **AdditionalActions.BusinessProfileToTransfer** — название профиля, из которого необходимо перености данные (необязательный, поддерживается только для Amadeus). Тип данных - массив строк.
 -   **PricingOptions** — дополнительные опции тарификации брони (необязательный). Тип данных — сложный.
 -   **PricingOptions.FOPsForAlternativePrices** — FOP'ы (Form Of Payment), для которых нужно получить дополнительную оценку брони. Тип данных — массив.
 -   **PricingOptions.FOPsForAlternativePrices.Type** — FOP, для которой нужно получить допоценку брони. Тип данных — строка.
