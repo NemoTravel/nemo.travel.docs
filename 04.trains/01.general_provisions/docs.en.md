@@ -9,7 +9,7 @@ The server works with several information suppliers on railways (trains, routes,
 Suppliers:
 
 * ** UFS (Universal Financial System) ** - Supplier of Russian Railways;
-* ** ITM (Universal Information Technologies) ** - Supplier of Ukraine’s railway (outdated integration);
+* ** UIT (Universal Information Technologies) ** - Supplier of Ukraine’s railway (outdated integration);
 * ** Sirena ** - data provider UFS (Universal Financial System) and OOO IM (Innovative Mobility);
 * ** KTZ ** - data provider Kazakhstan Railways;
 * ** UZD ** - data provider Ukrainian Railways.
