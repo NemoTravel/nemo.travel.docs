@@ -114,3 +114,44 @@ title: OrderChange
    </soapenv:Body>
 </soapenv:Envelope>
 ```
+#### Пример изменения карты лояльности.
+>>>>  В примере представлена модификаци карты лояльности. Для удаления карты необходимо заполнить только PassengerServicing.Previous, для добавления карты заполняется только PassengerServicing.New. 
+
+-	**New.LoyaltyProgramAccount** - данные новой карты лояльности. Тип данных - сложный.
+-	**New.LoyaltyProgramAccount.Airline** - тип данных - сложный.
+-	**New.LoyaltyProgramAccount.Airline.AirlineDesignator** - IATA код авиакомпании. Тип данных - строка.
+-	**New.LoyaltyProgramAccount.AccountNumber** - номер новой карты лояльности.
+-	**New.ActionType** - действие с контентом, которое требуется выполнить. Тип данных - перечисление, возможные значения:
+-	-	**Add** - добавление. Всегда указываем в New.ActionType.
+-	-	**Delete** - удаление. Всегда указываем в Previous.ActionType.
+-	**Previous.LoyaltyProgramAccount** - данные старой карты лояльности. Тип данных - сложный.
+-	**Previous.LoyaltyProgramAccount.Airline** - тип данных - сложный.
+-	**Previous.LoyaltyProgramAccount.Airline.AirlineDesignator** - IATA код авиакомпании. Тип данных - строка.
+-	**Previous.LoyaltyProgramAccount.AccountNumber** - номер старой карты лояльности.
+-	**Previous.ActionType** - действие с контентом, которое требуется выполнить. Тип данных - перечисление.
+
+```xml
+         <ns:Query>
+            <ns:OrderID>ORD608347</ns:OrderID>
+            <ns:PassengerServicing>
+                <ns:New PassengerID="PAX1">
+                  <ns:LoyaltyProgramAccount>
+                     <ns:Airline>
+                        <ns:AirlineDesignator>SU</ns:AirlineDesignator>
+                     </ns:Airline>
+                     <ns:AccountNumber>111333600</ns:AccountNumber>
+                  </ns:LoyaltyProgramAccount>
+                  <ns:ActionType>Add</ns:ActionType>
+               </ns:New>
+               <ns:Previous PassengerID="PAX1">
+                  <ns:LoyaltyProgramAccount>
+                     <ns:Airline>
+                        <ns:AirlineDesignator>SU</ns:AirlineDesignator>
+                     </ns:Airline>
+                     <ns:AccountNumber>111333605</ns:AccountNumber>
+                  </ns:LoyaltyProgramAccount>
+                  <ns:ActionType>Delete</ns:ActionType>
+               </ns:Previous>
+            </ns:PassengerServicing>
+         </ns:Query>
+```
