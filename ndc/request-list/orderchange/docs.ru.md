@@ -213,3 +213,35 @@ title: OrderChange
          </ns:DataLists>
 ```
 
+#### Пример изменения ремарки пассажира.
+>  В примере представлена модификаци ремарки пассажира. Для удаления ремарки необходимо заполнить только PassengerServicing.Previous, для добавления ремарки заполняется только PassengerServicing.New. 
+
+-	**New.Remark** - новая ремарка. Тип данных - сложный.
+-	**New.Remark.Remark** - новая ремарка. Тип данных - строка.
+-	**New.ActionType** - действие с контентом, которое требуется выполнить. Тип данных - перечисление, возможные значения:
+-	-	**Add** - добавление, всегда указываем в New.ActionType.
+-	-	**Delete** - удаление, всегда указываем в Previous.ActionType.
+-	**Previous.Remark** - старая ремарка. Тип данных - сложный.
+-	**Previous.Remark.Remark** - старая ремарка. Тип данных - строка.
+-	**Previous.ActionType** - действие с контентом, которое требуется выполнить. Тип данных - перечисление.
+```xml
+         <ns:Query>         
+            <ns:OrderID>ORD608353</ns:OrderID>            
+            <ns:PassengerServicing>
+               <ns:New PassengerID="PAX1">
+                     <ns:Remark>
+                        <ns:Remark>NEW REMARK</ns:Remark>
+                     </ns:Remark>
+                  <ns:ActionType>Add</ns:ActionType>
+               </ns:New>
+               <ns:Previous PassengerID="PAX1">
+                     <ns:Remark>
+                        <ns:Remark>OLD REMARK</ns:Remark>
+                     </ns:Remark>
+                  <ns:ActionType>Delete</ns:ActionType>
+               </ns:Previous>
+            </ns:PassengerServicing>
+         </ns:Query>
+```
+#### Ответ
+Структура ответа изменения заказа соответствует ответу [OrderCreate](/ndc/request-list/ordercreate).
