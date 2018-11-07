@@ -91,7 +91,7 @@ title: 'Getting the Complete Information on a Particular Train'
                             <Currency>UAH</Currency>
                             <NDS>0</NDS>
                         </Price>
-                        <RoadType>УКРАИНА,ПРИДНЕПРОВСКАЯ Ж.Д.</RoadType>
+                        <RoadType>UKRAINE,PRIDNEPROVSKAYA R.W.</RoadType>
                         <SeatsNum>10</SeatsNum>
                         <TimelimitToConfirm>0</TimelimitToConfirm>
                         <TrainLogicNumber nil="true"/>
@@ -171,7 +171,7 @@ title: 'Getting the Complete Information on a Particular Train'
                             <Currency>UAH</Currency>
                             <NDS>0</NDS>
                         </Price>
-                        <RoadType>УКРАИНА,ПРИДНЕПРОВСКАЯ Ж.Д.</RoadType>
+                        <RoadType>UKRAINE,PRIDNEPROVSKAYA R.W.</RoadType>
                         <SeatsNum>26</SeatsNum>
                         <TimelimitToConfirm>0</TimelimitToConfirm>
                         <TrainLogicNumber nil="true"/>
@@ -209,7 +209,7 @@ title: 'Getting the Complete Information on a Particular Train'
                             <Currency>UAH</Currency>
                             <NDS>0</NDS>
                         </Price>
-                        <RoadType>УКРАИНА,ПРИДНЕПРОВСКАЯ Ж.Д.</RoadType>
+                        <RoadType>UKRAINE,PRIDNEPROVSKAYA R.W.</RoadType>
                         <SeatsNum>48</SeatsNum>
                         <TimelimitToConfirm>0</TimelimitToConfirm>
                         <TrainLogicNumber nil="true"/>
@@ -229,8 +229,8 @@ title: 'Getting the Complete Information on a Particular Train'
                 <Number>072П</Number>
                 <PrintPoints nil="true"/>
                 <RequisitesId>0</RequisitesId>
-                <TrainEndPointName>КИЕВ-ПАССАЖИРСКИЙ</TrainEndPointName>
-                <TrainStartPointName>ЗАПОРОЖЬЕ 1</TrainStartPointName>
+                <TrainEndPointName>KIEV-PASSENGER</TrainEndPointName>
+                <TrainStartPointName>ZAPOROZHIE 1</TrainStartPointName>
                 <TripTime>010:31</TripTime>
                 <WebService>UIT</WebService>
             </Train>
@@ -285,7 +285,7 @@ title: 'Getting the Complete Information on a Particular Train'
                            </Car>
                        </Cars>
                        <Category>COUPE</Category>
-                       <Description>Вагон без услуг. В стоимость входит - постельное белье. Наличие установки кондиционирования воздуха не гарантировано.</Description>
+                       <Description>Car without services. Price includes bedclothes. The presence of an air conditioning unit is not guaranteed.</Description>
                        <Discount>0</Discount>
                        <GDSCode>2К</GDSCode>
                        <GenderSeats>false</GenderSeats>
@@ -323,7 +323,7 @@ title: 'Getting the Complete Information on a Particular Train'
                            </Car>
                        </Cars>
                        <Category>COUPE</Category>
-                       <Description>Вагон без услуг. В стоимость входит - постельное белье. Наличие установки кондиционирования воздуха не гарантировано.</Description>
+                       <Description>Car without services. Price includes bedclothes. The presence of an air conditioning unit is not guaranteed.</Description>
                        <Discount>0</Discount>
                        <GDSCode>2К</GDSCode>
                        <GenderSeats>true</GenderSeats>
