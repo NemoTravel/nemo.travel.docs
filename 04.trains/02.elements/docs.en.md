@@ -12,7 +12,7 @@ title: 'Common Elements of the Railway Server'
 -   **Person.FirstName** - Passenger's name. Data type - string.
 -   **Person.MiddleName** - Passenger's middle name. Data type - string.
 -   **Person.LastName** - Passenger's last name. Data type - string.
--   **Person.Type** - description. Data type - enumeration. Possible values:
+-   **Person.Type** - Passenger type. Data type - enumeration. Possible values:
     -   **adult** - from 10 years.
     -   **child** - UFS: from 5 to 10 years. UIT: in Ukraine from 6 to 14, in the CIS countries - from 5 to 10 years
     -   **infant** - UFS: up to 5 years.
