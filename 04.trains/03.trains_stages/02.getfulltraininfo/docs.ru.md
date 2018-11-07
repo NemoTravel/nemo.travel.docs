@@ -1,13 +1,13 @@
 ---
-title: 'Получение полной информации об определённом поезде'
+title: 'Getting the Complete Information on a Particular Train'
 ---
 
 ### GetFullTrainInfo
 
-#### Запрос
--  **TID** - Идентификатор поезда. Тип данных - целое 64-битное число.
+#### Request
+-  **TID** - Train ID. Data type - 64-bit integer.
 
-##### Пример запроса (XML)
+##### Sample Request (XML)
 
 ```xml
 <GetFullTrainInfo>
@@ -19,33 +19,34 @@ title: 'Получение полной информации об определ
 </GetFullTrainInfo>
 ```
 
-#### Ответ
+#### Response
 
--   **Train** - Поезд с полной информацией. Тип данных - сложный. Структура аналогична параметру Train из ответа на запрос [поиска](/trains/trains_stages/searchtrains), но с дополненной информацией о вагоне.
--   **Car.PlacePrices** - массив контейнеров с информацией о цене мест определенного типа в вагоне. Тип данных - сложный.
--   **Car.PlacePrices.PlacePrice** - контейнер для информации о цене мест определенного типа в вагоне. Тип данных - сложный.
--   **Car.PlacePrices.PlacePrice.Type** - тип мест. Тип данных - строка. Возможные значения:
-    -   **Up** - верхнее
-    -   **Down** - нижнее
-    -   **UpSide** - верхнее боковое
-    -   **DownSide** - нижнее боковое
-    -   **DownNearWCPlace** - нижнее в последнем отсеке-купе
-    -   **UpNearWCPlace** - верхнее в последнем отсеке-купе
-    -   **DownSideNearWCPlace** - нижнее боковое в последнем отсеке-купе
-    -   **NearTheTable** - у стола
-    -   **NearThePlayground** - рядом с детской площадкой
-    -   **NearTheTableAndPlayground** - у стола рядом с детской площадкой
-    -   **NearPassWithAnimal** - рядом с местами для пассажиров с животными
-    -   **Normal** - обычные (не у стола)
-    -   **InCompartment** - в отсеке
-    -   **Folding** - откидные
-    -   **PassWithAnimal** - для пассажиров с животными
-    -   **MotherWithBaby** - для матери и ребенка
-    -   **WithChildren** - для пассажиров с детьми
--   **Car.PlacePrices.PlacePrice.Places** - список мест, относящихся к данному типу, через запятую. Тип данных - строка.
--   **Car.PlacePrices.PlacePrice.Amount** - цена за место. Тип данных - дробное число.
+-   **Train** - Train with complete information on it. Data type - custom. The structure is similar to the Train parameter from the response to the request of the [search](/trains/trains_stages/searchtrains), but with additional information on the car.
+-   **Car.PlacePrices** - array of containers with information on the price of certain seat types in the car. Data type - custom.
+-   **Car.PlacePrices.PlacePrice** - container for information on the price of certain seat types in the car. Data type - custom.
+-   **Car.PlacePrices.PlacePrice.Type** - seat type. Data type - string. Possible values:
+    -   **Up** - upper seat
+    -   **Down** - lower seat
+    -   **UpSide** - upper side seat
+    -   **DownSide** - lower side seat
+    -   **DownNearWCPlace** - lower seat in the last coupe
+    -   **UpNearWCPlace** - upper seat in the last coupe 
+    -   **DownSideNearWCPlace** - lower side seat in the coupe
+    -   **NearTheTable** - seat by the table
+    -   **NearThePlayground** - seat by the playground
+    -   **NearTheTableAndPlayground** - seat by the table near the playground
+    -   **NearPassWithAnimal** - near the seats for passengers with animals
+    -   **Normal** - common seat (not by the table)
+    -   **InCompartment** -  seat in a compartment
+    -   **Folding** - folding seat
+    -   **PassWithAnimal** - seat for passengers with animals
+    -   **MotherWithBaby** - seat for mother with a baby
+    -   **WithChildren** - seat for passengers with children
+-   **Car.PlacePrices.PlacePrice.Places** - list of seats related to this type, divided by commas. Data type - string.
+-   **Car.PlacePrices.PlacePrice.Amount** - price per seat. Data type - fractional number.
 
-##### Пример ответа от УИТ (XML)
+
+##### Sample UIT Response (XML)
 
 ```xml
 <GetFullTrainInfoResponse>
@@ -238,7 +239,7 @@ title: 'Получение полной информации об определ
 </GetFullTrainInfoResponse>
 ```
 
-##### Пример ответа от УФС (XML)
+##### UFS Sample Response (XML)
 
 ```xml
 <GetFullTrainInfoResponse>
