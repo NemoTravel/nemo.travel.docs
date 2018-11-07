@@ -1,5 +1,5 @@
 ---
-title: 'Receiving current reservation info'
+title: 'Receiving Current Reservation Info'
 ---
 
 ### UpdateBook
@@ -39,4 +39,4 @@ title: 'Receiving current reservation info'
 
 #### Response
 
-The response structure is similar to the response to [request for booking seats in a train](/trains/trains_stages/booktrain).
+The response structure is the same as the response to [request for booking seats in a train](/trains/trains_stages/booktrain).
