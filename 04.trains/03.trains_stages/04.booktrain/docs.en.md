@@ -1,5 +1,5 @@
 ---
-title: 'Train seats booking'
+title: 'Train Seats Booking'
 ---
 
 ### BookTrain
@@ -9,27 +9,27 @@ title: 'Train seats booking'
 -   **TrainID** - Train ID. Data type - 64-bit integer.
 -   **CatID** - Category ID of the train. Data type - 32-bit integer.
 -   **CarNum** - Car number. Data type - 32-bit integer.
--   **SeatsPref** - Conditions of preferred seats. Data type - complex.
--   **SeatsPref.Range** - Range of seats. Data type - complex.
+-   **SeatsPref** - Conditions of preferred seats. Data type - custom.
+-   **SeatsPref.Range** - Range of seats. Data type - custom.
 -   **SeatsPref.Range.From** - Beginning of the range. Data type - 32-bit integer.
 -   **SeatsPref.Range.To** -  End of the range. Data type - 32-bit integer.
 -   **SeatsPref.UpperCount** - Number of upper seats. Data type - 32-bit integer.
 -   **SeatsPref.LowerCount** - Number of lower seats. Data type - 32-bit integer.
 -   **SeatsPref.LocPref** - description. Data type - enumeration. Possible values (may be null):
-    -   **ONECOUPE** - In one compartment.
+    -   **ONECOUPE** - In one coupe.
     -   **ONESECTION** - In one section. It means in the compartment + 2 adjoining side seats. Only reasonable in the second-class car. If specified for a compartment, the value ONECOUPE is automatically applied instead.
     -   **NOTSIDE** - Not side seats.
 -   **SeatsPref.StoreyNumber** - Storey number. Data type - 32-bit integer.
 -   **SeatsPref.GenderPref** - Gender booking type. Data type - enumeration. The possible values are similar to the TCategory. GenderType parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
 -   **SeatsPref.Bedclothes** - Whether bedclothes are required. Default value is  false - not required. Data type - boolean. 
 -   **SeatsPref.NoSide** - Not from the side. Data type - boolean.
--   **ERegister** - Electronic registration / e-ticket. Data type - boolean.
--   **ERTimelimit** - Format: yyyy-mm-dd HH:mm:ss. Data type - string. Only for UFS. Values:
+-   **ERegister** - Electronic registration/e-ticket. Data type - boolean.
+-   **ERTimelimit** - Format: yyyy-mm-dd hh:mm:ss. Data type - string. Only for UFS. Values:
     -   For domestic trains, as well as international communications with CIS countries, the Lithuanian, Latvian, Estonian Republics, the Republic of Abkhazia (Train.Direction = 0): the date and time to which you can pass the electronic registration and return the ticket with the Republic of Estonia in "UFS". After this time, a refund is possible only at the cash desks through a complaint procedure.
     -    For international trains in foreign countries at global prices. Destinations Russia-Finland and East-West (Train.Direction = 1.2): the date and time to which you can pass the electronic registration in the UFS system.
 -   **Passengers.** - Passengers for whom seats are reserved. Data type - array of BookRQPerson elements.
--   **Passengers.BookRQPerson** - Reservation passenger. Data type - complex (Contains all the properties of the Person element from [common elements](/trains/elements) + additional property).
--   **Passengers.BookRQPerson.NeedServices** - Extras. Data type is an enumeration. Possible values are similar to the Car.Services parameter from the response to the following request: [search](/trains/trains_stages/searchtrains) of trains.
+-   **Passengers.BookRQPerson** - Reservation passenger. Data type - custom (Contains all the properties of the Person element from [common elements](/trains/elements) + additional property).
+-   **Passengers.BookRQPerson.NeedServices** - Extras. Data type - enumeration. Possible values are similar to the Car.Services parameter from the response to the following request: [search](/trains/trains_stages/searchtrains) of trains.
 -   **Passengers.BookRQPerson.ReturnTrainNeedServices** - Extras for the train back, if a round-trip transportation was reserved. Similar BookRQPerson.NeedServices.
 -   **Passengers.BookRQPerson.ReturnTrainRzhdBDiscountCard** - For the train back, Russian Railways Bonus card for discounts. Data type - string. Similar to the BookRQPerson.RzhdBDiscountCard parameter.
 -   **Passengers.BookRQPerson.ReturnTrainRzhdBBonusCard**- For the train back, Russian Railways Bonus card for discounts. Data type - string. Same as BookRQPerson.RzhdBBonusCard. 
@@ -44,12 +44,12 @@ title: 'Train seats booking'
     -   **bmp**
     -   **emf**
     -   **json**
--   **ReturnTrain** - Information on the train "back" for registration of "round trip" type trips. Data type - complex.
+-   **ReturnTrain** - Information on the train "back" for registration of "round trip" type trips. Data type - custom.
 -   **ReturnTrain.TrainID** - Train ID. Data type - 64-bit integer.
 -   **ReturnTrain.CatID** - Category ID in the train. Data type - 32-bit integer.
 -   **ReturnTrain.CarNum** - Car number. Data type - 32-bit integer.
--   **ReturnTrain.SeatsPref** - Conditions of preferred places. Data type - complex. The structure is similar to the SeatsPref parameter from the booking request.
--   **ReturnTrain.ERegister** - Electronic registration / e-ticket. Data type - boolean.
+-   **ReturnTrain.SeatsPref** - Conditions of preferred places. Data type - custom. The structure is similar to the SeatsPref parameter from the booking request.
+-   **ReturnTrain.ERegister** - Electronic registration/e-ticket. Data type - boolean.
 
 ##### Sample Request (XML)
 
@@ -156,11 +156,11 @@ title: 'Train seats booking'
     -   **book (0)** - Reserved
     -   **cancel (1)** - Canceled
     -   **ticket (2)** - Issued
--   **Balance** - agent’s balance block. Data type - complex.
+-   **Balance** - agent’s balance block. Data type - custom.
 -   **Balance.Amount** - agent’s balance. Data type - 32-bit integer.
 -   **Balance.Currency** - agent’s balance currency. Data type - string.
--   **Date** - Date and time the reservation was made. Format: yyyy-mm-dd HH:mm:ss. Data type - string.
--   **Timelimit** - Time Limit. Format: yyyy-mm-dd HH:mm:ss. Data type - string.
+-   **Date** - Date and time the reservation was made. Format: yyyy-mm-dd hh:mm:ss. Data type - string.
+-   **Timelimit** - Time Limit. Format: yyyy-mm-dd hh:mm:ss. Data type - string.
 -   **BookCode** - Reservation code in the supplier’s system. Data type - string.
 -   **RefundCode** - Return code. Data type - string.
 -   **BookID** - Reservation ID. Data type - 32-bit integer.
@@ -189,10 +189,10 @@ title: 'Train seats booking'
 -   **TariffCode** - Code of the selected train rate. Data type - transfer, possible values:
 -   **ReturnTrainBookCode** - Return code for train back. Data type - string. Similar to RefundCode parameter.
 -   **ReturnTrainRefundCode** - Reservation code for return train in the supplier’s system. Data type - string. Similar to BookCode parameter.
--   **Passengers.BookedPerson** - Description. Data type - complex (Contains all properties of the Person element from [common elements](/trains/elements) + additional properties).
--   **Passengers.BookedPerson.Price** - The cost of all passenger tickets. Data type - complex. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **Passengers.BookedPerson** - Description. Data type - custom (Contains all properties of the Person element from [common elements](/trains/elements) + additional attributes).
+-   **Passengers.BookedPerson.Price** - The cost of all passenger tickets. Data type - custom. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
 -   **Passengers.BookedPerson.Tickets** - Passenger tickets. Data type - array of TicketInformation elements.
--   **Passengers.BookedPerson.Ticket** - Ticket information. Data type - complex.
+-   **Passengers.BookedPerson.Ticket** - Ticket information. Data type - custom.
 -   **Passengers.BookedPerson.Ticket.TicketNumber** - Ticket number. Data type - string.
 -   **Passengers.BookedPerson.Ticket.IsERegistered** - Status of the electronic registration (ER) of the ticket. true - ER is on, false - ER is off. Data type - boolean.
 -   **Passengers.BookedPerson.Ticket.BlankID** - Form identifier in the supplier’s system. Data type - string.
@@ -203,14 +203,14 @@ title: 'Train seats booking'
 -   **Passengers.BookedPerson.Ticket.ReturnTrainRefundCode** - Return transaction ID for the train back. Similar to BookedPerson.Ticket.RefundCode.
 -   **Passengers.BookedPerson.Ticket.SeatNum** - Seat number in the car. Data type - string.
 -   **Passengers.BookedPerson.Ticket.Services** - Additional services. Data type - enumeration. The possible values are similar to the Car.Services parameter from the response to the following request: [search](/trains/trains_stages/searchtrains) (can be several items separated by a space, can be empty).
--   **Passengers.BookedPerson.Ticket.Price** - Ticket price. Data type - complex. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
--   **Passengers.BookedPerson.Ticket.Service** - The cost of service by an e-ticket. Available only for booking via UFS. Data type - complex. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
--   **Passengers.BookedPerson.Ticket.RefundPrice** - Amount to be returned from the ticket price. Available only when booking via UFS and after [пgetting more information before handing over tickets](/trains/trains_stages/getrefundinfo). Data type - complex. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
--   **Passengers.BookedPerson.Ticket.RefundService** - Amount to be refunded from the cost of service by the e-ticket. Available only when booking via UFS and after [getting more information before handing over tickets](/trains/trains_stages/getrefundinfo). Data type - complex. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
--   **Passengers.BookedPerson.Ticket.RefundPenalty** - Amount to be returned from the fines. Available only for booking via UFS and after [getting more information before handing over tickets](/trains/trains_stages/getrefundinfo). Data type - complex. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
--   **Passengers.BookedPerson.Ticket.IsReturn** - Whether the ticket is reversed. Data type - boolean.
+-   **Passengers.BookedPerson.Ticket.Price** - Ticket price. Data type - custom. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **Passengers.BookedPerson.Ticket.Service** - Price of service by an e-ticket. Available only for booking via UFS. Data type - custom. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **Passengers.BookedPerson.Ticket.RefundPrice** - Amount to be returned from the ticket price. Available only when booking via UFS and after [getting more information before handing over tickets](/trains/trains_stages/getrefundinfo). Data type - custom. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **Passengers.BookedPerson.Ticket.RefundService** - Amount to be refunded from the price of service by the e-ticket. Available only when booking via UFS and after [getting more information before handing over tickets](/trains/trains_stages/getrefundinfo). Data type - custom. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **Passengers.BookedPerson.Ticket.RefundPenalty** - Amount to be returned from the fines. Available only for booking via UFS and after [getting more information before handing over tickets](/trains/trains_stages/getrefundinfo). Data type - custom. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **Passengers.BookedPerson.Ticket.IsReturn** - Whether the ticket is a return ticket. Data type - boolean.
 -   **Passengers.BookedPerson.Ticket.TransportDocs** - Shipping documents. Data type - array of TransportDoc elements.
--   **TransportDoc** - A shipping document. Data type - complex.
+-   **TransportDoc** - A shipping document. Data type - custom.
 -   **TransportDoc.IsERegistered** - Whether the document is electronic. Data type - boolean.
 -   **TransportDoc.Status** - Document Status. Data type - enumeration. Possible values are similar to the Status parameter.
 -   **TransportDoc.BlankID** - Document ID in the supplier system. Data type - string.
@@ -220,12 +220,12 @@ title: 'Train seats booking'
     -   **Animal (2)** - Animals
     -   **Carryon (3)** - Hand Luggage
 -   **TransportDoc.Weight** -  Baggage weight. Data type - 32-bit integer (may be null).
--   **TransportDoc.Price** - Cost of the baggage document. Data type - complex. The structure is similar to the TCategory. Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **TransportDoc.Price** - Cost of the baggage document. Data type - custom. The structure is similar to the TCategory. Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
 -   **TransportDoc.RefundCode** - Return code. Data type - string.
 -   **TransportDoc.OrderNumber** - Order number. Data type - string.
--   **Train** - Train in which tickets are booked. Data type - complex. The structure is similar to the Train parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
--   **ReturnTrain** - Train in which return tickets are booked. Data type - complex. The structure is similar to the Train parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
--   **Price** - Full cost of the reservaton. Data type - complex. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **Train** - Train in which tickets are booked. Data type - custom. The structure is similar to the Train parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **ReturnTrain** - Train in which return tickets are booked. Data type - custom. The structure is similar to the Train parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **Price** - Full cost of the reservaton. Data type - custom. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
 -   **WasSuccessTicketing** - Description. Data type - boolean.
 -   **BlankPreferredType** - Preferred blank type. Data type - enumeration. Possible values are similar to the BlankPrefferredType parameter from the booking request. 
 
