@@ -49,24 +49,24 @@ While searching for trains, only basic information about the trains in the reque
 #### Response
 
 -   **Trains** - Trains as a search result. Data type - array of Train elements.
--   **Train** - Information on the train. Data type - complex.
+-   **Train** - Information about the train. Data type - complex.
 -   **Train.ID** - Train ID in the nemo system. Data type - 64-bit integer.
 -   **Train.WebService** - Supplier of the train. Possible values: similar to the Services unit of the Services array in the search request.
 -   **Train.Number** - Train number. Data type - string.
--   **Train.Name** - Name of the train. Data type - string.
+-   **Train.Name** - Train name. Data type - string.
 -   **Train.Category** - Categories to which a train may belong. Data type - array of TrainCat elements.
 -   **Train.Category.TrainCat** - Category of the train. Data type - enumeration. Possible values:
     -   **UNKNOWN (0)** unknown train type
-    -   **FAST (1)** express(speed)
+    -   **FAST (1)** express
     -   **FIRM (2)** corporate
-    -   **HIGHSPEED (3)** high-speed(speed)
+    -   **HIGHSPEED (3)** high-speed
     -   **COMMON (4)** common
     -   **TRAIN_DELUX (5)** luxury train
-    -   **PASSENGER (6)** passenger(speed)
--   **Train.BeginDate** - Date and time of departure. The format is yyyy-MM-dd HH:mm:ss, for example - 2011-05-12 23:10:00. Data type - string.
--   **Train.EndDate** - Date and time of arrival. The format is yyyy-MM-dd HH:mm:ss, for example - 2011-05-12 23:10:00. Data type - string.
--   **Train.TripTime** - Travel time. The format is HH:mm, for example, 08:57. Data type - string.
--   **Train.IsERegister** - On the train are available: electronic check-in / e-tickets. Data type - boolean (may be null).
+    -   **PASSENGER (6)** passenger
+-   **Train.BeginDate** - Date and time of departure. The format is yyyy-mm-dd hh:mm:ss, for example - 2011-05-12 23:10:00. Data type - string.
+-   **Train.EndDate** - Date and time of arrival. The format is yyyy-mm-dd hh:mm:ss, for example - 2011-05-12 23:10:00. Data type - string.
+-   **Train.TripTime** - Travel time. The format is hh:mm, for example, 08:57. Data type - string.
+-   **Train.IsERegister** - On the train are available: electronic check-in/e-tickets. Data type - boolean (may be null).
 -   **Train.Categories** - Array of logical categories of train for which wagons are distributed (For HWP in one category there will be cars of the same type and class and therefore with the same cost of tickets). Data type - array of TCategory elements.
 -   **Train.Categories.TCategory** - Train’s logical category. Data type - complex.
 -   **Train.Categories.TCategory.ID** - ID at the train level. Data type - 32-bit integer.
@@ -126,18 +126,18 @@ While searching for trains, only basic information about the trains in the reque
 -   **Train.ArrExtStation** - Arrival station (code). Data type - string. May be null.
 -   **Train.TrainStartPointName** - Starting point of the train. Data type - string.
 -   **Train.TrainEndPointName** - End point of the train. Data type - string.
--   **Train.PrintPoints** - Points of issue / printing of the tickets. Data type - array of PrintPoint elements.
--   **Train.PrintPoint** - Point of issue / printing of the tickets. Data type - string.
+-   **Train.PrintPoints** - Points of issue/printing of the tickets. Data type - array of PrintPoint elements.
+-   **Train.PrintPoint** - Point of issue/printing of the tickets. Data type - string.
 -   **Train.PrintPoint.Info** - Information on the departure point. Data type - complex.
 -   **Train.PrintPoint.Direction** - Direction of the point’s location in relation to the movement of the train. Data type - enumeration. Possible values:
     -   **Current**
     -   **Forward**
     -   **Backward**
--   **Train.PrintPoint.TimeToPoint** - Train’s movement time in HH:mm format. Data type - string.
--   **Train.PrintPoint.Phone** - Phone point of issue ticket / ticket order. Data type - string.
+-   **Train.PrintPoint.TimeToPoint** - Train’s movement time in hh:mm format. Data type - string.
+-   **Train.PrintPoint.Phone** - Phone point of issue ticket/ticket order. Data type - string.
 -   **Train.Direction** - Direction of the route. Data type - string.
--   **Train.DepTimezoneCode** - Time zone of the departure time in the "Area / Location" format. Only KTZ is available. Data type - string. May be null.
--   **Train.ArrTimezoneCode** - Time zone of the arrival time in the "Area / Location" format. Only KTZ is available. Data type - string. May be null.
+-   **Train.DepTimezoneCode** - Time zone of the departure time in the "Area/Location" format. Only KTZ is available. Data type - string. May be null.
+-   **Train.ArrTimezoneCode** - Time zone of the arrival time in the "Area/Location" format. Only KTZ is available. Data type - string. May be null.
 
 ##### Sample UIT Response (XML)
 ```xml
