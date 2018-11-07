@@ -1,5 +1,5 @@
 ---
-title: 'Getting information on the route of a particular train'
+title: 'Getting Information on the Route of a Particular Train'
 ---
 
 ### GetTrainRoute
