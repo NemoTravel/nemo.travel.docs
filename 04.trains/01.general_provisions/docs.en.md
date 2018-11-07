@@ -1,5 +1,5 @@
 ---
-title: 'General information on the railway server'
+title: 'General Information on the Railway Server'
 published: true
 ---
 
