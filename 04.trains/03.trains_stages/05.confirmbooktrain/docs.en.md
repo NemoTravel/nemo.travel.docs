@@ -1,5 +1,5 @@
 ---
-title: 'Booking confirmation'
+title: 'Booking Сonfirmation'
 ---
 
 ### ConfirmBook
@@ -28,7 +28,7 @@ title: 'Booking confirmation'
 ```
 
 #### Response
-Similar to the response to [request for booking seats in a train](/trains/trains_stages/booktrain).
+Same as the response to [request for booking seats in a train](/trains/trains_stages/booktrain).
 
 ##### Sample Response (XML)
 ```xml
