@@ -1,5 +1,5 @@
 ---
-title: 'ER (Electronic Registration) status change'
+title: 'ER (Electronic Registration) Status Change'
 ---
 
 ### ChangeERStatus
@@ -10,8 +10,8 @@ The request is relevant only for UFS.
 
 -   **BookID** - Reservation ID. Data type - 32-bit integer.
 -   **NewERStatus** - New ER status. Data type - boolean.
--   **BlankIDs** - Form IDs in the UFS (each corresponds to its own ticket number in reality), for which you need to change the status of the ER. Data type - array of BlankID elements.
--   **BlankIDs.BlankID** - Form ID. Data type - string.
+-   **BlankIDs** - Blank IDs in the UFS (each corresponds to its own ticket number in reality), for which you need to change the status of the ER. Data type - array of BlankID elements.
+-   **BlankIDs.BlankID** - Blank ID. Data type - string.
 
 ##### Sample Request (XML)
 ```xml
@@ -31,7 +31,7 @@ The request is relevant only for UFS.
 
 #### Response
 
--   **Success** - The success of the request. Data type - boolean.
+-   **Success** - Success of the request. Data type - boolean.
 
 ##### Sample Response (XML)
 ```xml
