@@ -96,10 +96,10 @@ title: 'Train Seats Booking'
                     <!--<Nationality>?</Nationality>-->
                     <!--Optional:-->
                     <!--<Gender>?</Gender>-->
-                    <FirstName>Пупкин</FirstName>
+                    <FirstName>Pupkin</FirstName>
                     <!--Optional:-->
-                    <MiddleName>Акакиевич</MiddleName>
-                    <LastName>Василий</LastName>
+                    <MiddleName>Akakievich</MiddleName>
+                    <LastName>Vasiliy</LastName>
                     <Document>
                         <DocType>P</DocType>
                         <DocNum>1234567890</DocNum>
@@ -248,9 +248,9 @@ title: 'Train Seats Booking'
             <Passengers>
                 <BookedPerson>
                     <Gender>N</Gender>
-                    <FirstName>Пупкин</FirstName>
-                    <MiddleName>Акакиевич</MiddleName>
-                    <LastName>Василий</LastName>
+                    <FirstName>Pupkin</FirstName>
+                    <MiddleName>Akakievich</MiddleName>
+                    <LastName>Vasiliy</LastName>
                     <Document nil="true"/>
                     <Type>adult</Type>
                     <Price>
