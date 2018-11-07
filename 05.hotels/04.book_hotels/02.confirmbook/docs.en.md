@@ -93,7 +93,7 @@ FCm
 
 #### Response
 
-Format similar to the response format [Book](/hotels/book_hotels/bookhotels).
+Same format as the response format [Book](/hotels/book_hotels/bookhotels).
 
 ##### Sample Response (XML)
 ```xml
