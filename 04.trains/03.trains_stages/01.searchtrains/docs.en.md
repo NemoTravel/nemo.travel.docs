@@ -6,7 +6,7 @@ title: 'Train Search'
 
 While searching for trains, only basic information about the trains in the requested direction is returned in the response, so many of the response's described parameters may be empty. Complete information on a particular train can be obtained from the following request: [Getting the Complete Infomation on a Particular Train](/trains/trains_stages/getfulltraininfo).
 
-#### Запрос
+#### Request
 -   **Date** - Departure date. The format is dd.mm.yyyy, for example 12/30/2011 or 01/01/2012. Data type - string.
 -   **DepPoint** - Departure station code. Data type - string.
 -   **ArrPoint** - Arrival station code. Data type - string.
@@ -81,10 +81,10 @@ While searching for trains, only basic information about the trains in the reque
   -   **LUX** - luxury
   -   **SOFT** - soft
   -   **UNKNOWN** - not defined
--   **Train.Categories.TCategory.Price** - Tickets' price in the category. Data type - custom (Contains all the properties of the Money element from common elements + an additional property).
+-   **Train.Categories.TCategory.Price** - Tickets price in the category. Data type - custom (Contains all the properties of the Money element from common elements + an additional property).
 -   **Train.Categories.TCategory.Price.NDS** - VAT. Data type - fractional number.
 -   **Train.Categories.TCategory.PlacesCountInPrice** - Attribute of price for 2 seats. Data type - 32-bit integer.
--   **Train.Categories.TCategory.MaxPrice** - Maximum tickets' price. Data type - custom. The structure corresponds to the parameter TCategory.Price.
+-   **Train.Categories.TCategory.MaxPrice** - Maximum tickets price. Data type - custom. The structure corresponds to the parameter TCategory.Price.
 -   **Train.Categories.TCategory.TimelimitToConfirm** - Allotted time (in minutes) to pay for the ticket, after its' booking. Data type - 32-bit integer.
 -   **Train.Categories.TCategory.SeatsNum** - Number of seats. Data type - 32-bit integer (may be null).
 -   **Train.Categories.TCategory.GenderSeats** - Seats for all genders. Data type - boolean.
@@ -93,7 +93,7 @@ While searching for trains, only basic information about the trains in the reque
   -   **Female** - female
   -   **Mixed** - both
 -   **Train.Categories.TCategory.Bedclothes** - Bedclothes available. Data type - boolean.
--   **Train.Categories.TCategory.RoadType** - Road's name. Data type - string.
+-   **Train.Categories.TCategory.RoadType** - Name of the road. Data type - string.
 -   **Train.Categories.TCategory.TrainLogicNumber** - One train can consist of several logical parts that differ in class. While booking, it is required to specify the logical number of the train for the car. Data type - string.
 -   **Train.Categories.TCategory.WithoutSeatNumeration** - Car’s attribute without numbering places. Data type - boolean.
 -   **Train.Categories.TCategory.Cars** - Train cars. Data type - array of Car elements.
