@@ -84,7 +84,7 @@ While searching for trains, only basic information about the trains in the reque
 -   **Train.Categories.TCategory.Price** - Tickets price in the category. Data type - custom (Contains all the properties of the Money element from common elements + an additional property).
 -   **Train.Categories.TCategory.Price.NDS** - VAT. Data type - fractional number.
 -   **Train.Categories.TCategory.PlacesCountInPrice** - Attribute of price for 2 seats. Data type - 32-bit integer.
--   **Train.Categories.TCategory.MaxPrice** - Maximum tickets price. Data type - custom. The structure corresponds to the parameter TCategory.Price.
+-   **Train.Categories.TCategory.MaxPrice** - Maximum tickets price. Data type - custom. The response structure is similar to the response to TCategory.Price.
 -   **Train.Categories.TCategory.TimelimitToConfirm** - Allotted time (in minutes) to pay for the ticket, after its' booking. Data type - 32-bit integer.
 -   **Train.Categories.TCategory.SeatsNum** - Number of seats. Data type - 32-bit integer (may be null).
 -   **Train.Categories.TCategory.GenderSeats** - Seats for all genders. Data type - boolean.
@@ -92,7 +92,7 @@ While searching for trains, only basic information about the trains in the reque
   -   **Male** - male
   -   **Female** - female
   -   **Mixed** - both
--   **Train.Categories.TCategory.Bedclothes** - Bedclothes available. Data type - boolean.
+-   **Train.Categories.TCategory.Bedclothes** - Attribute of bedclothes availability. Data type - boolean.
 -   **Train.Categories.TCategory.RoadType** - Name of the road. Data type - string.
 -   **Train.Categories.TCategory.TrainLogicNumber** - One train can consist of several logical parts that differ in class. While booking, it is required to specify the logical number of the train for the car. Data type - string.
 -   **Train.Categories.TCategory.WithoutSeatNumeration** - Car’s attribute without numbering places. Data type - boolean.
