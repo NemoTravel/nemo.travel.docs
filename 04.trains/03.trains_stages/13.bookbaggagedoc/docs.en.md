@@ -1,5 +1,5 @@
 ---
-title: 'Baggage booking'
+title: 'Baggage Booking'
 ---
 
 ### BookBaggageDoc
@@ -10,9 +10,9 @@ Supported only for UZD.
 
 -   **BookID** - Reservation ID. Data type - 32-bit integer.
 -   **BaggagesOfTickets** - Baggage reservation list for all tickets. Data type - array of BaggagesOfTicket elements.
--   **BaggagesOfTickets.BaggagesOfTicket.BlankID** - Ticket form ID to which luggage reservation will be attached. Data type - string. 
+-   **BaggagesOfTickets.BaggagesOfTicket.BlankID** - Ticket blank ID to which luggage reservation will be attached. Data type - string. 
 -   **BaggagesOfTickets.BaggagesOfTicket.BaggageItems** - List of desired baggage reservation options. Data type - array of BaggageItem elements.
--   **BaggagesOfTickets.BaggagesOfTicket.BaggageItems.BaggageItem** - Baggage information. Data type - complex.
+-   **BaggagesOfTickets.BaggagesOfTicket.BaggageItems.BaggageItem** - Baggage information. Data type - custom.
 -   **BaggagesOfTickets.BaggagesOfTicket.BaggageItems.BaggageItem.Kind** - Baggage type. Data type - enumeration. Possible values are similar to the TransportDoc.Kind parameter from the response to [request for booking seats in a train](/trains/trains_stages/booktrain).
 -   **BaggagesOfTickets.BaggagesOfTicket.BaggageItems.BaggageItem.Weight** - Baggage weight in kilograms. Data type - 32-bit integer.
 
@@ -59,4 +59,4 @@ Supported only for UZD.
 
 #### Response
 
-The response structure is similar to the response to [request for booking seats in a train](/trains/trains_stages/booktrain).
+The response structure is the same as the response to [request for booking seats in a train](/trains/trains_stages/booktrain).
