@@ -4,17 +4,17 @@ title: 'Searching for Trains'
 
 ### SearchTrains
 
-While searching for trains, only basic information about the trains in the requested direction is returned in the response, so many of the response's described parameters may be empty. Complete information on a particular train can be obtained from the request. [Getting the complete infomation on a particular train](/trains/trains_stages/getfulltraininfo).
+While searching for trains, only basic information about the trains in the requested direction is returned in the response, so many of the response's described parameters may be empty. Complete information on a particular train can be obtained from the request. [Getting the Complete Infomation on a Particular Train](/trains/trains_stages/getfulltraininfo).
 
 #### Request
 -   **Date** - Departure date. The format is dd.mm.yyyy, for example 12/30/2011 or 01/01/2012. Data type - string.
 -   **DepPoint** - Departure station code. Data type - string.
 -   **ArrPoint** - Arrival station code. Data type - string.
--   **Services** - An array of railway ticket suppliers in which it is required to conduct a search. If not specified, it is searched for in all that are configured in the requisites. Data type - array of Service elements.
+-   **Services** - Array of railway ticket suppliers in which it is required to conduct a search. If not specified, it is searched for in all that are configured in the requisites. Data type - array of Service elements.
 -   **Services.Service** - Provider in which the search will occur. Data type - enumeration. Possible values:
     -   **UFS (0)** Russian Railways (Universal Financial System)
     -   **UIT (1)** Railways of Ukraine (Universal Information Technologies)  
--   **TimePeriod** - The time range of departure / arrival of the train. Data type - complex.
+-   **TimePeriod** - The time range of departure/arrival of the train. Data type - custom.
 -   **TimePeriod.Type** - Time range type. Data type - enumeration. Possible values:
     -   **Departure** - On Departure
     -   **Arrival** - On Arrival
@@ -49,7 +49,7 @@ While searching for trains, only basic information about the trains in the reque
 #### Response
 
 -   **Trains** - Trains as a search result. Data type - array of Train elements.
--   **Train** - Information about the train. Data type - complex.
+-   **Train** - Information about the train. Data type - custom.
 -   **Train.ID** - Train ID in the nemo system. Data type - 64-bit integer.
 -   **Train.WebService** - Supplier of the train. Possible values: similar to the Services unit of the Services array in the search request.
 -   **Train.Number** - Train number. Data type - string.
@@ -66,26 +66,26 @@ While searching for trains, only basic information about the trains in the reque
 -   **Train.BeginDate** - Date and time of departure. The format is yyyy-mm-dd hh:mm:ss, for example - 2011-05-12 23:10:00. Data type - string.
 -   **Train.EndDate** - Date and time of arrival. The format is yyyy-mm-dd hh:mm:ss, for example - 2011-05-12 23:10:00. Data type - string.
 -   **Train.TripTime** - Travel time. The format is hh:mm, for example, 08:57. Data type - string.
--   **Train.IsERegister** - On the train are available: electronic check-in/e-tickets. Data type - boolean (may be null).
--   **Train.Categories** - Array of logical categories of train for which wagons are distributed (For HWP in one category there will be cars of the same type and class and therefore with the same cost of tickets). Data type - array of TCategory elements.
--   **Train.Categories.TCategory** - Train’s logical category. Data type - complex.
+-   **Train.IsERegister** - Attribute of electronic check-in availability. Data type - boolean (may be null). Attribute of electronic check-in availability.
+-   **Train.Categories** - Array of logical categories of train for which cars are distributed (For UIT in one category there will be cars of the same type and class and therefore with the same cost of tickets). Data type - array of TCategory elements.
+-   **Train.Categories.TCategory** - Train’s logical category. Data type - custom.
 -   **Train.Categories.TCategory.ID** - ID at the train level. Data type - 32-bit integer.
 -   **Train.Categories.TCategory.Description** - Category description. Data type - string.
--   **Train.Categories.TCategory.GDSCode** - In UIT class wagons. Data type - string.
+-   **Train.Categories.TCategory.GDSCode** - In UIT class cars. Data type - string.
 -   **Train.Categories.TCategory.Carrier** - Carrier. Data type - string.
 -   **Train.Categories.TCategory.Category** - Car type. Data type - enumeration. Possible values:
     -   **COMMON** - common
     -   **SEAT** - sedentary
     -   **RESSEAT** - reserved seat
-    -   **COUPE** - compartment
+    -   **COUPE** - coupe
     -   **LUX** - luxury
     -   **SOFT** - soft
     -   **UNKNOWN** - not defined
--   **Train.Categories.TCategory.Price** - Tickets' cost in the category. Data type - complex (Contains all the properties of the Money element from common elements + an additional property).
+-   **Train.Categories.TCategory.Price** - Tickets' price in the category. Data type - custom (Contains all the properties of the Money element from common elements + an additional property).
 -   **Train.Categories.TCategory.Price.NDS** - VAT. Data type - fractional number.
--   **Train.Categories.TCategory.PlacesCountInPrice** - Attribute of cost for 2 seats. Data type - 32-bit integer.
--   **Train.Categories.TCategory.MaxPrice** - The maximum tickets' cost. Data type - complex. The structure corresponds to the parameter TCategory.Price.
--   **Train.Categories.TCategory.TimelimitToConfirm** - The allotted time (in minutes) to pay for the ticket, after its booking. Data type - 32-bit integer.
+-   **Train.Categories.TCategory.PlacesCountInPrice** - Attribute of price for 2 seats. Data type - 32-bit integer.
+-   **Train.Categories.TCategory.MaxPrice** - Maximum tickets' price. Data type - custom. The structure corresponds to the parameter TCategory.Price.
+-   **Train.Categories.TCategory.TimelimitToConfirm** - Allotted time (in minutes) to pay for the ticket, after its' booking. Data type - 32-bit integer.
 -   **Train.Categories.TCategory.SeatsNum** - Number of seats. Data type - 32-bit integer (may be null).
 -   **Train.Categories.TCategory.GenderSeats** - Seats for all genders. Data type - boolean.
 -   **Train.Categories.TCategory.GenderType** - Selected gender booking type. Data type - enumeration (may be null). Possible values:
@@ -97,11 +97,11 @@ While searching for trains, only basic information about the trains in the reque
 -   **Train.Categories.TCategory.TrainLogicNumber** - One train can consist of several logical parts that differ in class. While booking, it is required to specify the logical number of the train for the car. Data type - string.
 -   **Train.Categories.TCategory.WithoutSeatNumeration** - Car’s attribute without numbering places. Data type - boolean.
 -   **Train.Categories.TCategory.Cars** - Train cars. Data type - array of Car elements.
--   **Train.Categories.TCategory.Cars.Car** - The car. Data type - complex.
+-   **Train.Categories.TCategory.Cars.Car** - The car. Data type - custom.
 -   **Train.Categories.TCategory.Cars.Car.Number** - Number of the car. Data type - 32-bit integer.
--   **Train.Categories.TCategory.Cars.Car.IsCarERegister** - Attribute of availability of the electronic registration / e-ticket in the car. Data type - boolean (may be null).
+-   **Train.Categories.TCategory.Cars.Car.IsCarERegister** - Attribute of availability of the electronic registration/e-ticket in the car. Data type - boolean (may be null).
 -   **Train.Categories.TCategory.Cars.Car.IsThrough** - Attribute of a direct car. Actual information is obtained in response to a request for complete information on the train (see the next section). Data type - boolean.
--   **Train.Categories.TCategory.Cars.Car.SeatCount** - Number of seats in the car by type. Data type - complex.
+-   **Train.Categories.TCategory.Cars.Car.SeatCount** - Number of seats in the car by type. Data type - custom.
 -   **Train.Categories.TCategory.Cars.Car.SeatCount.NotSpec** - Description. Data type - 32-bit integer.
 -   **Train.Categories.TCategory.Cars.Car.SeatCount.Upper** - Number of upper places. Data type - 32-bit integer.
 -   **Train.Categories.TCategory.Cars.Car.SeatCount.Lower** - Number of lower places. Data type - 32-bit integer.
@@ -110,7 +110,6 @@ While searching for trains, only basic information about the trains in the reque
 -   **Train.Categories.TCategory.Cars.Car.SeatCount.FreeNumbers** - Place numbers divided by commas. Data type - string.
 -   **Train.Categories.TCategory.Cars.Car.TwoStorey** - Attribute of the availability of 2 floors. Data type - boolean.
 -   **Train.Categories.TCategory.Cars.Car.Services** - Services provided. Data type - enumeration. Possible values (may be several values separated by a space) (may be empty):
-
     -   **Ш (1)** tea
     -   **Ч (2)** two teas
     -   **Х (4)** food
@@ -120,15 +119,15 @@ While searching for trains, only basic information about the trains in the reque
     -   **Н (64)** one drink (one of the following drinks is selected in the train: tea, coffee, coffee drink, mineral water)
     -   **М (128)** two drinks
 -   **Train.Categories.TCategory.Cars.Car.Discount** - Discount. Data type - 32-bit integer.
--   **Train.DepStation** - Departure station (code / aggregation code). Data type - string.
--   **Train.ArrStation** - Arrival station (code / aggregation code). Data type - string.
+-   **Train.DepStation** - Departure station (code/aggregation code). Data type - string.
+-   **Train.ArrStation** - Arrival station (code/aggregation code). Data type - string.
 -   **Train.DepExtStation** - Departure station (code). Data type - string. May be null.
 -   **Train.ArrExtStation** - Arrival station (code). Data type - string. May be null.
 -   **Train.TrainStartPointName** - Starting point of the train. Data type - string.
 -   **Train.TrainEndPointName** - End point of the train. Data type - string.
 -   **Train.PrintPoints** - Points of issue/printing of the tickets. Data type - array of PrintPoint elements.
 -   **Train.PrintPoint** - Point of issue/printing of the tickets. Data type - string.
--   **Train.PrintPoint.Info** - Information on the departure point. Data type - complex.
+-   **Train.PrintPoint.Info** - Information on the departure point. Data type - custom.
 -   **Train.PrintPoint.Direction** - Direction of the point’s location in relation to the movement of the train. Data type - enumeration. Possible values:
     -   **Current**
     -   **Forward**
@@ -136,8 +135,8 @@ While searching for trains, only basic information about the trains in the reque
 -   **Train.PrintPoint.TimeToPoint** - Train’s movement time in hh:mm format. Data type - string.
 -   **Train.PrintPoint.Phone** - Phone point of issue ticket/ticket order. Data type - string.
 -   **Train.Direction** - Direction of the route. Data type - string.
--   **Train.DepTimezoneCode** - Time zone of the departure time in the "Area/Location" format. Only KTZ is available. Data type - string. May be null.
--   **Train.ArrTimezoneCode** - Time zone of the arrival time in the "Area/Location" format. Only KTZ is available. Data type - string. May be null.
+-   **Train.DepTimezoneCode** - Time zone of the departure time in the "Area/Location" format. Available for KTZ only. Data type - string. May be null.
+-   **Train.ArrTimezoneCode** - Time zone of the arrival time in the "Area/Location" format. Available for KTZ only. Data type - string. May be null.
 
 ##### Sample UIT Response (XML)
 ```xml
