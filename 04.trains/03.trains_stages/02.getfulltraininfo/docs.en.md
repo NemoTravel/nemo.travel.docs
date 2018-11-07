@@ -21,7 +21,7 @@ title: 'Getting the Complete Information on a Particular Train'
 
 #### Response
 
--   **Train** - Train with complete information on it. Data type - custom. The structure is similar to the Train parameter from the response to the request of the [search](/trains/trains_stages/searchtrains), but with additional information on the car.
+-   **Train** - Train with complete information. Data type - custom. The structure is similar to the Train parameter from the response to the request of the [search](/trains/trains_stages/searchtrains), but with additional information on the car.
 -   **Car.PlacePrices** - array of containers with information on the price of certain seat types in the car. Data type - custom.
 -   **Car.PlacePrices.PlacePrice** - container for information on the price of certain seat types in the car. Data type - custom.
 -   **Car.PlacePrices.PlacePrice.Type** - seat type. Data type - string. Possible values:
