@@ -15,7 +15,7 @@ title: 'Train Seats Booking'
 -   **SeatsPref.Range.To** -  End of the range. Data type - 32-bit integer.
 -   **SeatsPref.UpperCount** - Number of upper seats. Data type - 32-bit integer.
 -   **SeatsPref.LowerCount** - Number of lower seats. Data type - 32-bit integer.
--   **SeatsPref.LocPref** - description. Data type - enumeration. Possible values (may be null):
+-   **SeatsPref.LocPref** - Preferable seat location. Data type - enumeration. Possible values (may be null):
     -   **ONECOUPE** - In one coupe.
     -   **ONESECTION** - In one section. It means in the compartment + 2 adjoining side seats. Only reasonable in the second-class car. If specified for a compartment, the value ONECOUPE is automatically applied instead.
     -   **NOTSIDE** - Not side seats.
