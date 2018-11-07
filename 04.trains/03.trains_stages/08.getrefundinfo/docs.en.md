@@ -1,5 +1,5 @@
 ---
-title: 'Getting additional information before handing over tickets'
+title: 'Getting Additional Information before Handing Tickets Over'
 ---
 
 ### GetRefundInfo
@@ -7,8 +7,8 @@ title: 'Getting additional information before handing over tickets'
 #### Request
 
 -   **BookID** - Reservation ID. Data type - 32-bit integer.
--   **BlankIDs** - Form IDs. Data type - array of string elements.
--   **BlankIDs.BlankID** - Form ID. Data type - string.
+-   **BlankIDs** - Blank IDs. Data type - array of string elements.
+-   **BlankIDs.BlankID** - Blank ID. Data type - string.
 -   **CheckNumber** - Document number of one of the passengers to check. Required for UFS. Data type - string.
 
 ##### Sample Request (XML)
@@ -32,10 +32,10 @@ title: 'Getting additional information before handing over tickets'
 #### Response
 
 -   **TicketsRefundInfo** - Return information for the tickets. Data type - array of TicketRefundInfo elements.
--   **TicketsRefundInfo.TicketRefundInfo** - Information on the return ticket. Data type - complex.
--   **TicketsRefundInfo.TicketRefundInfo.BlankID** - Form ID. Data type - string.
--   **TicketsRefundInfo.TicketRefundInfo.SumToRefund** - Amount to be returned. Data type - complex. Properties correspond to the Money element from [common elements](/trains/elements).
--   **TotalSumToRefund** - Total amount to be returned. Data type - complex. Properties correspond to the Money element from [common elements](/trains/elements).
+-   **TicketsRefundInfo.TicketRefundInfo** - Information on the return ticket. Data type - custom.
+-   **TicketsRefundInfo.TicketRefundInfo.BlankID** - Blank ID. Data type - string.
+-   **TicketsRefundInfo.TicketRefundInfo.SumToRefund** - Amount to be returned. Data type - custom. Properties correspond to the Money element from [common elements](/trains/elements).
+-   **TotalSumToRefund** - Total amount to be returned. Data type - custom. Properties correspond to the Money element from [common elements](/trains/elements).
 
 ##### Sample Response (XML)
 ```xml
