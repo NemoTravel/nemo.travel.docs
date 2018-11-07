@@ -18,8 +18,8 @@ While searching for trains, only basic information about the trains in the reque
 -   **TimePeriod.Type** - Time range type. Data type - enumeration. Possible values:
     -   **Departure** - On Departure
     -   **Arrival** - On Arrival
--   **TimePeriod.From** - Time from. HH:mm format. Data type - string.
--   **TimePeriod.To** - Time to. HH:mm format. Data type - string.
+-   **TimePeriod.From** - Time from. hh:mm format. Data type - string.
+-   **TimePeriod.To** - Time to. hh:mm format. Data type - string.
 
 ##### Sample Request (XML)
 
