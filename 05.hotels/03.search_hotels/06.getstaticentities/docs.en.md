@@ -13,7 +13,7 @@ Getting statics from the supplier.
     -   **city**
     -   **region**
     -   **country**
--   **IDs** - IDs of the requested objects. Data type - complex.
+-   **IDs** - IDs of the requested objects. Data type - custom.
 -   **IDs.ID** - ID of the requested object. Data type - string.
 -   **Language** - language in which statics will be obtained. Data type - string.
 
@@ -56,27 +56,27 @@ Getting statics from the supplier.
   
 #### Response
 
--   **StaticDataInfo** - data received from statics request. Data type - complex.
--   **StaticDataInfo.Countries** - data on countries. Data type - complex.
+-   **StaticDataInfo** - data received from statics request. Data type - custom.
+-   **StaticDataInfo.Countries** - data on countries. Data type - custom.
 -   **StaticDataInfo.Countries.Country** - container for country data. Data type - string.
 -   **StaticDataInfo.Countries.Country.Id** - supplier’s country ID. Data type - string.
 -   **StaticDataInfo.Countries.Country.Name** - country name. Data type - string.
 -   **StaticDataInfo.Countries.Country.IsoCode** - two-digit ISO country code. Data type - string.
 -   **StaticDataInfo.Regions** - region data. Data type - complex.
--   **StaticDataInfo.Regions.Region** - container for region data. Data type - complex.
+-   **StaticDataInfo.Regions.Region** - container for region data. Data type - custom.
 -   **StaticDataInfo.Regions.Region.Id** - supplier’s region ID. Data type - string.
 -   **StaticDataInfo.Regions.Region.Name** - region name. Data type - string.
 -   **StaticDataInfo.Regions.Region.CountryId** - supplier’s ID of the country in which the region is located. Data type - string.
 -   **StaticDataInfo.Cities** - data on cities. Data type - complex.
--   **StaticDataInfo.Cities.City** - container for city data. Data type - complex.
+-   **StaticDataInfo.Cities.City** - container for city data. Data type - custom.
 -   **StaticDataInfo.Cities.City.Id** - supplier’s city ID. Data type - string.
 -   **StaticDataInfo.Cities.City.Name** - the name of the city. Data type - string.
 -   **StaticDataInfo.Cities.City.CountryId** - supplier’s ID of the country in which the city is located. Data type - string.
 -   **StaticDataInfo.Cities.City.RegionId** - supplier’s ID of the region in which the city is located. Data type - string.
 -   **StaticDataInfo.Cities.City.Latitude** - the latitude of the city’s location. Data type - fractional number.
 -   **StaticDataInfo.Cities.City.Longitude** - longitude of the city’s location. Data type - fractional number.
--   **StaticDataInfo.Hotels** - data on hotels. Data type - complex
--   **StaticDataInfo.Hotels.HotelStaticInfo** - container for hotel data. Data type - complex.
+-   **StaticDataInfo.Hotels** - data on hotels. Data type - custom
+-   **StaticDataInfo.Hotels.HotelStaticInfo** - container for hotel data. Data type - custom.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Id** - supplier’s ID of the hotel. Data type - string.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Name** - hotel name. Data type - string.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.CheckInTime** - check-in. Data type - string.
@@ -85,23 +85,23 @@ Getting statics from the supplier.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.CityId** - supplier’s ID of the city in which the hotel is located. Data type - string.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.PosLatitude** - the latitude of the hotel location. Data type - a fractional number.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.PosLongitude** - the longitude of the hotel location. Data type - fractional number.
--   **StaticDataInfo.Hotels.HotelStaticInfo.Photos** - container for the hotel photos. Data type - complex.
+-   **StaticDataInfo.Hotels.HotelStaticInfo.Photos** - container for the hotel photos. Data type - custom.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Photos.Photo** - hotel photo. Data type - string.
--   **StaticDataInfo.Hotels.HotelStaticInfo.Address** - container for hotel addresses. Data type - complex. 
+-   **StaticDataInfo.Hotels.HotelStaticInfo.Address** - container for hotel addresses. Data type - custom. 
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Address.Address** - hotel address. Data type - string.
--   **StaticDataInfo.Hotels.HotelStaticInfo.Features** - hotel services. Data type - complex.
--   **StaticDataInfo.Hotels.HotelStaticInfo.Features.Feature** - container for hotel service. Data type - complex.
+-   **StaticDataInfo.Hotels.HotelStaticInfo.Features** - hotel services. Data type - custom.
+-   **StaticDataInfo.Hotels.HotelStaticInfo.Features.Feature** - container for hotel service. Data type - custom.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Features.Feature.Id** - service ID. Data type - string.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Features.Feature.Info** - information on the service. Data type - string.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Description** - hotel description. Data type - string.
--   **StaticDataInfo.Hotels.HotelStaticInfo.Distances** - distance between the hotel and the important points. Data type - complex.
--   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance** - container for distance description. Data type - complex.
+-   **StaticDataInfo.Hotels.HotelStaticInfo.Distances** - distance between the hotel and the important points. Data type - custom.
+-   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance** - container for distance description. Data type - custom.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance.Type** - point type. Data type - string.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance.Value** - numeric value of the distance to the point. Data type - integer.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance.Measurement** - unit for measuring the distance to a point. Data type - string.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance.TransportType** - transport type. Data type - string.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance.Name** - point name. Data type - string.
--   **StaticDataInfo.Hotels.HotelStaticInfo.CustomerRating** - container for rating. Data type - complex.
+-   **StaticDataInfo.Hotels.HotelStaticInfo.CustomerRating** - container for rating. Data type - custom.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.CustomerRating.Room** - rooms rating. Data type - fractional number.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.CustomerRating.Facilities** - facilities rating. Data type - fractional number.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.CustomerRating.Cleanness** - cleanness rating. Data type - fractional number.
