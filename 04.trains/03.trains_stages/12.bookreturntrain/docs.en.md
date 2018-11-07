@@ -1,17 +1,17 @@
 ---
-title: 'Return tickets booking'
+title: 'Return Tickets Booking'
 ---
 
-Supported only for UFS and URW providers.
-If the request does not provide a list with information on which tickets require round-trip, they will be booked for all tickets in the straight direction.
-If return tickets were not booked for everyone, then in the future you are able to book additional return tickets. 
+Supported only for UFS providers.
+If the request does not provide a list with information on which tickets require round-trip, they will be booked for all direct tickets.
+If return tickets are not booked for everyone, then in the future you are able to book additional return tickets. 
 
 #### Request
 
-The structure is similar to the ReturnTrain parameter from [booking request](/trains/trains_stages/booktrain), but with the transfer of an existing reservation ID and information on the services.
+The structure is the same as the ReturnTrain parameter from [booking request](/trains/trains_stages/booktrain), but with the transfer of an existing reservation ID and information on the services.
 
 -   **BookDataList** - Data type - array of BookReturnData elements.
--   **BookDataList.BookReturnData** - Information on which ticket the round-trip is booked to and which services it will provide. Data type - complex. 
+-   **BookDataList.BookReturnData** - Information on which ticket the round-trip is booked to and which services it will provide. Data type - custom. 
 -   **BookDataList.BookReturnData.ToBlankID** - Ticket form ID in the linear direction to which the opposite direction ticket will be linked. Data type - string.
 -   **BookDataList.BookReturnData.NeedServices** - Desired additional services for the return direction. Data type - enumeration. Possible values are similar to the Car.Services parameter from the response to the following request: [search](/trains/trains_stages/searchtrains) (may be several items divided by a space) (may be empty)
 -   **ForwardBookID** - ID for straight direction reservation. Data type - 32-bit integer.
@@ -62,4 +62,4 @@ The structure is similar to the ReturnTrain parameter from [booking request](/tr
 
 #### Response
 
-The response structure is similar to the response to [request for booking seats in a train](/trains/trains_stages/booktrain).
+The response structure is the same as the response to [request for booking seats in a train](/trains/trains_stages/booktrain).
