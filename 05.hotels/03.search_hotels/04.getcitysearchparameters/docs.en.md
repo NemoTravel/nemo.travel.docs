@@ -34,7 +34,7 @@ title: 'GetCitySearchParameters Request'
 
 #### Response
 
-Similar to the format of the following request: [CitySearch](/hotels/search_hotels/citysearch).
+Same as the format of the following request: [CitySearch](/hotels/search_hotels/citysearch).
 
 ##### Sample Response (XML)
 ```xml
