@@ -2,16 +2,16 @@
 title: 'Stages of Interaction with the Railway Server'
 ---
 
--   [Searching for trains](/trains/trains_stages/searchtrains);
--   [Getting the complete information on a particular train](/trains/trains_stages/getfulltraininfo);
--   [Getting information on the route of a particular train](/trains/trains_stages/gettrainroute);
--   [Train seats booking](/trains/trains_stages/booktrain);
--   [Booking confirmation](/trains/trains_stages/confirmbooktrain);
--   [Cancelling train seats booking](/trains/trains_stages/cancelbooktrain);
--   [Receiving current reservation info](/trains/trains_stages/updatebooktrain);
--   [Getting additional information before handing over tickets](/trains/trains_stages/getrefundinfo);
--   [Ticket return in a specific reservation](/trains/trains_stages/refundbook);
--   [Getting itinerary receipt for a specific reservation](/trains/trains_stages/getticketblank);
--   [Changing the status of the ER (electronic registration)](/trains/trains_stages/changeerstatus);
--   [Return tickets booking](/trains/trains_stages/bookreturntrain);
--   [Baggage booking](/trains/trains_stages/bookbaggagedoc).
+-   [Train Search](/trains/trains_stages/searchtrains);
+-   [Getting the Complete Information on a Particular Train](/trains/trains_stages/getfulltraininfo);
+-   [Getting Information on the Route of a Particular Train](/trains/trains_stages/gettrainroute);
+-   [Train Seats Booking](/trains/trains_stages/booktrain);
+-   [Booking Confirmation](/trains/trains_stages/confirmbooktrain);
+-   [Cancelling Train Seats Booking](/trains/trains_stages/cancelbooktrain);
+-   [Receiving Current Reservation Info](/trains/trains_stages/updatebooktrain);
+-   [Getting Additional Information Before Handing Over Tickets](/trains/trains_stages/getrefundinfo);
+-   [Ticket Return in a Specific Reservation](/trains/trains_stages/refundbook);
+-   [Getting Itinerary Receipt for a Specific Reservation](/trains/trains_stages/getticketblank);
+-   [Changing the Status of the ER (Electronic Registration)](/trains/trains_stages/changeerstatus);
+-   [Return Tickets Booking](/trains/trains_stages/bookreturntrain);
+-   [Baggage Booking](/trains/trains_stages/bookbaggagedoc).
