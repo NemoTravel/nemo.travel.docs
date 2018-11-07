@@ -1,5 +1,5 @@
 ---
-title: 'Getting itinerary receipt for a specific reservation'
+title: 'Getting Itinerary Receipt for a Specific Reservation'
 ---
 
 ### GetTicketBlank
@@ -7,10 +7,10 @@ title: 'Getting itinerary receipt for a specific reservation'
 #### Request
 
 -   **BookID** - Reservation ID. Data type - 32-bit integer.
--   **BlankIDs** -  IDs of ticket forms to be canceled. Data type - array of string elements.
--   **BlankIDs.BlankID** - Form id. Data type - string.
+-   **BlankIDs** -  IDs of ticket blanks to be canceled. Data type - array of string elements.
+-   **BlankIDs.BlankID** - Blank ID. Data type - string.
 
-If you need to receive all available reservation forms, then the BlankIDs parameter should be left blank.
+If you need to receive all available reservation blanks, then the BlankIDs parameter should be left blank.
 
 ##### Sample Request (XML)
 ```xml
@@ -43,20 +43,20 @@ If you need to receive all available reservation forms, then the BlankIDs parame
 
 #### Response
 
--   **TicketBlanks** - Reservation forms. Data type - array of TicketBlank elements.
--   **TicketBlanks.TicketBlank** - Contains an itinerary receipt. Data type - complex.
--   **TicketBlanks.TicketBlank.BlankID** - Form ID. Data type - string.
+-   **TicketBlanks** - Reservation blanks. Data type - array of TicketBlank elements.
+-   **TicketBlanks.TicketBlank** - Contains an itinerary receipt. Data type - custom.
+-   **TicketBlanks.TicketBlank.BlankID** - Blank ID. Data type - string.
 -   **TicketBlanks.TicketBlank.Format** - Format / coding of an itinerary receipt. Data type - enumeration. Possible values are similar to the BlankPrefferredType parameter from [booking request](/trains/trains_stages/booktrain).
 -   **TicketBlanks.TicketBlank.TBlank** - Itinerary receipt in the format specified in the Format element. Content is encoded in base64, except when Format = JSON. Data type - string.
 -   **TicketBlanks.TicketBlank.QRCodeFormat** - QR code format. File extension (no dot). Data type - string.
--   **TicketBlanks.TicketBlank.QRCode** - A QR code with the information on Base64 order. Data type - string.
+-   **TicketBlanks.TicketBlank.QRCode** - QR code with the information on Base64 order. Data type - string.
 
 For UIT in the TicketBlank.TBlank parameter for electronic documents, a string with an object in JSON format will be returned. Information from this object should be used to generate a visual representation of the form. Description of the object format:
 
--   **StationFrom** - Departure station. Data type - complex.
+-   **StationFrom** - Departure station. Data type - custom.
 -   **StationFrom.Code** - Departure station code. Data type - string.
 -   **StationFrom.Name** - Name of the departure station. Data type - string.
--   **StationTo** - Arrival Station. Data type - complex.
+-   **StationTo** - Arrival Station. Data type - custom.
 -   **StationTo.Code** - Station arrival code. Data type - string.
 -   **StationTo.Name** - Name of the arrival station. Data type - string.
 -   **PayDate** - Date of payment. Data type - string.
@@ -71,7 +71,7 @@ For UIT in the TicketBlank.TBlank parameter for electronic documents, a string w
 -   **OrderNumber** - Order number. Data type - string.
 -   **InsurenceString** - Insurance. Data type - string.
 -   **CostString** - Cost. Data type - string.
--   **Fiscal** - Fiscal information. Data type - complex.
+-   **Fiscal** - Fiscal information. Data type - custom.
 -   **Fiscal.ID** - Data type - string.
 -   **Fiscal.RRO** - Data type - string.
 -   **Fiscal.Server** - Data type - string.
