@@ -1,5 +1,5 @@
 ---
-title: 'Common elements of the railway server'
+title: 'Common Elements of the Railway Server'
 ---
 
 -   **Person** - the Passenger. Data type - complex.
