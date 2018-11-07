@@ -21,7 +21,6 @@ title: 'Common Elements of the Railway Server'
 -   **Person.Document.DocNum** - Document number. Data type - string.
 -   **Person.Document.CountryCode** - Two-letter code of the document's country of issue (RU, UA, etc.). Data type - string.
 -   **Person.Document.DocElapsedTime** - Expiration date of the document in the dd.mm.yyyy format. Data type - string.
-
 -   **Money** - Contains a description of a certain amount of money.  Data type - custom.
 -   **Money.Value** - The amount of money. Data type - fractional number.
 -   **Money.Currency** - ISO Alpha 3 currency code. Data type - string.
