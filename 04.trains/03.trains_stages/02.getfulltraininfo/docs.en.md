@@ -1,5 +1,5 @@
 ---
-title: 'Getting the complete information on a particular train'
+title: 'Getting the Complete Information on a Particular Train'
 ---
 
 ### GetFullTrainInfo
@@ -21,28 +21,28 @@ title: 'Getting the complete information on a particular train'
 
 #### Response
 
--   **Train** - Train with complete information. Data type - complex. The structure is similar to the Train parameter from the response to the request of the [search](/trains/trains_stages/searchtrains), but with additional information on the car.
--   **Car.PlacePrices** - array of containers with information on the price of certain types of seats in the car. Data type - complex.
--   **Car.PlacePrices.PlacePrice** - container for information on the price of certain types of seats in the car. Data type - complex.
--   **Car.PlacePrices.PlacePrice.Type** - type of seats. Data type - string. Possible values:
-    -   **Up** - top
-    -   **Down** - bottom
-    -   **UpSide** - upper side
-    -   **DownSide** - lower side
-    -   **DownNearWCPlace** - lower in the last compartment
-    -   **UpNearWCPlace** - top in the last compartment 
-    -   **DownSideNearWCPlace** - lower side in the last compartment 
-    -   **NearTheTable** - by the table
-    -   **NearThePlayground** - by the playground
-    -   **NearTheTableAndPlayground** - by the table near the playground
+-   **Train** - Train with complete information on it. Data type - custom. The structure is similar to the Train parameter from the response to the request of the [search](/trains/trains_stages/searchtrains), but with additional information on the car.
+-   **Car.PlacePrices** - array of containers with information on the price of certain seat types in the car. Data type - custom.
+-   **Car.PlacePrices.PlacePrice** - container for information on the price of certain seat types in the car. Data type - custom.
+-   **Car.PlacePrices.PlacePrice.Type** - seat type. Data type - string. Possible values:
+    -   **Up** - upper seat
+    -   **Down** - lower seat
+    -   **UpSide** - upper side seat
+    -   **DownSide** - lower side seat
+    -   **DownNearWCPlace** - lower seat in the last coupe
+    -   **UpNearWCPlace** - upper seat in the last coupe 
+    -   **DownSideNearWCPlace** - lower side seat in the coupe
+    -   **NearTheTable** - seat by the table
+    -   **NearThePlayground** - seat by the playground
+    -   **NearTheTableAndPlayground** - seat by the table near the playground
     -   **NearPassWithAnimal** - near the seats for passengers with animals
-    -   **Normal** - common (not by the table)
-    -   **InCompartment** - in compartment
-    -   **Folding** - folding
-    -   **PassWithAnimal** - for passengers with animals
-    -   **MotherWithBaby** - for mother with a baby
-    -   **WithChildren** - for passengers with children
--   **Car.PlacePrices.PlacePrice.Places** - a list of seats related to this type, divided by commas. Data type - string.
+    -   **Normal** - common seat (not by the table)
+    -   **InCompartment** -  seat in a compartment
+    -   **Folding** - folding seat
+    -   **PassWithAnimal** - seat for passengers with animals
+    -   **MotherWithBaby** - seat for mother with a baby
+    -   **WithChildren** - seat for passengers with children
+-   **Car.PlacePrices.PlacePrice.Places** - list of seats related to this type, divided by commas. Data type - string.
 -   **Car.PlacePrices.PlacePrice.Amount** - price per seat. Data type - fractional number.
 
 
@@ -239,7 +239,7 @@ title: 'Getting the complete information on a particular train'
 </GetFullTrainInfoResponse>
 ```
 
-##### UFS Response Example (XML)
+##### UFS Sample Response (XML)
 
 ```xml
 <GetFullTrainInfoResponse>
