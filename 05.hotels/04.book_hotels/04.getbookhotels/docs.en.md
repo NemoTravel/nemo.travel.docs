@@ -6,7 +6,7 @@ title: 'GetBook Request'
 
 #### Request
 
-Format similar to the request format [ConfirmBook](/hotels/book_hotels/confirmbook).
+Same format as the request format [ConfirmBook](/hotels/book_hotels/confirmbook).
 
 ##### Sample Request (XML)
 ```xml
@@ -39,7 +39,7 @@ Format similar to the request format [ConfirmBook](/hotels/book_hotels/confirmbo
 
 #### Response
 
-Format similar to the response format [Book](/hotels/book_hotels/bookhotels).
+Same format as the response format [Book](/hotels/book_hotels/bookhotels).
 
 ##### Sample Response (XML)
 ```xml
