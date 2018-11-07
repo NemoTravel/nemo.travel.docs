@@ -6,12 +6,12 @@ title: 'RunCitySearch Request'
 
 #### Request
 
--   **CheckInDate** - date of the arrival in the room. Data type - string, the format is yyyy-MM-ddTHH:mm:ss.
--   **CheckOutDate** - date of the departure from the room. Data type - string, the format is yyyy-MM-ddTHH:mm:ss.
+-   **CheckInDate** - date of the arrival in the room. Data type - string, the format is yyyy-mm-ddthh:mm:ss.
+-   **CheckOutDate** - date of the departure from the room. Data type - string, the format is yyyy-mm-ddthh:mm:ss.
 -   **CityId** - ID of the city for which the search will be executed. Data type - unsigned 32-bit integer.
 -   **HotelId** - ID of the hotel for which the search will be executed. Data type - unsigned 32-bit integer .
--   **Rooms** - contains information on the rooms required to be found. Data type - complex.
--   **Rooms.Room** - container with information on the number of guests. Data type - complex.
+-   **Rooms** - contains information on the rooms required to be found. Data type - custom.
+-   **Rooms.Room** - container with information on the number of guests. Data type - custom.
 -   **Rooms.Room.AdultsCount** - number of adult guests. Data type - unsigned 32-bit integer.
 -   **Rooms.Room.ChidrenCount** - number of children. Data type - unsigned 32-bit integer.
 -   **Rooms.Room.ChildrenAges** - container for indicating the children age. Data type - unsigned 32-bit integer.
