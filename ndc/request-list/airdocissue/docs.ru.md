@@ -6,26 +6,57 @@ title: AirDocIssue
 Выполняет оформление билетов.
 
 #### Запрос
--	**AirDocIssueRQ** - 
--	**AirDocIssueRQ.Document** - 
--	**AirDocIssueRQ.Party** - 
--	**AirDocIssueRQ.Query** - 
--	**Query.TicketDocQuantity** - 
--	**Query.TicketDocInfo** -
--	**TicketDocInfo.PassengerReference** -
--	**TicketDocInfo.OrderReference** -
--	**TicketDocInfo.OrderReference.OrderID** - Owner
--	**TicketDocInfo.Payments** - 
--	**TicketDocInfo.Payments.Payment** - 
--	**TicketDocInfo.Payments.Payment.Type** - 
--	**TicketDocInfo.Payments.Payment.Method** -
--	**TicketDocInfo.Payments.Payment.Amount** - Code Taxable
--	**TicketDocInfo.Commission** -  ?????
--	**TicketDocInfo.Commission.Amount** - ?????
--	**TicketDocInfo.Commission.Percentage** - ?????
--	**Query.DataLists** - 
--	**DataLists.PassengerList** - 
--	**PassengerList.Passenger** - PassengerID
+-	**AirDocIssueRQ** - запрос оформления билетов. Тип данных - сложный.
+-	**AirDocIssueRQ.Document** - общие элементы. 
+-	**AirDocIssueRQ.Party** -  общие элементы. 
+-	**AirDocIssueRQ.Query** - содержимое запроса. Тип данных - сложный.
+-	**Query.TicketDocQuantity** - количество выписываемых билетов. Тип данных - целое положительно число.
+-	**Query.TicketDocInfo** - информация о выписываемом заказе. Тип данных - сложный.
+-	**TicketDocInfo.PassengerReference** - ссылка на пассажира в DataLists.PassengerList. ***Если в заказе несколько пассажиров, то на каждого пассажира формируется отдельный TicketDocInfo.***
+-	**TicketDocInfo.OrderReference** - содержит идентификатор заказа. Тип данных - сложный.
+-	**TicketDocInfo.OrderReference.OrderID** - уникальный идентификатор заказа. Атрибут Owner содержит владельца заказа (код ГРС).
+-	**TicketDocInfo.Payments** - сведения об оплате (необязательный). Тип данных - сложный.
+-	**TicketDocInfo.Payments.Payment** - подробная информация об оплате. Тип данных - сложный.
+-	**TicketDocInfo.Payments.Payment.Type** - тип оплаты. В зависимости от типа оплаты меняется ряд элементов блока Method. Ниже представлены возможные значения:
+-	-	**CA** - Cash.
+```xml	
+<ns:Method>
+   <ns:Cash CashInd="true"/>
+</ns:Method>
+```
+-	-	**CC** - Credit card. 
+```xml	
+<ns:Method>
+   <ns:PaymentCard>
+    <ns:CardCode>VI</ns:CardCode>
+    <ns:CardNumber>4111111111111111</ns:CardNumber>                       
+    <ns:EffectiveExpireDate>
+      <ns:Expiration>2020-10</ns:Expiration>
+    </ns:EffectiveExpireDate>
+   </ns:PaymentCard>
+</ns:Method>
+```	
+-	-	**CK** - Check.
+```xml
+<ns:Method/>
+```	
+-	-	**MS** - Mescellaneous.
+```xml	
+<ns:Method>
+	<ns:Voucher>
+	<ns:Number>XYZ123</ns:Number>
+	</ns:Voucher>
+</ns:Method>
+```	
+-	**TicketDocInfo.Payments.Payment.Amount** - сумма оплаты. Элемент включает два атрибута:
+-	-	**Code** - код валюты, тип данных — строка.
+-	-	**Taxable** - облагаемый налогом, тип данных — булевый.
+-	**TicketDocInfo.Commission** - информация о комиссии (необязательный). Элемент должен содержать либо абсолютное значение, либо процент. Тип данных - сложный.
+-	**Commission.Amount** - абсолютное значение комиссии. Тип данных - десятичное дробное число.
+-	**Commission.Percentage** - комиссия в процентах. Тип данных - десятичное дробное число.
+-	**Query.DataLists** - содержит данные о пассажирах. Тип данных — сложный.
+-	**DataLists.PassengerList** - сведения о пассажирах, для которых создаётся заказ. Тип данных - сложный.
+-	**PassengerList.Passenger** - атрибут PassengerID содержит уникальный идентификатор пассажира. 
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
