@@ -138,7 +138,7 @@ title: AirDocIssue
 -	**TicketDocInfos.TicketDocInfo.TicketDocument.DateOfIssue** - дата выписки в формате YYYY-MM-DD.
 -	**TicketDocInfos.TicketDocInfo.TicketDocument.TimeOfIssue** - время выписки в формате HH:MM.
 -	**TicketDocInfos.TicketDocInfo.TicketDocument.ReportingType** - тип контракта выписки (BSP, ARC, Airline).
--	**TicketDocInfos.TicketDocInfo.PassengerReference** ссылка на пассажира, которому соответствует билет.
+-	**TicketDocInfos.TicketDocInfo.PassengerReference** - ссылка на пассажира, которому соответствует билет.
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
