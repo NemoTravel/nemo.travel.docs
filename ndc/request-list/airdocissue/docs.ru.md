@@ -15,7 +15,7 @@ title: AirDocIssue
 -	**TicketDocInfo.PassengerReference** - ссылка на пассажира в DataLists.PassengerList. ***Если в заказе несколько пассажиров, то на каждого пассажира формируется отдельный TicketDocInfo.***
 -	**TicketDocInfo.OrderReference** - содержит идентификатор заказа. Тип данных - сложный.
 -	**TicketDocInfo.OrderReference.OrderID** - уникальный идентификатор заказа. Атрибут Owner содержит владельца заказа (код ГРС).
--	**TicketDocInfo.Payments** - сведения об оплате (необязательный). Тип данных - сложный.
+-	**TicketDocInfo.Payments** - сведения об оплате (необязательный), принимает коллекцию элементов. Сведения об оплате необходимо задавать только в первом элементе TicketDocInfo, данные из других TicketDocInfo игнорируются.
 -	**TicketDocInfo.Payments.Payment** - подробная информация об оплате. Тип данных - сложный.
 -	**TicketDocInfo.Payments.Payment.Type** - тип оплаты. В зависимости от типа оплаты меняется ряд элементов блока Method. Ниже представлены возможные значения:
 -	-	**CA** - Cash.
@@ -51,12 +51,94 @@ title: AirDocIssue
 -	**TicketDocInfo.Payments.Payment.Amount** - сумма оплаты. Элемент включает два атрибута:
 -	-	**Code** - код валюты, тип данных — строка.
 -	-	**Taxable** - облагаемый налогом, тип данных — булевый.
--	**TicketDocInfo.Commission** - информация о комиссии (необязательный). Элемент должен содержать либо абсолютное значение, либо процент. Тип данных - сложный.
+-	**TicketDocInfo.Commission** - информация о комиссии (необязательный). Элемент должен содержать либо абсолютное значение, либо процент. Сведения о комиссии необходимо задавать только в первом элементе TicketDocInfo, данные из других TicketDocInfo игнорируются. Тип данных - сложный.
 -	**Commission.Amount** - абсолютное значение комиссии. Тип данных - десятичное дробное число.
 -	**Commission.Percentage** - комиссия в процентах. Тип данных - десятичное дробное число.
 -	**Query.DataLists** - содержит данные о пассажирах. Тип данных — сложный.
 -	**DataLists.PassengerList** - сведения о пассажирах, для которых создаётся заказ. Тип данных - сложный.
 -	**PassengerList.Passenger** - атрибут PassengerID содержит уникальный идентификатор пассажира. 
+
+##### Пример
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avi="http://nemo.travel/AviaNDC" xmlns:ns="http://www.iata.org/IATA/EDIST/2017.2">
+	<soapenv:Header>
+		<avi:UserID> *** </avi:UserID>
+		<avi:Requisites>
+			<avi:Login> *** </avi:Login>
+			<avi:Password> *** </avi:Password>
+			<avi:UserContextId> *** </avi:UserContextId>
+		</avi:Requisites>
+	</soapenv:Header>
+	<soapenv:Body>
+		<ns:AirDocIssueRQ Version="17.2">
+			<ns:Document>
+				<ns:Metadata/>
+				<ns:Name>NEMO NDC GATEWAY</ns:Name>
+				<ns:ReferenceVersion>1.0</ns:ReferenceVersion>
+			</ns:Document>
+			<ns:Party>
+				<ns:Sender>
+					<ns:TravelAgencySender>
+						<ns:AgencyID> *** </ns:AgencyID>
+					</ns:TravelAgencySender>
+				</ns:Sender>
+			</ns:Party>
+			<ns:Query>
+				<ns:TicketDocQuantity>2</ns:TicketDocQuantity>
+				<ns:TicketDocInfo>
+					<ns:PassengerReference>PAX1</ns:PassengerReference>
+					<ns:OrderReference>
+						<ns:OrderID Owner="1W">ORD610158</ns:OrderID>
+					</ns:OrderReference>
+					<ns:Payments>
+						<ns:Payment>
+							<ns:Type>CA</ns:Type>
+							<ns:Method>
+								<ns:Cash CashInd="true"/>
+							</ns:Method>
+							<ns:Amount Code="USD" Taxable="false">112.7</ns:Amount>
+							<ns:Order OrderID="ORD610158" Owner="1A"/>
+						</ns:Payment>
+					</ns:Payments>
+					<ns:Commission>
+						<ns:Percentage>1</ns:Percentage>	
+					</ns:Commission>
+				</ns:TicketDocInfo>
+				<ns:TicketDocInfo>
+					<ns:PassengerReference>PAX2</ns:PassengerReference>
+				</ns:TicketDocInfo>
+				<ns:DataLists>
+					<ns:PassengerList>
+						<ns:Passenger PassengerID="PAX1">
+							<ns:PTC>ADT</ns:PTC>
+						</ns:Passenger>
+						<ns:Passenger PassengerID="PAX2">
+							<ns:PTC>CHD</ns:PTC>
+						</ns:Passenger>
+					</ns:PassengerList>
+				</ns:DataLists>
+			</ns:Query>
+		</ns:AirDocIssueRQ>
+	</soapenv:Body>
+</soapenv:Envelope>
+```
+#### Ответ
+В целом, содержимое ответа оформления заказа соответствует ответу [OrderCreate](/ndc/request-list/ordercreate), исключением является элемент, описывающий электронные документы.
+
+-	**OrderViewRS.Response.TicketDocInfos** - сведения об электронных документах. Тип данных — массив.
+-	**TicketDocInfos.TicketDocInfo** - сведения об электронных документах (обязательный). Тип данных — сложный. 
+-	**TicketDocInfos.TicketDocInfo.TicketDocument** - электронный документ (билет, EMD). Тип данных — сложный. Элемент необязательный. 
+-	**TicketDocInfos.TicketDocInfo.TicketDocument.TicketDocNbr** - номер электронного документа. Тип данных — строка.
+-	**TicketDocInfos.TicketDocInfo.TicketDocument.Type** - тип электронного документа. Тип данных — строка. Возможные значения:
+-	-	**T** - Ticket;
+-	-	**J** - EMD A;
+-	-	**Y** - EMD S;
+-	-	**700** - Other document;
+-	**TicketDocInfos.TicketDocInfo.TicketDocument.NumberofBooklets** - количество выписанных билетов на этого пассажира. Тип данных — целое число.
+-	**TicketDocInfos.TicketDocInfo.TicketDocument.DateOfIssue** - дата выписки в формате YYYY-MM-DD.
+-	**TicketDocInfos.TicketDocInfo.TicketDocument.TimeOfIssue** - время выписки в формате HH:MM.
+-	**TicketDocInfos.TicketDocInfo.TicketDocument.ReportingType** - тип контракта выписки (BSP, ARC, Airline).
+-	**TicketDocInfos.TicketDocInfo.PassengerReference** ссылка на пассажира, которому соответствует билет.
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
@@ -64,7 +146,7 @@ title: AirDocIssue
 		<h:ResponseID xmlns:h="http://nemo.travel/AviaNDC" xmlns="http://nemo.travel/AviaNDC">143982731</h:ResponseID>
 	</s:Header>
 	<s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-		<OrderViewRS Target="Test" Version="17.2" xmlns="http://www.iata.org/IATA/EDIST/2017.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.iata.org/IATA/EDIST/2017.2">
+		<OrderViewRS Target="Prod" Version="17.2" xmlns="http://www.iata.org/IATA/EDIST/2017.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.iata.org/IATA/EDIST/2017.2">
 			<Document>
 				<Name>NEMO NDC GATEWAY</Name>
 				<ReferenceVersion>1.0</ReferenceVersion>
