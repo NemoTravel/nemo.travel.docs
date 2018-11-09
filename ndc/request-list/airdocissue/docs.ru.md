@@ -9,13 +9,13 @@ title: AirDocIssue
 -	**AirDocIssueRQ** - запрос оформления билетов. Тип данных - сложный.
 -	**AirDocIssueRQ.Document** - **[общие элементы.](/ndc/ndc_element)**
 -	**AirDocIssueRQ.Party** -  **[общие элементы.](/ndc/ndc_element)**
--	**AirDocIssueRQ.Query** - содержимое запроса. Тип данных - сложный.
+-	**AirDocIssueRQ.Query** - содержимое запроса (обязательный). Тип данных - сложный.
 -	**Query.TicketDocQuantity** - количество выписываемых билетов (обязательный). Тип данных - целое положительно число.
 -	**Query.TicketDocInfo** - информация о выписываемом заказе (обязательный). Тип данных - сложный.
 -	**TicketDocInfo.PassengerReference** - ссылка на пассажира в DataLists.PassengerList (обязательный). ***Если в заказе несколько пассажиров, то на каждого пассажира формируется отдельный TicketDocInfo.***
 -	**TicketDocInfo.OrderReference** - содержит идентификатор заказа (обязательный). Тип данных - сложный.
 -	**TicketDocInfo.OrderReference.OrderID** - уникальный идентификатор заказа. Атрибут Owner содержит владельца заказа (код ГРС). Элемент и атрибут обязательный.
--	**TicketDocInfo.Payments** - сведения об оплате (необязательный), принимает коллекцию элементов. Сведения об оплате необходимо задавать только в первом элементе TicketDocInfo, данные из других TicketDocInfo игнорируются.
+-	**TicketDocInfo.Payments** - сведения об оплате (необязательный), принимает коллекцию элементов. Сведения об оплате необходимо задавать только в первом элементе TicketDocInfo, данные из других TicketDocInfo игнорируются. Возможно задать несколько способов оплаты.
 -	**TicketDocInfo.Payments.Payment** - подробная информация об оплате (обязательный). Тип данных - сложный.
 -	**TicketDocInfo.Payments.Payment.Type** - тип оплаты (обязательный). В зависимости от типа оплаты меняется ряд элементов блока Method. Ниже представлены возможные значения:
 -	-	**CA** - Cash.
@@ -53,6 +53,7 @@ title: AirDocIssue
 -	**TicketDocInfo.Payments.Payment.Amount** - сумма оплаты (обязательный). Элемент включает два атрибута:
 -	-	**Code** - код валюты, тип данных — строка.
 -	-	**Taxable** - облагаемый налогом, тип данных — булевый.
+-	**TicketDocInfo.Payments.Payment.Order** - атрибут OrderID элемента Order содержит идентификатор заказа. Элемент и атрибут обязательные.
 -	**TicketDocInfo.Commission** - информация о комиссии (необязательный). Элемент должен содержать либо абсолютное значение, либо процент. Сведения о комиссии необходимо задавать только в первом элементе TicketDocInfo, данные из других TicketDocInfo игнорируются. Тип данных - сложный.
 -	**Commission.Amount** - абсолютное значение комиссии. Тип данных - десятичное дробное число.
 -	**Commission.Percentage** - комиссия в процентах. Тип данных - десятичное дробное число.
@@ -136,7 +137,7 @@ title: AirDocIssue
 -	-	**J** - EMD A;
 -	-	**Y** - EMD S;
 -	-	**700** - Other document;
--	**TicketDocInfos.TicketDocInfo.TicketDocument.NumberofBooklets** - количество выписанных билетов на этого пассажира. Тип данных — целое число.
+-	**TicketDocInfos.TicketDocInfo.TicketDocument.NumberofBooklets** - число выписанных билетов на данного пассажира. Тип данных — целое число.
 -	**TicketDocInfos.TicketDocInfo.TicketDocument.DateOfIssue** - дата выписки в формате YYYY-MM-DD.
 -	**TicketDocInfos.TicketDocInfo.TicketDocument.TimeOfIssue** - время выписки в формате HH:MM.
 -	**TicketDocInfos.TicketDocInfo.TicketDocument.ReportingType** - тип контракта выписки (BSP, ARC, Airline).
