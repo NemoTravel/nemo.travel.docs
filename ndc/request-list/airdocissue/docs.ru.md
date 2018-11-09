@@ -7,8 +7,8 @@ title: AirDocIssue
 
 #### Запрос
 -	**AirDocIssueRQ** - запрос оформления билетов. Тип данных - сложный.
--	**AirDocIssueRQ.Document** - общие элементы. 
--	**AirDocIssueRQ.Party** -  общие элементы. 
+-	**AirDocIssueRQ.Document** - **[общие элементы.](/ndc/ndc_element)**
+-	**AirDocIssueRQ.Party** -  **[общие элементы.](/ndc/ndc_element)**
 -	**AirDocIssueRQ.Query** - содержимое запроса. Тип данных - сложный.
 -	**Query.TicketDocQuantity** - количество выписываемых билетов (обязательный). Тип данных - целое положительно число.
 -	**Query.TicketDocInfo** - информация о выписываемом заказе (обязательный). Тип данных - сложный.
