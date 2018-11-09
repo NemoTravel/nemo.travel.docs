@@ -53,7 +53,9 @@ title: OrderCreate
 ```	
 -	-	**CK** - Check.
 ```xml
-<ns:Method/>
+<ns:Method>
+   <ns:Check/>
+</ns:Method>
 ```	
 -	-	**MS** - Mescellaneous.
 ```xml	
