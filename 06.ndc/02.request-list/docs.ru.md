@@ -1,6 +1,5 @@
 ---
 title: 'Список запросов'
-published: true
 ---
 
 -   [**AirShopping**](/ndc/request-list/airshopping) - Выполняет поиск предложений (перелётов).

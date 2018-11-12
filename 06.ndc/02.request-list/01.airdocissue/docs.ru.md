@@ -1,6 +1,5 @@
 ---
 title: AirDocIssue
-published: true
 ---
 
 ### AirDocIssue
