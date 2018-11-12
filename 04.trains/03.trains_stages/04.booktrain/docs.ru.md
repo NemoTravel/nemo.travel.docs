@@ -167,6 +167,8 @@ title: 'Бронирование мест в поезде'
 -   **BookCode** - Код брони в системе поставщика. Тип данных - строка.
 -   **RefundCode** - Код возврата. Тип данных - строка.
 -   **BookID** - Идентификатор брони. Тип данных - целое 32-битное число.
+-   **EMDs** - 
+-   **OwnerID** - 
 -   **Passengers** - Пассажиры брони.
 -   **ReturnTrainTariffCode** -  Для поезда обратно, код выбраного тарифа поезда.Тип данных - перечисление, возможные значения такие же как у TariffCode:
     - 1 - **Полный** 
@@ -212,6 +214,7 @@ title: 'Бронирование мест в поезде'
 -   **Passengers.BookedPerson.Ticket.RefundService** - Сумма к возврату от стоимости сервиса по электронному билету. Доступно только при бронировании через UFS и после [получения дополнительной информации перед сдачей билетов](/trains/trains_stages/getrefundinfo). Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
 -   **Passengers.BookedPerson.Ticket.RefundPenalty** - Сумма к возврату от суммы штрафов. Доступно только при бронировании через UFS и после [получения дополнительной информации перед сдачей билетов](/trains/trains_stages/getrefundinfo). Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
 -   **Passengers.BookedPerson.Ticket.IsReturn** - Является ли билет обратным. Тип данных - булев.
+-   **Passengers.BookedPerson.Ticket.PaymentNumber** - 
 -   **Passengers.BookedPerson.Ticket.TransportDocs** - Транспортировочные документы. Тип данных - массив элементов TransportDoc.
 -   **TransportDoc** - Транспортировочный документ. Тип данных - сложный.
 -   **TransportDoc.IsERegistered** - Электронность документа. Тип данных - булев.
