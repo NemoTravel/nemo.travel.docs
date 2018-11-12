@@ -2,7 +2,7 @@
 title: OrderChange
 ---
 
-### OrderChangeRQ
+### OrderChange
 
 Используется для внесения изменений в заказ. 
 
