@@ -1,6 +1,5 @@
 ---
 title: 'Nemo Connect Flights NDC'
-published: true
 ---
 
 ### Chapter 2
