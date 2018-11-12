@@ -1,5 +1,5 @@
 ---
-title: 'Описание веб-сервиса'
+title: 'Описание веб-сервиса Flights NDC'
 ---
 
 Flights NDC представляет собой веб-сервис, реализованный на базе авиа сервера в соответствии со стандартами IATA NDC. Более подробную информацию о технологии управления Предложениями и Заказами в рамках нового стандарта IATA вы можете найти на сайте [IATA - New Distribution Capability](https://www.iata.org/whatwedo/airline-distribution/ndc/Pages/default.aspx). 
