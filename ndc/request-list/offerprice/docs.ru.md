@@ -1,5 +1,6 @@
 ---
 title: OfferPrice
+published: true
 ---
 
 ### OfferPrice
