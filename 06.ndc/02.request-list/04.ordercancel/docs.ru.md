@@ -17,7 +17,7 @@ title: OrderCancel
 -	**OrderCancelRQ.Query** 
 -	**Query.Order** - содержит идентифкатор заказа, который требуется отменить. Включает два обязательных атрибута:
 -	-	**OrderID** - уникальный идентификатор заказа в Nemo Cpnnect;
--	-	**Owner** - IATA код ГРС, в котором оформлен заказ. Тип данных — строка.
+-	-	**Owner** - код ГРС. Тип данных — строка.
 
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avi="http://nemo.travel/AviaNDC" xmlns:ns="http://www.iata.org/IATA/EDIST/2017.2">
