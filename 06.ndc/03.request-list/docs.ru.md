@@ -2,10 +2,10 @@
 title: 'Список запросов'
 ---
 
--   [**AirShopping**](/ndc/request-list/airshopping) - Выполняет поиск предложений (перелётов).
+-   [**AirShopping**](/ndc/request-list/airshopping) - Выполняет поиск предложений.
 -   [**AirDocIssue**](/ndc/request-list/airdocissue)  - Выполняет оформление билетов.
 -   **FareRules** - Используется для получения тарифных правил. _В процессе разработки._
--   [**OfferPrice**](/ndc/request-list/offerprice) - Выполняет актуализацию предложения.
+-   [**OfferPrice**](/ndc/request-list/offerprice) - Проверяет актуальность выбранного предложения.
 -   [**OrderCancel**](/ndc/request-list/ordercancel)- Используется для отмены заказа. 
 -   [**OrderChange**](/ndc/request-list/orderchange) - Ипользуется для внесения изменений в заказ.
 -   [**OrderCreate**](/ndc/request-list/ordercreate) - Выполняет создание заказа.
