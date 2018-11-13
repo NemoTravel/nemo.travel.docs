@@ -232,7 +232,6 @@ title: 'Бронирование мест в поезде'
 -   **WasSuccessTicketing** - ??. Тип данных - булев.
 -   **WasTicketingAttempt** - 
 -   **BlankPreferredType** - Предпочитаемый тип бланка. Тип данных - перечисление. Возможные значения аналогичны параметру BlankPrefferredType из запроса на бронирование.
-
 -   **ArrStationName** - 
 -   **AllowSeatsWithAnimals** - 
 -   **TCategory.Cars** - Вагоны поезда. Тип данных - массив элементов Car.
@@ -250,7 +249,7 @@ title: 'Бронирование мест в поезде'
 -   **IsERegister** - 
 -   **IsEticketPrintPoint** - 
 -   **IsSuburbanTrain** - 
--   
+
 
 
 ##### Пример ответа (XML)
