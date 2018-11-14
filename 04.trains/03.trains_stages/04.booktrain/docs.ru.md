@@ -36,8 +36,8 @@ title: 'Бронирование мест в поезде'
     -   Для поездов международного сообщения в дальнем зарубежье по глобальным ценам. Направления Россия-Финляндия и Восток-Запад (Train.Direction = 1,2): дату и время, до которого можно пройти электронную регистрацию в системе «УФС».
 -   **Passengers.** - Пассажиры, для которых бронируются места. Тип данных - массив элементов BookRQPerson.
 -   **Passengers.BookRQPerson** - Пассажир бронирования. Тип данных - сложный (Содержит все свойства элемента Person из [общих элементов](/trains/elements) + дополнительное свойство).
--   **Passengers.BookRQPerson.DateOfBirth** - Дата рождения. Тип данных -
--   **Passengers.BookRQPerson.Nationality** - Национальность
+-   **Passengers.BookRQPerson.DateOfBirth** - Дата рождения. Тип данных - строка.
+-   **Passengers.BookRQPerson.Nationality** - Национальность. Тип данных - строка.
 -   **Passengers.BookRQPerson.Gender** - Пол. Тип данных - строка.
 -   **Passengers.BookRQPerson.FirstName** - Имя. Тип данных - строка.
 -   **Passengers.BookRQPerson.MiddleName** - Отчество. Тип данных - строка.
@@ -172,6 +172,7 @@ title: 'Бронирование мест в поезде'
     -   **book (0)** - Забронирован
     -   **cancel (1)** - Отменён
     -   **ticket (2)** - Выписан
+-   **StatusChanging** - 
 -   **Balance** - блок баланса агента. Тип данных - сложный.
 -   **Balance.Amount** - баланс агента. Тип данных - целое 32-битное число.
 -   **Balance.Currency** - валюта баланса агента. Тип данных - строка.
@@ -206,6 +207,16 @@ title: 'Бронирование мест в поезде'
 -   **ReturnTrainBookCode** - Для поезда обратно, код возврата. Тип данных - строка. Аналогичен параметру RefundCode.
 -   **ReturnTrainRefundCode** - Для поезда обратно, код брони в системе поставщика. Тип данных - строка. Аналогичен параметру BookCode.
 -   **Passengers.BookedPerson** - описание. Тип данных - сложный (Содержит все свойства элемента Person из [общих элементов](/trains/elements) + дополнительные свойства).
+-   **Passengers.BookedPerson.DateOfBirth** - Дата рождения. Тип данных - строка.
+-   **Passengers.BookedPerson.Nationality** - Национальность. Тип данных - строка.
+-   **Passengers.BookedPerson.Gender** - Пол. Тип данных - строка.
+-   **Passengers.BookedPerson.FirstName** - Имя. Тип данных - строка.
+-   **Passengers.BookedPerson.MiddleName** - Отчество. Тип данных - строка.
+-   **Passengers.BookedPerson.LastName** - Фамилия. Тип данных - строка.
+-   **Passengers.BookedPerson.Type** - 
+-   **Passengers.BookedPerson.Document** - 
+-   **Passengers.BookedPerson.Document.DocType** - 
+-   **Passengers.BookedPerson.Document.DocNum** -  
 -   **Passengers.BookedPerson.Price** - Стоимость всех билетов пассажира. Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
 -   **Passengers.BookedPerson.Tickets** - Билеты пассажира. Тип данных - массив элементов TicketInformation.
 -   **Passengers.BookedPerson.Ticket** - Информация о билете. Тип данных - сложный.
@@ -246,23 +257,68 @@ title: 'Бронирование мест в поезде'
 -   **WasSuccessTicketing** - ??. Тип данных - булев.
 -   **WasTicketingAttempt** - 
 -   **BlankPreferredType** - Предпочитаемый тип бланка. Тип данных - перечисление. Возможные значения аналогичны параметру BlankPrefferredType из запроса на бронирование.
--   **ArrStationName** - 
--   **AllowSeatsWithAnimals** - 
--   **TCategory.Cars** - Вагоны поезда. Тип данных - массив элементов Car.
+-   **Categories** - 
+-   **Categories.TCategory** - 
+-   **Categories.TCategory.AllowSeatsWithAnimals** - 
+-   **Categories.TCategory.AvailableTariffs** - 
+-   **Categories.TCategory.Bedclothes** - 
+-   **Categories.TCategory.Carrier** - 
+-   **Categories.TCategory.Cars** - Вагоны поезда. Тип данных - массив элементов Car.
 -   **Car** - Вагон. Тип данных - сложный.
 -   **Car.IsCarERegister** - Признак наличия электронной регистрации / электронного билета в вагоне. Тип данных - булев (может быть null).
 -   **Car.IsThrough** - Признак беспересадочного вагона. Актуальная информация получается в ответе на запрос полной информации о поезде. Тип данных - булев.
+-   **Car.Number** - Номер вагона. Тип данных - 
 -   **Car.BethClothesSelectionInd** - 
 -   **Car.ERChangeAllowedDuringBooking** -
--   **PossibleAnimals** - 
--   **Schema** - 
+-   **Car.PlacePrice** - 
+-   **Car.PlacePrice.Amount** - 
+-   **Car.PlacePrice.Places** - 
+-   **Car.PlacePrice.Type** - 
+-   **Car.PossibleAnimals** - 
+-   **Car.Schema** - 
+-   **Category** - 
+-   **DelayedPaymentIsAvail** - 
+-   **Description** - 
+-   **Discount** -
+-   **GDSCode** - 
+-   **GenderSeats** - 
+-   **IsCarDynamicPricing** - 
 -   **LoyaltyCards**
 -   **LoyaltyCards.RZHDBonusSavePoints** - 
 -   **LoyaltyCards.RZHDBonusDiscount** - 
+-   **PlacesCountInPrice** - 
+-   **RoadType** - 
+-   **TariffRequired** - 
+-   **Tariff** - 
+-   **Tariff.AgeFrom** - 
+-   **Tariff.AgeFromOffset** - 
+-   **Tariff.Code** - 
+-   **Tariff.Description** - 
+-   **Tariff.Name** - 
+-   **Tariff.PassType** - 
+-   **TrainLogicNumber** - 
 -   **WithoutSeatNumeration** - 
--   **IsERegister** - 
+-   **DepExtStation** - 
+-   **DepStation** - 
+-   **DepStationFromSearch** - 
+-   **DepStationName** - 
+-   **DepTimezoneCode** - 
+-   **Direction** -
+-   **EndDate** - 
+-   **Environment** -  
 -   **IsEticketPrintPoint** - 
 -   **IsSuburbanTrain** - 
+-   **LocalBeginDate** - 
+-   **LocalEndDate** - 
+-   **PrintPoint** - 
+-   **PrintPoint.Direction** - 
+-   **PrintPoint.Info** - 
+-   **RequisitesId** - 
+-   **TrainEndPointName** - 
+-   **TrainStartPointName** - 
+-   **TripTime** - 
+-   **WebService** - 
+-   **OwnerID** - 
 
 
 
