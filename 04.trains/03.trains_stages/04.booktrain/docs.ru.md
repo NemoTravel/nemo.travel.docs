@@ -9,6 +9,10 @@ title: 'Бронирование мест в поезде'
 -   **TrainID** - Идентификатор поезда. Тип данных - целое 64-битное число.
 -   **CatID** - Идентификатор категории в поезде. Тип данных - целое 32-битное число.
 -   **CarNum** - Номер вагона. Тип данных - целое 32-битное число.
+-   **Language** - 
+-   **Requisites** -
+-   **Requisites.NemoOneAuthToken** - 
+-   **Requisites.UserContextId** - 
 -   **DelayedPayment** - 
 -   **InternationalServiceClass** -
 -   **SeatsPref** - Условия предпочитаемых мест. Тип данных - сложный.
@@ -31,7 +35,16 @@ title: 'Бронирование мест в поезде'
     -   Для поездов внутригосударственного сообщения, а также международное сообщение со странами-участниками СНГ, Литовской, Латвийской, Эстонской республиками, Республикой Абхазия (Train.Direction = 0): дату и время, до которого можно пройти электронную регистрацию и вернуть билет с ЭР в системе «УФС». Позднее этого времени возврат возможен только в кассах в претензионном порядке.
     -   Для поездов международного сообщения в дальнем зарубежье по глобальным ценам. Направления Россия-Финляндия и Восток-Запад (Train.Direction = 1,2): дату и время, до которого можно пройти электронную регистрацию в системе «УФС».
 -   **Passengers.** - Пассажиры, для которых бронируются места. Тип данных - массив элементов BookRQPerson.
--   **Passengers.BookRQPerson** - Пассажир бронирования. Тип данных - сложный (Содержит все свойства элемента Person из [общих элементов](/trains/elements) + дополнительное свойство).  
+-   **Passengers.BookRQPerson** - Пассажир бронирования. Тип данных - сложный (Содержит все свойства элемента Person из [общих элементов](/trains/elements) + дополнительное свойство).
+-   **Passengers.BookRQPerson.DateOfBirth** - Дата рождения. Тип данных -
+-   **Passengers.BookRQPerson.Nationality** - Национальность
+-   **Passengers.BookRQPerson.Gender** - Пол. Тип данных - строка.
+-   **Passengers.BookRQPerson.FirstName** - Имя. Тип данных - строка.
+-   **Passengers.BookRQPerson.MiddleName** - Отчество. Тип данных - строка.
+-   **Passengers.BookRQPerson.LastName** - Фамилия. Тип данных - строка.
+-   **Passengers.BookRQPerson.Document** - 
+-   **Passengers.BookRQPerson.Document.DocType** - 
+-   **Passengers.BookRQPerson.Document.DocNum** - 
 -   **Passengers.BookRQPerson.NeedServices** - Доп. Тип данных - перечисление. Возможные значения аналогичны параметру Car.Services из ответа на запрос [поиска](/trains/trains_stages/searchtrains) поездов.
 -   **Passengers.BookRQPerson.ReturnTrainNeedServices** - Доп для поезда обратно, если оформляется ЖД перевозка типа "туда-обратно". Аналогичен параметру BookRQPerson.NeedServices.
 -   **Passengers.BookRQPerson.ReturnTrainRzhdBDiscountCard** - Для поезда обратно, карта РЖД Бонус для получения скидки. Тип данных - строка.Аналогичен параметру BookRQPerson.RzhdBDiscountCard.
