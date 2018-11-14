@@ -213,10 +213,10 @@ title: 'Бронирование мест в поезде'
 -   **Passengers.BookedPerson.FirstName** - Имя. Тип данных - строка.
 -   **Passengers.BookedPerson.MiddleName** - Отчество. Тип данных - строка.
 -   **Passengers.BookedPerson.LastName** - Фамилия. Тип данных - строка.
--   **Passengers.BookedPerson.Type** - 
+-   **Passengers.BookedPerson.Type** - Тип пассажира. Тип данных -
 -   **Passengers.BookedPerson.Document** - 
--   **Passengers.BookedPerson.Document.DocType** - 
--   **Passengers.BookedPerson.Document.DocNum** -  
+-   **Passengers.BookedPerson.Document.DocType** - Тип документа. Тип данных - 
+-   **Passengers.BookedPerson.Document.DocNum** -  Номер документа. Тип данных - 
 -   **Passengers.BookedPerson.Price** - Стоимость всех билетов пассажира. Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
 -   **Passengers.BookedPerson.Tickets** - Билеты пассажира. Тип данных - массив элементов TicketInformation.
 -   **Passengers.BookedPerson.Ticket** - Информация о билете. Тип данных - сложный.
@@ -269,14 +269,14 @@ title: 'Бронирование мест в поезде'
 -   **Car.IsThrough** - Признак беспересадочного вагона. Актуальная информация получается в ответе на запрос полной информации о поезде. Тип данных - булев.
 -   **Car.Number** - Номер вагона. Тип данных - 
 -   **Car.BethClothesSelectionInd** - 
--   **Car.ERChangeAllowedDuringBooking** -
+-   **Car.ERChangeAllowedDuringBooking** - 
 -   **Car.PlacePrice** - 
 -   **Car.PlacePrice.Amount** - 
 -   **Car.PlacePrice.Places** - 
 -   **Car.PlacePrice.Type** - 
 -   **Car.PossibleAnimals** - 
 -   **Car.Schema** - 
--   **Category** - 
+-   **Category** -  
 -   **DelayedPaymentIsAvail** - 
 -   **Description** - 
 -   **Discount** -
