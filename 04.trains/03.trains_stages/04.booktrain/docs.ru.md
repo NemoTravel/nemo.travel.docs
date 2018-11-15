@@ -9,7 +9,7 @@ title: 'Бронирование мест в поезде'
 -   **TrainID** - Идентификатор поезда. Тип данных - целое 64-битное число.
 -   **CatID** - Идентификатор категории в поезде. Тип данных - целое 32-битное число.
 -   **CarNum** - Номер вагона. Тип данных - целое 32-битное число.
--   **Language** - 
+-   **Language** - Язык. Тип данных - строка.
 -   **Requisites** -
 -   **Requisites.NemoOneAuthToken** - 
 -   **Requisites.UserContextId** - 
@@ -28,7 +28,7 @@ title: 'Бронирование мест в поезде'
 -   **SeatsPref.StoreyNumber** - Номер этажа. Тип данных - целое 32-битное число.
 -   **SeatsPref.GenderPref** - Гендерный тип бронирования. Тип данных - перечисление. Возможные значения аналогичны параметру TCategory.GenderType из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
 -   **SeatsPref.Bedclothes** - Требуется ли постельное бельё. По умолчанию false - не требуется. Тип данных - булев.
--   **SeatsPref.FullCoupe** - 
+-   **SeatsPref.FullCoupe** - Признак того, что все забронированные места находятся в одном купе. Тип данных - булев. 
 -   **SeatsPref.NoSide** - Не сбоку. Тип данных - булев.
 -   **ERegister** - Электронная регистрация/электронный билет. Тип данных - булев.
 -   **ERTimelimit** - Формат: yyyy-mm-dd hh:mm:ss. Тип данных - строка. Только для УФС. Значения:
@@ -254,36 +254,36 @@ title: 'Бронирование мест в поезде'
 -   **Train** - Поезд, в котором бронируются билеты. Тип данных - сложный. Структура аналогична параметру Train из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
 -   **ReturnTrain** - Поезд, в котором бронируются обратные билеты. Тип данных - сложный. Структура аналогична параметру Train из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
 -   **Price** - Полная стоимость брони. Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
--   **WasSuccessTicketing** - ??. Тип данных - булев.
--   **WasTicketingAttempt** - 
+-   **WasSuccessTicketing** - Признак того, что выписка билета была успешной. Тип данных - булев.
+-   **WasTicketingAttempt** - Признак того, что была попытка выписки, вне зависимости от ее результата. Тип данных - булев. 
 -   **BlankPreferredType** - Предпочитаемый тип бланка. Тип данных - перечисление. Возможные значения аналогичны параметру BlankPrefferredType из запроса на бронирование.
 -   **Categories** - 
 -   **Categories.TCategory** - 
 -   **Categories.TCategory.AllowSeatsWithAnimals** - 
 -   **Categories.TCategory.AvailableTariffs** - 
--   **Categories.TCategory.Bedclothes** - 
--   **Categories.TCategory.Carrier** - 
+-   **Categories.TCategory.Bedclothes** - Признак наличия постельного белья. Тип данных - булев. 
+-   **Categories.TCategory.Carrier** - Перевозчик. Тип данных - строка. 
 -   **Categories.TCategory.Cars** - Вагоны поезда. Тип данных - массив элементов Car.
 -   **Car** - Вагон. Тип данных - сложный.
 -   **Car.IsCarERegister** - Признак наличия электронной регистрации / электронного билета в вагоне. Тип данных - булев (может быть null).
 -   **Car.IsThrough** - Признак беспересадочного вагона. Актуальная информация получается в ответе на запрос полной информации о поезде. Тип данных - булев.
--   **Car.Number** - Номер вагона. Тип данных - 
+-   **Car.Number** - Номер вагона. Тип данных - строка.
 -   **Car.BethClothesSelectionInd** - 
 -   **Car.ERChangeAllowedDuringBooking** - 
--   **Car.PlacePrice** - 
+-   **Car.PlacePrice** - Цена за место. Тип данных - строка. 
 -   **Car.PlacePrice.Amount** - 
 -   **Car.PlacePrice.Places** - 
 -   **Car.PlacePrice.Type** - 
--   **Car.PossibleAnimals** - 
--   **Car.Schema** - 
+-   **Car.PossibleAnimals** - Признак возможности провоза животных в вагоне. Тип данных - булев. 
+-   **Car.Schema** - Схема вагона. Тип данных - 
 -   **Category** -  
 -   **DelayedPaymentIsAvail** - 
--   **Description** - 
--   **Discount** -
--   **GDSCode** - 
+-   **Description** - Описание. Тип данных - 
+-   **Discount** - Скидка. Тип данных -
+-   **GDSCode** - Код ГРС. Тип данных - строка.
 -   **GenderSeats** - 
 -   **IsCarDynamicPricing** - 
--   **LoyaltyCards**
+-   **LoyaltyCards** - 
 -   **LoyaltyCards.RZHDBonusSavePoints** - 
 -   **LoyaltyCards.RZHDBonusDiscount** - 
 -   **PlacesCountInPrice** - 
