@@ -391,13 +391,13 @@ title: OrderCreate
 -	**FareDetail.Price.BaseAmount** - базовая цена тарифа для определённого типа пассажира в текущем OrderItem в валюте продажи, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
 -	**FareDetail.Price.FareFiledIn** - базовая цена в валюте заведения тарифа. Тип данных - сложный.
 -	**FareDetail.Price.FareFiledIn.BaseAmount** - базовая цена в валюте заведения тарифа для определённого типа пассажира в текущем OrderItem, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
--	**FareDetail.Price.FareFiledIn.Taxes** - информация о сумме такс для определённого типа пассажира. Тип данных - сложный.
--	**FareDetail.Price.FareFiledIn.Taxes.Total** - сумма всех такс на определённый тип пассажира в текущем OfferItem, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
--	**FareDetail.Price.FareFiledIn.Taxes.Breakdown** - элемент, содержащий массив компонентов такс. Тип данных - сложный.
--	**FareDetail.Price.FareFiledIn.Taxes.Breakdown.Tax** - компоненты такс. Тип данных - сложный.
--	**FareDetail.Price.FareFiledIn.Taxes.Breakdown.Tax.Amount** - значение таксы, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
--	**FareDetail.Price.FareFiledIn.Taxes.Breakdown.Tax.TaxCode** - код таксы. Тип данных - строка.
--	**FareDetail.Price.FareFiledIn.Taxes.Breakdown.Tax.TaxType** - тип таксы. Тип данных - строка.
+-	**FareDetail.Price.Taxes** - информация о сумме такс для определённого типа пассажира. Тип данных - сложный.
+-	**FareDetail.Price.Taxes.Total** - сумма всех такс на определённый тип пассажира в текущем OfferItem, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
+-	**FareDetail.Price.Taxes.Breakdown** - элемент, содержащий массив компонентов такс. Тип данных - сложный.
+-	**FareDetail.Price.Taxes.Breakdown.Tax** - компоненты такс. Тип данных - сложный.
+-	**FareDetail.Price.Taxes.Breakdown.Tax.Amount** - значение таксы, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
+-	**FareDetail.Price.Taxes.Breakdown.Tax.TaxCode** - код таксы. Тип данных - строка.
+-	**FareDetail.Price.Taxes.Breakdown.Tax.TaxType** - тип таксы. Тип данных - строка.
 -	**FareDetail.FareComponent** - содержит информацию о тарифе. Тип данных - сложный.
 -	**FareDetail.FareComponent.FareBasis** - сведения о тарифе. Тип данных - сложный.
 -	**FareDetail.FareComponent.FareBasis.FareBasisCode** - содержит код тарифа. Тип данных - сложный.
