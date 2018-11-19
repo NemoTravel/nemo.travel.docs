@@ -7,8 +7,8 @@ Performs the ticketing.
 
 #### Request
 -  **AirDocIssueRQ** - ticket request. Data type - custom.
--  **AirDocIssueRQ.Document** - **[common elements.](/ Ndc / ndc_element)**
--  **AirDocIssueRQ.Party** - **[common elements.](/ Ndc / ndc_element)**
+-  **AirDocIssueRQ.Document** - **[common elements.](/Ndc/ndc_element)**
+-  **AirDocIssueRQ.Party** - **[common elements.](/Ndc/ndc_element)**
 -  **AirDocIssueRQ.Query** - contents of the request (mandatory). Data type - custom.
 - **Query.TicketDocQuantity** - number of issued tickets (mandatory). Data type - positive integer.
 -  **Query.TicketDocInfo** - information about the order issued (mandatory). Data type - custom.
@@ -127,7 +127,7 @@ Performs the ticketing.
 </soapenv:Envelope>
 ```
 #### Response
-In general, the contents of the order check response correspond to the response [OrderCreate](/ ndc / request-list / ordercreate), with the exception of the element describing electronic documents.
+In general, the contents of the order check response correspond to the response [OrderCreate](/ndc/request-list/ordercreate), with the exception of the element describing electronic documents.
 
 - **OrderViewRS.Response.TicketDocInfos** - information about electronic documents. Data type - array.
 - **TicketDocInfos.TicketDocInfo** - information about electronic documents (mandatory). Data type - custom.
