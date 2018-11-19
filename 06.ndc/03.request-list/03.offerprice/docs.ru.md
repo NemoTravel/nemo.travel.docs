@@ -74,7 +74,7 @@ title: OfferPrice
 				</ns:Sender>
 			</ns:Party>
 			<ns:Query>
-				<ns:Offer OfferID="OFR143974767060000" Owner="1W" ResponseID="143974767">
+				<ns:Offer OfferID="OFR143974767060000" Owner="1S" ResponseID="143974767">
 					<ns:OfferItem OfferItemID="OFI143974767060000P0">
 						<ns:PassengerRefs>PAX1 PAX2 PAX3 PAX4</ns:PassengerRefs>
 					</ns:OfferItem>
@@ -152,7 +152,7 @@ title: OfferPrice
 -	-	**Taxable** — облагаемый налогом (по умолчанию false), тип данных — булевый.
 -	**PricedOffer.OfferItem.TotalPriceDetail.BaseAmount** — базовая цена тарифа в валюте продажи на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
 -	**PricedOffer.OfferItem.TotalPriceDetail.FareFiledIn** — базовая цена в валюте заведения тарифа. Тип данных — сложный.
--	**PricedOffer.OfferItem.TotalPriceDetail.FareFiledIn.BaseAmount** — базовая цена в валюте заведения тарифа на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
+-	**PricedOffer.OfferItem.TotalPriceDetail.FareFiledIn.BaseAmount** — базовая цена на всех пассажиров в текущем OfferItem в валюте заведения тарифа, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
 -	**PricedOffer.OfferItem.TotalPriceDetail.Taxes** — информация о сумме такс. Тип данных — сложный.
 -	**PricedOffer.OfferItem.TotalPriceDetail.Taxes.Total** — сумма такс на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
 -	**PricedOffer.OfferItem.Service** — услуга перелёта и/или другие вспомогательные услуги перелёта. Услуга может быть представлена в комплекте с другими услугами или в одном отдельном Offer.OrderItem. Элемент включает атрибут ServiceID="SVC1" (префикс SVC обязателен), содержащий уникальный идентификатор услуги. Элемент Service не может одновременно содержать элементы FlightRefs и ServiceDefinitionRef. Тип данных — сложный.
