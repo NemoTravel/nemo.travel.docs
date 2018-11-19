@@ -169,7 +169,7 @@ title: AirShopping
 -   **AirlineOfferSnapshot.MatchedOfferQuantity** - общее количество предложений, полученнное в результате поиска. 
 -   **AirShoppingRS.OffersGroup.AirlineOffers.Offer** - предложение представляет собой определенный набор услуг (перелеты и/или связанные с перелетом дополнительные услуги). Элемент Offer содержит информацию об услугах, ценовой составляющей, ограничениях (таймлимит). Элемент Offer включает два обязательных атрибута:
 -   -	**OfferID** - уникальный идентификатор предложения;
--   -	**Owner="1W"** - код владельца (ГРС) предложения. Тип данных — строка.
+-   -	**Owner="1S"** - код владельца (ГРС) предложения. Тип данных — строка.
 -   **Offer.Parameters** - элемент содержит количество наборов услуг (OfferItem) в рамках одного предложения. Тип данных — сложный.
 -   **Offer.Parameters.TotalItemQuantity** - количество наборов услуг в рамках одного предложения. Тип - целое положительное число.
 -   **Offer.TimeLimits** - срок действия предложения. Тип данных — сложный.
@@ -182,9 +182,9 @@ title: AirShopping
 -	**Offer.OfferItem.TotalPriceDetail.TotalAmount.SimpleCurrencyPrice** - полная стоимость (тариф + таксы) на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Элемент включает два атрибута:
 -	-	**Code** - код валюты, тип данных — строка.
 -	-	**Taxable** - облагаемый налогом (по умолчанию false), тип данных — булевый.
--	**Offer.OfferItem.TotalPriceDetail.BaseAmount** - базовая цена (только тарифы без такс) на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
--	**Offer.OfferItem.TotalPriceDetail.FareFiledIn** - базовая цена в эквивалентной валюте. Тип данных — сложный.
--	**Offer.OfferItem.TotalPriceDetail.FareFiledIn.BaseAmount** - базовая цена в эквивалентной валюте на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
+-	**Offer.OfferItem.TotalPriceDetail.BaseAmount** - базовая цена тарифа в валюте продажи на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
+-	**Offer.OfferItem.TotalPriceDetail.FareFiledIn** - базовая цена в валюте задания тарифа. Тип данных — сложный.
+-	**Offer.OfferItem.TotalPriceDetail.FareFiledIn.BaseAmount** - базовая цена в валюте задания тарифа на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
 -	**Offer.OfferItem.TotalPriceDetail.Taxes** - информация о сумме такс. Тип данных — сложный.
 -	**Offer.OfferItem.TotalPriceDetail.Taxes.Total** - сумма такс на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
 -	**Offer.OfferItem.Service** - услуга перелёта и/или другие вспомогательные услуги перелёта. Услуга может быть представлена в комплекте с другими услугами или в одном отдельном Offer.OrderItem. Элемент включает атрибут ServiceID="SVC1" (префикс SVC обязателен), содержащий уникальный идентификатор услуги. Элемент Service не может одновременно содержать элементы FlightRefs и ServiceDefinitionRef. Тип данных — сложный.
@@ -196,9 +196,9 @@ title: AirShopping
 -   **Offer.OfferItem.FareDetail.Price** - информация о ценовой составляющей для определённого типа пассажира. Тип данных - сложный.
 -   **Offer.OfferItem.FareDetail.Price.TotalAmount** - полная стоимость (тариф + таксы) для определённого типа пассажира. Тип данных — сложный.
 -   **Offer.OfferItem.FareDetail.Price.TotalAmount.SimpleCurrencyPrice** - полная стоимость (тариф + таксы) на определенный тип пассажира в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
--   **Offer.OfferItem.FareDetail.Price.BaseAmount** - базовая цена (только тарифы без такс) для определённого типа пассажира в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
--   **Offer.OfferItem.FareDetail.Price.FareFiledIn** - базовая цена в эквивалентной валюте. Тип данных — сложный.
--   **Offer.OfferItem.FareDetail.Price.FareFiledIn.BaseAmount** - базовая цена в эквивалентной валюте для определённого типа пассажира в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
+-   **Offer.OfferItem.FareDetail.Price.BaseAmount** - базовая цена тарифа в валюте продажи для определённого типа пассажира в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
+-   **Offer.OfferItem.FareDetail.Price.FareFiledIn** - базовая цена в валюте заведения тарифа. Тип данных — сложный.
+-   **Offer.OfferItem.FareDetail.Price.FareFiledIn.BaseAmount** - базовая цена в валюте заведения тарифа для определённого типа пассажира в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
 -   **Offer.OfferItem.FareDetail.Price.Taxes** - информация о сумме такс для определённого типа пассажира. Тип данных — сложный.
 -   **Offer.OfferItem.FareDetail.Price.Taxes.Total** - сумма всех такс на определённый тип пассажира в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
 -   **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown** - элемент, содержащий массив компонентов такс. Тип данных — сложный.
