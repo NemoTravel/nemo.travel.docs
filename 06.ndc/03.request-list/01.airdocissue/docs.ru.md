@@ -181,7 +181,7 @@ title: AirDocIssue
 				<Warning Code="1">Данные ЦО из запроса заменены на рассчитанные в Nemo Connect</Warning>
 			</Warnings>
 			<Response>
-				<Order OrderID="ORD610158" Owner="1W">
+				<Order OrderID="ORD610158" Owner="1S">
 					<BookingReferences>
 						<BookingReference>
 							<ID>TRJPCT</ID>
