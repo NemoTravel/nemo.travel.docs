@@ -150,9 +150,9 @@ title: OfferPrice
 -	**PricedOffer.OfferItem.TotalPriceDetail.TotalAmount.SimpleCurrencyPrice** — полная стоимость (тариф + таксы) на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Элемент включает два атрибута:
 -	-	**Code** — код валюты, тип данных — строка.
 -	-	**Taxable** — облагаемый налогом (по умолчанию false), тип данных — булевый.
--	**PricedOffer.OfferItem.TotalPriceDetail.BaseAmount** — базовая цена (только тарифы без такс) на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
--	**PricedOffer.OfferItem.TotalPriceDetail.FareFiledIn** — базовая цена в эквивалентной валюте. Тип данных — сложный.
--	**PricedOffer.OfferItem.TotalPriceDetail.FareFiledIn.BaseAmount** — базовая цена в эквивалентной валюте на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
+-	**PricedOffer.OfferItem.TotalPriceDetail.BaseAmount** — базовая цена тарифа в валюте продажи на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
+-	**PricedOffer.OfferItem.TotalPriceDetail.FareFiledIn** — базовая цена в валюте заведения тарифа. Тип данных — сложный.
+-	**PricedOffer.OfferItem.TotalPriceDetail.FareFiledIn.BaseAmount** — базовая цена в валюте заведения тарифа на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
 -	**PricedOffer.OfferItem.TotalPriceDetail.Taxes** — информация о сумме такс. Тип данных — сложный.
 -	**PricedOffer.OfferItem.TotalPriceDetail.Taxes.Total** — сумма такс на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
 -	**PricedOffer.OfferItem.Service** — услуга перелёта и/или другие вспомогательные услуги перелёта. Услуга может быть представлена в комплекте с другими услугами или в одном отдельном Offer.OrderItem. Элемент включает атрибут ServiceID="SVC1" (префикс SVC обязателен), содержащий уникальный идентификатор услуги. Элемент Service не может одновременно содержать элементы FlightRefs и ServiceDefinitionRef. Тип данных — сложный.
