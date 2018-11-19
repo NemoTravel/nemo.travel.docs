@@ -376,7 +376,7 @@ title: OrderCreate
 -	**OrderItems.OrderItem.PriceDetail** - полная стоимость за все услуги для всех пассажиров по всем сегментам в текущем OrderItem. Тип данных — сложный.
 -	**OrderItems.OrderItem.PriceDetail.TotalAmount** - содержит полную стоимость (тариф + таксы). Тип данных — сложный.
 -	**OrderItems.OrderItem.PriceDetail.TotalAmount.SimpleCurrencyPrice** - полная стоимость (тариф + таксы) на всех пассажиров в текущем OrderItem, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше. 
--	**OrderItems.OrderItem.PriceDetail.BaseAmount** - базовая цена (только тарифы без такс) на всех пассажиров в текущем OrderItem, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
+-	**OrderItems.OrderItem.PriceDetail.BaseAmount** - базовая цена на всех пассажиров в текущем OrderItem в валюте продажи, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
 -	**OrderItems.OrderItem.PriceDetail.Taxes** - сумма такс. Тип данных — сложный.
 -	**OrderItems.OrderItem.PriceDetail.Taxes.Total** - сумма такс на всех пассажиров в текущем OrderItem, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
 -	**OrderItems.OrderItem.Service** - услуга перелёта и/или другие вспомогательные услуги перелёта. Услуга может быть представлена в комплекте с другими услугами или в одном отдельном Order.OrderItem. Элемент включает атрибут ServiceID="SVC1" (префикс SVC обязателен), содержащий уникальный идентификатор услуги. Элемент Service не может одновременно содержать элементы SegmentRef и ServiceDefinitionRef. Тип данных — сложный.
@@ -388,9 +388,9 @@ title: OrderCreate
 -	**FareDetail.Price** - информация о ценовой составляющей для определённого типа пассажира. Тип данных - сложный.
 -	**FareDetail.Price.TotalAmount** - полная стоимость (тариф + таксы) для определённого типа пассажира. Тип данных — сложный.
 -	**FareDetail.Price.TotalAmount.SimpleCurrencyPrice** - полная стоимость (тариф + таксы) на определенный тип пассажира в текущем OrderItem, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
--	**FareDetail.Price.BaseAmount** - базовая цена (только тарифы без такс) для определённого типа пассажира в текущем OrderItem, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
--	**FareDetail.Price.FareFiledIn** - базовая цена в эквивалентной валюте. Тип данных - сложный.
--	**FareDetail.Price.FareFiledIn.BaseAmount** - базовая цена в эквивалентной валюте для определённого типа пассажира в текущем OrderItem, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
+-	**FareDetail.Price.BaseAmount** - базовая цена тарифа для определённого типа пассажира в текущем OrderItem в валюте продажи, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
+-	**FareDetail.Price.FareFiledIn** - базовая цена в валюте заведения тарифа. Тип данных - сложный.
+-	**FareDetail.Price.FareFiledIn.BaseAmount** - базовая цена в валюте заведения тарифа для определённого типа пассажира в текущем OrderItem, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
 -	**FareDetail.Price.FareFiledIn.Taxes** - информация о сумме такс для определённого типа пассажира. Тип данных - сложный.
 -	**FareDetail.Price.FareFiledIn.Taxes.Total** - сумма всех такс на определённый тип пассажира в текущем OfferItem, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
 -	**FareDetail.Price.FareFiledIn.Taxes.Breakdown** - элемент, содержащий массив компонентов такс. Тип данных - сложный.
