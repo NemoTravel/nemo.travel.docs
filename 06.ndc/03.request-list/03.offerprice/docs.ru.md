@@ -295,7 +295,7 @@ title: OfferPrice
          <ShoppingResponseID>
             <ResponseID>143974771</ResponseID>
          </ShoppingResponseID>
-         <PricedOffer OfferID="OFR143974771000000" Owner="1W">
+         <PricedOffer OfferID="OFR143974771000000" Owner="1S">
             <Parameters>
                <TotalItemQuantity>1</TotalItemQuantity>
             </Parameters>
