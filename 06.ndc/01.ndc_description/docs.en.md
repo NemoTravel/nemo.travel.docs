@@ -2,7 +2,7 @@
 title: 'Flights NDC Web Service Description '
 ---
 
-Flights NDC is a web service implemented on the basis of an air server in accordance with IATA NDC standards. More information about the technology of managing Offers and Orders under the new IATA standard can be found on the website [IATA - New Distribution Capability] (https://www.iata.org/whatwedo/airline-distribution/ndc/Pages/default.aspx ).
+Flights NDC is a web service implemented on the basis of an air server in accordance with IATA NDC standards. More information about the technology of managing Offers and Orders under the new IATA standard can be found on the website [IATA - New Distribution Capability](https://www.iata.org/whatwedo/airline-distribution/ndc/Pages/default.aspx).
 
 Making a ticket using the Flights NDC web service is performed in several steps:
 
