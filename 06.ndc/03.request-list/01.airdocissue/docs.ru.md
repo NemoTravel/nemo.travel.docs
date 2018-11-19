@@ -91,7 +91,7 @@ title: AirDocIssue
 				<ns:TicketDocInfo>
 					<ns:PassengerReference>PAX1</ns:PassengerReference>
 					<ns:OrderReference>
-						<ns:OrderID Owner="1W">ORD610158</ns:OrderID>
+						<ns:OrderID Owner="1S">ORD610158</ns:OrderID>
 					</ns:OrderReference>
 					<ns:Payments>
 						<ns:Payment>
@@ -100,7 +100,7 @@ title: AirDocIssue
 								<ns:Cash CashInd="true"/>
 							</ns:Method>
 							<ns:Amount Code="USD" Taxable="false">112.7</ns:Amount>
-							<ns:Order OrderID="ORD610158" Owner="1A"/>
+							<ns:Order OrderID="ORD610158" Owner="1S"/>
 						</ns:Payment>
 					</ns:Payments>
 					<ns:Commission>
