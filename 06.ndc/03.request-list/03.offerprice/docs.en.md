@@ -220,22 +220,22 @@ Updating the offer received at the search stage.
 -  **FlightSegmentList.FlightSegment.Departure.Time** - departure time. The format is "hh:mm".
 -  **FlightSegmentList.FlightSegment.Departure.Terminal** - information about the terminal. Data type - custom.
 -  **FlightSegmentList.FlightSegment.Departure.Terminal.Name** - departure terminal. Data type - string.
--  **FlightSegmentList.FlightSegment.Arrival ** - information about the arrival segment. Data type - custom.
+-  **FlightSegmentList.FlightSegment.Arrival** - information about the arrival segment. Data type - custom.
 -  **FlightSegmentList.FlightSegment.Arrival.AirportCode** - IATA airport arrival code. Data type - string.
 -  **FlightSegmentList.FlightSegment.Arrival.Date** - date of arrival. The format is "yyyy-mm-dd".
 -  **FlightSegmentList.FlightSegment.Arrival.Time** - arrival time. The format is "hh:mm".
 -  **FlightSegmentList.FlightSegment.Arrival.Terminal** - information about the terminal. Data type - custom.
--  **FlightSegmentList.FlightSegment.Arrival.Terminal.Name ** - arrival terminal. Data type - string.
+-  **FlightSegmentList.FlightSegment.Arrival.Terminal.Name** - arrival terminal. Data type - string.
 -  **FlightSegmentList.FlightSegment.MarketingCarrier** - information about the marketing carrier. Data type - custom.
 -  **FlightSegmentList.FlightSegment.MarketingCarrier.AirlineID** - IATA code of a marketing carrier. Data type - string.
 -  **FlightSegmentList.FlightSegment.MarketingCarrier.FlightNumber** - flight number of the marketing carrier.
--  **FlightSegmentList.FlightSegment.OperatingCarrier ** - information about the operating carrier. Data type - custom.
--  **FlightSegmentList.FlightSegment.OperatingCarrier.AirlineID ** - IATA code of the operating carrier. Data type - string.
--  **FlightSegmentList.FlightSegment.OperatingCarrier.FlightNumber ** - flight number of the operating carrier. Data type - string.
+-  **FlightSegmentList.FlightSegment.OperatingCarrier** - information about the operating carrier. Data type - custom.
+-  **FlightSegmentList.FlightSegment.OperatingCarrier.AirlineID** - IATA code of the operating carrier. Data type - string.
+-  **FlightSegmentList.FlightSegment.OperatingCarrier.FlightNumber** - flight number of the operating carrier. Data type - string.
 -  **FlightSegmentList.FlightSegment.Equipment** - information about the aircraft type. Data type - custom.
 -  **FlightSegmentList.FlightSegment.Equipment.AircraftCode** - type of aircraft. Data type - string.
 -  **FlightSegmentList.FlightSegment.FlightDetail** - flight details. Data type - custom.
--  ** FlightSegmentList.FlightSegment.FlightDetail.FlightDuration** - informs about the duration of the flight. Data type - custom.
+-  **FlightSegmentList.FlightSegment.FlightDetail.FlightDuration** - informs about the duration of the flight. Data type - custom.
 -  **FlightSegmentList.FlightSegment.FlightDetail.FlightDuration.Value ** - flight duration within the segment. 
 -  **DataLists.FlightList** - the element contains a list of flights that make up the route and their segments, as well as the duration of the flight. Data type - custom.
 -  **FlightList.Flight** - attribute FlightKey = "FLTL0S0" (FLTL prefix required) returns the unique flight ID within the offer.
@@ -243,7 +243,7 @@ Updating the offer received at the search stage.
 -  **FlightList.Flight.Journey.Time** - flight duration. Example: PD1T3H10M, where D1 is days, 3H is hours, 10M are minutes.
 -  **FlightList.Flight.SegmentReferences** - one or more segments that make up a flight within one shoulder.
 -  **DataLists.OriginDestinationList** - contains information about the shoulders, namely the points of departure and arrival. Data type - custom.
--   **OriginDestinationList.OriginDestination** - informs you about the departure and arrival points on the shoulder. The OriginDestinationKey = "ODN1" attribute (the ODN prefix is ​​required) contains a unique shoulder identifier. Data type - custom.
+-   **OriginDestinationList.OriginDestination** - informs you about the departure and arrival points on the shoulder. The OriginDestinationKey = "ODN1" attribute (the ODN prefix is required) contains a unique shoulder identifier. Data type - custom.
 -  **OriginDestinationList.OriginDestination.DepartureCode** - IATA airport code of departure. Data type - string.
 -  **OriginDestinationList.OriginDestination.ArrivalCode** - IATA airport arrival code. Data type - string.
 -  **OriginDestinationList.OriginDestination.FlightReferences** - contains links to the list of flights whose departure/arrival point coincides with the current one.
@@ -270,7 +270,7 @@ Updating the offer received at the search stage.
 -  - **refs** - informs about binding to one or several segments,
 -  - **MetadataKey** - sets a unique identifier. Data type - custom.
 -  **Shopping.ShopMetadataGroup. Flight.FlightMetadatas.FlightMetadata.BindingKey** - link to the flight. Data type - string.
--  **Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.Meals** - the element contains nutrition information. Data type - array of values of Meal type.
+-  **Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.Meals** - the element contains meal information. Data type - array of values of Meal type.
 -  **Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.Meals.Meal** - food types. Data type - string, possible values:
 -  - **B** - Breakfast;
 -  - **C** - Alcoholic beverages;
@@ -282,7 +282,7 @@ Updating the offer received at the search stage.
 -  - **V** - Continental breakfast.
 
 
-##### Пример
+##### Sample
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
