@@ -142,7 +142,7 @@ Updating the offer received at the search stage.
 -  **PricedOffer.Parameters** - offer parameters. Data type - custom.
 -  **PricedOffer.Parameters.TotalItemQuantity ** - total number of services in this offer. Data type - positive integer.
 -  **PricedOffer.TimeLimits ** - offer validity period. Data type - custom.
--  **PricedOffer.TimeLimits.OfferExpiration ** - offer validity. The element contains the DateTime attribute in the format "yyyy-mm-ddtchch:mm:ss".
+-  **PricedOffer.TimeLimits.OfferExpiration ** - offer validity. The element contains the DateTime attribute in the format "yyyy-mm-ddthh:mm:ss".
 -  **PricedOffer.FlightsOverview** - the element contains links to a brief flight description and shoulder information. Data type - custom.
 -  **PricedOffer.FlightsOverview.FlightRef** - link to the flight ID. The attribute ODRef = "ODN1" refers to an element containing information about the departure and arrival points.
 -  **PricedOffer.OfferItem** - represents a set of one or several services within an offer. The OfferItemID attribute contains a unique identifier of the service set, the OFI prefix is ​​required. Data type - custom.
