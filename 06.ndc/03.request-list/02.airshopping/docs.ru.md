@@ -26,7 +26,7 @@ title: AirShopping
 -   **OriginDestinations.OriginDestination.Arrival** - содержит информацию о точки прибытия (обязательный). Тип данных - сложный.
 -	**OriginDestinations.OriginDestination.Arrival.AirportCode** - 3-х буквенный IATA код аэропорта или города прибытия (обязательный). Тип данных — строка. 
 -	**OriginDestinations.OriginDestination.CalendarDates** - первый элемент CoreQuery.OriginDestinations.OriginDestination может быть дополнен необязательным элементом CalendarDates. Данный элемент содержит атрибуты DaysBefore и DaysAfter, количество дней определяется из сложения атрибутов. Значение атрибутов должно быть целое число в сумме не превышающее 3.
--   **CoreQuery.FlightSpecific** - содержит более lдетальную информацию о запрашиваемых сегментах. Тип данных - сложный. **Обязательный элемент, при условие, что не задан элемент CoreQuery.OriginDestinations.**
+-   **CoreQuery.FlightSpecific** - содержит более детальную информацию о запрашиваемых сегментах. Тип данных - сложный. **Обязательный элемент, при условие, что не задан элемент CoreQuery.OriginDestinations.**
 -   **FlightSpecific.FlightSegment** - содержит информацию о сегментах перелёта, который требуется найти. Тип данных - сложный. Включает обязательный атрибут SegmentKey="SEG0", содержащий уникальный идентификатор сегмента. Префикс SEG является обязательным. Номера сегментов начинаются с нуля.
 -   **FlightSpecific.FlightSegment.Departure** - пункт отправления (обязательный). Тип данных - сложный.
 -   **FlightSpecific.FlightSegment.Departure.AirportCode** - 3-х буквенный IATA код аэропорта или города отправления (обязательный). Тип данных — строка.
