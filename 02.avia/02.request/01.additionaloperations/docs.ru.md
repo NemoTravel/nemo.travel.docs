@@ -42,6 +42,7 @@ taxonomy:
 -   **OperationsRestrictions.PricingInfo.ValidatingCompany** — IATA-код валидирующего перевозчика, цены которого интересуют. Тип данных — строка.
 -   **OperationsRestrictions.PricingInfo.IgnoreRepricingSettings** — позволяет игнорировать настройки репрайсинга. Тип данных — булевский.
 -   **OperationsRestrictions.PricingInfo.PriceSpecifiedPassTypesOnly** — при репрайсинге использовать только конкретные коды типов пассажиров, по возможности. Тип данных — булевский.
+-   **OperationsRestrictions.PricingInfo.ThreeDomainAgreementNumber** — код корпоративного клиента в трехстороннем договоре. Тип данных — строка.
 -   **OperationsRestrictions.UpdateCachedFareRules** — обновление закэшированных в брони тарифных правил. Тип данных — булевский.
 -   **OperationsRestrictions.ListFaresIfNoFamiliesDifined** — включает возврат списка тарифов от GDS в случае если у них нет отсылки к семейству. Тип данных — булевский.
 
