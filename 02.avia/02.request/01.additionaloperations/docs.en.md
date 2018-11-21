@@ -42,7 +42,7 @@ Request for execution before version 1.2
 -  **OperationsRestrictions.PricingInfo.ValidatingCompany** - IATA code of the VI, the prices of which are of interest. The data type is a string.
 -  **OperationsRestrictions.PricingInfo.IgnoreRepricingSettings** - Allows you to ignore the refresh settings. The data type is bool.
 -  **OperationsRestrictions.PricingInfo.PriceSpecifiedPassTypesOnly** - When re-selling, use only specific passenger type codes, if possible. The data type is bool.
--  **OperationsRestrictions.PricingInfo.ThreeDomainAgreementNumber** — 3D Flow corporate nubmer. The data type is a string.
+-  **OperationsRestrictions.PricingInfo.ThreeDomainAgreementNumber** — 3D Flow corporate number. The data type is a string.
 -  **OperationsRestrictions.UpdateCachedFareRules** - Update cached in the reservation fare rules. The data type is bool.
 -  **OperationsRestrictions.ListFaresIfNoFamiliesDifined** - Enables refund of the fare list from GDS in case they do not have a reference to the fare families. The data type is bool.
 
