@@ -351,7 +351,7 @@ The operation of creating an order.
 -  **Order.TotalOrderPrice** - total cost for all services for all passengers in all segments in the current Order. Data type - custom.
 -  **TotalOrderPrice.SimpleCurrencyPrice** - full cost (fare + taxes) for all passengers in the current Order, data type - decimal fractional number. The element includes two attributes:
 -  - **Code** - currency code, data type - string.
--  - ** Taxable ** - taxable (false by default), data type - boolean.
+-  - **Taxable** - taxable (false by default), data type - boolean.
 -  **Order.Payments** - payment information in the reservation. Data type - custom.
 -  **Payments.Payment** - detailed information about the payment. Data type - custom.
 -  **Payments.Payment.Type** - type of payment. Data type - string.
@@ -399,11 +399,11 @@ The operation of creating an order.
 -  **FareDetail.Price.Taxes.Breakdown.Tax.TaxCode** - tax code. Data type - string.
 -  **FareDetail.Price.Taxes.Breakdown.Tax.TaxType** - tax type. Data type - string.
 -  **FareDetail.FareComponent** - contains information about the tariff. Data type - custom.
--  ** FareDetail.FareComponent.FareBasis** - information about the tariff. Data type - custom.
+-  **FareDetail.FareComponent.FareBasis** - information about the tariff. Data type - custom.
 -  **FareDetail.FareComponent.FareBasis.FareBasisCode** - contains the fare code. Data type - custom.
 -  **FareDetail.FareComponent.FareBasis.FareBasisCode.Code** - fare code. Data type - string.
--  ** FareDetail.FareComponent.FareBasis.RBD ** - booking class letter. Data type - string.
--  **FareDetail.FareComponent.FareBasis.CabinType ** - flight class (mandatory). Data type - custom.
+-  **FareDetail.FareComponent.FareBasis.RBD** - booking class letter. Data type - string.
+-  **FareDetail.FareComponent.FareBasis.CabinType** - flight class (mandatory). Data type - custom.
 -  **FareDetail.FareComponent.FareBasis.CabinType.CabinTypeCode** - class of service code. Data type - string.
 -  **FareDetail.FareComponent.FareBasis.CabinType.CabinTypeName** - service class name. Data type - string.
 -  **FareDetail.FareComponent.SegmentRefs** - link to one or several flight segments to which the price corresponds.
@@ -433,7 +433,7 @@ The operation of creating an order.
 -  **PassengerList.Passenger.IdentityDocument.ExpiryDate** - document validity period. The format is "yyyy-mm-dd".
 -  **PassengerList.Passenger.ContactInfoRef** - link to the passenger's contact data in DataLists.ContactList. CTC prefix is mandatory.
 -  **PassengerList.Passenger.InfantRef** - association of a passenger with another passenger, reasonable and is mandatory only for infants without a seat (optional).
--   **PassengerList.Passenger.Remark** - text note tied to a passenger (optional). Data type - custom.
+-  **PassengerList.Passenger.Remark** - text note tied to a passenger (optional). Data type - custom.
 -  **PassengerList.Passenger.Remark.Remark** - text note tied to a passenger (optional). Data type - string.
 -  **DataLists. ContactList** - information about the contact details of passengers. Data type - custom.
 -  **ContactList.ContactInformation** - element attribute containing the unique contact ID ContactID = "CTC1" (the CTC prefix is ​​required).
@@ -486,7 +486,7 @@ The operation of creating an order.
 -  **FlightSegmentList.FlightSegment.MarketingCarrier.FlightNumber** - flight number of the marketing carrier. Data type - string.
 -  **FlightSegmentList.FlightSegment.OperatingCarrier.AirlineID** - IATA code of the operating carrier. Data type - string.
 -  **FlightSegmentList.FlightSegment.OperatingCarrier.FlightNumber** - flight number of the operating carrier. Data type - string.
--  ** FlightSegmentList.FlightSegment.Equipment** - information about the aircraft type. Data type - custom.
+-  **FlightSegmentList.FlightSegment.Equipment** - information about the aircraft type. Data type - custom.
 -  **FlightSegmentList.FlightSegment.Equipment.AircraftCode** - aircraft type. Data type - string.
 -  **FlightSegmentList.FlightSegment.ClassOfService** - information about the booking class. Data type - custom.
 -  **FlightSegmentList.FlightSegment.ClassOfService.Code** - booking class letter.
