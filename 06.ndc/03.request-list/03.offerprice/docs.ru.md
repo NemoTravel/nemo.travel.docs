@@ -141,7 +141,7 @@ title: OfferPrice
 -   **PricedOffer.Parameters** — параметры предложения. Тип данных — сложный.
 -   **PricedOffer.Parameters.TotalItemQuantity** — общее количество набора услуг в данном предложении. Тип - целое положительное число.
 -   **PricedOffer.TimeLimits** — срок действия предложения. Тип данных — сложный.
--	**PricedOffer.TimeLimits.OfferExpiration** — срок действия предложения. Элемен содержит атрибут DateTime в формате "yyyy-mm-ddthh:mm:ss".
+-	**PricedOffer.TimeLimits.OfferExpiration** — срок действия предложения. Элемен содержит атрибут DateTime в формате "YYYY-MM-DDTHH:MM:SS".
 -	**PricedOffer.FlightsOverview** — элемент содержит ссылки на краткое описание перелёта и информацию о плече. Тип данных — сложный.
 -	**PricedOffer.FlightsOverview.FlightRef** — ссылка на идентификатор перелёта. Атрибут ODRef="ODN1" ссылает на элемент, содержащий сведения о пунках отправления и прибытия.
 -	**PricedOffer.OfferItem** — представляет набор из одной или нескольких услуг в рамках предложения. Атрибут OfferItemID содержит уникальный идентификатор набора услуг, префик OFI обязателен. Тип данных — сложный.
