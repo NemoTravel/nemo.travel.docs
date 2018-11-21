@@ -74,7 +74,7 @@ Search for v 1.2
 	-   Both - a set of search retrieval searches for minimum and minimum return prices
 -  **Restrictions.AsyncSearch** - Query mode: (default) false - synchronous search as before, true - asynchronous search with the ability to pull out the portions of supplier responses. The data type is bool.
 -  **Restrictions.Nemo2Pricing** - A sign of the need for pricing. The data type is bool.
--  **Restrictions.ThreeDomainAgreementNumber** - 3D Flow corporate nubmer. The data type is a string.
+-  **Restrictions.ThreeDomainAgreementNumber** - 3D Flow corporate number. The data type is a string.
 -  **EndUserData** - End user data (optional). The custom data type, the format is similar to the element * EndUserData * from the [DataItem](/avia/common/dataitem)
 -  **SellingPointDescription** - The description of the point of sale (optional). The custom data type, the format is similar to the element **SellingPointDescription** from [DataItem](/avia/common/dataitem)
 
