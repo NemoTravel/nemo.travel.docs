@@ -16,17 +16,17 @@ title: AirShopping
 Цены плеча перелета описаны в текущем OfferItem.
 
 #### Запрос
--   **AirShoppingRQ** - запроса выполняет поиск предложений в соответсвии с указанными данными о сегментах, пассажирах и дополнительных ограничениях. Обязательный атрибут Version="17.2" содержит версию NDC протокола. Тип данных - сложный. 
+-   **AirShoppingRQ** - запрос выполняет поиск предложений в соответсвии с указанными данными о сегментах, пассажирах и дополнительных ограничениях. Обязательный атрибут Version="17.2" содержит версию NDC протокола. Тип данных - сложный. 
 -   **AirShoppingRQ.CoreQuery** - содержит информацию о запрашиваемой покупке. Тип данных - сложный. 
--   **CoreQuery.OriginDestinations** - содержит информацию о сегментах перелёта, который требуется найти. **Обязательный элемент, при условие, что не задан элемент CoreQuery.FlightSpecific**. Тип данных - сложный.  
+-   **CoreQuery.OriginDestinations** - содержит информацию о сегментах перелёта, который требуется найти. **Обязательный элемент, при условии, что не задан элемент CoreQuery.FlightSpecific**. Тип данных - сложный.  
 -   **CoreQuery.OriginDestinations.OriginDestination** - информация о назначении/прибытии рейса (обязательный). Тип данных - сложный. 
 -   **OriginDestinations.OriginDestination.Departure** - содержит информацию о точки отправления (обязательный). Тип данных - сложный.
 -	**OriginDestinations.OriginDestination.Departure.AirportCode** - 3-х буквенный IATA код аэропорта или города отправления (обязательный). Тип данных — строка.
--	**OriginDestinations.OriginDestination.Departure.Date** -  дата вылета (обязательный). Формат "YYYY-MM-DD".
+-	**OriginDestinations.OriginDestination.Departure.Date** - дата вылета (обязательный). Формат "YYYY-MM-DD".
 -   **OriginDestinations.OriginDestination.Arrival** - содержит информацию о точки прибытия (обязательный). Тип данных - сложный.
 -	**OriginDestinations.OriginDestination.Arrival.AirportCode** - 3-х буквенный IATA код аэропорта или города прибытия (обязательный). Тип данных — строка. 
 -	**OriginDestinations.OriginDestination.CalendarDates** - первый элемент CoreQuery.OriginDestinations.OriginDestination может быть дополнен необязательным элементом CalendarDates. Данный элемент содержит атрибуты DaysBefore и DaysAfter, количество дней определяется из сложения атрибутов. Значение атрибутов должно быть целое число в сумме не превышающее 3.
--   **CoreQuery.FlightSpecific** - содержит более детальную информацию о запрашиваемых сегментах. Тип данных - сложный. **Обязательный элемент, при условие, что не задан элемент CoreQuery.OriginDestinations.**
+-   **CoreQuery.FlightSpecific** - содержит более детальную информацию о запрашиваемых сегментах. Тип данных - сложный. **Обязательный элемент, при условии, что не задан элемент CoreQuery.OriginDestinations.**
 -   **FlightSpecific.FlightSegment** - содержит информацию о сегментах перелёта, который требуется найти. Тип данных - сложный. Включает обязательный атрибут SegmentKey="SEG0", содержащий уникальный идентификатор сегмента. Префикс SEG является обязательным. Номера сегментов начинаются с нуля.
 -   **FlightSpecific.FlightSegment.Departure** - пункт отправления (обязательный). Тип данных - сложный.
 -   **FlightSpecific.FlightSegment.Departure.AirportCode** - 3-х буквенный IATA код аэропорта или города отправления (обязательный). Тип данных — строка.
@@ -57,7 +57,7 @@ title: AirShopping
 	-	**5** - Economy;
 	-	**6** - Economy;
 	-	**7** - All.
--	**AirShoppingRQ.DataLists** - представляет собой контейнер, в котором содержится дополнительная поискова информация (обязательный).
+-	**AirShoppingRQ.DataLists** - представляет собой контейнер, в котором содержится дополнительная поисковая информация (обязательный).
 -	**AirShoppingRQ.DataLists.PassengerList** - информация о пассажирах, для которых требуется найти перелёт (обязательный). Тип данных — сложный. 	
 -   **DataLists.PassengerList.Passenger** - информация о типе пассажиров, для которых требуется найти перелёт. Включает атрибут PassengerID="PAX1", содержащий уникальный id пассажира. Префикс PAX является обязательным. Номера пассажиров начинаются с единицы. Обязательный элемент и атрибут.
 -   **DataLists.PassengerList.Passenger.PTC** - тип пассажира. Возможные значения:
@@ -162,7 +162,7 @@ title: AirShopping
 -   **AirShoppingRS.OffersGroup.AirlineOffers** - контейнер для набора предложений. Тип данных — сложный.
 -   **AirShoppingRS.OffersGroup.AirlineOffers.AirlineOfferSnapshot** - содержит информацию о самом низком и высоком ценовом предложении. Тип данных — сложный.
 -   **AirlineOfferSnapshot.PassengerQuantity** - общее количество пассажиров, для которых требовалось найти перелёт. Тип - целое положительное число.
--   **AirlineOfferSnapshot.Highest** - самая высокая цена за предложение на всех типов пассажиров. Атрибут refs содержит список id предложений с самой высокой ценой. Тип данных — сложный.
+-   **AirlineOfferSnapshot.Highest** - самая высокая цена за предложение для всех типов пассажиров. Атрибут refs содержит список id предложений с самой высокой ценой. Тип данных — сложный.
 -   **AirlineOfferSnapshot.Highest.EncodedCurrencyPrice** - сумма и код валюты. Значение суммы - десятичное дробное число, код валюты - строка.
 -   **AirlineOfferSnapshot.Lowest** - самая низкая цена за предложение на всех типов пассажиров. Атрибут refs содержит список id предложений с самой низкой ценой. Тип данных — сложный.
 -   **AirlineOfferSnapshot.Lowest.EncodedCurrencyPrice** - сумма и код валюты. Значение суммы - десятичное дробное число, код валюты - строка.
@@ -173,10 +173,10 @@ title: AirShopping
 -   **Offer.Parameters** - элемент содержит количество наборов услуг (OfferItem) в рамках одного предложения. Тип данных — сложный.
 -   **Offer.Parameters.TotalItemQuantity** - количество наборов услуг в рамках одного предложения. Тип - целое положительное число.
 -   **Offer.TimeLimits** - срок действия предложения. Тип данных — сложный.
--	**Offer.TimeLimits.OfferExpiration** - срок действия предложения указан в атрибуте DateTime в формате "ГГГГ-ММ-ДДTчч:мм:сс".
+-	**Offer.TimeLimits.OfferExpiration** - срок действия предложения указан в атрибуте DateTime в формате "YYYY-MM-DDThh:mm:ss".
 -	**Offer.FlightsOverview** - элемент содержит ссылки на краткое описание перелёта и информацию о плече. Тип данных — сложный.
--	**Offer.FlightsOverview.FlightRef** - ссылка на идентификатор перелёта. Атрибут ODRef="ODN1" ссылает на элемент, содержащий сведения о пунках отправления и прибытия.
--	**Offer.OfferItem** - представляет набор из одной или нескольких услуг в рамках предложения. Атрибут OfferItemID содержит уникальный идентификатор набора услуг, префик OFI обязателен. Тип данных — сложный.
+-	**Offer.FlightsOverview.FlightRef** - ссылка на идентификатор перелёта. Атрибут ODRef="ODN1" ссылает на элемент, содержащий сведения о пунктах отправления и прибытия.
+-	**Offer.OfferItem** - представляет набор из одной или нескольких услуг в рамках предложения. Атрибут OfferItemID содержит уникальный идентификатор набора услуг, префикс OFI обязателен. Тип данных — сложный.
 -	**Offer.OfferItem.TotalPriceDetail** - полная стоимость за все услуги для всех пассажиров по всем сегментам в текущем OfferItem. Тип данных — сложный.
 -	**Offer.OfferItem.TotalPriceDetail.TotalAmount** - содержит полную стоимость (тариф + таксы). Тип данных — сложный.
 -	**Offer.OfferItem.TotalPriceDetail.TotalAmount.SimpleCurrencyPrice** - полная стоимость (тариф + таксы) на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Элемент включает два атрибута:
@@ -200,10 +200,10 @@ title: AirShopping
 -   **Offer.OfferItem.FareDetail.Price.FareFiledIn** - базовая цена в валюте заведения тарифа. Тип данных — сложный.
 -   **Offer.OfferItem.FareDetail.Price.FareFiledIn.BaseAmount** - базовая цена в валюте заведения тарифа для определённого типа пассажира в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
 -   **Offer.OfferItem.FareDetail.Price.Taxes** - информация о сумме такс для определённого типа пассажира. Тип данных — сложный.
--   **Offer.OfferItem.FareDetail.Price.Taxes.Total** - сумма всех такс на определённый тип пассажира в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
+-   **Offer.OfferItem.FareDetail.Price.Taxes.Total** - сумма всех такс на определённый тип пассажира в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable, описанные выше.
 -   **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown** - элемент, содержащий массив компонентов такс. Тип данных — сложный.
 -   **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown.Tax** - компоненты такс. Тип данных — сложный.
--   **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown.Tax.Amount** - значение таксы, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
+-   **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown.Tax.Amount** - значение таксы, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable, описанные выше.
 -   **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown.Tax.TaxCode** - код таксы. Тип данных — строка.
 -   **Offer.OfferItem.FareDetail.FareComponent** - содержит ссылки на информацию о деталях компонента тарифа и сегментах.
 -   **Offer.OfferItem.FareDetail.FareComponent.PriceClassRef** - ссылка на информацию о деталях компонента тарифа.
@@ -218,13 +218,13 @@ title: AirShopping
 -   **DataLists.BaggageAllowanceList** - информация о перевозке багажа. Тип данных - сложный.
 -	**BaggageAllowanceList.BaggageAllowance** - атрибут BaggageAllowanceID="BAG1"(префикс BAG обязателен) содержит уникальный идентификатор багажа. Тип данных - сложный.
 -	**BaggageAllowanceList.BaggageAllowance.BaggageCategory** - элемент всегда содержит значение "Checked".
--	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription** - возможны два типа зарегистрированного багажа Piece и Weight. 
+-	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription** - возможны два типа зарегистрированного багажа: Piece и Weight. 
 -	**В случае Piece возвращаются следующие элементы:**
 	-	**BaggageAllowanceList.BaggageAllowance.PieceAllowance**
 	-	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.ApplicableParty** - элемент всегда содержит значение Traveler. Означает, что багаж распростаняется на одного пассажира.
 	-	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.TotalQuantity** - количество сумок. Тип данных - целое число.
-	-	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.PieceMeasurements** - атрибут Quantity="1" элеметна тоже содержит информацию о количестве сумок, тип данных - целое число.
--	**В случае Weight возвращаются элементы:
+	-	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.PieceMeasurements** - атрибут Quantity="1" элемента тоже содержит информацию о количестве сумок, тип данных - целое число.
+-	**В случае Weight возвращаются элементы:**
 	-	**BaggageAllowanceList.BaggageAllowance.WeightAllowance**
 	-	**BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.Value** - максимальный вес багажа. Тип данных - целое положительное число.
 	-	**BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.UOM** - единица измерения для приведенного выше веса. Тип данных - строка.
