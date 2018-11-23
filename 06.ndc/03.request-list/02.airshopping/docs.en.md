@@ -8,7 +8,6 @@ Performs offers search. The response to the request is a grouped distribution. T
 - key - BaggageAllowanceID, element - BaggageAllowanceList;
 - key - SegmentKey, element - FlightSegmentList;
 - key - FlightKey, element - FlightList;
-- key - OriginDestinationKey, element - OriginDestinationList;
 - key - PriceClassID, element - PriceClassList;
 - key - ServiceDefinitionID, element - ServiceDefinitionList.
 
