@@ -1,5 +1,5 @@
 ---
-title: 'Requests List'
+title: 'List of requests'
 ---
 
 -   [**AirShopping**](/ndc/request-list/airshopping) - Performs a search for offers.
