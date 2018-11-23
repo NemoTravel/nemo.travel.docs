@@ -9,7 +9,7 @@ All NDC requests and responses have a specific set of common basic elements.
 #### Request
 
 ##### User ID
--  **Header.UserID** - ID of the user making the request. Data type - nonnegative 32-bit integer.
+-  **Header.UserID** - the identifier of the user executing the request. Data type - nonnegative 32-bit integer.
 
 ##### Nemo Connect Details
 -  **Header.Requisites** - details of access to the air server. Data type - custom.
