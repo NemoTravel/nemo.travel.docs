@@ -309,8 +309,7 @@ Flight leg prices are described in the current OfferItem.
 -  - **M** - Meal;
 -  - **R** - Refreshment;
 -  - **S** - Snack or light meal;
--  - **V** - Continental breakfast.
--  
+-  - **V** - Continental breakfast. 
 
 ##### Sample
 
