@@ -65,5 +65,5 @@ All NDC requests and responses have a specific set of common basic elements.
 -  **Errors. Error** - the describes an error. Includes the Code attribute - an error code.
 
 ##### Request ID
--  **ShoppingResponseID** is analogue Response ID. The element is available only in two methods: AirShopping, OfferPrice. Data type - custom.
+-  **ShoppingResponseID** - analogue Response ID. The element is available only in two methods: AirShopping, OfferPrice. Data type - custom.
 -  **ShoppingResponseID.ResponseID** - unique ID of the processed event. Data type - string.
