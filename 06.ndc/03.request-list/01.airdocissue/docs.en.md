@@ -59,7 +59,7 @@ Performs the ticketing.
 - **Commission.Percentage** - commission in percent. Data type - decimal.
 - **Query.DataLists** - contains data about passengers (mandatory). Data type - custom.
 - **DataLists.PassengerList** - information about passengers for whom an order is being created (mandatory). Data type - custom.
-- **PassengerList.Passenger** - The PassengerID attribute containing a unique passenger ID (mandatory).
+- **PassengerList.Passenger** - PassengerID attribute containing a unique passenger ID (mandatory).
 
 
 ##### Sample
