@@ -133,7 +133,7 @@ title: OfferPrice
 
 #### Ответ
 
--	**OfferPriceRS** — ответ содержит данные актуализации. Тип данных - сложный.
+-	**OfferPriceRS** — ответ содержит актуализированное предложение. Тип данных - сложный.
 -	**OfferPriceRS.Document** — **[общие элементы.](/ndc/ndc_element)**
 -   **OfferPriceRS.Success** — **[общие элементы.](/ndc/ndc_element)**
 -   **OfferPriceRS.ShoppingResponseID** - **[общие элементы.](/ndc/ndc_element)**
