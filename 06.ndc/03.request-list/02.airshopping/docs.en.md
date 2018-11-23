@@ -33,21 +33,21 @@ Flight leg prices are described in the current OfferItem.
 -  **FlightSpecific.FlightSegment.Arrival** - point of arrival (mandatory). Data type - custom.
 -  **FlightSpecific.FlightSegment.Arrival.AirportCode** - 3 letter IATA airport code or city of arrival (mandatory). Data type - string.
 -  **FlightSpecific.FlightSegment.MarketingAirline** - information about the marketing carrier (mandatory). Data type - custom.
--  ** FlightSpecific.FlightSegment.MarketingAirline.AirlineID** - IATA marketing carrier code (mandatory). Data type - string.
+-  **FlightSpecific.FlightSegment.MarketingAirline.AirlineID** - IATA marketing carrier code (mandatory). Data type - string.
 -  **FlightSpecific.FlightSegment.MarketingAirline.FlightNumber** - flight number (mandatory).
 -  **AirShoppingRQ.Preference** - contains various restrictions that apply to search results (optional). Data type - custom.
 -  **AirShoppingRQ.Preference.AirlinePreferences** - filter by airline (optional). Data type - custom.
 -  **Preference.AirlinePreferences.Airline** - filter by airline. The element includes the PreferencesLevel attribute, which takes the value Required or Exclude. If Exclude is specified, the specified airline will be excluded from the search results; if Required is specified, then only this airline will be present in the issue. Data type - custom.
 -  **Preference.AirlinePreferences.Airline.AirlineID** - IATA code of the airline by which the filtering will be activated.
--  **Preference.FlightPreferences** - the indicator of search for direct flights only (optional). Data type - custom.
+-  **Preference.FlightPreferences** - indicator of search for direct flights only (optional). Data type - custom.
 -  **Preference.FlightPreferences.Characteristic**
 -  **Preference.FlightPreferences.Characteristic.DirectPreferences** - if true, only direct flights are searched for; false or no item specified - search for any flights. Data type - boolean.
 -  **Preference.TransferPreferences** - adjusts the number of stops per flight (optional). Data type - custom.
 -  **Preference.TransferPreferences.Connection**
--  **Preference.TransferPreferences.Connection.MaxNumber** - the maximum number of stops. The element value must be a positive integer. The data type is an integer.
+-  **Preference.TransferPreferences.Connection.MaxNumber** - maximum number of stops. The element value must be a positive integer. The data type is an integer.
 -  **Preference.TransferPreferences.Connection.MaxTime** - maximum allowed stop time in minutes. The format example is PT180M, thus request will be made to search for flights with a maximum allowed stop of 180 minutes.
 -  **Preference.CabinPreferences** - contains a list of preferred flight classes. Data type - custom.
--  **Preference.CabinPreferences.CabinType** - hop class (mandatory). Data type - custom.
+-  **Preference.CabinPreferences.CabinType** - flight class (mandatory). Data type - custom.
 -  **Preference.CabinPreferences.CabinType.Code** - type of preferred flight class. Possible values:
     - **1** - First;
     - **2** - Business;
@@ -56,9 +56,9 @@ Flight leg prices are described in the current OfferItem.
     - **5** - Economy;
     - **6** - Economy;
     - **7** - All.
--  **AirShoppingRQ.DataLists** - container that contains additional search information (mandatory).
+-  **AirShoppingRQ.DataLists** - container with additional search information (mandatory).
 -  **AirShoppingRQ.DataLists.PassengerList** - information about passengers for whom you want to find a flight (mandatory). The data type is complex.
--  **DataLists.PassengerList.Passenger** - information about the type of passengers for which you want to find a flight. Includes the PassengerID = "PAX1" attribute containing the unique passenger id. The prefix PAX is required. Passenger numbers start at one. Required element and attribute.
+-  **DataLists.PassengerList.Passenger** - information about the type of passengers for which you want to find a flight. Includes the PassengerID = "PAX1" attribute containing the unique passenger id. The "PAX" prefix is required. Passenger numbers start at one. Element and attribute are required.
 -  **DataLists.PassengerList.Passenger.PTC** - passenger type. Possible values:
     - **ADT** - adult;
     - **CHD** - child;
@@ -159,15 +159,15 @@ Flight leg prices are described in the current OfferItem.
 -  **AirShoppingRS.Success** - **[common items.](/Ndc/ndc_element)**
 -  **AirShoppingRS.ShoppingResponseID** - **[common items.](/Ndc/ndc_element)**
 -  **AirShoppingRS.OffersGroup** - grouped offers. Data type - custom.
--  **AirShoppingRS.OffersGroup.AirlineOffers** - container for a set of offers. Data type - custom.
+-  **AirShoppingRS.OffersGroup.AirlineOffers** - container for an offers' bundle. Data type - custom.
 -  **AirShoppingRS.OffersGroup.AirlineOffers.AirlineOfferSnapshot** - contains information on the lowest and highest price offer. Data type - custom.
 -  **AirlineOfferSnapshot.PassengerQuantity** - total number of passengers for whom it was required to find a flight. Data type - positive integer.
--  **AirlineOfferSnapshot.Highest** - the highest offer price for all types of passengers. The refs attribute contains a list of offer id with the highest price. The data type is complex.
+-  **AirlineOfferSnapshot.Highest** - highest offer price for all types of passengers. The refs attribute contains a list of offer IDs with the highest price. Data type - custom.
 -  **AirlineOfferSnapshot.Highest.EncodedCurrencyPrice** - amount and currency code. The value of the sum is a decimal fractional number, the currency code is a string.
 -  **AirlineOfferSnapshot.Lowest** - the lowest offer price for all types of passengers. The refs attribute contains a list of id offers with the lowest price. Data type - custom.
 -  **AirlineOfferSnapshot.Lowest.EncodedCurrencyPrice** - amount and currency code. The value of the sum is a decimal fractional number, the currency code is a string.
 -  **AirlineOfferSnapshot.MatchedOfferQuantity** - total number of offers received as a result of the search.
--  **AirShoppingRS.OffersGroup.AirlineOffers.Offer** - offer as a specific set of services (flights and/or flight-related additional services). The Offer element contains information about the services, price component, restrictions (time limit). The Offer element includes two required attributes:
+-  **AirShoppingRS.OffersGroup.AirlineOffers.Offer** - offer as a specific bundle of services (flights and/or flight-related additional services). The Offer element contains information about the services, price component, restrictions (time limit). The Offer element includes two required attributes:
 -  - **OfferID** - unique offer ID;
 -  - **Owner = "1S"** - owner code (GDS) of the offer. Data type - string.
 -  **Offer.Parameters** - element containing the number of service bundles (OfferItem) within one offer. Data type - custom.
