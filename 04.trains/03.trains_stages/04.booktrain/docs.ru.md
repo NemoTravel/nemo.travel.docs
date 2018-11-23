@@ -303,7 +303,6 @@ title: 'Бронирование мест в поезде'
 -   **DepStationFromSearch** - 
 -   **DepStationName** - 
 -   **DepTimezoneCode** - 
--   **Direction** -
 -   **EndDate** - 
 -   **Environment** -  
 -   **IsEticketPrintPoint** - 
@@ -319,6 +318,8 @@ title: 'Бронирование мест в поезде'
 -   **TripTime** - 
 -   **WebService** - 
 -   **OwnerID** - 
+-   **PassTypes** - 
+-   **PassTypes.PassType** - 
 
 
 
