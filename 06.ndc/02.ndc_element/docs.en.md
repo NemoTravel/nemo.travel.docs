@@ -57,13 +57,13 @@ All NDC requests and responses have a specific set of common basic elements.
 -  **Success** - the presence of an empty element indicates that the message was successful. Data type - custom.
 
 ##### Warnings
--  **Warnings** - important informational messages about the specifics of processing a request, received as a result of its execution. Data type - custom.
--  **Warnings.Warning** - crucial informational messages on the specifics of processing the request.
+-  **Warnings** - the important informational messages about the specifics of processing a request, received as a result of its execution. Data type - custom.
+-  **Warnings.Warning** - the informational messages about the specifics of processing the request.
 
 ##### Errors
--  **Errors** - information about errors that occurred while processing the request. Data type - custom.
--  **Errors. Error** - describes the error. Includes the Code attribute - an error code.
+-  **Errors** - the information about errors that occurred while processing the request. Data type - custom.
+-  **Errors. Error** - the describes an error. Includes the Code attribute - an error code.
 
 ##### Request ID
--  **ShoppingResponseID** - analogue Response ID. The item is available only in two methods: AirShopping, OfferPrice. Data type - custom.
+-  **ShoppingResponseID** is analogue Response ID. The element is available only in two methods: AirShopping, OfferPrice. Data type - custom.
 -  **ShoppingResponseID.ResponseID** - unique ID of the processed event. Data type - string.
