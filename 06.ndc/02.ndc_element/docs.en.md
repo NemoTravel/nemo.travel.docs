@@ -9,36 +9,36 @@ All NDC requests and responses have a specific set of common basic elements.
 #### Request
 
 ##### User ID
--  **Header.UserID** - the identifier of the user executing the request. Data type - nonnegative 32-bit integer.
+-  **Header.UserID** - ID of the user executing the request. Data type - nonnegative 32-bit integer.
 
 ##### Nemo Connect Details
 -  **Header.Requisites** - details of access to the air server. Data type - custom.
 -  **Header.Requisites.Login** - login to access the server. Data type - string.
--  **Header.Requisites.Password** - password for access to the server. Data type - string.
--  **Header.Requisites.AuthToken** - key, issued by Nemo.travel employees. Data type is a string. You need to specify either it or a bunch of login + password.
+-  **Header.Requisites.Password** - password to access the server. Data type - string.
+-  **Header.Requisites.AuthToken** - key issued by Nemo.travel employees. Data type - string. You need to specify either it or a login + password pair.
 -  **Header.Requisites.NemoOneAuthToken** - key issued by Nemo.travel employees. Data type - string. You need to specify either this key or a login + password pair.
--  **Header.Requisites.UserContextId** - user ID (order owner) whose settings are used (used only for authorization via login + password).
+-  **Header.Requisites.UserContextId** - user ID (order owner) whose settings are used (only for authorization via login + password).
 
 ##### Request Body
 -  **Body.NameRequest** - element containing the request body. By "NameRequest" is meant the name of a specific request, for example, AirShoppingRQ, OfferPriceRQ, etc. It is imperative that you specify the Version attribute, which contains the NDC 17.2 protocol version, for example, Version = "17.2". Data type - custom.
 
 ##### NDC Document Information
-- **NameRequest.Document** - used to specify the gateway name and the version of the internal implementation in the system (mandatory). Data type - custom.
+- **NameRequest.Document** - used to specify the gateway name and the version of the internal realization in the system (mandatory). Data type - custom.
 - **NameRequest.Document.Name** - gateway name (mandatory). Data type - string.
 - **NameRequest.Document.ReferenceVersion** - version (required). Data type - string.
-- **NameRequest.Party** - contains information about the sender of the request, details of the search and more (mandatory). Data type - custom.
+- **NameRequest.Party** - contains information about the request sender, details of the search and more (mandatory). Data type - custom.
 
 ##### Request Sender Information
--  **Party.Sender** - sender (required). Data type - custom.
+-  **Party.Sender** - sender (mandatory). Data type - custom.
 -  **Party.Sender.TravelAgencySender** - sender (mandatory). Data type - custom.
 -  **Party.Sender.TravelAgencySender.OtherIDs** - search details and miscellaneous (optional). Data type - custom.
 -  **Party.Sender.TravelAgencySender.OtherIDs.OtherID** - depending on the value of the Description attribute is determined by the content of the OtherID element (mandatory). Attribute data type - string, possible values:
     - **Source** - ID of the Nemo Connect requisites package;
     - **Tag** - one of the labels of the request sender, describing it in accordance with a certain criterion;
     - **SubAgencyID** - external subagency ID.
--  **Party.Sender.TravelAgencySender.AgencyID** - unique ID of the agency in the air service (mandatory). Data type - positive integer.
--  **Party.Sender.TravelAgencySender.AgentUser** - unique ID of the agency user in Nemo Connect (optional). Data type - custom.
--  **Party.Sender.TravelAgencySender.AgentUser.AgentUserID** is the unique ID of the agency user in Nemo Connect (mandatory). Data type - positive integer.
+-  **Party.Sender.TravelAgencySender.AgencyID** - unique agency ID in the air service (mandatory). Data type - positive integer.
+-  **Party.Sender.TravelAgencySender.AgentUser** - unique agency user ID in Nemo Connect (optional). Data type - custom.
+-  **Party.Sender.TravelAgencySender.AgentUser.AgentUserID** - unique ID of the agency user in Nemo Connect (mandatory). Data type - positive integer.
 
 #### Response
 
@@ -57,12 +57,12 @@ All NDC requests and responses have a specific set of common basic elements.
 -  **Success** - the presence of an empty element indicates that the message was successful. Data type - custom.
 
 ##### Warnings
--  **Warnings** - the important informational messages about the specifics of processing a request, received as a result of its execution. Data type - custom.
--  **Warnings.Warning** - the informational messages about the specifics of processing the request.
+-  **Warnings** - crucial informational messages about the specifics of the request processing, received as a result of its execution. Data type - custom.
+-  **Warnings.Warning** - informational messages about the specifics of the request processing.
 
 ##### Errors
--  **Errors** - the information about errors that occurred while processing the request. Data type - custom.
--  **Errors. Error** - the describes an error. Includes the Code attribute - an error code.
+-  **Errors** - information about errors that occurred while processing the request. Data type - custom.
+-  **Errors. Error** - describes an error. Includes the Code attribute - an error code.
 
 ##### Request ID
 -  **ShoppingResponseID** - analogue Response ID. The element is available only in two methods: AirShopping, OfferPrice. Data type - custom.
