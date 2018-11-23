@@ -206,8 +206,8 @@ Flight leg prices are described in the current OfferItem.
 -  **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown.Tax.Amount** - tax value, the data type - decimal fractional number. Contains the Code and Taxable attributes described above.
 -  **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown.Tax.TaxCode** - tax code. Data type - string.
 -  **Offer.OfferItem.FareDetail.FareComponent** - contains links to information about the fare component details and segments.
--  **Offer.OfferItem.FareDetail.FareComponent.PriceClassRef** - link to the details of the fare component.
--  **Offer.OfferItem.FareDetail.FareComponent.SegmentRefs** - a link to one or more segments of the flight, which corresponds to the price.
+-  **Offer.OfferItem.FareDetail.FareComponent.PriceClassRef** - link to the fare component details.
+-  **Offer.OfferItem.FareDetail.FareComponent.SegmentRefs** - link to one or more segments of the flight, which corresponds to the price.
 -  **AirShoppingRS.DataLists** - container with information about the elements of the offer, namely, information about passengers, baggage, route and segments. Data type - custom.
 -  **DataLists.PassengerList** - information about the passengers. Data type - custom.
 -  **PassengerList.Passenger** - passengers for whom the search was performed. Attribute PassengerID = "PAX1" (PAX prefix required) - unique passenger ID.
@@ -223,11 +223,11 @@ Flight leg prices are described in the current OfferItem.
 -  **BaggageAllowanceList.BaggageAllowance.PieceAllowance**
 -  **BaggageAllowanceList.BaggageAllowance.PieceAllowance.ApplicableParty** - element always containing the Traveler value. Means that the luggage is distributed to one passenger.
 -  **BaggageAllowanceList.BaggageAllowance.PieceAllowance.TotalQuantity** - number of bags. Data type - integer. 
--  **BaggageAllowanceList.BaggageAllowance.PieceAllowance.PieceMeasurements** - the attribute Quantity = "1" element also contains information on the number of bags, data type - integer.
+-  **BaggageAllowanceList.BaggageAllowance.PieceAllowance.PieceMeasurements** - attribute Quantity = "1" element also contains information on the number of bags, data type - integer.
 -  **For Weight, the following elements are returned**:
--  ** BaggageAllowanceList.BaggageAllowance.WeightAllowance **
--  ** BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.Value ** - maximum weight of baggage. Data type - positive integer.
--  ** BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.UOM ** - unit of measure for the above weight. Data type - string.
+-  **BaggageAllowanceList.BaggageAllowance.WeightAllowance**
+-  **BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.Value** - maximum weight of baggage. Data type - positive integer.
+-  **BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.UOM** - unit of measure for the above weight. Data type - string.
 -  **The Concept attribute of the AllowanceDescription element defines the measure of baggage, possible values:**
  - **700** - Kilos;
 -  **701** - Pounds;
@@ -240,8 +240,8 @@ Flight leg prices are described in the current OfferItem.
 -  **BaggageAllowanceList. BaggageAllowance.AllowanceDescription.Descriptions.Description**
 -  **BaggageAllowanceList. BaggageAllowance.AllowanceDescription.Descriptions.Description.Text** - 
  the default value is "Free baggage". Data type - string.
--  **DataLists.FlightSegmentList** - contains information about the segments of the flight. Data type - custom.
--  **FlightSegmentList.FlightSegment** - details of the flight segment. Data type - custom. Includes two attributes:
+-  **DataLists.FlightSegmentList** - contains information about the flight segments. Data type - custom.
+-  **FlightSegmentList.FlightSegment** - flight segment details. Data type - custom. Includes two attributes:
 -  - **SegmentKey** - unique segment ID, required SEG prefix.
 -  - **ElectronicTicketInd** - attribute of an electronic ticket. Data type - boolean.
 -  **FlightSegmentList.FlightSegment.Departure** - information about the departure segment. Data type - custom.
@@ -263,7 +263,7 @@ Flight leg prices are described in the current OfferItem.
 - **FlightSegmentList.FlightSegment.OperatingCarrier.AirlineID** - IATA code of the operating carrier. Data type - string.
 - **FlightSegmentList.FlightSegment.OperatingCarrier.FlightNumber** - flight number of the operating carrier. Data type - string.
 - **FlightSegmentList.FlightSegment.Equipment** - information about the type of aircraft. Data type - custom.
-- **FlightSegmentList.FlightSegment.Equipment.AircraftCode** - type of aircraft. Data type - string.
+- **FlightSegmentList.FlightSegment.Equipment.AircraftCode** - aircraft type. Data type - string.
 - **FlightSegmentList.FlightSegment.FlightDetail** - flight details. Data type - custom.
 - **FlightSegmentList.FlightSegment.FlightDetail.FlightDuration** - informs about the duration of the flight. Data type - custom.
 - **FlightSegmentList.FlightSegment.FlightDetail.FlightDuration.Value** - flight duration within the segment.
@@ -279,7 +279,7 @@ Flight leg prices are described in the current OfferItem.
 -  **OriginDestinationList.OriginDestination.FlightReferences** - contains links to the list of flights whose departur /arrival point coincide with the current one.
 -  **DataLists.PriceClass ** - element containing a list of prices and characteristics of the tariff. Data type - custom.
 -  **PriceClass.PriceClass** - contains information about the tariff. PriceClassID = "PRC1" attribute (PRC prefix is ​​required) - unique price identifier. Data type - custom.
--  **PriceClass.PriceClass.Name** - the name takes several values, separated by an underscore. Example: NVU5_N_Y_ECONOMY, where in the first place is the family code or rate code (in the absence of the first), in the second letter of the booking class, in the third place the code of the service class and then the name of the service class. Data type is a string.
+-  **PriceClass.PriceClass.Name** - name taking several values separated by an underscore. Example: NVU5_N_Y_ECONOMY, where in the first place is the family code or rate code (in the absence of the first), in the second letter of the booking class, in the third place the code of the service class and then the name of the service class. Data type is a string.
 -  **PriceClass.PriceClass.FareBasisCode** - fare code. The data type is complex.
 -  **PriceClass.PriceClass.FareBasisCode.Code** - fare code. Data type is a string.
 -  **PriceClass.PriceClass.ClassOfService** - information about the booking class. The data type is complex.
