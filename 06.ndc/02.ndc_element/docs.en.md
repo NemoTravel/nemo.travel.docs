@@ -25,7 +25,7 @@ All NDC requests and responses have a specific set of common basic elements.
 ##### NDC Document Information
 - **NameRequest.Document** - used to specify the gateway name and the version of the internal implementation in the system (mandatory). Data type - custom.
 - **NameRequest.Document.Name** - gateway name (mandatory). Data type - string.
-- **NameRequest.Document.ReferenceVersion** - version (required). Data type is a string.
+- **NameRequest.Document.ReferenceVersion** - version (required). Data type - string.
 - **NameRequest.Party** - contains information about the sender of the request, details of the search and more (mandatory). Data type - custom.
 
 ##### Request Sender Information
