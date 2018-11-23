@@ -55,8 +55,8 @@ Performs the ticketing.
 - - **Taxable** - taxable, data type - boolean.
 -  **TicketDocInfo.Payments.Payment.Order** - The OrderID attribute of the Order element containing the order ID. Element and attribute required.
 -  **TicketDocInfo.Commission** - commission information (optional). The element must contain either an absolute value or a percentage. Commission information should be set only in the first TicketDocInfo element, data from other TicketDocInfo is ignored. Data type - custom.
-- **Commission.Amount** - the absolute value of the commission. Data type - decimal fractional number.
-- **Commission.Percentage** - commission in percent. Data type - decimal fractional number.
+- **Commission.Amount** - the absolute value of the commission. Data type - decimal.
+- **Commission.Percentage** - commission in percent. Data type - decimal.
 - **Query.DataLists** - contains data about passengers (mandatory). Data type - custom.
 - **DataLists.PassengerList** - information about passengers for whom an order is being created (mandatory). Data type - custom.
 - **PassengerList.Passenger** - The PassengerID attribute containing a unique passenger ID (mandatory).
