@@ -336,9 +336,9 @@ title: OrderCreate
 -	**Party.Sender.TravelAgencySender**
 -	**TravelAgencySender.Contacts** - контактная данные агентства в брони. Тип данных - сложный.
 -	**TravelAgencySender.Contacts.Contact** - контактная данные агентства в брони. Тип данных - сложный.
--	**TravelAgencySender.Contacts.Contact.PhoneContact** - контактные данные агентства. Тип данных - сложный.
+-	**TravelAgencySender.Contacts.Contact.PhoneContact** - сведения о контактных данных агентства. Тип данных - сложный.
 -	**TravelAgencySender.Contacts.Contact.PhoneContact.Number** - номер телефона агентства. Тип данных - строка.
--	**TravelAgencySender.Contacts.Contact.EmailContact** - элеткронная почта агентства. Тип данных - сложный. 
+-	**TravelAgencySender.Contacts.Contact.EmailContact** - сведения о электронных данных агентства. Тип данных - сложный. 
 -	**TravelAgencySender.Contacts.Contact.EmailContact.Address** - элеткронная почта агентства. Тип данных - строка.
 -	**OrderViewRS.Response** Тип данных - сложный.
 -	**Response.Order** - сведения о заброниванном заказе. Тип данных - сложный. Элемент содержит обязательные атрибуты:
