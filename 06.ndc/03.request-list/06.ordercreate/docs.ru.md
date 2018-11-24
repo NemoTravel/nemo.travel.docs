@@ -453,7 +453,7 @@ title: OrderCreate
 -	-	**N** — Number of pieces;
 -	-	**S** — Size;
 -	-	**W** — Weight
--	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.ApplicableParty** - элемент всегда содержит значение Traveler - багаж распростаняется на одного пассажира.
+-	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.ApplicableParty** - элемент всегда содержит значение Traveler - багаж соотвествует одному пассажиру.
 -	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions** - описание багажа. Тип данных - сложный.
 -	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions.Description** - 
 -	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions.Description.Text** - по умолчанию содержит значение "Free baggage". Тип данных - строка. 
