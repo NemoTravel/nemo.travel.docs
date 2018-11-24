@@ -16,20 +16,20 @@ title: OrderCreate
 -	**OrderCreateRQ.Party** - **[общие элементы.](/ndc/ndc_element)** В текущем запросе элемент Party дополнен сведениями о контактных данных агента.
 -	**OrderCreateRQ.Party.Sender.TravelAgencySender.Contacts** - контактные данные агентства (необязательный). Тип данных - сложный. 
 -	**TravelAgencySender.Contacts.Contact** - описывает контактные данные агентства. Тип данных - сложный.
--	**TravelAgencySender.Contacts.Contact.EmailContact** - электронный адрес агентства. Тип данных - сложный.
+-	**TravelAgencySender.Contacts.Contact.EmailContact** - сведения об электронном адресе агентства. Тип данных - сложный.
 -	**TravelAgencySender.Contacts.Contact.EmailContact.Address** - электронный адрес агентства. Тип данных - строка.
--	**TravelAgencySender.Contacts.Contact.PhoneContact** - телефон агентства. Тип данных - сложный.
+-	**TravelAgencySender.Contacts.Contact.PhoneContact** - сведения о телефоне агентства. Тип данных - сложный.
 -	**TravelAgencySender.Contacts.Contact.PhoneContact.Number** - телефон агентства. Тип данных - строка.
 -	**OrderCreateRQ.Query** Тип данных - сложный. 
 -	**Query.Order**
 -	**Query.Order.Offer** - описывает предложение, выбранное пользователем для создания заказа. Тип данных - сложный. Включает 3 обязательных атрибута:
 -	-	**OfferID** - уникальный идентификатор предложения (значение получаем в ответе OfferPrice); 
--	-	**ResponseID** - уникальный идентификатор события актуализации; 
+-	-	**ResponseID** - уникальный идентификатор события (значение получаем в ответе OfferPrice); 
 -	-	**Owner** - код владельца (ГРС) предложения. Тип данных — строка.
 -	**Query.Order.Offer.OfferItem** - описывает набор услуг, входящих в предложение. Тип данных - сложный. Обязательный атрибут OfferItemID.
 -	**Query.Order.Offer.OfferItem.PassengerRefs** - ссылка на одного или нескольких пассажиров из DataLists.PassengerList.
 -	**Query.Order.Offer.OfferItem.ServiceSelection** - содержит уникальный идентификатор услуги в пределах OfferItem. Тип данных - сложный.
--	**Query.Order.Offer.OfferItem.ServiceSelection.ServiceDefinitionID** - ссылка на описание услуги в DataLists.ServiceDefinitionList.ServiceDefinition.
+-	**Query.Order.Offer.OfferItem.ServiceSelection.ServiceDefinitionID** - ссылка на описание услуги из DataLists.ServiceDefinitionList.ServiceDefinition.
 -	**Query.Payments** - сведения об оплате (необязательный). Тип данных - сложный.
 -	**Payments.Payment** - подробная информация о платеже. Тип данных - сложный.
 -	**Payments.Payment.Type** - тип оплаты. В зависимости от типа оплаты меняется ряд элементов блока Method. Ниже представлены возможные значения:
@@ -68,9 +68,9 @@ title: OrderCreate
 -	**Payments.Payment.Amount** - сумма оплаты. Элемент включает два атрибута:
 -	-	**Code** - код валюты, тип данных — строка.
 -	-	**Taxable** - облагаемый налогом, тип данных — булевый.
--	**Query.Commission** - информация о комиссии (необязательный). Элемент должен содержать либо абсолютное значение, либо процент. Тип данных - сложный.
+-	**Query.Commission** - сведения о комиссии (необязательный). Элемент должен содержать либо абсолютное значение, либо процент. Тип данных - сложный.
 -	**Commission.Amount** - абсолютное значение комиссии. Тип данных - десятичное дробное число.
--	**Commission.Percentage** - комиссия в процентах. Тип данных - десятичное дробное число.
+-	**Commission.Percentage** - значение комиссии в процентах. Тип данных - десятичное дробное число.
 -	**Query.DataLists** - содержит данные о пассажирах и их контакты, ремарках, OSI/SSR. Тип данных — сложный.
 -	**DataLists.PassengerList** - сведения о пассажирах, для которых создаётся заказ. Тип данных - сложный.
 -	**PassengerList.Passenger** - атрибут элемента содержит уникальный идентификатор пассажира PassengerID. 
@@ -87,10 +87,10 @@ title: OrderCreate
 -	**PassengerList.Passenger.Individual.MiddleName** - отчество. Тип данных - строка.
 -	**PassengerList.Passenger.Individual.Surname** - фамилия. Тип данных - строка.
 -	**PassengerList.Passenger.LoyaltyProgramAccount** - карта лояльности. Тип данных - сложный.
--	**PassengerList.Passenger.LoyaltyProgramAccount.Airline** тип данных - сложный.
+-	**PassengerList.Passenger.LoyaltyProgramAccount.Airline** - сведения о карте лояльности авикомпании. Тип данных - сложный.
 -	**PassengerList.Passenger.LoyaltyProgramAccount.Airline.AirlineDesignator** - IATA код авиакомпании. Тип данных - строка.
 -	**PassengerList.Passenger.LoyaltyProgramAccount.AccountNumber** - номер карты лояльности.
--	**PassengerList.Passenger.IdentityDocument** - документ, удостверяющий личность. Тип данных - сложный.
+-	**PassengerList.Passenger.IdentityDocument** - сведения о документе, удостверяющем личность. Тип данных - сложный.
 -	**PassengerList.Passenger.IdentityDocument.IdentityDocumentNumber** - номер документа (обязательный).
 -	**PassengerList.Passenger.IdentityDocument.IdentityDocumentType** - тип документа, возможные значения:
 -	-	**PT** - Passport;
@@ -109,10 +109,10 @@ title: OrderCreate
 -	**PassengerList.Passenger.IdentityDocument.ExpiryDate** - срок действия документа. Формат "YYYY-MM-DD".
 -	**PassengerList.Passenger.ContactInfoRef** - ссылка на контактные данные пассажира из DataLists.ContactList. Обязательный префикс CTC.
 -	**PassengerList.Passenger.InfantRef** - привязка пассажира к другому пассажиру, имеет смысл и обязательна только для младенцев без места (необязательный).
--	**PassengerList.Passenger.Remark** - текстовая ремарка, привязанная к пассажиру (необязательный). Тип данных — сложный.
+-	**PassengerList.Passenger.Remark** -  сведения о ремарках, привязанных к пассажиру (необязательный). Тип данных — сложный.
 -	**PassengerList.Passenger.Remark.Remark** - текстовая ремарка, привязанная к пассажиру (необязательный). Тип данных — строка.
--	**DataLists.ContactList** - сведения о контактных данных пассажиров. Тип данных - сложный.
--	**ContactList.ContactInformation** - атрибут элемента содержит уникальный идентификатор контактов ContactID="CTC1" (префикс CTC обязателен).
+-	**DataLists.ContactList** - сведения о контактных данных пассажира. Тип данных - сложный.
+-	**ContactList.ContactInformation** - атрибут элемента содержит уникальный идентификатор контакта ContactID="CTC1" (префикс CTC обязателен).
 -	**ContactList.ContactInformation.ContactProvided** - контактные данные пассажира. Необходимо учесть, что электронный адрес и телефон должны быть представлены в отдельных элементах ContactProvided. Тип данных - сложный.
 -	**ContactList.ContactInformation.ContactProvided.EmailAddress** - сведения об электронном адресе пассажира. Тип данных - сложный.
 -	**ContactList.ContactInformation.ContactProvided.EmailAddress.EmailAddressValue** - электронный адрес пассажира. Тип данных - строка.
@@ -127,11 +127,11 @@ title: OrderCreate
 -	**ContactList.ContactInformation.ContactProvided.Phone.PhoneNumber** - телефонный номер.
 -	**ContactList.ContactInformation.ContactProvided.Phone.Extension** - добавочный номер.
 -	**DataLists.InstructionsList** - дополнительный инструкции, а в частности ремарки, относящиеся ко всему заказу. Тип данных - сложный.
--	**InstructionsLis.Instruction** - атрибут ListKey содержит уникальный идентификатор инструкции. 
+-	**InstructionsLis.Instruction** - атрибут ListKey содержит уникальный идентификатор инструкции. Значение атрибута включает обязательный префикс INL.
 -	**InstructionsLis.Instruction.FreeFormTextInstruction** - текстовая ремарка. Тип данных - сложный.
 -	**InstructionsLis.Instruction.FreeFormTextInstruction.Remark** - текстовая ремарка. Тип данных - строка.
 -	**DataLists.ServiceDefinitionList** - данные OSI/SSR. Тип данных - сложный.
-- 	**ServiceDefinitionList.ServiceDefinition** - атрибут содержит уникальный идентификатор услуги.
+- 	**ServiceDefinitionList.ServiceDefinition** - атрибут содержит уникальный идентификатор услуги. Значение атрибута включает обязательный префикс SVC.
 - 	**ServiceDefinitionList.ServiceDefinition.Name** - содержит наименование SSR или OSI.  
 - 	**ServiceDefinitionList.ServiceDefinition.Descriptions** - описание услуги. Тип данных - сложный.
 - 	**ServiceDefinitionList.ServiceDefinition.Descriptions.Description** - содержит значение Special Service Request или Other Service Information.
@@ -334,33 +334,31 @@ title: OrderCreate
 -	**OrderViewRS.Party** - **[общие элементы.](/ndc/ndc_element)**
 -	**Party.Sender** 
 -	**Party.Sender.TravelAgencySender**
--	**TravelAgencySender.Contacts** - контактная данные агентства в брони. Тип данных - сложный.
--	**TravelAgencySender.Contacts.Contact** - контактная данные агентства в брони. Тип данных - сложный.
--	**TravelAgencySender.Contacts.Contact.PhoneContact** - сведения о контактных данных агентства. Тип данных - сложный.
+-	**TravelAgencySender.Contacts** - сведения о контактных данных агентства. Тип данных - сложный.
+-	**TravelAgencySender.Contacts.Contact** - контактная данные агентства. Тип данных - сложный.
+-	**TravelAgencySender.Contacts.Contact.PhoneContact** - сведения о номере телефона агентства. Тип данных - сложный.
 -	**TravelAgencySender.Contacts.Contact.PhoneContact.Number** - номер телефона агентства. Тип данных - строка.
--	**TravelAgencySender.Contacts.Contact.EmailContact** - сведения о электронных данных агентства. Тип данных - сложный. 
--	**TravelAgencySender.Contacts.Contact.EmailContact.Address** - элеткронная почта агентства. Тип данных - строка.
--	**OrderViewRS.Response** Тип данных - сложный.
+-	**TravelAgencySender.Contacts.Contact.EmailContact** - сведения о электронном адресе агентства. Тип данных - сложный. 
+-	**TravelAgencySender.Contacts.Contact.EmailContact.Address** - элеткронный адрес агентства. Тип данных - строка.
+-	**OrderViewRS.Response**
 -	**Response.Order** - сведения о заброниванном заказе. Тип данных - сложный. Элемент содержит обязательные атрибуты:
 -	-	**OrderID** - уникальный идентификатор заказа в Nemo Connect.
 -	-	**Owner** - код владельца (ГРС) заказа. Тип данных — строка.
 -	**Order.BookingReferences** - содержит идентификатор бронирования в ГРС и код валидирующего перевозчика. Тип данных - сложный.
 -	**BookingReferences.BookingReference**
--	**BookingReferences.BookingReference.ID** - локатор заказа в ГРС. Тип данных - строка.
+-	**BookingReferences.BookingReference.ID** - идентификатор заказа в ГРС. Тип данных - строка.
 -	**BookingReferences.BookingReference.AirlineID** - IATA код валидирующего перевозчика. Тип данных - строка.
 -	**Order.TotalOrderPrice** - полная стоимость за все услуги всех пассажиров по всем сегментам в текущем Order. Тип данных - сложный.
 -	**TotalOrderPrice.SimpleCurrencyPrice** - полная стоимость (тариф + таксы) на всех пассажиров в текущем Order, тип данных - десятичное дробное число. Элемент включает два атрибута: 
 -	-	**Code** - код валюты, тип данных - строка.
 -	-	**Taxable** - облагаемый налогом (по умолчанию false), тип данных - булевый.
--	**Order.Payments** - сведения об оплате в брони. Тип данных - сложный.
+-	**Order.Payments** - сведения об оплате. Тип данных - сложный.
 -	**Payments.Payment** - подробная информация о платеже. Тип данных - сложный.
 -	**Payments.Payment.Type** - тип оплаты. Тип данных - строка.
--	**Payments.Payment.Amount** - сумма оплаты. Тип данных - сложный.
--	**Payments.Payment.Amount.SimpleCurrencyPrice** - сумма оплаты. Тип данных - десятичное дробное число. Элемент включает два атрибута:
--	-	**Code** - код валюты, тип данных — строка.
--	-	**Taxable** - облагаемый налогом, тип данных — булевый.
--	**Payments.Payment.Method** - методы оплаты (описаны в запросе OrderCreate).
--	**Order.TimeLimits** - срок действия заказа. Тип данных — сложный.
+-	**Payments.Payment.Amount** - сведения об оплаченной сумме. Тип данных - сложный.
+-	**Payments.Payment.Amount.SimpleCurrencyPrice** - сумма оплаты. Тип данных - десятичное дробное число. Элемент включает два атрибута Code и Taxable(описаны выше).
+-	**Payments.Payment.Method** - метод оплаты (возможные методы оплаты описаны в запросе OrderCreate).
+-	**Order.TimeLimits** - срок действия предложения. Тип данных — сложный.
 -	**TimeLimits.PaymentTimeLimit** - срок действия предложения. Элемен содержит атрибут DateTime в формате "ГГГГ-ММ-ДДTчч:мм:сс".
 -	**Order.OrderItems** - представляет набор из одной или нескольких услуг в рамках заказа. Тип данных - сложный.
 -	**OrderItems.OrderItem** - набор услуг в рамках заказа. Элемент включает два обязательных атрибута:
@@ -373,18 +371,18 @@ title: OrderCreate
 -	-	**T** - Ticketed;
 -	-	**X** - Cancel;
 -	-	**V** - Void.
--	**OrderItems.OrderItem.PriceDetail** - полная стоимость за все услуги для всех пассажиров по всем сегментам в текущем OrderItem. Тип данных — сложный.
+-	**OrderItems.OrderItem.PriceDetail** - полная стоимость за все услуги всех пассажиров по всем сегментам в текущем OrderItem. Тип данных — сложный.
 -	**OrderItems.OrderItem.PriceDetail.TotalAmount** - содержит полную стоимость (тариф + таксы). Тип данных — сложный.
 -	**OrderItems.OrderItem.PriceDetail.TotalAmount.SimpleCurrencyPrice** - полная стоимость (тариф + таксы) на всех пассажиров в текущем OrderItem, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше. 
 -	**OrderItems.OrderItem.PriceDetail.BaseAmount** - базовая цена на всех пассажиров в текущем OrderItem в валюте продажи, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
 -	**OrderItems.OrderItem.PriceDetail.Taxes** - сумма такс. Тип данных — сложный.
 -	**OrderItems.OrderItem.PriceDetail.Taxes.Total** - сумма такс на всех пассажиров в текущем OrderItem, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
--	**OrderItems.OrderItem.Service** - услуга перелёта и/или другие вспомогательные услуги перелёта. Услуга может быть представлена в комплекте с другими услугами или в одном отдельном Order.OrderItem. Элемент включает атрибут ServiceID="SVC1" (префикс SVC обязателен), содержащий уникальный идентификатор услуги. Элемент Service не может одновременно содержать элементы SegmentRef и ServiceDefinitionRef. Тип данных — сложный.
--	**Service.PassengerRef** - ссылка на одного пассажира в DataLists.PassengerList.
--	**Service.SegmentRef** - ссылка на сегмент в Datalists.FlightSegmentList.
--	**Service.ServiceDefinitionRef** - ссылка на описание услуги из Datalists.ServiceDefinitionList не являющейся перелётом, но связанной с ним, к примеру, багаж. Атрибут SegmentRef="SEG0" (префикс SEG обязателен) ссылается сегмент перелёта, которому соответствует данная услуга.
--	**OrderItems.OrderItem.FareDetail** -  контейнер для информации о ценовой составляющей для определённого типа пассажиров в текущем OrderItem. Тип данных — сложный.
--	**FareDetail.PassengerRefs** - ссылка на одного или нескольких пассажиров одного типа в DataLists.PassengerList.
+-	**OrderItems.OrderItem.Service** - услуга перелёта и/или другие вспомогательные услуги перелёта. Услуга может быть представлена в комплекте с другими услугами или в одном отдельном Order.OrderItem. Элемент Service не может одновременно содержать элементы SegmentRef и ServiceDefinitionRef. Элемент включает атрибут ServiceID="SVC1" (префикс SVC обязателен), содержащий уникальный идентификатор услуги. Тип данных — сложный.
+-	**Service.PassengerRef** - ссылка на пассажира из DataLists.PassengerList.
+-	**Service.SegmentRef** - ссылка на сегмент из Datalists.FlightSegmentList.
+-	**Service.ServiceDefinitionRef** - ссылка на описание услуги из Datalists.ServiceDefinitionList не являющейся перелётом, но связанной с ним, к примеру, багаж. Атрибут SegmentRef="SEG0" (префикс SEG обязателен) ссылается на сегмент перелёта, которому соответствует данная услуга.
+-	**OrderItems.OrderItem.FareDetail** -  контейнер для информации о ценовой составляющей определённого типа пассажиров в текущем OrderItem. Тип данных — сложный.
+-	**FareDetail.PassengerRefs** - ссылка на одного или нескольких пассажиров одного типа из DataLists.PassengerList.
 -	**FareDetail.Price** - информация о ценовой составляющей для определённого типа пассажира. Тип данных - сложный.
 -	**FareDetail.Price.TotalAmount** - полная стоимость (тариф + таксы) для определённого типа пассажира. Тип данных — сложный.
 -	**FareDetail.Price.TotalAmount.SimpleCurrencyPrice** - полная стоимость (тариф + таксы) на определенный тип пассажира в текущем OrderItem, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
@@ -393,7 +391,7 @@ title: OrderCreate
 -	**FareDetail.Price.FareFiledIn.BaseAmount** - базовая цена в валюте заведения тарифа для определённого типа пассажира в текущем OrderItem, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
 -	**FareDetail.Price.Taxes** - информация о сумме такс для определённого типа пассажира. Тип данных - сложный.
 -	**FareDetail.Price.Taxes.Total** - сумма всех такс на определённый тип пассажира в текущем OfferItem, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
--	**FareDetail.Price.Taxes.Breakdown** - элемент, содержащий массив компонентов такс. Тип данных - сложный.
+-	**FareDetail.Price.Taxes.Breakdown** - элемент содержит массив компонентов такс. Тип данных - сложный.
 -	**FareDetail.Price.Taxes.Breakdown.Tax** - компоненты такс. Тип данных - сложный.
 -	**FareDetail.Price.Taxes.Breakdown.Tax.Amount** - значение таксы, тип данных - десятичное дробное число. Атрибуты Code и Taxable описаны выше.
 -	**FareDetail.Price.Taxes.Breakdown.Tax.TaxCode** - код таксы. Тип данных - строка.
@@ -407,11 +405,11 @@ title: OrderCreate
 -	**FareDetail.FareComponent.FareBasis.CabinType.CabinTypeCode** - код класса обслуживания. Тип данных - строка.
 -	**FareDetail.FareComponent.FareBasis.CabinType.CabinTypeName** - наименование класса обслуживания. Тип данных - строка.
 -	**FareDetail.FareComponent.SegmentRefs** - ссылка на один или несколько сегментов перелёта, которому соответствует цена.
--	**Response.Commission** - информация о комиссии. Комиссия может быть только в абсолютном значении или процентах. Тип данных - сложный.
+-	**Response.Commission** - информация о комиссии. Комиссия может быть либо в абсолютном значении, либо в процентах. Тип данных - сложный.
 -	**Commission.Percentage** - комиссия в процентах. Тип данных - десятичное дробное число.
 -	**Commission.Amount** - абсолютное значение комиссии. Тип данных - десятичное дробное число.
 -	**Response.DataLists** - представляет собой контейнер, в котором содержится информация о пассажирах, контактах, маршруте и в частности сегментах и т.д.. Тип данных - сложный.
--	**DataLists.PassengerList** - информация о пассажирах. Тип данных - сложный.
+-	**DataLists.PassengerList** - сведения о пассажирах. Тип данных - сложный.
 -	**PassengerList.Passenger** - атрибут PassengerID="PAX1" (префикс PAX обязателен) содержит уникальный идентификатор пассажира.
 -	**PassengerList.Passenger.PTC** - тип пассажира. 
 -	**PassengerList.Passenger.CitizenshipCountryCode** - гражданство пассажира. Тип данных - строка.
@@ -423,20 +421,20 @@ title: OrderCreate
 -	**PassengerList.Passenger.Individual.MiddleName** - отчество. Тип данных - строка.
 -	**PassengerList.Passenger.Individual.Surname** - фамилия. Тип данных - строка.
 -	**PassengerList.Passenger.LoyaltyProgramAccount** - карта лояльности. Тип данных - сложный.
--	**PassengerList.Passenger.LoyaltyProgramAccount.Airline** тип данных - сложный.
+-	**PassengerList.Passenger.LoyaltyProgramAccount.Airline** - сведения о карте лояльности авиакомпании. Тип данных - сложный.
 -	**PassengerList.Passenger.LoyaltyProgramAccount.Airline.AirlineDesignator** - IATA код авиакомпании. Тип данных - строка.
 -	**PassengerList.Passenger.LoyaltyProgramAccount.AccountNumber** - номер карты лояльности.
--	**PassengerList.Passenger.IdentityDocument** - документ, удостверяющий личность. Тип данных - сложный.
+-	**PassengerList.Passenger.IdentityDocument** - сведения о документе, удостверяющем личность. Тип данных - сложный.
 -	**PassengerList.Passenger.IdentityDocument.IdentityDocumentNumber** - номер документа (обязательный). 
 -	**PassengerList.Passenger.IdentityDocument.IdentityDocumentType** - тип документа, возможные значени описаны в параметрах запроса OrderCreateRQ.
 -	**PassengerList.Passenger.IdentityDocument.IssuingCountryCode** - код страны выдачи документа. Тип данных - строка.
 -	**PassengerList.Passenger.IdentityDocument.ExpiryDate** - срок действия документа. Формат "YYYY-MM-DD".
--	**PassengerList.Passenger.ContactInfoRef** - ссылка на контактные данные пассажира в DataLists.ContactList. Обязательный префикс CTC.
+-	**PassengerList.Passenger.ContactInfoRef** - ссылка на контактные данные пассажира из DataLists.ContactList. Значение атрибута содержит обязательный префикс CTC.
 -	**PassengerList.Passenger.InfantRef** - привязка пассажира к другому пассажиру, имеет смысл и обязателен только для младенцев без места (необязательный).
--	**PassengerList.Passenger.Remark** - текстовая ремарка, привязанная к пассажиру (необязательный). Тип данных — сложный.
--	**PassengerList.Passenger.Remark.Remark** - текстовая ремарка, привязанная к пассажиру (необязательный). Тип данных — строка.
--	**DataLists.ContactList** - сведения о контактных данных пассажиров. Тип данных - сложный.
--	**ContactList.ContactInformation** - атрибут элемента содержит уникальный идентификатор контактов ContactID="CTC1" (префикс CTC обязателен).
+-	**PassengerList.Passenger.Remark** - ремарка, привязанная к пассажиру (необязательный). Тип данных — сложный.
+-	**PassengerList.Passenger.Remark.Remark** - текстовая ремарка (необязательный). Тип данных — строка.
+-	**DataLists.ContactList** - сведения о контактных данных пассажира. Тип данных - сложный.
+-	**ContactList.ContactInformation** - атрибут элемента содержит уникальный идентификатор контакта ContactID="CTC1" (префикс CTC обязателен).
 -	**ContactList.ContactInformation.ContactProvided** - контактные данные пассажира. Необходимо учесть, что электронный адрес и телефон представлены в отдельных элементах ContactProvided. Тип данных - сложный.
 -	**ContactList.ContactInformation.ContactProvided.Phone** - контактный телефон пассажира. Тип данных - сложный.
 -	**ContactList.ContactInformation.ContactProvided.Phone.Label** - тип телефона. Тип данных — перечисление.
@@ -444,8 +442,8 @@ title: OrderCreate
 -	**ContactList.ContactInformation.ContactProvided.EmailAddress** -  сведения об электронном адресе пассажира. Тип данных - сложный.
 -	**ContactList.ContactInformation.ContactProvided.EmailAddress.EmailAddressValue** - электронный адрес пассажира. Тип данных - строка.
 -	**DataLists.BaggageAllowanceList** - информация о перевозке багажа. Тип данных - сложный.
--	**BaggageAllowanceList.BaggageAllowance** - атрибут BaggageAllowanceID="BAG1"(префикс BAG обязателен) содержит уникальный идентификатор багажа. Тип данных - сложный.
--	**BaggageAllowanceList.BaggageAllowance.BaggageCategory** - элемент всегда содержит значение "Checked".
+-	**BaggageAllowanceList.BaggageAllowance** - атрибут BaggageAllowanceID="BAG1" содержит уникальный идентификатор багажа. Значение атрибута включает обязательный префикс BAG. Тип данных - сложный.
+-	**BaggageAllowanceList.BaggageAllowance.BaggageCategory** - элемент по умолчанию содержит значение "Checked".
 -	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription** -  возможны два типа зарегистрированного багажа Piece и Weight. Атрибут Concept элемента AllowanceDescription определяет меру багажа, возможные значения:
 -	-	**700** — Kilos;
 -	-	**701** — Pounds;
@@ -453,32 +451,32 @@ title: OrderCreate
 -	-	**N** — Number of pieces;
 -	-	**S** — Size;
 -	-	**W** — Weight
--	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.ApplicableParty** - элемент всегда содержит значение Traveler - багаж соотвествует одному пассажиру.
+-	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.ApplicableParty** - элемент по умолчанию содержит значение Traveler. Означает, что багаж соответствует одному пассажиру.
 -	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions** - описание багажа. Тип данных - сложный.
--	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions.Description** - 
+-	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions.Description**
 -	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions.Description.Text** - по умолчанию содержит значение "Free baggage". Тип данных - строка. 
 -	**BaggageAllowanceList.BaggageAllowance.WeightAllowance**
--	**BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight** - максимальный вес багажа. Тип данных - сложный.
+-	**BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight** - сведения о максимальном весе багажа. Тип данных - сложный.
 -	**BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.Value** - максимальный вес багажа. Тип данных - целое положительное число.
--	**BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.UOM** - единица измерения для приведенного выше веса. Тип данных - строка.
+-	**BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.UOM** - единица измерения для приведенного выше значения. Тип данных - строка.
 -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance** 
--	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.ApplicableParty** элемент всегда содержит значение Traveler. Означает, что багаж соответствует одному пассажиру.
+-	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.ApplicableParty** - элемент по умолчанию содержит значение Traveler. Означает, что багаж соответствует одному пассажиру.
 -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.TotalQuantity** - количество сумок. Тип данных - целое число.
--	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.PieceMeasurements** - атрибут Quantity="1" элеметна тоже содержит информацию о количестве сумок, тип данных - целое число.
--	**DataLists.FlightSegmentList** -  cодержит сведения о сегментах перелета. Тип данных - сложный.
+-	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.PieceMeasurements** - атрибут Quantity="1" элеметна содержит информацию о количестве сумок, тип данных - целое число.
+-	**DataLists.FlightSegmentList** -  содержит сведения о сегментах перелета. Тип данных - сложный.
 -	**FlightSegmentList.FlightSegment** - детали сегмента перелёта. Тип данных - сложный. Включает два атрибута: 
--	-	**SegmentKey** - уникальный идентификатор сегмента, обязательный префикс SEG.
+-	-	**SegmentKey** - уникальный идентификатор сегмента. Атрибут включает обязательный префикс SEG.
 -	-	**ElectronicTicketInd** - признак электронного билета. Тип данных - булевый.
 -	**FlightSegmentList.FlightSegment.Departure** - информация о сегменте отправления. Тип данных - сложный.
 -	**FlightSegmentList.FlightSegment.Departure.AirportCode** - IATA код аэропорт отправления. Тип данных - строка.
 -	**FlightSegmentList.FlightSegment.Departure.Date** - дата отправления. Формат "YYYY-MM-DD".
--	**FlightSegmentList.FlightSegment.Departure.Time** - время отправления. Формат "HH:MM". 
+-	**FlightSegmentList.FlightSegment.Departure.Time** - время отправления в часовом поясе аэропорта. Формат "HH:MM". 
 -	**FlightSegmentList.FlightSegment.Departure.Terminal** - сведения о терминале. Тип данных - сложный.
 -	**FlightSegmentList.FlightSegment.Departure.Terminal.Name** - теминал отправления. Тип данных - строка.
 -	**FlightSegmentList.FlightSegment.Arrival** - информация о сегменте прибытия. Тип данных - сложный.
 -	**FlightSegmentList.FlightSegment.Arrival.AirportCode** - IATA код аэропорт прибытия. Тип данных - строка.
 -	**FlightSegmentList.FlightSegment.Arrival.Date** - дата прибытия. Формат "YYYY-MM-DD".
--	**FlightSegmentList.FlightSegment.Arrival.Time** - время прибытия. Формат "HH:MM".
+-	**FlightSegmentList.FlightSegment.Arrival.Time** - время прибытия в часовом поясе аэропорта. Формат "HH:MM".
 -	**FlightSegmentList.FlightSegment.Arrival.Terminal** - сведения о терминале. Тип данных - сложный.
 -	**FlightSegmentList.FlightSegment.Arrival.Terminal.Name** - теминал прибытия. Тип данных - строка.
 -	**FlightSegmentList.FlightSegment.MarketingCarrier** - информация о маркетинговом перевозчике. Тип данных - сложный.
@@ -493,18 +491,18 @@ title: OrderCreate
 -	**FlightSegmentList.FlightSegment.FlightDetail** -  детали перелёта. Тип данных - сложный.
 -	**FlightSegmentList.FlightSegment.FlightDetail.FlightDuration** - информирует о длительности перелёта. Тип данных - сложный.
 -	**FlightSegmentList.FlightSegment.FlightDetail.FlightDuration.Value** - длительность перелёта в рамках сегмента.
--	**DataLists.FlightList** - элемент содержит идентификатор рейса, соответствующий одному плечу и сегменты, составляющие данное плечо. Тип данных - сложный.
+-	**DataLists.FlightList** - элемент содержит идентификатор рейса и сегменты, составляющие данное плечо. Тип данных - сложный.
 -	**FlightList.Flight** - атрибут FlightKey="FLT0"(префикс FLT обязателен) возвращает уникальный идентификатор перелёта в рамках Order.
 -	**FlightList.Flight.SegmentReferences** - ссылки один или несколько сегментов, входящих в состав перелёта, в рамках одного плеча.
--	**DataLists.OriginDestinationList** -  содержит сведения о плечах, а именно пункты отправления и прибытия. Тип данных - сложный.
+-	**DataLists.OriginDestinationList** - содержит сведения о плечах, а именно пункты отправления и прибытия. Тип данных - сложный.
 -	**OriginDestinationList.OriginDestination** - информирует о пунтках отправления и прибытия на плече. Тип данных - сложный.
 -	**OriginDestinationList.OriginDestination.DepartureCode** - IATA код аэропорта отправления. Тип данных - строка.
 -	**OriginDestinationList.OriginDestination.ArrivalCode** - IATA код аэропорта прибытия. Тип данных - строка.
 -	**OriginDestinationList.OriginDestination.FlightReferences** - содержит ссылку на рейс, пункт отправления/прибытия которого совпадает с текущим.
--	**DataLists.ServiceDefinitionList** - содержит описание и характеристики услуг за исключением перелёта. Тип данных - сложный
+-	**DataLists.ServiceDefinitionList** - содержит описание и характеристики услуг за исключением услуги перелёта. Тип данных - сложный
 -	**ServiceDefinitionList.ServiceDefinition** - атрибут ServiceDefinitionID="SVD1" (префикс SVD обязателен) уникальный идентификатор описания услуги.
 -	**ServiceDefinitionList.ServiceDefinition.Name** - наименование услуги. Например: Free baggage. Тип данных - строка.
--	**ServiceDefinitionList.ServiceDefinition.BaggageAllowanceRef** - ссылка на описание более детальной информации о багаже.
+-	**ServiceDefinitionList.ServiceDefinition.BaggageAllowanceRef** - ссылка на описание детальной информации о багаже.
 -	**ServiceDefinitionList.ServiceDefinition.Descriptions** - сведения об услуге. Тип данных - сложный.
 -	**ServiceDefinitionList.ServiceDefinition.Descriptions.Description** - сведения об услуге. Тип данных - сложный.
 -	**ServiceDefinitionList.ServiceDefinition.Descriptions.Text** - описание услуги. Тип данных — строка.
