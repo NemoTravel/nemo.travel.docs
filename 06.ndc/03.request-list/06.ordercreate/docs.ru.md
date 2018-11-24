@@ -105,7 +105,7 @@ title: OrderCreate
 -	-	**SS** - Seaman/ Sailor;
 -	-	**F1** - Other Documents;
 -	-	**VI** - Visa.
--	**PassengerList.Passenger.IdentityDocument.IssuingCountryCode** - код страны выдачи документа. Тип данных - строка.
+-	**PassengerList.Passenger.IdentityDocument.IssuingCountryCode** - код страны, выдавшей документ. Тип данных - строка.
 -	**PassengerList.Passenger.IdentityDocument.ExpiryDate** - срок действия документа. Формат "YYYY-MM-DD".
 -	**PassengerList.Passenger.ContactInfoRef** - ссылка на контактные данные пассажира в DataLists.ContactList. Обязательный префикс CTC.
 -	**PassengerList.Passenger.InfantRef** - привязка пассажира к другому пассажиру, имеет смысл и обязателен только для младенцев без места (необязательный).
