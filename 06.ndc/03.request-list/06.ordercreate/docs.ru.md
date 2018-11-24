@@ -108,7 +108,7 @@ title: OrderCreate
 -	**PassengerList.Passenger.IdentityDocument.IssuingCountryCode** - код страны, выдавшей документ. Тип данных - строка.
 -	**PassengerList.Passenger.IdentityDocument.ExpiryDate** - срок действия документа. Формат "YYYY-MM-DD".
 -	**PassengerList.Passenger.ContactInfoRef** - ссылка на контактные данные пассажира из DataLists.ContactList. Обязательный префикс CTC.
--	**PassengerList.Passenger.InfantRef** - привязка пассажира к другому пассажиру, имеет смысл и обязателен только для младенцев без места (необязательный).
+-	**PassengerList.Passenger.InfantRef** - привязка пассажира к другому пассажиру, имеет смысл и обязательна только для младенцев без места (необязательный).
 -	**PassengerList.Passenger.Remark** - текстовая ремарка, привязанная к пассажиру (необязательный). Тип данных — сложный.
 -	**PassengerList.Passenger.Remark.Remark** - текстовая ремарка, привязанная к пассажиру (необязательный). Тип данных — строка.
 -	**DataLists.ContactList** - сведения о контактных данных пассажиров. Тип данных - сложный.
