@@ -382,7 +382,7 @@ title: OrderCreate
 -	**OrderItems.OrderItem.Service** - услуга перелёта и/или другие вспомогательные услуги перелёта. Услуга может быть представлена в комплекте с другими услугами или в одном отдельном Order.OrderItem. Элемент включает атрибут ServiceID="SVC1" (префикс SVC обязателен), содержащий уникальный идентификатор услуги. Элемент Service не может одновременно содержать элементы SegmentRef и ServiceDefinitionRef. Тип данных — сложный.
 -	**Service.PassengerRef** - ссылка на одного пассажира в DataLists.PassengerList.
 -	**Service.SegmentRef** - ссылка на сегмент в Datalists.FlightSegmentList.
--	**Service.ServiceDefinitionRef** - ссылка на описание услуги в Datalists.ServiceDefinitionList не являющейся перелётом, но связанной с ним, к примеру, багаж. Атрибут SegmentRef="SEG0" (префикс SEG обязателен) ссылается сегмент перелёта, которому соответствует данная услуга.
+-	**Service.ServiceDefinitionRef** - ссылка на описание услуги из Datalists.ServiceDefinitionList не являющейся перелётом, но связанной с ним, к примеру, багаж. Атрибут SegmentRef="SEG0" (префикс SEG обязателен) ссылается сегмент перелёта, которому соответствует данная услуга.
 -	**OrderItems.OrderItem.FareDetail** -  контейнер для информации о ценовой составляющей для определённого типа пассажиров в текущем OrderItem. Тип данных — сложный.
 -	**FareDetail.PassengerRefs** - ссылка на одного или нескольких пассажиров одного типа в DataLists.PassengerList.
 -	**FareDetail.Price** - информация о ценовой составляющей для определённого типа пассажира. Тип данных - сложный.
