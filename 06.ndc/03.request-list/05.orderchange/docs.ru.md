@@ -244,4 +244,4 @@ title: OrderChange
          </ns:Query>
 ```
 #### Ответ
-Структура ответа изменения заказа соответствует ответу [OrderCreate](/ndc/request-list/ordercreate).
+Структура ответа OrderChange соответствует [OrderCreate](/ndc/request-list/ordercreate).
