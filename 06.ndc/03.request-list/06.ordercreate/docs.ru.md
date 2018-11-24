@@ -336,7 +336,7 @@ title: OrderCreate
 -	**Party.Sender.TravelAgencySender**
 -	**TravelAgencySender.Contacts** - контактная данные агентства в брони. Тип данных - сложный.
 -	**TravelAgencySender.Contacts.Contact** - контактная данные агентства в брони. Тип данных - сложный.
--	**TravelAgencySender.Contacts.Contact.PhoneContact** - телефонные данные агентства. Тип данных - сложный.
+-	**TravelAgencySender.Contacts.Contact.PhoneContact** - контактные данные агентства. Тип данных - сложный.
 -	**TravelAgencySender.Contacts.Contact.PhoneContact.Number** - номер телефона агентства. Тип данных - строка.
 -	**TravelAgencySender.Contacts.Contact.EmailContact** - элеткронная почта агентства. Тип данных - сложный. 
 -	**TravelAgencySender.Contacts.Contact.EmailContact.Address** - элеткронная почта агентства. Тип данных - строка.
