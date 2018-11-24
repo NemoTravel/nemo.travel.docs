@@ -27,7 +27,7 @@ title: OrderCreate
 -	-	**ResponseID** - уникальный идентификатор события актуализации; 
 -	-	**Owner** - код владельца (ГРС) предложения. Тип данных — строка.
 -	**Query.Order.Offer.OfferItem** - описывает набор услуг, входящих в предложение. Тип данных - сложный. Обязательный атрибут OfferItemID.
--	**Query.Order.Offer.OfferItem.PassengerRefs** - ссылка на одного или нескольких пассажиров в DataLists.PassengerList.
+-	**Query.Order.Offer.OfferItem.PassengerRefs** - ссылка на одного или нескольких пассажиров из DataLists.PassengerList.
 -	**Query.Order.Offer.OfferItem.ServiceSelection** - содержит уникальный идентификатор услуги в пределах OfferItem. Тип данных - сложный.
 -	**Query.Order.Offer.OfferItem.ServiceSelection.ServiceDefinitionID** - ссылка на описание услуги в DataLists.ServiceDefinitionList.ServiceDefinition.
 -	**Query.Payments** - сведения об оплате (необязательный). Тип данных - сложный.
