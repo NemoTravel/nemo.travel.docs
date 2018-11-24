@@ -462,7 +462,7 @@ title: OrderCreate
 -	**BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.Value** - максимальный вес багажа. Тип данных - целое положительное число.
 -	**BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.UOM** - единица измерения для приведенного выше веса. Тип данных - строка.
 -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance** 
--	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.ApplicableParty** элемент всегда содержит значение Traveler. Означает, что багаж распростаняется на одного пассажира.
+-	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.ApplicableParty** элемент всегда содержит значение Traveler. Означает, что багаж соответствует одному пассажиру.
 -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.TotalQuantity** - количество сумок. Тип данных - целое число.
 -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.PieceMeasurements** - атрибут Quantity="1" элеметна тоже содержит информацию о количестве сумок, тип данных - целое число.
 -	**DataLists.FlightSegmentList** -  cодержит сведения о сегментах перелета. Тип данных - сложный.
