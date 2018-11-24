@@ -348,7 +348,7 @@ title: OrderCreate
 -	**BookingReferences.BookingReference**
 -	**BookingReferences.BookingReference.ID** - локатор заказа в ГРС. Тип данных - строка.
 -	**BookingReferences.BookingReference.AirlineID** - IATA код валидирующего перевозчика. Тип данных - строка.
--	**Order.TotalOrderPrice** - полная стоимость за все услуги для всех пассажиров по всем сегментам в текущем Order. Тип данных - сложный.
+-	**Order.TotalOrderPrice** - полная стоимость за все услуги всех пассажиров по всем сегментам в текущем Order. Тип данных - сложный.
 -	**TotalOrderPrice.SimpleCurrencyPrice** - полная стоимость (тариф + таксы) на всех пассажиров в текущем Order, тип данных - десятичное дробное число. Элемент включает два атрибута: 
 -	-	**Code** - код валюты, тип данных - строка.
 -	-	**Taxable** - облагаемый налогом (по умолчанию false), тип данных - булевый.
