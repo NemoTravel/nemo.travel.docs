@@ -26,7 +26,7 @@ Flight leg prices are described in the current OfferItem.
 -  **OriginDestinations.OriginDestination.Arrival.AirportCode** - 3-letter IATA airport code or city of arrival (required). Data type - string.
 -  **OriginDestinations.OriginDestination.CalendarDates** - first element of CoreQuery.OriginDestinations.OriginDestination can be supplemented with the optional CalendarDates element. This element contains the DaysBefore and DaysAfter attributes, the number of days is determined from the addition of attributes. The value of the attributes must be identical with the amount not exceeding 3.
 -  **CoreQuery.FlightSpecific** - contains more detailed information about the requested segments. Data type - custom. **Required element if CoreQuery.OriginDestinations element is not specified.**
--  **FlightSpecific.FlightSegment** - contains information about the segments of the flight that you want to find. Data type - custom. Includes the required attribute SegmentKey = "SEG0", which contains the unique segment ID. SEG prefix is required. Segment numbers start at zero.
+-  **FlightSpecific.FlightSegment** - contains information about the segments of the flight that you want to find. Data type - custom. Includes the required attribute SegmentKey = "SEG0", which contains the unique segment ID. SEG prefix required. Segment numbers start at zero.
 -  **FlightSpecific.FlightSegment.Departure** - point of departure (required). Data type - custom.
 -  **FlightSpecific.FlightSegment.Departure.AirportCode** - 3 letter IATA airport code or city of departure (required). Data type - string.
 -  **FlightSpecific.FlightSegment.Departure.Date** - departure date (required). The format is "yyyy-mm-dd".
@@ -58,7 +58,7 @@ Flight leg prices are described in the current OfferItem.
     - **7** - All.
 -  **AirShoppingRQ.DataLists** - container with additional search information (required).
 -  **AirShoppingRQ.DataLists.PassengerList** - information about passengers for whom you want to find a flight (required). Data type - custom.
--  **DataLists.PassengerList.Passenger** - information about the passenger type for which you want to find a flight. Includes the PassengerID = "PAX1" attribute containing the unique passenger id. The "PAX" prefix is required. Passenger numbers start at one. Element and attribute are required.
+-  **DataLists.PassengerList.Passenger** - information about the passenger type for which you want to find a flight. Includes the PassengerID = "PAX1" attribute containing the unique passenger id. The "PAX" prefix required. Passenger numbers start at one. Element and attribute are required.
 -  **DataLists.PassengerList.Passenger.PTC** - passenger type. Possible values:
     - **ADT** - adult;
     - **CHD** - child;
@@ -176,7 +176,7 @@ Flight leg prices are described in the current OfferItem.
 -  **Offer.TimeLimits.OfferExpiration** - offer validity specified in the DateTime attribute in the format "yyyy-mm-ddthh:mm:ss".
 -  **Offer.FlightsOverview** - element containing links to a brief description of the flight and leg information. Data type - custom.
 -  **Offer.FlightsOverview.FlightRef** - reference to the flight ID. The attribute ODRef = "ODN1" refers to an element containing information about the departure and arrival points.
--  **Offer.OfferItem** - represents a set of one or several services within the offer. The OfferItemID attribute contains a unique ID of the service set, the OFI prefix is required. Data type - custom.
+-  **Offer.OfferItem** - represents a set of one or several services within the offer. The OfferItemID attribute contains a unique ID of the service set, the OFI prefix required. Data type - custom.
 -  **Offer.OfferItem.TotalPriceDetail** - total price for all the services for all passengers in all segments in the current OfferItem. Data type - custom.
 -  **Offer.OfferItem.TotalPriceDetail.TotalAmount** - contains the total price (tariff + rates). Data type - custom.
 -  **Offer.OfferItem.TotalPriceDetail.TotalAmount.SimpleCurrencyPrice** - total price (fare + taxes) for all passengers in the current OfferItem, data type - decimal fractional number. The element includes two attributes:
@@ -187,10 +187,10 @@ Flight leg prices are described in the current OfferItem.
 -  **Offer.OfferItem.TotalPriceDetail.FareFiledIn.BaseAmount** - base price in the currency of the tariff for all passengers in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
 -  **Offer.OfferItem.TotalPriceDetail.Taxes** - information about the tax amount. Data type - custom.
 -  **Offer.OfferItem.TotalPriceDetail.Taxes.Total** - amount of taxes for all passengers in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
--  **Offer.OfferItem.Service** - flight service and/or other flight support services. The service can be presented in a set with other services or in one separate Offer.OrderItem. The element includes the attribute ServiceID = "SVC1" (SVC prefix is required) containing the unique ID of the service. The Service element cannot contain FlightRefs and ServiceDefinitionRef elements at the same time. Data type - custom.
+-  **Offer.OfferItem.Service** - flight service and/or other flight support services. The service can be presented in a set with other services or in one separate Offer.OrderItem. The element includes the attribute ServiceID = "SVC1" (SVC prefix required) containing the unique ID of the service. The Service element cannot contain FlightRefs and ServiceDefinitionRef elements at the same time. Data type - custom.
 -  **Offer.OfferItem.Service.PassengerRefs** - reference to one or several passengers in DataLists.PassengerList.
--  **Offer.OfferItem.Service.FlightRefs** - reference to one or more flights to Datalists.FlightList, which are presented as a service. The attribute ODRef = "ODN1" (the ODN prefix is required) refers to the element that contains leg information.
--  **Offer.OfferItem.Service.ServiceDefinitionRef** - reference to the description of the service in Datalists.ServiceDefinitionList which is not a flight, but associated with it, for example, luggage. The SegmentRefs="SEG0" attribute (the SEG prefix is required) refers to one or more flight segments to which this service corresponds.
+-  **Offer.OfferItem.Service.FlightRefs** - reference to one or more flights to Datalists.FlightList, which are presented as a service. The attribute ODRef = "ODN1" (the ODN prefix required) refers to the element that contains leg information.
+-  **Offer.OfferItem.Service.ServiceDefinitionRef** - reference to the description of the service in Datalists.ServiceDefinitionList which is not a flight, but associated with it, for example, luggage. The SegmentRefs="SEG0" attribute (the SEG prefix required) refers to one or more flight segments to which this service corresponds.
 -  **Offer.OfferItem.FareDetail** - information about the price component for a certain passenger type in the current OfferItem. Data type - custom.
 -  **Offer.OfferItem.FareDetail.PassengerRefs** - reference to one or several passengers of the same type in DataLists.PassengerList.
 -  **Offer.OfferItem.FareDetail.Price** - information about the price component for a certain passenger type. Data type - custom.
@@ -273,12 +273,12 @@ Flight leg prices are described in the current OfferItem.
 -  **FlightList.Flight.Journey.Time** - flight duration. Example: PD1T3H10M, where D1 is days, 3H is hours, 10M are minutes.
 -  **FlightList.Flight.SegmentReferences** - one or more segments that make up a flight within one shoulder.
 -  **DataLists.OriginDestinationList** - contains information about the shoulders, namely the points of departure and arrival. Data type - custom.
--  **OriginDestinationList.OriginDestination** - informs you about the departure and arrival points on the shoulder. The OriginDestinationKey = "ODN1" attribute (the ODN prefix is required) contains a unique shoulder ID. Data type - custom.
+-  **OriginDestinationList.OriginDestination** - informs you about the departure and arrival points on the shoulder. The OriginDestinationKey = "ODN1" attribute (the ODN prefix required) contains a unique shoulder ID. Data type - custom.
 -  **OriginDestinationList.OriginDestination.DepartureCode** - IATA airport code of departure. Data type - string.
 -  **OriginDestinationList.OriginDestination.ArrivalCode** - IATA airport arrival code. Data type - string.
 -  **OriginDestinationList.OriginDestination.FlightReferences** - contains links to the list of flights whose departure/arrival point coincide with the current one.
 -  **DataLists.PriceClass ** - element containing a list of prices and characteristics of the tariff. Data type - custom.
--  **PriceClass.PriceClass** - contains information about the tariff. PriceClassID = "PRC1" attribute (PRC prefix is required) - unique price ID. Data type - custom.
+-  **PriceClass.PriceClass** - contains information about the tariff. PriceClassID = "PRC1" attribute (PRC prefix required) - unique price ID. Data type - custom.
 -  **PriceClass.PriceClass.Name** - name taking several values separated by an underscore. Example: NVU5_N_Y_ECONOMY, where in the first place is the family code or rate code (in the absence of the first), in the second letter of the booking class, in the third place the code of the service class and then the name of the service class. Data type is a string.
 -  **PriceClass.PriceClass.FareBasisCode** - fare code. Data type - custom.
 -  **PriceClass.PriceClass.FareBasisCode.Code** - fare code. Data type - string.
@@ -301,7 +301,7 @@ Flight leg prices are described in the current OfferItem.
 -  - **MetadataKey** - sets a unique ID. Data type - custom.
 -  **Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.BindingKey** - reference to the flight. Data type - string.
 -  **Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.Meals** - element containing nutrition information. Data type - array of Meal type values.
--  **Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.Meals.Meal** - food types. Data type - string, possible values:
+-  **Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.Meals.Meal** - meal types. Data type - string, possible values:
 -  - **B** - Breakfast;
 -  - **C** - Alcoholic beverages;
 -  - **D** - Dinner;
