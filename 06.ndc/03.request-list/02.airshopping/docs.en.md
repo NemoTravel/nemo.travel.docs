@@ -159,7 +159,7 @@ Flight leg prices are described in the current OfferItem.
 -  **AirShoppingRS.Success** - **[common items.](/Ndc/ndc_element)**
 -  **AirShoppingRS.ShoppingResponseID** - **[common items.](/Ndc/ndc_element)**
 -  **AirShoppingRS.OffersGroup** - grouped offers. Data type - custom.
--  **AirShoppingRS.OffersGroup.AirlineOffers** - container for an offers' bundle. Data type - custom.
+-  **AirShoppingRS.OffersGroup.AirlineOffers** - container for an offers' set. Data type - custom.
 -  **AirShoppingRS.OffersGroup.AirlineOffers.AirlineOfferSnapshot** - contains information on the lowest and highest price offer. Data type - custom.
 -  **AirlineOfferSnapshot.PassengerQuantity** - total number of passengers for whom it was required to find a flight. Data type - positive integer.
 -  **AirlineOfferSnapshot.Highest** - highest offer price for all types of passengers. The refs attribute contains a list of offer IDs with the highest price. Data type - custom.
@@ -167,7 +167,7 @@ Flight leg prices are described in the current OfferItem.
 -  **AirlineOfferSnapshot.Lowest** - the lowest offer price for all types of passengers. The refs attribute contains a list of id offers with the lowest price. Data type - custom.
 -  **AirlineOfferSnapshot.Lowest.EncodedCurrencyPrice** - amount and currency code. The value of the sum is a decimal fractional number, the currency code is a string.
 -  **AirlineOfferSnapshot.MatchedOfferQuantity** - total number of offers received as a result of the search.
--  **AirShoppingRS.OffersGroup.AirlineOffers.Offer** - offer as a specific bundle of services (flights and/or flight-related additional services). The Offer element contains information about the services, price component, restrictions (time limit). The Offer element includes two required attributes:
+-  **AirShoppingRS.OffersGroup.AirlineOffers.Offer** - offer as a specific set of services (flights and/or flight-related additional services). The Offer element contains information about the services, price component, restrictions (time limit). The Offer element includes two required attributes:
 -  - **OfferID** - unique offer ID;
 -  - **Owner = "1S"** - owner code (GDS) of the offer. Data type - string.
 -  **Offer.Parameters** - element containing the number of service sets (OfferItem) within one offer. Data type - custom.
@@ -176,7 +176,7 @@ Flight leg prices are described in the current OfferItem.
 -  **Offer.TimeLimits.OfferExpiration** - offer validity specified in the DateTime attribute in the format "yyyy-mm-ddthh:mm:ss".
 -  **Offer.FlightsOverview** - element containing links to a brief description of the flight and leg information. Data type - custom.
 -  **Offer.FlightsOverview.FlightRef** - reference to the flight ID. The attribute ODRef = "ODN1" refers to an element containing information about the departure and arrival points.
--  **Offer.OfferItem** - represents a bundle of one or several services within the offer. The OfferItemID attribute contains a unique ID of the service set, the OFI prefix is required. Data type - custom.
+-  **Offer.OfferItem** - represents a set of one or several services within the offer. The OfferItemID attribute contains a unique ID of the service set, the OFI prefix is required. Data type - custom.
 -  **Offer.OfferItem.TotalPriceDetail** - total price for all the services for all passengers in all segments in the current OfferItem. Data type - custom.
 -  **Offer.OfferItem.TotalPriceDetail.TotalAmount** - contains the total price (tariff + rates). Data type - custom.
 -  **Offer.OfferItem.TotalPriceDetail.TotalAmount.SimpleCurrencyPrice** - total price (fare + taxes) for all passengers in the current OfferItem, data type - decimal fractional number. The element includes two attributes:
@@ -187,7 +187,7 @@ Flight leg prices are described in the current OfferItem.
 -  **Offer.OfferItem.TotalPriceDetail.FareFiledIn.BaseAmount** - base price in the currency of the tariff for all passengers in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
 -  **Offer.OfferItem.TotalPriceDetail.Taxes** - information about the tax amount. Data type - custom.
 -  **Offer.OfferItem.TotalPriceDetail.Taxes.Total** - amount of taxes for all passengers in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
--  **Offer.OfferItem.Service** - flight service and/or other flight support services. The service can be presented in a bundle with other services or in one separate Offer.OrderItem. The element includes the attribute ServiceID = "SVC1" (SVC prefix is required) containing the unique ID of the service. The Service element cannot contain FlightRefs and ServiceDefinitionRef elements at the same time. Data type - custom.
+-  **Offer.OfferItem.Service** - flight service and/or other flight support services. The service can be presented in a set with other services or in one separate Offer.OrderItem. The element includes the attribute ServiceID = "SVC1" (SVC prefix is required) containing the unique ID of the service. The Service element cannot contain FlightRefs and ServiceDefinitionRef elements at the same time. Data type - custom.
 -  **Offer.OfferItem.Service.PassengerRefs** - reference to one or several passengers in DataLists.PassengerList.
 -  **Offer.OfferItem.Service.FlightRefs** - reference to one or more flights to Datalists.FlightList, which are presented as a service. The attribute ODRef = "ODN1" (the ODN prefix is required) refers to the element that contains leg information.
 -  **Offer.OfferItem.Service.ServiceDefinitionRef** - reference to the description of the service in Datalists.ServiceDefinitionList which is not a flight, but associated with it, for example, luggage. The SegmentRefs="SEG0" attribute (the SEG prefix is required) refers to one or more flight segments to which this service corresponds.
