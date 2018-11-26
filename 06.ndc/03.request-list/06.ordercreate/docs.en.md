@@ -26,10 +26,10 @@ The operation of creating an order.
   - **OfferID** - unique offer ID (the value is obtained as a result of the OfferPrice update);
   - **ResponseID** - unique update event ID;
   - **Owner** - owner code (GDS) of the offer. Data type - string.
--  **Query.Order.Offer.OfferItem** - describes the bundle of services included in the offer. Data type - custom. Required attribute OfferItemID.
+-  **Query.Order.Offer.OfferItem** - describes the set of services included in the offer. Data type - custom. Required attribute OfferItemID.
 -  **Query.Order.Offer.OfferItem.PassengerRefs** - reference to one or several passengers from DataLists.PassengerList.
 -  **Query.Order.Offer.OfferItem.ServiceSelection** - contains a unique service ID within the OfferItem. Data type - custom.
--  **Query.Order.Offer.OfferItem.ServiceSelection.ServiceDefinitionID** - link to the description of the service from DataLists.ServiceDefinitionList.ServiceDefinition.
+-  **Query.Order.Offer.OfferItem.ServiceSelection.ServiceDefinitionID** - reference to the description of the service from DataLists.ServiceDefinitionList.ServiceDefinition.
 -  **Query.Payments** - payment information (optional). Data type - custom.
 -  **Payments.Payment** - detailed information about the payment. Data type - custom.
 -  **Payments.Payment.Type** - a number of elements of the Method block changes depending on the payment type. The following values are possible: 
@@ -364,7 +364,7 @@ The operation of creating an order.
 -  **TimeLimits.PaymentTimeLimit** - offer validity period. The element contains the DateTime attribute in the format "yyyy-mm-ddtchch:mm:ss".
 -  **Order.OrderItems** - represents a set of one or several services within an order. Data type - custom.
 -  **OrderItems.OrderItem** - set of services within an order. The element includes two required attributes:
--  - **OrderItemID** - unique ID of the service bundle (ORI prefix is required).
+-  - **OrderItemID** - unique ID of the service set (ORI prefix is required).
 -  - **Owner** - IATA code of the validating carrier.
 -  **OrderItems.OrderItem.ItemStatus** - current order status, possible values:
 -  - **K** - Confirmed;
@@ -379,7 +379,15 @@ The operation of creating an order.
 -  **OrderItems.OrderItem.PriceDetail.BaseAmount** - base price for all passengers in the current OrderItem in the sale currency, data type - decimal. The Code and Taxable attributes are described above.
 -  **OrderItems.OrderItem.PriceDetail.Taxes** - total amount of taxes. Data type - custom.
 -  **OrderItems.OrderItem.PriceDetail.Taxes.Total** - total amount of taxes for all passengers in the current OrderItem, data type - decimal. The Code and Taxable attributes are described above.
--  **OrderItems.OrderItem.Service** - flight service and/or other flight support services. The service can be presented in a bundle with other services or in one separate Order.OrderItem. The element includes the attribute ServiceID = "SVC1" (SVC prefix required) containing the unique service ID. The Service element cannot contain the SegmentRef and ServiceDefinitionRef elements at the same time. Data type - custom.
+-  **OrderItems.OrderItem.Service** - flight service and/or other flight support services. The service can be presented in a set
+-  
+-   
+-    
+-     
+-      
+-       
+-        
+-          with other services or in one separate Order.OrderItem. The element includes the attribute ServiceID = "SVC1" (SVC prefix required) containing the unique service ID. The Service element cannot contain the SegmentRef and ServiceDefinitionRef elements at the same time. Data type - custom.
 - **Service.PassengerRef** - link to one passenger in DataLists.PassengerList.
 - **Service.SegmentRef** - link to a segment in Datalists.FlightSegmentList.
 - **Service.ServiceDefinitionRef** - link to the description of the service in Datalists.ServiceDefinitionList is not a transfer, but associated with it, for example, baggage. The SegmentRef attribute = "SEG0" (SEG prefix required) refers to the flight segment to which this service corresponds.
