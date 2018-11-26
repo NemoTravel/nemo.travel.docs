@@ -9,7 +9,7 @@ Order update with the synchronization in the GDS and without one.
 -  **Header.GetCached** - takes a boolean true or false value. For true, the reservation is updated without the synchronization with the GDS; For false or missing, the update is performed with the synchronization in the GDS.
 -  **OrderRetrieveRQ** - request body. The required attribute Version = "17.2" contains the version of the NDC protocol. Data type - custom.
 -  **OrderRetrieveRQ.Document** - **[common elements.](/Ndc/ndc_element)**
--  ** OrderRetrieveRQ.Query** - **[common elements.](/Ndc/ndc_element)**
+-  **OrderRetrieveRQ.Query** - **[common elements.](/Ndc/ndc_element)**
 -  **OrderRetrieveRQ.Party** - **[common elements.](/Ndc/ndc_element)**
 -  **Query.Filters** - contains the ID of the reservation you want to update. Data type - custom.
 -  **Filters.OrderID** - unique order ID in Nemo Connect. Owner attribute contains the owner code (GDS). 
