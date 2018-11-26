@@ -175,7 +175,7 @@ Flight leg prices are described in the current OfferItem.
 -  **Offer.TimeLimits** - offer validity. Data type - custom.
 -  **Offer.TimeLimits.OfferExpiration** - offer validity specified in the DateTime attribute in the format "yyyy-mm-ddthh:mm:ss".
 -  **Offer.FlightsOverview** - element containing links to a brief description of the flight and leg information. Data type - custom.
--  **Offer.FlightsOverview.FlightRef** - link to the flight ID. The attribute ODRef = "ODN1" refers to an element containing information about the departure and arrival points.
+-  **Offer.FlightsOverview.FlightRef** - reference to the flight ID. The attribute ODRef = "ODN1" refers to an element containing information about the departure and arrival points.
 -  **Offer.OfferItem** - represents a bundle of one or several services within the offer. The OfferItemID attribute contains a unique ID of the service set, the OFI prefix is required. Data type - custom.
 -  **Offer.OfferItem.TotalPriceDetail** - total price for all the services for all passengers in all segments in the current OfferItem. Data type - custom.
 -  **Offer.OfferItem.TotalPriceDetail.TotalAmount** - contains the total price (tariff + rates). Data type - custom.
@@ -188,26 +188,26 @@ Flight leg prices are described in the current OfferItem.
 -  **Offer.OfferItem.TotalPriceDetail.Taxes** - information about the tax amount. Data type - custom.
 -  **Offer.OfferItem.TotalPriceDetail.Taxes.Total** - amount of taxes for all passengers in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
 -  **Offer.OfferItem.Service** - flight service and/or other flight support services. The service can be presented in a bundle with other services or in one separate Offer.OrderItem. The element includes the attribute ServiceID = "SVC1" (SVC prefix is required) containing the unique ID of the service. The Service element cannot contain FlightRefs and ServiceDefinitionRef elements at the same time. Data type - custom.
--  **Offer.OfferItem.Service.PassengerRefs** - link to one or several passengers in DataLists.PassengerList.
--  **Offer.OfferItem.Service.FlightRefs** - link to one or more flights to Datalists.FlightList, which are presented as a service. The attribute ODRef = "ODN1" (the ODN prefix is required) refers to the element that contains leg information.
--  **Offer.OfferItem.Service.ServiceDefinitionRef** - link to the description of the service in Datalists.ServiceDefinitionList which is not a flight, but associated with it, for example, luggage. The SegmentRefs="SEG0" attribute (the SEG prefix is required) refers to one or more flight segments to which this service corresponds.
+-  **Offer.OfferItem.Service.PassengerRefs** - reference to one or several passengers in DataLists.PassengerList.
+-  **Offer.OfferItem.Service.FlightRefs** - reference to one or more flights to Datalists.FlightList, which are presented as a service. The attribute ODRef = "ODN1" (the ODN prefix is required) refers to the element that contains leg information.
+-  **Offer.OfferItem.Service.ServiceDefinitionRef** - reference to the description of the service in Datalists.ServiceDefinitionList which is not a flight, but associated with it, for example, luggage. The SegmentRefs="SEG0" attribute (the SEG prefix is required) refers to one or more flight segments to which this service corresponds.
 -  **Offer.OfferItem.FareDetail** - information about the price component for a certain passenger type in the current OfferItem. Data type - custom.
--  **Offer.OfferItem.FareDetail.PassengerRefs** - link to one or several passengers of the same type in DataLists.PassengerList.
+-  **Offer.OfferItem.FareDetail.PassengerRefs** - reference to one or several passengers of the same type in DataLists.PassengerList.
 -  **Offer.OfferItem.FareDetail.Price** - information about the price component for a certain passenger type. Data type - custom.
--  **Offer.OfferItem.FareDetail.Price.TotalAmount** - full price (fare + taxes) for a certain passenger type. Data type - custom.
--  **Offer.OfferItem.FareDetail.Price.TotalAmount.SimpleCurrencyPrice** - full price (fare + taxes) for a specific passenger type in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
+-  **Offer.OfferItem.FareDetail.Price.TotalAmount** - total price (fare + taxes) for a certain passenger type. Data type - custom.
+-  **Offer.OfferItem.FareDetail.Price.TotalAmount.SimpleCurrencyPrice** - total price (fare + taxes) for a specific passenger type in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
 -  **Offer.OfferItem.FareDetail.Price.BaseAmount** - base fare price in the currency of sale for a particular passenger type in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
 - **Offer.OfferItem.FareDetail.Price.FareFiledIn** - base price in the currency of the fare establishment. Data type - custom.
 - **Offer.OfferItem.FareDetail.Price.FareFiledIn.BaseAmount** - base price in the currency of the fare establishment for a certain passenger type in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
 - **Offer.OfferItem.FareDetail.Price.Taxes** - information about the taxes amount for a certain passenger type. Data type - custom.
-- **Offer.OfferItem.FareDetail.Price.Taxes.Total** - the sum of all taxes for a certain type of passenger in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
+- **Offer.OfferItem.FareDetail.Price.Taxes.Total** - total amount of all taxes for a certain type of passenger in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
 -  **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown** - element containing an array of tax components. Data type - custom.
 -  **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown.Tax** - tax components. Data type - custom.
 -  **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown.Tax.Amount** - tax value, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
 -  **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown.Tax.TaxCode** - tax code. Data type - string.
--  **Offer.OfferItem.FareDetail.FareComponent** - contains links to information about the fare component details and segments.
--  **Offer.OfferItem.FareDetail.FareComponent.PriceClassRef** - link to the fare component details.
--  **Offer.OfferItem.FareDetail.FareComponent.SegmentRefs** - link to one or more flight segments which corresponds to the price.
+-  **Offer.OfferItem.FareDetail.FareComponent** - contains references to information about the fare component details and segments.
+-  **Offer.OfferItem.FareDetail.FareComponent.PriceClassRef** - reference to the fare component details.
+-  **Offer.OfferItem.FareDetail.FareComponent.SegmentRefs** - reference to one or more flight segments which corresponds to the price.
 -  **AirShoppingRS.DataLists** - container with information about the elements of the offer which are: information about passengers, baggage, route and segments. Data type - custom.
 -  **DataLists.PassengerList** - information about the passengers. Data type - custom.
 -  **PassengerList.Passenger** - passengers for whom the search was performed. Attribute PassengerID = "PAX1" (PAX prefix required) - unique passenger ID.
