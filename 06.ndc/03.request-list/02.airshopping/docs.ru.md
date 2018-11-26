@@ -3,68 +3,69 @@ title: AirShopping
 ---
 
 ### AirShopping
-Выполняет поиск предложений. Ответ на запрос представляет собой сгруппированную выдачу. Для оптимизации вашего обработчика группированной выдачи рекомендуется выполнять обход элементов в 2 этапа. Сначала вы обходите элементы группы DataLists и формируете словарь ключ-значение, где:
--	ключ - PassengerID, элемент - PassengerList;
--	ключ - BaggageAllowanceID, элемент - BaggageAllowanceList;
--   ключ - SegmentKey, элемент - FlightSegmentList;
--   ключ - FlightKey, элемент - FlightList;
--	ключ - PriceClassID, элемент - PriceClassList;
--	ключ - ServiceDefinitionID, элемент - ServiceDefinitionList.
+Performs offers search. The response to the request is a grouped distribution. In order to optimize your handler for grouped distribution, it is recommended to bypass its’ elements in 2 steps. First, you bypass the elements of the DataLists group and form a key-value dictionary, where:
+- key - PassengerID, element - PassengerList;
+- key - BaggageAllowanceID, element - BaggageAllowanceList;
+- key - SegmentKey, element - FlightSegmentList;
+- key - FlightKey, element - FlightList;
+- key - PriceClassID, element - PriceClassList;
+- key - ServiceDefinitionID, element - ServiceDefinitionList.
 
-После чего вы один раз обходите OffersGroup, определяете значение каждого OfferItem и заполняете их данными по сегментам и ценам выбирая данные по ключ-значение. Ключевым элементом, описывающим перелет, является Service, содержащий значение FlightRefs, продвигаясь по ключам которого можно собрать перелет. Если элемент заканчивается на Refs, то он ссылается на несколько элементов, значение которых можно определить строку по символу пробела; если Ref, то элемент ссылается на одно значение.
-Цены плеча перелета описаны в текущем OfferItem.
+Then you bypass OffersGroup once, determine the value of each OfferItem and fill them with the data by segments and prices by selecting it by key-value. The key element describing the flight is the Service, which contains a FlightRefs value, going through the keys of which you can compile the flight. If an element ends with Refs, then it refers to several elements, the value of which can be determined by a string by the space character; if Ref, the element refers to one value.
+Flight leg prices are described in the current OfferItem.
 
-#### Запрос
--   **AirShoppingRQ** - запрос выполняет поиск предложений в соответсвии с указанными данными о сегментах, пассажирах и дополнительных ограничениях. Обязательный атрибут Version="17.2" содержит версию NDC протокола. Тип данных - сложный. 
--   **AirShoppingRQ.CoreQuery** - содержит информацию о запрашиваемой покупке. Тип данных - сложный. 
--   **CoreQuery.OriginDestinations** - содержит информацию о сегментах перелёта, который требуется найти. **Обязательный элемент, при условии, что не задан элемент CoreQuery.FlightSpecific**. Тип данных - сложный.  
--   **CoreQuery.OriginDestinations.OriginDestination** - информация о назначении/прибытии рейса (обязательный). Тип данных - сложный. 
--   **OriginDestinations.OriginDestination.Departure** - содержит информацию о точки отправления (обязательный). Тип данных - сложный.
--	**OriginDestinations.OriginDestination.Departure.AirportCode** - 3-х буквенный IATA код аэропорта или города отправления (обязательный). Тип данных — строка.
--	**OriginDestinations.OriginDestination.Departure.Date** - дата вылета (обязательный). Формат "YYYY-MM-DD".
--   **OriginDestinations.OriginDestination.Arrival** - содержит информацию о точки прибытия (обязательный). Тип данных - сложный.
--	**OriginDestinations.OriginDestination.Arrival.AirportCode** - 3-х буквенный IATA код аэропорта или города прибытия (обязательный). Тип данных — строка. 
--	**OriginDestinations.OriginDestination.CalendarDates** - первый элемент CoreQuery.OriginDestinations.OriginDestination может быть дополнен необязательным элементом CalendarDates. Данный элемент содержит атрибуты DaysBefore и DaysAfter, значения атрибутов дожны быть идентичны и не превышать 3. 
--   **CoreQuery.FlightSpecific** - содержит более детальную информацию о запрашиваемых сегментах. Тип данных - сложный. **Обязательный элемент, при условии, что не задан элемент CoreQuery.OriginDestinations.**
--   **FlightSpecific.FlightSegment** - содержит информацию о сегментах перелёта, который требуется найти. Тип данных - сложный. Включает обязательный атрибут SegmentKey="SEG0", содержащий уникальный идентификатор сегмента. Префикс SEG является обязательным. Номера сегментов начинаются с нуля.
--   **FlightSpecific.FlightSegment.Departure** - пункт отправления (обязательный). Тип данных - сложный.
--   **FlightSpecific.FlightSegment.Departure.AirportCode** - 3-х буквенный IATA код аэропорта или города отправления (обязательный). Тип данных — строка.
--	**FlightSpecific.FlightSegment.Departure.Date** -  дата вылета (обязательный). Формат "YYYY-MM-DD".
--   **FlightSpecific.FlightSegment.Arrival** - пункт прибытия (обязательный). Тип данных - сложный.
--   **FlightSpecific.FlightSegment.Arrival.AirportCode** - 3-х буквенный IATA код аэропорта или города прибытия (обязательный). Тип данных — строка.
--   **FlightSpecific.FlightSegment.MarketingAirline** - информация о маркетинговом перевозчике (обязательный). Тип данных — сложный.
--   **FlightSpecific.FlightSegment.MarketingAirline.AirlineID** - IATA код маркетингового перевозчика (обязательный). Тип данных — строка.
--   **FlightSpecific.FlightSegment.MarketingAirline.FlightNumber** - номер рейса (обязательный).
--   **AirShoppingRQ.Preference** - содержит различные ограничения, применяемые к результатам поиска (необязательный). Тип данных — сложный.
--   **AirShoppingRQ.Preference.AirlinePreferences** - фильтр по авиакомпаниям (необязательный). Тип данных — сложный.
--   **Preference.AirlinePreferences.Airline** - фильтр по авиакомпаниям. Элемент включает атрибут PreferencesLevel, который принимает значение Required или Exclude. В случае, если указано Exclude, авиакомпания исключается из результатов поиска; если указано Required, то только данная авиакомпания присутствует в выдаче. Тип данных — сложный.
--   **Preference.AirlinePreferences.Airline.AirlineID** - IATA код авиакомпании, по которой будет срабатывать фильтрация.
--   **Preference.FlightPreferences** - индикатор поиска только прямых перелётов (необязательный). Тип данных — сложный.
--   **Preference.FlightPreferences.Characteristic**
--   **Preference.FlightPreferences.Characteristic.DirectPreferences** - если указано true, выполняется поиск только прямых перелётов; false или не задан элемент - поиск любых перелетов. Тип данных — булевый. 
--   **Preference.TransferPreferences** - регулирует количество остановок на перелете (необязательный). Тип данных — сложный.
--   **Preference.TransferPreferences.Connection**
--   **Preference.TransferPreferences.Connection.MaxNumber** - максимальное количество остановок. Значение элемента должено быть целым положительным числом. Тип данных — целое число.
--   **Preference.TransferPreferences.Connection.MaxTime** - время максимально допустимой остановки в минутах. Пример формата - PT180M, т.о. будет выполнен запрос на поиск рейсов с максимально допустимой остановкой в 180 минут.
--   **Preference.CabinPreferences** - содержит список предпочитаемых классов перелёта. Тип данных — сложный.
--   **Preference.CabinPreferences.CabinType** - класс перелета (обязательный). Тип данных — сложный.
--   **Preference.CabinPreferences.CabinType.Code** - тип предпочитаемого класса перелёта. Возможные значения:
-    -   **1** - First; 
-    -   **2** - Business; 
-    -   **3** - Economy;
-	-	**4** - Premium Economy;
-	-	**5** - Economy;
-	-	**6** - Economy;
-	-	**7** - All.
--	**AirShoppingRQ.DataLists** - представляет собой контейнер, в котором содержится дополнительная поисковая информация (обязательный).
--	**AirShoppingRQ.DataLists.PassengerList** - информация о пассажирах, для которых требуется найти перелёт (обязательный). Тип данных — сложный. 	
--   **DataLists.PassengerList.Passenger** - информация о типе пассажира, для которых требуется найти перелёт. Включает атрибут PassengerID="PAX1", содержащий уникальный id пассажира. Префикс PAX является обязательным. Номера пассажиров начинаются с единицы. Обязательный элемент и атрибут.
--   **DataLists.PassengerList.Passenger.PTC** - тип пассажира. Возможные значения:
-    -   **ADT** - взрослый;
-    -   **СHD** - ребенок;
-    -   **INF** - младенец.
+#### Request
+-  **AirShoppingRQ** - request searching for offers in accordance with the specified data about segments, passengers and additional restrictions. The required attribute Version = "17.2" contains the version of the NDC protocol. Data type - custom.
+-  **AirShoppingRQ.CoreQuery** - contains information about the requested purchase. Data type - custom.
+-  **CoreQuery.OriginDestinations** - contains information about the segments of the flight you want to find. **Required element, provided that the CoreQuery.FlightSpecific element is not specified**. Data type - custom.
+-  **CoreQuery.OriginDestinations.OriginDestination** - flight destination/arrival information (required). Data type - custom.
+-  **OriginDestinations.OriginDestination.Departure** - contains information about the departure point (required). Data type - custom.
+-  **OriginDestinations.OriginDestination.Departure.AirportCode** - 3-letter IATA airport code or city of departure (required). Data type - string.
+-  **OriginDestinations.OriginDestination.Departure.Date** - departure date (required). The format is "yyyy-mm-dd".
+-  **OriginDestinations.OriginDestination.Arrival** - contains information about the arrival point (required). Data type - custom.
+-  **OriginDestinations.OriginDestination.Arrival.AirportCode** - 3-letter IATA airport code or city of arrival (required). Data type - string.
+-  **OriginDestinations.OriginDestination.CalendarDates** - first element of CoreQuery.OriginDestinations.OriginDestination can be supplemented with the optional CalendarDates element. This element contains the DaysBefore and DaysAfter attributes, the number of days is determined from the addition of attributes. The value of the attributes must be identical with the amount not exceeding 3.
+-  **CoreQuery.FlightSpecific** - contains more detailed information about the requested segments. Data type - custom. **Required element if CoreQuery.OriginDestinations element is not specified.**
+-  **FlightSpecific.FlightSegment** - contains information about the segments of the flight that you want to find. Data type - custom. Includes the required attribute SegmentKey = "SEG0", which contains the unique segment ID. SEG prefix is required. Segment numbers start at zero.
+-  **FlightSpecific.FlightSegment.Departure** - point of departure (required). Data type - custom.
+-  **FlightSpecific.FlightSegment.Departure.AirportCode** - 3 letter IATA airport code or city of departure (required). Data type - string.
+-  **FlightSpecific.FlightSegment.Departure.Date** - departure date (required). The format is "yyyy-mm-dd".
+-  **FlightSpecific.FlightSegment.Arrival** - point of arrival (required). Data type - custom.
+-  **FlightSpecific.FlightSegment.Arrival.AirportCode** - 3 letter IATA airport code or city of arrival (required). Data type - string.
+-  **FlightSpecific.FlightSegment.MarketingAirline** - information about the marketing carrier (required). Data type - custom.
+-  **FlightSpecific.FlightSegment.MarketingAirline.AirlineID** - IATA marketing carrier code (required). Data type - string.
+-  **FlightSpecific.FlightSegment.MarketingAirline.FlightNumber** - flight number (required).
+-  **AirShoppingRQ.Preference** - contains various restrictions that apply to search results (optional). Data type - custom.
+-  **AirShoppingRQ.Preference.AirlinePreferences** - filter by airline (optional). Data type - custom.
+-  **Preference.AirlinePreferences.Airline** - filter by airline. The element includes the PreferencesLevel attribute, which takes the value Required or Exclude. If Exclude is specified, the specified airline will be excluded from the search results; if Required is specified, then only this airline will be present in the issue. Data type - custom.
+-  **Preference.AirlinePreferences.Airline.AirlineID** - IATA code of the airline by which the filtering will be activated.
+-  **Preference.FlightPreferences** - indicator of search for direct flights only (optional). Data type - custom.
+-  **Preference.FlightPreferences.Characteristic**
+-  **Preference.FlightPreferences.Characteristic.DirectPreferences** - if true, only direct flights are searched for; false or no item specified - search for any flights. Data type - boolean.
+-  **Preference.TransferPreferences** - adjusts the number of stops per flight (optional). Data type - custom.
+-  **Preference.TransferPreferences.Connection**
+-  **Preference.TransferPreferences.Connection.MaxNumber** - maximum number of stops. The element value must be a positive integer. Data type - integer.
+-  **Preference.TransferPreferences.Connection.MaxTime** - maximum allowed stop time in minutes. The format example is PT180M, thus request will be made to search for flights with a maximum allowed stop of 180 minutes.
+-  **Preference.CabinPreferences** - contains a list of preferred flight classes. Data type - custom.
+-  **Preference.CabinPreferences.CabinType** - flight class (required). Data type - custom.
+-  **Preference.CabinPreferences.CabinType.Code** - type of preferred flight class. Possible values:
+    - **1** - First;
+    - **2** - Business;
+    - **3** - Economy;
+    - **4** - Premium Economy;
+    - **5** - Economy;
+    - **6** - Economy;
+    - **7** - All.
+-  **AirShoppingRQ.DataLists** - container with additional search information (required).
+-  **AirShoppingRQ.DataLists.PassengerList** - information about passengers for whom you want to find a flight (required). Data type - custom.
+-  **DataLists.PassengerList.Passenger** - information about the passenger type for which you want to find a flight. Includes the PassengerID = "PAX1" attribute containing the unique passenger id. The "PAX" prefix is required. Passenger numbers start at one. Element and attribute are required.
+-  **DataLists.PassengerList.Passenger.PTC** - passenger type. Possible values:
+    - **ADT** - adult;
+    - **CHD** - child;
+    - **INF** - infant.
 
-##### Пример
+
+##### Sample
 
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avi="http://nemo.travel/AviaNDC" xmlns:ns="http://www.iata.org/IATA/EDIST/2017.2">
@@ -151,165 +152,166 @@ title: AirShopping
    </soapenv:Body>
 </soapenv:Envelope>
 ```
-#### Ответ
+#### Response
 
--   **AirShoppingRS** — ответ содержит данные о результатах поиска. Тип данных — сложный.
--   **AirShoppingRS.Document** - **[общие элементы.](/ndc/ndc_element)**
--   **AirShoppingRS.Success** - **[общие элементы.](/ndc/ndc_element)**
--   **AirShoppingRS.ShoppingResponseID** - **[общие элементы.](/ndc/ndc_element)**
--   **AirShoppingRS.OffersGroup** - сгруппированные предложения. Тип данных — сложный.
--   **AirShoppingRS.OffersGroup.AirlineOffers** - контейнер для набора предложений. Тип данных — сложный.
--   **AirShoppingRS.OffersGroup.AirlineOffers.AirlineOfferSnapshot** - содержит информацию о самом низком и высоком ценовом предложении. Тип данных — сложный.
--   **AirlineOfferSnapshot.PassengerQuantity** - общее количество пассажиров, для которых требовалось найти перелёт. Тип - целое положительное число.
--   **AirlineOfferSnapshot.Highest** - самая высокая цена за предложение на всех пассажиров. Атрибут refs содержит список id предложений с самой высокой ценой. Тип данных — сложный.
--   **AirlineOfferSnapshot.Highest.EncodedCurrencyPrice** - сумма и код валюты. Значение суммы - десятичное дробное число, код валюты - строка.
--   **AirlineOfferSnapshot.Lowest** - самая низкая цена за предложение на всех пассажиров. Атрибут refs содержит список id предложений с самой низкой ценой. Тип данных — сложный.
--   **AirlineOfferSnapshot.Lowest.EncodedCurrencyPrice** - сумма и код валюты. Значение суммы - десятичное дробное число, код валюты - строка.
--   **AirlineOfferSnapshot.MatchedOfferQuantity** - общее количество предложений, полученнное в результате поиска. 
--   **AirShoppingRS.OffersGroup.AirlineOffers.Offer** - предложение представляет собой определенный набор услуг (перелеты и/или связанные с перелетом дополнительные услуги). Элемент Offer содержит информацию об услугах, ценовой составляющей, ограничениях (таймлимит). Offer включает два обязательных атрибута:
--   -	**OfferID** - уникальный идентификатор предложения;
--   -	**Owner="1S"** - код владельца (ГРС) предложения. Тип данных — строка.
--   **Offer.Parameters** - содержит количество наборов услуг (OfferItem) в рамках одного предложения. Тип данных — сложный.
--   **Offer.Parameters.TotalItemQuantity** - количество наборов услуг в рамках одного предложения. Тип - целое положительное число.
--   **Offer.TimeLimits** - срок действия предложения. Тип данных — сложный.
--	**Offer.TimeLimits.OfferExpiration** - срок действия предложения указан в атрибуте DateTime в формате "YYYY-MM-DDThh:mm:ss".
--	**Offer.FlightsOverview** - элемент содержит ссылки на краткое описание перелёта и информацию о плече. Тип данных — сложный.
--	**Offer.FlightsOverview.FlightRef** - ссылка на идентификатор перелёта. Атрибут ODRef="ODN1" ссылает на элемент, содержащий сведения о пунктах отправления и прибытия.
--	**Offer.OfferItem** - представляет набор из одной или нескольких услуг в рамках предложения. Атрибут OfferItemID содержит уникальный идентификатор набора услуг, префикс OFI обязателен. Тип данных — сложный.
--	**Offer.OfferItem.TotalPriceDetail** - полная стоимость за все услуги всех пассажиров по всем сегментам в текущем OfferItem. Тип данных — сложный.
--	**Offer.OfferItem.TotalPriceDetail.TotalAmount** - содержит общую стоимость (тариф + таксы). Тип данных — сложный.
--	**Offer.OfferItem.TotalPriceDetail.TotalAmount.SimpleCurrencyPrice** - общая стоимость (тариф + таксы) на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Элемент включает два атрибута:
--	-	**Code** - код валюты, тип данных — строка.
--	-	**Taxable** - облагаемый налогом (по умолчанию false), тип данных — булевый.
--	**Offer.OfferItem.TotalPriceDetail.BaseAmount** - базовая цена тарифа в валюте продажи на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
--	**Offer.OfferItem.TotalPriceDetail.FareFiledIn** - базовая цена в валюте задания тарифа. Тип данных — сложный.
--	**Offer.OfferItem.TotalPriceDetail.FareFiledIn.BaseAmount** - базовая цена в валюте задания тарифа на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
--	**Offer.OfferItem.TotalPriceDetail.Taxes** - информация о сумме такс. Тип данных — сложный.
--	**Offer.OfferItem.TotalPriceDetail.Taxes.Total** - сумма такс на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
--	**Offer.OfferItem.Service** - услуга перелёта и/или другие вспомогательные услуги перелёта. Услуга может быть представлена в комплекте с другими услугами или в одном отдельном Offer.OrderItem. Элемент включает атрибут ServiceID="SVC1" (префикс SVC обязателен), содержащий уникальный идентификатор услуги. Элемент Service не может одновременно содержать элементы FlightRefs и ServiceDefinitionRef. Тип данных — сложный.
--	**Offer.OfferItem.Service.PassengerRefs** - ссылка на одного или нескольких пассажиров из DataLists.PassengerList. 
--	**Offer.OfferItem.Service.FlightRefs** - ссылка на один или несколько рейсов из Datalists.FlightList, которые представлены в качестве услуги. Атрибут ODRef="ODN1" (префикс ODN обязателен) ссылается на элемент, содержащий сведения о плече.
--	**Offer.OfferItem.Service.ServiceDefinitionRef** - ссылка на описание услуги в Datalists.ServiceDefinitionList не являющейся перелётом, но связанной с ним, к примеру,  багаж. Атрибут SegmentRefs="SEG0" (префикс SEG обязателен) ссылается на один или несколько сегментов перелета, которому соответствует данная услуга. 
--   **Offer.OfferItem.FareDetail** - информация о ценовой составляющей для определённого типа пассажира в текущем OfferItem. Тип данных - сложный
--   **Offer.OfferItem.FareDetail.PassengerRefs** - ссылка на одного или нескольких пассажиров одного типа из DataLists.PassengerList. 
--   **Offer.OfferItem.FareDetail.Price** - информация о ценовой составляющей для определённого типа пассажира. Тип данных - сложный.
--   **Offer.OfferItem.FareDetail.Price.TotalAmount** - полная стоимость (тариф + таксы) для определённого типа пассажира. Тип данных — сложный.
--   **Offer.OfferItem.FareDetail.Price.TotalAmount.SimpleCurrencyPrice** - полная стоимость (тариф + таксы) на определенный тип пассажира в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
--   **Offer.OfferItem.FareDetail.Price.BaseAmount** - базовая цена тарифа в валюте продажи для определённого типа пассажира в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
--   **Offer.OfferItem.FareDetail.Price.FareFiledIn** - базовая цена в валюте заведения тарифа. Тип данных — сложный.
--   **Offer.OfferItem.FareDetail.Price.FareFiledIn.BaseAmount** - базовая цена в валюте заведения тарифа для определённого типа пассажира в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
--   **Offer.OfferItem.FareDetail.Price.Taxes** - информация о сумме такс для определённого типа пассажира. Тип данных — сложный.
--   **Offer.OfferItem.FareDetail.Price.Taxes.Total** - сумма всех такс на определённый тип пассажира в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable, описанные выше.
--   **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown** - элемент, содержащий массив компонентов такс. Тип данных — сложный.
--   **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown.Tax** - компоненты такс. Тип данных — сложный.
--   **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown.Tax.Amount** - значение таксы, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable, описанные выше.
--   **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown.Tax.TaxCode** - код таксы. Тип данных — строка.
--   **Offer.OfferItem.FareDetail.FareComponent** - содержит ссылки на информацию о деталях тарифа и сегментах.
--   **Offer.OfferItem.FareDetail.FareComponent.PriceClassRef** - ссылка на информацию о деталях тарифа.
--   **Offer.OfferItem.FareDetail.FareComponent.SegmentRefs** - ссылка на один или несколько сегментов перелёта, которому соответствует цена.
--   **AirShoppingRS.DataLists** - представляет собой контейнер, в котором содержится информация о элементах предложения, а именно, информация о пассажирах, багаже, маршруте и сегментах. Тип данных — сложный.
--   **DataLists.PassengerList** - сведения о пассажирах. Тип данных - сложный.
--   **PassengerList.Passenger** -  пассажир, для которого выполнен поиск. Атрибут PassengerID="PAX1"(префикс PAX обязателен) - уникальный идентификатор пассажира.
--   **PassengerList.Passenger.PTC** - тип пассажира, возможные значения. Тип данных - строка.
-    -   **ADT** - взрослый;
-    -   **СHD** - ребёнок;
-    -   **INF** - младенец.
--   **DataLists.BaggageAllowanceList** - информация о перевозке багажа. Тип данных - сложный.
--	**BaggageAllowanceList.BaggageAllowance** - атрибут BaggageAllowanceID="BAG1"(префикс BAG обязателен) содержит уникальный идентификатор багажа. Тип данных - сложный.
--	**BaggageAllowanceList.BaggageAllowance.BaggageCategory** - элемент всегда содержит значение "Checked".
--	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription** - возможны два типа зарегистрированного багажа: Piece и Weight. 
--	**В случае Piece возвращаются следующие элементы:**
--  -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance**
--  -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.ApplicableParty** - элемент по умолчанию содержит значение Traveler. Означает, что багаж соответствует одному пассажиру.
--  -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.TotalQuantity** - количество сумок. Тип данных - целое число.
--  -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.PieceMeasurements** - атрибут Quantity="1" элемента содержит информацию о количестве сумок, тип данных - целое число.
--	**В случае Weight возвращаются элементы:**
--  -	**BaggageAllowanceList.BaggageAllowance.WeightAllowance** - сведения о максимальном весе багажа. Тип данных - сложный.
--  -	**BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.Value** - максимальный вес багажа. Тип данных - целое положительное число.
--  -	**BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.UOM** - единица измерения для приведенного выше значения. Тип данных - строка.
--	**Атрибут Concept элемента AllowanceDescription определяет меру багажа, возможные значения:**
-    -   **700** - Kilos;
-	-   **701** - Pounds;
-	-   **C** - Special Charge;
-	-   **N** - Number of pieces;
-	-   **S** - Size;
-	-   **W** - Weight.
--	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.ApplicableParty** - элемент по умолчанию содержит значение Traveler. Означает, что багаж соответствует одному пассажиру.
--	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions** - описание багажа. Тип данных - сложный.
--	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions.Description**
--	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions.Description.Text** - по умолчанию содержит значение "Free baggage". Тип данных - строка.
--	**DataLists.FlightSegmentList** - содержит сведения о сегментах перелета. Тип данных - сложный.
--	**FlightSegmentList.FlightSegment** - детали сегмента перелёта. Тип данных - сложный. Включает два атрибута:
--	-	**SegmentKey** - уникальный идентификатор сегмента, обязательный префикс SEG.
--	-	**ElectronicTicketInd** - признак электронного билета. Тип данных - булевый.
--	**FlightSegmentList.FlightSegment.Departure** - информация о сегменте отправления. Тип данных - сложный.
--	**FlightSegmentList.FlightSegment.Departure.AirportCode** - IATA код аэропорт отправления. Тип данных - строка.
--	**FlightSegmentList.FlightSegment.Departure.Date** - дата отправления. Формат "YYYY-MM-DD".
--	**FlightSegmentList.FlightSegment.Departure.Time** - время отправления в часовом поясе аэропорта. Формат "HH:MM".
--	**FlightSegmentList.FlightSegment.Departure.Terminal** - сведения о терминале. Тип данных - сложный.
--	**FlightSegmentList.FlightSegment.Departure.Terminal.Name** - теминал отправления. Тип данных - строка.
--	**FlightSegmentList.FlightSegment.Arrival** - информация о сегменте прибытия. Тип данных - сложный.
--	**FlightSegmentList.FlightSegment.Arrival.AirportCode** - IATA код аэропорт прибытия. Тип данных - строка.
--	**FlightSegmentList.FlightSegment.Arrival.Date** - дата прибытия. Формат "YYYY-MM-DD".
--	**FlightSegmentList.FlightSegment.Arrival.Time** - время прибытия в часовом поясе аэропорта. Формат "HH:MM".
--	**FlightSegmentList.FlightSegment.Arrival.Terminal** - сведения о терминале. Тип данных - сложный.
--	**FlightSegmentList.FlightSegment.Arrival.Terminal.Name** - теминал прибытия. Тип данных - строка.
--	**FlightSegmentList.FlightSegment.MarketingCarrier** - информация о маркетинговом перевозчике. Тип данных - сложный.
--	**FlightSegmentList.FlightSegment.MarketingCarrier.AirlineID** - IATA код маркетингового перевозчика. Тип данных - строка.
--	**FlightSegmentList.FlightSegment.MarketingCarrier.FlightNumber** - номер рейса маркетингового перевозчика.
--	**FlightSegmentList.FlightSegment.OperatingCarrier** - информация об оперирующем перевозчике. Тип данных - сложный.
--	**FlightSegmentList.FlightSegment.OperatingCarrier.AirlineID** - IATA код оперирующего перевозчика. Тип данных - строка.
--	**FlightSegmentList.FlightSegment.OperatingCarrier.FlightNumber** - номер рейса оперирующего перевозчика. Тип данных - строка.
--	**FlightSegmentList.FlightSegment.Equipment** - информация о типе воздушного судна. Тип данных - сложный.
--	**FlightSegmentList.FlightSegment.Equipment.AircraftCode** - тип воздушного судна. Тип данных - строка.
--	**FlightSegmentList.FlightSegment.FlightDetail** - детали полета. Тип данных - сложный.
--	**FlightSegmentList.FlightSegment.FlightDetail.FlightDuration** - информирует о длительности перелёта. Тип данных - сложный.
--	**FlightSegmentList.FlightSegment.FlightDetail.FlightDuration.Value** - длительность перелёта в рамках сегмента.
--	**DataLists.FlightList** - элемент содержит список рейсов, составляющих маршрут, и составляющие их сегменты, а также длительность перелёта. Тип данных - сложный.
--	**FlightList.Flight** - атрибут FlightKey="FLTL0S0"(префикс FLT обязателен) возвращает уникальный идентификатор полета в рамках предложения.
--	**FlightList.Flight.Journey** - информация о длительности перелёта в рамках плеча. Тип данных - сложный.
--	**FlightList.Flight.Journey.Time** - длительность перелета. Пример: PD1T3H10M, где D1 - дни, 3H - часы, 10M - минуты.
--	**FlightList.Flight.SegmentReferences** - один или несколько сегментов, входящих в состав перелёта, в рамках одного плеча.
--	**DataLists.OriginDestinationList** - содержит сведения о плечах, а именно пункты отправления и прибытия. Тип данных - сложный.
--	**OriginDestinationList.OriginDestination** - информирует о пунтках отправления и прибытия на плече. Атрибут OriginDestinationKey="ODN1"(префикс ODN обязателен) содержит уникальный идентификатор плеча. Тип данных - сложный.
--	**OriginDestinationList.OriginDestination.DepartureCode** - IATA код аэропорта отправления. Тип данных - строка.
--	**OriginDestinationList.OriginDestination.ArrivalCode** - IATA код аэропорта прибытия. Тип данных - строка.
--	**OriginDestinationList.OriginDestination.FlightReferences** - содержит ссылки на список рейсов, пункт отправления/прибытия которых совпадает с текущим.	
--	**DataLists.PriceClass** - элемен содержит список цен и характеристики тарифа. Тип данных - сложный. 
--	**PriceClass.PriceClass** - содержит сведения о тарифе. Атрибут PriceClassID="PRC1" (префикс PRC обязателен) - уникальный идентификатор цены. Тип данных - сложный.
--	**PriceClass.PriceClass.Name** - имя принимает нескольких значений, разделенных символом подчеркивания. Пример: NVU5_N_Y_ECONOMY, где на первом месте код семейства или код тарифа (при отсутствии первого), на втором литера класса бронирования, на третьем код класса обслуживания и далее название класса обслуживания. Тип данных - строка.
--	**PriceClass.PriceClass.FareBasisCode** - содержит код тарифа. Тип данных - сложный.
--	**PriceClass.PriceClass.FareBasisCode.Code** - код тарифа. Тип данных - строка.
--	**PriceClass.PriceClass.ClassOfService** - сведения о классе бронирования. Тип данных - сложный.
--	**PriceClass.PriceClass.ClassOfService.Code** - литера класса бронирования. Содержит атрибут SeatsLeft="9", информирующий о количестве свободных мест.
--	**PriceClass.PriceClass.ClassOfService.MarketingName** - название класса обслуживания. Атрибут CabinDesignator="Y" описывает код класса обслуживания. Тип данных - строка.
--	**DataLists.ServiceDefinitionList** - содержит описание и характеристики услуг не являющихся перелётом. Тип данных - сложный
--	**ServiceDefinitionList.ServiceDefinition** - атрибут ServiceDefinitionID="SVD1" (префикс SVD обязателен) уникальный идентификатор описания услуги.
--	**ServiceDefinitionList.ServiceDefinition.Name** - наименование услуги. Например: Free baggage. Тип данных - строка.
--	**ServiceDefinitionList.ServiceDefinition.BaggageAllowanceRef** - ссылка на описание более детальной информации о багаже. 
--	**ServiceDefinitionList.ServiceDefinition.Descriptions** - сведения об услуге. Тип данных - сложный.
--	**ServiceDefinitionList.ServiceDefinition.Descriptions.Description** - сведения об услуге. Тип данных - сложный.
--	**ServiceDefinitionList.ServiceDefinition.Descriptions.Description.Text** - описание услуги. Тип данных — строка.
--	**AirShoppingRS.Metadata** - содержит список метаданных, относящихся к дополнительной информации о перелёте или маршруте. Тип данных - сложный.
--	**Metadata.Shopping** 
--	**Shopping.ShopMetadataGroup.Flight.** - дополнительная информация о перелете. Тип данных - сложный.
--	**Shopping.ShopMetadataGroup.Flight.FlightMetadatas** - дополнительная информации о перелете. Тип данных - сложный.
--	**Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata** - содержит два атрибута:
--	-	**refs** - информирует о привязке к одному или нескольким сегментам, 
--	-	**MetadataKey** - задает уникальный идентификатор. Тип данных - сложный.
--	**Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.BindingKey** - ссылка на перелёт. Тип данных — строка.
--	**Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.Meals** - элемент содержит информацию о питании. Тип данных — массив значений типа Meal.
--	**Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.Meals.Meal** - типы питания. Тип данных — строка, возможные значения: 
--   -   **B** - Breakfast;  
--   -   **C** - Alcoholic beverages;	
--   -	**D** - Dinner;
--   -	**L** - Lunch;
--   -	**M** - Meal;
--   -	**R** - Refreshment;
--	-	**S** - Snack or light meal;
--   -	**V** - Continental breakfast.
+-  **AirShoppingRS** - response containing the information about the search results. Data type - custom.
+-  **AirShoppingRS.Document** - **[common items.](/Ndc/ndc_element)**
+-  **AirShoppingRS.Success** - **[common items.](/Ndc/ndc_element)**
+-  **AirShoppingRS.ShoppingResponseID** - **[common items.](/Ndc/ndc_element)**
+-  **AirShoppingRS.OffersGroup** - grouped offers. Data type - custom.
+-  **AirShoppingRS.OffersGroup.AirlineOffers** - container for an offers' bundle. Data type - custom.
+-  **AirShoppingRS.OffersGroup.AirlineOffers.AirlineOfferSnapshot** - contains information on the lowest and highest price offer. Data type - custom.
+-  **AirlineOfferSnapshot.PassengerQuantity** - total number of passengers for whom it was required to find a flight. Data type - positive integer.
+-  **AirlineOfferSnapshot.Highest** - highest offer price for all types of passengers. The refs attribute contains a list of offer IDs with the highest price. Data type - custom.
+-  **AirlineOfferSnapshot.Highest.EncodedCurrencyPrice** - amount and currency code. The value of the amount is a decimal fractional number, the currency code is a string.
+-  **AirlineOfferSnapshot.Lowest** - the lowest offer price for all types of passengers. The refs attribute contains a list of id offers with the lowest price. Data type - custom.
+-  **AirlineOfferSnapshot.Lowest.EncodedCurrencyPrice** - amount and currency code. The value of the sum is a decimal fractional number, the currency code is a string.
+-  **AirlineOfferSnapshot.MatchedOfferQuantity** - total number of offers received as a result of the search.
+-  **AirShoppingRS.OffersGroup.AirlineOffers.Offer** - offer as a specific bundle of services (flights and/or flight-related additional services). The Offer element contains information about the services, price component, restrictions (time limit). The Offer element includes two required attributes:
+-  - **OfferID** - unique offer ID;
+-  - **Owner = "1S"** - owner code (GDS) of the offer. Data type - string.
+-  **Offer.Parameters** - element containing the number of service sets (OfferItem) within one offer. Data type - custom.
+- **Offer.Parameters.TotalItemQuantity** - number of service sets within one offer. Data type - positive integer.
+-  **Offer.TimeLimits** - offer validity. Data type - custom.
+-  **Offer.TimeLimits.OfferExpiration** - offer validity specified in the DateTime attribute in the format "yyyy-mm-ddthh:mm:ss".
+-  **Offer.FlightsOverview** - element containing links to a brief description of the flight and leg information. Data type - custom.
+-  **Offer.FlightsOverview.FlightRef** - reference to the flight ID. The attribute ODRef = "ODN1" refers to an element containing information about the departure and arrival points.
+-  **Offer.OfferItem** - represents a bundle of one or several services within the offer. The OfferItemID attribute contains a unique ID of the service set, the OFI prefix is required. Data type - custom.
+-  **Offer.OfferItem.TotalPriceDetail** - total price for all the services for all passengers in all segments in the current OfferItem. Data type - custom.
+-  **Offer.OfferItem.TotalPriceDetail.TotalAmount** - contains the total price (tariff + rates). Data type - custom.
+-  **Offer.OfferItem.TotalPriceDetail.TotalAmount.SimpleCurrencyPrice** - total price (fare + taxes) for all passengers in the current OfferItem, data type - decimal fractional number. The element includes two attributes:
+-  - **Code** - currency code, data type - string.
+-  - **Taxable** - taxable (false by default), data type - boolean.
+-  **Offer.OfferItem.TotalPriceDetail.BaseAmount** - base price of the fare in the sale currency for all passengers in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
+-  **Offer.OfferItem.TotalPriceDetail.FareFiledIn** - base price in the currency of the tariff setting. Data type - custom.
+-  **Offer.OfferItem.TotalPriceDetail.FareFiledIn.BaseAmount** - base price in the currency of the tariff for all passengers in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
+-  **Offer.OfferItem.TotalPriceDetail.Taxes** - information about the tax amount. Data type - custom.
+-  **Offer.OfferItem.TotalPriceDetail.Taxes.Total** - amount of taxes for all passengers in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
+-  **Offer.OfferItem.Service** - flight service and/or other flight support services. The service can be presented in a bundle with other services or in one separate Offer.OrderItem. The element includes the attribute ServiceID = "SVC1" (SVC prefix is required) containing the unique ID of the service. The Service element cannot contain FlightRefs and ServiceDefinitionRef elements at the same time. Data type - custom.
+-  **Offer.OfferItem.Service.PassengerRefs** - reference to one or several passengers in DataLists.PassengerList.
+-  **Offer.OfferItem.Service.FlightRefs** - reference to one or more flights to Datalists.FlightList, which are presented as a service. The attribute ODRef = "ODN1" (the ODN prefix is required) refers to the element that contains leg information.
+-  **Offer.OfferItem.Service.ServiceDefinitionRef** - reference to the description of the service in Datalists.ServiceDefinitionList which is not a flight, but associated with it, for example, luggage. The SegmentRefs="SEG0" attribute (the SEG prefix is required) refers to one or more flight segments to which this service corresponds.
+-  **Offer.OfferItem.FareDetail** - information about the price component for a certain passenger type in the current OfferItem. Data type - custom.
+-  **Offer.OfferItem.FareDetail.PassengerRefs** - reference to one or several passengers of the same type in DataLists.PassengerList.
+-  **Offer.OfferItem.FareDetail.Price** - information about the price component for a certain passenger type. Data type - custom.
+-  **Offer.OfferItem.FareDetail.Price.TotalAmount** - total price (fare + taxes) for a certain passenger type. Data type - custom.
+-  **Offer.OfferItem.FareDetail.Price.TotalAmount.SimpleCurrencyPrice** - total price (fare + taxes) for a specific passenger type in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
+-  **Offer.OfferItem.FareDetail.Price.BaseAmount** - base fare price in the currency of sale for a particular passenger type in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
+- **Offer.OfferItem.FareDetail.Price.FareFiledIn** - base price in the currency of the fare establishment. Data type - custom.
+- **Offer.OfferItem.FareDetail.Price.FareFiledIn.BaseAmount** - base price in the currency of the fare establishment for a certain passenger type in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
+- **Offer.OfferItem.FareDetail.Price.Taxes** - information about the taxes amount for a certain passenger type. Data type - custom.
+- **Offer.OfferItem.FareDetail.Price.Taxes.Total** - total amount of all taxes for a certain type of passenger in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
+-  **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown** - element containing an array of tax components. Data type - custom.
+-  **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown.Tax** - tax components. Data type - custom.
+-  **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown.Tax.Amount** - tax value, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
+-  **Offer.OfferItem.FareDetail.Price.Taxes.Breakdown.Tax.TaxCode** - tax code. Data type - string.
+-  **Offer.OfferItem.FareDetail.FareComponent** - contains references to information about the fare component details and segments.
+-  **Offer.OfferItem.FareDetail.FareComponent.PriceClassRef** - reference to the fare component details.
+-  **Offer.OfferItem.FareDetail.FareComponent.SegmentRefs** - reference to one or more flight segments which corresponds to the price.
+-  **AirShoppingRS.DataLists** - container with information about the elements of the offer which are: information about passengers, baggage, route and segments. Data type - custom.
+-  **DataLists.PassengerList** - information about the passengers. Data type - custom.
+-  **PassengerList.Passenger** - passengers for whom the search was performed. Attribute PassengerID = "PAX1" (PAX prefix required) - unique passenger ID.
+-  **PassengerList.Passenger.PTC** - passenger type, possible values. Data type - string.
+    -  **ADT** - adult;
+    -  **CHD** - child;
+    -  **INF** - infant.
+-  **DataLists.BaggageAllowanceList** - information about the baggage transportation. Data type - custom.
+-  **BaggageAllowanceList.BaggageAllowance** - the BaggageAllowanceID = "BAG1" attribute (the BAG prefix is required) containing a unique baggage ID. Data type - custom.
+-  **BaggageAllowanceList.BaggageAllowance.BaggageCategory** - element always containing the value "Checked".
+-  **BaggageAllowanceList.BaggageAllowance.AllowanceDescription** - two types of checked baggage are possible: Piece and Weight.
+-  **For Piece, the following elements are returned:**
+-  - **BaggageAllowanceList.BaggageAllowance.PieceAllowance**
+-  - **BaggageAllowanceList.BaggageAllowance.PieceAllowance.ApplicableParty** - element always containing the Traveler value. Means that the luggage is distributed to one passenger.
+-  - **BaggageAllowanceList.BaggageAllowance.PieceAllowance.TotalQuantity** - number of bags. Data type - integer. 
+-  - **BaggageAllowanceList.BaggageAllowance.PieceAllowance.PieceMeasurements** - attribute Quantity = "1" element also contains information on the number of bags, data type - integer.
+-  **For Weight, the following elements are returned**:
+-  - **BaggageAllowanceList.BaggageAllowance.WeightAllowance**
+-  - **BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.Value** - maximum baggage weight. Data type - positive integer.
+-  - **BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.UOM** - unit of measure for the above weight. Data type - string.
+-  **The Concept attribute of the AllowanceDescription element defines the measure of baggage, possible values:**
+ - **700** - Kilos;
+-  **701** - Pounds;
+-  **C** - Special Charge;
+-  **N** - Number of pieces;
+-  **S** - Size;
+-  **W** - Weight.
+- **BaggageAllowanceList.BaggageAllowance.AllowanceDescription.ApplicableParty** - element always containing the Traveler value. Means that every checked baggage is distributed per passenger.
+-  **BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions** - baggage description. Data type - custom. 
+-  **BaggageAllowanceList. BaggageAllowance.AllowanceDescription.Descriptions.Description**
+-  **BaggageAllowanceList. BaggageAllowance.AllowanceDescription.Descriptions.Description.Text** - 
+ the default value is "Free baggage". Data type - string.
+-  **DataLists.FlightSegmentList** - contains information about the flight segments. Data type - custom.
+-  **FlightSegmentList.FlightSegment** - flight segment details. Data type - custom. Includes two attributes:
+-  - **SegmentKey** - unique segment ID, required SEG prefix.
+-  - **ElectronicTicketInd** - attribute of an electronic ticket. Data type - boolean.
+-  **FlightSegmentList.FlightSegment.Departure** - information about the departure segment. Data type - custom.
+-  **FlightSegmentList.FlightSegment.Departure.AirportCode** - IATA code of departure airport. Data type - string.
+-  **FlightSegmentList.FlightSegment.Departure.Date** - departure date. The format is "yyyy-mm-dd".
+-  **FlightSegmentList.FlightSegment.Departure.Time** - departure time. The format is "hh:mm".
+-  **FlightSegmentList.FlightSegment.Departure.Terminal** - information about the terminal. Data type - custom.
+-  **FlightSegmentList.FlightSegment.Departure.Terminal.Name** - starting point. Data type - string.
+-  **FlightSegmentList.FlightSegment.Arrival** - information about the arrival segment. Data type - custom.
+-  **FlightSegmentList.FlightSegment.Arrival.AirportCode** - IATA airport arrival code. Data type - string.
+-  **FlightSegmentList.FlightSegment.Arrival.Date** - date of arrival. The format is "yyyy-mm-dd".
+- **FlightSegmentList.FlightSegment.Arrival.Time** - arrival time. The format is "hh:mm".
+- **FlightSegmentList.FlightSegment.Arrival.Terminal** - information about the terminal. Data type - custom.
+- **FlightSegmentList.FlightSegment.Arrival.Terminal.Name** - arrival terminal. Data type - string.
+- **FlightSegmentList.FlightSegment.MarketingCarrier** - information about the marketing carrier. Data type - custom.
+- **FlightSegmentList.FlightSegment.MarketingCarrier.AirlineID** - IATA code of a marketing carrier. Data type - string.
+- **FlightSegmentList.FlightSegment.MarketingCarrier.FlightNumber** - flight number of the marketing carrier.
+- **FlightSegmentList.FlightSegment.OperatingCarrier** - information about the operating carrier. Data type - custom.
+- **FlightSegmentList.FlightSegment.OperatingCarrier.AirlineID** - IATA code of the operating carrier. Data type - string.
+- **FlightSegmentList.FlightSegment.OperatingCarrier.FlightNumber** - flight number of the operating carrier. Data type - string.
+- **FlightSegmentList.FlightSegment.Equipment** - information about the type of aircraft. Data type - custom.
+- **FlightSegmentList.FlightSegment.Equipment.AircraftCode** - aircraft type. Data type - string.
+- **FlightSegmentList.FlightSegment.FlightDetail** - flight details. Data type - custom.
+- **FlightSegmentList.FlightSegment.FlightDetail.FlightDuration** - informs about the duration of the flight. Data type - custom.
+- **FlightSegmentList.FlightSegment.FlightDetail.FlightDuration.Value** - flight duration within the segment.
+-  **DataLists.FlightList** - element containing a list of flights that make up the route and their segments, as well as the duration of the flight. Data type - custom.
+-  **FlightList.Flight** - attribute FlightKey = "FLTL0S0" (FLTL prefix required) returns a unique flight ID within the proposal.
+-  **FlightList.Flight.Journey** - information on the flight duration within the shoulder. Data type - custom.
+-  **FlightList.Flight.Journey.Time** - flight duration. Example: PD1T3H10M, where D1 is days, 3H is hours, 10M are minutes.
+-  **FlightList.Flight.SegmentReferences** - one or more segments that make up a flight within one shoulder.
+-  **DataLists.OriginDestinationList** - contains information about the shoulders, namely the points of departure and arrival. Data type - custom.
+-  **OriginDestinationList.OriginDestination** - informs you about the departure and arrival points on the shoulder. The OriginDestinationKey = "ODN1" attribute (the ODN prefix is required) contains a unique shoulder ID. Data type - custom.
+-  **OriginDestinationList.OriginDestination.DepartureCode** - IATA airport code of departure. Data type - string.
+-  **OriginDestinationList.OriginDestination.ArrivalCode** - IATA airport arrival code. Data type - string.
+-  **OriginDestinationList.OriginDestination.FlightReferences** - contains links to the list of flights whose departure/arrival point coincide with the current one.
+-  **DataLists.PriceClass ** - element containing a list of prices and characteristics of the tariff. Data type - custom.
+-  **PriceClass.PriceClass** - contains information about the tariff. PriceClassID = "PRC1" attribute (PRC prefix is required) - unique price ID. Data type - custom.
+-  **PriceClass.PriceClass.Name** - name taking several values separated by an underscore. Example: NVU5_N_Y_ECONOMY, where in the first place is the family code or rate code (in the absence of the first), in the second letter of the booking class, in the third place the code of the service class and then the name of the service class. Data type is a string.
+-  **PriceClass.PriceClass.FareBasisCode** - fare code. Data type - custom.
+-  **PriceClass.PriceClass.FareBasisCode.Code** - fare code. Data type - string.
+-  **PriceClass.PriceClass.ClassOfService** - information about the booking class. Data type - custom.
+-  **PriceClass.PriceClass.ClassOfService.Code** - booking class letter. Contains the attribute SeatsLeft = "9", informing about the number of empty seats.
+-  **PriceClass.PriceClass.ClassOfService.MarketingName** - service class name. The CabinDesignator = "Y" attribute describes the class of service code. Data type - string.
+-  **DataLists.ServiceDefinitionList** - contains the description and characteristics of services except for the flight. Data type - custom.
+-  **ServiceDefinitionList.ServiceDefinition** - attribute ServiceDefinitionID = "SVD1" (SVD prefix required) a unique ID for the service description.
+-  **ServiceDefinitionList.ServiceDefinition.Name** - service name. For example: Free baggage. Data type - string.
+-  **ServiceDefinitionList.ServiceDefinition.BaggageAllowanceRef** - reference to the description of more detailed information about baggage.
+-  **ServiceDefinitionList.ServiceDefinition.Descriptions** - service information. Data type - custom.
+-  **ServiceDefinitionList.ServiceDefinition.Descriptions.Description** - information about the service. Data type - custom.
+-  **ServiceDefinitionList.ServiceDefinition.Descriptions.Description.Text** - service description. Data type - string.
+-  **AirShoppingRS.Metadata** - contains a list of metadata related to additional information about the flight or route. Data type - custom.
+-  **Metadata.Shopping** - Data type - custom.
+-  **Shopping.ShopMetadataGroup.Flight.** - additional flight information. Data type - custom.
+-  **Shopping.ShopMetadataGroup.Flight.FlightMetadatas** - additional information about the flight. Data type - custom.
+-  **Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata** - contains two attributes:
+-  - **refs** - informs about binding to one or several segments,
+-  - **MetadataKey** - sets a unique ID. Data type - custom.
+-  **Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.BindingKey** - reference to the flight. Data type - string.
+-  **Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.Meals** - element containing nutrition information. Data type - array of Meal type values.
+-  **Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.Meals.Meal** - food types. Data type - string, possible values:
+-  - **B** - Breakfast;
+-  - **C** - Alcoholic beverages;
+-  - **D** - Dinner;
+-  - **L** - Lunch;
+-  - **M** - Meal;
+-  - **R** - Refreshment;
+-  - **S** - Snack or light meal;
+-  - **V** - Continental breakfast. 
 
-##### Пример
+##### Sample
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
