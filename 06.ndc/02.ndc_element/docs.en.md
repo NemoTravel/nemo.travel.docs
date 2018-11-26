@@ -15,7 +15,7 @@ All NDC requests and responses have a specific set of common basic elements.
 -  **Header.Requisites** - details of access to the air server. Data type - custom.
 -  **Header.Requisites.Login** - login to access the server. Data type - string.
 -  **Header.Requisites.Password** - password to access the server. Data type - string.
--  **Header.Requisites.AuthToken** - key issued by Nemo.travel employees. Data type - string. You need to specify either it or a login + password pair.
+-  **Header.Requisites.AuthToken** - key issued by Nemo.travel staff. Data type - string. You need to specify either this key or a login + password pair.
 -  **Header.Requisites.NemoOneAuthToken** - key issued by Nemo.travel employees. Data type - string. You need to specify either this key or a login + password pair.
 -  **Header.Requisites.UserContextId** - user ID (order owner) whose settings are used (only for authorization via login + password).
 
@@ -23,16 +23,16 @@ All NDC requests and responses have a specific set of common basic elements.
 -  **Body.NameRequest** - element containing the request body. By "NameRequest" is meant the name of a specific request, for example, AirShoppingRQ, OfferPriceRQ, etc. It is imperative that you specify the Version attribute, which contains the NDC 17.2 protocol version, for example, Version = "17.2". Data type - custom.
 
 ##### NDC Document Information
-- **NameRequest.Document** - used to specify the gateway name and the version of the internal realization in the system (mandatory). Data type - custom.
-- **NameRequest.Document.Name** - gateway name (mandatory). Data type - string.
+- **NameRequest.Document** - used to specify the gateway name and the version of the internal realization in the system (required). Data type - custom.
+- **NameRequest.Document.Name** - gateway name (required). Data type - string.
 - **NameRequest.Document.ReferenceVersion** - version (required). Data type - string.
-- **NameRequest.Party** - contains information about the request sender, details of the search and more (mandatory). Data type - custom.
+- **NameRequest.Party** - contains information about the request sender, details of the search and more (required). Data type - custom.
 
 ##### Request Sender Information
--  **Party.Sender** - sender (mandatory). Data type - custom.
--  **Party.Sender.TravelAgencySender** - sender (mandatory). Data type - custom.
+-  **Party.Sender** - sender (required). Data type - custom.
+-  **Party.Sender.TravelAgencySender** - sender (required). Data type - custom.
 -  **Party.Sender.TravelAgencySender.OtherIDs** - search details and miscellaneous (optional). Data type - custom.
--  **Party.Sender.TravelAgencySender.OtherIDs.OtherID** - depending on the value of the Description attribute is determined by the content of the OtherID element (mandatory). Attribute data type - string, possible values:
+-  **Party.Sender.TravelAgencySender.OtherIDs.OtherID** - depending on the value of the Description attribute is determined by the content of the OtherID element (required). Attribute data type - string, possible values:
     - **Source** - ID of the Nemo Connect requisites package;
     - **Tag** - one of the labels of the request sender, describing it in accordance with a certain criterion;
     - **SubAgencyID** - external subagency ID.
