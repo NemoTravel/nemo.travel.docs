@@ -288,7 +288,7 @@ Flight leg prices are described in the current OfferItem.
 -  **DataLists.ServiceDefinitionList** - contains the description and characteristics of services except for the flight. Data type - custom.
 -  **ServiceDefinitionList.ServiceDefinition** - attribute ServiceDefinitionID = "SVD1" (SVD prefix required) a unique ID for the service description.
 -  **ServiceDefinitionList.ServiceDefinition.Name** - service name. For example: Free baggage. Data type - string.
--  **ServiceDefinitionList.ServiceDefinition.BaggageAllowanceRef** - link to the description of more detailed information about baggage.
+-  **ServiceDefinitionList.ServiceDefinition.BaggageAllowanceRef** - reference to the description of more detailed information about baggage.
 -  **ServiceDefinitionList.ServiceDefinition.Descriptions** - service information. Data type - custom.
 -  **ServiceDefinitionList.ServiceDefinition.Descriptions.Description** - information about the service. Data type - custom.
 -  **ServiceDefinitionList.ServiceDefinition.Descriptions.Description.Text** - service description. Data type - string.
@@ -299,7 +299,7 @@ Flight leg prices are described in the current OfferItem.
 -  **Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata** - contains two attributes:
 -  - **refs** - informs about binding to one or several segments,
 -  - **MetadataKey** - sets a unique ID. Data type - custom.
--  **Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.BindingKey** - link to the flight. Data type - string.
+-  **Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.BindingKey** - reference to the flight. Data type - string.
 -  **Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.Meals** - element containing nutrition information. Data type - array of Meal type values.
 -  **Shopping.ShopMetadataGroup.Flight.FlightMetadatas.FlightMetadata.Meals.Meal** - food types. Data type - string, possible values:
 -  - **B** - Breakfast;
