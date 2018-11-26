@@ -9,15 +9,15 @@ Performs the ticketing.
 -  **AirDocIssueRQ** - ticket request. Data type - custom.
 -  **AirDocIssueRQ.Document** - **[common elements.](/Ndc/ndc_element)**
 -  **AirDocIssueRQ.Party** - **[common elements.](/Ndc/ndc_element)**
--  **AirDocIssueRQ.Query** - contents of the request (mandatory). Data type - custom.
-- **Query.TicketDocQuantity** - number of issued tickets (mandatory). Data type - positive integer.
--  **Query.TicketDocInfo** - information about the order issued (mandatory). Data type - custom.
--  **TicketDocInfo.PassengerReference** - reference to the passenger in DataLists.PassengerList (mandatory). ***If there are several passengers in the order, then a separate TicketDocInfo is formed for each passenger.***
--  **TicketDocInfo.OrderReference** - contains the order ID (mandatory). Data type - custom.
+-  **AirDocIssueRQ.Query** - contents of the request (required). Data type - custom.
+- **Query.TicketDocQuantity** - number of issued tickets (required). Data type - positive integer.
+-  **Query.TicketDocInfo** - information about the order issued (required). Data type - custom.
+-  **TicketDocInfo.PassengerReference** - reference to the passenger in DataLists.PassengerList (required). ***If there are several passengers in the order, then a separate TicketDocInfo is formed for each passenger.***
+-  **TicketDocInfo.OrderReference** - contains the order ID (required). Data type - custom.
 -  **TicketDocInfo.OrderReference.OrderID** - unique order ID. Owner attribute contains the owner of the order (GDS code). Element and attribute required.
 -  **TicketDocInfo.Payments** - payment information (optional), accepts a collection of items. Payment information must be specified only in the first TicketDocInfo element, data from other TicketDocInfo is ignored. It is possible to set several payment methods.
 -  **TicketDocInfo.Payments.Payment** - detailed payment information (required). Data type - custom.
--  **TicketDocInfo.Payments.Payment.Type** - type of payment (mandatory). Depending on the type of payment, a number of elements of the Method block change. The following are the possible values:
+-  **TicketDocInfo.Payments.Payment.Type** - type of payment (required). Depending on the type of payment, a number of elements of the Method block change. The following are the possible values:
 -	-	**CA** - Cash.
 ```xml	
 <ns:Method>
@@ -50,16 +50,16 @@ Performs the ticketing.
 	</ns:Voucher>
 </ns:Method>
 ```	
--  **TicketDocInfo.Payments.Payment.Amount** - payment amount (mandatory). The element includes two attributes:
+-  **TicketDocInfo.Payments.Payment.Amount** - payment amount (required). The element includes two attributes:
 - - **Code** - currency code, data type - string.
 - - **Taxable** - taxable, data type - boolean.
 -  **TicketDocInfo.Payments.Payment.Order** - The OrderID attribute of the Order element containing the order ID. Element and attribute required.
 -  **TicketDocInfo.Commission** - commission information (optional). The element must contain either an absolute value or a percentage. Commission information should be set only in the first TicketDocInfo element, data from other TicketDocInfo is ignored. Data type - custom.
-- **Commission.Amount** - the absolute value of the commission. Data type - decimal.
+- **Commission.Amount** - absolute value of the commission. Data type - decimal.
 - **Commission.Percentage** - commission in percent. Data type - decimal.
-- **Query.DataLists** - contains data about passengers (mandatory). Data type - custom.
-- **DataLists.PassengerList** - information about passengers for whom an order is being created (mandatory). Data type - custom.
-- **PassengerList.Passenger** - PassengerID attribute containing a unique passenger ID (mandatory).
+- **Query.DataLists** - contains passenger data (required). Data type - custom.
+- **DataLists.PassengerList** - information about passengers for whom an order is being created (required). Data type - custom.
+- **PassengerList.Passenger** - PassengerID attribute containing a unique passenger ID (required).
 
 
 ##### Sample
@@ -130,7 +130,7 @@ Performs the ticketing.
 In general, the contents of the order check response correspond to the response [OrderCreate](/ndc/request-list/ordercreate), with the exception of the element describing electronic documents.
 
 - **OrderViewRS.Response.TicketDocInfos** - information about electronic documents. Data type - array.
-- **TicketDocInfos.TicketDocInfo** - information about electronic documents (mandatory). Data type - custom.
+- **TicketDocInfos.TicketDocInfo** - information about electronic documents (required). Data type - custom.
 - **TicketDocInfos.TicketDocInfo.TicketDocument** - electronic document (ticket, EMD). Data type - custom. Element is optional.
 - **TicketDocInfos.TicketDocInfo.TicketDocument.TicketDocNbr** - electronic document number. Data type - string.
 - **TicketDocInfos.TicketDocInfo.TicketDocument.Type** - electronic document type. Data type - string. Possible values:
