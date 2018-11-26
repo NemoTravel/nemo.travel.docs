@@ -12,8 +12,8 @@ The operation of creating an order.
 -  - contact details of passengers and agencies;
 -  - form of payment;
 -  - SSR, OSI, remarks.
--  **OrderCreateRQ.Document ** - **[common elements.](/Ndc/ndc_element)**
--  **OrderCreateRQ.Party** - **[common elements.](/Ndc/ndc_element)** In the current request, the Party element is supplemented with information about the agent’s contact information.
+-  **OrderCreateRQ.Document** - **[common elements.](/Ndc/ndc_element)**
+-  **OrderCreateRQ.Party** - **[common elements.](/Ndc/ndc_element)** In the current request, the Party element is supplemented with data about the agent’s contact information.
 -  **OrderCreateRQ.Party.Sender.TravelAgencySender.Contacts** - agency contact details (optional). Data type - custom.
 -  **TravelAgencySender.Contacts.Contact** - describes the contact details of the agency. Data type - custom.
 -  **TravelAgencySender.Contacts.Contact.EmailContact** - agency email address. Data type - custom.
@@ -25,14 +25,14 @@ The operation of creating an order.
 -  **Query.Order.Offer** - describes the offer chosen by the passenger to create an order. Data type - custom. Includes 3 required attributes:
 -  - **OfferID** - unique offer ID (the value is obtained as a result of the OfferPrice update);
 -  - **ResponseID** - unique update event ID;
--  - **Owner** - the code of the owner (GDS) of the offer. Data type - string.
+-  - **Owner** - owner code (GDS) of the offer. Data type - string.
 -  **Query.Order.Offer.OfferItem** - describes the bundle of services included in the offer. Data type - custom. Required attribute OfferItemID.
 -  **Query.Order.Offer.OfferItem.PassengerRefs** - link to one or several passengers in DataLists.PassengerList.
 -  **Query.Order.Offer.OfferItem.ServiceSelection** - contains a unique service ID within the OfferItem. Data type - custom.
 -  **Query.Order.Offer.OfferItem.ServiceSelection.ServiceDefinitionID** - link to the description of the service in DataLists.ServiceDefinitionList.ServiceDefinition.
 -  **Query.Payments** - payment information (optional). Data type - custom.
 -  **Payments.Payment** - detailed information about the payment. Data type - custom.
--  **Payments.Payment.Type** - payment type. Depending on the type of payment, a number of elements of the Method block change. The following are the possible values: 
+-  **Payments.Payment.Type** - payment type. Depending on it, a range of elements of the Method block is modified. The following are the possible values: 
 -	-	**CA** - Cash.
 ```xml	
 <ns:Method>
@@ -69,11 +69,11 @@ The operation of creating an order.
 -  - **Code** - currency code, data type - string.
 -  - **Taxable** - taxable, data type - boolean.
 -   **Query.Commission** - information about the commission (optional). The element must contain either an absolute value or a percentage. Data type - custom.
--  **Commission.Amount** - the absolute value of the commission. Data type - decimal fractional number.
+-  **Commission.Amount** - absolute value of the commission. Data type - decimal fractional number.
 -  **Commission.Percentage** - commission in percent. Data type - decimal fractional number.
--  **Query.DataLists** - contains data about passengers and their contacts, remarks, OSI / SSR. The data type is complex.
+-  **Query.DataLists** - contains data about passengers and their contacts, remarks, OSI/SSR. Data type - custom.
 -  **DataLists.PassengerList** - information about passengers for whom an order is being created. Data type - custom.
--  **PassengerList.Passenger** - the element attribute contains a unique PassengerID.
+-  **PassengerList.Passenger** - element attribute containing a unique PassengerID.
 -  **PassengerList.Passenger.PTC** - passenger type, possible values:
 -  - **ADT** - adult;
 -  - **CHD** - child;
@@ -91,7 +91,7 @@ The operation of creating an order.
 -  **PassengerList.Passenger.LoyaltyProgramAccount.Airline.AirlineDesignator** - IATA airline code. Data type - string.
 -  **PassengerList.Passenger.LoyaltyProgramAccount.AccountNumber** - loyalty card number.
 -  **PassengerList.Passenger.IdentityDocument** - identity document. Data type - custom.
--  **PassengerList.Passenger.IdentityDocument.IdentityDocumentNumber** - document number (mandatory).
+-  **PassengerList.Passenger.IdentityDocument.IdentityDocumentNumber** - document number (required).
 -  **PassengerList.Passenger.IdentityDocument.IdentityDocumentType** - document type, possible values:
 -	-	**PT** - Passport;
 -	-	**GC** - Resident alien card;
@@ -106,14 +106,14 @@ The operation of creating an order.
 -	-	**F1** - Other Documents;
 -	-	**VI** - Visa.
 -  **PassengerList.Passenger.IdentityDocument.IssuingCountryCode** - country code of issuing the document. Data type - string.
--  **PassengerList.Passenger.IdentityDocument.ExpiryDate** - document validity period. The format is "YYYY-MM-DD".
--  **PassengerList.Passenger.ContactInfoRef** - a link to the passenger's contact data in DataLists.ContactList. CTC prefix is mandatory.
--  **PassengerList.Passenger.InfantRef** - binding a passenger to another passenger, makes sense and is mandatory only for infants without a seat (optional).
+-  **PassengerList.Passenger.IdentityDocument.ExpiryDate** - document validity period. The format is "yyyy-mm-dd".
+-  **PassengerList.Passenger.ContactInfoRef** - a link to the passenger's contact data in DataLists.ContactList. CTC prefix is required.
+-  **PassengerList.Passenger.InfantRef** - binding a passenger to another passenger, makes sense and is required only for infants without a seat (optional).
 -  **PassengerList.Passenger.Remark** - text note tied to a passenger (optional). Data type - custom.
 -  **PassengerList.Passenger.Remark.Remark** is a text note tied to a passenger (optional). Data type - string.
 - **DataLists. ContactList** - information about the contact details of passengers. Data type - custom.
--  **ContactList.ContactInformation** - the element attribute contains the unique contact identifier ContactID = "CTC1" (the CTC prefix is required).
--  **ContactList.ContactInformation.ContactProvided** - contact details of the passenger. It should be noted that the email address and telephone number must be presented in separate elements of ContactProvided. Data type - custom.
+-  **ContactList.ContactInformation** - element attribute containing the unique contact identifier ContactID = "CTC1" (CTC prefix required).
+-  **ContactList.ContactInformation.ContactProvided** - contact details of the passenger. It should be noted that the email address and phone number must be presented in separate elements of ContactProvided. Data type - custom.
 -  **ContactList.ContactInformation.ContactProvided.EmailAddress** - information about the passenger's email address. Data type - custom.
 -  **ContactList.ContactInformation. ContactProvided.EmailAddress.EmailAddressValue** - the passenger's email address. Data type - string.
 -  **ContactList.ContactInformation.ContactProvided.Phone** - passenger's contact phone. Data type - custom.
@@ -126,18 +126,18 @@ The operation of creating an order.
 -  **ContactList.ContactInformation.ContactProvided.Phone.AreaCode** - region code.
 -  **ContactList.ContactInformation.ContactProvided.Phone.PhoneNumber** - phone number.
 -  **ContactList.ContactInformation.ContactProvided.Phone.Extension** - extension number.
--  **DataLists. InstructionsList** - additional instructions, and in particular remarks related to the entire order. Data type - custom.
--  **InstructionsLis.Instruction** - The ListKey attribute contains a unique identifier for the instruction.
+-  **DataLists. InstructionsList** - additional instructions, particularly the remarks related to the entire order. Data type - custom.
+-  **InstructionsLis.Instruction** - The ListKey attribute contains a unique instruction ID.
 -  **InstructionsLis.Instruction.FreeFormTextInstruction** - text remark. TData type - custom.
 -  **InstructionsLis.Instruction.FreeFormTextInstruction.Remark** - text remark. Data type - string.
--  **DataLists.ServiceDefinitionList** - OSI / SSR data. The data type is complex.
--  **ServiceDefinitionList.ServiceDefinition** - attribute contains a unique service identifier.
+-  **DataLists.ServiceDefinitionList** - OSI/SSR data. Data type - custom.
+-  **ServiceDefinitionList.ServiceDefinition** - attribute contains a unique service ID.
 -  **ServiceDefinitionList.ServiceDefinition.Name** - contains the name of the SSR or OSI.
--  **ServiceDefinitionList.ServiceDefinition.Descriptions** - description of the service. The data type is complex.
+-  **ServiceDefinitionList.ServiceDefinition.Descriptions** - description of the service. Data type - custom.
 -  **ServiceDefinitionList.ServiceDefinition.Descriptions.Description** - contains the value of Special Service Request or Other Service Information.
--  **ServiceDefinitionList.ServiceDefinition.BookingInstructions** - the OSI / SSR code. Data type - custom.
+-  **ServiceDefinitionList.ServiceDefinition.BookingInstructions** - OSI/SSR code. Data type - custom.
 -  **ServiceDefinitionList.ServiceDefinition.BookingInstructions.SSRCode** - SSR code. Data type - string.
--  **ServiceDefinitionList.ServiceDefinition.BookingInstructions.OSIText** - the text OSI. Data type - string.
+-  **ServiceDefinitionList.ServiceDefinition.BookingInstructions.OSIText** - OSI text. Data type - string.
 -  **ServiceDefinitionList.ServiceDefinition.BookingInstructions.Method** - AE method for SSR or AF for OSI.
 
 ##### Sample
@@ -336,7 +336,7 @@ The operation of creating an order.
 -  **Party.Sender.TravelAgencySender**
 -  **TravelAgencySender.Contacts** - contact information of the agency in the reservation. Data type - custom
 -  **TravelAgencySender.Contacts.Contact** - contact information of the agency in the reservation. Data type - custom.
--  **TravelAgencySender.Contacts.Contact.PhoneContact** - agency’s phoe data. Data type - custom.
+-  **TravelAgencySender.Contacts.Contact.PhoneContact** - agency’s phone data. Data type - custom.
 -  **TravelAgencySender.Contacts.Contact.PhoneContact.Number** - agency’s phone number. Data type - string.
 -  **TravelAgencySender.Contacts.Contact.EmailContact** - agency’s e-mail. Data type - custom.
 -  **TravelAgencySender.Contacts.Contact.EmailContact.Address** - agency’s e-mail. Data type - string.
@@ -348,8 +348,8 @@ The operation of creating an order.
 -  **BookingReferences.BookingReference**
 -  **BookingReferences.BookingReference.ID** - order locator in the GDS. Data type - string.
 -  **BookingReferences.BookingReference.AirlineID** - IATA code of the validating carrier. Data type - string.
--  **Order.TotalOrderPrice** - total cost for all services for all passengers in all segments in the current Order. Data type - custom.
--  **TotalOrderPrice.SimpleCurrencyPrice** - full cost (fare + taxes) for all passengers in the current Order, data type - decimal fractional number. The element includes two attributes:
+-  **Order.TotalOrderPrice** - total price for all services for all passengers in all segments in the current Order. Data type - custom.
+-  **TotalOrderPrice.SimpleCurrencyPrice** - full price (fare + taxes) for all passengers in the current Order, data type - decimal fractional number. The element includes two attributes:
 -  - **Code** - currency code, data type - string.
 -  - **Taxable** - taxable (false by default), data type - boolean.
 -  **Order.Payments** - payment information in the reservation. Data type - custom.
@@ -363,8 +363,8 @@ The operation of creating an order.
 -  **Order.TimeLimits** - order validity. Data type - custom.
 -  **TimeLimits.PaymentTimeLimit** - offer validity period. The element contains the DateTime attribute in the format "yyyy-mm-ddtchch:mm:ss".
 -  **Order.OrderItems** - represents a set of one or several services within an order. Data type - custom.
--  **OrderItems.OrderItem** - a set of services within an order. The element includes two required attributes:
--  - **OrderItemID** - unique ID of the service bundle (ORI prefix is ​​required).
+-  **OrderItems.OrderItem** - set of services within an order. The element includes two required attributes:
+-  - **OrderItemID** - unique ID of the service bundle (ORI prefix is required).
 -  - **Owner** - IATA code of the validating carrier.
 -  **OrderItems.OrderItem.ItemStatus** - current order status, possible values:
 -  - **K** - Confirmed;
@@ -373,37 +373,37 @@ The operation of creating an order.
 -  - **T** - Ticketed;
 -  - **X** - Cancel;
 -  - **V** - Void.
--  **OrderItems.OrderItem.PriceDetail** - full cost for all services for all passengers in all segments in the current OrderItem. Data type - custom.
--  **OrderItems.OrderItem.PriceDetail.TotalAmount** - contains the full cost (tariff + taxes). Data type - custom.
+-  **OrderItems.OrderItem.PriceDetail** - full price for all services for all passengers in all segments in the current OrderItem. Data type - custom.
+-  **OrderItems.OrderItem.PriceDetail.TotalAmount** - contains the full price (fare + taxes). Data type - custom.
 -  **OrderItems.OrderItem.PriceDetail.TotalAmount.SimpleCurrencyPrice** - total price (fare + taxes) for all passengers in the current OrderItem, data type - decimal fractional number. The Code and Taxable attributes are described above.
--  **OrderItems.OrderItem.PriceDetail.BaseAmount** - the base price for all passengers in the current OrderItem in the sale currency, data type - decimal fractional number. The Code and Taxable attributes are described above.
+-  **OrderItems.OrderItem.PriceDetail.BaseAmount** - base price for all passengers in the current OrderItem in the sale currency, data type - decimal fractional number. The Code and Taxable attributes are described above.
 -  **OrderItems.OrderItem.PriceDetail.Taxes** - total amount of taxes. Data type - custom.
 -  **OrderItems.OrderItem.PriceDetail.Taxes.Total** - total amount of taxes for all passengers in the current OrderItem, data type - decimal fractional number. The Code and Taxable attributes are described above.
--  **OrderItems.OrderItem.Service** - flight service and/or other flight support services. The service can be presented in a bundle with other services or in one separate Order.OrderItem. The element includes the attribute ServiceID = "SVC1" (SVC prefix is ​​required) containing the unique service ID. The Service element cannot contain the SegmentRef and ServiceDefinitionRef elements at the same time. Data type - custom.
+-  **OrderItems.OrderItem.Service** - flight service and/or other flight support services. The service can be presented in a bundle with other services or in one separate Order.OrderItem. The element includes the attribute ServiceID = "SVC1" (SVC prefix required) containing the unique service ID. The Service element cannot contain the SegmentRef and ServiceDefinitionRef elements at the same time. Data type - custom.
 - **Service.PassengerRef** - link to one passenger in DataLists.PassengerList.
 - **Service.SegmentRef** - link to a segment in Datalists.FlightSegmentList.
-- **Service.ServiceDefinitionRef** - link to the description of the service in Datalists.ServiceDefinitionList is not a transfer, but associated with it, for example, luggage. The SegmentRef attribute = "SEG0" (the SEG prefix is ​​required) refers to the flight segment to which this service corresponds.
+- **Service.ServiceDefinitionRef** - link to the description of the service in Datalists.ServiceDefinitionList is not a transfer, but associated with it, for example, luggage. The SegmentRef attribute = "SEG0" (SEG prefix required) refers to the flight segment to which this service corresponds.
 - **OrderItems.OrderItem.FareDetail** - container for information about the price component for a certain passenger type in the current OrderItem. The data type is complex.
 - **FareDetail.PassengerRefs** - link to one or several passengers of the same type in DataLists.PassengerList.
 - **FareDetail.Price** - information about the price component for a certain type of passenger. The data type is complex.
 - **FareDetail.Price.TotalAmount** - full price (fare + taxes) for a certain passenger type. Data type - custom.
 - **FareDetail.Price.TotalAmount.SimpleCurrencyPrice** - full price (fare + taxes) for a certain type of passenger in the current OrderItem, data type - decimal fractional number. The Code and Taxable attributes are described above.
 - **FareDetail.Price.BaseAmount** - base fare price for a specific passenger type in the current OrderItem in the sale currency, data type - decimal fractional number. The Code and Taxable attributes are described above.
-- **FareDetail.Price.FareFiledIn** - the base price in the currency of the tariff establishment. Data type - custom.
-- **FareDetail.Price.FareFiledIn.BaseAmount** - the base price in the currency of the fare establishment for a specific type of passenger in the current OrderItem, data type - decimal fractional number. The Code and Taxable attributes are described above.
-- **FareDetail.Price.Taxes** - information about the amount of taxes for a certain type of passenger. Data type - custom.
--  **FareDetail.Price.Taxes.Total** - the sum of all taxes for a certain type of passenger in the current OfferItem, the data type is a decimal fractional number. The Code and Taxable attributes are described above.
+- **FareDetail.Price.FareFiledIn** - base price in the currency of the tariff establishment. Data type - custom.
+- **FareDetail.Price.FareFiledIn.BaseAmount** - base price in the currency of the fare establishment for a specific type of passenger in the current OrderItem, data type - decimal fractional number. The Code and Taxable attributes are described above.
+- **FareDetail.Price.Taxes** - information about the amount of taxes for a certain passenger type. Data type - custom.
+-  **FareDetail.Price.Taxes.Total** - the sum of all taxes for a certain type of passenger in the current OfferItem, data type - decimal fractional number. The Code and Taxable attributes are described above.
 -  **FareDetail.Price.Taxes.Breakdown** - element that contains an array of components of taxes. Data type - custom.
 -  **FareDetail.Price.Taxes.Breakdown.Tax** - Tax components. Data type - custom.
 -  **FareDetail.Price.Taxes.Breakdown.Tax.Amount** - tax value, data type - decimal fractional number. The Code and Taxable attributes are described above.
 -  **FareDetail.Price.Taxes.Breakdown.Tax.TaxCode** - tax code. Data type - string.
 -  **FareDetail.Price.Taxes.Breakdown.Tax.TaxType** - tax type. Data type - string.
--  **FareDetail.FareComponent** - contains information about the tariff. Data type - custom.
--  **FareDetail.FareComponent.FareBasis** - information about the tariff. Data type - custom.
+-  **FareDetail.FareComponent** - contains fare information. Data type - custom.
+-  **FareDetail.FareComponent.FareBasis** - fare information . Data type - custom.
 -  **FareDetail.FareComponent.FareBasis.FareBasisCode** - contains the fare code. Data type - custom.
 -  **FareDetail.FareComponent.FareBasis.FareBasisCode.Code** - fare code. Data type - string.
 -  **FareDetail.FareComponent.FareBasis.RBD** - booking class letter. Data type - string.
--  **FareDetail.FareComponent.FareBasis.CabinType** - flight class (mandatory). Data type - custom.
+-  **FareDetail.FareComponent.FareBasis.CabinType** - flight class (required). Data type - custom.
 -  **FareDetail.FareComponent.FareBasis.CabinType.CabinTypeCode** - class of service code. Data type - string.
 -  **FareDetail.FareComponent.FareBasis.CabinType.CabinTypeName** - service class name. Data type - string.
 -  **FareDetail.FareComponent.SegmentRefs** - link to one or several flight segments to which the price corresponds.
@@ -412,7 +412,7 @@ The operation of creating an order.
 -  **Commission.Amount** - absolute value of the commission. Data type - decimal fractional number.
 -  **Response.DataLists** - container with information about passengers, contacts, route and in particular segments, etc. Data type - custom.
 -  **DataLists.PassengerList** - information about passengers. Data type - custom.
--  **PassengerList.Passenger** - the PassengerID = "PAX1" attribute (PAX prefix is ​​required) contains the unique passenger ID.
+-  **PassengerList.Passenger** - PassengerID = "PAX1" attribute (PAX prefix required) containing the unique passenger ID.
 -  **PassengerList.Passenger.PTC** - passenger type.
 -  **PassengerList.Passenger.CitizenshipCountryCode** - passenger nationality. Data type - string.
 -  **PassengerList.Passenger.Individual** - personal data of the passenger. Data type - custom.
@@ -431,22 +431,22 @@ The operation of creating an order.
 -  **PassengerList.Passenger.IdentityDocument.IdentityDocumentType** - document type, possible values ​​are described in the parameters of the OrderCreateRQ request.
 -  **PassengerList.Passenger.IdentityDocument.IssuingCountryCode** - country code of issuing the document. Data type - string.
 -  **PassengerList.Passenger.IdentityDocument.ExpiryDate** - document validity period. The format is "yyyy-mm-dd".
--  **PassengerList.Passenger.ContactInfoRef** - link to the passenger's contact data in DataLists.ContactList. CTC prefix is mandatory.
--  **PassengerList.Passenger.InfantRef** - association of a passenger with another passenger, reasonable and is mandatory only for infants without a seat (optional).
+-  **PassengerList.Passenger.ContactInfoRef** - link to the passenger's contact data in DataLists.ContactList. CTC prefix is required.
+-  **PassengerList.Passenger.InfantRef** - association of a passenger with another passenger, reasonable and is required only for infants without a seat (optional).
 -  **PassengerList.Passenger.Remark** - text note tied to a passenger (optional). Data type - custom.
 -  **PassengerList.Passenger.Remark.Remark** - text note tied to a passenger (optional). Data type - string.
 -  **DataLists. ContactList** - information about the contact details of passengers. Data type - custom.
--  **ContactList.ContactInformation** - element attribute containing the unique contact ID ContactID = "CTC1" (the CTC prefix is ​​required).
+-  **ContactList.ContactInformation** - element attribute containing the unique contact ID ContactID = "CTC1" (CTC prefix required).
 -  **ContactList.ContactInformation.ContactProvided** - contact details of the passenger. It should be noted that the email address and phone number are presented in separate elements of ContactProvided. Data type - custom.
 -  **ContactList.ContactInformation.ContactProvided.Phone** - passenger's contact phone. Data type - custom.
--  **ContactList.ContactInformation.ContactProvided.Phone.Label** - phone type. Data type is an enumeration.
--  **ContactList.ContactInformation.ContactProvided.Phone.PhoneNumber** - telephone number. Data type is a string.
--  **ContactList.ContactInformation.ContactProvided.EmailAddress** - information about the passenger's email address. The data type is complex.
--  **ContactList.ContactInformation.ContactProvided.EmailAddress.EmailAddressValue** - the passenger's email address. Data type - string.
+-  **ContactList.ContactInformation.ContactProvided.Phone.Label** - phone type. Data type - enumeration.
+-  **ContactList.ContactInformation.ContactProvided.Phone.PhoneNumber** - phone number. Data type - string.
+-  **ContactList.ContactInformation.ContactProvided.EmailAddress** - information about the passenger's email address. Data type - custom.
+-  **ContactList.ContactInformation.ContactProvided.EmailAddress.EmailAddressValue** - passenger's email address. Data type - string.
 -  **DataLists.BaggageAllowanceList** - information about the transportation of baggage. Data type - custom.
--  **BaggageAllowanceList.BaggageAllowance** - the BaggageAllowanceID = "BAG1" attribute (the BAG prefix is required) contains a unique baggage ID. Data type - custom.
+-  **BaggageAllowanceList.BaggageAllowance** - BaggageAllowanceID = "BAG1" attribute (BAG prefix required) containing a unique baggage ID. Data type - custom.
 -  **BaggageAllowanceList.BaggageAllowance.BaggageCategory** - element always containing the value "Checked".
--  **BaggageAllowanceList.BaggageAllowance.AllowanceDescription** - two types of checked baggage Piece and Weight are possible. The Concept attribute of the AllowanceDescription element defines the measure of baggage, possible values:
+-  **BaggageAllowanceList.BaggageAllowance.AllowanceDescription** - two types of checked baggage, Piece and Weight, are possible. The Concept attribute of the AllowanceDescription element defines the measure of baggage, possible values:
 -	-	**700** — Kilos;
 -	-	**701** — Pounds;
 -	-	**C** — Special Charge;
@@ -456,23 +456,23 @@ The operation of creating an order.
 -  **BaggageAllowanceList.BaggageAllowance.AllowanceDescription.ApplicableParty** - item always containing the Traveler value - the baggage is distributed to one passenger.
 -  **BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions** - baggage description. Data type - custom.
 -  **BaggageAllowanceList. BaggageAllowance.AllowanceDescription.Descriptions.Description** 
--  **BaggageAllowanceList. BaggageAllowance.AllowanceDescription.Descriptions.Description.Text** - the default value is "Free baggage". Data type - string.
+-  **BaggageAllowanceList. BaggageAllowance.AllowanceDescription.Descriptions.Description.Text** - default value is "Free baggage". Data type - string.
 -  **BaggageAllowanceList.BaggageAllowance.WeightAllowance**
--  **BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight** - maximum weight of baggage. The data type is complex.
--  **BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.Value** - maximum weight of baggage. The data type is a positive integer.
+-  **BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight** - maximum weight of baggage. Data type - custom.
+-  **BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.Value** - maximum weight of baggage. Data type - positive integer.
 -  **BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.UOM** - unit of measure for the above weight. Data type - string.
 -  **BaggageAllowanceList.BaggageAllowance.PieceAllowance**
--  **BaggageAllowanceList.BaggageAllowance.PieceAllowance.ApplicableParty** - element always containing the Traveler value. Means that the luggage is distributed to one passenger.
+-  **BaggageAllowanceList.BaggageAllowance.PieceAllowance.ApplicableParty** - element containing the Traveler value by default. Means that the luggage is distributed to one passenger.
 -  **BaggageAllowanceList.BaggageAllowance.PieceAllowance.TotalQuantity** - number of bags. Data type - integer.
--  **BaggageAllowanceList.BaggageAllowance.PieceAllowance.PieceMeasurements** - the attribute Quantity = "1" element also contains information on the number of bags, data type - integer.
+-  **BaggageAllowanceList.BaggageAllowance.PieceAllowance.PieceMeasurements** - attribute Quantity = "1" element also containing information on the number of bags, data type - integer.
 -  **DataLists.FlightSegmentList** - contains information about the segments of the flight. Data type - custom.
 -  **FlightSegmentList.FlightSegment** - details of the flight segment. Data type - custom. Includes two attributes: 
--  - **SegmentKey** - unique segment ID, SEG prefix is required.
+-  - **SegmentKey** - unique segment ID, SEG prefix required.
 -  - **ElectronicTicketInd** - attribute of an electronic ticket. Data type - boolean.
 -  **FlightSegmentList.FlightSegment.Departure** - information about the departure segment. Data type - custom.
 -  **FlightSegmentList.FlightSegment.Departure.AirportCode** - IATA code of departure airport. Data type - string.
 -  **FlightSegmentList.FlightSegment.Departure.Date** - departure date. The format is "yyyy-mm-dd".
--  **FlightSegmentList.FlightSegment.Departure.Time** - departure time. The format is "hh: mm".
+-  **FlightSegmentList.FlightSegment.Departure.Time** - departure time. The format is "hh:mm".
 -  **FlightSegmentList.FlightSegment.Departure.Terminal** - information about the terminal. Data type - custom.
 -  **FlightSegmentList.FlightSegment.Departure.Terminal.Name** - departure point. Data type - string.
 -  **FlightSegmentList.FlightSegment.Arrival** - information about the arrival segment. Data type - custom.
@@ -480,8 +480,8 @@ The operation of creating an order.
 -  **FlightSegmentList.FlightSegment.Arrival.Date** - date of arrival. The format is "yyyy-mm-dd".
 -  **FlightSegmentList.FlightSegment.Arrival.Time** - arrival time. The format is "hh:mm".
 -  **FlightSegmentList.FlightSegment.Arrival.Terminal** - information about the terminal. Data type - custom.
--  **FlightSegmentList.FlightSegment.Arrival.Terminal.Name** - the arrival signal. Data type is a string.
--  **FlightSegmentList.FlightSegment.MarketingCarrier** - information about the marketing carrier. The data type is complex.
+-  **FlightSegmentList.FlightSegment.Arrival.Terminal.Name** - the arrival signal. Data type - string.
+-  **FlightSegmentList.FlightSegment.MarketingCarrier** - information about the marketing carrier. Data type - custom.
 -  **FlightSegmentList.FlightSegment.MarketingCarrier.AirlineID** - IATA code of a marketing carrier. Data type - string.
 -  **FlightSegmentList.FlightSegment.MarketingCarrier.FlightNumber** - flight number of the marketing carrier. Data type - string.
 -  **FlightSegmentList.FlightSegment.OperatingCarrier.AirlineID** - IATA code of the operating carrier. Data type - string.
@@ -493,8 +493,8 @@ The operation of creating an order.
 -  **FlightSegmentList.FlightSegment.FlightDetail** - flight details. Data type - custom.
 -  **FlightSegmentList.FlightSegment.FlightDetail.FlightDuration** - informs about the flight duration. Data type - custom.
 -  **FlightSegmentList.FlightSegment.FlightDetail.FlightDuration.Value** - flight duration within the segment.
--  **DataLists.FlightList** - the element contains the flight identifier corresponding to one shoulder and the segments that make up this shoulder. The data type is complex.
--  **FlightList.Flight** - attribute FlightKey = "FLT0" (FLT prefix required) returns the unique identifier of the flight within the Order.
+-  **DataLists.FlightList** - element containing the flight ID corresponding to one shoulder and the segments that make up this shoulder. Data type - custom.
+-  **FlightList.Flight** - attribute FlightKey = "FLT0" (FLT prefix required) returns the unique ID of the flight within the Order.
 -  **FlightList.Flight.SegmentReferences** - links to one or several segments that are part of a flight within one leg.
 -  **DataLists.OriginDestinationList** - contains information about the shoulders, namely the points of departure and arrival. Data type - custom.
 -  **OriginDestinationList.OriginDestination** - informs you about the departure and arrival points on the shoulder. Data type - custom.
@@ -508,7 +508,6 @@ The operation of creating an order.
 -  **ServiceDefinitionList.ServiceDefinition.Descriptions** - service information. Data type - custom.
 -  **ServiceDefinitionList.ServiceDefinition.Descriptions.Description** - information about the service. Data type - custom.
 -  **ServiceDefinitionList.ServiceDefinition.Descriptions.Text** - description of the service. Data type - string.
-
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
@@ -1023,14 +1022,3 @@ The operation of creating an order.
    </s:Body>
 </s:Envelope>
 ```
-
-
-
-
-
-
-
-
-
-
-
