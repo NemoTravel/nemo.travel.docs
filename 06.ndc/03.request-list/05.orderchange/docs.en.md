@@ -11,7 +11,7 @@ Used to make changes in the order.
 -  **OrderChangeRQ.Document** - **[common elements.](/Ndc/ndc_element)**
 -  **OrderChangeRQ.Party** - **[common elements.](/ Ndc/ndc_element)**
 -  **OrderChangeRQ.Query**
--  **Query.OrderID** - unique order ID in Nemo.Connect, which you want to make changes (required). Data type - string.
+-  **Query.OrderID** - unique order ID in Nemo.Connect which you want to modify (required). Data type - string.
 -  **Query.PassengerServicing** - container for adding, deleting or updating passenger information. Possible data for change: documents, loyalty card, visa, passenger contacts, passenger notes.
 -  **PassengerServicing.New** - element for adding new data. _If the current request contains the PassengerServicing.Previous element, the data is modified._ The PassengerID attribute contains the unique ID of the passenger for which you want to make modifications. Data type - custom.
 -  **PassengerServicing.Previous** - element for adding new data. _If the current request contains the PassengerServicing.New element, the data is modified._ The PassengerID attribute contains the unique passenger ID for which you want to make changes. Data type - custom.
