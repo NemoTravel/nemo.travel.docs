@@ -349,14 +349,14 @@ The operation of creating an order.
 -  **BookingReferences.BookingReference.ID** - order locator in the GDS. Data type - string.
 -  **BookingReferences.BookingReference.AirlineID** - IATA code of the validating carrier. Data type - string.
 -  **Order.TotalOrderPrice** - total price for all services for all passengers in all segments in the current Order. Data type - custom.
--  **TotalOrderPrice.SimpleCurrencyPrice** - total price (fare + taxes) for all passengers in the current Order, data type - decimal fractional number. The element includes two attributes:
+-  **TotalOrderPrice.SimpleCurrencyPrice** - total price (fare + taxes) for all passengers in the current Order, data type - decimal. The element includes two attributes:
 -  - **Code** - currency code, data type - string.
 -  - **Taxable** - taxable (false by default), data type - boolean.
 -  **Order.Payments** - payment information in the reservation. Data type - custom.
 -  **Payments.Payment** - detailed information about the payment. Data type - custom.
 -  **Payments.Payment.Type** - type of payment. Data type - string.
 -  **Payments.Payment.Amount** - payment amount. Data type - custom.
--  **Payments.Payment.Amount.SimpleCurrencyPrice** - payment amount. Data type - decimal fractional number. The element includes two attributes:
+-  **Payments.Payment.Amount.SimpleCurrencyPrice** - payment amount. Data type - decimal. The element includes two attributes:
 -  - **Code** - currency code, data type - string.
 -  - **Taxable** - taxable, data type - boolean.
 -  **Payments.Payment.Method** - possible payment methods are described in the request to create a reservation.
@@ -375,10 +375,10 @@ The operation of creating an order.
 -  - **V** - Void.
 -  **OrderItems.OrderItem.PriceDetail** - total price for all services for all passengers in all segments in the current OrderItem. Data type - custom.
 -  **OrderItems.OrderItem.PriceDetail.TotalAmount** - contains the total price (fare + taxes). Data type - custom.
--  **OrderItems.OrderItem.PriceDetail.TotalAmount.SimpleCurrencyPrice** - total price (fare + taxes) for all passengers in the current OrderItem, data type - decimal fractional number. The Code and Taxable attributes are described above.
--  **OrderItems.OrderItem.PriceDetail.BaseAmount** - base price for all passengers in the current OrderItem in the sale currency, data type - decimal fractional number. The Code and Taxable attributes are described above.
+-  **OrderItems.OrderItem.PriceDetail.TotalAmount.SimpleCurrencyPrice** - total price (fare + taxes) for all passengers in the current OrderItem, data type - decimal. The Code and Taxable attributes are described above.
+-  **OrderItems.OrderItem.PriceDetail.BaseAmount** - base price for all passengers in the current OrderItem in the sale currency, data type - decimal. The Code and Taxable attributes are described above.
 -  **OrderItems.OrderItem.PriceDetail.Taxes** - total amount of taxes. Data type - custom.
--  **OrderItems.OrderItem.PriceDetail.Taxes.Total** - total amount of taxes for all passengers in the current OrderItem, data type - decimal fractional number. The Code and Taxable attributes are described above.
+-  **OrderItems.OrderItem.PriceDetail.Taxes.Total** - total amount of taxes for all passengers in the current OrderItem, data type - decimal. The Code and Taxable attributes are described above.
 -  **OrderItems.OrderItem.Service** - flight service and/or other flight support services. The service can be presented in a bundle with other services or in one separate Order.OrderItem. The element includes the attribute ServiceID = "SVC1" (SVC prefix required) containing the unique service ID. The Service element cannot contain the SegmentRef and ServiceDefinitionRef elements at the same time. Data type - custom.
 - **Service.PassengerRef** - link to one passenger in DataLists.PassengerList.
 - **Service.SegmentRef** - link to a segment in Datalists.FlightSegmentList.
@@ -387,15 +387,15 @@ The operation of creating an order.
 - **FareDetail.PassengerRefs** - link to one or several passengers of the same type in DataLists.PassengerList.
 - **FareDetail.Price** - information about the price component for a certain type of passenger. Data type - custom.
 - **FareDetail.Price.TotalAmount** - total price (fare + taxes) for a certain passenger type. Data type - custom.
-- **FareDetail.Price.TotalAmount.SimpleCurrencyPrice** - total price (fare + taxes) for a certain type of passenger in the current OrderItem, data type - decimal fractional number. The Code and Taxable attributes are described above.
-- **FareDetail.Price.BaseAmount** - base fare price for a specific passenger type in the current OrderItem in the sale currency, data type - decimal fractional number. The Code and Taxable attributes are described above.
+- **FareDetail.Price.TotalAmount.SimpleCurrencyPrice** - total price (fare + taxes) for a certain type of passenger in the current OrderItem, data type - decimal. The Code and Taxable attributes are described above.
+- **FareDetail.Price.BaseAmount** - base fare price for a specific passenger type in the current OrderItem in the sale currency, data type - decimal. The Code and Taxable attributes are described above.
 - **FareDetail.Price.FareFiledIn** - base price in the currency of the tariff establishment. Data type - custom.
-- **FareDetail.Price.FareFiledIn.BaseAmount** - base price in the currency of the fare establishment for a specific type of passenger in the current OrderItem, data type - decimal fractional number. The Code and Taxable attributes are described above.
+- **FareDetail.Price.FareFiledIn.BaseAmount** - base price in the currency of the fare establishment for a specific type of passenger in the current OrderItem, data type - decimal. The Code and Taxable attributes are described above.
 - **FareDetail.Price.Taxes** - information about the amount of taxes for a certain passenger type. Data type - custom.
--  **FareDetail.Price.Taxes.Total** - the sum of all taxes for a certain type of passenger in the current OfferItem, data type - decimal fractional number. The Code and Taxable attributes are described above.
+-  **FareDetail.Price.Taxes.Total** - the sum of all taxes for a certain type of passenger in the current OfferItem, data type - decimal. The Code and Taxable attributes are described above.
 -  **FareDetail.Price.Taxes.Breakdown** - element that contains an array of components of taxes. Data type - custom.
 -  **FareDetail.Price.Taxes.Breakdown.Tax** - Tax components. Data type - custom.
--  **FareDetail.Price.Taxes.Breakdown.Tax.Amount** - tax value, data type - decimal fractional number. The Code and Taxable attributes are described above.
+-  **FareDetail.Price.Taxes.Breakdown.Tax.Amount** - tax value, data type - decimal. The Code and Taxable attributes are described above.
 -  **FareDetail.Price.Taxes.Breakdown.Tax.TaxCode** - tax code. Data type - string.
 -  **FareDetail.Price.Taxes.Breakdown.Tax.TaxType** - tax type. Data type - string.
 -  **FareDetail.FareComponent** - contains fare information. Data type - custom.
@@ -408,8 +408,8 @@ The operation of creating an order.
 -  **FareDetail.FareComponent.FareBasis.CabinType.CabinTypeName** - service class name. Data type - string.
 -  **FareDetail.FareComponent.SegmentRefs** - reference to one or several flight segments to which the price corresponds.
 -  **Response.Commission** - information about the commission. Commission can only be in absolute value or percentage. Data type - custom.
--  **Commission.Percentage** - commission in percent. Data type - decimal fractional number.
--  **Commission.Amount** - absolute value of the commission. Data type - decimal fractional number.
+-  **Commission.Percentage** - commission in percent. Data type - decimal.
+-  **Commission.Amount** - absolute value of the commission. Data type - decimal.
 -  **Response.DataLists** - container with information about passengers, contacts, route and in particular segments, etc. Data type - custom.
 -  **DataLists.PassengerList** - information about passengers. Data type - custom.
 -  **PassengerList.Passenger** - PassengerID = "PAX1" attribute (PAX prefix required) containing the unique passenger ID.
