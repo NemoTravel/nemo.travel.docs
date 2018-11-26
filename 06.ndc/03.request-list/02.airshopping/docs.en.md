@@ -177,9 +177,9 @@ Flight leg prices are described in the current OfferItem.
 -  **Offer.FlightsOverview** - element containing links to a brief description of the flight and leg information. Data type - custom.
 -  **Offer.FlightsOverview.FlightRef** - link to the flight ID. The attribute ODRef = "ODN1" refers to an element containing information about the departure and arrival points.
 -  **Offer.OfferItem** - represents a bundle of one or several services within the offer. The OfferItemID attribute contains a unique ID of the service set, the OFI prefix is required. Data type - custom.
--  **Offer.OfferItem.TotalPriceDetail** - full price for all the services for all passengers in all segments in the current OfferItem. Data type - custom.
--  **Offer.OfferItem.TotalPriceDetail.TotalAmount** - contains the full price (tariff + rates). Data type - custom.
--  **Offer.OfferItem.TotalPriceDetail.TotalAmount.SimpleCurrencyPrice** - full price (fare + taxes) for all passengers in the current OfferItem, data type - decimal fractional number. The element includes two attributes:
+-  **Offer.OfferItem.TotalPriceDetail** - total price for all the services for all passengers in all segments in the current OfferItem. Data type - custom.
+-  **Offer.OfferItem.TotalPriceDetail.TotalAmount** - contains the total price (tariff + rates). Data type - custom.
+-  **Offer.OfferItem.TotalPriceDetail.TotalAmount.SimpleCurrencyPrice** - total price (fare + taxes) for all passengers in the current OfferItem, data type - decimal fractional number. The element includes two attributes:
 -  - **Code** - currency code, data type - string.
 -  - **Taxable** - taxable (false by default), data type - boolean.
 -  **Offer.OfferItem.TotalPriceDetail.BaseAmount** - base price of the fare in the sale currency for all passengers in the current OfferItem, data type - decimal fractional number. Contains the Code and Taxable attributes described above.
