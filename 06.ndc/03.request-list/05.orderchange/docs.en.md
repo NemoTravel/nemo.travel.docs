@@ -152,11 +152,11 @@ Used to make changes in the order.
 #### Example of contacts modification
 >The example represents the modification of a phone number. To delete the number, you need to fill only PassengerServicing.Previous, to add documents only PassengerServicing.New is filled. To successfully modify contacts, the ContactInformation array must contain all available passenger contact data (see example).
 
--  **New.ContactInfoRef** - link to new passenger contact details in DataLists.ContactList. CTC prefix is mandatory.
+-  **New.ContactInfoRef** - reference to new passenger contact details in DataLists.ContactList. CTC prefix required.
 -  **New.ActionType** - action with the content which needs to be performed. Data type - enumeration, possible values:
 -  - **Add** - adding, Should always be specified in New.ActionType.
 -  - **Delete** - deleting, Should always be specified in Previous.ActionType.
--  **Previous.ContactInfoRef** - link to the old contact details of the passenger in DataLists.ContactList. CTC prefix is mandatory.
+-  **Previous.ContactInfoRef** - reference to the old contact details of the passenger in DataLists.ContactList. CTC prefix required.
 -  **Previous.ActionType** - action with content that you want to perform. Data type - enumeration, possible values:
 -  - **OrderChangeRQ.DataLists** - element relevant only while changing the passenger's contact information. Data type - custom.
 -   **DataLists. ContactList** - contact details. Data type - array.
