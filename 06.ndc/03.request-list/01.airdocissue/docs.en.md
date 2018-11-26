@@ -142,7 +142,7 @@ In general, the contents of the order check response correspond to the response 
 -  **TicketDocInfos.TicketDocInfo.TicketDocument.DateOfIssue** - discharge date in the format yyyy-mm-dd.
 -  **TicketDocInfos.TicketDocInfo.TicketDocument.TimeOfIssue** - discharge time in hh:mm format.
 -  **TicketDocInfos. TicketDocInfo. TicketDocument. ReportingType** - type of ticketing contract (BSP, ARC, Airline).
--  **TicketDocInfos.TicketDocInfo.PassengerReference** - link to the passenger to whom the ticket corresponds.
+-  **TicketDocInfos.TicketDocInfo.PassengerReference** - reference to the passenger to whom the ticket corresponds.
 
 
 ```xml
