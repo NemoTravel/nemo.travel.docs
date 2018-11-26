@@ -12,9 +12,9 @@ Updating the offer received at the search stage.
 -  **OfferPriceRQ.Party** - **[common items.](/Ndc/ndc_element)**
 -  **OfferPriceRQ.Query** - contains offerID and OfferItemID identifiers for which the update should be performed. Data type - custom.
 -  **Query.Offer** - element describing the sentence (required). Contains the required attributes:
--   - **OfferID** - unique ID of the offer, taken from the search results;
--   - **Owner** - offer owner code (GDS);
--   - **ResponseID** - unique ID of the search event in which this offer was received.
+  - **OfferID** - unique ID of the offer, taken from the search results;
+  - **Owner** - offer owner code (GDS);
+  - **ResponseID** - unique ID of the search event in which this offer was received.
 -  **Query.Offer.OfferItem** - item containing the attribute OfferItemID (service set identifier) of the current offer. Element and attribute are required. Data type - custom.
 -  **Query.Offer.OfferItem.PassengerRefs** - reference to one or several passengers in DataLists.PassengerList (required). The number and types of passengers must match the requested at the search stage.
 -  **OfferPriceRQ.Preference** - additional update criteria (optional). Data type - custom.
@@ -36,11 +36,11 @@ Updating the offer received at the search stage.
 -  **InstructionsList.Instruction** - includes the ListKey = "INL1" attribute (the INL prefix is required), a unique ID of the instruction set. Data type - custom.
 -  **InstructionsList.Instruction.FreeFormTextInstruction** - accepts a collection of elements. Data type - custom.
 -  **InstructionsList.Instruction.FreeFormTextInstruction.Remark** - sets instructions, possible values:
-- - **ListFaresIfNoFamiliesDifined** - includes the return of the list of tariffs from the GDS in case they do not have a reference to the family;
-- - **UpdateCachedFareRules** - update tariff rules cached in the reservation;
-- - **IgnoreRepricingSettings** - allows you to ignore repricing settings;
-- - **DoNotSendVCInRequest** - not transferring the validating carrier in the request;
-- - **CheckAvailabilityWithBookingRequest** - using the location request to check the availability of the flight for booking.
+ - **ListFaresIfNoFamiliesDifined** - includes the return of the list of tariffs from the GDS in case they do not have a reference to the family;
+ - **UpdateCachedFareRules** - update tariff rules cached in the reservation;
+ - **IgnoreRepricingSettings** - allows you to ignore repricing settings;
+ - **DoNotSendVCInRequest** - not transferring the validating carrier in the request;
+ - **CheckAvailabilityWithBookingRequest** - using the location request to check the availability of the flight for booking.
 
 ##### Sample
 
