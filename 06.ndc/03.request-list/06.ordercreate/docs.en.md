@@ -349,7 +349,7 @@ The operation of creating an order.
 -  **BookingReferences.BookingReference.ID** - order locator in the GDS. Data type - string.
 -  **BookingReferences.BookingReference.AirlineID** - IATA code of the validating carrier. Data type - string.
 -  **Order.TotalOrderPrice** - total price for all services for all passengers in all segments in the current Order. Data type - custom.
--  **TotalOrderPrice.SimpleCurrencyPrice** - full price (fare + taxes) for all passengers in the current Order, data type - decimal fractional number. The element includes two attributes:
+-  **TotalOrderPrice.SimpleCurrencyPrice** - total price (fare + taxes) for all passengers in the current Order, data type - decimal fractional number. The element includes two attributes:
 -  - **Code** - currency code, data type - string.
 -  - **Taxable** - taxable (false by default), data type - boolean.
 -  **Order.Payments** - payment information in the reservation. Data type - custom.
@@ -373,8 +373,8 @@ The operation of creating an order.
 -  - **T** - Ticketed;
 -  - **X** - Cancel;
 -  - **V** - Void.
--  **OrderItems.OrderItem.PriceDetail** - full price for all services for all passengers in all segments in the current OrderItem. Data type - custom.
--  **OrderItems.OrderItem.PriceDetail.TotalAmount** - contains the full price (fare + taxes). Data type - custom.
+-  **OrderItems.OrderItem.PriceDetail** - total price for all services for all passengers in all segments in the current OrderItem. Data type - custom.
+-  **OrderItems.OrderItem.PriceDetail.TotalAmount** - contains the total price (fare + taxes). Data type - custom.
 -  **OrderItems.OrderItem.PriceDetail.TotalAmount.SimpleCurrencyPrice** - total price (fare + taxes) for all passengers in the current OrderItem, data type - decimal fractional number. The Code and Taxable attributes are described above.
 -  **OrderItems.OrderItem.PriceDetail.BaseAmount** - base price for all passengers in the current OrderItem in the sale currency, data type - decimal fractional number. The Code and Taxable attributes are described above.
 -  **OrderItems.OrderItem.PriceDetail.Taxes** - total amount of taxes. Data type - custom.
@@ -386,8 +386,8 @@ The operation of creating an order.
 - **OrderItems.OrderItem.FareDetail** - container for information about the price component for a certain passenger type in the current OrderItem. The data type is complex.
 - **FareDetail.PassengerRefs** - link to one or several passengers of the same type in DataLists.PassengerList.
 - **FareDetail.Price** - information about the price component for a certain type of passenger. The data type is complex.
-- **FareDetail.Price.TotalAmount** - full price (fare + taxes) for a certain passenger type. Data type - custom.
-- **FareDetail.Price.TotalAmount.SimpleCurrencyPrice** - full price (fare + taxes) for a certain type of passenger in the current OrderItem, data type - decimal fractional number. The Code and Taxable attributes are described above.
+- **FareDetail.Price.TotalAmount** - total price (fare + taxes) for a certain passenger type. Data type - custom.
+- **FareDetail.Price.TotalAmount.SimpleCurrencyPrice** - total price (fare + taxes) for a certain type of passenger in the current OrderItem, data type - decimal fractional number. The Code and Taxable attributes are described above.
 - **FareDetail.Price.BaseAmount** - base fare price for a specific passenger type in the current OrderItem in the sale currency, data type - decimal fractional number. The Code and Taxable attributes are described above.
 - **FareDetail.Price.FareFiledIn** - base price in the currency of the tariff establishment. Data type - custom.
 - **FareDetail.Price.FareFiledIn.BaseAmount** - base price in the currency of the fare establishment for a specific type of passenger in the current OrderItem, data type - decimal fractional number. The Code and Taxable attributes are described above.
