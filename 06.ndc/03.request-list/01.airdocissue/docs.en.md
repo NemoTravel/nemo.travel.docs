@@ -10,8 +10,8 @@ Performs the ticketing.
 -  **AirDocIssueRQ.Document** - **[common elements.](/Ndc/ndc_element)**
 -  **AirDocIssueRQ.Party** - **[common elements.](/Ndc/ndc_element)**
 -  **AirDocIssueRQ.Query** - contents of the request (required). Data type - custom.
-- **Query.TicketDocQuantity** - number of issued tickets (required). Data type - positive integer.
--  **Query.TicketDocInfo** - information about the order issued (required). Data type - custom.
+- **Query.TicketDocQuantity** - number of tickets which need to be issued (required). Data type - positive integer.
+-  **Query.TicketDocInfo** - information about the order which needs to be issued (required). Data type - custom.
 -  **TicketDocInfo.PassengerReference** - reference to the passenger in DataLists.PassengerList (required). ***If there are several passengers in the order, then a separate TicketDocInfo is formed for each passenger.***
 -  **TicketDocInfo.OrderReference** - contains the order ID (required). Data type - custom.
 -  **TicketDocInfo.OrderReference.OrderID** - unique order ID. Owner attribute contains the owner of the order (GDS code). Element and attribute required.
