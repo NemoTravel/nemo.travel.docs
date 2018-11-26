@@ -170,8 +170,8 @@ Flight leg prices are described in the current OfferItem.
 -  **AirShoppingRS.OffersGroup.AirlineOffers.Offer** - offer as a specific bundle of services (flights and/or flight-related additional services). The Offer element contains information about the services, price component, restrictions (time limit). The Offer element includes two required attributes:
 -  - **OfferID** - unique offer ID;
 -  - **Owner = "1S"** - owner code (GDS) of the offer. Data type - string.
--  **Offer.Parameters** - element containing the number of service bundles (OfferItem) within one offer. Data type - custom.
-- **Offer.Parameters.TotalItemQuantity** - number of service bundles within one offer. Data type - positive integer.
+-  **Offer.Parameters** - element containing the number of service sets (OfferItem) within one offer. Data type - custom.
+- **Offer.Parameters.TotalItemQuantity** - number of service sets within one offer. Data type - positive integer.
 -  **Offer.TimeLimits** - offer validity. Data type - custom.
 -  **Offer.TimeLimits.OfferExpiration** - offer validity specified in the DateTime attribute in the format "yyyy-mm-ddthh:mm:ss".
 -  **Offer.FlightsOverview** - element containing links to a brief description of the flight and leg information. Data type - custom.
