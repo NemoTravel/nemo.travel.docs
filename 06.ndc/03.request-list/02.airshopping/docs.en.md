@@ -216,7 +216,7 @@ Flight leg prices are described in the current OfferItem.
     -  **CHD** - child;
     -  **INF** - infant.
 -  **DataLists.BaggageAllowanceList** - information about the baggage transportation. Data type - custom.
--  **BaggageAllowanceList.BaggageAllowance** - the BaggageAllowanceID = "BAG1" attribute (the BAG prefix is required) containing a unique baggage ID. Data type - custom.
+-  **BaggageAllowanceList.BaggageAllowance** - the BaggageAllowanceID = "BAG1" attribute (the BAG prefix required) containing a unique baggage ID. Data type - custom.
 -  **BaggageAllowanceList.BaggageAllowance.BaggageCategory** - element always containing the value "Checked".
 -  **BaggageAllowanceList.BaggageAllowance.AllowanceDescription** - two types of checked baggage are possible: Piece and Weight.
 -  **For Piece, the following elements are returned:**
