@@ -12,7 +12,7 @@ All NDC requests and responses have a specific set of common basic elements.
 -  **Header.UserID** - ID of the user executing the request. Data type - nonnegative 32-bit integer.
 
 ##### Nemo Connect Details
--  **Header.Requisites** - details of access to the air server. Data type - custom.
+-  **Header.Requisites** - details of access to the avia server. Data type - custom.
 -  **Header.Requisites.Login** - login to access the server. Data type - string.
 -  **Header.Requisites.Password** - password to access the server. Data type - string.
 -  **Header.Requisites.AuthToken** - key issued by Nemo.travel staff. Data type - string. You need to specify either this key or a login + password pair.
