@@ -455,12 +455,12 @@ The operation of creating an order.
 -  **BaggageAllowanceList.BaggageAllowance** - BaggageAllowanceID = "BAG1" attribute (BAG prefix required) containing a unique baggage ID. Data type - custom.
 -  **BaggageAllowanceList.BaggageAllowance.BaggageCategory** - element always containing the value "Checked".
 -  **BaggageAllowanceList.BaggageAllowance.AllowanceDescription** - two types of checked baggage, Piece and Weight, are possible. The Concept attribute of the AllowanceDescription element defines the measure of baggage, possible values:
--	-	**700** — Kilos;
--	-	**701** — Pounds;
--	-	**C** — Special Charge;
--	-	**N** — Number of pieces;
--	-	**S** — Size;
--	-	**W** — Weight
+	-	**700** — Kilos;
+	-	**701** — Pounds;
+	-	**C** — Special Charge;
+	-	**N** — Number of pieces;
+	-	**S** — Size;
+	-	**W** — Weight
 -  **BaggageAllowanceList.BaggageAllowance.AllowanceDescription.ApplicableParty** - item always containing the Traveler value - the baggage is distributed to one passenger.
 -  **BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions** - baggage description. Data type - custom.
 -  **BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions.Description** 
@@ -475,8 +475,8 @@ The operation of creating an order.
 -  **BaggageAllowanceList.BaggageAllowance.PieceAllowance.PieceMeasurements** - attribute Quantity = "1" element also containing information on the number of bags, data type - integer.
 -  **DataLists.FlightSegmentList** - contains information about the segments of the flight. Data type - custom.
 -  **FlightSegmentList.FlightSegment** - details of the flight segment. Data type - custom. Includes two attributes: 
--  - **SegmentKey** - unique segment ID, SEG prefix required.
--  - **ElectronicTicketInd** - attribute of an electronic ticket. Data type - boolean.
+  - **SegmentKey** - unique segment ID, SEG prefix required.
+  - **ElectronicTicketInd** - attribute of an electronic ticket. Data type - boolean.
 -  **FlightSegmentList.FlightSegment.Departure** - information about the departure segment. Data type - custom.
 -  **FlightSegmentList.FlightSegment.Departure.AirportCode** - IATA code of departure airport. Data type - string.
 -  **FlightSegmentList.FlightSegment.Departure.Date** - departure date. The format is "yyyy-mm-dd".
