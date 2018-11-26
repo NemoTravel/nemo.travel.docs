@@ -379,20 +379,12 @@ The operation of creating an order.
 -  **OrderItems.OrderItem.PriceDetail.BaseAmount** - base price for all passengers in the current OrderItem in the sale currency, data type - decimal. The Code and Taxable attributes are described above.
 -  **OrderItems.OrderItem.PriceDetail.Taxes** - total amount of taxes. Data type - custom.
 -  **OrderItems.OrderItem.PriceDetail.Taxes.Total** - total amount of taxes for all passengers in the current OrderItem, data type - decimal. The Code and Taxable attributes are described above.
--  **OrderItems.OrderItem.Service** - flight service and/or other flight support services. The service can be presented in a set
--  
--   
--    
--     
--      
--       
--        
--          with other services or in one separate Order.OrderItem. The element includes the attribute ServiceID = "SVC1" (SVC prefix required) containing the unique service ID. The Service element cannot contain the SegmentRef and ServiceDefinitionRef elements at the same time. Data type - custom.
-- **Service.PassengerRef** - link to one passenger in DataLists.PassengerList.
-- **Service.SegmentRef** - link to a segment in Datalists.FlightSegmentList.
-- **Service.ServiceDefinitionRef** - link to the description of the service in Datalists.ServiceDefinitionList is not a transfer, but associated with it, for example, baggage. The SegmentRef attribute = "SEG0" (SEG prefix required) refers to the flight segment to which this service corresponds.
+-  **OrderItems.OrderItem.Service** - flight service and/or other flight support services. The service can be presented in a set with other services or in one separate Order.OrderItem. The element includes the attribute ServiceID = "SVC1" (SVC prefix required) containing the unique service ID. The Service element cannot contain the SegmentRef and ServiceDefinitionRef elements at the same time. Data type - custom.
+- **Service.PassengerRef** - reference to one passenger in DataLists.PassengerList.
+- **Service.SegmentRef** - reference to a segment in Datalists.FlightSegmentList.
+- **Service.ServiceDefinitionRef** - reference to the description of the service in Datalists.ServiceDefinitionList is not a transfer, but associated with it, for example, baggage. The SegmentRef attribute = "SEG0" (SEG prefix required) refers to the flight segment to which this service corresponds.
 - **OrderItems.OrderItem.FareDetail** - container for information about the price component for a certain passenger type in the current OrderItem. Data type - custom.
-- **FareDetail.PassengerRefs** - link to one or several passengers of the same type in DataLists.PassengerList.
+- **FareDetail.PassengerRefs** - reference to one or several passengers of the same type in DataLists.PassengerList.
 - **FareDetail.Price** - information about the price component for a certain type of passenger. Data type - custom.
 - **FareDetail.Price.TotalAmount** - total price (fare + taxes) for a certain passenger type. Data type - custom.
 - **FareDetail.Price.TotalAmount.SimpleCurrencyPrice** - total price (fare + taxes) for a certain type of passenger in the current OrderItem, data type - decimal. The Code and Taxable attributes are described above.
@@ -400,8 +392,8 @@ The operation of creating an order.
 - **FareDetail.Price.FareFiledIn** - base price in the currency of the tariff establishment. Data type - custom.
 - **FareDetail.Price.FareFiledIn.BaseAmount** - base price in the currency of the fare establishment for a specific type of passenger in the current OrderItem, data type - decimal. The Code and Taxable attributes are described above.
 - **FareDetail.Price.Taxes** - information about the amount of taxes for a certain passenger type. Data type - custom.
--  **FareDetail.Price.Taxes.Total** - the sum of all taxes for a certain type of passenger in the current OfferItem, data type - decimal. The Code and Taxable attributes are described above.
--  **FareDetail.Price.Taxes.Breakdown** - element that contains an array of components of taxes. Data type - custom.
+-  **FareDetail.Price.Taxes.Total** - total amount of all taxes for a certain type of passenger in the current OfferItem, data type - decimal. The Code and Taxable attributes are described above.
+-  **FareDetail.Price.Taxes.Breakdown** - element that contains an array of tax components. Data type - custom.
 -  **FareDetail.Price.Taxes.Breakdown.Tax** - Tax components. Data type - custom.
 -  **FareDetail.Price.Taxes.Breakdown.Tax.Amount** - tax value, data type - decimal. The Code and Taxable attributes are described above.
 -  **FareDetail.Price.Taxes.Breakdown.Tax.TaxCode** - tax code. Data type - string.
