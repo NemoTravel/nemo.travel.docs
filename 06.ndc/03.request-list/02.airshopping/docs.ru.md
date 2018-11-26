@@ -220,16 +220,16 @@ Flight leg prices are described in the current OfferItem.
 -  **BaggageAllowanceList.BaggageAllowance.BaggageCategory** - element always containing the value "Checked".
 -  **BaggageAllowanceList.BaggageAllowance.AllowanceDescription** - two types of checked baggage are possible: Piece and Weight.
 -  **For Piece, the following elements are returned:**
--  - **BaggageAllowanceList.BaggageAllowance.PieceAllowance**
--  - **BaggageAllowanceList.BaggageAllowance.PieceAllowance.ApplicableParty** - element always containing the Traveler value. Means that the luggage is distributed to one passenger.
--  - **BaggageAllowanceList.BaggageAllowance.PieceAllowance.TotalQuantity** - number of bags. Data type - integer. 
--  - **BaggageAllowanceList.BaggageAllowance.PieceAllowance.PieceMeasurements** - attribute Quantity = "1" element also contains information on the number of bags, data type - integer.
+ -  - **BaggageAllowanceList.BaggageAllowance.PieceAllowance**
+ -  - **BaggageAllowanceList.BaggageAllowance.PieceAllowance.ApplicableParty** - element always containing the Traveler value. Means that the luggage is distributed to one passenger.
+ -  - **BaggageAllowanceList.BaggageAllowance.PieceAllowance.TotalQuantity** - number of bags. Data type - integer. 
+ -  - **BaggageAllowanceList.BaggageAllowance.PieceAllowance.PieceMeasurements** - attribute Quantity = "1" element also contains information on the number of bags, data type - integer.
 -  **For Weight, the following elements are returned**:
 -  - **BaggageAllowanceList.BaggageAllowance.WeightAllowance**
--  - **BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.Value** - maximum baggage weight. Data type - positive integer.
--  - **BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.UOM** - unit of measure for the above weight. Data type - string.
+ -  - **BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.Value** - maximum baggage weight. Data type - positive integer.
+ -  - **BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.UOM** - unit of measure for the above weight. Data type - string.
 -  **The Concept attribute of the AllowanceDescription element defines the measure of baggage, possible values:**
- - **700** - Kilos;
+- **700** - Kilos;
 -  **701** - Pounds;
 -  **C** - Special Charge;
 -  **N** - Number of pieces;
