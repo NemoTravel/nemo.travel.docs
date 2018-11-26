@@ -4,7 +4,7 @@ title: OrderCancel
 
 ### OrderCancel
 Performs several functions in the following order:
--Order cancellation,
+- Order cancellation,
 - Ticket void,
 - Ticket return.
 
@@ -15,8 +15,8 @@ If the order wasn't written out, the order will be canceled, otherwise a void at
 -  **OrderCancelRQ.Document** - **[common elements.](/Ndc/ndc_element)**
 -  **OrderCancelRQ.Party** - **[common elements.](/Ndc/ndc_element)**
 -  **OrderCancelRQ.Query**
--  **Query.Order** - contains the identifier of the order to be canceled. Includes two required attributes:
--  - **OrderID** - unique identifier of the order in Nemo Connect;
+-  **Query.Order** - contains the ID of the order to be canceled. Includes two required attributes:
+-  - **OrderID** - unique order ID in Nemo Connect;
 -  - **Owner** - GDS code. Data type - string.
 
 
