@@ -18,8 +18,8 @@ The operation of creating an order.
 -  **TravelAgencySender.Contacts.Contact** - describes the contact details of the agency. Data type - custom.
 -  **TravelAgencySender.Contacts.Contact.EmailContact** - agency email address. Data type - custom.
 -  **TravelAgencySender.Contacts.Contact.EmailContact.Address** - agency email address. Data type - string.
--  **TravelAgencySender.Contacts.Contact.PhoneContact** - phone agency. Data type - custom.
--  **TravelAgencySender.Contacts.Contact.PhoneContact.Number** - phone agency. Data type - string.
+-  **TravelAgencySender.Contacts.Contact.PhoneContact** - information about the agency phone number. Data type - custom.
+-  **TravelAgencySender.Contacts.Contact.PhoneContact.Number** - agency phone number. Data type - string.
 -  **OrderCreateRQ.Query** - Data type - custom.
 -  **Query.Order**
 -  **Query.Order.Offer** - describes the offer chosen by the passenger to create an order. Data type - custom. Includes 3 required attributes:
