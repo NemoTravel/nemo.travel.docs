@@ -220,14 +220,14 @@ title: AirShopping
 -	**BaggageAllowanceList.BaggageAllowance.BaggageCategory** - элемент всегда содержит значение "Checked".
 -	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription** - возможны два типа зарегистрированного багажа: Piece и Weight. 
 -	**В случае Piece возвращаются следующие элементы:**
--  -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance**
--  -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.ApplicableParty** - элемент по умолчанию содержит значение Traveler. Означает, что багаж соответствует одному пассажиру.
--  -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.TotalQuantity** - количество сумок. Тип данных - целое число.
--  -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.PieceMeasurements** - атрибут Quantity="1" элемента содержит информацию о количестве сумок, тип данных - целое число.
+ -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance**
+ -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.ApplicableParty** - элемент по умолчанию содержит значение Traveler. Означает, что багаж соответствует одному пассажиру.
+ -  **BaggageAllowanceList.BaggageAllowance.PieceAllowance.TotalQuantity** - количество сумок. Тип данных - целое число.
+ -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.PieceMeasurements** - атрибут Quantity="1" элемента содержит информацию о количестве сумок, тип данных - целое число.
 -	**В случае Weight возвращаются элементы:**
--  -	**BaggageAllowanceList.BaggageAllowance.WeightAllowance** - сведения о максимальном весе багажа. Тип данных - сложный.
--  -	**BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.Value** - максимальный вес багажа. Тип данных - целое положительное число.
--  -	**BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.UOM** - единица измерения для приведенного выше значения. Тип данных - строка.
+ -	**BaggageAllowanceList.BaggageAllowance.WeightAllowance** - сведения о максимальном весе багажа. Тип данных - сложный.
+ -	**BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.Value** - максимальный вес багажа. Тип данных - целое положительное число.
+ -	**BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.UOM** - единица измерения для приведенного выше значения. Тип данных - строка.
 -	**Атрибут Concept элемента AllowanceDescription определяет меру багажа, возможные значения:**
     -   **700** - Kilos;
 	-   **701** - Pounds;
