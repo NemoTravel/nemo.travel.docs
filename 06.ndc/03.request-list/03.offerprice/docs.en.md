@@ -134,7 +134,7 @@ Updating the offer received at the search stage.
 
 #### Response
 
--  **OfferPriceRS** - response containing update data. Data type - custom.
+-  **OfferPriceRS** - response containing updated offer. Data type - custom.
 -  **OfferPriceRS.Document** - **[common items.](/Ndc/ndc_element)**
 -  **OfferPriceRS.Success** - **[common items.](/Ndc/ndc_element)**
 -  **OfferPriceRS.ShoppingResponseID** - **[common items.](/Ndc/ndc_element)**
