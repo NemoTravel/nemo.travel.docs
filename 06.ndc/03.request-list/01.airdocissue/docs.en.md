@@ -17,7 +17,7 @@ Performs the ticketing.
 -  **TicketDocInfo.OrderReference.OrderID** - unique order ID. Owner attribute contains the owner of the order (GDS code). Element and attribute required.
 -  **TicketDocInfo.Payments** - payment information (optional), accepts a collection of items. Payment information must be specified only in the first TicketDocInfo element, data from other TicketDocInfo is ignored. It is possible to set several payment methods.
 -  **TicketDocInfo.Payments.Payment** - detailed payment information (required). Data type - custom.
--  **TicketDocInfo.Payments.Payment.Type** - payment type (required). Depending on the type of payment, a number of elements of the Method block change. The following are the possible values:
+-  **TicketDocInfo.Payments.Payment.Type** - payment type (required). Depending on it, a number of elements of the Method block change. The following are the possible values:
 -	-	**CA** - Cash.
 ```xml	
 <ns:Method>
@@ -60,7 +60,6 @@ Performs the ticketing.
 - **Query.DataLists** - contains passenger data (required). Data type - custom.
 - **DataLists.PassengerList** - information about passengers for whom an order is being created (required). Data type - custom.
 - **PassengerList.Passenger** - PassengerID attribute containing a unique passenger ID (required).
-
 
 ##### Sample
 ```xml
