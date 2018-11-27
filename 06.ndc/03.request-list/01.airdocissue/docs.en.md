@@ -6,18 +6,18 @@ title: AirDocIssue
 Performs the ticketing.
 
 #### Request
--  **AirDocIssueRQ** - ticket request. Data type - custom.
+-  **AirDocIssueRQ** - ticketing request. Data type - custom.
 -  **AirDocIssueRQ.Document** - **[common elements.](/Ndc/ndc_element)**
 -  **AirDocIssueRQ.Party** - **[common elements.](/Ndc/ndc_element)**
 -  **AirDocIssueRQ.Query** - contents of the request (required). Data type - custom.
-- **Query.TicketDocQuantity** - number of tickets which need to be issued (required). Data type - positive integer.
--  **Query.TicketDocInfo** - information about the order which needs to be issued (required). Data type - custom.
+- **Query.TicketDocQuantity** - number of tickets needed to be issued (required). Data type - positive integer.
+-  **Query.TicketDocInfo** - information about the order needed to be issued (required). Data type - custom.
 -  **TicketDocInfo.PassengerReference** - reference to the passenger in DataLists.PassengerList (required). ***If there are several passengers in the order, then a separate TicketDocInfo is formed for each passenger.***
 -  **TicketDocInfo.OrderReference** - contains the order ID (required). Data type - custom.
 -  **TicketDocInfo.OrderReference.OrderID** - unique order ID. Owner attribute contains the owner of the order (GDS code). Element and attribute required.
 -  **TicketDocInfo.Payments** - payment information (optional), accepts a collection of items. Payment information must be specified only in the first TicketDocInfo element, data from other TicketDocInfo is ignored. It is possible to set several payment methods.
 -  **TicketDocInfo.Payments.Payment** - detailed payment information (required). Data type - custom.
--  **TicketDocInfo.Payments.Payment.Type** - type of payment (required). Depending on the type of payment, a number of elements of the Method block change. The following are the possible values:
+-  **TicketDocInfo.Payments.Payment.Type** - payment type (required). Depending on the type of payment, a number of elements of the Method block change. The following are the possible values:
 -	-	**CA** - Cash.
 ```xml	
 <ns:Method>
@@ -134,10 +134,10 @@ In general, the contents of the order check response correspond to the response 
 - **TicketDocInfos.TicketDocInfo.TicketDocument** - electronic document (ticket, EMD). Data type - custom. Element is optional.
 - **TicketDocInfos.TicketDocInfo.TicketDocument.TicketDocNbr** - electronic document number. Data type - string.
 - **TicketDocInfos.TicketDocInfo.TicketDocument.Type** - electronic document type. Data type - string. Possible values:
-- - **T** - Ticket;
-- - **J** - EMD A;
-- - **Y** - EMD S;
-- - **700** - Other document;
+ - **T** - Ticket;
+ - **J** - EMD A;
+ - **Y** - EMD S;
+ - **700** - Other document;
 -  **TicketDocInfos.TicketDocInfo.TicketDocument.NumberofBooklets** - number of tickets issued for this passenger. Data type - integer.
 -  **TicketDocInfos.TicketDocInfo.TicketDocument.DateOfIssue** - discharge date in the format yyyy-mm-dd.
 -  **TicketDocInfos.TicketDocInfo.TicketDocument.TimeOfIssue** - discharge time in hh:mm format.
