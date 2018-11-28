@@ -106,6 +106,9 @@ taxonomy:
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.commission.amount** — размер комиссии. Тип данных — строка.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.commission.currency** — код валюты комиссии. Тип данных — строка.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.tourCode** — применённый туристический код. Тип данных — строка.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.commissionForSubagency** - контейнер с информацией о комиссии субагенту.Тип данных — сложный.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.commissionForSubagency.amount** - сумма комиссии. Тип данных — строка.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.commissionForSubagency.currency** - код валюты. Тип данных — строка.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare** — контейнер с информацией о тарифах.Тип данных — сложный.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N** — контейнер с информацией об N-м тарифе. Тип данных — сложный.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.pricingType** — код ценового типа пассажира полученного из ГРС. Тип данных — строка.
