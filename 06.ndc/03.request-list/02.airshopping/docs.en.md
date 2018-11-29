@@ -189,7 +189,7 @@ Flight leg prices are described in the current OfferItem.
 -  **Offer.OfferItem.TotalPriceDetail.Taxes.Total** - amount of taxes for all passengers in the current OfferItem, data type - decimal. Contains the Code and Taxable attributes described above.
 -  **Offer.OfferItem.Service** - flight service and/or other flight support services. The service can be presented in a set with other services or in one separate Offer.OrderItem. The element includes the attribute ServiceID = "SVC1" (SVC prefix required) containing the unique ID of the service. The Service element cannot contain FlightRefs and ServiceDefinitionRef elements at the same time. Data type - custom.
 -  **Offer.OfferItem.Service.PassengerRefs** - reference to one or several passengers in DataLists.PassengerList.
--  **Offer.OfferItem.Service.FlightRefs** - reference to one or more flights to Datalists.FlightList, which are presented as a service. The attribute ODRef = "ODN1" (the ODN prefix required) refers to the element that contains leg information.
+-  **Offer.OfferItem.Service.FlightRefs** - reference to one or more flights to Datalists.FlightList, which are presented as a service.
 -  **Offer.OfferItem.Service.ServiceDefinitionRef** - reference to the description of the service in Datalists.ServiceDefinitionList which is not a flight, but associated with it, for example, luggage. The SegmentRefs="SEG0" attribute (SEG prefix required) refers to one or more flight segments to which this service corresponds.
 -  **Offer.OfferItem.FareDetail** - information about the price component for a certain passenger type in the current OfferItem. Data type - custom.
 -  **Offer.OfferItem.FareDetail.PassengerRefs** - reference to one or several passengers of the same type in DataLists.PassengerList.
@@ -271,11 +271,6 @@ Flight leg prices are described in the current OfferItem.
 -  **FlightList.Flight.Journey** - information on the flight duration within a shoulder. Data type - custom.
 -  **FlightList.Flight.Journey.Time** - flight duration. Example: PD1T3H10M, where D1 is days, 3H is hours, 10M are minutes.
 -  **FlightList.Flight.SegmentReferences** - one or more segments that make up a flight within one shoulder.
--  **DataLists.OriginDestinationList** - contains information about the shoulders, which are points of departure and arrival. Data type - custom.
--  **OriginDestinationList.OriginDestination** - informs you about the departure and arrival points on the shoulder. The OriginDestinationKey = "ODN1" attribute (the ODN prefix required) contains a unique shoulder ID. Data type - custom.
--  **OriginDestinationList.OriginDestination.DepartureCode** - IATA code of the departure airport. Data type - string.
--  **OriginDestinationList.OriginDestination.ArrivalCode** - IATA code of the arrival airport. Data type - string.
--  **OriginDestinationList.OriginDestination.FlightReferences** - contains references to the list of flights whose departure/arrival point coincide with the current one.
 -  **DataLists.PriceClass** - element containing a list of prices and characteristics of the tariff. Data type - custom.
 -  **PriceClass.PriceClass** - contains information about the fare. PriceClassID = "PRC1" attribute (PRC prefix required) - unique price ID. Data type - custom.
 -  **PriceClass.PriceClass.Name** - name taking several values separated by underscores. Example: NVU5_N_Y_ECONOMY, where in the first place is the family code or fare code (in the absence of the first), in the second - letter of the booking class, in the third place - code of the service class and then its name. Data type - string.
@@ -347,8 +342,8 @@ Flight leg prices are described in the current OfferItem.
 							<OfferExpiration DateTime="2018-11-05T07:59:00"/>
 						</TimeLimits>
 						<FlightsOverview>
-							<FlightRef ODRef="ODN1">FLTL0S0S1</FlightRef>
-							<FlightRef ODRef="ODN2">FLTL1S2S3</FlightRef>
+							<FlightRef>FLTL0S0S1</FlightRef>
+							<FlightRef>FLTL1S2S3</FlightRef>
 						</FlightsOverview>
 						<OfferItem OfferItemID="OFI143973579040000P0">
 							<TotalPriceDetail>
@@ -3051,38 +3046,6 @@ Flight leg prices are described in the current OfferItem.
 						<SegmentReferences>SEG20 SEG21</SegmentReferences>
 					</Flight>
 				</FlightList>
-				<OriginDestinationList>
-					<OriginDestination OriginDestinationKey="ODN1">
-						<DepartureCode>SVO</DepartureCode>
-						<ArrivalCode>TSE</ArrivalCode>
-						<FlightReferences>FLTL0S0S1 FLTL0S12</FlightReferences>
-					</OriginDestination>
-					<OriginDestination OriginDestinationKey="ODN2">
-						<DepartureCode>TSE</DepartureCode>
-						<ArrivalCode>DME</ArrivalCode>
-						<FlightReferences>FLTL1S2S3 FLTL1S18S19</FlightReferences>
-					</OriginDestination>
-					<OriginDestination OriginDestinationKey="ODN3">
-						<DepartureCode>VKO</DepartureCode>
-						<ArrivalCode>TSE</ArrivalCode>
-						<FlightReferences>FLTL0S4S5 FLTL0S8S9</FlightReferences>
-					</OriginDestination>
-					<OriginDestination OriginDestinationKey="ODN4">
-						<DepartureCode>TSE</DepartureCode>
-						<ArrivalCode>VKO</ArrivalCode>
-						<FlightReferences>FLTL1S6S7 FLTL1S10S11</FlightReferences>
-					</OriginDestination>
-					<OriginDestination OriginDestinationKey="ODN5">
-						<DepartureCode>TSE</DepartureCode>
-						<ArrivalCode>SVO</ArrivalCode>
-						<FlightReferences>FLTL1S13 FLTL1S14 FLTL1S15</FlightReferences>
-					</OriginDestination>
-					<OriginDestination OriginDestinationKey="ODN6">
-						<DepartureCode>DME</DepartureCode>
-						<ArrivalCode>TSE</ArrivalCode>
-						<FlightReferences>FLTL0S16S17 FLTL0S20S21</FlightReferences>
-					</OriginDestination>
-				</OriginDestinationList>
 				<PriceClassList>
 					<PriceClass PriceClassID="PRC1">
 						<Name>FASFY00_F_C_BUSINESS</Name>
