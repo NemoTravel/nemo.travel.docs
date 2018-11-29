@@ -143,7 +143,7 @@ title: OfferPrice
 -   **PricedOffer.TimeLimits** — срок действия предложения. Тип данных — сложный.
 -	**PricedOffer.TimeLimits.OfferExpiration** — срок действия предложения. Элемен содержит атрибут DateTime в формате "YYYY-MM-DDTHH:MM:SS".
 -	**PricedOffer.FlightsOverview** — элемент содержит ссылки на краткое описание перелёта и информацию о плече. Тип данных — сложный.
--	**PricedOffer.FlightsOverview.FlightRef** — ссылка на идентификатор перелёта. Атрибут ODRef="ODN1" ссылает на элемент, содержащий сведения о пунках отправления и прибытия.
+-	**PricedOffer.FlightsOverview.FlightRef** — ссылка на идентификатор перелёта.
 -	**PricedOffer.OfferItem** — представляет набор из одной или нескольких услуг в рамках предложения. Атрибут OfferItemID содержит уникальный идентификатор набора услуг, префик OFI обязателен. Тип данных — сложный.
 -	**PricedOffer.OfferItem.TotalPriceDetail** — полная стоимость за все услуги для всех пассажиров по всем сегментам в текущем OfferItem. Тип данных — сложный
 -	**PricedOffer.OfferItem.TotalPriceDetail.TotalAmount** — содержит полную стоимость (тариф + таксы). Тип данных — сложный.
@@ -239,11 +239,7 @@ title: OfferPrice
 -	**FlightList.Flight.Journey** — информация о длительности перелёта в рамках плеча. Тип данных - сложный.
 -	**FlightList.Flight.Journey.Time** — длительность перелета. Пример: PD1T3H10M, где D1 - дни, 3H - часы, 10M - минуты.
 -	**FlightList.Flight.SegmentReferences** — один или несколько сегментов входящих в состав перелёта в рамках одного плеча.
--	**DataLists.OriginDestinationList** — содержит сведения о плечах, а именно пункты отправления и прибытия. Тип данных - сложный
--	**OriginDestinationList.OriginDestination** — информирует о пунтках отправления и прибытия на плече. Атрибут OriginDestinationKey="ODN1"(префикс ODN обязателен) содержит уникальный идентификатор плеча. Тип данных — сложный.
--	**OriginDestinationList.OriginDestination.DepartureCode** — IATA код аэропорта отправления. Тип данных - строка.
--	**OriginDestinationList.OriginDestination.ArrivalCode** — IATA код аэропорта прибытия. Тип данных - строка.
--	**OriginDestinationList.OriginDestination.FlightReferences** — содержит ссылки на список рейсов, пункт отправления/прибытия которых совпадает с текущим.	
+-	**DataLists.OriginDestinationList** — содержит сведения о плечах, а именно пункты отправления и прибытия. Тип данных - сложный	
 -	**DataLists.PriceClass** — элемен содержит список цен и характеристики тарифа. Тип данных - сложный. 
 -	**PriceClass.PriceClass** — содержит сведения о тарифе. Атрибут PriceClassID="PRC1" (префикс PRC обязателен) - уникальный идентификатор цены. Тип данных - сложный.
 -	**PriceClass.PriceClass.Name** — имя принимает нескольких значений, разделенных символом подчеркивания. Пример: NVU5_N_Y_ECONOMY, где на первом месте - код семейства или код тарифа (при отсутствии первого), на втором - литера класса бронирования, на третьем код класса обслуживания и далее название класса обслуживания. Тип данных - строка.
@@ -662,18 +658,6 @@ title: OfferPrice
                   <SegmentReferences>SEG2 SEG3</SegmentReferences>
                </Flight>
             </FlightList>
-            <OriginDestinationList>
-               <OriginDestination OriginDestinationKey="ODN1">
-                  <DepartureCode>VKO</DepartureCode>
-                  <ArrivalCode>TSE</ArrivalCode>
-                  <FlightReferences>FLTL0S0S1</FlightReferences>
-               </OriginDestination>
-               <OriginDestination OriginDestinationKey="ODN2">
-                  <DepartureCode>TSE</DepartureCode>
-                  <ArrivalCode>VKO</ArrivalCode>
-                  <FlightReferences>FLTL1S2S3</FlightReferences>
-               </OriginDestination>
-            </OriginDestinationList>
             <PriceClassList>
                <PriceClass PriceClassID="PRC1">
                   <Name>PN3XPB_P_Y_ECONOMY</Name>
