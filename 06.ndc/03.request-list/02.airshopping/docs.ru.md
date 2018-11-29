@@ -53,8 +53,6 @@ title: AirShopping
     -   **2** - Business; 
     -   **3** - Economy;
 	-	**4** - Premium Economy;
-	-	**5** - Economy;
-	-	**6** - Economy;
 	-	**7** - All.
 -	**AirShoppingRQ.DataLists** - представляет собой контейнер, в котором содержится дополнительная поисковая информация (обязательный).
 -	**AirShoppingRQ.DataLists.PassengerList** - информация о пассажирах, для которых требуется найти перелёт (обязательный). Тип данных — сложный. 	
