@@ -144,7 +144,7 @@ Updating the offer received at the search stage.
 -  **PricedOffer.TimeLimits** - offer validity period. Data type - custom.
 -  **PricedOffer.TimeLimits.OfferExpiration** - offer validity. The element contains the DateTime attribute in the format "yyyy-mm-ddthh:mm:ss".
 -  **PricedOffer.FlightsOverview** - element containing references to a brief flight description and leg information. Data type - custom.
--  **PricedOffer.FlightsOverview.FlightRef** - reference to the flight ID. The attribute ODRef = "ODN1" refers to an element containing information about the departure and arrival points.
+-  **PricedOffer.FlightsOverview.FlightRef** - reference to the flight ID.
 -  **PricedOffer.OfferItem** - represents a set of one or several services within an offer. The OfferItemID attribute contains a unique identifier of the service set, the OFI prefix is required. Data type - custom.
 -  **PricedOffer.OfferItem.TotalPriceDetail** - total price for all services for all passengers in all segments in the current OfferItem. Data type - custom.
 -  **PricedOffer.OfferItem.TotalPriceDetail.TotalAmount** - contains the total price (fare + taxes). Data type - custom.
@@ -240,11 +240,6 @@ Updating the offer received at the search stage.
 -  **FlightList.Flight.Journey** - information on the flight duration within the shoulder. Data type - custom.
 -  **FlightList.Flight.Journey.Time** - flight duration. Example: PD1T3H10M, where D1 is days, 3H is hours, 10M are minutes.
 -  **FlightList.Flight.SegmentReferences** - one or more segments that make up a flight within one shoulder.
--  **DataLists.OriginDestinationList** - contains information about the shoulders, namely the points of departure and arrival. Data type - custom.
--   **OriginDestinationList.OriginDestination** - informs you about the departure and arrival points on the shoulder. The OriginDestinationKey = "ODN1" attribute (the ODN prefix is required) contains a unique shoulder identifier. Data type - custom.
--  **OriginDestinationList.OriginDestination.DepartureCode** - IATA code of departure airport. Data type - string.
--  **OriginDestinationList.OriginDestination.ArrivalCode** - IATA code of arrival airport. Data type - string.
--  **OriginDestinationList.OriginDestination.FlightReferences** - contains references to the list of flights whose departure/arrival point coincides with the current one.
 -  **DataLists.PriceClass** - element containing a list of prices and characteristics of the fare. Data type - custom.
 -  **PriceClass.PriceClass** - contains information about the fare. PriceClassID = "PRC1" attribute (PRC prefix is required) - unique price ID. Data type - custom.
 -  **PriceClass.PriceClass.Name** - name taking several values, separated by underscores. Example: NVU5_N_Y_ECONOMY, where in the first place is the family code or rate code (in the absence of the first), in the second is the letter of the booking class, in the third place - the code of the service class and then its name. Data type - string.
@@ -663,18 +658,6 @@ Updating the offer received at the search stage.
                   <SegmentReferences>SEG2 SEG3</SegmentReferences>
                </Flight>
             </FlightList>
-            <OriginDestinationList>
-               <OriginDestination OriginDestinationKey="ODN1">
-                  <DepartureCode>VKO</DepartureCode>
-                  <ArrivalCode>TSE</ArrivalCode>
-                  <FlightReferences>FLTL0S0S1</FlightReferences>
-               </OriginDestination>
-               <OriginDestination OriginDestinationKey="ODN2">
-                  <DepartureCode>TSE</DepartureCode>
-                  <ArrivalCode>VKO</ArrivalCode>
-                  <FlightReferences>FLTL1S2S3</FlightReferences>
-               </OriginDestination>
-            </OriginDestinationList>
             <PriceClassList>
                <PriceClass PriceClassID="PRC1">
                   <Name>PN3XPB_P_Y_ECONOMY</Name>
