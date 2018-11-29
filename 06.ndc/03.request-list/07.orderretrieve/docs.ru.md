@@ -513,18 +513,6 @@ title: OrderRetrieve
                      <SegmentReferences>SEG1</SegmentReferences>
                   </Flight>
                </FlightList>
-               <OriginDestinationList>
-                  <OriginDestination>
-                     <DepartureCode>ALA</DepartureCode>
-                     <ArrivalCode>TSE</ArrivalCode>
-                     <FlightReferences>FLT0</FlightReferences>
-                  </OriginDestination>
-                  <OriginDestination>
-                     <DepartureCode>TSE</DepartureCode>
-                     <ArrivalCode>ALA</ArrivalCode>
-                     <FlightReferences>FLT1</FlightReferences>
-                  </OriginDestination>
-               </OriginDestinationList>
                <ServiceDefinitionList>
                   <ServiceDefinition ServiceDefinitionID="SVD1">
                      <Name>Free baggage</Name>
