@@ -496,11 +496,6 @@ The operation of creating an order.
 -  **DataLists.FlightList** - element containing the flight ID corresponding to one leg and the segments that make up this leg. Data type - custom.
 -  **FlightList.Flight** - attribute FlightKey = "FLT0" (FLT prefix required) returns the unique ID of the flight within the Order.
 -  **FlightList.Flight.SegmentReferences** - links to one or several segments that are part of a flight within one leg.
--  **DataLists.OriginDestinationList** - contains information about the legs, namely the points of departure and arrival. Data type - custom.
--  **OriginDestinationList.OriginDestination** - informs you about the departure and arrival points on the legs. Data type - custom.
--  **OriginDestinationList.OriginDestination.DepartureCode** - IATA airport code of departure. Data type - string.
--  **OriginDestinationList.OriginDestination.ArrivalCode** - IATA airport arrival code. Data type - string.
--  **OriginDestinationList.OriginDestination.FlightReferences** - contains a reference to the flight, the point of departure/arrival of which coincides with the current one.
 -  **DataLists.ServiceDefinitionList** - contains the description and characteristics of services except for the flight. Data type - custom.
 -  **ServiceDefinitionList.ServiceDefinition** - attribute ServiceDefinitionID = "SVD1" (SVD prefix required) - a unique ID for the service description.
 -  **ServiceDefinitionList.ServiceDefinition.Name** - name of the service. e.g. Free baggage. Data type - string.
@@ -984,18 +979,6 @@ The operation of creating an order.
                      <SegmentReferences>SEG1</SegmentReferences>
                   </Flight>
                </FlightList>
-               <OriginDestinationList>
-                  <OriginDestination>
-                     <DepartureCode>ALA</DepartureCode>
-                     <ArrivalCode>TSE</ArrivalCode>
-                     <FlightReferences>FLT0</FlightReferences>
-                  </OriginDestination>
-                  <OriginDestination>
-                     <DepartureCode>TSE</DepartureCode>
-                     <ArrivalCode>ALA</ArrivalCode>
-                     <FlightReferences>FLT1</FlightReferences>
-                  </OriginDestination>
-               </OriginDestinationList>
                <ServiceDefinitionList>
                   <ServiceDefinition ServiceDefinitionID="SVD1">
                      <Name>Free baggage</Name>
