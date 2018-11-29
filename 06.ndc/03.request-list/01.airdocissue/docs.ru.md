@@ -442,13 +442,6 @@ title: AirDocIssue
 							<SegmentReferences>SEG0</SegmentReferences>
 						</Flight>
 					</FlightList>
-					<OriginDestinationList>
-						<OriginDestination>
-							<DepartureCode>SVO</DepartureCode>
-							<ArrivalCode>LED</ArrivalCode>
-							<FlightReferences>FLT0</FlightReferences>
-						</OriginDestination>
-					</OriginDestinationList>
 					<PriceClassList>
 						<PriceClass PriceClassID="PRC1">
 							<Name>БЮДЖЕТ-Эконом</Name>
