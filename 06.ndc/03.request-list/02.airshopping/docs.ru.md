@@ -175,7 +175,7 @@ title: AirShopping
 -   **Offer.TimeLimits** - срок действия предложения. Тип данных — сложный.
 -	**Offer.TimeLimits.OfferExpiration** - срок действия предложения указан в атрибуте DateTime в формате "YYYY-MM-DDThh:mm:ss".
 -	**Offer.FlightsOverview** - элемент содержит ссылки на краткое описание перелёта и информацию о плече. Тип данных — сложный.
--	**Offer.FlightsOverview.FlightRef** - ссылка на идентификатор перелёта. Атрибут ODRef="ODN1" ссылает на элемент, содержащий сведения о пунктах отправления и прибытия.
+-	**Offer.FlightsOverview.FlightRef** - ссылка на идентификатор перелёта.
 -	**Offer.OfferItem** - представляет набор из одной или нескольких услуг в рамках предложения. Атрибут OfferItemID содержит уникальный идентификатор набора услуг, префикс OFI обязателен. Тип данных — сложный.
 -	**Offer.OfferItem.TotalPriceDetail** - полная стоимость за все услуги всех пассажиров по всем сегментам в текущем OfferItem. Тип данных — сложный.
 -	**Offer.OfferItem.TotalPriceDetail.TotalAmount** - содержит общую стоимость (тариф + таксы). Тип данных — сложный.
@@ -270,12 +270,7 @@ title: AirShopping
 -	**FlightList.Flight** - атрибут FlightKey="FLTL0S0"(префикс FLT обязателен) возвращает уникальный идентификатор полета в рамках предложения.
 -	**FlightList.Flight.Journey** - информация о длительности перелёта в рамках плеча. Тип данных - сложный.
 -	**FlightList.Flight.Journey.Time** - длительность перелета. Пример: PD1T3H10M, где D1 - дни, 3H - часы, 10M - минуты.
--	**FlightList.Flight.SegmentReferences** - один или несколько сегментов, входящих в состав перелёта, в рамках одного плеча.
--	**DataLists.OriginDestinationList** - содержит сведения о плечах, а именно пункты отправления и прибытия. Тип данных - сложный.
--	**OriginDestinationList.OriginDestination** - информирует о пунтках отправления и прибытия на плече. Атрибут OriginDestinationKey="ODN1"(префикс ODN обязателен) содержит уникальный идентификатор плеча. Тип данных - сложный.
--	**OriginDestinationList.OriginDestination.DepartureCode** - IATA код аэропорта отправления. Тип данных - строка.
--	**OriginDestinationList.OriginDestination.ArrivalCode** - IATA код аэропорта прибытия. Тип данных - строка.
--	**OriginDestinationList.OriginDestination.FlightReferences** - содержит ссылки на список рейсов, пункт отправления/прибытия которых совпадает с текущим.	
+-	**FlightList.Flight.SegmentReferences** - один или несколько сегментов, входящих в состав перелёта, в рамках одного плеча.	
 -	**DataLists.PriceClass** - элемен содержит список цен и характеристики тарифа. Тип данных - сложный. 
 -	**PriceClass.PriceClass** - содержит сведения о тарифе. Атрибут PriceClassID="PRC1" (префикс PRC обязателен) - уникальный идентификатор цены. Тип данных - сложный.
 -	**PriceClass.PriceClass.Name** - имя принимает нескольких значений, разделенных символом подчеркивания. Пример: NVU5_N_Y_ECONOMY, где на первом месте код семейства или код тарифа (при отсутствии первого), на втором литера класса бронирования, на третьем код класса обслуживания и далее название класса обслуживания. Тип данных - строка.
@@ -347,8 +342,8 @@ title: AirShopping
 							<OfferExpiration DateTime="2018-11-05T07:59:00"/>
 						</TimeLimits>
 						<FlightsOverview>
-							<FlightRef ODRef="ODN1">FLTL0S0S1</FlightRef>
-							<FlightRef ODRef="ODN2">FLTL1S2S3</FlightRef>
+							<FlightRef>FLTL0S0S1</FlightRef>
+							<FlightRef>FLTL1S2S3</FlightRef>
 						</FlightsOverview>
 						<OfferItem OfferItemID="OFI143973579040000P0">
 							<TotalPriceDetail>
@@ -3051,38 +3046,6 @@ title: AirShopping
 						<SegmentReferences>SEG20 SEG21</SegmentReferences>
 					</Flight>
 				</FlightList>
-				<OriginDestinationList>
-					<OriginDestination OriginDestinationKey="ODN1">
-						<DepartureCode>SVO</DepartureCode>
-						<ArrivalCode>TSE</ArrivalCode>
-						<FlightReferences>FLTL0S0S1 FLTL0S12</FlightReferences>
-					</OriginDestination>
-					<OriginDestination OriginDestinationKey="ODN2">
-						<DepartureCode>TSE</DepartureCode>
-						<ArrivalCode>DME</ArrivalCode>
-						<FlightReferences>FLTL1S2S3 FLTL1S18S19</FlightReferences>
-					</OriginDestination>
-					<OriginDestination OriginDestinationKey="ODN3">
-						<DepartureCode>VKO</DepartureCode>
-						<ArrivalCode>TSE</ArrivalCode>
-						<FlightReferences>FLTL0S4S5 FLTL0S8S9</FlightReferences>
-					</OriginDestination>
-					<OriginDestination OriginDestinationKey="ODN4">
-						<DepartureCode>TSE</DepartureCode>
-						<ArrivalCode>VKO</ArrivalCode>
-						<FlightReferences>FLTL1S6S7 FLTL1S10S11</FlightReferences>
-					</OriginDestination>
-					<OriginDestination OriginDestinationKey="ODN5">
-						<DepartureCode>TSE</DepartureCode>
-						<ArrivalCode>SVO</ArrivalCode>
-						<FlightReferences>FLTL1S13 FLTL1S14 FLTL1S15</FlightReferences>
-					</OriginDestination>
-					<OriginDestination OriginDestinationKey="ODN6">
-						<DepartureCode>DME</DepartureCode>
-						<ArrivalCode>TSE</ArrivalCode>
-						<FlightReferences>FLTL0S16S17 FLTL0S20S21</FlightReferences>
-					</OriginDestination>
-				</OriginDestinationList>
 				<PriceClassList>
 					<PriceClass PriceClassID="PRC1">
 						<Name>FASFY00_F_C_BUSINESS</Name>
