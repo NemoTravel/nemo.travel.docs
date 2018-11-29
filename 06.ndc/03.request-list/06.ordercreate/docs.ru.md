@@ -494,11 +494,6 @@ title: OrderCreate
 -	**DataLists.FlightList** - элемент содержит идентификатор рейса и сегменты, составляющие данное плечо. Тип данных - сложный.
 -	**FlightList.Flight** - атрибут FlightKey="FLT0"(префикс FLT обязателен) возвращает уникальный идентификатор перелёта в рамках Order.
 -	**FlightList.Flight.SegmentReferences** - ссылки один или несколько сегментов, входящих в состав перелёта, в рамках одного плеча.
--	**DataLists.OriginDestinationList** - содержит сведения о плечах, а именно пункты отправления и прибытия. Тип данных - сложный.
--	**OriginDestinationList.OriginDestination** - информирует о пунтках отправления и прибытия на плече. Тип данных - сложный.
--	**OriginDestinationList.OriginDestination.DepartureCode** - IATA код аэропорта отправления. Тип данных - строка.
--	**OriginDestinationList.OriginDestination.ArrivalCode** - IATA код аэропорта прибытия. Тип данных - строка.
--	**OriginDestinationList.OriginDestination.FlightReferences** - содержит ссылку на рейс, пункт отправления/прибытия которого совпадает с текущим.
 -	**DataLists.ServiceDefinitionList** - содержит описание и характеристики услуг за исключением услуги перелёта. Тип данных - сложный
 -	**ServiceDefinitionList.ServiceDefinition** - атрибут ServiceDefinitionID="SVD1" (префикс SVD обязателен) уникальный идентификатор описания услуги.
 -	**ServiceDefinitionList.ServiceDefinition.Name** - наименование услуги. Например: Free baggage. Тип данных - строка.
@@ -983,18 +978,6 @@ title: OrderCreate
                      <SegmentReferences>SEG1</SegmentReferences>
                   </Flight>
                </FlightList>
-               <OriginDestinationList>
-                  <OriginDestination>
-                     <DepartureCode>ALA</DepartureCode>
-                     <ArrivalCode>TSE</ArrivalCode>
-                     <FlightReferences>FLT0</FlightReferences>
-                  </OriginDestination>
-                  <OriginDestination>
-                     <DepartureCode>TSE</DepartureCode>
-                     <ArrivalCode>ALA</ArrivalCode>
-                     <FlightReferences>FLT1</FlightReferences>
-                  </OriginDestination>
-               </OriginDestinationList>
                <ServiceDefinitionList>
                   <ServiceDefinition ServiceDefinitionID="SVD1">
                      <Name>Free baggage</Name>
