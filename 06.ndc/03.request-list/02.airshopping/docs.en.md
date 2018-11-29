@@ -53,8 +53,6 @@ Flight leg prices are described in the current OfferItem.
     - **2** - Business;
     - **3** - Economy;
     - **4** - Premium Economy;
-    - **5** - Economy;
-    - **6** - Economy;
     - **7** - All.
 -  **AirShoppingRQ.DataLists** - container with additional search information (required).
 -  **AirShoppingRQ.DataLists.PassengerList** - information about passengers for whom you want to find a flight (required). Data type - custom.
