@@ -29,8 +29,8 @@ taxonomy:
 -    **RefundedTicket.RefundMoney** - Сумма к возврату. Тип данных - сложное.
 -    **RefundedTicket.RefundMoney.Currency** - Код валюты суммы к возврату. Тип данных - строка.
 -    **RefundedTicket.RefundMoney.Amount** - Сумма к возврату. Тип данных - дробное число.
--    **RefundedTicket.RefundTaxes** - Контейнер с информацией по таксам. Тип данных - сложное.
--    **RefundedTicket.RefundTaxes.Tax** - Контейнер с информацией по конкретной таксе. Однако не все поставщики возвращают детализированную информацию. Тип данных - сложное. 
+-    **RefundedTicket.RefundTaxes** - Контейнер с информацией по таксам. Однако не все поставщики возвращают детализированную информацию. Тип данных - сложное.
+-    **RefundedTicket.RefundTaxes.Tax** - Контейнер с информацией по конкретной таксе. Тип данных - сложное. 
 -    **RefundedTicket.RefundTaxes.Tax.Amount** - Сумма таксы. Тип данных - дробное число.
 -    **RefundedTicket.RefundTaxes.Tax.Currency** - Код валюты. Тип данных - строка.
 -    **RefundedTicket.RefundTaxes.Tax.TaxCode** - Код таксы. Тип данных - строка.
