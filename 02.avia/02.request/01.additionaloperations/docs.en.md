@@ -107,10 +107,11 @@ Includes the set of elements caused by operstion in the request:
     -   **W** — near the window;
     -   **NPW** — Near Passenger Way;
     -   **M** — place between W and NPW;
-    -   **any type + postfix "NE"** — place does not exist.
+<!--    -   **any type + postfix "NE"** — place does not exist. -->
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Characteristics** — default characteristics of place. The data type is a string.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.IsFree** — a sign that the place is free. The data type is bool.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Price** — the price of the site in case it is paid. The data type is - [Money](/avia/common/money).
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.RFISC** — RFISC of the place. The data type is a string.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Characteristics** - characteristics of the row of places. The data type is a string.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows** - container for information on rows of seats on the floor. The custom data type.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow** - information about a specific number of places on the floor in an aircraft. The custom data type. The element format is the same as the DefaultRow element.
