@@ -110,7 +110,7 @@ taxonomy:
 <!--    -   **любой тип + постфикс " NE"** — места не существует.-->
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Characteristics** — дефолтная характеристика места. Тип данных - строка.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.IsFree** — признак что место свободно. Тип данных - bool.
-<!-- -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.NotExists** — -->
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.NotExists** — признак того, что место не существует. Тип данных - bool.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Price** — цена места в случае если оно платное. Тип данных - [Money](/avia/common/money).
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.RFISC** — RFISC места. Тип данных - строка.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Characteristics** - характеристика ряда. Тип данных - строка.
