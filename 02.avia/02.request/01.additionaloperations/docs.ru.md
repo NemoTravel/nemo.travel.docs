@@ -107,10 +107,12 @@ taxonomy:
     -   **W** — у окна;
     -   **NPW** — у прохода (Near Passenger Way);
     -   **M** — месту между W и NPW;
-    -   **любой тип + постфикс " NE"** — места не существует.
+<!--    -   **любой тип + постфикс " NE"** — места не существует.-->
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Characteristics** — дефолтная характеристика места. Тип данных - строка.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.IsFree** — признак что место свободно. Тип данных - bool.
+<!-- -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.NotExists** — -->
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Price** — цена места в случае если оно платное. Тип данных - [Money](/avia/common/money).
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.RFISC** — RFISC места. Тип данных - строка.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Characteristics** - характеристика ряда. Тип данных - строка.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows** - контейнер для информации о рядах мест на этаже. Тип данных - сложный.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow** - информация о конкретном ряде мест на этаже в самолёте. Тип данных - сложный. Формат элемента аналогичен элементу DefaultRow
