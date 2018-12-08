@@ -153,7 +153,7 @@ To store different booking content.
 - **LoyaltyCard.StatusCode** - The industrial status code. The data type is a string.
 - **Meal** - Special meal (optional). The data type is SSRDataItem.
 - **ElectronicDocument** - Some electronic document (ED) (ticket / EMD) (optional). The custom data type.
-- **ElectronicDocument.Number** - The number of ED. The data type is a string.
+- **ElectronicDocument.Number** - The number of ED (a required element and its omission leads to a data structure violation, which makes it impossible to process such a response). The data type is a string.
 - **ElectronicDocument.ConjunctionNumbers** - "Attached" numbers. The data type is an array.
 - **ElectronicDocument.ConjunctionNumbers.Number** - The number of the "affiliated" ticket. The data type is a string.
 - **ElectronicDocument.Status** - The document status. Data type - enumeration, possible values:
