@@ -7,7 +7,7 @@ taxonomy:
 
 ### ModifyBook_2_2
 Самая последняя версия запроса ModifyBook.
-Аналогичен версии ModifyBook_2_1, отличия только в блоке работы с допуслугами.
+Аналогичен версии ModifyBook_2_1, отличия только в блоке работы с допуслугами из запроса [Book_2_2](/avia/request/bookflight). 
  ### Пример контейнера с допуслугами из запроса ModifyBook_2_2.
  ```xml
              <ns2:ModifyAncillaryService>
