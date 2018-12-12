@@ -7,11 +7,11 @@ taxonomy:
 
 ### BookFlight_2_1
 
-Операция по созданию брони перелёта работающая с 2.1 структурой брони. Актуальная версия запроса BookFlight.
+Операция по созданию брони перелёта работающая с 2.1 структурой брони. Наиболее стабильная версия запроса BookFlight.
 
 #### Запрос
 
-Аналогичен предыдущей версии BookFlight_2_0, отличие только в плоском формате дополнительных услуг:
+Аналогичен версии BookFlight_2_0, отличие только в плоском формате дополнительных услуг:
 
 -   **AncillaryServices** - Список дополнительных услуг для бронирования (необязательный). Тип данных - массив.
 -   **AncillaryServices.AncillaryServiceRQ_1_1** - Дополнительная услуга. Тип данных - сложный.
@@ -48,10 +48,50 @@ taxonomy:
         <a:Quantity>1</a:Quantity>
       </a:AncillaryServiceRQ_1_1>
     ```
+### BookFlight_2_2
 
+Операция по созданию брони перелёта работающая с 2.2 структурой брони. Самая новая версия запроса BookFlight.
+
+#### Запрос
+
+Аналогичен версии BookFlight_2_0, отличия только в блоке работы с допуслугами.
+
+##### Пример контейнера  с допуслугами из запроса BookFlight_2_2.
+ ```xml
+ 		  <ns3:AncillaryServices>
+            <ns3:AncillaryService>
+              <ns3:Group>ML</ns3:Group>
+               <ns3:RFIC>G</ns3:RFIC>
+              <ns3:RFISC>0AI</ns3:RFISC>
+               <ns3:Type>F</ns3:Type>
+              <ns3:TravellerRef>1</ns3:TravellerRef>
+              <ns3:SegmentRef>
+               <ns1:Ref>1</ns1:Ref>
+               <ns1:Ref>2</ns1:Ref>
+              </ns3:SegmentRef>
+              <ns3:Quantity>1</ns3:Quantity>
+               <ns3:EMDType>A</ns3:EMDType>
+            </ns3:AncillaryService>
+          </ns3:AncillaryServices>
+ ```         
+-   **AncillaryServices** - Список дополнительных услуг для бронирования (необязательный). Тип данных - массив.
+-   **AncillaryServices.AncillaryService** - Дополнительная услуга. Тип данных - сложный.
+-   **AncillaryServices.AncillaryService.ID** - идентификатор изменяемой дополнительной услуги (Не учитывается при бронировании). Тип данных - int.
+-   **AncillaryServices.AncillaryService.RFIC** - RFIC дополнительной услуги. Тип данных - строка.
+-   **AncillaryServices.AncillaryService.RFISC** - RFISC дополнительной услуги. Тип данных - строка.
+-   **AncillaryServices.AncillaryService.Group** - Группа дополнительной услуги. Тип данных - строка.
+-   **AncillaryServices.AncillaryService.Subgroup** - Подруппа дополнительной услуги. Тип данных - строка.
+-   **AncillaryServices.AncillaryService.SSRCode** - SSR код для бронируемой дополнительной услуги (Необязательный) Тип данных - строка.
+-   **AncillaryServices.AncillaryService.SSRDescription** - Описание для SSR бронируемой допуслуги (Необязательный) Тип данных - строка.
+-   **AncillaryServices.AncillaryService.Type** - Тип дополнительной услуги (Обязателен только для Сирены). Тип данных - строка.
+-   **AncillaryServices.AncillaryService.TravellerRef** - идентификатор пассажира для которого добавляется дополнительная услуга. Тип данных - int.
+-   **AncillaryServices.AncillaryService.SegmentRef** - Контейнер с ссылками на сегменты на которые добавляется дополнительная услуга. Тип данных - сложный.
+-   **AncillaryServices.AncillaryService.SegmentRef.Ref** - Ссылка на сегмент.Тип данных - int.
+-   **AncillaryServices.AncillaryService.Quantity** - Количество повторений данной дополнительной услуги. Тип данных - int.
+-   **AncillaryServices.AncillaryService.EMDType** - Тип EMD. Тип данных - строка.
 ### BookFlight_2_0
 
-Операция по созданию брони перелёта работающая с 2.0 структурой брони.
+Операция по созданию брони перелёта работающая с 2.0 структурой брони. Отличия только в блоке работы с допуслугами.
 
 #### Запрос
 
