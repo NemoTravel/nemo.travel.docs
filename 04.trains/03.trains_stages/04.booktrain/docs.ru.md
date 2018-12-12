@@ -49,9 +49,9 @@ title: 'Бронирование мест в поезде'
 -   **Passengers.BookRQPerson.ReturnTrainNeedServices** - Доп для поезда обратно, если оформляется ЖД перевозка типа "туда-обратно". Аналогичен параметру BookRQPerson.NeedServices.
 -   **Passengers.BookRQPerson.ReturnTrainRzhdBDiscountCard** - Для поезда обратно, карта РЖД Бонус для получения скидки. Тип данных - строка.Аналогичен параметру BookRQPerson.RzhdBDiscountCard.
 -   **Passengers.BookRQPerson.ReturnTrainRzhdBBonusCard**- Для поезда обратно, карта РЖД Бонус для получения скидки. Тип данных - строка. Аналогичен параметру BookRQPerson.RzhdBBonusCard.
--   **Passengers.BookRQPerson.RzhdBBonusCard** - Карта РЖД Бонус для начисления баллов. Тип данных - строка.
--   **Passengers.BookRQPerson.RzhdBDiscountCard** - Карта РЖД Бонус для получения скидки. Тип данных - строка. 
--   **Passengers.BookRQPerson.DiscountCard** - Дисконтная(универсальная) карта для получения скидки. Тип данных - строка.
+-   **Passengers.BookRQPerson.RzhdBBonusCard** - Карта "РЖД Бонус" для начисления баллов за поездку. Тип данных - строка.
+-   **Passengers.BookRQPerson.RzhdBDiscountCard** - Карта "РЖД Бонус" для получения скидки на поездку. Тип данных - строка. 
+-   **Passengers.BookRQPerson.DiscountCard** - Дорожная карта РЖД для получения скидки на поездку. Тип данных - строка.
 -   **BlankPrefferredType** - Предпочитаемый формат бланков маршрутных квитанций. Тип данных - перечисление. Возможные значения (может быть null):
     -   **pdf**
     -   **rtf**
@@ -82,6 +82,8 @@ title: 'Бронирование мест в поезде'
                 <!--Optional:-->
                 <!--<Bedclothes>?</Bedclothes>-->
                 <!--Optional:-->
+                <!--<FullCoupe>?</FullCoupe>-->
+                <!--Optional:-->
                 <!--<GenderPref>?</GenderPref>-->
                 <!--Optional:-->
                 <!--<LocPref>?</LocPref>-->
@@ -89,6 +91,7 @@ title: 'Бронирование мест в поезде'
                 <!--<LowerCount>?</LowerCount>-->
                 <!--Optional:-->
                 <!--<NoSide>?</NoSide>-->
+                <!--Optional:-->
                 <Range>
                     <From>1</From>
                     <To>50</To>
@@ -105,32 +108,44 @@ title: 'Бронирование мест в поезде'
                 <!--Zero or more repetitions:-->
                 <BookRQPerson>
                     <!--Optional:-->
-                    <!--<DateOfBirth>?</DateOfBirth>-->
+                    <DateOfBirth>24.09.1995</DateOfBirth>
                     <!--Optional:-->
                     <!--<PlaceOfBirth>?</PlaceOfBirth>-->
                     <!--Optional:-->
-                    <!--<Nationality>?</Nationality>-->
+                    <Nationality>RUS</Nationality>
                     <!--Optional:-->
-                    <!--<Gender>?</Gender>-->
+                    <Gender>M</Gender>
                     <FirstName>Пупкин</FirstName>
                     <!--Optional:-->
                     <MiddleName>Акакиевич</MiddleName>
                     <LastName>Василий</LastName>
                     <Document>
-                        <DocType>P</DocType>
+                        <DocType>Passport</DocType>
                         <DocNum>1234567890</DocNum>
                         <!--Optional:-->
                         <!--<CountryCode>?</CountryCode>-->
                         <!--Optional:-->
                         <!--<DocElapsedTime>?</DocElapsedTime>-->
                     </Document>
+                    <!--Optional:-->
+                    <!--<TariffCode>?</TariffCode>-->
+                    <!--Optional:-->
+                    <!--<ReturnTrainTariffCode>?</ReturnTrainTariffCode>-->
                     <Type>adult</Type>
                     <!--Optional:-->
                     <!--<NeedServices></NeedServices>-->
                     <!--Optional:-->
-                    <!--<BonusCard></BonusCard>-->
+                    <!--<RzhdBBonusCard>?</RzhdBBonusCard>-->
                     <!--Optional:-->
-                    <!--<DiscountCard></DiscountCard>-->
+                    <!--<RzhdBDiscountCard>?</RzhdBDiscountCard>-->
+                    <!--Optional:-->
+                    <!--<DiscountCard>?</DiscountCard>-->
+                    <!--Optional:-->
+                    <!--<ReturnTrainNeedServices>?</ReturnTrainNeedServices>-->
+                    <!--Optional:-->
+                    <!--<ReturnTrainRzhdBBonusCard>?</ReturnTrainRzhdBBonusCard>-->
+                    <!--Optional:-->
+                    <!--<ReturnTrainRzhdBDiscountCard>?</ReturnTrainRzhdBDiscountCard>-->
                 </BookRQPerson>
             </Passengers>
             <ReturnTrain>
@@ -142,6 +157,8 @@ title: 'Бронирование мест в поезде'
                 <SeatsPref>
                     <!--Optional:-->
                     <!--<Bedclothes>?</Bedclothes>-->
+                    <!--Optional:-->
+                    <!--<FullCoupe>?</FullCoupe>-->
                     <!--Optional:-->
                     <!--<GenderPref>?</GenderPref>-->
                     <!--Optional:-->
