@@ -437,6 +437,7 @@ title: 'Бронирование мест в поезде'
                 <Number>072П</Number>
                 <PrintPoints nil="true"/>
                 <RequisitesId>0</RequisitesId>
+                <SupplierAgencyID>TEST_ID</SupplierAgencyID>
                 <TrainEndPointName>КИЕВ-ПАССАЖИРСКИЙ</TrainEndPointName>
                 <TrainStartPointName>ЗАПОРОЖЬЕ 1</TrainStartPointName>
                 <TripTime>010:31</TripTime>
