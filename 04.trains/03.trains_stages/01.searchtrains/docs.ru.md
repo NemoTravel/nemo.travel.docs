@@ -183,6 +183,7 @@ title: 'Поиск поездов'
         <Number>084Д</Number>
         <PrintPoints nil="true"/>
         <RequisitesId>2</RequisitesId>
+        <SupplierAgencyID>10601</SupplierAgencyID>
         <TrainEndPointName>КИЕВ-ПАССАЖИРСКИЙ</TrainEndPointName>
         <TrainStartPointName>МАРИУПОЛЬ</TrainStartPointName>
         <TripTime>013:09</TripTime>
@@ -255,6 +256,7 @@ title: 'Поиск поездов'
             <Number>037Д</Number>
             <PrintPoints nil="true"/>
             <RequisitesId>1</RequisitesId>
+            <SupplierAgencyID>TEST_ID</SupplierAgencyID>
             <TrainEndPointName>КИЕВ ПАСС</TrainEndPointName>
             <TrainStartPointName>ДОНЕЦК</TrainStartPointName>
             <TripTime>11:58</TripTime>
