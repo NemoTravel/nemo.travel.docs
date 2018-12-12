@@ -183,7 +183,7 @@ title: 'Поиск поездов'
         <Number>084Д</Number>
         <PrintPoints nil="true"/>
         <RequisitesId>2</RequisitesId>
-        <SupplierAgencyID>10601</SupplierAgencyID>
+        <SupplierAgencyID>161</SupplierAgencyID>
         <TrainEndPointName>КИЕВ-ПАССАЖИРСКИЙ</TrainEndPointName>
         <TrainStartPointName>МАРИУПОЛЬ</TrainStartPointName>
         <TripTime>013:09</TripTime>
