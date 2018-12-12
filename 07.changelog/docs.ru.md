@@ -6,4 +6,4 @@ taxonomy:
 visible: false
 ---
 
-Список версий
+В ModifyBook_2_2 [ModifyBook_2_2](avia/request/modifybook) добавлена новая секция PricingOptions. 
