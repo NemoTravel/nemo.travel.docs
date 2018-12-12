@@ -136,7 +136,7 @@ title: 'Поиск поездов'
     -   **Backward**
 -   **Train.PrintPoint.TimeToPoint** - Время движения поезда в формате hh:mm. Тип данных - строка.
 -   **Train.PrintPoint.Phone** - Телефон пункта выдачи билета/билетов заказа. Тип данных - строка.
--   **Train.SupplierAgencyID** - Идентификатор агентства у поставщика. Тип данных - строка. TerminalID для КТЖ и УФС, ClientID для Сирены, MerchantID для УЖД и УнИТ.
+-   **Train.SupplierAgencyID** - Идентификатор агентства у поставщика. Тип данных - строка. TerminalID для КТЖ и УФС, ClientID для Sirena, MerchantID для УЖД и УнИТ.
 -   **Train.TrainStartPointName** - Начальный пункт движения поезда. Тип данных - строка.
 -   **Train.TrainEndPointName** - Конечный пункт движения поезда. Тип данных - строка.
 -   **Train.WebService** - От какого поставщика данный поезд. Возможные значения: аналогичны элементу Service массива Services в запросе на поиск.
