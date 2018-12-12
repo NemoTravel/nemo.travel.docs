@@ -7,6 +7,9 @@ taxonomy:
 
 ### ExchangeTicket
 
+#### ExchangeTicket_2_2
+Самая последняя версия запроса отличия только в блоке работы с допуслугами из запроса [Book_2_2](/avia/request/bookflight). 
+
 Обмен билетов
 
 #### Запрос
