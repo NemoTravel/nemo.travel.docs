@@ -5,6 +5,30 @@ taxonomy:
         - docs
 ---
 
+### ModifyBook_2_2
+Самая последняя версия запроса ModifyBook.
+Аналогичен версии ModifyBook_2_1, отличия только в блоке работы с допуслугами.
+ ### Пример контейнера с допуслугами из запроса ModifyBook_2_2.
+ ```xml
+             <ns2:ModifyAncillaryService>
+              <ns1:Action>Add</ns1:Action>
+              <ns2:AncillaryService>
+                <ns2:Name xsi:nil="true"/>
+                <ns2:Group>ML</ns2:Group>
+                <ns2:SubGroup xsi:nil="true"/>
+                <ns2:RFIC>G</ns2:RFIC>
+                <ns2:RFISC>BF1</ns2:RFISC>
+                <ns2:SSRCode xsi:nil="true"/>
+                <ns2:SSRDescription xsi:nil="true"/>
+                <ns2:Type>F</ns2:Type>
+                <ns2:TravellerRef>2</ns2:TravellerRef>
+                 <ns2:SegmentRef>
+           		   <ns1:Ref>1</ns1:Ref>
+           	     </ns2:SegmentRef>
+                <ns2:Quantity>1</ns2:Quantity>
+              </ns2:AncillaryService>
+            </ns2:ModifyAncillaryService>
+ ```
 ### ModifyBook_2_1
 Аналогичен предыдущей версии, отличие только в плоском формате допуслуг из запроса [Book_2_1](/avia/request/bookflight)
  ### Пример контейнера с допуслугами из запроса ModifyBook_2_1.
