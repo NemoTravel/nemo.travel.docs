@@ -229,6 +229,7 @@ title: 'Получение полной информации об определ
                 <Number>072П</Number>
                 <PrintPoints nil="true"/>
                 <RequisitesId>0</RequisitesId>
+                <SupplierAgencyID>161</SupplierAgencyID>
                 <TrainEndPointName>КИЕВ-ПАССАЖИРСКИЙ</TrainEndPointName>
                 <TrainStartPointName>ЗАПОРОЖЬЕ 1</TrainStartPointName>
                 <TripTime>010:31</TripTime>
@@ -355,6 +356,7 @@ title: 'Получение полной информации об определ
                <Number>068Ы</Number>
                <PrintPoints nil="true"/>
                <RequisitesId>1</RequisitesId>
+               <SupplierAgencyID>TEST_ID</SupplierAgencyID>
                <TrainEndPointName>АБАКАН</TrainEndPointName>
                <TrainStartPointName>МОСКВА ЯР</TrainStartPointName>
                <TripTime>28:23</TripTime>
