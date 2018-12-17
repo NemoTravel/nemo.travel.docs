@@ -81,7 +81,7 @@ While searching for trains, only basic information about the trains in the reque
   -   **LUX** - luxury
   -   **SOFT** - soft
   -   **UNKNOWN** - not defined
--   **Train.Categories.TCategory.Price** - Tickets price in the category. Data type - custom (Contains all the properties of the Money element from common elements + an additional property).
+-   **Train.Categories.TCategory.Price** - Tickets price in the category. Data type - custom (Contains all the properties of the Money element from common elements + an additional attribute).
 -   **Train.Categories.TCategory.Price.NDS** - VAT. Data type - fractional number.
 -   **Train.Categories.TCategory.PlacesCountInPrice** - Attribute of price for 2 seats. Data type - 32-bit integer.
 -   **Train.Categories.TCategory.MaxPrice** - Maximum tickets price. Data type - custom. The response structure is similar to the response to TCategory.Price.
