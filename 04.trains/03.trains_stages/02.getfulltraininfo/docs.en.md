@@ -25,23 +25,23 @@ title: 'Getting the Complete Information on a Particular Train'
 -   **Car.PlacePrices** - array of containers with information on the price of certain seat types in the car. Data type - custom.
 -   **Car.PlacePrices.PlacePrice** - container for information on the price of certain seat types in the car. Data type - custom.
 -   **Car.PlacePrices.PlacePrice.Type** - seat type. Data type - string. Possible values:
-    -   **Up** - upper seat
-    -   **Down** - lower seat
-    -   **UpSide** - upper side seat
-    -   **DownSide** - lower side seat
-    -   **DownNearWCPlace** - lower seat in the last coupe
-    -   **UpNearWCPlace** - upper seat in the last coupe 
-    -   **DownSideNearWCPlace** - lower side seat in the coupe
-    -   **NearTheTable** - seat by the table
-    -   **NearThePlayground** - seat by the playground
-    -   **NearTheTableAndPlayground** - seat by the table near the playground
+    -   **Up** - upper seats
+    -   **Down** - lower seats
+    -   **UpSide** - upper side seats
+    -   **DownSide** - lower side seats
+    -   **DownNearWCPlace** - lower seats in the last coupe
+    -   **UpNearWCPlace** - upper seats in the last coupe 
+    -   **DownSideNearWCPlace** - lower side seats in the coupe
+    -   **NearTheTable** - seats by the table
+    -   **NearThePlayground** - seats by the playground
+    -   **NearTheTableAndPlayground** - seats by the table near the playground
     -   **NearPassWithAnimal** - near the seats for passengers with animals
-    -   **Normal** - common seat (not by the table)
-    -   **InCompartment** -  seat in a compartment
-    -   **Folding** - folding seat
-    -   **PassWithAnimal** - seat for passengers with animals
-    -   **MotherWithBaby** - seat for mother with a baby
-    -   **WithChildren** - seat for passengers with children
+    -   **Normal** - common seats (not by the table)
+    -   **InCompartment** -  seats in a compartment
+    -   **Folding** - folding seats
+    -   **PassWithAnimal** - seats for passengers with animals
+    -   **MotherWithBaby** - seats for mother with a baby
+    -   **WithChildren** - seats for passengers with children
 -   **Car.PlacePrices.PlacePrice.Places** - list of seats related to this type, divided by commas. Data type - string.
 -   **Car.PlacePrices.PlacePrice.Amount** - price per seat. Data type - fractional number.
 
