@@ -1,5 +1,5 @@
 ---
-title: 'Getting Additional Information before Handing Tickets Over'
+title: 'Getting Additional Information Before Handing Tickets Over'
 ---
 
 ### GetRefundInfo
