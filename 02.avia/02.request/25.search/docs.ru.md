@@ -160,6 +160,27 @@ taxonomy:
 -   **PlaneFlights** — содержит поисковую выдачу. Тип данных — массив элементов [Flight](/avia/common/flight).
 -   **SimpleGroupedFlights** - Содержит поисковую выдачу в формате [GroupSearch](/avia/grouping). Тип данных - сложный.
 -   **SubsidiesInformation** - Информация о субсидиях. Если тариф в перелете субсидированный, то у него будет ссылка на элемент в этом массиве. Тип данных - аналогичен ***SubsidiesInformation*** в объекте [Flight](/avia/common/flight).
+- **ProcessingData** - Контейнер с отладочной информацией по фильтрам запросов и маршрутизаторору. Тип данных - сложный.
+- **FlightsFromSuppliersCount** - Указывает, сколько перелетов было получено от поставщика. Тип данных - int.
+- **FlightsFromSuppliersSources** - Контейнер с информацией по поставщикам. Тип данных - сложный.
+- **FlightsFromSuppliersSources.SourceData** - Контейнер с информацией по конкретному поставщику. Тип данных - сложный.
+- **FlightsFromSuppliersSources.SourceData.SourceID** - ID поставщика. Тип данных - int.
+- **FlightsFromSuppliersSources.SourceData.Count** - Количество перелетов от данного поставщика. Тип данных - int.
+- **PropogatedFlightsCount** - Контейнер с информацией о клонированных перелетах. Тип данных - сложный.
+- **PropogatedFlightsSources** - Контейнер с информацией о клонированных перелетах по поставщикам. Тип данных - сложный.
+- **PropogatedFlightsSources.SourceData.SourceID** - ID поставщика. Тип данных - int.
+- **PropogatedFlightsSources.SourceData.Count** - Указывает, сколько перелетов было получено от поставщика. Тип данных - int
+- **PricingRulesCount** - Счетчик количества сработанных правил ЦО. Тип данных - int.
+- **PricingDuration** - Длительность выполнения ЦО. Тип данных - строка. 
+- **AppliedRouterRules** - Контейнер с информацией маршрутизатора. Тип данных - сложный.
+- **AppliedRouterRules.RouterRule** -  Контейнер с информацией о примененных правилах маршрутизатора. Тип данных - сложный. 
+- **AppliedRouterRules.RuleID** - ID сработанного правила. Тип данных - int.
+- **AppliedRouterRules.TargetPackages** - Контейнер с информацией  о пакетах в которых был осуществлен поиск согласно маршрутизатору. Тип данных - сложный. 
+- **AppliedRouterRules.TargetPackages.PackageID** - ID пакета, в котором  был осуществлен поиск согласно маршрутизатору. Тип данных - int.
+- **ProcessingData.TriggeredRequestFilters** - Контейнер с информацией по задействованным фильтрам запросов. Тип данных - сложный. 
+- **ProcessingData.TriggeredRequestFilters.TriggeredRequestFilter** -  Контейнер с информацией по конкретному фильтру. Тип данных - сложный. 
+- **ProcessingData.TriggeredRequestFilters.TriggeredRequestFilter.FilterID** - ID фильтра. Тип данных int.
+- **ProcessingData.TriggeredRequestFilters.TriggeredRequestFilter.PackageID** - ID пакета, в котором сработал фильтр. Тип данных int.
 
 ##### Пример
 ```xml
