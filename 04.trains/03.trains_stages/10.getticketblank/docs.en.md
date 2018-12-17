@@ -51,7 +51,7 @@ If you need to receive all available reservation blanks, then the BlankIDs param
 -   **TicketBlanks.TicketBlank.QRCodeFormat** - QR code format. File extension (without a dot). Data type - string.
 -   **TicketBlanks.TicketBlank.QRCode** - QR code with the information on Base64 order. Data type - string.
 
-For UIT in the TicketBlank.TBlank parameter for electronic documents, a string with an object in JSON format will be returned. Information from this object should be used to generate a visual representation of the form. Description of the object format:
+For UIT in the TicketBlank.TBlank parameter for electronic documents, a string with an object in JSON format will be returned. Information from this object should be used to generate a visual representation of the blank. Description of the object format:
 
 -   **StationFrom** - Departure station. Data type - custom.
 -   **StationFrom.Code** - Departure station code. Data type - string.

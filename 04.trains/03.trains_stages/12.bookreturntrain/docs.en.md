@@ -12,7 +12,7 @@ The structure is the same as the ReturnTrain parameter from [booking request](/t
 
 -   **BookDataList** - Data type - array of BookReturnData elements.
 -   **BookDataList.BookReturnData** - Information on which ticket the round-trip is booked to and which services it will provide. Data type - custom. 
--   **BookDataList.BookReturnData.ToBlankID** - Ticket form ID in the linear direction to which the opposite direction ticket will be linked. Data type - string.
+-   **BookDataList.BookReturnData.ToBlankID** - Ticket blank ID in the linear direction to which the opposite direction ticket will be linked. Data type - string.
 -   **BookDataList.BookReturnData.NeedServices** - Desired additional services for the return direction. Data type - enumeration. Possible values are similar to the Car.Services parameter from the response to the following request: [search](/trains/trains_stages/searchtrains) (may be several items divided by a space) (may be empty)
 -   **ForwardBookID** - ID for straight direction reservation. Data type - 32-bit integer.
 
