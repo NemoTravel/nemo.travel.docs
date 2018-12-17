@@ -66,7 +66,7 @@ While searching for trains, only basic information about the trains in the reque
 -   **Train.BeginDate** - Date and time of departure. The format is yyyy-mm-dd hh:mm:ss, for example - 2011-05-12 23:10:00. Data type - string.
 -   **Train.EndDate** - Date and time of arrival. The format is yyyy-mm-dd hh:mm:ss, for example - 2011-05-12 23:10:00. Data type - string.
 -   **Train.TripTime** - Travel time. The format is hh:mm, for example, 08:57. Data type - string.
--   **Train.IsERegister** - Attribute of electronic check-in availability. Data type - boolean (may be null). Attribute of electronic check-in availability.
+-   **Train.IsERegister** - Attribute of electronic check-in availability. Data type - boolean (may be null). 
 -   **Train.Categories** - Array of logical categories of train for which cars are distributed (For UIT in one category there will be cars of the same type and class and therefore with the same cost of tickets). Data type - array of TCategory elements.
 -   **Train.Categories.TCategory** - Train’s logical category. Data type - custom.
 -   **Train.Categories.TCategory.ID** - ID at the train level. Data type - 32-bit integer.
