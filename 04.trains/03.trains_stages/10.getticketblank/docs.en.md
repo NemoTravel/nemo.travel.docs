@@ -10,7 +10,7 @@ title: 'Getting Itinerary Receipt for a Specific Reservation'
 -   **BlankIDs** -  IDs of ticket blanks to be canceled. Data type - array of string elements.
 -   **BlankIDs.BlankID** - Blank ID. Data type - string.
 
-If you need to receive all available reservation blanks, then the BlankIDs parameter should be left blank.
+If you need to receive all available reservation blanks, then the BlankIDs parameter should be left empty.
 
 ##### Sample Request (XML)
 ```xml
