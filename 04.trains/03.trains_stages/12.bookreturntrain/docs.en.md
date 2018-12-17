@@ -2,7 +2,7 @@
 title: 'Return Tickets Booking'
 ---
 
-Supported only for UFS providers.
+Supported only for UFS and UZD providers.
 If the request does not provide a list with information on which tickets require round-trip, they will be booked for all direct tickets.
 If return tickets are not booked for everyone, then in the future you are able to book additional return tickets. 
 
