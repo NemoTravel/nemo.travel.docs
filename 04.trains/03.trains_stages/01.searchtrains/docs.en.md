@@ -100,7 +100,7 @@ While searching for trains, only basic information about the trains in the reque
 -   **Train.Categories.TCategory.Cars.Car** - The car. Data type - custom.
 -   **Train.Categories.TCategory.Cars.Car.Number** - Number of the car. Data type - 32-bit integer.
 -   **Train.Categories.TCategory.Cars.Car.IsCarERegister** - Attribute of availability of the electronic registration/e-ticket in the car. Data type - boolean (may be null).
--   **Train.Categories.TCategory.Cars.Car.IsThrough** - Attribute of a direct car. Actual information is obtained in response to a request for complete information on the train (see the next section). Data type - boolean.
+-   **Train.Categories.TCategory.Cars.Car.IsThrough** - Attribute of a direct car. Actual information is obtained in response to a request for complete information on the train (see the [next section](/trains/trains_stages/getfulltraininfo)). Data type - boolean.
 -   **Train.Categories.TCategory.Cars.Car.SeatCount** - Number of seats in the car by type. Data type - custom.
 -   **Train.Categories.TCategory.Cars.Car.SeatCount.NotSpec** - Description. Data type - 32-bit integer.
 -   **Train.Categories.TCategory.Cars.Car.SeatCount.Upper** - Number of upper places. Data type - 32-bit integer.
