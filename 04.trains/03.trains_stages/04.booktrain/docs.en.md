@@ -195,7 +195,7 @@ title: 'Train Seats Booking'
 -   **Passengers.BookedPerson.Ticket** - Ticket information. Data type - custom.
 -   **Passengers.BookedPerson.Ticket.TicketNumber** - Ticket number. Data type - string.
 -   **Passengers.BookedPerson.Ticket.IsERegistered** - Status of the electronic registration (ER) of the ticket. true - ER is on, false - ER is off. Data type - boolean.
--   **Passengers.BookedPerson.Ticket.BlankID** - Form identifier in the supplier’s system. Data type - string.
+-   **Passengers.BookedPerson.Ticket.BlankID** - Blank ID in the supplier’s system. Data type - string.
 -   **Passengers.BookedPerson.Ticket.Status** - Ticket status. May differ from the general order status. Data type - enumeration. Possible values are similar to the Status parameter.
 -   **Passengers.BookedPerson.Ticket.IsPrinted** - Ticket printout feature. Data type - boolean.
 -   **Passengers.BookedPerson.Ticket.TariffType** - Rate type, FULL etc. - description from the GDS. Data type - string.
