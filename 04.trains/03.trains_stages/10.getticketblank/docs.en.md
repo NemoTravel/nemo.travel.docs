@@ -46,7 +46,7 @@ If you need to receive all available reservation blanks, then the BlankIDs param
 -   **TicketBlanks** - Reservation blanks. Data type - array of TicketBlank elements.
 -   **TicketBlanks.TicketBlank** - Contains an itinerary receipt. Data type - custom.
 -   **TicketBlanks.TicketBlank.BlankID** - Blank ID. Data type - string.
--   **TicketBlanks.TicketBlank.Format** - Format / coding of an itinerary receipt. Data type - enumeration. Possible values are similar to the BlankPrefferredType parameter from [booking request](/trains/trains_stages/booktrain).
+-   **TicketBlanks.TicketBlank.Format** - Format / encoding of an itinerary receipt. Data type - enumeration. Possible values are similar to the BlankPrefferredType parameter from [booking request](/trains/trains_stages/booktrain).
 -   **TicketBlanks.TicketBlank.TBlank** - Itinerary receipt in the format specified in the Format element. Content is encoded in base64, except when Format = JSON. Data type - string.
 -   **TicketBlanks.TicketBlank.QRCodeFormat** - QR code format. File extension (without a dot). Data type - string.
 -   **TicketBlanks.TicketBlank.QRCode** - QR code with the information on Base64 order. Data type - string.
