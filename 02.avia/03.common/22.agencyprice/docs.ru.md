@@ -2,3 +2,133 @@
 title: AgencyPrice
 ---
 
+AgencyPrice
+-----
+
+Содержит полную информацию о цене и её формировании для брони или заказа в валюте продажи агентства. Авиа сервер будет запрашивать цену в валюте реквизитов/PCC и в валюте агентства (при поиске и доп. операциях только в валюте агентства), если они отличаются. При расчёте стоимости заказа в GDS будет использована валюта реквизитов/PCC, при этом возвращаться будет цена в валюте агентства. Риски по разнице стоимости из-за несовпадении курсов Агентство в таком случае берёт на себя. Функциональность доступна для GDS Galileo uAPI, Sabre и Amadeus. 
+
+-   **TotalPrice** - Полная стоимость данной брони или заказа в валюте агентства или в валюте реквизитов (в зависимости от поставщика и настроек). Тип данных - [Money](/avia/common/money).
+-   **ExpectedTicketCount** - Ожидаемое количество билетов, которое будет выписано для данной брони. Тип данных - int32.
+-   **FOPPrices** - Содержит разницу цен для определённых ФОПов относительно цены брони без указания планируемого ФОПа. Тип данных - сложный.
+-   **FOPPrices.FOPPrice** - Содержит разницу цены для конкретного ФОПа относительно цены брони без указания планируемого ФОПа. Тип данных - массив.
+-   **FOPPrices.FOPPrice.FOP** - ФОП, для которого представлена разница цен. Тип данных - строка.
+-   **FOPPrices.FOPPrice.PriceBreakdown** - Брэкдаун с формированием цены объекта для данного ФОПа. Тип данных - массив PricePart. <!--Разница цен для данного ФОПа. Тип данных - [Money](/avia/common/money).-->
+-   **PriceBreakdown** - Брэкдаун с формированием цены объекта. Тип данных - массив PricePart.
+-   **PricePart** - Часть цены объекта, как правило для одной из услуг в данном заказе. Тип данных - сложный.
+-   **PricePart.ServiceRef** - Ссылка на услуги в брони/заказе, для которых применяется данная цена. Не указывается если данная цена применяется ко всем услугам в брони/заказе. Тип данных - [Reflist](/avia/common/reflist).
+-   **PricePart.SegmentRef** - Ссылка на сегменты перелёта, к которым применяется данная цена. Специфика выписки нескольких билетов на один перелёт. Тип данных - [Reflist](/avia/common/reflist).
+-   **PricePart.TotalPrice** - Полная стоимость данной части цены. Тип данных - [Money](/avia/common/money).
+-   **PricePart.ValidatingCompany** - ВП. Тип данных - строка.
+-   **PricePart.Refundable** - Тип возвратности денег по данной цене услуги. Тип данных - перечисление, возможные значения:
+    -   Unknown
+    -   Refundable
+    -   NonRefundable
+    -   PenaltiesApplies
+-   **PricePart.PrivateFareInd** - Признак наличия приватных тарифов при формировании цены. Тип данных - bool.
+-   **PricePart.PassengerTypePriceBreakdown** - ВП. Тип данных - массив PassengerTypePrice.
+-   **PricePart.AgencyMarkup** - Сбор агентства на весь перелет. Тип данных - [Money](/avia/common/money).
+-   **PricePart.ChargeBreakdown** - Разбивка составляющих сбора по правилам ценообразования. Тип данных — [ChargeBreakdown](/avia/common/chargebreakdown).
+-   **PricePart.PricingDebug.RulesDebugInfo** - Список результатов проверки правил ценообразования. Тип данных - сложный.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData** - Результат проверки правила ценообразования. Тип данных - сложный.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ID** - ID правила. Тип данных - целое 32 битное число.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ValCompany** - Валидирующий перевозчик. Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Commission** - Комиссия авиакомпании (как указано в правиле). Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ComResult** - Коммиссия авиакомпании (рассчитанная). Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AgencyCommission** - Комиссия агентства. Тип данных — строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Bonus** - Бонус авиакомпании (как в правиле). Тип данных — строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BonusResult** - Бонус АК (рассчитанный). Тип данных — строка. 
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ChargeExt** - Признак доп. сбора. Тип данных - строка. 
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Charge** - Сбор (как в правиле). Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ChargeValue** - Сбор (рассчитанный). Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.MinProfit** - Минимальная прибыль. Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.MinProfitPriority** - Приоритет минимальной прибыли. Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.MinProfitEnable** - Признак применения минимальной прибыли. Тип данных - булевский.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Discount** - Скидка от тарифа. Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AuthCode** — Код авторизации. Тип данных — строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.TourCode** - Туркод. Тип данных — строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AcquiringMode** - Признак применения прямого эквайринга. Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.IsAutoticketingDisabled** - Признак необходимости отключения автовыписки. Тип данных - булевский.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BestRule** - Признак наиболее подходящего правила. Тип данных — булевский.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Success** - Признак прохождения всех проверок правилом. Тип данных — булевский.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults** - Список результатов проверки правила. Тип данных - сложный.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check** -Результат проверки. Тип данных - сложный.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Name** - Название проверяемого параметра. Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info** - Данные проверки. Тип данных - сложный.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info.Value** - Значение параметра правила. Тип данных - строка.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info.Result** - Результат проверки параметра. Тип данных - булевский.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CorpRule** - Признак правила для предоставления скидки по тур. коду конкретным клиентам. Тип данных — булевский.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BestCorpRule** - Признак наиболее подходящего правила для предоставления скидки по тур. коду. Тип данных — булевский.
+-   **PricePart.SubAgentMarkup** - Суммарный сбор субагента в валюте пакета реквизитов. Тип данных - [Money](/avia/common/money).
+-   **PricePart.SubAgentChargeBreakdown** - Разбивка сбора субагента в валюте субагентства. 
+-   **SubAgentChargeBreakdown.Charge** — Информация о конкретном сборе. Тип данных — сложный.
+-   **SubAgentChargeBreakdown.Charge.Amount** — Абсолютное значение сбора. Тип данных — дробное число.
+-   **SubAgentChargeBreakdown.Charge.Currency** — Код валюты субагентства. Тип данных — строка. 
+-   **SubAgentChargeBreakdown.Charge.RuleID** — Идентификатор сработавшего правила. Тип данных — целое число.
+-   **FareFamiliesDescription** — содержит описания семейств тарифов, присутствующих в перелёте. Тип данных — [Description](/avia/common/ff-description).
+-   **PassengerTypePrice** - Формирование цены на определённый тип путешественника. Тип данных - сложный.
+-   **PassengerTypePrice.TravellerRef** - Ссылка на путешественников. Тип данных - [Reflist](/avia/common/reflist).
+-   **PassengerTypePrice.PricingType** - Тип пассажира, по которому сформирована данная цена, может не совпадать с типом путешественника в соответствующем разделе. Тип данных - строка.
+-   **PassengerTypePrice.BaseFare** - Цена по тарифам в валюте их заведения. Тип данных - [Money](/avia/common/money).
+-   **PassengerTypePrice.EquiveFare** - Цена по тарифам в валюте продажи из ГДС. Тип данных - [Money](/avia/common/money).
+-   **PassengerTypePrice.TotalFare** - Полная цена в валюте продажи из ГДС. Тип данных - [Money](/avia/common/money).
+-   **PassengerTypePrice.Taxes** - Таксы. Тип данных - массив Tax.
+-   **Tax** - Информация об определённой таксе (сборе). Тип данных - сложный, наследник [Money](/avia/common/money).
+-   **Tax.TaxCode** - Код таксы. Тип данных - строка.
+-   **PassengerTypePrice.Tariffs** - Тарифы. Тип данных - массив Tariff.
+-   **Tariff** - Описание тарифа, который принимает участие в формировании данной цены. Тип данных - сложный, описание приведено для AirTariff.
+-   **Tariff.Code** - Код тарифа. Тип данных - строка.
+-   **Tariff.Type** - Тип тарифа. Тип данных - перечисление, возможные значения:
+    -   Public
+    -   Cat35
+    -   Cat25
+    -   InclusiveTour
+    -   PersonalCompanySite
+    -   Private
+-   **Tariff.ClassOfService** - Класс обслуживания по данномут тарифу. Тип данных - перечисление, возможные значения:
+    -   Economy
+    -   Business
+    -   First
+    -   PremiumEconomy
+    -   Other
+-   **Tariff.BookingClassCode** - Литера класса бронирования. Тип данных - строка.
+-   **Tariff.SegmentID** - ИД сегмента перелёта, к которому применяется данный тариф. Тип данных - Int32.
+-   **Tariff.FreeBaggage** - Информация о бесплатном багаже по данному тарифу. Тип данных - Baggage.
+-   **Tariff.FreeBaggage.Value** - Значение меры бесплатного багажа. Тип данных - строка.
+-   **Tariff.FreeBaggage.Measure** - Единица меры бесплатного багажа. Тип данных - перечисление, возможные значения:
+    -   Kilograms
+    -   Pounds
+    -   Pieces
+    -   SpecialCharge
+    -   Size
+    -   ValueOfMeasure
+    -   Weight
+-   **Tariff.FreeBaggage.Size** - Информация об ограничениях по размеру, накладываемых на багаж. Тип данных - строка.
+-   **Tariff.FreeMeal** - Бесплатное питание по данному тарифу. Тип данных - массив MealType.
+-   **MealType** - тип бесплатного питания по тарифу. Тип данных - перечисление, возможные значения:
+    -   AlcoholBeverages
+    -   Beverages
+    -   Breakfast
+    -   ColdMeal
+    -   ContinentalBreakfast
+    -   Dinner
+    -   HotMeal
+    -   Lunch
+    -   Meal
+    -   Refreshment
+    -   Snack
+-   **Tariff.IsSystemTransfer** — Признак системного трансфера. Тип данных — bool.
+-   **PassengerTypePrice.FareCalc** — Строка рассчёта цены. Тип данных — строка.
+-   **PassengerTypePrice.Markup** — Сбор. Тип данных - [Money](/avia/common/money).
+-   **PassengerTypePrice.AgencyFare** — Cумма тарифа в валюте агентства. Тип данных — [Money](/avia/common/money).
+-   **PassengerTypePrice.TotalAgencyFare** — Cумма тарифа и такс в валюте агентства. Тип данных — [Money](/avia/common/money).
+-   **PassengerTypePrice.ChargeBreakdown** - Разбивка сборов. Тип данных - массив ChargeBreakdown.
+-   **ChargeBreakdown** — Содержит разбивку составляющих сбора из ценообразования на пассажира, а также величину округления при конвертации в валюту агентства.
+-   **ChargeBreakdown.Charge** — Информация о конкретном сборе, величине округления. Тип данных — сложный.
+-   **ChargeBreakdown.Charge.Amount** — Абсолютное значение сбора, округления. Тип данных — дробное число.
+-   **ChargeBreakdown.Charge.Currency** — Код валюты агентства. Тип данных — строка. 
+-   **ChargeBreakdown.Charge.RuleID** — Идентификатор сработавшего правила ценообразования. Тип данных — целое число.
+-   **ChargeBreakdown.Charge.Type** — Тип сбора. Тип данных — перечисление, возможные значения: 
+    - **PriceRule** - Сбор из таблицы ценообразования;
+    - **TaxRound** - Величина округления, полученная при конвертации стоимости такс в валюту агентства;
+    - **FareRound** - Величина округления, полученная при конвертации стоимости тарифа в валюту агентства;
+    - **MarkupRound** - Величина округления сбора.
