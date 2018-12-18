@@ -20,7 +20,7 @@ taxonomy:
 -   **AncillaryServices** — список дополнительных услуг от поставщика, забронированных в рамках данной брони. Тип данных — массив элементов типа [Service](/avia/common/service).
 -   **ProcessingServices** — список услуг по обработке. Тип данных — массив элементов типа [ProcessingService](/avia/common/processingservice)
 -   **Price** — цена брони. Тип данных — [Price](/avia/common/price).
--   **AgencyPrice** — цена брони в валюте продажи агентства. Тип данных — [AgencyPrice](/avia/common/agencyprice).
+-   **AgencyPrice** — цена брони в валюте продажи агентства. Тип данных — [AgencyPrice](/avia/common/agencyprice). **Возвращается только в ответах на запросы версии 2.2 и новее.**
 -   **DataItems** — контент брони. Тип данных — [DataItem](/avia/common/dataitem).
 
 #### Пример
