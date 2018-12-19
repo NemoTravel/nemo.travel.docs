@@ -1,27 +1,27 @@
 ---
-title: 'Train Search'
+title: 'Поиск поездов'
 ---
 
 ### SearchTrains
 
-While searching for trains, only basic information about the trains in the requested direction is returned in the response, so many of the response's described parameters may be empty. Complete information on a particular train can be obtained from the following request: [Getting the Complete Infomation on a Particular Train](/trains/trains_stages/getfulltraininfo).
+При поиске поездов в ответе возвращается только основная информация о поездах по запрошенному направлению, поэтому многие описанные параметры в ответе могут быть пустыми. Полную информацию о конкретном поезде можно получить из запроса [Получение полной информации об определённом поезде](/trains/trains_stages/getfulltraininfo).
 
-#### Request
--   **Date** - Departure date. The format is dd.mm.yyyy, for example 12/30/2011 or 01/01/2012. Data type - string.
--   **DepPoint** - Departure station code. Data type - string.
--   **ArrPoint** - Arrival station code. Data type - string.
--   **Services** - Array of railway ticket suppliers in which it is required to conduct a search. If not specified, it is searched for in all that are configured in the requisites. Data type - array of Service elements.
--   **Services.Service** - Provider in which the search will be executed. Data type - enumeration. Possible values:
-    -   **UFS (0)** Russian Railways (Universal Financial System)
-    -   **UIT (1)** Railways of Ukraine (Universal Information Technologies)
--   **TimePeriod** - Time range of departure/arrival of the train. Data type - custom.
--   **TimePeriod.Type** - Time range type. Data type - enumeration. Possible values: 
-    -   **Departure** - On Departure
-    -   **Arrival** - On Arrival
--   **TimePeriod.From** - Time from. hh:mm format. Data type - string.
--   **TimePeriod.To** - Time to. hh:mm format. Data type - string.
+#### Запрос
+-   **Date** - Дата отправления. Формат dd.mm.yyyy, например 30.12.2011 или 01.01.2012. Тип данных - строка.
+-   **DepPoint** - Код станции отправления. Тип данных - строка.
+-   **ArrPoint** - Код станции прибытия. Тип данных - строка.
+-   **Services** - Массив поставщиков ЖД билетов, в которых необходимо сделать поиск. Если не задан, то ищется во всех, которые настроены в реквизитах. Тип данных - массив элементов Service.
+-   **Services.Service** - Поставщик, в котором будет происходить поиск. Тип данных - перечисление. Возможные значения:
+    -   **UFS (0)** РЖД (Универсальная финансовая система)
+    -   **UIT (1)** ж/д Украины (Универсальные Информационные Технологии)  
+-   **TimePeriod** - Временной диапазон отправления/прибытия поезда. Тип данных - сложный.
+-   **TimePeriod.Type** - Тип временного диапазона. Тип данных - перечисление. Возможные значения:
+    -   **Departure** - На отправление
+    -   **Arrival** - На прибытие
+-   **TimePeriod.From** - Время от. Формат hh:mm. Тип данных - строка.
+-   **TimePeriod.To** - Время до. Формат hh:mm. Тип данных - строка.
 
-##### Sample Request (XML)
+##### Пример запроса (XML)
 
   ```xml
       <SearchTrains>
@@ -46,99 +46,102 @@ While searching for trains, only basic information about the trains in the reque
 </SearchTrains>
     ```
     
-#### Response
+#### Ответ
 
--   **Trains** - Trains as a search result. Data type - array of Train elements.
--   **Train** - Information about the train. Data type - custom.
--   **Train.ID** - Train ID in the nemo system. Data type - 64-bit integer.
--   **Train.WebService** - Supplier of the train. Possible values: similar to the Services unit of the Services array in the search request.
--   **Train.Number** - Train number. Data type - string.
--   **Train.Name** - Train name. Data type - string.
--   **Train.Category** - Categories to which a train may belong. Data type - array of TrainCat elements.
--   **Train.Category.TrainCat** - Category of the train. Data type - enumeration. Possible values:
-  -   **UNKNOWN (0)** unknown train type
-  -   **FAST (1)** express
-  -   **FIRM (2)** corporate
-  -   **HIGHSPEED (3)** high-speed
-  -   **COMMON (4)** common
-  -   **TRAIN_DELUX (5)** luxury train
-  -   **PASSENGER (6)** passenger
--   **Train.BeginDate** - Date and time of departure. The format is yyyy-mm-dd hh:mm:ss, for example - 2011-05-12 23:10:00. Data type - string.
--   **Train.EndDate** - Date and time of arrival. The format is yyyy-mm-dd hh:mm:ss, for example - 2011-05-12 23:10:00. Data type - string.
--   **Train.TripTime** - Travel time. The format is hh:mm, for example, 08:57. Data type - string.
--   **Train.IsERegister** - Attribute of electronic check-in availability. Data type - boolean (may be null). 
--   **Train.Categories** - Array of logical categories of train for which cars are distributed (For UIT in one category there will be cars of the same type and class and therefore with the same cost of tickets). Data type - array of TCategory elements.
--   **Train.Categories.TCategory** - Train’s logical category. Data type - custom.
--   **Train.Categories.TCategory.ID** - ID at the train level. Data type - 32-bit integer.
--   **Train.Categories.TCategory.Description** - Category description. Data type - string.
--   **Train.Categories.TCategory.GDSCode** - In UIT class cars. Data type - string.
--   **Train.Categories.TCategory.Carrier** - Carrier. Data type - string.
--   **Train.Categories.TCategory.Category** - Car type. Data type - enumeration. Possible values:
-  -   **COMMON** - common
-  -   **SEAT** - sedentary
-  -   **RESSEAT** - reserved seat
-  -   **COUPE** - coupe
-  -   **LUX** - luxury
-  -   **SOFT** - soft
-  -   **UNKNOWN** - not defined
--   **Train.Categories.TCategory.Price** - Tickets price in the category. Data type - custom (Contains all the properties of the Money element from common elements + an additional attribute).
--   **Train.Categories.TCategory.Price.NDS** - VAT. Data type - fractional number.
--   **Train.Categories.TCategory.PlacesCountInPrice** - Attribute of price for 2 seats. Data type - 32-bit integer.
--   **Train.Categories.TCategory.MaxPrice** - Maximum tickets price. Data type - custom. The response structure is similar to the response to TCategory.Price.
--   **Train.Categories.TCategory.TimelimitToConfirm** - Allotted time (in minutes) to pay for the ticket, after its' booking. Data type - 32-bit integer.
--   **Train.Categories.TCategory.SeatsNum** - Number of seats. Data type - 32-bit integer (may be null).
--   **Train.Categories.TCategory.GenderSeats** - Seats for all genders. Data type - boolean.
--   **Train.Categories.TCategory.GenderType** - Selected gender booking type. Data type - enumeration (may be null). Possible values:
-  -   **Male** - male
-  -   **Female** - female
-  -   **Mixed** - both
--   **Train.Categories.TCategory.Bedclothes** - Attribute of bedclothes availability. Data type - boolean.
--   **Train.Categories.TCategory.RoadType** - Name of the road. Data type - string.
--   **Train.Categories.TCategory.TrainLogicNumber** - One train can consist of several logical parts that differ in class. While booking, it is required to specify the logical number of the train for the car. Data type - string.
--   **Train.Categories.TCategory.WithoutSeatNumeration** - Car’s attribute without numbering places. Data type - boolean.
--   **Train.Categories.TCategory.Cars** - Train cars. Data type - array of Car elements.
--   **Train.Categories.TCategory.Cars.Car** - The car. Data type - custom.
--   **Train.Categories.TCategory.Cars.Car.Number** - Number of the car. Data type - 32-bit integer.
--   **Train.Categories.TCategory.Cars.Car.IsCarERegister** - Attribute of availability of the electronic registration/e-ticket in the car. Data type - boolean (may be null).
--   **Train.Categories.TCategory.Cars.Car.IsThrough** - Attribute of a direct car. Actual information is obtained in response to a request for complete information on the train (see the [next section](/trains/trains_stages/getfulltraininfo)). Data type - boolean.
--   **Train.Categories.TCategory.Cars.Car.SeatCount** - Number of seats in the car by type. Data type - custom.
--   **Train.Categories.TCategory.Cars.Car.SeatCount.NotSpec** - Description. Data type - 32-bit integer.
--   **Train.Categories.TCategory.Cars.Car.SeatCount.Upper** - Number of upper places. Data type - 32-bit integer.
--   **Train.Categories.TCategory.Cars.Car.SeatCount.Lower** - Number of lower places. Data type - 32-bit integer.
--   **Train.Categories.TCategory.Cars.Car.SeatCount.UpperSide** - Number of upper side seats. Data type - 32-bit integer.
--   **Train.Categories.TCategory.Cars.Car.SeatCount.LowerSide** - Number of lower side seats. Data type - 32-bit integer.
--   **Train.Categories.TCategory.Cars.Car.SeatCount.FreeNumbers** - Place numbers divided by commas. Data type - string.
--   **Train.Categories.TCategory.Cars.Car.TwoStorey** - Attribute of the availability of 2 floors. Data type - boolean.
--   **Train.Categories.TCategory.Cars.Car.Services** - Services provided. Data type - enumeration. Possible values (may be several values separated by a space) (may be empty):
-  -   **Ш (1)** tea
-  -   **Ч (2)** two teas
-  -   **Х (4)** food
-  -   **П (8)** bedclothes
-  -   **В (16)** mineral water
-  -   **К (32)** coffee
-  -   **Н (64)** one drink (one of the following drinks is selected in the train: tea, coffee, coffee drink, mineral water)
-  -   **М (128)** two drinks
--   **Train.Categories.TCategory.Cars.Car.Discount** - Discount. Data type - 32-bit integer.
--   **Train.DepStation** - Departure station (code/aggregation code). Data type - string.
--   **Train.ArrStation** - Arrival station (code/aggregation code). Data type - string.
--   **Train.DepExtStation** - Departure station (code). Data type - string. May be null.
--   **Train.ArrExtStation** - Arrival station (code). Data type - string. May be null.
--   **Train.TrainStartPointName** - Starting point of the train. Data type - string.
--   **Train.TrainEndPointName** - End point of the train. Data type - string.
--   **Train.PrintPoints** - Points of issue/printing of the tickets. Data type - array of PrintPoint elements.
--   **Train.PrintPoint** - Point of issue/printing of the tickets. Data type - string.
--   **Train.PrintPoint.Info** - Information on the departure point. Data type - custom.
--   **Train.PrintPoint.Direction** - Direction of the point’s location in relation to the movement of the train. Data type - enumeration. Possible values:
-  -   **Current**
-  -   **Forward**
-  -   **Backward**
--   **Train.PrintPoint.TimeToPoint** - Train’s movement time in hh:mm format. Data type - string.
--   **Train.PrintPoint.Phone** - Phone point of issue ticket/ticket order. Data type - string.
--   **Train.Direction** - Direction of the route. Data type - string.
--   **Train.DepTimezoneCode** - Time zone of the departure time in the "Area/Location" format. Available for KTZ only. Data type - string. May be null.
--   **Train.ArrTimezoneCode** - Time zone of the arrival time in the "Area/Location" format. Available for KTZ only. Data type - string. May be null.
+-   **Trains** - Поезда как результат поиска. Тип данных - массив элементов Train.
+-   **Train** - Информация о поезде. Тип данных - сложный.
+-   **Train.ArrExtStation** - Станция прибытия (код). Тип данных - строка. Может быть null.
+-   **Train.ArrStation** - Станция прибытия (код/агрегирующий код). Тип данных - строка.
+-   **Train.ArrTimezoneCode** - Часовой пояс времени прибытия в формате "Area/Location". Доступен только КТЖ. Тип данных - строка. Может быть null.
+-   **Train.BeginDate** - Дата и время отправления. Формат - yyyy-mm-dd hh:mm:ss, например - 2011-05-12 23:10:00. Тип данных - строка.
+-   **Train.Category** - Категории, к которым может относиться поезд. Тип данных - массив элементов TrainCat.
+-   **Train.Category.TrainCat** - Категория поезда. Тип данных - перечисление. Возможные значения:
+    -   **UNKNOWN (0)** неизвестный тип поезда
+    -   **FAST (1)** скорый
+    -   **FIRM (2)** фирменный
+    -   **HIGHSPEED (3)** скоростной
+    -   **COMMON (4)** обычный
+    -   **TRAIN_DELUX (5)** электропоезд повышенной комфортности
+    -   **PASSENGER (6)** пассажирский
+-   **Train.EndDate** - Дата и время прибытия. Формат - yyyy-mm-dd hh:mm:ss, например - 2011-05-12 23:10:00. Тип данных - строка.
+-   **Train.TripTime** - Время в пути. Формат - hh:mm, например - 08:57. Тип данных - строка.
+-   **Train.IsERegister** - Признак доступности электронной регистрации/электронных билетов. Тип данных - булев(может быть null).
+-   **Train.LocalBeginDate**  - Дата и время отправления по местному времени(станции отправки). Формат - yyyy-mm-dd hh:mm:ss, например - 2011-05-12 23:10:00. Тип данных - строка.
+-   **Train.LocalEndDate** - Дата и время прибытия по местному времени(станции прибытия). Формат - yyyy-mm-dd hh:mm:ss, например - 2011-05-12 23:10:00. Тип данных - строка.
+-   **Train.Categories** - Массив логических категорий поезда по которым распределяются вагоны (Для УИТ в одной категории будут вагоны одного типа и класса и следовательно с одинаковой стоимостью билетов). Тип данных - массив элементов TCategory.
+-   **Train.Categories.TCategory** - Логическая категория поезда. Тип данных - сложный.
+-   **Train.Categories.TCategory.ID** - Идентификатор на уровне поезда. Тип данных - целое 32-битное число.
+-   **Train.Categories.TCategory.Description** - Описание категории. Тип данных - строка.
+-   **Train.Categories.TCategory.GDSCode** - В УИТ класс вагонов. Тип данных - строка.
+-   **Train.Categories.TCategory.Carrier** - Перевозчик. Тип данных - строка.
+-   **Train.Categories.TCategory.Category** - Тип вагона. Тип данных - перечисление. Возможные значения:
+    -   **COMMON** - общий
+    -   **SEAT** - сидячий
+    -   **RESSEAT** - плацкарт
+    -   **COUPE** - купе
+    -   **LUX** - люкс
+    -   **SOFT** - мягкий
+    -   **UNKNOWN** - не определён
+-   **Train.Categories.TCategory.Price** - Стоимость билетов в категории. Тип данных - сложный(Содержит все свойства элемента Money из общих элементов + дополнительное свойство).
+-   **Train.Categories.TCategory.Price.NDS** - НДС. Тип данных - дробное число.
+-   **Train.Categories.TCategory.PlacesCountInPrice** - Признак стоимости за 2 места. Тип данных - целое 32-битное число.
+-   **Train.Categories.TCategory.MaxPrice** - Максимальная стоимость билетов. Тип данных - сложный. Структура соответствует параметру TCategory.Price.
+-   **Train.Categories.TCategory.TimelimitToConfirm** - Отведённое время (в минутах) на оплату билета, после его бронирования. Тип данных - целое 32-битное число.
+-   **Train.Categories.TCategory.SeatsNum** - Количество мест. Тип данных - целое 32-битное число (может быть null).
+-   **Train.Categories.TCategory.GenderSeats** - Места для всех полов. Тип данных - булев.
+-   **Train.Categories.TCategory.GenderType** - Выбранный гендерный тип бронирования. Тип данных - перечисление (может быть null). Возможные значения:
+    -   **Male** - мужской
+    -   **Female** - женский
+    -   **Mixed** - общий
+-   **Train.Categories.TCategory.Bedclothes** - Признак наличия постельного белья. Тип данных - булев.
+-   **Train.Categories.TCategory.RoadType** - Название дороги. Тип данных - строка.
+-   **Train.Categories.TCategory.TrainLogicNumber** - один поезд может состоять из нескольких логических частей, отличающихся классом. При бронировании нужно указывать логический номер поезда для вагона. Тип данных - строка.
+-   **Train.Categories.TCategory.WithoutSeatNumeration** - Признак вагона без нумерации мест. Тип данных - булев.
+-   **Train.Categories.TCategory.Cars** - Вагоны поезда. Тип данных - массив элементов Car.
+-   **Train.Categories.TCategory.Cars.Car** - Вагон. Тип данных - сложный.
+-   **Train.Categories.TCategory.Cars.Car.Number** - Номер вагона. Тип данных - целое 32-битное число.
+-   **Train.Categories.TCategory.Cars.Car.IsCarERegister** - Признак наличия электронной регистрации / электронного билета в вагоне. Тип данных - булев (может быть null).
+-   **Train.Categories.TCategory.Cars.Car.IsThrough** - Признак беспересадочного вагона. Актуальная информация получается в ответе на запрос полной информации о поезде (см. [след. раздел](/trains/trains_stages/getfulltraininfo)). Тип данных - булев.
+-   **Train.Categories.TCategory.Cars.Car.SeatCount** - Количество мест в вагоне по типу. Тип данных - сложный.
+-   **Train.Categories.TCategory.Cars.Car.SeatCount.NotSpec** - описание. Тип данных - целое 32-битное число.
+-   **Train.Categories.TCategory.Cars.Car.SeatCount.Upper** - Количество верхних мест. Тип данных - целое 32-битное число.
+-   **Train.Categories.TCategory.Cars.Car.SeatCount.Lower** - Количество нижних мест. Тип данных - целое 32-битное число.
+-   **Train.Categories.TCategory.Cars.Car.SeatCount.UpperSide** - Количество верхних боковых мест. Тип данных - целое 32-битное число.
+-   **Train.Categories.TCategory.Cars.Car.SeatCount.LowerSide** - Количество нижних боковых мест. Тип данных - целое 32-битное число.
+-   **Train.Categories.TCategory.Cars.Car.SeatCount.FreeNumbers** - Номера мест через запятую. Тип данных - строка.
+-   **Train.Categories.TCategory.Cars.Car.TwoStorey** - Признак наличия 2-х этажей. Тип данных - булев.
+-   **Train.Categories.TCategory.Cars.Car.Services** - Предоставляемые услуги. Тип данных - перечисление. Возможные значения (может быть несколько через пробел)(может быть пустым):
+    -   **Ш (1)** чай
+    -   **Ч (2)** два чая
+    -   **Х (4)** питание
+    -   **П (8)** постельное бельё
+    -   **В (16)** минеральная вода
+    -   **К (32)** кофе
+    -   **Н (64)** один напиток (в поезде выбирается один из перечисленных напитков: чай, кофе, кофейный напиток, минеральная вода)
+    -   **М (128)** два напитка
+-   **Train.Categories.TCategory.Cars.Car.Discount** - Скидка. Тип данных - целое 32-битное число.
+-   **Train.DepExtStation** - Станция отправления (код). Тип данных - строка. Может быть null.
+-   **Train.DepStation** - Станция отправления (код/агрегирующий код). Тип данных - строка.
+-   **Train.Direction** - Направление маршрута. Тип данных - строка.
+-   **Train.DepTimezoneCode** - Часовой пояс времени отправления в формате "Area/Location". Доступен только КТЖ. Тип данных - строка. Может быть null.
+-   **Train.ID** - Идентификатор поезда в системе немо. Тип данных - целое 64-битное число.
+-   **Train.Name** - Название поезда. Тип данных - строка.
+-   **Train.Number** - Номер поезда. Тип данных - строка.
+-   **Train.PrintPoints** - Пункты выдачи/распечатки билетов. Тип данных - массив элементов PrintPoint.
+-   **Train.PrintPoint** - Пункт выдачи/распечатки белетов. Тип данных - строка.
+-   **Train.PrintPoint.Info** - Информация о точке отправления. Тип данных - сложный.
+-   **Train.PrintPoint.Direction** - Направление расположения точки относительно движения поезда. Тип данных - перечисление. Возможные значения:
+    -   **Current**
+    -   **Forward**
+    -   **Backward**
+-   **Train.PrintPoint.TimeToPoint** - Время движения поезда в формате hh:mm. Тип данных - строка.
+-   **Train.PrintPoint.Phone** - Телефон пункта выдачи билета/билетов заказа. Тип данных - строка.
+-   **Train.SupplierAgencyID** - Идентификатор реквизитов агентства у поставщика. Тип данных - строка. TerminalID для КТЖ и УФС, ClientID для Sirena, MerchantID для УЖД и УнИТ.
+-   **Train.TrainStartPointName** - Начальный пункт движения поезда. Тип данных - строка.
+-   **Train.TrainEndPointName** - Конечный пункт движения поезда. Тип данных - строка.
+-   **Train.WebService** - От какого поставщика данный поезд. Возможные значения: аналогичны элементу Service массива Services в запросе на поиск.
 
-##### Sample UIT Response (XML)
+##### Пример ответа от УИТ (XML)
 ```xml
 <Trains>
     <Train>
@@ -180,6 +183,7 @@ While searching for trains, only basic information about the trains in the reque
         <Number>084Д</Number>
         <PrintPoints nil="true"/>
         <RequisitesId>2</RequisitesId>
+        <SupplierAgencyID>161</SupplierAgencyID>
         <TrainEndPointName>КИЕВ-ПАССАЖИРСКИЙ</TrainEndPointName>
         <TrainStartPointName>МАРИУПОЛЬ</TrainStartPointName>
         <TripTime>013:09</TripTime>
@@ -188,7 +192,7 @@ While searching for trains, only basic information about the trains in the reque
 </Trains>
     ```
     
-##### Sample UFS Response (XML)
+##### Пример ответа от УФС (XML)
 
 ```xml
 <ResponseBody>
@@ -252,6 +256,7 @@ While searching for trains, only basic information about the trains in the reque
             <Number>037Д</Number>
             <PrintPoints nil="true"/>
             <RequisitesId>1</RequisitesId>
+            <SupplierAgencyID>TEST_ID</SupplierAgencyID>
             <TrainEndPointName>КИЕВ ПАСС</TrainEndPointName>
             <TrainStartPointName>ДОНЕЦК</TrainStartPointName>
             <TripTime>11:58</TripTime>
