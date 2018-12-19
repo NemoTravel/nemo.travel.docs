@@ -17,7 +17,7 @@ title: 'Common Elements of the Railway Server'
     -   **child** - UFS: from 5 to 10 years. UIT: in Ukraine from 6 to 14, in the CIS countries - from 5 to 10 years
     -   **infant** - UFS: up to 5 years.
 -   **Person.Document** - Information on the passenger's document (passport). Data type - custom.
--   **Person.Document.DocType** - Document type. Data type - enumeration. Possible values are described in [Document Types](http://dev.support.nemo.travel/dev/%D0%A2%D0%B8%D0%BF%D1%8B_%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2)
+-   **Person.Document.DocType** - Document type. Data type - enumeration. Possible values are described in [Document Types](http://docs.nemo.travel/en/avia/process/booking)
 -   **Person.Document.DocNum** - Document number. Data type - string.
 -   **Person.Document.CountryCode** - Two-letter code of the document's country of issue (RU, UA, etc.). Data type - string.
 -   **Person.Document.DocElapsedTime** - Expiration date of the document in the dd.mm.yyyy format. Data type - string.
