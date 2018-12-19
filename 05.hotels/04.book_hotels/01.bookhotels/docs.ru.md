@@ -202,6 +202,7 @@ title: 'Запрос Book'
                   <a:Currency>RUB</a:Currency>
                </b:ServiceCharges>
                <b:Supplier>Hotelston</b:SupplierId>
+               <b:SupplierAgencyID>test_nemotravel</b:SupplierAgencyID>
             </a:ResponseBody>
          </BookResult>
       </BookResponse>
