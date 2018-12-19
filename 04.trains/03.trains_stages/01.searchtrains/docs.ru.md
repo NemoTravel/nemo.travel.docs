@@ -93,7 +93,7 @@ title: 'Поиск поездов'
     -   **Male** - мужской
     -   **Female** - женский
     -   **Mixed** - общий
--   **Train.Categories.TCategory.Bedclothes** - Есть постельное бельё. Тип данных - булев.
+-   **Train.Categories.TCategory.Bedclothes** - Признак наличия постельного белья. Тип данных - булев.
 -   **Train.Categories.TCategory.RoadType** - Название дороги. Тип данных - строка.
 -   **Train.Categories.TCategory.TrainLogicNumber** - один поезд может состоять из нескольких логических частей, отличающихся классом. При бронировании нужно указывать логический номер поезда для вагона. Тип данных - строка.
 -   **Train.Categories.TCategory.WithoutSeatNumeration** - Признак вагона без нумерации мест. Тип данных - булев.
