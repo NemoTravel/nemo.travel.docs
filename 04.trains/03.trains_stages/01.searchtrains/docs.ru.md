@@ -101,7 +101,7 @@ title: 'Поиск поездов'
 -   **Train.Categories.TCategory.Cars.Car** - Вагон. Тип данных - сложный.
 -   **Train.Categories.TCategory.Cars.Car.Number** - Номер вагона. Тип данных - целое 32-битное число.
 -   **Train.Categories.TCategory.Cars.Car.IsCarERegister** - Признак наличия электронной регистрации / электронного билета в вагоне. Тип данных - булев (может быть null).
--   **Train.Categories.TCategory.Cars.Car.IsThrough** - Признак беспересадочного вагона. Актуальная информация получается в ответе на запрос полной информации о поезде (см. след. раздел). Тип данных - булев.
+-   **Train.Categories.TCategory.Cars.Car.IsThrough** - Признак беспересадочного вагона. Актуальная информация получается в ответе на запрос полной информации о поезде (см. [след. раздел](/trains/trains_stages/getfulltraininfo)). Тип данных - булев.
 -   **Train.Categories.TCategory.Cars.Car.SeatCount** - Количество мест в вагоне по типу. Тип данных - сложный.
 -   **Train.Categories.TCategory.Cars.Car.SeatCount.NotSpec** - описание. Тип данных - целое 32-битное число.
 -   **Train.Categories.TCategory.Cars.Car.SeatCount.Upper** - Количество верхних мест. Тип данных - целое 32-битное число.
