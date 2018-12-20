@@ -174,7 +174,7 @@ Flight leg prices are described in the current OfferItem.
 -  **Offer.TimeLimits.OfferExpiration** - offer validity specified in the DateTime attribute in the format "yyyy-mm-ddthh:mm:ss".
 -  **Offer.FlightsOverview** - element containing references to a brief description of the flight and leg information. Data type - custom.
 -  **Offer.FlightsOverview.FlightRef** - reference to the flight ID. The attribute ODRef = "ODN1" refers to an element containing information about the departure and arrival points.
--  **Offer.OfferItem** - represents a set of one or several services within the offer. The OfferItemID attribute contains a unique ID of the service set, the OFI prefix required. Data type - custom.
+-  **Offer.OfferItem** - represents a set of one or several services within the offer. The OfferItemID attribute contains a unique ID of the service set, the OFI prefix required. In case of using airline mode, there can be more than one element, since there is a separation of prices under each leg. Data type - custom.
 -  **Offer.OfferItem.TotalPriceDetail** - total price for all the services for all passengers in all segments in the current OfferItem. Data type - custom.
 -  **Offer.OfferItem.TotalPriceDetail.TotalAmount** - contains the total price (fare + taxes). Data type - custom.
 -  **Offer.OfferItem.TotalPriceDetail.TotalAmount.SimpleCurrencyPrice** - total price (fare + taxes) for all passengers in the current OfferItem, data type - decimal. The element includes two attributes:
