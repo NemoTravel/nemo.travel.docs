@@ -41,6 +41,7 @@ title: OfferPrice
     -   **IgnoreRepricingSettings** — позволяет игнорировать настройки репрайсинга;
 	-	**DoNotSendVCInRequest** — не передавать валидирующего перевозчика в запросе;
 	-	**CheckAvailabilityWithBookingRequest** — использовать запрос взятия мест для проверки доступности перелёта для бронировани.
+
 ##### Пример
 
 ```xml
