@@ -143,8 +143,6 @@ title: OfferPrice
 -   **PricedOffer.Parameters.TotalItemQuantity** — общее количество набора услуг в данном предложении. Тип - целое положительное число.
 -   **PricedOffer.TimeLimits** — срок действия предложения. Тип данных — сложный.
 -	**PricedOffer.TimeLimits.OfferExpiration** — срок действия предложения. Элемен содержит атрибут DateTime в формате "YYYY-MM-DDTHH:MM:SS".
--	**PricedOffer.FlightsOverview** — элемент содержит ссылки на краткое описание перелёта и информацию о плече. Тип данных — сложный.
--	**PricedOffer.FlightsOverview.FlightRef** — ссылка на идентификатор перелёта.
 -	**PricedOffer.OfferItem** — представляет набор из одной или нескольких услуг в рамках предложения. Атрибут OfferItemID содержит уникальный идентификатор набора услуг, префик OFI обязателен. Тип данных — сложный.
 -	**PricedOffer.OfferItem.TotalPriceDetail** — полная стоимость за все услуги для всех пассажиров по всем сегментам в текущем OfferItem. Тип данных — сложный
 -	**PricedOffer.OfferItem.TotalPriceDetail.TotalAmount** — содержит полную стоимость (тариф + таксы). Тип данных — сложный.
@@ -158,7 +156,7 @@ title: OfferPrice
 -	**PricedOffer.OfferItem.TotalPriceDetail.Taxes.Total** — сумма такс на всех пассажиров в текущем OfferItem, тип данных - десятичное дробное число. Содержит атрибуты Code и Taxable описанные выше.
 -	**PricedOffer.OfferItem.Service** — услуга перелёта и/или другие вспомогательные услуги перелёта. Услуга может быть представлена в комплекте с другими услугами или в одном отдельном Offer.OrderItem. Элемент включает атрибут ServiceID="SVC1" (префикс SVC обязателен), содержащий уникальный идентификатор услуги. Элемент Service не может одновременно содержать элементы FlightRefs и ServiceDefinitionRef. Тип данных — сложный.
 -	**PricedOffer.OfferItem.Service.PassengerRefs** — ссылка на одного или нескольких пассажиров в DataLists.PassengerList.
--	**PricedOffer.OfferItem.Service.FlightRefs** — ссылка на один или несколько рейсов в Datalists.FlightList, которые представлены в качестве услуги. Атрибут ODRef="ODN1" (префикс ODN обязателен) ссылается на элемент, содержащий сведения о плече.
+-	**PricedOffer.OfferItem.Service.FlightRefs** — ссылка на один или несколько рейсов в Datalists.FlightList, которые представлены в качестве услуги.
 -	**PricedOffer.OfferItem.Service.ServiceDefinitionRef** — ссылка на описание услуги в Datalists.ServiceDefinitionList не являющейся перелётом, но связанной с ним, к примеру,  багаж. Атрибут SegmentRefs="SEG0" (префикс SEG обязателен) ссылается на один или несколько сегментов перелета, которому соответствует данная услуга.
 -   **PricedOffer.OfferItem.FareDetail** — контейнер для информации о ценовой составляющей для определённого типа пассажиров в текущем OfferItem. Тип данных — сложный.
 -   **PricedOffer.OfferItem.FareDetail.PassengerRefs** — ссылка на одного или нескольких пассажиров одного типа в DataLists.PassengerList.
@@ -177,6 +175,8 @@ title: OfferPrice
 -   **PricedOffer.OfferItem.FareDetail.FareComponent** — содержит ссылки на информацию о деталях компонента тарифа и сегментах.
 -   **PricedOffer.OfferItem.FareDetail.FareComponent.PriceClassRef** — ссылка на информацию о деталях компонента тарифа. 
 -   **PricedOffer.OfferItem.FareDetail.FareComponent.SegmentRefs** — ссылка на один или несколько сегментов перелёта, которому соответствует цена.
+-   **PricedOffer.OfferItem.FareDetail.Remarks** - содержит сведения о валидирующем перевозчике для текущего OfferItem.
+-   **PricedOffer.OfferItem.FareDetail.Remarks.Remark** - принимает значение "Validating carrier: XX", где XX - IATA код валидирующего перевозчика.
 -   **OfferPriceRS.DataLists** — представляет собой контейнер, в котором содержится информация о элементах предложения, а именно, информация о пассажирах, багаже, маршруте и сегментах. Тип данных — сложный.
 -   **DataLists.PassengerList** — сведения о пассажирах. Тип данных - сложный.
 -   **PassengerList.Passenger** — пассажиры, для которых выполнена актуализация. Атрибут PassengerID="PAX1"(префикс PAX обязателен) - уникальный идентификатор пассажира.
@@ -299,10 +299,6 @@ title: OfferPrice
             <TimeLimits>
                <OfferExpiration DateTime="2018-11-06T07:59:00"/>
             </TimeLimits>
-            <FlightsOverview>
-               <FlightRef ODRef="ODN1">FLTL0S0S1</FlightRef>
-               <FlightRef ODRef="ODN2">FLTL1S2S3</FlightRef>
-            </FlightsOverview>
             <OfferItem OfferItemID="OFI143974771000000P0">
                <TotalPriceDetail>
                   <TotalAmount>
@@ -318,43 +314,15 @@ title: OfferPrice
                </TotalPriceDetail>
                <Service ServiceID="SVC143974771000000V1">
                   <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-                  <FlightRefs>FLTL0S0S1</FlightRefs>
+                  <FlightRefs>FLTL0S0S1 FLTL1S2S3</FlightRefs>
                </Service>
                <Service ServiceID="SVC143974771000000V2">
-                  <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-                  <FlightRefs>FLTL1S2S3</FlightRefs>
+                  <PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
+                  <ServiceDefinitionRef SegmentRefs="SEG0 SEG1 SEG2 SEG3">SVD1</ServiceDefinitionRef>
                </Service>
                <Service ServiceID="SVC143974771000000V3">
-                  <PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-                  <ServiceDefinitionRef SegmentRefs="SEG0">SVD1</ServiceDefinitionRef>
-               </Service>
-               <Service ServiceID="SVC143974771000000V4">
-                  <PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-                  <ServiceDefinitionRef SegmentRefs="SEG1">SVD1</ServiceDefinitionRef>
-               </Service>
-               <Service ServiceID="SVC143974771000000V5">
-                  <PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-                  <ServiceDefinitionRef SegmentRefs="SEG2">SVD1</ServiceDefinitionRef>
-               </Service>
-               <Service ServiceID="SVC143974771000000V6">
-                  <PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-                  <ServiceDefinitionRef SegmentRefs="SEG3">SVD1</ServiceDefinitionRef>
-               </Service>
-               <Service ServiceID="SVC143974771000000V7">
                   <PassengerRefs>PAX4</PassengerRefs>
-                  <ServiceDefinitionRef SegmentRefs="SEG0">SVD2</ServiceDefinitionRef>
-               </Service>
-               <Service ServiceID="SVC143974771000000V8">
-                  <PassengerRefs>PAX4</PassengerRefs>
-                  <ServiceDefinitionRef SegmentRefs="SEG1">SVD2</ServiceDefinitionRef>
-               </Service>
-               <Service ServiceID="SVC143974771000000V9">
-                  <PassengerRefs>PAX4</PassengerRefs>
-                  <ServiceDefinitionRef SegmentRefs="SEG2">SVD2</ServiceDefinitionRef>
-               </Service>
-               <Service ServiceID="SVC143974771000000V10">
-                  <PassengerRefs>PAX4</PassengerRefs>
-                  <ServiceDefinitionRef SegmentRefs="SEG3">SVD2</ServiceDefinitionRef>
+                  <ServiceDefinitionRef SegmentRefs="SEG0 SEG1 SEG2 SEG3">SVD2</ServiceDefinitionRef>
                </Service>
                <FareDetail>
                   <PassengerRefs>PAX1 PAX2</PassengerRefs>
@@ -396,6 +364,9 @@ title: OfferPrice
                      <PriceClassRef>PRC1</PriceClassRef>
                      <SegmentRefs>SEG0 SEG1 SEG2 SEG3</SegmentRefs>
                   </FareComponent>
+                  <Remarks>
+                     <Remark>Validating carrier: TK</Remark>
+                  </Remarks>
                </FareDetail>
                <FareDetail>
                   <PassengerRefs>PAX3</PassengerRefs>
@@ -437,6 +408,9 @@ title: OfferPrice
                      <PriceClassRef>PRC2</PriceClassRef>
                      <SegmentRefs>SEG0 SEG1 SEG2 SEG3</SegmentRefs>
                   </FareComponent>
+                  <Remarks>
+                     <Remark>Validating carrier: TK</Remark>
+                  </Remarks>
                </FareDetail>
                <FareDetail>
                   <PassengerRefs>PAX4</PassengerRefs>
@@ -453,6 +427,9 @@ title: OfferPrice
                      <PriceClassRef>PRC3</PriceClassRef>
                      <SegmentRefs>SEG0 SEG1 SEG2 SEG3</SegmentRefs>
                   </FareComponent>
+                  <Remarks>
+                     <Remark>Validating carrier: TK</Remark>
+                  </Remarks>
                </FareDetail>
             </OfferItem>
          </PricedOffer>
