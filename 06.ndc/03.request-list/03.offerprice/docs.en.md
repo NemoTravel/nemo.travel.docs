@@ -143,8 +143,6 @@ Updating the offer received at the search stage.
 -  **PricedOffer.Parameters.TotalItemQuantity** - total number of services in the given offer. Data type - positive integer.
 -  **PricedOffer.TimeLimits** - offer validity period. Data type - custom.
 -  **PricedOffer.TimeLimits.OfferExpiration** - offer validity. The element contains the DateTime attribute in the format "yyyy-mm-ddthh:mm:ss".
--  **PricedOffer.FlightsOverview** - element containing references to a brief flight description and leg information. Data type - custom.
--  **PricedOffer.FlightsOverview.FlightRef** - reference to the flight ID.
 -  **PricedOffer.OfferItem** - represents a set of one or several services within an offer. The OfferItemID attribute contains a unique identifier of the service set, the OFI prefix is required. Data type - custom.
 -  **PricedOffer.OfferItem.TotalPriceDetail** - total price for all services for all passengers in all segments in the current OfferItem. Data type - custom.
 -  **PricedOffer.OfferItem.TotalPriceDetail.TotalAmount** - contains the total price (fare + taxes). Data type - custom.
@@ -177,6 +175,8 @@ Updating the offer received at the search stage.
 -  **PricedOffer.OfferItem.FareDetail.FareComponent** - contains links to information about the fare component details and segments.
 -  **PricedOffer.OfferItem.FareDetail.FareComponent.PriceClassRef** - reference to the fare component details.
 -  **PricedOffer.OfferItem.FareDetail.FareComponent.SegmentRefs** - reference to one or more flight segments which correspond to the price.
+-  **PricedOffer.OfferItem.FareDetail.Remarks** - contains the validating carrier data for the current OfferItem.
+-  **PricedOffer.OfferItem.FareDetail.Remarks.Remark** - takes the value "Validating carrier: XX", where XX is the IATA code of the validating carrier. 
 -  **OfferPriceRS.DataLists** - container with information about the elements of the offer, which are: information about passengers, baggage, route and segments. Data type - custom.
 -  **DataLists.PassengerList** - information about the passengers. Data type - custom.
 -  **PassengerList.Passenger** - passengers for whom the updated has been performed. Attribute PassengerID = "PAX1" (PAX prefix required) - unique passenger ID.
