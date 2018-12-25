@@ -22,8 +22,10 @@ Flight leg prices are described in the current OfferItem.
 -  **OriginDestinations.OriginDestination.Departure** - contains information about the departure point (required). Data type - custom.
 -  **OriginDestinations.OriginDestination.Departure.AirportCode** - 3-letter IATA airport code or city of departure (required). Data type - string.
 -  **OriginDestinations.OriginDestination.Departure.Date** - departure date (required). The format is "yyyy-mm-dd".
+-  **OriginDestinations.OriginDestination.Departure.AirportName** - optional parameter. Possible to use when airport and city codes are the same. Possible to use when the airport code is the same as the city code.
 -  **OriginDestinations.OriginDestination.Arrival** - contains information about the arrival point (required). Data type - custom.
 -  **OriginDestinations.OriginDestination.Arrival.AirportCode** - 3-letter IATA airport code or city of arrival (required). Data type - string.
+-  **OriginDestinations.OriginDestination.Arrival.AirportName** - optional parameter. Possible to use when the airport code is the same as the city code.
 -  **OriginDestinations.OriginDestination.CalendarDates** - first element of CoreQuery.OriginDestinations.OriginDestination can be supplemented with the optional CalendarDates element. This element contains the DaysBefore and DaysAfter attributes, the number of days is determined from the addition of attributes. The value of the attributes must be identical and must not exceed the amount of 3.
 -  **CoreQuery.FlightSpecific** - contains more detailed information about the requested segments. Data type - custom. **Required element if CoreQuery.OriginDestinations element is not specified.**
 -  **FlightSpecific.FlightSegment** - contains information about the segments of the flight that you want to find. Data type - custom. Includes the required attribute SegmentKey = "SEG0", which contains the unique segment ID. SEG prefix required. Segment numbers start at zero.
@@ -172,8 +174,6 @@ Flight leg prices are described in the current OfferItem.
 -  **Offer.Parameters.TotalItemQuantity** - number of service sets within one offer. Data type - positive integer.
 -  **Offer.TimeLimits** - offer validity. Data type - custom.
 -  **Offer.TimeLimits.OfferExpiration** - offer validity specified in the DateTime attribute in the format "yyyy-mm-ddthh:mm:ss".
--  **Offer.FlightsOverview** - element containing references to a brief description of the flight and leg information. Data type - custom.
--  **Offer.FlightsOverview.FlightRef** - reference to the flight ID. The attribute ODRef = "ODN1" refers to an element containing information about the departure and arrival points.
 -  **Offer.OfferItem** - represents a set of one or several services within the offer. The OfferItemID attribute contains a unique ID of the service set, the OFI prefix required. In case of using airline mode, there can be more than one element, since there is a separation of prices under each leg. Data type - custom.
 -  **Offer.OfferItem.TotalPriceDetail** - total price for all the services for all passengers in all segments in the current OfferItem. Data type - custom.
 -  **Offer.OfferItem.TotalPriceDetail.TotalAmount** - contains the total price (fare + taxes). Data type - custom.
@@ -206,6 +206,8 @@ Flight leg prices are described in the current OfferItem.
 -  **Offer.OfferItem.FareDetail.FareComponent** - contains references to information about the fare component details and segments.
 -  **Offer.OfferItem.FareDetail.FareComponent.PriceClassRef** - reference to the fare component details.
 -  **Offer.OfferItem.FareDetail.FareComponent.SegmentRefs** - reference to one or more flight segments which corresponds to the price.
+-  **Offer.OfferItem.FareDetail.Remarks** - contains the data on the validating carrier for the current OfferItem.
+-  **Offer.OfferItem.FareDetail.Remarks.Remark** - takes the value "Validating carrier: XX", where XX is the validating carrier's IATA code.
 -  **AirShoppingRS.DataLists** - container with information about the elements of the offer which are: information about passengers, baggage, route and segments. Data type - custom.
 -  **DataLists.PassengerList** - information about the passengers. Data type - custom.
 -  **PassengerList.Passenger** - passengers for whom the search was performed. Attribute PassengerID = "PAX1" (PAX prefix required) - unique passenger ID.
