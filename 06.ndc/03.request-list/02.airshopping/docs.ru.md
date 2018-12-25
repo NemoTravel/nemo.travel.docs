@@ -206,6 +206,8 @@ title: AirShopping
 -   **Offer.OfferItem.FareDetail.FareComponent** - содержит ссылки на информацию о деталях тарифа и сегментах.
 -   **Offer.OfferItem.FareDetail.FareComponent.PriceClassRef** - ссылка на информацию о деталях тарифа.
 -   **Offer.OfferItem.FareDetail.FareComponent.SegmentRefs** - ссылка на один или несколько сегментов перелёта, которому соответствует цена.
+-   **Offer.OfferItem.FareDetail.Remarks** - содержит сведения о валидирующем перевозчике для текущего OfferItem.
+-   **Offer.OfferItem.FareDetail.Remarks.Remark** - принимает значение "Validating carrier: XX", где XX - IATA код валидирующего перевозчика.
 -   **AirShoppingRS.DataLists** - представляет собой контейнер, в котором содержится информация о элементах предложения, а именно, информация о пассажирах, багаже, маршруте и сегментах. Тип данных — сложный.
 -   **DataLists.PassengerList** - сведения о пассажирах. Тип данных - сложный.
 -   **PassengerList.Passenger** -  пассажир, для которого выполнен поиск. Атрибут PassengerID="PAX1"(префикс PAX обязателен) - уникальный идентификатор пассажира.
