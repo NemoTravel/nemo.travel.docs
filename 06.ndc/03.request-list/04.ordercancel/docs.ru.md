@@ -3,21 +3,21 @@ title: OrderCancel
 ---
 
 ### OrderCancel
-Performs several functions in the following order:
-- Order cancellation,
-- Ticket void,
-- Ticket return.
+Выполняет несколько функций в следующем порядке:
+-	Отмена заказа,
+-	Войдирование билетов,
+-	Возврат билетов.
 
-If the order wasn't issued, cancellation will be performed, otherwise a void attempt will be made, followed by cancellation. If the entry operation is not available, then an attempt of tickets return with fines will be made.
+Если заказ не выписан, выполняется операция отмены заказа. При наличии билетов и достаточном времени на войдирование выполняется отмена билетов с последующей аннуляцией заказа. Если операция войдирования недоступна, производится попытка возврата билетов со штрафами.
 
-#### Request
--  **OrderCancelRQ** - request to cancel the order. The required attribute Version = "17.2" contains the version of the NDC protocol. Data type - custom.
--  **OrderCancelRQ.Document** - **[common elements.](/Ndc/ndc_element)**
--  **OrderCancelRQ.Party** - **[common elements.](/Ndc/ndc_element)**
--  **OrderCancelRQ.Query**
--  **Query.Order** - contains the ID of the order to be canceled. Includes two required attributes:
-  - **OrderID** - unique order ID in Nemo Connect;
-  - **Owner** - GDS code. Data type - string.
+#### Запрос
+-	**OrderCancelRQ** - запрос отмены заказа. Обязательный атрибут Version="17.2" содержит версию NDC протокола. Тип данных - сложный.
+-	**OrderCancelRQ.Document** - **[общие элементы.](/ndc/ndc_element)**
+-	**OrderCancelRQ.Party** - **[общие элементы.](/ndc/ndc_element)**
+-	**OrderCancelRQ.Query** 
+-	**Query.Order** - содержит идентификатор заказа, который требуется отменить. Включает два обязательных атрибута:
+-	-	**OrderID** - уникальный идентификатор заказа в Nemo Cpnnect;
+-	-	**Owner** - код ГРС. Тип данных — строка.
 
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avi="http://nemo.travel/AviaNDC" xmlns:ns="http://www.iata.org/IATA/EDIST/2017.2">
