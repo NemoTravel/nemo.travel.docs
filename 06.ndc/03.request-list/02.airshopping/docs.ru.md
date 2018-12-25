@@ -97,17 +97,17 @@ title: AirShopping
                <ns:OriginDestination>
                   <ns:Departure>
                      <ns:AirportCode>MOW</ns:AirportCode>
-                     <ns:Date>2018-11-10</ns:Date>
+                     <ns:Date>2019-01-10</ns:Date>
                   </ns:Departure>
                   <ns:Arrival>
                      <ns:AirportCode>TSE</ns:AirportCode>
                   </ns:Arrival>
-                 <ns:CalendarDates DaysBefore="1" DaysAfter="0"/>
+                 <ns:CalendarDates DaysBefore="1" DaysAfter="1"/>
                </ns:OriginDestination>
                <ns:OriginDestination>
                   <ns:Departure>
                      <ns:AirportCode>TSE</ns:AirportCode>
-                     <ns:Date>2018-11-20</ns:Date>
+                     <ns:Date>2019-01-20</ns:Date>
                   </ns:Departure>
                   <ns:Arrival>
                      <ns:AirportCode>MOW</ns:AirportCode>
@@ -307,3045 +307,3620 @@ title: AirShopping
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
-	<s:Header>
-		<h:ResponseID xmlns:h="http://nemo.travel/AviaNDC" xmlns="http://nemo.travel/AviaNDC">143973579</h:ResponseID>
-	</s:Header>
-	<s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-		<AirShoppingRS Target="Prod" Version="17.2" xmlns="http://www.iata.org/IATA/EDIST/2017.2">
-			<Document>
-				<Name>NEMO NDC GATEWAY</Name>
-				<ReferenceVersion>1.0</ReferenceVersion>
-			</Document>
-			<Success/>
-			<ShoppingResponseID>
-				<ResponseID>143973579</ResponseID>
-			</ShoppingResponseID>
-			<OffersGroup>
-				<AirlineOffers>
-					<AirlineOfferSnapshot>
-						<PassengerQuantity>4</PassengerQuantity>
-						<Highest refs="OFR143973579040007 OFR143973579040008">
-							<EncodedCurrencyPrice Code="USD">3917.6</EncodedCurrencyPrice>
-						</Highest>
-						<Lowest refs="OFR143973579040000">
-							<EncodedCurrencyPrice Code="USD">2765.78</EncodedCurrencyPrice>
-						</Lowest>
-						<MatchedOfferQuantity>9</MatchedOfferQuantity>
-					</AirlineOfferSnapshot>
-					<Offer OfferID="OFR143973579040000" Owner="1W">
-						<Parameters>
-							<TotalItemQuantity>1</TotalItemQuantity>
-						</Parameters>
-						<TimeLimits>
-							<OfferExpiration DateTime="2018-11-05T07:59:00"/>
-						</TimeLimits>
-						<FlightsOverview>
-							<FlightRef>FLTL0S0S1</FlightRef>
-							<FlightRef>FLTL1S2S3</FlightRef>
-						</FlightsOverview>
-						<OfferItem OfferItemID="OFI143973579040000P0">
-							<TotalPriceDetail>
-								<TotalAmount>
-									<SimpleCurrencyPrice Code="USD" Taxable="false">2765.78</SimpleCurrencyPrice>
-								</TotalAmount>
-								<BaseAmount Code="USD" Taxable="false">1700</BaseAmount>
-								<FareFiledIn>
-									<BaseAmount Code="EUR" Taxable="false">1500</BaseAmount>
-								</FareFiledIn>
-								<Taxes>
-									<Total Code="USD" Taxable="false">1065.78</Total>
-								</Taxes>
-							</TotalPriceDetail>
-							<Service ServiceID="SVC143973579040000V1">
-								<PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-								<FlightRefs>FLTL0S0S1</FlightRefs>
-							</Service>
-							<Service ServiceID="SVC143973579040000V2">
-								<PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-								<FlightRefs>FLTL1S2S3</FlightRefs>
-							</Service>
-							<Service ServiceID="SVC143973579040000V3">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG0">SVD1</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040000V4">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG1">SVD1</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040000V5">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG2">SVD1</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040000V6">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG3">SVD1</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040000V7">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG0">SVD2</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040000V8">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG1">SVD2</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040000V9">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG2">SVD2</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040000V10">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG3">SVD2</ServiceDefinitionRef>
-							</Service>
-							<FareDetail>
-								<PassengerRefs>PAX1 PAX2</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">951.26</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">596</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">526</BaseAmount>
-									</FareFiledIn>
-									<Taxes>
-										<Total Code="USD" Taxable="false">355.26</Total>
-										<Breakdown>
-											<Tax>
-												<Amount Code="USD" Taxable="false">34</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">113.3</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">113.3</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">34</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.9</Amount>
-												<TaxCode>UJ</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">0.2</Amount>
-												<TaxCode>ND</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">0.2</Amount>
-												<TaxCode>ND</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">15.7</Amount>
-												<TaxCode>XW</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">15.7</Amount>
-												<TaxCode>XW</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">12.34</Amount>
-												<TaxCode>RI</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">10.62</Amount>
-												<TaxCode>RI2</TaxCode>
-											</Tax>
-										</Breakdown>
-									</Taxes>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC1</PriceClassRef>
-									<SegmentRefs>SEG0 SEG1 SEG2 SEG3</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-							<FareDetail>
-								<PassengerRefs>PAX3</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">803.26</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">448</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">395</BaseAmount>
-									</FareFiledIn>
-									<Taxes>
-										<Total Code="USD" Taxable="false">355.26</Total>
-										<Breakdown>
-											<Tax>
-												<Amount Code="USD" Taxable="false">34</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">113.3</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">113.3</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">34</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.9</Amount>
-												<TaxCode>UJ</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">0.2</Amount>
-												<TaxCode>ND</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">0.2</Amount>
-												<TaxCode>ND</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">15.7</Amount>
-												<TaxCode>XW</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">15.7</Amount>
-												<TaxCode>XW</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">12.34</Amount>
-												<TaxCode>RI</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">10.62</Amount>
-												<TaxCode>RI2</TaxCode>
-											</Tax>
-										</Breakdown>
-									</Taxes>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC2</PriceClassRef>
-									<SegmentRefs>SEG0 SEG1 SEG2 SEG3</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-							<FareDetail>
-								<PassengerRefs>PAX4</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">60</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">60</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">53</BaseAmount>
-									</FareFiledIn>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC3</PriceClassRef>
-									<SegmentRefs>SEG0 SEG1 SEG2 SEG3</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-						</OfferItem>
-					</Offer>
-					<Offer OfferID="OFR143973579040001" Owner="1W">
-						<Parameters>
-							<TotalItemQuantity>1</TotalItemQuantity>
-						</Parameters>
-						<TimeLimits>
-							<OfferExpiration DateTime="2018-11-09T13:15:00"/>
-						</TimeLimits>
-						<FlightsOverview>
-							<FlightRef ODRef="ODN3">FLTL0S4S5</FlightRef>
-							<FlightRef ODRef="ODN4">FLTL1S6S7</FlightRef>
-						</FlightsOverview>
-						<OfferItem OfferItemID="OFI143973579040001P1">
-							<TotalPriceDetail>
-								<TotalAmount>
-									<SimpleCurrencyPrice Code="USD" Taxable="false">3086.26</SimpleCurrencyPrice>
-								</TotalAmount>
-								<BaseAmount Code="USD" Taxable="false">1936</BaseAmount>
-								<FareFiledIn>
-									<BaseAmount Code="EUR" Taxable="false">1708</BaseAmount>
-								</FareFiledIn>
-								<Taxes>
-									<Total Code="USD" Taxable="false">1150.26</Total>
-								</Taxes>
-							</TotalPriceDetail>
-							<Service ServiceID="SVC143973579040001V1">
-								<PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-								<FlightRefs>FLTL0S4S5</FlightRefs>
-							</Service>
-							<Service ServiceID="SVC143973579040001V2">
-								<PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-								<FlightRefs>FLTL1S6S7</FlightRefs>
-							</Service>
-							<Service ServiceID="SVC143973579040001V3">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG4">SVD3</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040001V4">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG5">SVD3</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040001V5">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG6">SVD3</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040001V6">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG7">SVD3</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040001V7">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG4">SVD4</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040001V8">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG5">SVD4</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040001V9">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG6">SVD4</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040001V10">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG7">SVD4</ServiceDefinitionRef>
-							</Service>
-							<FareDetail>
-								<PassengerRefs>PAX1 PAX2</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">1062.42</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">679</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">599</BaseAmount>
-									</FareFiledIn>
-									<Taxes>
-										<Total Code="USD" Taxable="false">383.42</Total>
-										<Breakdown>
-											<Tax>
-												<Amount Code="USD" Taxable="false">73.7</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">96.3</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">96.3</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">73.7</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.9</Amount>
-												<TaxCode>UJ</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">9.91</Amount>
-												<TaxCode>RI</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">9.91</Amount>
-												<TaxCode>RI2</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">6.3</Amount>
-												<TaxCode>UH</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.7</Amount>
-												<TaxCode>TR</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.7</Amount>
-												<TaxCode>TR</TaxCode>
-											</Tax>
-										</Breakdown>
-									</Taxes>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC4</PriceClassRef>
-									<SegmentRefs>SEG4 SEG5 SEG6 SEG7</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-							<FareDetail>
-								<PassengerRefs>PAX3</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">893.42</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">510</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">450</BaseAmount>
-									</FareFiledIn>
-									<Taxes>
-										<Total Code="USD" Taxable="false">383.42</Total>
-										<Breakdown>
-											<Tax>
-												<Amount Code="USD" Taxable="false">73.7</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">96.3</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">96.3</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">73.7</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.9</Amount>
-												<TaxCode>UJ</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">9.91</Amount>
-												<TaxCode>RI</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">9.91</Amount>
-												<TaxCode>RI2</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">6.3</Amount>
-												<TaxCode>UH</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.7</Amount>
-												<TaxCode>TR</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.7</Amount>
-												<TaxCode>TR</TaxCode>
-											</Tax>
-										</Breakdown>
-									</Taxes>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC5</PriceClassRef>
-									<SegmentRefs>SEG4 SEG5 SEG6 SEG7</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-							<FareDetail>
-								<PassengerRefs>PAX4</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">68</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">68</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">60</BaseAmount>
-									</FareFiledIn>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC6</PriceClassRef>
-									<SegmentRefs>SEG4 SEG5 SEG6 SEG7</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-						</OfferItem>
-					</Offer>
-					<Offer OfferID="OFR143973579040002" Owner="1W">
-						<Parameters>
-							<TotalItemQuantity>1</TotalItemQuantity>
-						</Parameters>
-						<TimeLimits>
-							<OfferExpiration DateTime="2018-11-10T13:15:00"/>
-						</TimeLimits>
-						<FlightsOverview>
-							<FlightRef ODRef="ODN3">FLTL0S8S9</FlightRef>
-							<FlightRef ODRef="ODN4">FLTL1S10S11</FlightRef>
-						</FlightsOverview>
-						<OfferItem OfferItemID="OFI143973579040002P2">
-							<TotalPriceDetail>
-								<TotalAmount>
-									<SimpleCurrencyPrice Code="USD" Taxable="false">3086.26</SimpleCurrencyPrice>
-								</TotalAmount>
-								<BaseAmount Code="USD" Taxable="false">1936</BaseAmount>
-								<FareFiledIn>
-									<BaseAmount Code="EUR" Taxable="false">1708</BaseAmount>
-								</FareFiledIn>
-								<Taxes>
-									<Total Code="USD" Taxable="false">1150.26</Total>
-								</Taxes>
-							</TotalPriceDetail>
-							<Service ServiceID="SVC143973579040002V1">
-								<PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-								<FlightRefs>FLTL0S8S9</FlightRefs>
-							</Service>
-							<Service ServiceID="SVC143973579040002V2">
-								<PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-								<FlightRefs>FLTL1S10S11</FlightRefs>
-							</Service>
-							<Service ServiceID="SVC143973579040002V3">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG8">SVD3</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040002V4">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG9">SVD3</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040002V5">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG10">SVD3</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040002V6">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG11">SVD3</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040002V7">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG8">SVD4</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040002V8">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG9">SVD4</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040002V9">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG10">SVD4</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040002V10">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG11">SVD4</ServiceDefinitionRef>
-							</Service>
-							<FareDetail>
-								<PassengerRefs>PAX1 PAX2</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">1062.42</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">679</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">599</BaseAmount>
-									</FareFiledIn>
-									<Taxes>
-										<Total Code="USD" Taxable="false">383.42</Total>
-										<Breakdown>
-											<Tax>
-												<Amount Code="USD" Taxable="false">73.7</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">96.3</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">96.3</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">73.7</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.9</Amount>
-												<TaxCode>UJ</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">9.91</Amount>
-												<TaxCode>RI</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">9.91</Amount>
-												<TaxCode>RI2</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">6.3</Amount>
-												<TaxCode>UH</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.7</Amount>
-												<TaxCode>TR</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.7</Amount>
-												<TaxCode>TR</TaxCode>
-											</Tax>
-										</Breakdown>
-									</Taxes>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC4</PriceClassRef>
-									<SegmentRefs>SEG8 SEG9 SEG10 SEG11</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-							<FareDetail>
-								<PassengerRefs>PAX3</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">893.42</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">510</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">450</BaseAmount>
-									</FareFiledIn>
-									<Taxes>
-										<Total Code="USD" Taxable="false">383.42</Total>
-										<Breakdown>
-											<Tax>
-												<Amount Code="USD" Taxable="false">73.7</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">96.3</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">96.3</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">73.7</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.9</Amount>
-												<TaxCode>UJ</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">9.91</Amount>
-												<TaxCode>RI</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">9.91</Amount>
-												<TaxCode>RI2</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">6.3</Amount>
-												<TaxCode>UH</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.7</Amount>
-												<TaxCode>TR</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.7</Amount>
-												<TaxCode>TR</TaxCode>
-											</Tax>
-										</Breakdown>
-									</Taxes>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC5</PriceClassRef>
-									<SegmentRefs>SEG8 SEG9 SEG10 SEG11</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-							<FareDetail>
-								<PassengerRefs>PAX4</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">68</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">68</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">60</BaseAmount>
-									</FareFiledIn>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC6</PriceClassRef>
-									<SegmentRefs>SEG8 SEG9 SEG10 SEG11</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-						</OfferItem>
-					</Offer>
-					<Offer OfferID="OFR143973579040003" Owner="1W">
-						<Parameters>
-							<TotalItemQuantity>1</TotalItemQuantity>
-						</Parameters>
-						<TimeLimits>
-							<OfferExpiration DateTime="2018-11-10T13:15:00"/>
-						</TimeLimits>
-						<FlightsOverview>
-							<FlightRef ODRef="ODN3">FLTL0S8S9</FlightRef>
-							<FlightRef ODRef="ODN4">FLTL1S6S7</FlightRef>
-						</FlightsOverview>
-						<OfferItem OfferItemID="OFI143973579040003P2">
-							<TotalPriceDetail>
-								<TotalAmount>
-									<SimpleCurrencyPrice Code="USD" Taxable="false">3086.26</SimpleCurrencyPrice>
-								</TotalAmount>
-								<BaseAmount Code="USD" Taxable="false">1936</BaseAmount>
-								<FareFiledIn>
-									<BaseAmount Code="EUR" Taxable="false">1708</BaseAmount>
-								</FareFiledIn>
-								<Taxes>
-									<Total Code="USD" Taxable="false">1150.26</Total>
-								</Taxes>
-							</TotalPriceDetail>
-							<Service ServiceID="SVC143973579040003V1">
-								<PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-								<FlightRefs>FLTL1S6S7</FlightRefs>
-							</Service>
-							<Service ServiceID="SVC143973579040003V2">
-								<PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-								<FlightRefs>FLTL0S8S9</FlightRefs>
-							</Service>
-							<Service ServiceID="SVC143973579040003V3">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG8">SVD3</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040003V4">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG9">SVD3</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040003V5">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG6">SVD3</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040003V6">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG7">SVD3</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040003V7">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG8">SVD4</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040003V8">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG9">SVD4</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040003V9">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG6">SVD4</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040003V10">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG7">SVD4</ServiceDefinitionRef>
-							</Service>
-							<FareDetail>
-								<PassengerRefs>PAX1 PAX2</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">1062.42</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">679</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">599</BaseAmount>
-									</FareFiledIn>
-									<Taxes>
-										<Total Code="USD" Taxable="false">383.42</Total>
-										<Breakdown>
-											<Tax>
-												<Amount Code="USD" Taxable="false">73.7</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">96.3</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">96.3</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">73.7</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.9</Amount>
-												<TaxCode>UJ</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">9.91</Amount>
-												<TaxCode>RI</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">9.91</Amount>
-												<TaxCode>RI2</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">6.3</Amount>
-												<TaxCode>UH</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.7</Amount>
-												<TaxCode>TR</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.7</Amount>
-												<TaxCode>TR</TaxCode>
-											</Tax>
-										</Breakdown>
-									</Taxes>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC4</PriceClassRef>
-									<SegmentRefs>SEG8 SEG9 SEG6 SEG7</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-							<FareDetail>
-								<PassengerRefs>PAX3</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">893.42</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">510</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">450</BaseAmount>
-									</FareFiledIn>
-									<Taxes>
-										<Total Code="USD" Taxable="false">383.42</Total>
-										<Breakdown>
-											<Tax>
-												<Amount Code="USD" Taxable="false">73.7</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">96.3</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">96.3</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">73.7</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.9</Amount>
-												<TaxCode>UJ</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">9.91</Amount>
-												<TaxCode>RI</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">9.91</Amount>
-												<TaxCode>RI2</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">6.3</Amount>
-												<TaxCode>UH</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.7</Amount>
-												<TaxCode>TR</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.7</Amount>
-												<TaxCode>TR</TaxCode>
-											</Tax>
-										</Breakdown>
-									</Taxes>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC5</PriceClassRef>
-									<SegmentRefs>SEG8 SEG9 SEG6 SEG7</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-							<FareDetail>
-								<PassengerRefs>PAX4</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">68</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">68</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">60</BaseAmount>
-									</FareFiledIn>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC6</PriceClassRef>
-									<SegmentRefs>SEG8 SEG9 SEG6 SEG7</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-						</OfferItem>
-					</Offer>
-					<Offer OfferID="OFR143973579040004" Owner="1W">
-						<Parameters>
-							<TotalItemQuantity>1</TotalItemQuantity>
-						</Parameters>
-						<TimeLimits>
-							<OfferExpiration DateTime="2018-11-06T07:59:00"/>
-						</TimeLimits>
-						<FlightsOverview>
-							<FlightRef ODRef="ODN1">FLTL0S12</FlightRef>
-							<FlightRef ODRef="ODN5">FLTL1S13</FlightRef>
-						</FlightsOverview>
-						<OfferItem OfferItemID="OFI143973579040004P3">
-							<TotalPriceDetail>
-								<TotalAmount>
-									<SimpleCurrencyPrice Code="USD" Taxable="false">3673.84</SimpleCurrencyPrice>
-								</TotalAmount>
-								<BaseAmount Code="USD" Taxable="false">3258</BaseAmount>
-								<FareFiledIn>
-									<BaseAmount Code="EUR" Taxable="false">2875</BaseAmount>
-								</FareFiledIn>
-								<Taxes>
-									<Total Code="USD" Taxable="false">415.84</Total>
-								</Taxes>
-							</TotalPriceDetail>
-							<Service ServiceID="SVC143973579040004V1">
-								<PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-								<FlightRefs>FLTL0S12</FlightRefs>
-							</Service>
-							<Service ServiceID="SVC143973579040004V2">
-								<PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-								<FlightRefs>FLTL1S13</FlightRefs>
-							</Service>
-							<Service ServiceID="SVC143973579040004V3">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG12">SVD5</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040004V4">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG13">SVD5</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040004V5">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG12">SVD6</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040004V6">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG13">SVD6</ServiceDefinitionRef>
-							</Service>
-							<FareDetail>
-								<PassengerRefs>PAX1 PAX2</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">1442.38</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">1303</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">1150</BaseAmount>
-									</FareFiledIn>
-									<Taxes>
-										<Total Code="USD" Taxable="false">139.38</Total>
-										<Breakdown>
-											<Tax>
-												<Amount Code="USD" Taxable="false">55</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">55</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">4.7</Amount>
-												<TaxCode>UJ</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">12.34</Amount>
-												<TaxCode>RI</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">12.34</Amount>
-												<TaxCode>RI2</TaxCode>
-											</Tax>
-										</Breakdown>
-									</Taxes>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC7</PriceClassRef>
-									<SegmentRefs>SEG12 SEG13</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-							<FareDetail>
-								<PassengerRefs>PAX3</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">789.08</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">652</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">575</BaseAmount>
-									</FareFiledIn>
-									<Taxes>
-										<Total Code="USD" Taxable="false">137.08</Total>
-										<Breakdown>
-											<Tax>
-												<Amount Code="USD" Taxable="false">55</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">55</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">2.4</Amount>
-												<TaxCode>UJ</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">12.34</Amount>
-												<TaxCode>RI</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">12.34</Amount>
-												<TaxCode>RI2</TaxCode>
-											</Tax>
-										</Breakdown>
-									</Taxes>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC8</PriceClassRef>
-									<SegmentRefs>SEG12 SEG13</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-							<FareDetail>
-								<PassengerRefs>PAX4</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">0</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">0</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">0</BaseAmount>
-									</FareFiledIn>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC9</PriceClassRef>
-									<SegmentRefs>SEG12 SEG13</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-						</OfferItem>
-					</Offer>
-					<Offer OfferID="OFR143973579040005" Owner="1W">
-						<Parameters>
-							<TotalItemQuantity>1</TotalItemQuantity>
-						</Parameters>
-						<TimeLimits>
-							<OfferExpiration DateTime="2018-11-06T07:59:00"/>
-						</TimeLimits>
-						<FlightsOverview>
-							<FlightRef ODRef="ODN1">FLTL0S12</FlightRef>
-							<FlightRef ODRef="ODN5">FLTL1S14</FlightRef>
-						</FlightsOverview>
-						<OfferItem OfferItemID="OFI143973579040005P3">
-							<TotalPriceDetail>
-								<TotalAmount>
-									<SimpleCurrencyPrice Code="USD" Taxable="false">3673.84</SimpleCurrencyPrice>
-								</TotalAmount>
-								<BaseAmount Code="USD" Taxable="false">3258</BaseAmount>
-								<FareFiledIn>
-									<BaseAmount Code="EUR" Taxable="false">2875</BaseAmount>
-								</FareFiledIn>
-								<Taxes>
-									<Total Code="USD" Taxable="false">415.84</Total>
-								</Taxes>
-							</TotalPriceDetail>
-							<Service ServiceID="SVC143973579040005V1">
-								<PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-								<FlightRefs>FLTL0S12</FlightRefs>
-							</Service>
-							<Service ServiceID="SVC143973579040005V2">
-								<PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-								<FlightRefs>FLTL1S14</FlightRefs>
-							</Service>
-							<Service ServiceID="SVC143973579040005V3">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG12">SVD5</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040005V4">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG14">SVD5</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040005V5">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG12">SVD6</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040005V6">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG14">SVD6</ServiceDefinitionRef>
-							</Service>
-							<FareDetail>
-								<PassengerRefs>PAX1 PAX2</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">1442.38</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">1303</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">1150</BaseAmount>
-									</FareFiledIn>
-									<Taxes>
-										<Total Code="USD" Taxable="false">139.38</Total>
-										<Breakdown>
-											<Tax>
-												<Amount Code="USD" Taxable="false">55</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">55</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">4.7</Amount>
-												<TaxCode>UJ</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">12.34</Amount>
-												<TaxCode>RI</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">12.34</Amount>
-												<TaxCode>RI2</TaxCode>
-											</Tax>
-										</Breakdown>
-									</Taxes>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC7</PriceClassRef>
-									<SegmentRefs>SEG12 SEG14</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-							<FareDetail>
-								<PassengerRefs>PAX3</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">789.08</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">652</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">575</BaseAmount>
-									</FareFiledIn>
-									<Taxes>
-										<Total Code="USD" Taxable="false">137.08</Total>
-										<Breakdown>
-											<Tax>
-												<Amount Code="USD" Taxable="false">55</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">55</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">2.4</Amount>
-												<TaxCode>UJ</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">12.34</Amount>
-												<TaxCode>RI</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">12.34</Amount>
-												<TaxCode>RI2</TaxCode>
-											</Tax>
-										</Breakdown>
-									</Taxes>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC8</PriceClassRef>
-									<SegmentRefs>SEG12 SEG14</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-							<FareDetail>
-								<PassengerRefs>PAX4</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">0</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">0</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">0</BaseAmount>
-									</FareFiledIn>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC9</PriceClassRef>
-									<SegmentRefs>SEG12 SEG14</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-						</OfferItem>
-					</Offer>
-					<Offer OfferID="OFR143973579040006" Owner="1W">
-						<Parameters>
-							<TotalItemQuantity>1</TotalItemQuantity>
-						</Parameters>
-						<TimeLimits>
-							<OfferExpiration DateTime="2018-11-06T07:59:00"/>
-						</TimeLimits>
-						<FlightsOverview>
-							<FlightRef ODRef="ODN1">FLTL0S12</FlightRef>
-							<FlightRef ODRef="ODN5">FLTL1S15</FlightRef>
-						</FlightsOverview>
-						<OfferItem OfferItemID="OFI143973579040006P3">
-							<TotalPriceDetail>
-								<TotalAmount>
-									<SimpleCurrencyPrice Code="USD" Taxable="false">3673.84</SimpleCurrencyPrice>
-								</TotalAmount>
-								<BaseAmount Code="USD" Taxable="false">3258</BaseAmount>
-								<FareFiledIn>
-									<BaseAmount Code="EUR" Taxable="false">2875</BaseAmount>
-								</FareFiledIn>
-								<Taxes>
-									<Total Code="USD" Taxable="false">415.84</Total>
-								</Taxes>
-							</TotalPriceDetail>
-							<Service ServiceID="SVC143973579040006V1">
-								<PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-								<FlightRefs>FLTL0S12</FlightRefs>
-							</Service>
-							<Service ServiceID="SVC143973579040006V2">
-								<PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-								<FlightRefs>FLTL1S15</FlightRefs>
-							</Service>
-							<Service ServiceID="SVC143973579040006V3">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG12">SVD5</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040006V4">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG15">SVD5</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040006V5">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG12">SVD6</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040006V6">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG15">SVD6</ServiceDefinitionRef>
-							</Service>
-							<FareDetail>
-								<PassengerRefs>PAX1 PAX2</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">1442.38</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">1303</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">1150</BaseAmount>
-									</FareFiledIn>
-									<Taxes>
-										<Total Code="USD" Taxable="false">139.38</Total>
-										<Breakdown>
-											<Tax>
-												<Amount Code="USD" Taxable="false">55</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">55</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">4.7</Amount>
-												<TaxCode>UJ</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">12.34</Amount>
-												<TaxCode>RI</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">12.34</Amount>
-												<TaxCode>RI2</TaxCode>
-											</Tax>
-										</Breakdown>
-									</Taxes>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC7</PriceClassRef>
-									<SegmentRefs>SEG12 SEG15</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-							<FareDetail>
-								<PassengerRefs>PAX3</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">789.08</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">652</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">575</BaseAmount>
-									</FareFiledIn>
-									<Taxes>
-										<Total Code="USD" Taxable="false">137.08</Total>
-										<Breakdown>
-											<Tax>
-												<Amount Code="USD" Taxable="false">55</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">55</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">2.4</Amount>
-												<TaxCode>UJ</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">12.34</Amount>
-												<TaxCode>RI</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">12.34</Amount>
-												<TaxCode>RI2</TaxCode>
-											</Tax>
-										</Breakdown>
-									</Taxes>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC8</PriceClassRef>
-									<SegmentRefs>SEG12 SEG15</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-							<FareDetail>
-								<PassengerRefs>PAX4</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">0</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">0</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">0</BaseAmount>
-									</FareFiledIn>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC9</PriceClassRef>
-									<SegmentRefs>SEG12 SEG15</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-						</OfferItem>
-					</Offer>
-					<Offer OfferID="OFR143973579040007" Owner="1W">
-						<Parameters>
-							<TotalItemQuantity>1</TotalItemQuantity>
-						</Parameters>
-						<TimeLimits>
-							<OfferExpiration DateTime="2018-11-04T06:59:00"/>
-						</TimeLimits>
-						<FlightsOverview>
-							<FlightRef ODRef="ODN6">FLTL0S16S17</FlightRef>
-							<FlightRef ODRef="ODN2">FLTL1S18S19</FlightRef>
-						</FlightsOverview>
-						<OfferItem OfferItemID="OFI143973579040007P4">
-							<TotalPriceDetail>
-								<TotalAmount>
-									<SimpleCurrencyPrice Code="USD" Taxable="false">3917.6</SimpleCurrencyPrice>
-								</TotalAmount>
-								<BaseAmount Code="USD" Taxable="false">3386</BaseAmount>
-								<FareFiledIn>
-									<BaseAmount Code="EUR" Taxable="false">2987</BaseAmount>
-								</FareFiledIn>
-								<Taxes>
-									<Total Code="USD" Taxable="false">531.6</Total>
-								</Taxes>
-							</TotalPriceDetail>
-							<Service ServiceID="SVC143973579040007V1">
-								<PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-								<FlightRefs>FLTL0S16S17</FlightRefs>
-							</Service>
-							<Service ServiceID="SVC143973579040007V2">
-								<PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-								<FlightRefs>FLTL1S18S19</FlightRefs>
-							</Service>
-							<Service ServiceID="SVC143973579040007V3">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG16">SVD7</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040007V4">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG17">SVD7</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040007V5">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG18">SVD7</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040007V6">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG19">SVD7</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040007V7">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG16">SVD2</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040007V8">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG17">SVD2</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040007V9">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG18">SVD2</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040007V10">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG19">SVD2</ServiceDefinitionRef>
-							</Service>
-							<FareDetail>
-								<PassengerRefs>PAX1 PAX2</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">1367.1</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">1188</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">1048</BaseAmount>
-									</FareFiledIn>
-									<Taxes>
-										<Total Code="USD" Taxable="false">179.1</Total>
-										<Breakdown>
-											<Tax>
-												<Amount Code="USD" Taxable="false">7.4</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">7.4</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">25.9</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">25.9</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">45</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">45</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">4.7</Amount>
-												<TaxCode>UJ</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">1.4</Amount>
-												<TaxCode>RI3</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">1.4</Amount>
-												<TaxCode>RI4</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.5</Amount>
-												<TaxCode>RI</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.5</Amount>
-												<TaxCode>RI2</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">2</Amount>
-												<TaxCode>RI3</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">2</Amount>
-												<TaxCode>RI4</TaxCode>
-											</Tax>
-										</Breakdown>
-									</Taxes>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC10</PriceClassRef>
-									<SegmentRefs>SEG16 SEG19</SegmentRefs>
-								</FareComponent>
-								<FareComponent>
-									<PriceClassRef>PRC11</PriceClassRef>
-									<SegmentRefs>SEG17</SegmentRefs>
-								</FareComponent>
-								<FareComponent>
-									<PriceClassRef>PRC12</PriceClassRef>
-									<SegmentRefs>SEG18</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-							<FareDetail>
-								<PassengerRefs>PAX3</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">1064.4</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">891</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">786</BaseAmount>
-									</FareFiledIn>
-									<Taxes>
-										<Total Code="USD" Taxable="false">173.4</Total>
-										<Breakdown>
-											<Tax>
-												<Amount Code="USD" Taxable="false">7.4</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">7.4</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">25.9</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">25.9</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">45</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">45</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">2.4</Amount>
-												<TaxCode>UJ</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">0.7</Amount>
-												<TaxCode>RI3</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">0.7</Amount>
-												<TaxCode>RI4</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.5</Amount>
-												<TaxCode>RI</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.5</Amount>
-												<TaxCode>RI2</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">1</Amount>
-												<TaxCode>RI3</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">1</Amount>
-												<TaxCode>RI4</TaxCode>
-											</Tax>
-										</Breakdown>
-									</Taxes>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC13</PriceClassRef>
-									<SegmentRefs>SEG16 SEG19</SegmentRefs>
-								</FareComponent>
-								<FareComponent>
-									<PriceClassRef>PRC14</PriceClassRef>
-									<SegmentRefs>SEG17</SegmentRefs>
-								</FareComponent>
-								<FareComponent>
-									<PriceClassRef>PRC15</PriceClassRef>
-									<SegmentRefs>SEG18</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-							<FareDetail>
-								<PassengerRefs>PAX4</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">119</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">119</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">105</BaseAmount>
-									</FareFiledIn>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC16</PriceClassRef>
-									<SegmentRefs>SEG16 SEG19</SegmentRefs>
-								</FareComponent>
-								<FareComponent>
-									<PriceClassRef>PRC17</PriceClassRef>
-									<SegmentRefs>SEG17</SegmentRefs>
-								</FareComponent>
-								<FareComponent>
-									<PriceClassRef>PRC18</PriceClassRef>
-									<SegmentRefs>SEG18</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-						</OfferItem>
-					</Offer>
-					<Offer OfferID="OFR143973579040008" Owner="1W">
-						<Parameters>
-							<TotalItemQuantity>1</TotalItemQuantity>
-						</Parameters>
-						<TimeLimits>
-							<OfferExpiration DateTime="2018-11-04T06:59:00"/>
-						</TimeLimits>
-						<FlightsOverview>
-							<FlightRef ODRef="ODN6">FLTL0S20S21</FlightRef>
-							<FlightRef ODRef="ODN2">FLTL1S18S19</FlightRef>
-						</FlightsOverview>
-						<OfferItem OfferItemID="OFI143973579040008P4">
-							<TotalPriceDetail>
-								<TotalAmount>
-									<SimpleCurrencyPrice Code="USD" Taxable="false">3917.6</SimpleCurrencyPrice>
-								</TotalAmount>
-								<BaseAmount Code="USD" Taxable="false">3386</BaseAmount>
-								<FareFiledIn>
-									<BaseAmount Code="EUR" Taxable="false">2987</BaseAmount>
-								</FareFiledIn>
-								<Taxes>
-									<Total Code="USD" Taxable="false">531.6</Total>
-								</Taxes>
-							</TotalPriceDetail>
-							<Service ServiceID="SVC143973579040008V1">
-								<PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-								<FlightRefs>FLTL1S18S19</FlightRefs>
-							</Service>
-							<Service ServiceID="SVC143973579040008V2">
-								<PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
-								<FlightRefs>FLTL0S20S21</FlightRefs>
-							</Service>
-							<Service ServiceID="SVC143973579040008V3">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG20">SVD7</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040008V4">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG21">SVD7</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040008V5">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG18">SVD7</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040008V6">
-								<PassengerRefs>PAX1 PAX2 PAX3</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG19">SVD7</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040008V7">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG20">SVD2</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040008V8">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG21">SVD2</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040008V9">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG18">SVD2</ServiceDefinitionRef>
-							</Service>
-							<Service ServiceID="SVC143973579040008V10">
-								<PassengerRefs>PAX4</PassengerRefs>
-								<ServiceDefinitionRef SegmentRefs="SEG19">SVD2</ServiceDefinitionRef>
-							</Service>
-							<FareDetail>
-								<PassengerRefs>PAX1 PAX2</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">1367.1</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">1188</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">1048</BaseAmount>
-									</FareFiledIn>
-									<Taxes>
-										<Total Code="USD" Taxable="false">179.1</Total>
-										<Breakdown>
-											<Tax>
-												<Amount Code="USD" Taxable="false">7.4</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">7.4</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">25.9</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">25.9</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">45</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">45</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">4.7</Amount>
-												<TaxCode>UJ</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">1.4</Amount>
-												<TaxCode>RI3</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">1.4</Amount>
-												<TaxCode>RI4</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.5</Amount>
-												<TaxCode>RI</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.5</Amount>
-												<TaxCode>RI2</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">2</Amount>
-												<TaxCode>RI3</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">2</Amount>
-												<TaxCode>RI4</TaxCode>
-											</Tax>
-										</Breakdown>
-									</Taxes>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC10</PriceClassRef>
-									<SegmentRefs>SEG20 SEG19</SegmentRefs>
-								</FareComponent>
-								<FareComponent>
-									<PriceClassRef>PRC11</PriceClassRef>
-									<SegmentRefs>SEG21</SegmentRefs>
-								</FareComponent>
-								<FareComponent>
-									<PriceClassRef>PRC12</PriceClassRef>
-									<SegmentRefs>SEG18</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-							<FareDetail>
-								<PassengerRefs>PAX3</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">1064.4</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">891</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">786</BaseAmount>
-									</FareFiledIn>
-									<Taxes>
-										<Total Code="USD" Taxable="false">173.4</Total>
-										<Breakdown>
-											<Tax>
-												<Amount Code="USD" Taxable="false">7.4</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">7.4</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">25.9</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">25.9</Amount>
-												<TaxCode>YRF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">45</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">45</Amount>
-												<TaxCode>YQF</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">2.4</Amount>
-												<TaxCode>UJ</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">0.7</Amount>
-												<TaxCode>RI3</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">0.7</Amount>
-												<TaxCode>RI4</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.5</Amount>
-												<TaxCode>RI</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">5.5</Amount>
-												<TaxCode>RI2</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">1</Amount>
-												<TaxCode>RI3</TaxCode>
-											</Tax>
-											<Tax>
-												<Amount Code="USD" Taxable="false">1</Amount>
-												<TaxCode>RI4</TaxCode>
-											</Tax>
-										</Breakdown>
-									</Taxes>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC13</PriceClassRef>
-									<SegmentRefs>SEG20 SEG19</SegmentRefs>
-								</FareComponent>
-								<FareComponent>
-									<PriceClassRef>PRC14</PriceClassRef>
-									<SegmentRefs>SEG21</SegmentRefs>
-								</FareComponent>
-								<FareComponent>
-									<PriceClassRef>PRC15</PriceClassRef>
-									<SegmentRefs>SEG18</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-							<FareDetail>
-								<PassengerRefs>PAX4</PassengerRefs>
-								<Price>
-									<TotalAmount>
-										<SimpleCurrencyPrice Code="USD" Taxable="false">119</SimpleCurrencyPrice>
-									</TotalAmount>
-									<BaseAmount Code="USD" Taxable="false">119</BaseAmount>
-									<FareFiledIn>
-										<BaseAmount Code="EUR" Taxable="false">105</BaseAmount>
-									</FareFiledIn>
-								</Price>
-								<FareComponent>
-									<PriceClassRef>PRC16</PriceClassRef>
-									<SegmentRefs>SEG20 SEG19</SegmentRefs>
-								</FareComponent>
-								<FareComponent>
-									<PriceClassRef>PRC17</PriceClassRef>
-									<SegmentRefs>SEG21</SegmentRefs>
-								</FareComponent>
-								<FareComponent>
-									<PriceClassRef>PRC18</PriceClassRef>
-									<SegmentRefs>SEG18</SegmentRefs>
-								</FareComponent>
-							</FareDetail>
-						</OfferItem>
-					</Offer>
-				</AirlineOffers>
-			</OffersGroup>
-			<DataLists>
-				<PassengerList>
-					<Passenger PassengerID="PAX1">
-						<PTC>ADT</PTC>
-					</Passenger>
-					<Passenger PassengerID="PAX2">
-						<PTC>ADT</PTC>
-					</Passenger>
-					<Passenger PassengerID="PAX3">
-						<PTC>CHD</PTC>
-					</Passenger>
-					<Passenger PassengerID="PAX4">
-						<PTC>INF</PTC>
-					</Passenger>
-				</PassengerList>
-				<BaggageAllowanceList>
-					<BaggageAllowance BaggageAllowanceID="BAG1">
-						<BaggageCategory>Checked</BaggageCategory>
-						<AllowanceDescription Concept="N">
-							<ApplicableParty>Traveler</ApplicableParty>
-							<Descriptions>
-								<Description>
-									<Text>Free baggage</Text>
-								</Description>
-							</Descriptions>
-						</AllowanceDescription>
-						<PieceAllowance>
-							<ApplicableParty>Traveler</ApplicableParty>
-							<TotalQuantity>3</TotalQuantity>
-							<PieceMeasurements Quantity="3"/>
-						</PieceAllowance>
-					</BaggageAllowance>
-					<BaggageAllowance BaggageAllowanceID="BAG2">
-						<BaggageCategory>Checked</BaggageCategory>
-						<AllowanceDescription Concept="N">
-							<ApplicableParty>Traveler</ApplicableParty>
-							<Descriptions>
-								<Description>
-									<Text>Free baggage</Text>
-								</Description>
-							</Descriptions>
-						</AllowanceDescription>
-						<PieceAllowance>
-							<ApplicableParty>Traveler</ApplicableParty>
-							<TotalQuantity>1</TotalQuantity>
-							<PieceMeasurements Quantity="1"/>
-						</PieceAllowance>
-					</BaggageAllowance>
-					<BaggageAllowance BaggageAllowanceID="BAG3">
-						<BaggageCategory>Checked</BaggageCategory>
-						<AllowanceDescription Concept="700">
-							<ApplicableParty>Traveler</ApplicableParty>
-							<Descriptions>
-								<Description>
-									<Text>Free baggage</Text>
-								</Description>
-							</Descriptions>
-						</AllowanceDescription>
-						<WeightAllowance>
-							<MaximumWeight>
-								<Value>40</Value>
-								<UOM>K</UOM>
-							</MaximumWeight>
-						</WeightAllowance>
-					</BaggageAllowance>
-					<BaggageAllowance BaggageAllowanceID="BAG4">
-						<BaggageCategory>Checked</BaggageCategory>
-						<AllowanceDescription Concept="700">
-							<ApplicableParty>Traveler</ApplicableParty>
-							<Descriptions>
-								<Description>
-									<Text>Free baggage</Text>
-								</Description>
-							</Descriptions>
-						</AllowanceDescription>
-						<WeightAllowance>
-							<MaximumWeight>
-								<Value>10</Value>
-								<UOM>K</UOM>
-							</MaximumWeight>
-						</WeightAllowance>
-					</BaggageAllowance>
-					<BaggageAllowance BaggageAllowanceID="BAG5">
-						<BaggageCategory>Checked</BaggageCategory>
-						<AllowanceDescription Concept="700">
-							<ApplicableParty>Traveler</ApplicableParty>
-							<Descriptions>
-								<Description>
-									<Text>Free baggage</Text>
-								</Description>
-							</Descriptions>
-						</AllowanceDescription>
-						<WeightAllowance>
-							<MaximumWeight>
-								<Value>30</Value>
-								<UOM>K</UOM>
-							</MaximumWeight>
-						</WeightAllowance>
-					</BaggageAllowance>
-					<BaggageAllowance BaggageAllowanceID="BAG6">
-						<BaggageCategory>Checked</BaggageCategory>
-						<AllowanceDescription Concept="N">
-							<ApplicableParty>Traveler</ApplicableParty>
-							<Descriptions>
-								<Description>
-									<Text>Free baggage</Text>
-								</Description>
-							</Descriptions>
-						</AllowanceDescription>
-						<PieceAllowance>
-							<ApplicableParty>Traveler</ApplicableParty>
-							<TotalQuantity>0</TotalQuantity>
-							<PieceMeasurements Quantity="0"/>
-						</PieceAllowance>
-					</BaggageAllowance>
-					<BaggageAllowance BaggageAllowanceID="BAG7">
-						<BaggageCategory>Checked</BaggageCategory>
-						<AllowanceDescription Concept="N">
-							<ApplicableParty>Traveler</ApplicableParty>
-							<Descriptions>
-								<Description>
-									<Text>Free baggage</Text>
-								</Description>
-							</Descriptions>
-						</AllowanceDescription>
-						<PieceAllowance>
-							<ApplicableParty>Traveler</ApplicableParty>
-							<TotalQuantity>2</TotalQuantity>
-							<PieceMeasurements Quantity="2"/>
-						</PieceAllowance>
-					</BaggageAllowance>
-				</BaggageAllowanceList>
-				<FlightSegmentList>
-					<FlightSegment SegmentKey="SEG0" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>SVO</AirportCode>
-							<Date>2018-11-09</Date>
-							<Time>21:25</Time>
-							<Terminal>
-								<Name>E</Name>
-							</Terminal>
-						</Departure>
-						<Arrival>
-							<AirportCode>WAW</AirportCode>
-							<Date>2018-11-09</Date>
-							<Time>21:55</Time>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>LO</AirlineID>
-							<FlightNumber>678</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>LO</AirlineID>
-							<FlightNumber>678</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>E95</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT2H30M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG1" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>WAW</AirportCode>
-							<Date>2018-11-09</Date>
-							<Time>22:50</Time>
-						</Departure>
-						<Arrival>
-							<AirportCode>TSE</AirportCode>
-							<Date>2018-11-10</Date>
-							<Time>08:40</Time>
-							<Terminal>
-								<Name>1</Name>
-							</Terminal>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>LO</AirlineID>
-							<FlightNumber>195</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>LO</AirlineID>
-							<FlightNumber>195</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>7M8</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT4H50M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG2" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>TSE</AirportCode>
-							<Date>2018-11-20</Date>
-							<Time>13:55</Time>
-							<Terminal>
-								<Name>1</Name>
-							</Terminal>
-						</Departure>
-						<Arrival>
-							<AirportCode>WAW</AirportCode>
-							<Date>2018-11-20</Date>
-							<Time>14:20</Time>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>LO</AirlineID>
-							<FlightNumber>196</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>LO</AirlineID>
-							<FlightNumber>196</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>738</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT5H25M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG3" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>WAW</AirportCode>
-							<Date>2018-11-20</Date>
-							<Time>20:00</Time>
-						</Departure>
-						<Arrival>
-							<AirportCode>DME</AirportCode>
-							<Date>2018-11-21</Date>
-							<Time>00:10</Time>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>LO</AirlineID>
-							<FlightNumber>679</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>LO</AirlineID>
-							<FlightNumber>679</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>E75</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT2H10M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG4" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>VKO</AirportCode>
-							<Date>2018-11-09</Date>
-							<Time>13:45</Time>
-							<Terminal>
-								<Name>A</Name>
-							</Terminal>
-						</Departure>
-						<Arrival>
-							<AirportCode>IST</AirportCode>
-							<Date>2018-11-09</Date>
-							<Time>16:55</Time>
-							<Terminal>
-								<Name>I</Name>
-							</Terminal>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>TK</AirlineID>
-							<FlightNumber>414</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>TK</AirlineID>
-							<FlightNumber>414</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>332</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT3H10M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG5" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>IST</AirportCode>
-							<Date>2018-11-09</Date>
-							<Time>19:35</Time>
-							<Terminal>
-								<Name>I</Name>
-							</Terminal>
-						</Departure>
-						<Arrival>
-							<AirportCode>TSE</AirportCode>
-							<Date>2018-11-10</Date>
-							<Time>03:35</Time>
-							<Terminal>
-								<Name>1</Name>
-							</Terminal>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>TK</AirlineID>
-							<FlightNumber>354</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>TK</AirlineID>
-							<FlightNumber>354</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>73J</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT5H0M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG6" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>TSE</AirportCode>
-							<Date>2018-11-21</Date>
-							<Time>04:30</Time>
-							<Terminal>
-								<Name>1</Name>
-							</Terminal>
-						</Departure>
-						<Arrival>
-							<AirportCode>IST</AirportCode>
-							<Date>2018-11-21</Date>
-							<Time>07:20</Time>
-							<Terminal>
-								<Name>I</Name>
-							</Terminal>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>TK</AirlineID>
-							<FlightNumber>355</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>TK</AirlineID>
-							<FlightNumber>355</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>73J</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT5H50M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG7" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>IST</AirportCode>
-							<Date>2018-11-21</Date>
-							<Time>09:25</Time>
-							<Terminal>
-								<Name>I</Name>
-							</Terminal>
-						</Departure>
-						<Arrival>
-							<AirportCode>VKO</AirportCode>
-							<Date>2018-11-21</Date>
-							<Time>12:15</Time>
-							<Terminal>
-								<Name>A</Name>
-							</Terminal>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>TK</AirlineID>
-							<FlightNumber>413</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>TK</AirlineID>
-							<FlightNumber>413</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>332</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT2H50M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG8" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>VKO</AirportCode>
-							<Date>2018-11-10</Date>
-							<Time>13:45</Time>
-							<Terminal>
-								<Name>A</Name>
-							</Terminal>
-						</Departure>
-						<Arrival>
-							<AirportCode>IST</AirportCode>
-							<Date>2018-11-10</Date>
-							<Time>16:55</Time>
-							<Terminal>
-								<Name>I</Name>
-							</Terminal>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>TK</AirlineID>
-							<FlightNumber>414</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>TK</AirlineID>
-							<FlightNumber>414</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>332</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT3H10M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG9" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>IST</AirportCode>
-							<Date>2018-11-10</Date>
-							<Time>19:35</Time>
-							<Terminal>
-								<Name>I</Name>
-							</Terminal>
-						</Departure>
-						<Arrival>
-							<AirportCode>TSE</AirportCode>
-							<Date>2018-11-11</Date>
-							<Time>03:35</Time>
-							<Terminal>
-								<Name>1</Name>
-							</Terminal>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>TK</AirlineID>
-							<FlightNumber>354</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>TK</AirlineID>
-							<FlightNumber>354</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>73J</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT5H0M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG10" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>TSE</AirportCode>
-							<Date>2018-11-20</Date>
-							<Time>04:30</Time>
-							<Terminal>
-								<Name>1</Name>
-							</Terminal>
-						</Departure>
-						<Arrival>
-							<AirportCode>IST</AirportCode>
-							<Date>2018-11-20</Date>
-							<Time>07:20</Time>
-							<Terminal>
-								<Name>I</Name>
-							</Terminal>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>TK</AirlineID>
-							<FlightNumber>355</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>TK</AirlineID>
-							<FlightNumber>355</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>73J</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT5H50M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG11" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>IST</AirportCode>
-							<Date>2018-11-20</Date>
-							<Time>09:25</Time>
-							<Terminal>
-								<Name>I</Name>
-							</Terminal>
-						</Departure>
-						<Arrival>
-							<AirportCode>VKO</AirportCode>
-							<Date>2018-11-20</Date>
-							<Time>12:15</Time>
-							<Terminal>
-								<Name>A</Name>
-							</Terminal>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>TK</AirlineID>
-							<FlightNumber>413</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>TK</AirlineID>
-							<FlightNumber>413</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>332</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT2H50M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG12" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>SVO</AirportCode>
-							<Date>2018-11-11</Date>
-							<Time>22:20</Time>
-							<Terminal>
-								<Name>E</Name>
-							</Terminal>
-						</Departure>
-						<Arrival>
-							<AirportCode>TSE</AirportCode>
-							<Date>2018-11-12</Date>
-							<Time>04:55</Time>
-							<Terminal>
-								<Name>1</Name>
-							</Terminal>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>KC</AirlineID>
-							<FlightNumber>874</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>KC</AirlineID>
-							<FlightNumber>874</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>320</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT3H35M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG13" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>TSE</AirportCode>
-							<Date>2018-11-19</Date>
-							<Time>20:30</Time>
-							<Terminal>
-								<Name>1</Name>
-							</Terminal>
-						</Departure>
-						<Arrival>
-							<AirportCode>SVO</AirportCode>
-							<Date>2018-11-19</Date>
-							<Time>21:20</Time>
-							<Terminal>
-								<Name>E</Name>
-							</Terminal>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>KC</AirlineID>
-							<FlightNumber>873</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>KC</AirlineID>
-							<FlightNumber>873</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>320</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT3H50M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG14" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>TSE</AirportCode>
-							<Date>2018-11-20</Date>
-							<Time>20:30</Time>
-							<Terminal>
-								<Name>1</Name>
-							</Terminal>
-						</Departure>
-						<Arrival>
-							<AirportCode>SVO</AirportCode>
-							<Date>2018-11-20</Date>
-							<Time>21:20</Time>
-							<Terminal>
-								<Name>E</Name>
-							</Terminal>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>KC</AirlineID>
-							<FlightNumber>873</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>KC</AirlineID>
-							<FlightNumber>873</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>320</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT3H50M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG15" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>TSE</AirportCode>
-							<Date>2018-11-21</Date>
-							<Time>20:30</Time>
-							<Terminal>
-								<Name>1</Name>
-							</Terminal>
-						</Departure>
-						<Arrival>
-							<AirportCode>SVO</AirportCode>
-							<Date>2018-11-21</Date>
-							<Time>21:20</Time>
-							<Terminal>
-								<Name>E</Name>
-							</Terminal>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>KC</AirlineID>
-							<FlightNumber>873</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>KC</AirlineID>
-							<FlightNumber>873</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>320</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT3H50M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG16" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>DME</AirportCode>
-							<Date>2018-11-09</Date>
-							<Time>23:25</Time>
-						</Departure>
-						<Arrival>
-							<AirportCode>OVB</AirportCode>
-							<Date>2018-11-10</Date>
-							<Time>07:30</Time>
-							<Terminal>
-								<Name>A</Name>
-							</Terminal>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>S7</AirlineID>
-							<FlightNumber>177</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>S7</AirlineID>
-							<FlightNumber>177</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>321</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT4H5M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG17" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>OVB</AirportCode>
-							<Date>2018-11-10</Date>
-							<Time>12:30</Time>
-							<Terminal>
-								<Name>B</Name>
-							</Terminal>
-						</Departure>
-						<Arrival>
-							<AirportCode>TSE</AirportCode>
-							<Date>2018-11-10</Date>
-							<Time>13:25</Time>
-							<Terminal>
-								<Name>1</Name>
-							</Terminal>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>KC</AirlineID>
-							<FlightNumber>218</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>KC</AirlineID>
-							<FlightNumber>218</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>E90</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT1H55M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG18" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>TSE</AirportCode>
-							<Date>2018-11-19</Date>
-							<Time>14:25</Time>
-							<Terminal>
-								<Name>1</Name>
-							</Terminal>
-						</Departure>
-						<Arrival>
-							<AirportCode>OVB</AirportCode>
-							<Date>2018-11-19</Date>
-							<Time>17:15</Time>
-							<Terminal>
-								<Name>B</Name>
-							</Terminal>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>KC</AirlineID>
-							<FlightNumber>217</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>KC</AirlineID>
-							<FlightNumber>217</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>E90</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT1H50M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG19" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>OVB</AirportCode>
-							<Date>2018-11-19</Date>
-							<Time>20:45</Time>
-							<Terminal>
-								<Name>A</Name>
-							</Terminal>
-						</Departure>
-						<Arrival>
-							<AirportCode>DME</AirportCode>
-							<Date>2018-11-19</Date>
-							<Time>21:15</Time>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>S7</AirlineID>
-							<FlightNumber>176</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>S7</AirlineID>
-							<FlightNumber>176</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>738</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT4H30M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG20" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>DME</AirportCode>
-							<Date>2018-11-10</Date>
-							<Time>23:25</Time>
-						</Departure>
-						<Arrival>
-							<AirportCode>OVB</AirportCode>
-							<Date>2018-11-11</Date>
-							<Time>07:30</Time>
-							<Terminal>
-								<Name>A</Name>
-							</Terminal>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>S7</AirlineID>
-							<FlightNumber>177</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>S7</AirlineID>
-							<FlightNumber>177</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>321</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT4H5M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-					<FlightSegment SegmentKey="SEG21" ElectronicTicketInd="true">
-						<Departure>
-							<AirportCode>OVB</AirportCode>
-							<Date>2018-11-11</Date>
-							<Time>18:15</Time>
-							<Terminal>
-								<Name>B</Name>
-							</Terminal>
-						</Departure>
-						<Arrival>
-							<AirportCode>TSE</AirportCode>
-							<Date>2018-11-11</Date>
-							<Time>19:05</Time>
-							<Terminal>
-								<Name>1</Name>
-							</Terminal>
-						</Arrival>
-						<MarketingCarrier>
-							<AirlineID>KC</AirlineID>
-							<FlightNumber>218</FlightNumber>
-						</MarketingCarrier>
-						<OperatingCarrier>
-							<AirlineID>KC</AirlineID>
-							<FlightNumber>218</FlightNumber>
-						</OperatingCarrier>
-						<Equipment>
-							<AircraftCode>E90</AircraftCode>
-						</Equipment>
-						<FlightDetail>
-							<FlightDuration>
-								<Value>PT1H50M</Value>
-							</FlightDuration>
-						</FlightDetail>
-					</FlightSegment>
-				</FlightSegmentList>
-				<FlightList>
-					<Flight FlightKey="FLTL0S0S1">
-						<Journey>
-							<Time>PT7H20M</Time>
-						</Journey>
-						<SegmentReferences>SEG0 SEG1</SegmentReferences>
-					</Flight>
-					<Flight FlightKey="FLTL1S2S3">
-						<Journey>
-							<Time>PT7H35M</Time>
-						</Journey>
-						<SegmentReferences>SEG2 SEG3</SegmentReferences>
-					</Flight>
-					<Flight FlightKey="FLTL0S4S5">
-						<Journey>
-							<Time>PT8H10M</Time>
-						</Journey>
-						<SegmentReferences>SEG4 SEG5</SegmentReferences>
-					</Flight>
-					<Flight FlightKey="FLTL1S6S7">
-						<Journey>
-							<Time>PT8H40M</Time>
-						</Journey>
-						<SegmentReferences>SEG6 SEG7</SegmentReferences>
-					</Flight>
-					<Flight FlightKey="FLTL0S8S9">
-						<Journey>
-							<Time>PT8H10M</Time>
-						</Journey>
-						<SegmentReferences>SEG8 SEG9</SegmentReferences>
-					</Flight>
-					<Flight FlightKey="FLTL1S10S11">
-						<Journey>
-							<Time>PT8H40M</Time>
-						</Journey>
-						<SegmentReferences>SEG10 SEG11</SegmentReferences>
-					</Flight>
-					<Flight FlightKey="FLTL0S12">
-						<Journey>
-							<Time>PT3H35M</Time>
-						</Journey>
-						<SegmentReferences>SEG12</SegmentReferences>
-					</Flight>
-					<Flight FlightKey="FLTL1S13">
-						<Journey>
-							<Time>PT3H50M</Time>
-						</Journey>
-						<SegmentReferences>SEG13</SegmentReferences>
-					</Flight>
-					<Flight FlightKey="FLTL1S14">
-						<Journey>
-							<Time>PT3H50M</Time>
-						</Journey>
-						<SegmentReferences>SEG14</SegmentReferences>
-					</Flight>
-					<Flight FlightKey="FLTL1S15">
-						<Journey>
-							<Time>PT3H50M</Time>
-						</Journey>
-						<SegmentReferences>SEG15</SegmentReferences>
-					</Flight>
-					<Flight FlightKey="FLTL0S16S17">
-						<Journey>
-							<Time>PT6H0M</Time>
-						</Journey>
-						<SegmentReferences>SEG16 SEG17</SegmentReferences>
-					</Flight>
-					<Flight FlightKey="FLTL1S18S19">
-						<Journey>
-							<Time>PT6H20M</Time>
-						</Journey>
-						<SegmentReferences>SEG18 SEG19</SegmentReferences>
-					</Flight>
-					<Flight FlightKey="FLTL0S20S21">
-						<Journey>
-							<Time>PT5H55M</Time>
-						</Journey>
-						<SegmentReferences>SEG20 SEG21</SegmentReferences>
-					</Flight>
-				</FlightList>
-				<PriceClassList>
-					<PriceClass PriceClassID="PRC1">
-						<Name>FASFY00_F_C_BUSINESS</Name>
-						<FareBasisCode>
-							<Code>FASFY00</Code>
-						</FareBasisCode>
-						<ClassOfService>
-							<Code SeatsLeft="3">F</Code>
-							<MarketingName CabinDesignator="C">Business</MarketingName>
-						</ClassOfService>
-					</PriceClass>
-					<PriceClass PriceClassID="PRC2">
-						<Name>FASFY00/CH25_F_C_BUSINESS</Name>
-						<FareBasisCode>
-							<Code>FASFY00/CH25</Code>
-						</FareBasisCode>
-						<ClassOfService>
-							<Code SeatsLeft="3">F</Code>
-							<MarketingName CabinDesignator="C">Business</MarketingName>
-						</ClassOfService>
-					</PriceClass>
-					<PriceClass PriceClassID="PRC3">
-						<Name>FASFY00/IN90_F_C_BUSINESS</Name>
-						<FareBasisCode>
-							<Code>FASFY00/IN90</Code>
-						</FareBasisCode>
-						<ClassOfService>
-							<Code SeatsLeft="3">F</Code>
-							<MarketingName CabinDesignator="C">Business</MarketingName>
-						</ClassOfService>
-					</PriceClass>
-					<PriceClass PriceClassID="PRC4">
-						<Name>JN3BX_J_C_BUSINESS</Name>
-						<FareBasisCode>
-							<Code>JN3BX</Code>
-						</FareBasisCode>
-						<ClassOfService>
-							<Code SeatsLeft="4">J</Code>
-							<MarketingName CabinDesignator="C">Business</MarketingName>
-						</ClassOfService>
-					</PriceClass>
-					<PriceClass PriceClassID="PRC5">
-						<Name>JN3BXCH_J_C_BUSINESS</Name>
-						<FareBasisCode>
-							<Code>JN3BXCH</Code>
-						</FareBasisCode>
-						<ClassOfService>
-							<Code SeatsLeft="4">J</Code>
-							<MarketingName CabinDesignator="C">Business</MarketingName>
-						</ClassOfService>
-					</PriceClass>
-					<PriceClass PriceClassID="PRC6">
-						<Name>JN3BXIN_J_C_BUSINESS</Name>
-						<FareBasisCode>
-							<Code>JN3BXIN</Code>
-						</FareBasisCode>
-						<ClassOfService>
-							<Code SeatsLeft="4">J</Code>
-							<MarketingName CabinDesignator="C">Business</MarketingName>
-						</ClassOfService>
-					</PriceClass>
-					<PriceClass PriceClassID="PRC7">
-						<Name>ZSF_Z_C_BUSINESS</Name>
-						<FareBasisCode>
-							<Code>ZSF</Code>
-						</FareBasisCode>
-						<ClassOfService>
-							<Code SeatsLeft="3">Z</Code>
-							<MarketingName CabinDesignator="C">Business</MarketingName>
-						</ClassOfService>
-					</PriceClass>
-					<PriceClass PriceClassID="PRC8">
-						<Name>ZSFCH50_Z_C_BUSINESS</Name>
-						<FareBasisCode>
-							<Code>ZSFCH50</Code>
-						</FareBasisCode>
-						<ClassOfService>
-							<Code SeatsLeft="3">Z</Code>
-							<MarketingName CabinDesignator="C">Business</MarketingName>
-						</ClassOfService>
-					</PriceClass>
-					<PriceClass PriceClassID="PRC9">
-						<Name>ZSFIN00_Z_C_BUSINESS</Name>
-						<FareBasisCode>
-							<Code>ZSFIN00</Code>
-						</FareBasisCode>
-						<ClassOfService>
-							<Code SeatsLeft="3">Z</Code>
-							<MarketingName CabinDesignator="C">Business</MarketingName>
-						</ClassOfService>
-					</PriceClass>
-					<PriceClass PriceClassID="PRC10">
-						<Name>DKCOVBD_D_C_BUSINESS</Name>
-						<FareBasisCode>
-							<Code>DKCOVBD</Code>
-						</FareBasisCode>
-						<ClassOfService>
-							<Code SeatsLeft="8">D</Code>
-							<MarketingName CabinDesignator="C">Business</MarketingName>
-						</ClassOfService>
-					</PriceClass>
-					<PriceClass PriceClassID="PRC11">
-						<Name>DKCOVBD_D_C_BUSINESS</Name>
-						<FareBasisCode>
-							<Code>DKCOVBD</Code>
-						</FareBasisCode>
-						<ClassOfService>
-							<Code SeatsLeft="3">D</Code>
-							<MarketingName CabinDesignator="C">Business</MarketingName>
-						</ClassOfService>
-					</PriceClass>
-					<PriceClass PriceClassID="PRC12">
-						<Name>DKCOVBD_D_C_BUSINESS</Name>
-						<FareBasisCode>
-							<Code>DKCOVBD</Code>
-						</FareBasisCode>
-						<ClassOfService>
-							<Code SeatsLeft="7">D</Code>
-							<MarketingName CabinDesignator="C">Business</MarketingName>
-						</ClassOfService>
-					</PriceClass>
-					<PriceClass PriceClassID="PRC13">
-						<Name>DKCOVBD/CH25_D_C_BUSINESS</Name>
-						<FareBasisCode>
-							<Code>DKCOVBD/CH25</Code>
-						</FareBasisCode>
-						<ClassOfService>
-							<Code SeatsLeft="8">D</Code>
-							<MarketingName CabinDesignator="C">Business</MarketingName>
-						</ClassOfService>
-					</PriceClass>
-					<PriceClass PriceClassID="PRC14">
-						<Name>DKCOVBD/CH25_D_C_BUSINESS</Name>
-						<FareBasisCode>
-							<Code>DKCOVBD/CH25</Code>
-						</FareBasisCode>
-						<ClassOfService>
-							<Code SeatsLeft="3">D</Code>
-							<MarketingName CabinDesignator="C">Business</MarketingName>
-						</ClassOfService>
-					</PriceClass>
-					<PriceClass PriceClassID="PRC15">
-						<Name>DKCOVBD/CH25_D_C_BUSINESS</Name>
-						<FareBasisCode>
-							<Code>DKCOVBD/CH25</Code>
-						</FareBasisCode>
-						<ClassOfService>
-							<Code SeatsLeft="7">D</Code>
-							<MarketingName CabinDesignator="C">Business</MarketingName>
-						</ClassOfService>
-					</PriceClass>
-					<PriceClass PriceClassID="PRC16">
-						<Name>DKCOVBD/IN90_D_C_BUSINESS</Name>
-						<FareBasisCode>
-							<Code>DKCOVBD/IN90</Code>
-						</FareBasisCode>
-						<ClassOfService>
-							<Code SeatsLeft="8">D</Code>
-							<MarketingName CabinDesignator="C">Business</MarketingName>
-						</ClassOfService>
-					</PriceClass>
-					<PriceClass PriceClassID="PRC17">
-						<Name>DKCOVBD/IN90_D_C_BUSINESS</Name>
-						<FareBasisCode>
-							<Code>DKCOVBD/IN90</Code>
-						</FareBasisCode>
-						<ClassOfService>
-							<Code SeatsLeft="3">D</Code>
-							<MarketingName CabinDesignator="C">Business</MarketingName>
-						</ClassOfService>
-					</PriceClass>
-					<PriceClass PriceClassID="PRC18">
-						<Name>DKCOVBD/IN90_D_C_BUSINESS</Name>
-						<FareBasisCode>
-							<Code>DKCOVBD/IN90</Code>
-						</FareBasisCode>
-						<ClassOfService>
-							<Code SeatsLeft="7">D</Code>
-							<MarketingName CabinDesignator="C">Business</MarketingName>
-						</ClassOfService>
-					</PriceClass>
-				</PriceClassList>
-				<ServiceDefinitionList>
-					<ServiceDefinition ServiceDefinitionID="SVD1">
-						<Name>Free baggage</Name>
-						<BaggageAllowanceRef>BAG1</BaggageAllowanceRef>
-						<Descriptions>
-							<Description>
-								<Text>Free baggage</Text>
-							</Description>
-						</Descriptions>
-					</ServiceDefinition>
-					<ServiceDefinition ServiceDefinitionID="SVD2">
-						<Name>Free baggage</Name>
-						<BaggageAllowanceRef>BAG2</BaggageAllowanceRef>
-						<Descriptions>
-							<Description>
-								<Text>Free baggage</Text>
-							</Description>
-						</Descriptions>
-					</ServiceDefinition>
-					<ServiceDefinition ServiceDefinitionID="SVD3">
-						<Name>Free baggage</Name>
-						<BaggageAllowanceRef>BAG3</BaggageAllowanceRef>
-						<Descriptions>
-							<Description>
-								<Text>Free baggage</Text>
-							</Description>
-						</Descriptions>
-					</ServiceDefinition>
-					<ServiceDefinition ServiceDefinitionID="SVD4">
-						<Name>Free baggage</Name>
-						<BaggageAllowanceRef>BAG4</BaggageAllowanceRef>
-						<Descriptions>
-							<Description>
-								<Text>Free baggage</Text>
-							</Description>
-						</Descriptions>
-					</ServiceDefinition>
-					<ServiceDefinition ServiceDefinitionID="SVD5">
-						<Name>Free baggage</Name>
-						<BaggageAllowanceRef>BAG5</BaggageAllowanceRef>
-						<Descriptions>
-							<Description>
-								<Text>Free baggage</Text>
-							</Description>
-						</Descriptions>
-					</ServiceDefinition>
-					<ServiceDefinition ServiceDefinitionID="SVD6">
-						<Name>Free baggage</Name>
-						<BaggageAllowanceRef>BAG6</BaggageAllowanceRef>
-						<Descriptions>
-							<Description>
-								<Text>Free baggage</Text>
-							</Description>
-						</Descriptions>
-					</ServiceDefinition>
-					<ServiceDefinition ServiceDefinitionID="SVD7">
-						<Name>Free baggage</Name>
-						<BaggageAllowanceRef>BAG7</BaggageAllowanceRef>
-						<Descriptions>
-							<Description>
-								<Text>Free baggage</Text>
-							</Description>
-						</Descriptions>
-					</ServiceDefinition>
-				</ServiceDefinitionList>
-			</DataLists>
-			<Metadata>
-				<Shopping>
-					<ShopMetadataGroup>
-						<Flight>
-							<FlightMetadatas>
-								<FlightMetadata refs="SEG4 SEG5" MetadataKey="FLM1">
-									<BindingKey>FLTL0S4S5</BindingKey>
-									<Meals>
-										<Meal>M</Meal>
-									</Meals>
-								</FlightMetadata>
-								<FlightMetadata refs="SEG6 SEG7" MetadataKey="FLM2">
-									<BindingKey>FLTL1S6S7</BindingKey>
-									<Meals>
-										<Meal>M</Meal>
-									</Meals>
-								</FlightMetadata>
-								<FlightMetadata refs="SEG8 SEG9" MetadataKey="FLM3">
-									<BindingKey>FLTL0S8S9</BindingKey>
-									<Meals>
-										<Meal>M</Meal>
-									</Meals>
-								</FlightMetadata>
-								<FlightMetadata refs="SEG10 SEG11" MetadataKey="FLM4">
-									<BindingKey>FLTL1S10S11</BindingKey>
-									<Meals>
-										<Meal>M</Meal>
-									</Meals>
-								</FlightMetadata>
-								<FlightMetadata refs="SEG16 SEG17" MetadataKey="FLM5">
-									<BindingKey>FLTL0S16S17</BindingKey>
-									<Meals>
-										<Meal>M</Meal>
-									</Meals>
-								</FlightMetadata>
-								<FlightMetadata refs="SEG18 SEG19" MetadataKey="FLM6">
-									<BindingKey>FLTL1S18S19</BindingKey>
-									<Meals>
-										<Meal>M</Meal>
-									</Meals>
-								</FlightMetadata>
-								<FlightMetadata refs="SEG20 SEG21" MetadataKey="FLM7">
-									<BindingKey>FLTL0S20S21</BindingKey>
-									<Meals>
-										<Meal>M</Meal>
-									</Meals>
-								</FlightMetadata>
-							</FlightMetadatas>
-						</Flight>
-					</ShopMetadataGroup>
-				</Shopping>
-			</Metadata>
-		</AirShoppingRS>
-	</s:Body>
+   <s:Header>
+      <h:ResponseID xmlns:h="http://nemo.travel/AviaNDC" xmlns="http://nemo.travel/AviaNDC">144197161</h:ResponseID>
+   </s:Header>
+   <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <AirShoppingRS Target="Prod" Version="17.2" xmlns="http://www.iata.org/IATA/EDIST/2017.2">
+         <Document>
+            <Name>NEMO NDC GATEWAY</Name>
+            <ReferenceVersion>1.0</ReferenceVersion>
+         </Document>
+         <Success/>
+         <ShoppingResponseID>
+            <ResponseID>144197161</ResponseID>
+         </ShoppingResponseID>
+         <OffersGroup>
+            <AirlineOffers>
+               <AirlineOfferSnapshot>
+                  <PassengerQuantity>4</PassengerQuantity>
+                  <Highest refs="OFR144197161030089 OFR144197161030090 OFR144197161030091 OFR144197161030092 OFR144197161030093 OFR144197161030094 OFR144197161030095 OFR144197161030096 OFR144197161030097 OFR144197161030098 OFR144197161030099">
+                     <EncodedCurrencyPrice Code="KZT">458641</EncodedCurrencyPrice>
+                  </Highest>
+                  <Lowest refs="OFR144197161030000 OFR144197161030001 OFR144197161030002 OFR144197161030003 OFR144197161030004 OFR144197161030005 OFR144197161030006 OFR144197161030007">
+                     <EncodedCurrencyPrice Code="KZT">370855</EncodedCurrencyPrice>
+                  </Lowest>
+                  <MatchedOfferQuantity>19</MatchedOfferQuantity>
+               </AirlineOfferSnapshot>
+               <Offer OfferID="OFR144197161030000" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030000P0">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">370855</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">216479</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">216479</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">154376</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030000V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S0 FLTL1S1S2S3</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030000V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG0 SEG1 SEG2 SEG3">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">138170</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">86507</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">86507</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51663</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51663</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC1</PriceClassRef>
+                           <SegmentRefs>SEG0</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC2</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG2 SEG3</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">94515</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">43465</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">43465</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51050</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51050</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC4</PriceClassRef>
+                           <SegmentRefs>SEG0</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC5</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG2 SEG3</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC7</PriceClassRef>
+                           <SegmentRefs>SEG0</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC8</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG2 SEG3</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>
+               <Offer OfferID="OFR144197161030001" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030001P0">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">370855</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">216479</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">216479</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">154376</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030001V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S4 FLTL1S1S2S3</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030001V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG4 SEG1 SEG2 SEG3">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">138170</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">86507</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">86507</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51663</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51663</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC1</PriceClassRef>
+                           <SegmentRefs>SEG4</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC2</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG2 SEG3</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">94515</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">43465</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">43465</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51050</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51050</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC4</PriceClassRef>
+                           <SegmentRefs>SEG4</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC5</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG2 SEG3</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC7</PriceClassRef>
+                           <SegmentRefs>SEG4</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC8</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG2 SEG3</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>
+               <Offer OfferID="OFR144197161030002" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030002P0">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">370855</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">216479</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">216479</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">154376</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030002V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S0 FLTL1S1S5S6</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030002V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG0 SEG1 SEG5 SEG6">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">138170</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">86507</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">86507</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51663</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51663</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC1</PriceClassRef>
+                           <SegmentRefs>SEG0</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC2</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG5 SEG6</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">94515</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">43465</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">43465</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51050</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51050</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC4</PriceClassRef>
+                           <SegmentRefs>SEG0</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC5</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG5 SEG6</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC7</PriceClassRef>
+                           <SegmentRefs>SEG0</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC8</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG5 SEG6</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>
+               <Offer OfferID="OFR144197161030003" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030003P0">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">370855</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">216479</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">216479</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">154376</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030003V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S0 FLTL1S1S2S6</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030003V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG0 SEG1 SEG2 SEG6">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">138170</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">86507</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">86507</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51663</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51663</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC1</PriceClassRef>
+                           <SegmentRefs>SEG0</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC2</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG2 SEG6</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">94515</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">43465</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">43465</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51050</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51050</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC4</PriceClassRef>
+                           <SegmentRefs>SEG0</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC5</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG2 SEG6</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC7</PriceClassRef>
+                           <SegmentRefs>SEG0</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC8</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG2 SEG6</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>
+               <Offer OfferID="OFR144197161030004" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030004P0">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">370855</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">216479</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">216479</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">154376</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030004V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S4 FLTL1S1S5S6</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030004V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG4 SEG1 SEG5 SEG6">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">138170</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">86507</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">86507</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51663</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51663</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC1</PriceClassRef>
+                           <SegmentRefs>SEG4</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC2</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG5 SEG6</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">94515</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">43465</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">43465</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51050</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51050</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC4</PriceClassRef>
+                           <SegmentRefs>SEG4</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC5</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG5 SEG6</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC7</PriceClassRef>
+                           <SegmentRefs>SEG4</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC8</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG5 SEG6</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>
+               <Offer OfferID="OFR144197161030005" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030005P0">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">370855</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">216479</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">216479</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">154376</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030005V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S4 FLTL1S1S2S6</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030005V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG4 SEG1 SEG2 SEG6">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">138170</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">86507</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">86507</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51663</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51663</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC1</PriceClassRef>
+                           <SegmentRefs>SEG4</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC2</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG2 SEG6</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">94515</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">43465</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">43465</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51050</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51050</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC4</PriceClassRef>
+                           <SegmentRefs>SEG4</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC5</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG2 SEG6</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC7</PriceClassRef>
+                           <SegmentRefs>SEG4</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC8</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG2 SEG6</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>
+               <Offer OfferID="OFR144197161030006" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030006P0">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">370855</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">216479</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">216479</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">154376</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030006V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S0 FLTL1S1S5S7</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030006V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG0 SEG1 SEG5 SEG7">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">138170</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">86507</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">86507</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51663</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51663</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC1</PriceClassRef>
+                           <SegmentRefs>SEG0</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC2</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG5 SEG7</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">94515</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">43465</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">43465</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51050</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51050</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC4</PriceClassRef>
+                           <SegmentRefs>SEG0</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC5</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG5 SEG7</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC7</PriceClassRef>
+                           <SegmentRefs>SEG0</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC8</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG5 SEG7</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>
+               <Offer OfferID="OFR144197161030007" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030007P0">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">370855</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">216479</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">216479</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">154376</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030007V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S4 FLTL1S1S5S7</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030007V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG4 SEG1 SEG5 SEG7">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">138170</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">86507</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">86507</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51663</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51663</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC1</PriceClassRef>
+                           <SegmentRefs>SEG4</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC2</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG5 SEG7</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">94515</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">43465</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">43465</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51050</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51050</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC4</PriceClassRef>
+                           <SegmentRefs>SEG4</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC5</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG5 SEG7</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC7</PriceClassRef>
+                           <SegmentRefs>SEG4</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC8</PriceClassRef>
+                           <SegmentRefs>SEG1</SegmentRefs>
+                        </FareComponent>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG5 SEG7</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>              
+               <Offer OfferID="OFR144197161030089" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030089P11">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">458641</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">152701</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030089V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S8S9 FLTL1S24S25</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030089V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG8 SEG9 SEG24 SEG25">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">173388</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51012</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51012</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG8 SEG9 SEG24 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">111865</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">50677</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">50677</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG8 SEG9 SEG24 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG8 SEG9 SEG24 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>
+               <Offer OfferID="OFR144197161030090" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030090P11">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">458641</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">152701</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030090V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S11S12 FLTL1S24S25</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030090V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG11 SEG12 SEG24 SEG25">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">173388</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51012</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51012</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG11 SEG12 SEG24 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">111865</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">50677</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">50677</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG11 SEG12 SEG24 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG11 SEG12 SEG24 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>
+               <Offer OfferID="OFR144197161030091" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030091P11">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">458641</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">152701</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030091V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S11S13 FLTL1S24S25</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030091V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG11 SEG13 SEG24 SEG25">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">173388</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51012</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51012</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG11 SEG13 SEG24 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">111865</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">50677</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">50677</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG11 SEG13 SEG24 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG11 SEG13 SEG24 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>
+               <Offer OfferID="OFR144197161030092" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030092P11">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">458641</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">152701</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030092V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S8S14 FLTL1S24S25</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030092V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG8 SEG14 SEG24 SEG25">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">173388</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51012</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51012</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG8 SEG14 SEG24 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">111865</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">50677</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">50677</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG8 SEG14 SEG24 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG8 SEG14 SEG24 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>
+               <Offer OfferID="OFR144197161030093" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030093P11">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">458641</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">152701</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030093V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S11S15 FLTL1S24S25</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030093V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG11 SEG15 SEG24 SEG25">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">173388</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51012</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51012</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG11 SEG15 SEG24 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">111865</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">50677</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">50677</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG11 SEG15 SEG24 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG11 SEG15 SEG24 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>
+               <Offer OfferID="OFR144197161030094" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030094P11">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">458641</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">152701</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030094V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S8S9 FLTL1S26S25</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030094V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG8 SEG9 SEG26 SEG25">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">173388</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51012</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51012</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG8 SEG9 SEG26 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">111865</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">50677</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">50677</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG8 SEG9 SEG26 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG8 SEG9 SEG26 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>
+               <Offer OfferID="OFR144197161030095" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030095P11">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">458641</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">152701</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030095V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S11S12 FLTL1S26S25</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030095V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG11 SEG12 SEG26 SEG25">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">173388</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51012</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51012</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG11 SEG12 SEG26 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">111865</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">50677</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">50677</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG11 SEG12 SEG26 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG11 SEG12 SEG26 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>
+               <Offer OfferID="OFR144197161030096" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030096P11">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">458641</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">152701</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030096V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S8S16 FLTL1S24S25</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030096V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG8 SEG16 SEG24 SEG25">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">173388</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51012</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51012</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG8 SEG16 SEG24 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">111865</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">50677</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">50677</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG8 SEG16 SEG24 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG8 SEG16 SEG24 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>
+               <Offer OfferID="OFR144197161030097" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030097P11">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">458641</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">152701</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030097V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S11S13 FLTL1S26S25</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030097V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG11 SEG13 SEG26 SEG25">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">173388</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51012</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51012</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG11 SEG13 SEG26 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">111865</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">50677</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">50677</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG11 SEG13 SEG26 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG11 SEG13 SEG26 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>
+               <Offer OfferID="OFR144197161030098" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030098P11">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">458641</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">152701</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030098V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S8S9 FLTL1S27S25</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030098V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG8 SEG9 SEG27 SEG25">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">173388</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51012</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51012</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG8 SEG9 SEG27 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">111865</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">50677</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">50677</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG8 SEG9 SEG27 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG8 SEG9 SEG27 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>
+               <Offer OfferID="OFR144197161030099" Owner="1A">
+                  <Parameters>
+                     <TotalItemQuantity>1</TotalItemQuantity>
+                  </Parameters>
+                  <TimeLimits>
+                     <OfferExpiration DateTime="2018-12-28T21:59:00"/>
+                  </TimeLimits>
+                  <OfferItem OfferItemID="OFI144197161030099P11">
+                     <TotalPriceDetail>
+                        <TotalAmount>
+                           <SimpleCurrencyPrice Code="KZT" Taxable="false">458641</SimpleCurrencyPrice>
+                        </TotalAmount>
+                        <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        <FareFiledIn>
+                           <BaseAmount Code="KZT" Taxable="false">305940</BaseAmount>
+                        </FareFiledIn>
+                        <Taxes>
+                           <Total Code="KZT" Taxable="false">152701</Total>
+                        </Taxes>
+                     </TotalPriceDetail>
+                     <Service ServiceID="SVC144197161030099V1">
+                        <PassengerRefs>PAX1 PAX2 PAX3 PAX4</PassengerRefs>
+                        <FlightRefs>FLTL0S8S14 FLTL1S26S25</FlightRefs>
+                     </Service>
+                     <Service ServiceID="SVC144197161030099V2">
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <ServiceDefinitionRef SegmentRefs="SEG8 SEG14 SEG26 SEG25">SVD1</ServiceDefinitionRef>
+                     </Service>
+                     <FareDetail>
+                        <PassengerRefs>PAX1 PAX2</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">173388</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">122376</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">51012</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">51012</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC3</PriceClassRef>
+                           <SegmentRefs>SEG8 SEG14 SEG26 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX3</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">111865</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">61188</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">50677</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">50677</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC6</PriceClassRef>
+                           <SegmentRefs>SEG8 SEG14 SEG26 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                     <FareDetail>
+                        <PassengerRefs>PAX4</PassengerRefs>
+                        <Price>
+                           <TotalAmount>
+                              <SimpleCurrencyPrice Code="KZT" Taxable="false">0</SimpleCurrencyPrice>
+                           </TotalAmount>
+                           <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           <FareFiledIn>
+                              <BaseAmount Code="KZT" Taxable="false">0</BaseAmount>
+                           </FareFiledIn>
+                           <Taxes>
+                              <Total Code="KZT" Taxable="false">0</Total>
+                              <Breakdown>
+                                 <Tax>
+                                    <Amount Code="KZT" Taxable="false">0</Amount>
+                                    <TaxCode>XT</TaxCode>
+                                 </Tax>
+                              </Breakdown>
+                           </Taxes>
+                        </Price>
+                        <FareComponent>
+                           <PriceClassRef>PRC9</PriceClassRef>
+                           <SegmentRefs>SEG8 SEG14 SEG26 SEG25</SegmentRefs>
+                        </FareComponent>
+                        <Remarks>
+                           <Remark>Validating carrier: KC</Remark>
+                        </Remarks>
+                     </FareDetail>
+                  </OfferItem>
+               </Offer>                            
+            </AirlineOffers>
+         </OffersGroup>
+         <DataLists>
+            <PassengerList>
+               <Passenger PassengerID="PAX1">
+                  <PTC>ADT</PTC>
+               </Passenger>
+               <Passenger PassengerID="PAX2">
+                  <PTC>ADT</PTC>
+               </Passenger>
+               <Passenger PassengerID="PAX3">
+                  <PTC>CHD</PTC>
+               </Passenger>
+               <Passenger PassengerID="PAX4">
+                  <PTC>INF</PTC>
+               </Passenger>
+            </PassengerList>
+            <BaggageAllowanceList>
+               <BaggageAllowance BaggageAllowanceID="BAG1">
+                  <BaggageCategory>Checked</BaggageCategory>
+                  <AllowanceDescription Concept="700">
+                     <ApplicableParty>Traveler</ApplicableParty>
+                     <Descriptions>
+                        <Description>
+                           <Text>Free baggage</Text>
+                        </Description>
+                     </Descriptions>
+                  </AllowanceDescription>
+                  <WeightAllowance>
+                     <MaximumWeight>
+                        <Value>20</Value>
+                        <UOM>K</UOM>
+                     </MaximumWeight>
+                  </WeightAllowance>
+               </BaggageAllowance>
+            </BaggageAllowanceList>
+            <FlightSegmentList>
+               <FlightSegment SegmentKey="SEG0" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>SVO</AirportCode>
+                     <Date>2019-01-10</Date>
+                     <Time>10:20</Time>
+                     <Terminal>
+                        <Name>E</Name>
+                     </Terminal>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-10</Date>
+                     <Time>16:55</Time>
+                     <Terminal>
+                        <Name>1</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>894</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>894</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>320</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT3H35M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG1" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-20</Date>
+                     <Time>20:15</Time>
+                     <Terminal>
+                        <Name>2</Name>
+                     </Terminal>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>CIT</AirportCode>
+                     <Date>2019-01-20</Date>
+                     <Time>22:10</Time>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>341</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>341</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>E90</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H55M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG2" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>CIT</AirportCode>
+                     <Date>2019-01-21</Date>
+                     <Time>10:00</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-21</Date>
+                     <Time>11:15</Time>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>972</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>972</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>E90</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H15M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG3" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-21</Date>
+                     <Time>18:55</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>SVO</AirportCode>
+                     <Date>2019-01-21</Date>
+                     <Time>20:50</Time>
+                     <Terminal>
+                        <Name>E</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>875</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>875</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>321</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT4H55M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG4" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>SVO</AirportCode>
+                     <Date>2019-01-10</Date>
+                     <Time>22:20</Time>
+                     <Terminal>
+                        <Name>E</Name>
+                     </Terminal>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>04:55</Time>
+                     <Terminal>
+                        <Name>1</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>874</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>874</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>320</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT3H35M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG5" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>CIT</AirportCode>
+                     <Date>2019-01-21</Date>
+                     <Time>21:50</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-21</Date>
+                     <Time>23:05</Time>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>970</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>970</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>320</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H15M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG6" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-22</Date>
+                     <Time>06:35</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>SVO</AirportCode>
+                     <Date>2019-01-22</Date>
+                     <Time>08:25</Time>
+                     <Terminal>
+                        <Name>E</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>871</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>871</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>321</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT4H50M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG7" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-22</Date>
+                     <Time>18:55</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>SVO</AirportCode>
+                     <Date>2019-01-22</Date>
+                     <Time>20:50</Time>
+                     <Terminal>
+                        <Name>E</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>875</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>875</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>321</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT4H55M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG8" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>SVO</AirportCode>
+                     <Date>2019-01-10</Date>
+                     <Time>21:55</Time>
+                     <Terminal>
+                        <Name>E</Name>
+                     </Terminal>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>05:30</Time>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>876</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>876</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>321</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT4H35M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG9" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>07:00</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>08:45</Time>
+                     <Terminal>
+                        <Name>2</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>671</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>671</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>321</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H45M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG10" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-20</Date>
+                     <Time>20:30</Time>
+                     <Terminal>
+                        <Name>1</Name>
+                     </Terminal>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>SVO</AirportCode>
+                     <Date>2019-01-20</Date>
+                     <Time>21:20</Time>
+                     <Terminal>
+                        <Name>E</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>873</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>873</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>320</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT3H50M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG11" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>SVO</AirportCode>
+                     <Date>2019-01-10</Date>
+                     <Time>09:20</Time>
+                     <Terminal>
+                        <Name>E</Name>
+                     </Terminal>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-10</Date>
+                     <Time>16:55</Time>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>872</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>872</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>321</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT4H35M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG12" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-10</Date>
+                     <Time>18:45</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-10</Date>
+                     <Time>20:30</Time>
+                     <Terminal>
+                        <Name>2</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>991</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>991</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>321</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H45M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG13" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-10</Date>
+                     <Time>19:50</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-10</Date>
+                     <Time>21:35</Time>
+                     <Terminal>
+                        <Name>2</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>855</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>855</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>321</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H45M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG14" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>08:45</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>10:30</Time>
+                     <Terminal>
+                        <Name>2</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>851</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>851</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>321</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H45M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG15" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-10</Date>
+                     <Time>21:35</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-10</Date>
+                     <Time>23:20</Time>
+                     <Terminal>
+                        <Name>2</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>609</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>609</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>767</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H45M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG16" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>11:40</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>13:25</Time>
+                     <Terminal>
+                        <Name>2</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>853</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>853</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>321</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H45M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG17" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>12:55</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>14:40</Time>
+                     <Terminal>
+                        <Name>2</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>621</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>621</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>757</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H45M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG18" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>16:00</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>17:45</Time>
+                     <Terminal>
+                        <Name>2</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>953</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>953</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>321</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H45M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG19" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>17:15</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>19:00</Time>
+                     <Terminal>
+                        <Name>2</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>955</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>955</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>E90</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H45M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG20" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>17:45</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>19:30</Time>
+                     <Terminal>
+                        <Name>2</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>995</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>995</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>767</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H45M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG21" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>06:10</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>07:55</Time>
+                     <Terminal>
+                        <Name>2</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>951</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>951</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>321</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H45M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG22" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>18:45</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>20:30</Time>
+                     <Terminal>
+                        <Name>2</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>991</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>991</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>767</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H45M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG23" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>19:50</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-11</Date>
+                     <Time>21:35</Time>
+                     <Terminal>
+                        <Name>2</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>855</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>855</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>757</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H45M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG24" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-20</Date>
+                     <Time>15:40</Time>
+                     <Terminal>
+                        <Name>2</Name>
+                     </Terminal>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-20</Date>
+                     <Time>17:20</Time>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>854</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>854</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>321</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H40M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG25" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-20</Date>
+                     <Time>18:55</Time>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>SVO</AirportCode>
+                     <Date>2019-01-20</Date>
+                     <Time>20:50</Time>
+                     <Terminal>
+                        <Name>E</Name>
+                     </Terminal>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>875</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>875</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>321</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT4H55M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG26" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-20</Date>
+                     <Time>11:30</Time>
+                     <Terminal>
+                        <Name>2</Name>
+                     </Terminal>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-20</Date>
+                     <Time>13:10</Time>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>852</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>852</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>321</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H40M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>
+               <FlightSegment SegmentKey="SEG27" ElectronicTicketInd="true">
+                  <Departure>
+                     <AirportCode>TSE</AirportCode>
+                     <Date>2019-01-20</Date>
+                     <Time>09:45</Time>
+                     <Terminal>
+                        <Name>2</Name>
+                     </Terminal>
+                  </Departure>
+                  <Arrival>
+                     <AirportCode>ALA</AirportCode>
+                     <Date>2019-01-20</Date>
+                     <Time>11:25</Time>
+                  </Arrival>
+                  <MarketingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>672</FlightNumber>
+                  </MarketingCarrier>
+                  <OperatingCarrier>
+                     <AirlineID>KC</AirlineID>
+                     <FlightNumber>672</FlightNumber>
+                  </OperatingCarrier>
+                  <Equipment>
+                     <AircraftCode>757</AircraftCode>
+                  </Equipment>
+                  <FlightDetail>
+                     <FlightDuration>
+                        <Value>P0DT1H40M</Value>
+                     </FlightDuration>
+                  </FlightDetail>
+               </FlightSegment>              
+            </FlightSegmentList>
+            <FlightList>
+               <Flight FlightKey="FLTL0S0">
+                  <Journey>
+                     <Time>P0DT3H35M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG0</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL1S1S2S3">
+                  <Journey>
+                     <Time>P0DT8H5M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG1 SEG2 SEG3</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S4">
+                  <Journey>
+                     <Time>P0DT3H35M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG4</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL1S1S5S6">
+                  <Journey>
+                     <Time>P0DT8H0M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG1 SEG5 SEG6</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL1S1S2S6">
+                  <Journey>
+                     <Time>P0DT8H0M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG1 SEG2 SEG6</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL1S1S5S7">
+                  <Journey>
+                     <Time>P0DT8H5M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG1 SEG5 SEG7</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S8S9">
+                  <Journey>
+                     <Time>P0DT6H20M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG8 SEG9</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL1S10">
+                  <Journey>
+                     <Time>P0DT3H50M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG10</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S11S12">
+                  <Journey>
+                     <Time>P0DT6H20M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG11 SEG12</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S11S13">
+                  <Journey>
+                     <Time>P0DT6H20M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG11 SEG13</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S8S14">
+                  <Journey>
+                     <Time>P0DT6H20M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG8 SEG14</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S11S15">
+                  <Journey>
+                     <Time>P0DT6H20M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG11 SEG15</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S8S16">
+                  <Journey>
+                     <Time>P0DT6H20M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG8 SEG16</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S8S17">
+                  <Journey>
+                     <Time>P0DT6H20M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG8 SEG17</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S8S18">
+                  <Journey>
+                     <Time>P0DT6H20M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG8 SEG18</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S8S19">
+                  <Journey>
+                     <Time>P0DT6H20M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG8 SEG19</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S8S20">
+                  <Journey>
+                     <Time>P0DT6H20M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG8 SEG20</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S11S21">
+                  <Journey>
+                     <Time>P0DT6H20M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG11 SEG21</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S8S22">
+                  <Journey>
+                     <Time>P0DT6H20M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG8 SEG22</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S11S9">
+                  <Journey>
+                     <Time>P0DT6H20M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG11 SEG9</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S8S23">
+                  <Journey>
+                     <Time>P0DT6H20M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG8 SEG23</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S11S14">
+                  <Journey>
+                     <Time>P0DT6H20M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG11 SEG14</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S11S16">
+                  <Journey>
+                     <Time>P0DT6H20M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG11 SEG16</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S11S17">
+                  <Journey>
+                     <Time>P0DT6H20M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG11 SEG17</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL0S11S18">
+                  <Journey>
+                     <Time>P0DT6H20M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG11 SEG18</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL1S24S25">
+                  <Journey>
+                     <Time>P0DT6H35M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG24 SEG25</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL1S26S25">
+                  <Journey>
+                     <Time>P0DT6H35M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG26 SEG25</SegmentReferences>
+               </Flight>
+               <Flight FlightKey="FLTL1S27S25">
+                  <Journey>
+                     <Time>P0DT6H35M</Time>
+                  </Journey>
+                  <SegmentReferences>SEG27 SEG25</SegmentReferences>
+               </Flight>               
+            </FlightList>
+            <PriceClassList>
+               <PriceClass PriceClassID="PRC1">
+                  <Name>Классический</Name>
+                  <Descriptions>
+                     <Description>
+                        <Text>Fare family description ID: 309</Text>
+                     </Description>
+                  </Descriptions>
+                  <FareBasisCode>
+                     <Code>VSF</Code>
+                  </FareBasisCode>
+                  <ClassOfService>
+                     <Code SeatsLeft="9">V</Code>
+                     <MarketingName CabinDesignator="Y">Economy</MarketingName>
+                  </ClassOfService>
+               </PriceClass>
+               <PriceClass PriceClassID="PRC2">
+                  <Name>Классический</Name>
+                  <Descriptions>
+                     <Description>
+                        <Text>Fare family description ID: 309</Text>
+                     </Description>
+                  </Descriptions>
+                  <FareBasisCode>
+                     <Code>VSF</Code>
+                  </FareBasisCode>
+                  <ClassOfService>
+                     <Code SeatsLeft="5">V</Code>
+                     <MarketingName CabinDesignator="Y">Economy</MarketingName>
+                  </ClassOfService>
+               </PriceClass>
+               <PriceClass PriceClassID="PRC3">
+                  <Name>Классический</Name>
+                  <Descriptions>
+                     <Description>
+                        <Text>Fare family description ID: 309</Text>
+                     </Description>
+                  </Descriptions>
+                  <FareBasisCode>
+                     <Code>PSF</Code>
+                  </FareBasisCode>
+                  <ClassOfService>
+                     <Code SeatsLeft="9">P</Code>
+                     <MarketingName CabinDesignator="Y">Economy</MarketingName>
+                  </ClassOfService>
+               </PriceClass>
+               <PriceClass PriceClassID="PRC4">
+                  <Name>Классический</Name>
+                  <Descriptions>
+                     <Description>
+                        <Text>Fare family description ID: 309</Text>
+                     </Description>
+                  </Descriptions>
+                  <FareBasisCode>
+                     <Code>VSFCH50</Code>
+                  </FareBasisCode>
+                  <ClassOfService>
+                     <Code SeatsLeft="9">V</Code>
+                     <MarketingName CabinDesignator="Y">Economy</MarketingName>
+                  </ClassOfService>
+               </PriceClass>
+               <PriceClass PriceClassID="PRC5">
+                  <Name>Классический</Name>
+                  <Descriptions>
+                     <Description>
+                        <Text>Fare family description ID: 309</Text>
+                     </Description>
+                  </Descriptions>
+                  <FareBasisCode>
+                     <Code>VSFCH50</Code>
+                  </FareBasisCode>
+                  <ClassOfService>
+                     <Code SeatsLeft="5">V</Code>
+                     <MarketingName CabinDesignator="Y">Economy</MarketingName>
+                  </ClassOfService>
+               </PriceClass>
+               <PriceClass PriceClassID="PRC6">
+                  <Name>Классический</Name>
+                  <Descriptions>
+                     <Description>
+                        <Text>Fare family description ID: 309</Text>
+                     </Description>
+                  </Descriptions>
+                  <FareBasisCode>
+                     <Code>PSFCH50</Code>
+                  </FareBasisCode>
+                  <ClassOfService>
+                     <Code SeatsLeft="9">P</Code>
+                     <MarketingName CabinDesignator="Y">Economy</MarketingName>
+                  </ClassOfService>
+               </PriceClass>
+               <PriceClass PriceClassID="PRC7">
+                  <Name>Классический</Name>
+                  <Descriptions>
+                     <Description>
+                        <Text>Fare family description ID: 309</Text>
+                     </Description>
+                  </Descriptions>
+                  <FareBasisCode>
+                     <Code>VSFIN00</Code>
+                  </FareBasisCode>
+                  <ClassOfService>
+                     <Code SeatsLeft="9">V</Code>
+                     <MarketingName CabinDesignator="Y">Economy</MarketingName>
+                  </ClassOfService>
+               </PriceClass>
+               <PriceClass PriceClassID="PRC8">
+                  <Name>Классический</Name>
+                  <Descriptions>
+                     <Description>
+                        <Text>Fare family description ID: 309</Text>
+                     </Description>
+                  </Descriptions>
+                  <FareBasisCode>
+                     <Code>VSFIN00</Code>
+                  </FareBasisCode>
+                  <ClassOfService>
+                     <Code SeatsLeft="5">V</Code>
+                     <MarketingName CabinDesignator="Y">Economy</MarketingName>
+                  </ClassOfService>
+               </PriceClass>
+               <PriceClass PriceClassID="PRC9">
+                  <Name>Классический</Name>
+                  <Descriptions>
+                     <Description>
+                        <Text>Fare family description ID: 309</Text>
+                     </Description>
+                  </Descriptions>
+                  <FareBasisCode>
+                     <Code>PSFIN00</Code>
+                  </FareBasisCode>
+                  <ClassOfService>
+                     <Code SeatsLeft="9">P</Code>
+                     <MarketingName CabinDesignator="Y">Economy</MarketingName>
+                  </ClassOfService>
+               </PriceClass>              
+            </PriceClassList>
+            <ServiceDefinitionList>
+               <ServiceDefinition ServiceDefinitionID="SVD1">
+                  <Name>Free baggage</Name>
+                  <BaggageAllowanceRef>BAG1</BaggageAllowanceRef>
+                  <Descriptions>
+                     <Description>
+                        <Text>Free baggage</Text>
+                     </Description>
+                  </Descriptions>
+               </ServiceDefinition>
+            </ServiceDefinitionList>
+         </DataLists>
+         <Metadata/>
+      </AirShoppingRS>
+   </s:Body>
 </s:Envelope>
 ```
 
