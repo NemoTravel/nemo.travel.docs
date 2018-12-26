@@ -9,6 +9,9 @@ taxonomy:
 
 Used to issue an EMD for various ancillary services in the booking.
 
+#### IssueEMD_2_2
+The latest request version, the differences are only in the response in the ancillary services block from [Book_2_2](/avia/request/bookflight) request.
+
 #### Request Format
 
 -  **BookID** -The ID of the booking for which you want to issue an EMD. The data type is long.
@@ -58,7 +61,7 @@ Used to issue an EMD for various ancillary services in the booking.
 
 #### Response format
 
-[Book](/avia/common/book)
+[Book 2.0](/avia/common/book)
 
 ##### Example
 
