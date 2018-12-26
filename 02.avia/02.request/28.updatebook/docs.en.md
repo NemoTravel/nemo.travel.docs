@@ -9,6 +9,9 @@ taxonomy:
 
 Used to update the flight booking information from [Book version 2.0](/avia/common/book) as the response.
 
+#### UpdateBook_2_2
+The latest version of the request, differences are only in the response to the request in the work unit with additional services from the [Book_2_2](/avia/request/bookflight) request.
+
 #### Request
 
 -  **BookID** - The booking ID that you want to update. The data type is long.
@@ -42,7 +45,7 @@ Used to update the flight booking information from [Book version 2.0](/avia/comm
 ```
 #### Response
 
-[Book version 2.0](/avia/common/book).
+[2.0 version Booking](/avia/common/book).
 
 ##### Example
 
