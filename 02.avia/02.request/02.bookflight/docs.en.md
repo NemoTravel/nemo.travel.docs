@@ -24,7 +24,8 @@ Similar to the previous version of BookFlight_2_0, the difference is only in the
 - **AncillaryServices.AncillaryService.TravellerRef** - The passenger ID for which the ancillary service is added. The data type is int.
 - **AncillaryServices.AncillaryService.SegmentRef** - Container with references to segments to which the ancillary service is added. The data type is custom.
 - **AncillaryServices.AncillaryService.SegmentRef.Ref** - Segment reference. Data type - int.
-- **AncillaryServices.AncillaryServiceRQ_1_1.Quantity** - The number of repetitions of this ancillary service. The data type is int. 
+-   **AncillaryServices.AncillaryService.Quantity** - Number of repetitions for that ancillary service. Data type is int.
+-   **AncillaryServices.AncillaryService.EMDType** - EMD type. The data type is a string.
 
 ##### Sample container with ancillary services from the BookFlight_2_1 request. 
   ```xml
