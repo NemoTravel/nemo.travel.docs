@@ -5,9 +5,9 @@ taxonomy:
         - docs
 ---
 
-### ModifyBook_2_1
-Similar to the previous version, the difference is only in the flat format of the ancillary service from the [Book_2_1](/avia/request/bookflight) request.
- ### Container with ancillary services from the ModifyBook_2_1 request.
+### ModifyBook_2_2
+The latest version of the ModifyBook request. Similar to the ModifyBook_2_1 version, the difference is only in the ancillary services block from the [Book_2_1](/avia/request/bookflight) request.
+ ### Sample container with ancillary services from the ModifyBook_2_2 request.
  ```xml
               <Action>Add</Action>
               <AncillaryService>
