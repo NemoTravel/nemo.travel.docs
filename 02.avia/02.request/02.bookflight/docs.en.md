@@ -5,22 +5,23 @@ taxonomy:
         - docs
 ---
 
-### BookFlight_2_1
-An operation to create a flight booking working with a 2.1 booking structure. Current version of the request BookFlight.
+### BookFlight_2_2
+An operation to create a flight booking working with a 2.2 booking structure. Current version of the request BookFlight.
 
 #### Request
-Similar to the previous version of BookFlight_2_0, the difference is only in the flat format of additional services:
+
+Similar to the previous version of BookFlight_2_0, the difference is only in the ancillary services block:
 
 - **AncillaryServices** - The list of ancillary services for booking (optional). The data type is an array.
 - **AncillaryServices.AncillaryService** - The ancillary service. The custom data type.
 - **AncillaryServices.AncillaryService.ID** - The ID of the variable ancillary service (not taken into account when booking). The data type is int.
-- **AncillaryServices.AncillaryServiceRQ_1_1.RFIC** - RFIC of ancillary service. The data type is a string.
-- **AncillaryServices.AncillaryServiceRQ_1_1.RFISC** - RFISC of ancillary service. The data type is a string.
+- **AncillaryServices.AncillaryService.RFIC** - RFIC of ancillary service. The data type is a string.
+- **AncillaryServices.AncillaryService.RFISC** - RFISC of ancillary service. The data type is a string.
 - **AncillaryServices.AncillaryService.Group** - Ancillary Service group. Data type is a string.
 **AncillaryServices.AncillaryService.Subgroup** - Ancillary Service subgroup. Data type is a string.
 - **AncillaryServices.AncillaryService.SSRCode** - SSR code for booked ancillary service (Optional). Data type is a string.
 - **AncillaryServices.AncillaryService.SSRDescription** - The description for SSR booked ancillary service (Optional). Data type is string.
-- **AncillaryServices.AncillaryService.Type** - The type of ancillary services (Mandatory only for Sirens). The data type is a string.
+- **AncillaryServices.AncillaryService.Type** - The type of ancillary service (Mandatory only for Sirena). The data type is a string.
 - **AncillaryServices.AncillaryService.TravellerRef** - The passenger ID for which the ancillary service is added. The data type is int.
 - **AncillaryServices.AncillaryService.SegmentRef** - Container with references to segments to which the ancillary service is added. The data type is custom.
 - **AncillaryServices.AncillaryService.SegmentRef.Ref** - Segment reference. Data type - int.
@@ -50,6 +51,49 @@ Similar to the previous version of BookFlight_2_0, the difference is only in the
         <a:Quantity>1</a:Quantity>
       </a:AncillaryServiceRQ_1_1>
     ```
+    ### BookFlight_2_1
+
+An operation to create a flight booking working with a 2.1 booking structure.
+
+#### Request
+
+Similar to the previous version of BookFlight_2_0, the difference is only in the flat format of ancillary services
+
+-   **AncillaryServices** -The list of ancillary services for booking (optional). The data type is an array.
+-   **AncillaryServices.AncillaryServiceRQ_1_1** - The ancillary service. The custom data type.
+-   **AncillaryServices.AncillaryServiceRQ_1_1.ID** - The ID of the variable ancillary service (not taken into account when booking). The data type is int.
+-   **AncillaryServices.AncillaryServiceRQ_1_1.RFIC** - RFIC of ancillary service. The data type is a string.
+-   **AncillaryServices.AncillaryServiceRQ_1_1.RFISC** - RFISC of ancillary service. The data type is a string.
+-   **AncillaryServices.AncillaryServiceRQ_1_1.SSRCode** - SSR code for booked ancillary service (Optional). Data type is a string.
+-   **AncillaryServices.AncillaryServiceRQ_1_1.SSRDescription** - The description for SSR of booked ancillary service (Optional). Data type is string.
+-   **AncillaryServices.AncillaryServiceRQ_1_1.Type** - The type of ancillary services (Mandatory only for Sirena). The data type is a string.
+-   **AncillaryServices.AncillaryServiceRQ_1_1.TravellerRef** - The passenger ID for which the ancillary service is added. The data type is int.
+-   **AncillaryServices.AncillaryServiceRQ_1_1.SegmentRef** - reference to segments to which the ancillary service is added. Data type is int.
+-   **AncillaryServices.AncillaryServiceRQ_1_1.Quantity** - Number of repetitions for that ancillary service. Data type is int.
+
+##### Sample ancillary services container from BookFlight_2_1 request.
+  ```xml
+      <a:AncillaryServiceRQ_1_1>
+        <a:ID>0</a:ID>
+        <a:Name i:nil="true"/>
+        <a:RFIC>G</a:RFIC>
+        <a:RFISC>BF1</a:RFISC>
+        <a:Type>F</a:Type>
+        <a:TravellerRef>1</a:TravellerRef>
+        <a:SegmentRef>1</a:SegmentRef>
+        <a:Quantity>1</a:Quantity>
+      </a:AncillaryServiceRQ_1_1>
+      <a:AncillaryServiceRQ_1_1>
+        <a:ID>0</a:ID>
+        <a:Name i:nil="true"/>
+        <a:RFIC>G</a:RFIC>
+        <a:RFISC>BF1</a:RFISC>
+        <a:Type>F</a:Type>
+        <a:TravellerRef>1</a:TravellerRef>
+        <a:SegmentRef>2</a:SegmentRef>
+        <a:Quantity>1</a:Quantity>
+      </a:AncillaryServiceRQ_1_1>
+    ```
     
 ### BookFlight_2_0
 
@@ -57,7 +101,7 @@ An operation to create a flight booking working with a 2.0 booking structure. Di
 
 #### Request
 
--  **FlightID** - The flight ID, which will be booked. It supports the format of two flight IDs with the delimiter «+». This format will allow to book compound flight from different searches and GDS. The data type is a string.
+-  **FlightID** - The flight ID which will be booked. It supports the format of two flight IDs with the delimiter «+». This format will allow to book compound flight from different searches and GDS. The data type is a string.
 -  **Travelers** - travelers for whom a flight reservation is created. The data type is an array[Traveller](/avia/common/traveller).
 - **DataItems** - content to create the booking (optional). The data type is an array of [DataItem](/avia/common/dataitem).
 - **AdditionalActions** - An additional actions to be performed with the flight reservation (optional). The custom data type.
@@ -175,6 +219,8 @@ An operation to create a flight booking working with a 2.0 booking structure. Di
 ```
 
 #### Response
+
+
 
 [Book](/avia/common/book).
 
