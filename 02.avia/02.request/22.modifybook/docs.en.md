@@ -134,7 +134,7 @@ Used to make changes to the reservation with [reservation version 2.0](/avia/com
 
 #### Response
 
-[Book](/avia/common/book).
+[2.0 version booking](/avia/common/book).
 
 ##### Example
 
