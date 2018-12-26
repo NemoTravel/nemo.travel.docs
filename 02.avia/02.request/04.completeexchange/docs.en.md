@@ -9,6 +9,9 @@ taxonomy:
 
 Completion of exchange of tickets. Within the framework of this request, the necessary steps are taken to complete the exchange of tickets. For example, during an exchange in Amadeus, special EMD documents can be generated, which will be in the booking. For correctness of reports in Amadeus for these EMD it is necessary to make a refund (for some sales offices the refund of EMD can be done only the day after the exchanges).
 
+#### CompleteEMDProcessing
+The latest request version, the differences are only in the response in the ancillary services block from [Book_2_2](/avia/request/bookflight) request.
+
 #### Request
 
 ##### Format Description
@@ -40,7 +43,7 @@ Completion of exchange of tickets. Within the framework of this request, the nec
 
 #### Response
 
-There is the reservation in the response. The response is similar to the response to the request [BookFlight\_2\_0](/avia/request/bookflight).
+There is the reservation in the responseas the response is similar to the response to the request [BookFlight\_2\_0](/avia/request/bookflight).
 
 ##### Example
 
