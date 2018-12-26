@@ -9,6 +9,10 @@ taxonomy:
 
 The ticket exchange
 
+#### ExchangeTicket_2_2
+The latest request version, the differences are only in the response in the ancillary services block from [Book_2_2](/avia/request/bookflight) request. 
+
+
 #### Request
 
 ##### Format Description
