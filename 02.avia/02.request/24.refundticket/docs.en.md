@@ -7,18 +7,22 @@ taxonomy:
 
 ### RefundTicket_1_1
 
-Used for the tickets and EMD refund while its presence in the booking.
+Used for the tickets and EMD refund if they are present in the booking.
+
+#### RefundTicket_2_2
+
+The latest version of the request, differences are only in the response to the request in the work unit with additional services from the Book_2_2 request.
 
 #### Request
 
 ##### Format Description
 
-- ** BookID ** - The booking ID with passengers. The data type is an integer 64-bit number.
-- ** Passengers ** - The number of passengers in the reservation,  for which is needed to receive the refund information. The data type is an array.
-- ** Passengers.Ref ** -  The Passenger number in the booking. The data type is an integer 32 bit number.
-- ** Involuntary ** - A sign of the involuntary refund (Optional). The data type is boolean.
-<!-- - ** SegmentsToRefund ** - Segments for the refund. The data type is an array.
-- ** SegmentsToRefund.Ref ** - The segment for he refund. The data type is an integer 32 bit number.-->
+- **BookID** - The booking ID with passengers. The data type is an integer 64-bit number.
+- **Passengers** - The number of passengers in the reservation,  for which is needed to receive the refund information. The data type is an array.
+- **Passengers.Ref** -  The Passenger number in the booking. The data type is an integer 32 bit number.
+- **Involuntary** - A sign of the involuntary refund (Optional). The data type is boolean.
+- **SegmentsToRefund** - Segments for the refund. The data type is an array.
+- **SegmentsToRefund.Ref** - The segment for he refund. The data type is an integer 32 bit number.
 
 #### Response
 
