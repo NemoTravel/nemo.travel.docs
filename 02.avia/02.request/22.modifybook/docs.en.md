@@ -9,24 +9,28 @@ taxonomy:
 The latest version of the ModifyBook request. Similar to the ModifyBook_2_1 version, the difference is only in the ancillary services block from the [Book_2_1](/avia/request/bookflight) request.
  ### Sample container with ancillary services from the ModifyBook_2_2 request.
  ```xml
-              <Action>Add</Action>
-              <AncillaryService>
-                <Name xsi:nil="true"/>
-                <Group xsi:nil="true"/>
-                <SubGroup xsi:nil="true"/>
-                <RFIC>G</RFIC>
-                <RFISC>0AI</RFISC>
-                <SSRCode xsi:nil="true"/>
-                <SSRDescription xsi:nil="true"/>
-                <Type>F</Type>
-                <TravellerRef>2</TravellerRef>
-                <SegmentRef>0</SegmentRef>
-                <Quantity>1</Quantity>
-              </AncillaryService>
+              <ns2:ModifyAncillaryService>
+              <ns1:Action>Add</ns1:Action>
+              <ns2:AncillaryService>
+                <ns2:Name xsi:nil="true"/>
+                <ns2:Group>ML</ns2:Group>
+                <ns2:SubGroup xsi:nil="true"/>
+                <ns2:RFIC>G</ns2:RFIC>
+                <ns2:RFISC>BF1</ns2:RFISC>
+                <ns2:SSRCode xsi:nil="true"/>
+                <ns2:SSRDescription xsi:nil="true"/>
+                <ns2:Type>F</ns2:Type>
+                <ns2:TravellerRef>2</ns2:TravellerRef>
+                 <ns2:SegmentRef>
+           		   <ns1:Ref>1</ns1:Ref>
+           	     </ns2:SegmentRef>
+                <ns2:Quantity>1</ns2:Quantity>
+              </ns2:AncillaryService>
+            </ns2:ModifyAncillaryService>
  ```
-### ModifyBook_2_0
+### ModifyBook_2_1
 
-Used to make changes to the booking with [booking version 2.0](/avia/common/book) as the response. Includes the functionality of ModifyBook and AddInformation of earlier versions.
+Similar to the previous version, the only difference is in the flat format of ancillary services from the Book_2_1 request. [booking version 2.0](/avia/common/book) request.
 
 #### Request
 
