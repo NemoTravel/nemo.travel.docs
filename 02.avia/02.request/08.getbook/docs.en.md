@@ -8,10 +8,12 @@ taxonomy:
 ### GetBook
 
 Used to get the current state of the booking without synchronizing with the suppliers.
+#### GetBook_2_2
+The latest request version, the differences are only in the response in the ancillary services block from [Book_2_2](/avia/request/bookflight) request.
 
 #### Request
 
--  **BookID** - The booking ID that you want to receive. The data type is long.
+-  **BookID** - The ID of the booking that you want to receive. The data type is long.
 
 ##### Example
 
@@ -37,7 +39,7 @@ Used to get the current state of the booking without synchronizing with the supp
 
 #### Response
 
-[Book](/avia/common/book).
+[2.0 Version Booking](/avia/common/book).
 
 ##### Example
 
