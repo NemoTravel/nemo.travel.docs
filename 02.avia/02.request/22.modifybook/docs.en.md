@@ -51,6 +51,7 @@ Similar to the previous version, the only difference is in the flat format of an
 ```
 
 ### ModifyBook_2_0
+Used to make changes to the reservation with [reservation version 2.0](/avia/common/book) as a response. It includes the functionality of ModifyBook and AddInformation of earlier versions.
 
 #### Request
 
