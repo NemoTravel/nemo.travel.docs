@@ -32,6 +32,26 @@ The latest version of the ModifyBook request. Similar to the ModifyBook_2_1 vers
 
 Similar to the previous version, the only difference is in the flat format of ancillary services from the Book_2_1 request. [booking version 2.0](/avia/common/book) request.
 
+ ### Sample container with ancillary services from the ModifyBook_2_1 request.
+ ```xml
+              <Action>Add</Action>
+              <AncillaryService>
+                <Name xsi:nil="true"/>
+                <Group xsi:nil="true"/>
+                <SubGroup xsi:nil="true"/>
+                <RFIC>G</RFIC>
+                <RFISC>0AI</RFISC>
+                <SSRCode xsi:nil="true"/>
+                <SSRDescription xsi:nil="true"/>
+                <Type>F</Type>
+                <TravellerRef>2</TravellerRef>
+                <SegmentRef>0</SegmentRef>
+                <Quantity>1</Quantity>
+              </AncillaryService>
+```
+
+### ModifyBook_2_0
+
 #### Request
 
 -  **BookID** - The booking ID in which you want to make changes. The data type is long.
