@@ -59,7 +59,7 @@ An operation to create a flight booking working with a 2.1 booking structure.
 
 Similar to the previous version of BookFlight_2_0, the difference is only in the flat format of ancillary services
 
--   **AncillaryServices** -The list of ancillary services for booking (optional). The data type is an array.
+-   **AncillaryServices** - The list of ancillary services for booking (optional). The data type is an array.
 -   **AncillaryServices.AncillaryServiceRQ_1_1** - The ancillary service. The custom data type.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.ID** - The ID of the variable ancillary service (not taken into account when booking). The data type is int.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.RFIC** - RFIC of ancillary service. The data type is a string.
@@ -220,7 +220,7 @@ An operation to create a flight booking working with a 2.0 booking structure. Di
 
 #### Response
 
-
+>>>> Attention! In the response for booking request Traveller.ID parameters may not match the parameters shown in the request. Passengers order may be changed due to the special features of the interaction with some GDS/providers.
 
 [Book](/avia/common/book).
 
