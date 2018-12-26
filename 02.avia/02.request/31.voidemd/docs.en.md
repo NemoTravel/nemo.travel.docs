@@ -9,6 +9,9 @@ taxonomy:
 
 Used to void the EMD for various ancillary services in the booking.
 
+#### VoidEMD_2_2
+The latest version of the request, differences are only in the response to the request in the work unit with additional services from the [Book_2_2](/avia/request/bookflight) request.
+
 ### VoidEMD_1_1
 #### Request format
 * **BookID** - ID of the reservation for which the operation is performed. The data type is long.
@@ -81,7 +84,7 @@ Used to void the EMD for various ancillary services in the booking.
 
 #### Response format
 
-[Book 2.0](/avia/common/book).
+[Booking 2.0](/avia/common/book).
 
 ##### Example
 
