@@ -9,6 +9,9 @@ taxonomy:
 
 Ticketing for the reservation with the support of API 2.0.
 
+#### Ticket_2_2
+The latest version of the request, differences are only in the response to the request in the work unit with additional services from the [Book_2_2](/avia/request/bookflight) request.
+
 #### Request
 
 -  **BookID** - The booking ID that should be ticketed. The data type is long.
