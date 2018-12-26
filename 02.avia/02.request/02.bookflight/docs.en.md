@@ -12,6 +12,25 @@ An operation to create a flight booking working with a 2.2 booking structure. Cu
 
 Similar to the previous version of BookFlight_2_0, the difference is only in the ancillary services block:
 
+#### Sample container with ancillary services from the BookFlight_2_1 request.
+```xml
+ 		  <ns3:AncillaryServices>
+            <ns3:AncillaryService>
+              <ns3:Group>ML</ns3:Group>
+               <ns3:RFIC>G</ns3:RFIC>
+              <ns3:RFISC>0AI</ns3:RFISC>
+               <ns3:Type>F</ns3:Type>
+              <ns3:TravellerRef>1</ns3:TravellerRef>
+              <ns3:SegmentRef>
+               <ns1:Ref>1</ns1:Ref>
+               <ns1:Ref>2</ns1:Ref>
+              </ns3:SegmentRef>
+              <ns3:Quantity>1</ns3:Quantity>
+               <ns3:EMDType>A</ns3:EMDType>
+            </ns3:AncillaryService>
+          </ns3:AncillaryServices>
+ ```         
+
 - **AncillaryServices** - The list of ancillary services for booking (optional). The data type is an array.
 - **AncillaryServices.AncillaryService** - The ancillary service. The custom data type.
 - **AncillaryServices.AncillaryService.ID** - The ID of the variable ancillary service (not taken into account when booking). The data type is int.
@@ -28,29 +47,6 @@ Similar to the previous version of BookFlight_2_0, the difference is only in the
 -   **AncillaryServices.AncillaryService.Quantity** - Number of repetitions for that ancillary service. Data type is int.
 -   **AncillaryServices.AncillaryService.EMDType** - EMD type. The data type is a string.
 
-##### Sample container with ancillary services from the BookFlight_2_1 request. 
-  ```xml
-      <a:AncillaryServiceRQ_1_1>
-        <a:ID>0</a:ID>
-        <a:Name i:nil="true"/>
-        <a:RFIC>G</a:RFIC>
-        <a:RFISC>BF1</a:RFISC>
-        <a:Type>F</a:Type>
-        <a:TravellerRef>1</a:TravellerRef>
-        <a:SegmentRef>1</a:SegmentRef>
-        <a:Quantity>1</a:Quantity>
-      </a:AncillaryServiceRQ_1_1>
-      <a:AncillaryServiceRQ_1_1>
-        <a:ID>0</a:ID>
-        <a:Name i:nil="true"/>
-        <a:RFIC>G</a:RFIC>
-        <a:RFISC>BF1</a:RFISC>
-        <a:Type>F</a:Type>
-        <a:TravellerRef>1</a:TravellerRef>
-        <a:SegmentRef>2</a:SegmentRef>
-        <a:Quantity>1</a:Quantity>
-      </a:AncillaryServiceRQ_1_1>
-    ```
     ### BookFlight_2_1
 
 An operation to create a flight booking working with a 2.1 booking structure.
