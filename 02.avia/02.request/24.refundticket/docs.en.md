@@ -11,7 +11,7 @@ Used for the tickets and EMD refund if they are present in the booking.
 
 #### RefundTicket_2_2
 
-The latest version of the request, differences are only in the response to the request in the work unit with additional services from the Book_2_2 request.
+The latest version of the request, differences are only in the response to the request in the work unit with additional services from the [Book_2_2](/avia/request/bookflight) request.
 
 #### Request
 
