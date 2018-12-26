@@ -48,7 +48,8 @@ The latest version of the request, differences are only in the response to the r
     
 #### Response
 
-[Reservation of version 2.0](General_Alements_API # Book "wikilink") with the splitted passengers. Information about the parent and child booking is stored in the ***DataItems.[DataItem](/avia/common/dataitem).ReferencedBooks***.
+[2.0 version Reservation](General_Alements_API#Book"wikilink")
+with the splitted passengers. Information about the parent and child booking is stored in the ***DataItems.[DataItem](/avia/common/dataitem).ReferencedBooks***.
 
 ** [Warning] ** When importing a reservation in this item, only the parent and child PNR codes from the provider system will be displayed.
 
