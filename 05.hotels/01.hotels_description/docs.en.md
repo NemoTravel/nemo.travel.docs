@@ -12,8 +12,8 @@ Hotel server provides the following functionality:
     -   Getting search results using the following request: [GetCitySearchResult](/hotels/search_hotels/getcitysearchresult)
     -   Getting search results using the following request: [GetCitySearchParameters](/hotels/search_hotels/getcitysearchparameters)
     -   Checking room availability using the following request: [GetHotelAvailability](/hotels/search_hotels/gethotelavailability)
--   Reservations
-    -   Room reservation using the following request: [Book](/hotels/book_hotels/bookhotels)
+-   Book
+    -   Room books using the following request: [Book](/hotels/book_hotels/bookhotels)
     -   Confirmation of booking using the following request: [ConfirmBook](/hotels/book_hotels/confirmbook)
     -   Reservation cancel using the following request: [CancelBook](/hotels/book_hotels/cancelbookhotels)
 -   Autocomplete
