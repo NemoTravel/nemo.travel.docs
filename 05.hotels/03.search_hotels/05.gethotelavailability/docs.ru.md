@@ -73,7 +73,7 @@ title: 'Запрос GetHotelAvailability'
 -   **RoomRatesGroup.Rate.Price** - контейнер с информацией о валюте. Тип данных - сложный.
 -   **RoomRatesGroup.Rate.Price.Amount** - сумма базовый цены. Тип данных - дробное число.
 -   **RoomRatesGroup.Rate.Price.Currency** - код валюты базовой цены. Тип данных - строка.
--   **RoomRatesGroup.Rate.IsSpecialOffer** - является ли данный тариф специальным предложением. Тип данных - булевский.
+-   **RoomRatesGroup.Rate.IsSpecialOffer** - аттрибут данного тарифа как специального предложения. Тип данных - булевский.
 -   **RoomRatesGroup.Rate.VisaSupportProvided** - визовая поддержка отеля. Тип данных - булевский.
 -   **RoomRatesGroup.Rate.IsNonRefundable** - признак возвратности. Тип данных - булевский.
 -   **RoomRatesGroup.Rate.BookingRemarks** - ремарки. Тип данных - сложный.
