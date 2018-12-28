@@ -73,7 +73,7 @@ title: 'GetHotelAvailability Request'
 -   **RoomRatesGroup.Rate.Price** - container with currency information. Data type - custom.
 -   **RoomRatesGroup.Rate.Price.Amount** - the amount of the base price. Data type - fractional number.
 -   **RoomRatesGroup.Rate.Price.Currency** - currency code of the base price. Data type - string.
--   **RoomRatesGroup.Rate.IsSpecialOffer** - whether this fare is a special offer. Data type - boolean.
+-   **RoomRatesGroup.Rate.IsSpecialOffer** - attribute of this fare being a special offer. Data type - boolean.
 -   **RoomRatesGroup.Rate.VisaSupportProvided** - hotel visa support. Data type - boolean.
 -   **RoomRatesGroup.Rate.IsNonRefundable** - attribute of returnability. Data type - boolean.
 -   **RoomRatesGroup.Rate.BookingRemarks** - remarks. Data type - custom.
