@@ -111,7 +111,7 @@ title: 'Запрос Book'
 -   **Rooms.HotelRoom.Price** - содержит информацию об оплате. Тип данных - сложных.
 -   **Rooms.HotelRoom.Price.Amount** - сумма оплаты. Тип данных - целое 32-битное число.
 -   **Rooms.HotelRoom.Price.Currency** - 3-х буквенный код валюты. Тип данных - строка.
--   **Rooms.HotelRoom.IsSpecialOffer** - присутствуют ли какие-либо специальные предложения. Тип данных - булевый.
+-   **Rooms.HotelRoom.IsSpecialOffer** - аттрибут наличия специальных предложений. Тип данных - булевый.
 -   **Rooms.HotelRoom.VisaSupportProvided** - поддержка визы. Тип данных - булевый.
 -   **Rooms.HotelRoom.IsNonRefundable** - содержит признак возможности возврата средств за забронированный номер. Тип данных - булевый.
 -   **Rooms.HotelRoom.BookingRemarks** - ремарки к совершенному бронированию. Тип данных - строка.
