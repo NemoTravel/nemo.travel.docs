@@ -6,12 +6,12 @@ title: 'Book Request'
 
 #### Request
 
--   **SearchId** - ID of a completed search. Data type - 32-bit integer.
--   **HotelId** - hotel ID for availability check. Data type - 32-bit integer.
+-   **SearchID** - ID of a completed search. Data type - 32-bit integer.
+-   **HotelID** - hotel ID for availability check. Data type - 32-bit integer.
 -   **Rooms** - container with information on the rooms. Data type - custom.
 -   **Rooms.RoomData** - container with information on the room you need to book. Data type - custom.
 -   **Rooms.RoomData.RoomSearchIndex** - ID for the sequence number of the desired room. Data type - unsigned 32-bit integer.
--   **Rooms.RoomData.RoomVariantId** - ID of the room to be booked. Data type - unsigned 32-bit integer.
+-   **Rooms.RoomData.RoomVariantID** - ID of the room to be booked. Data type - unsigned 32-bit integer.
 -   **Guests** - container with information on the guests. Data type - custom.
 -   **Guests.Guest** - container with information on a guest. Data type - custom.
 -   **Guests.Guest.LastName** - guest’s last name. Data type - string.
@@ -95,11 +95,11 @@ title: 'Book Request'
 
 #### Response
 
--   **Id** - ID of the completed reservation. Data type - 32-bit integer.
+-   **ID** - ID of the completed reservation. Data type - 32-bit integer.
 -   **Status** - reservation status. Data type - string.
--   **HotelId** - ID of the hotel in which the room is booked. Data type - 32-bit integer.
--   **CityId** - ID of the city in which the hotel is located. Data type - 32-bit integer.
--   **SearchId** - ID of the completed search. Data type - 32-bit integer.
+-   **HotelID** - ID of the hotel in which the room is booked. Data type - 32-bit integer.
+-   **CityID** - ID of the city in which the hotel is located. Data type - 32-bit integer.
+-   **SearchID** - ID of the completed search. Data type - 32-bit integer.
 -   **CheckInDate** - date of the arrival in the room. Data type - string, the format is yyyy-mm-ddthh:mm:ss.
 -   **CheckOutDate** - date of the departure from the room. Data type - string, the format is yyyy-mm-ddthh:mm:ss.
 -   **CheckInTime** - time of arrival in the room. Data type - string, format hh:mm.
