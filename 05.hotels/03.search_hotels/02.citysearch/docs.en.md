@@ -60,7 +60,7 @@ Same as the request of the following format: [RunCitySearch](/hotels/search_hote
 -   **RoomsRequestData.Room.ChildrenAges.Age** - age of children in the request. Data type - unsigned 32-bit integer.
 -   **RoomTypesGroup** - contains information on the types of rooms found. Data type - custom.
 -   **RoomTypesGroup.Type** - container with information on the room. Data type - custom.
--   **RoomTypesGroup.Type.Id** - ID of the room type within this search result. Data type - unsigned 32-bit integer.
+-   **RoomTypesGroup.Type.Id** - room type ID in this search result. Data type - unsigned 32-bit integer.
 -   **RoomTypesGroup.Type.Name** - name of the room type. Data type - string.
 -   **RoomTypesGroup.Type.CommonName** - common name of the room. Data type - string.
 -   **RoomMealsGroup** - contains information on the possible types of food. Data type - custom.
@@ -71,14 +71,14 @@ Same as the request of the following format: [RunCitySearch](/hotels/search_hote
 	-   **HB** - Half board
 	-   **FB** - Full board
 	-   **AI** - All inclusive
-	-   **DN** - Dinner (Bronevik provider transmits "Ужин" in this parameter)
-	-   **LU** - Lunch (Bronevik provider transmits "Обед" in this parameter)
+	-   **DN** - Dinner (Bronevik provider transmits "Ужин" ("Dinner") in this parameter)
+	-   **LU** - Lunch (Bronevik provider transmits "Обед" ("Lunch") in this parameter)
 -   **RoomMealsGroup.Meal.Name** - name of the food type. Data type - string.
 	- 	**Room only** - No meals
 	-   **Breakfast** - Breakfast
-	-   **Half** board - Half Board (breakfast + dinner)
-	-   **Full** board - Full Board (breakfast + lunch + dinner)
-	-	**All** inclusive - All inclusive (breakfast + lunch + dinner + drinks, snacks)
+	-   **Half board** - Half Board (breakfast + dinner)
+	-   **Full board** - Full Board (breakfast + lunch + dinner)
+	-	**All inclusive** - All inclusive (breakfast + lunch + dinner + drinks, snacks)
 	-	**Dinner** - Dinner 
 	-	**Lunch** - Lunch 
 -   **RoomMealsGroup.Meal.CommonName** - common name for the type of food. Data type - string.
