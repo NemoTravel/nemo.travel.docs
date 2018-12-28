@@ -6,7 +6,7 @@ title: 'GetCitySearchParameters Request'
 
 #### Request
 
--   **SearchId** - ID of a completed search. Data type - 32-bit integer. 
+-   **SearchID** - ID of a completed search. Data type - 32-bit integer. 
 
 ##### Sample Request (XML)
 ```xml
