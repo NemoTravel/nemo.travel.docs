@@ -107,7 +107,7 @@ title: 'Book Request'
 -   **Rooms** - contains information on the rooms you need to find. Data type - custom.
 -   **Rooms.HotelRoom** - contains information on the reserved room. Data type - custom.
 -   **Rooms.HotelRoom.Type** - contains information on the type of room booked. Data type - string.
--   **Rooms.HotelRoom.Meal** - contains information on the type of food. Data type - string.
+-   **Rooms.HotelRoom.Meal** - contains information on the meal type. Data type - string.
 -   **Rooms.HotelRoom.Price** - contains payment information. Data type - custom.
 -   **Rooms.HotelRoom.Price.Amount** - payment amount. Data type - 32-bit integer.
 -   **Rooms.HotelRoom.Price.Currency** - 3-letter currency code. Data type - string.
