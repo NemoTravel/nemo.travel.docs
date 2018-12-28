@@ -4,6 +4,8 @@ title: 'RunCitySearch Request'
 
 ### RunCitySearch
 
+After sending the request the results are given separately through the getsearchresult request. 
+
 #### Request
 
 -   **CheckInDate** - date of the arrival to the room. Data type - string, the format is yyyy-mm-ddthh:mm:ss.
