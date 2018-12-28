@@ -56,7 +56,7 @@ Same as the request of the following format: [RunCitySearch](/hotels/search_hote
 -   **RoomsRequestData.Room** - container with information on the number of guests. Data type - custom.
 -   **RoomsRequestData.Room.AdultsCount** - number of adult guests. Data type - unsigned 32-bit integer.
 -   **RoomsRequestData.Room.ChidrenCount** - number of children. Data type - unsigned 32-bit integer.
--   **RoomsRequestData.Room.ChildrenAges** - container for indicating the children age. Data type - unsigned 32-bit integer.
+-   **RoomsRequestData.Room.ChildrenAges** - container with information on the children age. Data type - unsigned 32-bit integer.
 -   **RoomsRequestData.Room.ChildrenAges.Age** - age of children in the request. Data type - unsigned 32-bit integer.
 -   **RoomTypesGroup** - contains information on the types of rooms found. Data type - custom.
 -   **RoomTypesGroup.Type** - container with information on the room. Data type - custom.
@@ -64,7 +64,7 @@ Same as the request of the following format: [RunCitySearch](/hotels/search_hote
 -   **RoomTypesGroup.Type.Name** - name of the room type. Data type - string.
 -   **RoomTypesGroup.Type.CommonName** - common name of the room. Data type - string.
 -   **RoomMealsGroup** - contains information on the possible types of food. Data type - custom.
--   **RoomMealsGroup.Meal** - container for information on the type of food. Data type - custom.
+-   **RoomMealsGroup.Meal** - container with information on the type of food. Data type - custom.
 -   **RoomMealsGroup.Meal.Id** - identifies the type of food for this search result. Data type - unsigned 32-bit integer.
 	-   **RO** - Room only
 	-   **BB** - Breakfast
