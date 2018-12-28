@@ -8,7 +8,7 @@ All the requests and responses of the hotel server have a certain set of common 
 -   **Requisites** - Server access details. Data type - custom.
 -   **Requisites.Login** - Server access login. Data type - string.
 -   **Requisites.Password** - Server access password. Data type - string.
--   
+-   **Requisites.UserContextId** - ID of the user for which the settings will be downloaded. Data type - string. 
 -   **Requisites.AuthToken** - Server access key. Data type - string. It is required to specify either this key or a login + password pair.
 -   **RequestType** - type of request initializer. Data type - enumeration, possible values:
     -   **0 (U)** - user (default)
