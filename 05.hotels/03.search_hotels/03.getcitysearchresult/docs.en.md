@@ -32,23 +32,23 @@ title: 'GetCitySearchResult Request'
 #### Response
 
 -   **isFinished** - attribute of the search being fully completed. Data type - boolean.
--   **RoomsRequestData** - contains information on the search request. Data type - custom.
+-   **RoomsRequestData** - container with information on the search request. Data type - custom.
 -   **RoomsRequestData.Room** - container with information on the number of guests. Data type - custom.
 -   **RoomsRequestData.Room.AdultsCount** - number of adult guests. Data type - unsigned 32-bit integer.
 -   **RoomsRequestData.Room.ChidrenCount** - number of children. Data type - unsigned 32-bit integer.
 -   **RoomsRequestData.Room.ChildrenAges** - container with information on the age of children. Data type - unsigned 32-bit integer.
 -   **RoomsRequestData.Room.ChildrenAges.Age** - age of children in the request. Data type - unsigned 32-bit integer.
--   **RoomTypesGroup** - contains information on the room types found. Data type - custom.
+-   **RoomTypesGroup** - container with information on the room types found. Data type - custom.
 -   **RoomTypesGroup.Type** - container with information on the room. Data type - custom.
 -   **RoomTypesGroup.Type.Id** - ID of the room type within this search result. Data type - unsigned 32-bit integer.
 -   **RoomTypesGroup.Type.Name** - room type name. Data type - string.
 -   **RoomTypesGroup.Type.CommonName** - common name of the room. Data type - string.
--   **RoomMealsGroup** - contains information on the possible meal types. Data type - custom.
+-   **RoomMealsGroup** - container with information on the possible meal types. Data type - custom.
 -   **RoomMealsGroup.Meal** - container with information on the meal type. Data type - custom.
 -   **RoomMealsGroup.Meal.Id** - identifies the meal type for this search result. Data type - unsigned 32-bit integer.
 -   **RoomMealsGroup.Meal.Name** - name of the meal type. Data type - string.
 -   **RoomMealsGroup.Meal.CommonName** - common name for the meal type. Data type - string.
--   **RoomRatesGroup** - contains information on the cost of rooms. Data type - custom.
+-   **RoomRatesGroup** - container with information on the cost of rooms. Data type - custom.
 -   **RoomRatesGroup.Rate** - container with information on the cost and rate. Data type - custom.
 -   **RoomRatesGroup.Rate.Id** - rate identifier within this search result. Data type - unsigned integer 32-bit number.
 -   **RoomRatesGroup.Rate.Price** - container with currency information. Data type - custom.
@@ -56,13 +56,13 @@ title: 'GetCitySearchResult Request'
 -   **RoomRatesGroup.Rate.Price.Currency** - currency code of the base price. Data type - string.
 -   **RoomRatesGroup.Rate.IsSpecialOffer** - attribute of this fare being a special offer. Data type - boolean.
 -   **RoomRatesGroup.Rate.VisaSupportProvided** - hotel visa support. Data type - boolean.
--   **RoomsGroup** - contains information on various room options. Data type - custom.
+-   **RoomsGroup** - container with information on various room options. Data type - custom.
 -   **RoomsGroup.Room** - container with room parameters IDs. Data type - custom.
 -   **RoomsGroup.Room.Id** - room ID. Data type - unsigned 32-bit integer.
 -   **RoomsGroup.Room.TypeId** - room type ID. Data type - unsigned 32-bit integer.
 -   **RoomsGroup.Room.MealId** - meal type ID. Data type - unsigned 32-bit integer.
 -   **RoomsGroup.Room.RateId** - fare ID. Data type - unsigned 32-bit integer.
--   **Hotels** - contains information on the hotels in search results. Data type - custom.
+-   **Hotels** - container with information on the hotels in search results. Data type - custom.
 -   **Hotels.Hotel** - container with information on the hotel. Data type - custom.
 -   **Hotels.Hotel.HotelId** - hotel ID. Data type - unsigned 32-bit integer.
 -   **Hotels.Hotel.Name** - hotel name. Data type - string.
@@ -76,19 +76,19 @@ title: 'GetCitySearchResult Request'
 -   **Hotels.Hotel.RoomGroups.Room.SearchRoomId** - ID of the requested room from the request RunCitySearch Rooms.Room. Data type - unsigned 32-bit integer.
 -   **Hotels.Hotel.RoomGroups.Room.RoomVariants** - container with room numbers suitable for a request. Data type - custom.
 -   **Hotels.Hotel.RoomGroups.Room.RoomVariants.RoomId** - ID of suitable rooms. Data type - unsigned 32-bit integer.
--   **Hotels.Hotel.RoomGroups.Room.Markups** - contains information on the markups calculated in accordance with the settings. Data type - custom.
+-   **Hotels.Hotel.RoomGroups.Room.Markups** - container with information on the markups calculated in accordance with the settings. Data type - custom.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup** - container with information on the markup. Data type is custom.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.RoomVariantId** - room ID. Data type - unsigned 32-bit integer.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.Sum** - container with information on the amount and currency of the markup. Data type - custom.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.Sum.Amount** - markup amount. Data type - fractional number.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.Sum.Currency** - currency code of the markup. Data type - string.
--   **Hotels.Hotel.RoomGroups.Room.AgencyCharges** - contains information on agency charge, calculated in accordance with the settings. Data type - custom.
+-   **Hotels.Hotel.RoomGroups.Room.AgencyCharges** - container with information on agency charge, calculated in accordance with the settings. Data type - custom.
 -   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge** - container with information on the agency charge. Data type - custom.
 -   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.RoomVariantId** - room ID. Data type - unsigned 32-bit integer.
 -   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.Sum** - container with information on the amount and currency of the charge. Data type - custom.
 -   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.Sum.Amount** - the amount of the charge. Data type - fractional number.
 -   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.Sum.Currency** - charge currency code. Data type - string.
--   **Hotels.Hotel.RoomGroups.Room.ServiceCharges** - contains information on service provider charges, calculated in accordance with the settings. Data type - custom.
+-   **Hotels.Hotel.RoomGroups.Room.ServiceCharges** - container with information on service provider charges, calculated in accordance with the settings. Data type - custom.
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge** - container with information on the service provider’s charge. Data type - custom.
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.RoomVariantId** - room ID. Data type - unsigned 32-bit integer.
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum** - container with information on the amount and currency of the charge. Data type - custom.
