@@ -138,6 +138,7 @@ title: 'Book Request'
 -   **ServiceCharges.Amount** - the amount of service provider charges. Data type - fractional number.
 -   **ServiceCharges.Currency** - currency code of the service provider's charges. Data type - string.
 -   **Supplier** - supplier. Data type - string.
+-   **SupplierAgencyID** - supplier's details ID. Data type - string. 
 
 
 ##### Sample Response (XML)
