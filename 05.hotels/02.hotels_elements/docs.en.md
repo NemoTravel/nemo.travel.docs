@@ -5,7 +5,7 @@ title: 'Common Elements'
 All the requests and responses of the hotel server have a certain set of common elements.
 
 #### Request
--   **Requisites** - Server access details. Data type - custom.
+-   **Requisites** - Container with server access details. Data type - custom.
 -   **Requisites.Login** - Server access login. Data type - string.
 -   **Requisites.Password** - Server access password. Data type - string.
 -   **Requisites.UserContextId** - ID of the user for which the settings will be downloaded. Data type - string. 
@@ -15,8 +15,8 @@ All the requests and responses of the hotel server have a certain set of common 
     -   **1 (F)** - background
     -   **2 (S)** - scheduled
 -   **UserID** - ID of the user who wants to make a request to the server. Data type - nonnegative 32-bit integer.
--   **RequestBody** - body of the request to the server. Data type - custom.
--   **RequestBody.ResponseParameters** - response parameters. Data type - custom.
+-   **RequestBody** - Container with the body of the request to the server. Data type - custom.
+-   **RequestBody.ResponseParameters** - Container with response parameters. Data type - custom.
 -   **RequestBody.ResponseParameters.Language** - response language. Data type - string.
 -   **RequestBody.ResponseParameters.SendStaticData** - Attribute of the necessity to return the static in the response. Data type - boolean.
 -   
