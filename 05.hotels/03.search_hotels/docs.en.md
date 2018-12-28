@@ -2,7 +2,7 @@
 title: Search
 ---
 
-Requests related to the search:
+Requests related to the search.
 
 -   [RunCitySearch Request](/hotels/search_hotels/runcitysearch);
 -   [CitySearch Request](/hotels/search_hotels/citysearch);
