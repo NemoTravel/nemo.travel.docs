@@ -12,7 +12,7 @@ After sending the request the results are given separately through the getsearch
 -   **CheckOutDate** - date of the departure from the room. Data type - string, the format is yyyy-mm-ddthh:mm:ss.
 -   **CityId** - ID of the city for which the search will be executed. Data type - nonnegative 32-bit integer.
 -   **HotelId** - ID of the hotel for which the search will be executed. Data type - nonnegative 32-bit integer .
--   **Rooms** - contains information on the rooms required to be found. Data type - custom.
+-   **Rooms** - container with information on the rooms required to be found. Data type - custom.
 -   **Rooms.Room** - container with information on the number of guests. Data type - custom.
 -   **Rooms.Room.AdultsCount** - number of adult guests. Data type - unsigned 32-bit integer.
 -   **Rooms.Room.ChidrenCount** - number of children. Data type - unsigned 32-bit integer.
