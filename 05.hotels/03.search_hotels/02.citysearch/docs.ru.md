@@ -89,7 +89,7 @@ title: 'Запрос CitySearch'
 -   **RoomRatesGroup.Rate.Price.Amount** - сумма базовый цены. Тип данных - дробное число.
 -   **RoomRatesGroup.Rate.Price.Currency** - код валюты базовой цены. Тип данных - строка.
 -   **RoomRatesGroup.Rate.IsSpecialOffer** - является ли данный тариф специальным предложением. Тип данных - булевский.
--   **RoomRatesGroup.Rate.VisaSupportProvided** - визовая поддержка отеля. Тип данных - булевский.
+-   **RoomRatesGroup.Rate.VisaSupportProvided** - признак визовой поддержки отеля. Тип данных - булевский.
 -   **RoomRatesGroup.Rate.Availability** - доступность комнаты. Тип данных - строка.
 -   **RoomsGroup** - содержит информацию о различных вариантов комнат. Тип данных - сложный.
 -   **RoomsGroup.Room** - контейнер с идентификаторами параметров комнаты. Тип данных - сложный.
