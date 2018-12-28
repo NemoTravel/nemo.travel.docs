@@ -111,7 +111,7 @@ title: 'Book Request'
 -   **Rooms.HotelRoom.Price** - contains payment information. Data type - custom.
 -   **Rooms.HotelRoom.Price.Amount** - payment amount. Data type - 32-bit integer.
 -   **Rooms.HotelRoom.Price.Currency** - 3-letter currency code. Data type - string.
--   **Rooms.HotelRoom.IsSpecialOffer** - whether any special offers are available. Data type - boolean.
+-   **Rooms.HotelRoom.IsSpecialOffer** - attribute of special offers availbilty. Data type - boolean.
 -   **Rooms.HotelRoom.VisaSupportProvided** - visa support. Data type - boolean.
 -   **Rooms.HotelRoom.IsNonRefundable** - contains an attribute of the possibility of a refund for the booked room. Data type - boolean.
 -   **Rooms.HotelRoom.BookingRemarks** - remarks to the completed booking. Data type - string.
