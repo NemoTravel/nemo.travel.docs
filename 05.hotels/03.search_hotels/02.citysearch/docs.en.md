@@ -63,9 +63,9 @@ Same as the request of the following format: [RunCitySearch](/hotels/search_hote
 -   **RoomTypesGroup.Type.Id** - room type ID in this search result. Data type - unsigned 32-bit integer.
 -   **RoomTypesGroup.Type.Name** - name of the room type. Data type - string.
 -   **RoomTypesGroup.Type.CommonName** - common name of the room. Data type - string.
--   **RoomMealsGroup** - contains information on the possible types of food. Data type - custom.
--   **RoomMealsGroup.Meal** - container with information on the type of food. Data type - custom.
--   **RoomMealsGroup.Meal.Id** - identifies the type of food for this search result. Data type - unsigned 32-bit integer.
+-   **RoomMealsGroup** - contains information on the possible meal types. Data type - custom.
+-   **RoomMealsGroup.Meal** - container with information on the meal type. Data type - custom.
+-   **RoomMealsGroup.Meal.Id** - identifies the meal type for this search result. Data type - unsigned 32-bit integer.
 	-   **RO** - Room only
 	-   **BB** - Breakfast
 	-   **HB** - Half board
@@ -73,7 +73,7 @@ Same as the request of the following format: [RunCitySearch](/hotels/search_hote
 	-   **AI** - All inclusive
 	-   **DN** - Dinner (Bronevik provider transmits "Ужин" ("Dinner") in this parameter)
 	-   **LU** - Lunch (Bronevik provider transmits "Обед" ("Lunch") in this parameter)
--   **RoomMealsGroup.Meal.Name** - name of the food type. Data type - string.
+-   **RoomMealsGroup.Meal.Name** - name of the meal type. Data type - string.
 	- 	**Room only** - No meals
 	-   **Breakfast** - Breakfast
 	-   **Half board** - Half Board (breakfast + dinner)
@@ -81,7 +81,7 @@ Same as the request of the following format: [RunCitySearch](/hotels/search_hote
 	-	**All inclusive** - All inclusive (breakfast + lunch + dinner + drinks, snacks)
 	-	**Dinner** - Dinner 
 	-	**Lunch** - Lunch 
--   **RoomMealsGroup.Meal.CommonName** - common name for the type of food. Data type - string.
+-   **RoomMealsGroup.Meal.CommonName** - common name for the meal type. Data type - string.
 -   **RoomRatesGroup** - contains information about the cost of rooms. Data type - custom.
 -   **RoomRatesGroup.Rate** - container for information about the cost, fare. Data type - custom.
 -   **RoomRatesGroup.Rate.Id** - rate identifier within this search result. Data type - unsigned 32-bit integer.
@@ -95,7 +95,7 @@ Same as the request of the following format: [RunCitySearch](/hotels/search_hote
 -   **RoomsGroup.Room** - container with IDs of room parameters. Data type - custom.
 -   **RoomsGroup.Room.Id** - room ID. Data type - unsigned 32-bit integer.
 -   **RoomsGroup.Room.TypeId** - room type ID. Data type - unsigned 32-bit integer.
--   **RoomsGroup.Room.MealId** - food type ID. Data type - unsigned 32-bit integer.
+-   **RoomsGroup.Room.MealId** - meal type ID. Data type - unsigned 32-bit integer.
 -   **RoomsGroup.Room.RateId** - fare ID. Data type - unsigned 32-bit integer.
 -   **Hotels** - contains information on hotels in search results. Data type - custom.
 -   **Hotels.Hotel** - container for hotel information. Data type - custom.
