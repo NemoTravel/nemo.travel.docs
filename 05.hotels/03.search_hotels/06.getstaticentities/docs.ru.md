@@ -58,17 +58,17 @@ title: 'Запрос GetStaticEntities'
 
 -   **StaticDataInfo** - данные, полученные при запросе статики. Тип данных - сложный.
 -   **StaticDataInfo.Countries** - данные о странах. Тип данных - сложный.
--   **StaticDataInfo.Countries.Country** - контейнер для данных о стране. Тип данных - строка.
+-   **StaticDataInfo.Countries.Country** - контейнер с данными о стране. Тип данных - строка.
 -   **StaticDataInfo.Countries.Country.Id** - идентификатор страны у поставщика. Тип данных - строка.
 -   **StaticDataInfo.Countries.Country.Name** - название страны. Тип данных - строка.
 -   **StaticDataInfo.Countries.Country.IsoCode** - двузначный ISO-код страны. Тип данных - строка.
 -   **StaticDataInfo.Regions** - данные о регионах. Тип данных - сложный.
--   **StaticDataInfo.Regions.Region** - контейнер для данных о регионе. Тип данных - сложный.
+-   **StaticDataInfo.Regions.Region** - контейнер с данными о регионе. Тип данных - сложный.
 -   **StaticDataInfo.Regions.Region.Id** - идентификатор региона у поставщика. Тип данных - строка.
 -   **StaticDataInfo.Regions.Region.Name** - название региона. Тип данных - строка.
 -   **StaticDataInfo.Regions.Region.CountryId** - идентификатор страны у поставщика, в которой расположен регион. Тип данных - строка.
 -   **StaticDataInfo.Cities** - данные о городах. Тип данных - сложный.
--   **StaticDataInfo.Cities.City** - контейнер для данных о городе. Тип данных - сложный.
+-   **StaticDataInfo.Cities.City** - контейнер с данными о городе. Тип данных - сложный.
 -   **StaticDataInfo.Cities.City.Id** - идентификатор города у поставщика. Тип данных - строка.
 -   **StaticDataInfo.Cities.City.Name** - название города. Тип данных - строка.
 -   **StaticDataInfo.Cities.City.CountryId** - идентификатор страны у поставщика, в которой расположен город. Тип данных - строка.
@@ -76,7 +76,7 @@ title: 'Запрос GetStaticEntities'
 -   **StaticDataInfo.Cities.City.Latitude** - широта местоположения города. Тип данных - дробное число.
 -   **StaticDataInfo.Cities.City.Longitude** - долгота местоположения города. Тип данных - дробное число.
 -   **StaticDataInfo.Hotels** - данные об отелях. Тип данных - сложный.
--   **StaticDataInfo.Hotels.HotelStaticInfo** - контейнер для данных об отеле. Тип данных - сложный.
+-   **StaticDataInfo.Hotels.HotelStaticInfo** - контейнер с данными об отеле. Тип данных - сложный.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Id** - идентификатор отеля у поставщика. Тип данных - строка.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Name** - название отеля. Тип данных - строка.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.CheckInTime** - регистрация заезда. Тип данных - строка.
@@ -85,23 +85,23 @@ title: 'Запрос GetStaticEntities'
 -   **StaticDataInfo.Hotels.HotelStaticInfo.CityId** - идентификатор города у поставщика, в котором расположен отель. Тип данных - строка.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.PosLatitude** - широта местоположения отеля. Тип данных - дробное число.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.PosLongitude** - долгота местоположения отеля. Тип данных - дробное число.
--   **StaticDataInfo.Hotels.HotelStaticInfo.Photos** - контейнер для фотографий отеля. Тип данных - сложный.
+-   **StaticDataInfo.Hotels.HotelStaticInfo.Photos** - контейнер с фотографиями отеля. Тип данных - сложный.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Photos.Photo** - фотография отеля. Тип данных - строка.
--   **StaticDataInfo.Hotels.HotelStaticInfo.Address** - контейнер для адресов отеля. Тип данных - сложный.
+-   **StaticDataInfo.Hotels.HotelStaticInfo.Address** - контейнер с адресами отелей. Тип данных - сложный.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Address.Address** - адрес отеля. Тип данных - строка.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Features** - сервисы отеля. Тип данных - сложный.
--   **StaticDataInfo.Hotels.HotelStaticInfo.Features.Feature** - контейнер для сервиса отеля. Тип данных - сложный.
+-   **StaticDataInfo.Hotels.HotelStaticInfo.Features.Feature** - контейнер с сервисами отеля. Тип данных - сложный.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Features.Feature.Id** - идентификатор сервиса. Тип данных - строка.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Features.Feature.Info** - информация о сервисе. Тип данных - строка.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Description** - описание отеля. Тип данных - строка.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Distances** - расстояния от отеля до важных пунктов. Тип данных - сложный.
--   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance** - контейнер для описание расстояния. Тип данных - сложный.
+-   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance** - контейнер с описанием расстояния. Тип данных - сложный.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance.Type** - тип пункта. Тип данных - строка.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance.Value** - числовое значение расстояния до пункта. Тип данных - целое число.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance.Measurement** - единица измерения расстояния до пункта. Тип данных - строка.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance.TransportType** - тип транспорта. Тип данных - строка.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance.Name** - название пункта. Тип данных - строка.
--   **StaticDataInfo.Hotels.HotelStaticInfo.CustomerRating** - контейнер для рейтинга. Тип данных - сложный.
+-   **StaticDataInfo.Hotels.HotelStaticInfo.CustomerRating** - контейнер с рейтингом. Тип данных - сложный.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.CustomerRating.Room** - рейтинг комнат. Тип данных - дробное число.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.CustomerRating.Facilities** - рейтинг удобств. Тип данных - дробное число.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.CustomerRating.Cleanness** - рейтинг чистоты. Тип данных - дробное число.
