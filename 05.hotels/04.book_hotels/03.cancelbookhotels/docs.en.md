@@ -6,7 +6,7 @@ title: 'CancelBook Request'
 
 #### Request
 
-- **Bookid** - ID of the completed booking. Data type - 32-bit integer.
+- **BookID** - ID of the completed booking. Data type - 32-bit integer.
 
 ##### Sample Request (XML)
 ```xml
