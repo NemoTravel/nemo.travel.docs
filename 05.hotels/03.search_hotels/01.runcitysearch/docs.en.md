@@ -6,7 +6,7 @@ title: 'RunCitySearch Request'
 
 #### Request
 
--   **CheckInDate** - date of the arrival in the room. Data type - string, the format is yyyy-mm-ddthh:mm:ss.
+-   **CheckInDate** - date of the arrival to the room. Data type - string, the format is yyyy-mm-ddthh:mm:ss.
 -   **CheckOutDate** - date of the departure from the room. Data type - string, the format is yyyy-mm-ddthh:mm:ss.
 -   **CityId** - ID of the city for which the search will be executed. Data type - nonnegative 32-bit integer.
 -   **HotelId** - ID of the hotel for which the search will be executed. Data type - nonnegative 32-bit integer .
