@@ -16,8 +16,10 @@ title: 'RunCitySearch Request'
 -   **Rooms.Room.ChidrenCount** - number of children. Data type - unsigned 32-bit integer.
 -   **Rooms.Room.ChildrenAges** - container for indicating the children age. Data type - nonnegative 32-bit integer.
 -   **Rooms.Room.ChildrenAges.Age** - children age in the request. Data type - nonnegative 32-bit integer.
--   **Rooms.CurrencyCode** - 3-letter code of the search results currency. Data type - string.
--   **Rooms.ClientNationality** - 2-letter code of the client’s nationality. Data type - string.
+-   **Rooms.CurrencyCode** - 3-letter currency code of the search results. Data type - string.
+-   **Rooms.ClientNationality** - 2-letter nationality code of the client. Data type - string.
+
+
 
 ##### Sample Request (XML)
   ```xml
