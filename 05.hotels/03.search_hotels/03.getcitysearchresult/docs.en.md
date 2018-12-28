@@ -31,7 +31,7 @@ title: 'GetCitySearchResult Request'
 
 #### Response
 
--   **isFinished** - whether the search is fully completed. Data type - boolean.
+-   **isFinished** - attribute of the search being fully completed. Data type - boolean.
 -   **RoomsRequestData** - contains information on the search request. Data type - custom.
 -   **RoomsRequestData.Room** - container with information on the number of guests. Data type - custom.
 -   **RoomsRequestData.Room.AdultsCount** - number of adult guests. Data type - unsigned 32-bit integer.
@@ -43,7 +43,6 @@ title: 'GetCitySearchResult Request'
 -   **RoomTypesGroup.Type.Id** - ID of the room type within this search result. Data type - unsigned 32-bit integer.
 -   **RoomTypesGroup.Type.Name** - room type name. Data type - string.
 -   **RoomTypesGroup.Type.CommonName** - common name of the room. Data type - string.
-
 -   **RoomMealsGroup** - contains information on the possible types of food. Data type - custom.
 -   **RoomMealsGroup.Meal** - container with information on the type of food. Data type - custom.
 -   **RoomMealsGroup.Meal.Id** - identifies the type of food for this search result. Data type - unsigned 32-bit integer.
@@ -55,7 +54,7 @@ title: 'GetCitySearchResult Request'
 -   **RoomRatesGroup.Rate.Price** - container with currency information. Data type - custom.
 -   **RoomRatesGroup.Rate.Price.Amount** - the amount of the base price. Data type - fractional number.
 -   **RoomRatesGroup.Rate.Price.Currency** - currency code of the base price. Data type - string.
--   **RoomRatesGroup.Rate.IsSpecialOffer** - whether this fare is a special offer. Data type - boolean.
+-   **RoomRatesGroup.Rate.IsSpecialOffer** - attribute of this fare being a special offer. Data type - boolean.
 -   **RoomRatesGroup.Rate.VisaSupportProvided** - hotel visa support. Data type - boolean.
 -   **RoomsGroup** - contains information on various room options. Data type - custom.
 -   **RoomsGroup.Room** - container with room parameters IDs. Data type - custom.
