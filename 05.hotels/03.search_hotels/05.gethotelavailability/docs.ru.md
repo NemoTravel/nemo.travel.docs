@@ -134,7 +134,7 @@ title: 'Запрос GetHotelAvailability'
     -   **Free** - Бесплатно
     -   **AdditionalPrice** - Доплата
 -   **Hotels.Hotel.LateCheckOutGroup** - информация о предлагаемых вариантах позднего выезда из отеля. Тип данных - сложный.
--   **Hotels.Hotel.LateCheckOutGroup.CheckInOutOffer** - контейнер с информацией о варианте. Тип данных - сложный. Идентичен Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer
+-   **Hotels.Hotel.LateCheckOutGroup.CheckInOutOffer** - контейнер с информацией о варианте. Тип данных - сложный. Идентичен **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer**
 
 ##### Пример ответа (XML)
 ```xml

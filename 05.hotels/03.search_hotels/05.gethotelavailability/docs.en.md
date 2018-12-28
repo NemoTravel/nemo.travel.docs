@@ -134,7 +134,7 @@ title: 'GetHotelAvailability Request'
     -   **Free** - Free
     -   **AdditionalPrice** - Additional payment
 -   **Hotels.Hotel.LateCheckOutGroup** - information on the suggested options for late check out. Data type - custom.
--   **Hotels.Hotel.LateCheckOutGroup.CheckInOutOffer** - contains information on the option. Data type - custom. Identical to Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer
+-   **Hotels.Hotel.LateCheckOutGroup.CheckInOutOffer** - contains information on the option. Data type - custom. Identical to **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer**
 
 
 ##### Sample Response (XML)
