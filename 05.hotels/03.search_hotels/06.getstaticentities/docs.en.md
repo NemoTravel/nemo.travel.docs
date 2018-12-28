@@ -13,7 +13,7 @@ Getting statics from the supplier.
     -   **city**
     -   **region**
     -   **country**
--   **IDs** - IDs of the requested objects. Data type - custom.
+-   **IDs** - container with IDs of the requested objects. Data type - custom.
 -   **IDs.ID** - ID of the requested object. Data type - string.
 -   **Language** - language in which statics will be obtained. Data type - string.
 
@@ -56,8 +56,8 @@ Getting statics from the supplier.
   
 #### Response
 
--   **StaticDataInfo** - data received from statics request. Data type - custom.
--   **StaticDataInfo.Countries** - data on countries. Data type - custom.
+-   **StaticDataInfo** - container with data received from statics request. Data type - custom.
+-   **StaticDataInfo.Countries** - container with data on countries. Data type - custom.
 -   **StaticDataInfo.Countries.Country** - container with country data. Data type - string.
 -   **StaticDataInfo.Countries.Country.Id** - supplier’s country ID. Data type - string.
 -   **StaticDataInfo.Countries.Country.Name** - country name. Data type - string.
@@ -75,7 +75,7 @@ Getting statics from the supplier.
 -   **StaticDataInfo.Cities.City.RegionId** - supplier’s ID of the region in which the city is located. Data type - string.
 -   **StaticDataInfo.Cities.City.Latitude** - the latitude of the city’s location. Data type - fractional number.
 -   **StaticDataInfo.Cities.City.Longitude** - longitude of the city’s location. Data type - fractional number.
--   **StaticDataInfo.Hotels** - data on hotels. Data type - custom
+-   **StaticDataInfo.Hotels** - container with hotel data. Data type - custom
 -   **StaticDataInfo.Hotels.HotelStaticInfo** - container with hotel data. Data type - custom.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Id** - supplier’s ID of the hotel. Data type - string.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Name** - hotel name. Data type - string.
@@ -89,12 +89,12 @@ Getting statics from the supplier.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Photos.Photo** - hotel photo. Data type - string.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Address** - container with hotel addresses. Data type - custom. 
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Address.Address** - hotel address. Data type - string.
--   **StaticDataInfo.Hotels.HotelStaticInfo.Features** - hotel services. Data type - custom.
+-   **StaticDataInfo.Hotels.HotelStaticInfo.Features** - container with hotel services. Data type - custom.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Features.Feature** - container with hotel service. Data type - custom.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Features.Feature.Id** - service ID. Data type - string.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Features.Feature.Info** - information on the service. Data type - string.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Description** - hotel description. Data type - string.
--   **StaticDataInfo.Hotels.HotelStaticInfo.Distances** - distance between the hotel and the important points. Data type - custom.
+-   **StaticDataInfo.Hotels.HotelStaticInfo.Distances** - container with distances between the hotel and the important points. Data type - custom.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance** - container with distance description. Data type - custom.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance.Type** - point type. Data type - string.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.Distances.Distance.Value** - numeric value of the distance to the point. Data type - integer.
