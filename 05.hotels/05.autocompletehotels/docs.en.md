@@ -44,16 +44,16 @@ Returns 10 objects for each selected parameter (city, country, hotel), correspon
 #### Response
 
 -   **City** - Container with information on the city. Data type - custom.
--   **City.id** - City ID. Data type - unsigned 32-bit integer.
+-   **City.ID** - City ID. Data type - unsigned 32-bit integer.
 -   **Сity.Name** - Name of the city. Data type - string.
 -   **Сity.СountryCode** - Code of the country to which the city belongs. Data type - string.
 -   **Сity.HotelsCount** - Number of hotels in the city. Data type - unsigned 32-bit integer.
 -   **Countries** - Container with information on the country. Data type - custom.
--   **Country.id** - Country ID. Data type - unsigned 32-bit integer.
+-   **Country.ID** - Country ID. Data type - unsigned 32-bit integer.
 -   **Country.Name** - Name of the country. Data type - string.
 -   **Сountry.Code** - Country Code. Data type - string.
 -   **Hotel** - Container with hotel information. Data type - custom.
--   **Hotel.id** - Hotel ID. Data type - unsigned 32-bit integer.
+-   **Hotel.ID** - Hotel ID. Data type - unsigned 32-bit integer.
 -   **Hotel.Name** - Hotel name. Data type - string.
 -   **Hotel.Category** - Star category of the hotel. Data type - unsigned 32-bit integer.
 -   **Hotel.CountryCode** - Code of the country in which the city and the hotel are located. Data type - string.
