@@ -25,10 +25,10 @@ title: 'Book Request'
 -   **Client.FirstName** - name of the contact person. Data type - string.
 -   **Client.Phone** - phone number of the contact person. Data type - 32-bit integer.
 -   **Client.Email** - email of the contact person. Data type - string.
--   **CheckInParams** - container with information on the selected early check-in option at the hotel from the ones provided in the GetHotelAvailability answer. Data type - custom.
+-   **CheckInParams** - container with information on the selected early check-in option at the hotel from the ones provided in the **GetHotelAvailability** response. Data type - custom.
 -   **CheckInParams.Critical** - criticalness. Data type - boolean.
 -   **CheckInParams.Time** - container with information on the selected time. Data type - complex hh:mm format.
--   **CheckOutParams** - container with information on the selected late check-out option at the hotel from the ones provided in the GetHotelAvailability answer. Data type - custom. Identical to CheckInParams
+-   **CheckOutParams** - container with information on the selected late check-out option at the hotel from the ones provided in the **GetHotelAvailability** response. Data type - custom. Identical to CheckInParams
 
 ##### Sample Request (XML)
 ```xml
