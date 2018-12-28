@@ -10,9 +10,9 @@ Returns 10 objects for each selected parameter (city, country, hotel), correspon
 
 -   **String** - First characters of the hotels’ or cities’ names for autocomplete. Data type - string.
 -   **Language** - Language in which autocomplete will be executed. Valid values are en and ru. Data type- string.
--   **SearchHotels** - Whether to execute autocomplete by hotels. Data type - boolean.
--   **SearchCities** - Whether to execute autocomplete by city. Data type - boolean.
--   **SearchCountries** - Whether to execute autocomplete by country. Data type - boolean.
+-   **SearchHotels** - Attribute of the necessity to execute autocomplete by hotels. Data type - boolean.
+-   **SearchCities** - Attribute of the necessity to execute autocomplete by city. Data type - boolean.
+-   **SearchCountries** - Attribute of the necessity to execute autocomplete by country. Data type - boolean.
 
 ##### Sample Request (XML)
 ```xml
