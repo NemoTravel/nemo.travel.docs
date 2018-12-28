@@ -4,6 +4,8 @@ title: 'Запрос RunCitySearch'
 
 ### RunCitySearch
 
+После отправки запроса результаты выдаются отдельно через запрос getsearchresult. 
+
 #### Запрос
 
 -   **CheckInDate** - дата заезда в номер. Тип данных - строка, формат yyyy-mm-ddthh:mm:ss.
