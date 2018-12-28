@@ -7,7 +7,7 @@ title: 'ConfirmBook Request'
 #### Request
 
 -   **ResponseParameters** - additional information for the response (optional). Data type - custom.
--   **ResponseParameters.SendStaticData** - whether to send static (optional) to the response. Data type - boolean.
+-   **ResponseParameters.SendStaticData** - attribute of the necessity to send static (optional) to the response. Data type - boolean.
 -   **Bookid** - ID of the completed reservation. Data type - 32-bit integer.
 -   **CardInfo** - bank card data (optional). Data type - custom.
 -   **CardInfo.Number** - card number. Data type - string.
