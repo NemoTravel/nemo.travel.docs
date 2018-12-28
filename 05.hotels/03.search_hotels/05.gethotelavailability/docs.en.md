@@ -62,11 +62,11 @@ title: 'GetHotelAvailability Request'
 -   **RoomTypesGroup.Type.Id** - ID of the room type within this search result. Data type - unsigned 32-bit integer.
 -   **RoomTypesGroup.Type.Name** - room type name. Data type - string.
 -   **RoomTypesGroup.Type.CommonName** - common name of the room. Data type - string.
--   **RoomMealsGroup** - contains information on the possible types of food. Data type - custom.
--   **RoomMealsGroup.Meal** - container with information on the type of food. Data type - custom.
--   **RoomMealsGroup.Meal.Id** - identifies the type of food for this search result. Data type - unsigned 32-bit integer.
+-   **RoomMealsGroup** - contains information on the possible meal types. Data type - custom.
+-   **RoomMealsGroup.Meal** - container with information on the meal type. Data type - custom.
+-   **RoomMealsGroup.Meal.Id** - identifies the meal type for this search result. Data type - unsigned 32-bit integer.
 -   **RoomMealsGroup.Meal.MealCode** - meal type code. Data type - string.
--   **RoomMealsGroup.Meal.Name** - name of the food type. Data type - string.
+-   **RoomMealsGroup.Meal.Name** - name of the meal type. Data type - string.
 -   **RoomRatesGroup** - contains information on the cost of rooms. Data type - custom.
 -   **RoomRatesGroup.Rate** - container with information on the cost and rate. Data type - custom.
 -   **RoomRatesGroup.Rate.Id** - rate identifier within this search result. Data type - unsigned integer 32-bit number.
@@ -87,7 +87,7 @@ title: 'GetHotelAvailability Request'
 -   **RoomsGroup.Room** - container with room parameters IDs. Data type - custom.
 -   **RoomsGroup.Room.Id** - room ID. Data type - unsigned 32-bit integer.
 -   **RoomsGroup.Room.TypeId** - room type ID. Data type - unsigned 32-bit integer.
--   **RoomsGroup.Room.MealId** - food type ID. Data type - unsigned 32-bit integer.
+-   **RoomsGroup.Room.MealId** - meal type ID. Data type - unsigned 32-bit integer.
 -   **RoomsGroup.Room.RateId** - fare ID. Data type - unsigned 32-bit integer.
 -   **Hotels** - contains information on the hotels in search results. Data type - custom.
 -   **Hotels.Hotel** - container with information on the hotel. Data type - custom.
