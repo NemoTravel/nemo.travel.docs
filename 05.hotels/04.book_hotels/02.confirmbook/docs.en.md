@@ -6,24 +6,24 @@ title: 'ConfirmBook Request'
 
 #### Request
 
--   **ResponseParameters** - additional information for the response (optional). Data type - custom.
+-   **ResponseParameters** - container with additional information for the response (optional). Data type - custom.
 -   **ResponseParameters.SendStaticData** - attribute of the necessity to send static (optional) to the response. Data type - boolean.
 -   **Bookid** - ID of the completed reservation. Data type - 32-bit integer.
--   **CardInfo** - bank card data (optional). Data type - custom.
+-   **CardInfo** - container with bank card data (optional). Data type - custom.
 -   **CardInfo.Number** - card number. Data type - string.
 -   **CardInfo.Holder** - cardholder. Data type - string.
 -   **CardInfo.Code** - CVC / CVV code. Data type - string.
 -   **CardInfo.Month** - month to which the card is valid. Data type - string.
 -   **CardInfo.Year** - year to which the card is valid. Data type - string.
--   **PaymentProxy** - contains information for proxying the hotel confirmation request (optional, supported only for Travelport and Ostrovok). Data type - custom.
+-   **PaymentProxy** - container with information for proxying the hotel confirmation request (optional, supported only for Travelport and Ostrovok). Data type - custom.
 -   **PaymentProxy.PaymentSystem** - name of the system to which the request will be proxied. Data type - enumeration. Possible values:
 FCm
 -   **PaymentProxy.TransactionID** - payment transaction ID, transmitted to the payment system. Data type - 32-bit integer.
 -   **PaymentProxy.ProxyURL** - URL address of the external system to which the request will be sent. Data type - string.
--   **AdditionalActions** - additional actions that must be performed with the reservation (optional). Data type - custom.
+-   **AdditionalActions** - container with additional actions that must be performed with the reservation (optional). Data type - custom.
 -   **AdditionalActions.HostCommandsToExecute** - set of terminal commands (optional, supported only for Travelport). Data type - array of strings.
 -   **RetPath3ds** - URL to which the user will be redirected after confirming payment via 3-D Secure (required for passing 3-D Secure, only Ostrovok is supported). Data type - string.
--   **EndUserData** - system end user data (optional, but required for the supplier Ostrovok). Data type - custom.
+-   **EndUserData** - container with system end user data (optional, but required for the supplier Ostrovok). Data type - custom.
 -   **EndUserData.EndUserIP** — IP address of the end user. Data type - string.
 -   **EndUserData.EndUserBrowserAgent** — ID of the end-user client software. Data type - string.
 -   **EndUserData.RequestOrigin** — source of the transition. Data type - string.
