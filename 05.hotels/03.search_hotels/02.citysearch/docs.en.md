@@ -88,7 +88,7 @@ Same as the request of the following format: [RunCitySearch](/hotels/search_hote
 -   **RoomRatesGroup.Rate.Price** - container with currency information. Data type - custom.
 -   **RoomRatesGroup.Rate.Price.Amount** - base price amount. Data type - fractional number.
 -   **RoomRatesGroup.Rate.Price.Currency** - currency code of the base price. Data type - string.
--   **RoomRatesGroup.Rate.IsSpecialOffer** - whether this fare is a special offer. Data type - boolean.
+-   **RoomRatesGroup.Rate.IsSpecialOffer** - attribute of fare being a special offer. Data type - boolean.
 -   **RoomRatesGroup.Rate.VisaSupportProvided** - hotel visa support. Data type - boolean.
 -   **RoomRatesGroup.Rate.Availability** - room availability. Data type - string.
 -   **RoomsGroup** - contains information on various room options. Data type - custom.
