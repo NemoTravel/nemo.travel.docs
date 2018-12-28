@@ -51,7 +51,7 @@ title: 'GetHotelAvailability Request'
 #### Response
 
 -   **SearchId** - ID of a completed search. Data type - 32-bit integer.
--   **RoomsRequestData**** - contains information on the search request. Data type - custom.
+-   **RoomsRequestData** - contains information on the search request. Data type - custom.
 -   **RoomsRequestData.Room** - container with information on the number of guests. Data type - custom.
 -   **RoomsRequestData.Room.AdultsCount** - number of adult guests. Data type - unsigned 32-bit integer.
 -   **RoomsRequestData.Room.ChidrenCount** - number of children. Data type - unsigned 32-bit integer.
