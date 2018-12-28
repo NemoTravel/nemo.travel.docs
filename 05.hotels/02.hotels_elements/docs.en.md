@@ -18,7 +18,7 @@ All the requests and responses of the hotel server have a certain set of common 
 -   **RequestBody** - body of the request to the server. Data type - custom.
 -   **RequestBody.ResponseParameters** - response parameters. Data type - custom.
 -   **RequestBody.ResponseParameters.Language** - response language. Data type - string.
--   **RequestBody.ResponseParameters.SendStaticData** - whether to return the static in the response. Data type - boolean.
+-   **RequestBody.ResponseParameters.SendStaticData** - Attribute of the necessity to return the static in the response. Data type - boolean.
 -   
 #### Response
 
