@@ -14,7 +14,7 @@ All the requests and responses of the hotel server have a certain set of common 
     -   **0 (U)** - user (default)
     -   **1 (F)** - background
     -   **2 (S)** - scheduled
--   **UserID** - ID of the user who wants to make a request to the server. Data type - nonnegative 32-bit integer.
+-   **UserID** - user ID. Data type - nonnegative 32-bit integer. 
 -   **RequestBody** - container with the body of the request to the server. Data type - custom.
 -   **RequestBody.ResponseParameters** - container with response parameters. Data type - custom.
 -   **RequestBody.ResponseParameters.Language** - response language. Data type - string.
