@@ -80,14 +80,14 @@ If the order wasn't issued, the order will be canceled, otherwise a void attempt
 -    **TicketDocInfos.TicketDocInfo.NumberofBooklets** - number of tickets issued per passenger. Data type - integer.
 -    **TicketDocInfos.TicketDocInfo.ReportingType** - type of ticketing contract (BSP, ARC, Airline).
 
-##### Sample cancelled order response
+##### Example cancelled order response
 
 >  If the order is canceled successfully, the response only contains the booking number.
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
    <s:Header>
-      <h:ResponseID xmlns:h="http://nemo.travel/AviaNDC" xmlns="http://nemo.travel/AviaNDC">144227053</h:ResponseID>
+      <h:ResponseID xmlns:h="http://nemo.travel/AviaNDC" xmlns="http://nemo.travel/AviaNDC">144221111</h:ResponseID>
    </s:Header>
    <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <OrderCancelRS Target="Prod" Version="17.2" xmlns="http://www.iata.org/IATA/EDIST/2017.2">
@@ -103,7 +103,7 @@ If the order wasn't issued, the order will be canceled, otherwise a void attempt
    </s:Body>
 </s:Envelope>
 ```
-#### Sample voided order response
+#### Example voided order response
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
@@ -151,7 +151,7 @@ If the order wasn't issued, the order will be canceled, otherwise a void attempt
         </s:Body>
     </s:Envelope>
 ```
-#### Sample refund response
+#### Example refund response
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
