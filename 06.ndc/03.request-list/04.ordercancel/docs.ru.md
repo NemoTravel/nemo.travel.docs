@@ -56,8 +56,8 @@ title: OrderCancel
    </soapenv:Body>
 </soapenv:Envelope>
 ```
-#### Ответ
 
+#### Ответ
 -	**OrderCancelRS.Response.OrderReference** - содержит уникальный идентификатор заказа.
 -	**OrderCancelRS.Response.ChangeFees** - сборы, взимаемые при выполнении операции. Тип данных — сложный.
 -	**ChangeFees.Details.Detail.Type** - содержит возможные значения:
