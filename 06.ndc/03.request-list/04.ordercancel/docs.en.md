@@ -59,6 +59,7 @@ If the order wasn't issued, the order will be canceled, otherwise a void attempt
 ```
 
 #### Response
+
 -    **OrderCancelRS.Response.OrderReference** - contains the unique order ID.
 -    **OrderCancelRS.OrderCancelProcessing.Remarks.Remark** - amount to be returned. Data type - string.
 -    **OrderCancelRS.Response.ChangeFees** - fees charged during the operation. Data type - custom.
