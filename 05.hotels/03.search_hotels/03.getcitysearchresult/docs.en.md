@@ -55,7 +55,7 @@ title: 'GetCitySearchResult Request'
 -   **RoomRatesGroup.Rate.Price.Amount** - the amount of the base price. Data type - fractional number.
 -   **RoomRatesGroup.Rate.Price.Currency** - currency code of the base price. Data type - string.
 -   **RoomRatesGroup.Rate.IsSpecialOffer** - attribute of this fare being a special offer. Data type - boolean.
--   **RoomRatesGroup.Rate.VisaSupportProvided** - hotel visa support. Data type - boolean.
+-   **RoomRatesGroup.Rate.VisaSupportProvided** - attribute of hotel visa support. Data type - boolean.
 -   **RoomsGroup** - container with information on various room options. Data type - custom.
 -   **RoomsGroup.Room** - container with room parameters IDs. Data type - custom.
 -   **RoomsGroup.Room.ID** - room ID. Data type - unsigned 32-bit integer.
