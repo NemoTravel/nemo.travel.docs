@@ -74,7 +74,7 @@ title: 'GetHotelAvailability Request'
 -   **RoomRatesGroup.Rate.Price.Amount** - the amount of the base price. Data type - fractional number.
 -   **RoomRatesGroup.Rate.Price.Currency** - currency code of the base price. Data type - string.
 -   **RoomRatesGroup.Rate.IsSpecialOffer** - attribute of this fare being a special offer. Data type - boolean.
--   **RoomRatesGroup.Rate.VisaSupportProvided** - hotel visa support. Data type - boolean.
+-   **RoomRatesGroup.Rate.VisaSupportProvided** - attribute of hotel visa support. Data type - boolean.
 -   **RoomRatesGroup.Rate.IsNonRefundable** - attribute of returnability. Data type - boolean.
 -   **RoomRatesGroup.Rate.BookingRemarks** - remarks. Data type - custom.
 -   **RoomRatesGroup.Rate.CancellationRules** - cancellation rules. Data type - custom.
@@ -128,7 +128,7 @@ title: 'GetHotelAvailability Request'
 -   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Price.Amount** - price amount. Data type - fractional number.
 -   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Price.Currency** - currency code. Data type - string.
 -   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Description** - additional information. Data type - string.
--   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Guaranteed** - contains information on the attribute of a guaranteed service. Data type - boolean.
+-   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Guaranteed** - attribute of a guaranteed service. Data type - boolean.
 -   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.PriceRule** - rules by which the service is provided. Data type - enumeration, possible values:
     -   **Unknown** - Unknown
     -   **Free** - Free
