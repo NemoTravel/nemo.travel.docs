@@ -31,7 +31,7 @@ Similar to the previous version of BookFlight_2_0, the difference is only in the
           </ns3:AncillaryServices>
  ```         
 
-- **AncillaryServices** - The list of ancillary services for booking (optional). The data type is an array.
+- **AncillaryServices** - The list of ancillary services for booking (optional). The custom data type.
 - **AncillaryServices.AncillaryService** - The ancillary service. The custom data type.
 - **AncillaryServices.AncillaryService.ID** - The ID of the variable ancillary service (not taken into account when booking). The data type is int.
 - **AncillaryServices.AncillaryService.RFIC** - RFIC of ancillary service. The data type is a string.
