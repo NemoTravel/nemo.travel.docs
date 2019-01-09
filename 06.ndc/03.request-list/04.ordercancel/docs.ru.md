@@ -22,6 +22,7 @@ title: OrderCancel
 -	**OrderCancelRQ.OrderCancelParameters.Reason** - тип возврата, возможно задать следующие значения:
 -	-	**7** - вынужденный;
 -	-	**8** - добровольный. 
+	
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avi="http://nemo.travel/AviaNDC" xmlns:ns="http://www.iata.org/IATA/EDIST/2017.2">
    <soapenv:Header>
