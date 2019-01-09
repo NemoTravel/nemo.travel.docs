@@ -56,3 +56,144 @@ title: OrderCancel
    </soapenv:Body>
 </soapenv:Envelope>
 ```
+#### Ответ
+
+-	**OrderCancelRS.Response.OrderReference** - содержит уникальный идентификатор заказа.
+-	**OrderCancelRS.Response.ChangeFees** - сборы, взимаемые при выполнении операции. Тип данных — сложный.
+-	**ChangeFees.Details.Detail.Type** - содержит возможные значения:
+-	- **Voided** - войдирован. При войдировании билетов устанавливается тип Voided.
+-	- **Refunded** - возвращен. При возврате билетов устанавливается тип Refunded.
+-	**ChangeFees.Details.Detail.Amounts** - содержит информацию о взимаемом сборе. Тип данных — сложный.
+-	**ChangeFees.Details.Detail.Amounts.CurrencyAmountValue** - сумма взимаемого сбора. Тип данных - десятичное дробное число. Содержит два атрибута: 
+-	- **Code** — код валюты, тип данных — строка.
+-	- **Taxable** — облагаемый налогом (по умолчанию false), тип данных — булевый.
+-	**OrderCancelRS.TicketDocInfos** - сведения об электронных документах. Тип данных — массив.
+-	**TicketDocInfos.TicketDocInfo** - сведения об электронном документе. Тип данных — сложный.
+-	**TicketDocInfos.TicketDocInfo.TicketDocNbr** - номер электронного документа. Тип данных — строка.
+-	**TicketDocInfos.TicketDocInfo.Type** - тип электронного документа. Тип данных — строка. Возможные значения:
+-	- **T** - Ticket;
+-	- **J** - EMD A;
+-	- **Y** - EMD S;
+-	- **700** - Other document;
+-	**TicketDocInfos.TicketDocInfo.NumberofBooklets** - число выписанных билетов на пассажира. Тип данных — целое число.
+-	**TicketDocInfos.TicketDocInfo.ReportingType** - тип контракта выписки (BSP, ARC, Airline).
+
+##### Пример ответа аннулированного заказа
+
+>  При успешной отмене заказа ответ содержит только номер бронирования.
+
+```xml
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Header>
+      <h:ResponseID xmlns:h="http://nemo.travel/AviaNDC" xmlns="http://nemo.travel/AviaNDC">144227053</h:ResponseID>
+   </s:Header>
+   <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <OrderCancelRS Target="Prod" Version="17.2" xmlns="http://www.iata.org/IATA/EDIST/2017.2">
+         <Document>
+            <Name>NEMO NDC GATEWAY</Name>
+            <ReferenceVersion>1.0</ReferenceVersion>
+         </Document>
+         <Success/>
+         <Response>
+            <OrderReference>ORD612623</OrderReference>
+         </Response>
+      </OrderCancelRS>
+   </s:Body>
+</s:Envelope>
+```
+#### Пример ответа войдированного заказа
+
+```xml
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+	<s:Header>
+		<h:ResponseID xmlns:h="http://nemo.travel/AviaNDC" xmlns="http://nemo.travel/AviaNDC">144227098</h:ResponseID>
+	</s:Header>
+	<s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<OrderCancelRS Target="Prod" Version="17.2" xmlns="http://www.iata.org/IATA/EDIST/2017.2">
+				<Document xmlns="http://www.iata.org/IATA/EDIST/2017.2">
+					<Name>NEMO NDC GATEWAY</Name>
+					<ReferenceVersion>1.0</ReferenceVersion>
+				</Document>
+				<Success xmlns="http://www.iata.org/IATA/EDIST/2017.2" />
+				<Response xmlns="http://www.iata.org/IATA/EDIST/2017.2">
+					<OrderReference>ORD610777</OrderReference>
+					<ChangeFees>
+						<Details>
+							<Detail>
+								<Type>Voided</Type>
+								<Amounts>
+									<Amount>
+										<CurrencyAmountValue Code="USD" Taxable="false">0.0</CurrencyAmountValue>
+									</Amount>
+								</Amounts>
+							</Detail>
+						</Details>
+					</ChangeFees>
+					<TicketDocInfos>
+						<TicketDocInfo>
+							<FareInfo>
+								<Total>
+									<Amount Code="USD" Taxable="false">336.4</Amount>
+								</Total>
+							</FareInfo>
+							<TicketDocument>
+								<TicketDocNbr>5557208883582</TicketDocNbr>
+								<Type>T</Type>
+								<NumberofBooklets>1</NumberofBooklets>
+								<ReportingType>BSP</ReportingType>
+							</TicketDocument>
+						</TicketDocInfo>
+					</TicketDocInfos>
+				</Response>
+			</OrderCancelRS>
+		</s:Body>
+	</s:Envelope>
+```
+#### Пример ответа при возврате билетов
+
+```xml
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+	<s:Header>
+		<h:ResponseID xmlns:h="http://nemo.travel/AviaNDC" xmlns="http://nemo.travel/AviaNDC">144212553</h:ResponseID>
+	</s:Header>
+	<s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<OrderCancelRS Target="Prod" Version="17.2" xmlns="http://www.iata.org/IATA/EDIST/2017.2">
+			<Document xmlns="http://www.iata.org/IATA/EDIST/2017.2">
+				<Name>NEMO NDC GATEWAY</Name>
+				<ReferenceVersion>1.0</ReferenceVersion>
+			</Document>
+			<Success xmlns="http://www.iata.org/IATA/EDIST/2017.2" />
+			<Response xmlns="http://www.iata.org/IATA/EDIST/2017.2">
+				<OrderCancelProcessing>
+					<Remarks>
+						<Remark>Total refunded: 0</Remark>
+					</Remarks>
+				</OrderCancelProcessing>
+				<OrderReference>ORD611264</OrderReference>
+				<ChangeFees>
+					<Details>
+						<Detail>
+							<Type>Refunded</Type>
+							<Amounts>
+								<Amount>
+									<CurrencyAmountValue Code="KZT" Taxable="false">245460</CurrencyAmountValue>
+								</Amount>
+							</Amounts>
+						</Detail>
+					</Details>
+				</ChangeFees>
+				<TicketDocInfos>
+					<TicketDocInfo>
+						<TicketDocument>
+							<TicketDocNbr>4652402475954</TicketDocNbr>
+							<Type>T</Type>
+							<NumberofBooklets>1</NumberofBooklets>
+							<ReportingType>BSP</ReportingType>
+						</TicketDocument>
+					</TicketDocInfo>
+				</TicketDocInfos>
+			</Response>
+		</OrderCancelRS>
+	</s:Body>
+</s:Envelope>
+```
