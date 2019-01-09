@@ -15,7 +15,7 @@ Order update with the synchronization in the GDS and without one.
 -  **Filters.OrderID** - unique order ID in Nemo Connect. Owner attribute contains the owner code (GDS). 
 
 
-##### Sample 
+##### Example 
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avi="http://nemo.travel/AviaNDC" xmlns:ns="http://www.iata.org/IATA/EDIST/2017.2">
    <soapenv:Header>
