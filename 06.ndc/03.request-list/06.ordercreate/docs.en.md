@@ -105,6 +105,8 @@ The operation of creating an order.
 	-	**SS** - Seaman/ Sailor;
 	-	**F1** - Other Documents;
 	-	**VI** - Visa.
+> Visa is specified in the separate IdentityDocument block. This block contains the following set of elements: IdentityDocumentNumber, IdentityDocumentType, IssuingCountryCode, IssueDate - date of issue, Birthplace - owner's place of birth, Visa.VisaNumber - Visa number, Visa.VisaHostCountryCode - ISO code of the country where the visa is valid. Example of  filling in the visa is represented below. 
+
 -  **PassengerList.Passenger.IdentityDocument.IssuingCountryCode** - document country of issue code. Data type - string.
 -  **PassengerList.Passenger.IdentityDocument.ExpiryDate** - document validity period. The format is "yyyy-mm-dd".
 -  **PassengerList.Passenger.ContactInfoRef** - reference to the passenger contact data from DataLists.ContactList. CTC prefix required.
