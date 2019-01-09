@@ -18,7 +18,10 @@ title: OrderCancel
 -	**Query.Order** - содержит идентификатор заказа, который требуется отменить. Включает два обязательных атрибута:
 -	-	**OrderID** - уникальный идентификатор заказа в Nemo Cpnnect;
 -	-	**Owner** - код ГРС. Тип данных — строка.
-
+-	**OrderCancelRQ.OrderCancelParameters** - определят тип возврата. Параметр не обязателен, по умолчанию считаем возврат - добровольным.
+-	**OrderCancelRQ.OrderCancelParameters.Reason** - тип возврата, возможно задать следующие значения:
+-	-	**7** - вынужденный;
+-	-	**8** - добровольный. 
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avi="http://nemo.travel/AviaNDC" xmlns:ns="http://www.iata.org/IATA/EDIST/2017.2">
    <soapenv:Header>
@@ -43,6 +46,9 @@ title: OrderCancel
                </ns:TravelAgencySender>            
             </ns:Sender>
         </ns:Party>
+        <ns:OrderCancelParameters>
+        		<ns:Reason>8</ns:Reason>
+        </ns:OrderCancelParameters>
          <ns:Query>
             <ns:Order OrderID="ORD610299" Owner="1W"/>
          </ns:Query>
