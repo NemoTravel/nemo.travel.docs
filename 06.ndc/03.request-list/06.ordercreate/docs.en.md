@@ -328,6 +328,38 @@ The operation of creating an order.
 	</soapenv:Body>
 </soapenv:Envelope>
 ```
+##### Sample Visa fill-in
+
+```xml
+						<ns:Passenger PassengerID="PAX1">
+							<ns:PTC>ADT</ns:PTC>
+							<ns:CitizenshipCountryCode>RU</ns:CitizenshipCountryCode>
+							<ns:Individual>
+								<ns:Birthdate>1981-04-04</ns:Birthdate>
+								<ns:Gender>Male</ns:Gender>
+								<ns:GivenName>IEN</ns:GivenName>
+								<ns:MiddleName>TVERTII</ns:MiddleName>
+								<ns:Surname>CHE</ns:Surname>
+							</ns:Individual>
+							<ns:IdentityDocument>
+								<ns:IdentityDocumentNumber>499999994</ns:IdentityDocumentNumber>
+								<ns:IdentityDocumentType>PT</ns:IdentityDocumentType>
+								<ns:IssuingCountryCode>RU</ns:IssuingCountryCode>
+								<ns:ExpiryDate>2039-08-15</ns:ExpiryDate>
+							</ns:IdentityDocument>
+							<ns:IdentityDocument>
+								<ns:IdentityDocumentNumber>499999994</ns:IdentityDocumentNumber>							
+								<ns:IdentityDocumentType>VI</ns:IdentityDocumentType>
+								<ns:IssuingCountryCode>RU</ns:IssuingCountryCode>																
+								<ns:IssueDate>2018-12-01</ns:IssueDate>
+								<ns:Birthplace>RU</ns:Birthplace>
+								<ns:Visa>
+									<ns:VisaNumber>007544444</ns:VisaNumber>
+									<ns:VisaHostCountryCode>DE</ns:VisaHostCountryCode>
+								</ns:Visa>
+							</ns:IdentityDocument>
+						</ns:Passenger>
+```
 
 #### Response
 
