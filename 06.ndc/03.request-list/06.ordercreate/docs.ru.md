@@ -105,6 +105,7 @@ title: OrderCreate
 	-	**SS** - Seaman/ Sailor;
 	-	**F1** - Other Documents;
 	-	**VI** - Visa.
+
 > Виза указывается в отдельном блоке IdentityDocument. Данный блок содержит следующий набор элементов: IdentityDocumentNumber, IdentityDocumentType, IssuingCountryCode, IssueDate - дата выдачи, Birthplace - место рождения владельца, Visa.VisaNumber - номер визы, Visa.VisaHostCountryCode - код страны ISO, где виза действительна. Ниже представлен пример заполнения визы.
  
 -	**PassengerList.Passenger.IdentityDocument.IssuingCountryCode** - код страны, выдавшей документ. Тип данных - строка.
