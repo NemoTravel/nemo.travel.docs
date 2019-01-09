@@ -26,7 +26,7 @@ title: 'Book Request'
 -   **Client.Phone** - phone number of the contact person. Data type - 32-bit integer.
 -   **Client.Email** - email of the contact person. Data type - string.
 -   **CheckInParams** - container with information on the selected early check-in option at the hotel from the ones provided in the **GetHotelAvailability** response. Data type - custom.
--   **CheckInParams.Critical** - criticalness. Data type - boolean.
+-   **CheckInParams.Critical** - attribute of criticalness. Data type - boolean.
 -   **CheckInParams.Time** - container with information on the selected time. Data type - complex hh:mm format.
 -   **CheckOutParams** - container with information on the selected late check-out option at the hotel from the ones provided in the **GetHotelAvailability** response. Data type - custom. Identical to CheckInParams
 
@@ -111,9 +111,9 @@ title: 'Book Request'
 -   **Rooms.HotelRoom.Price** - container with payment information. Data type - custom.
 -   **Rooms.HotelRoom.Price.Amount** - payment amount. Data type - 32-bit integer.
 -   **Rooms.HotelRoom.Price.Currency** - 3-letter currency code. Data type - string.
--   **Rooms.HotelRoom.IsSpecialOffer** - attribute of special offers availbilty. Data type - boolean.
--   **Rooms.HotelRoom.VisaSupportProvided** - visa support. Data type - boolean.
--   **Rooms.HotelRoom.IsNonRefundable** - contains an attribute of the possibility of a refund for the booked room. Data type - boolean.
+-   **Rooms.HotelRoom.IsSpecialOffer** - attribute of special offers availability. Data type - boolean.
+-   **Rooms.HotelRoom.VisaSupportProvided** - attribute of visa support availability. Data type - boolean.
+-   **Rooms.HotelRoom.IsNonRefundable** - attribute of the possibility of a refund for the booked room. Data type - boolean.
 -   **Rooms.HotelRoom.BookingRemarks** - remarks to the completed booking. Data type - string.
 -   **Rooms.HotelRoom.CancellationRuled** - booking cancellation policy. Data type - string.
 -   **Rooms.HotelRoom.Guests** - container with information on the guests. Data type - custom.
