@@ -31,7 +31,7 @@ taxonomy:
             </ns3:AncillaryService>
           </ns3:AncillaryServices>
  ```         
--   **AncillaryServices** - Список дополнительных услуг для бронирования (необязательный). Тип данных - массив.
+-   **AncillaryServices** - Список дополнительных услуг для бронирования (необязательный). Тип данных - сложный.
 -   **AncillaryServices.AncillaryService** - Дополнительная услуга. Тип данных - сложный.
 -   **AncillaryServices.AncillaryService.ID** - идентификатор изменяемой дополнительной услуги (Не учитывается при бронировании). Тип данных - int.
 -   **AncillaryServices.AncillaryService.RFIC** - RFIC дополнительной услуги. Тип данных - строка.
