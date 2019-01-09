@@ -60,6 +60,7 @@ title: OrderCancel
 
 #### Ответ
 -	**OrderCancelRS.Response.OrderReference** - содержит уникальный идентификатор заказа.
+-	**OrderCancelRS.OrderCancelProcessing.Remarks.Remark** - сумма к возврату. Тип данных — строка.
 -	**OrderCancelRS.Response.ChangeFees** - сборы, взимаемые при выполнении операции. Тип данных — сложный.
 -	**ChangeFees.Details.Detail.Type** - содержит возможные значения:
 -	- **Voided** - войдирован. При войдировании билетов устанавливается тип Voided.
@@ -167,17 +168,17 @@ title: OrderCancel
 			<Response xmlns="http://www.iata.org/IATA/EDIST/2017.2">
 				<OrderCancelProcessing>
 					<Remarks>
-						<Remark>Total refunded: 0</Remark>
+						<Remark>Total refunded: 11910,29</Remark>
 					</Remarks>
 				</OrderCancelProcessing>
-				<OrderReference>ORD611264</OrderReference>
+				<OrderReference>ORD611010</OrderReference>
 				<ChangeFees>
 					<Details>
 						<Detail>
 							<Type>Refunded</Type>
 							<Amounts>
 								<Amount>
-									<CurrencyAmountValue Code="KZT" Taxable="false">245460</CurrencyAmountValue>
+									<CurrencyAmountValue Code="KZT" Taxable="false">3200</CurrencyAmountValue>
 								</Amount>
 							</Amounts>
 						</Detail>
@@ -186,7 +187,7 @@ title: OrderCancel
 				<TicketDocInfos>
 					<TicketDocInfo>
 						<TicketDocument>
-							<TicketDocNbr>4652402475954</TicketDocNbr>
+							<TicketDocNbr>4652402415544</TicketDocNbr>
 							<Type>T</Type>
 							<NumberofBooklets>1</NumberofBooklets>
 							<ReportingType>BSP</ReportingType>
