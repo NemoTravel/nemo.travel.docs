@@ -90,7 +90,7 @@ title: OrderCreate
 -	**PassengerList.Passenger.LoyaltyProgramAccount.Airline** - сведения о карте лояльности авикомпании. Тип данных - сложный.
 -	**PassengerList.Passenger.LoyaltyProgramAccount.Airline.AirlineDesignator** - IATA код авиакомпании. Тип данных - строка.
 -	**PassengerList.Passenger.LoyaltyProgramAccount.AccountNumber** - номер карты лояльности.
--	**PassengerList.Passenger.IdentityDocument** - сведения о документе, удостверяющем личность. Тип данных - сложный.
+-	**PassengerList.Passenger.IdentityDocument** - сведения о документе, удостверяющем личность.  Тип данных - сложный.
 -	**PassengerList.Passenger.IdentityDocument.IdentityDocumentNumber** - номер документа (обязательный).
 -	**PassengerList.Passenger.IdentityDocument.IdentityDocumentType** - тип документа, возможные значения:
 	-	**PT** - Passport;
@@ -105,6 +105,8 @@ title: OrderCreate
 	-	**SS** - Seaman/ Sailor;
 	-	**F1** - Other Documents;
 	-	**VI** - Visa.
+> Виза указывается в отдельном блоке IdentityDocument. Данный блок содержит следующий набор элементов: IdentityDocumentNumber, IdentityDocumentType, IssuingCountryCode, IssueDate - дата выдачи, Birthplace - место рождения владельца, Visa.VisaNumber - номер визы, Visa.VisaHostCountryCode - код страны ISO, где виза действительна. Ниже представлен пример заполнения визы.
+ 
 -	**PassengerList.Passenger.IdentityDocument.IssuingCountryCode** - код страны, выдавшей документ. Тип данных - строка.
 -	**PassengerList.Passenger.IdentityDocument.ExpiryDate** - срок действия документа. Формат "YYYY-MM-DD".
 -	**PassengerList.Passenger.ContactInfoRef** - ссылка на контактные данные пассажира из DataLists.ContactList. Обязательный префикс CTC.
@@ -325,6 +327,38 @@ title: OrderCreate
 		</ns:OrderCreateRQ>
 	</soapenv:Body>
 </soapenv:Envelope>
+```
+##### Пример заполнения визы
+
+```xml
+						<ns:Passenger PassengerID="PAX1">
+							<ns:PTC>ADT</ns:PTC>
+							<ns:CitizenshipCountryCode>RU</ns:CitizenshipCountryCode>
+							<ns:Individual>
+								<ns:Birthdate>1981-04-04</ns:Birthdate>
+								<ns:Gender>Male</ns:Gender>
+								<ns:GivenName>IEN</ns:GivenName>
+								<ns:MiddleName>TVERTII</ns:MiddleName>
+								<ns:Surname>CHE</ns:Surname>
+							</ns:Individual>
+							<ns:IdentityDocument>
+								<ns:IdentityDocumentNumber>499999994</ns:IdentityDocumentNumber>
+								<ns:IdentityDocumentType>PT</ns:IdentityDocumentType>
+								<ns:IssuingCountryCode>RU</ns:IssuingCountryCode>
+								<ns:ExpiryDate>2039-08-15</ns:ExpiryDate>
+							</ns:IdentityDocument>
+							<ns:IdentityDocument>
+								<ns:IdentityDocumentNumber>499999994</ns:IdentityDocumentNumber>							
+								<ns:IdentityDocumentType>VI</ns:IdentityDocumentType>
+								<ns:IssuingCountryCode>RU</ns:IssuingCountryCode>																
+								<ns:IssueDate>2018-12-01</ns:IssueDate>
+								<ns:Birthplace>RU</ns:Birthplace>
+								<ns:Visa>
+									<ns:VisaNumber>007544444</ns:VisaNumber>
+									<ns:VisaHostCountryCode>DE</ns:VisaHostCountryCode>
+								</ns:Visa>
+							</ns:IdentityDocument>
+						</ns:Passenger>
 ```
 
 #### Ответ
