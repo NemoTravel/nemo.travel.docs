@@ -12,7 +12,7 @@ An operation to create a flight booking working with a 2.2 booking structure. Th
 
 Similar to the previous version of BookFlight_2_0, the difference is only in the ancillary services block:
 
-#### Sample container with ancillary services from the BookFlight_2_1 request.
+#### Sample container with ancillary services from the BookFlight_2_2 request.
 ```xml
  		  <ns3:AncillaryServices>
             <ns3:AncillaryService>
