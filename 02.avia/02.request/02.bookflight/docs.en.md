@@ -6,7 +6,7 @@ taxonomy:
 ---
 
 ### BookFlight_2_2
-An operation to create a flight booking working with a 2.2 booking structure. Current version of the request BookFlight.
+An operation to create a flight booking working with a 2.2 booking structure. The latest version of the request BookFlight.
 
 #### Request
 
