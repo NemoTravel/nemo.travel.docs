@@ -40,8 +40,8 @@ taxonomy:
 
 #### Ответ
 
--   **Conversions** - Курсы указанной валюты. Тип данных - сложный.
--   **Conversions.Conversion** - Курс валюты. Тип данных - сложный.
+-   **Conversions** - Курсы указанной валюты. Тип данных - массив.
+-   **Conversions.Conversion** - Курс валюты. Тип данных - массив.
 -   **Conversions.Conversion.CurrencyCode** - Код валюты, чей курс указан. Тип данных - ISO Alpha3 строка.
 -   **Conversions.Conversion.Rate** - Курс указанной валюты. Тип данных - 32битное число с плавающей точкой.
 

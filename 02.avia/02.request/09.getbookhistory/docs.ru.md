@@ -43,11 +43,11 @@ taxonomy:
 
 -   **BookID** - ИД брони, которую требуется отменить. Тип данных - целое 64 битное число.
 -   **PNRCode** - Код брони в ГДС. Тип данных - строка.
--   **HistoryElements** - Контейнер для элементов истории брони. Тип данных - сложный.
--   **HistoryElements.HistoryElement** - Элемент истории брони. Тип данных - сложный. Встречается 1 и более раз.
+-   **HistoryElements** - Контейнер для элементов истории брони. Тип данных - массив.
+-   **HistoryElements.HistoryElement** - Элемент истории брони. Тип данных - массив. Встречается 1 и более раз.
 -   **HistoryElements.HistoryElement.DateTime** - Дата и время изменения брони в формате yyyy-MM-ddTHH:mm:ss. Тип данных - строка.
 -   **HistoryElements.HistoryElement.ChangeSource** - Источник изменения. Тип данных - строка.
--   **HistoryElements.HistoryElement.HistoryRemarks** - Контейнер для ремарок изменений. Тип данных - сложный.
+-   **HistoryElements.HistoryElement.HistoryRemarks** - Контейнер для ремарок изменений. Тип данных - массив.
 -   **HistoryElements.HistoryElement.HistoryRemarks.HistoryRemark** - Ремарка изменения. Тип данных - строка. Встречается 1 и более раз.
 
 ##### Пример
