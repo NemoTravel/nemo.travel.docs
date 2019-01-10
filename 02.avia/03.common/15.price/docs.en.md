@@ -12,12 +12,12 @@ Contains the full information about the price and its formation for the reservat
 
 -   **TotalPrice** - The total cost of this reservation or order in the agent's selling currency. The data type is [Money](/avia/common/money).
 -   **ExpectedTicketCount** - The expected number of tickets to be issued for this reservation. The data type is int32.
--   **FOPPrices** - Contains the price difference for specific FOPs relative to the price of the reservation without specifying the planned FOP. The custom data type.
+-   **FOPPrices** - Contains the price difference for specific FOPs relative to the price of the reservation without specifying the planned FOP. The array data type.
 -   **FOPPrices.FOPPrice** - Contains the price difference for a particular FOP relative to the price of the reservation without specifying the planned FOP. The data type is an array.
 -   **FOPPrices.FOPPrice.FOP** - FOP, for which the price difference is represented. The data type is a string.
 -   **FOPPrices.FOPPrice.Price** - The price difference for this FOP. The data type is [Money](/avia/common/money).
 -   **PriceBreakdown** - The breackdown with the formation of the price of the object. The data type is the PricePart array.
--   **PricePart** - The part of the price of the object, usually for one of the services in this order. The custom data type.
+-   **PricePart** - The part of the price of the object, usually for one of the services in this order. The array data type.
 -   **PricePart.ServiceRef** - A reference to the services in the reservation / order for which this price applies. Not indicated if the price applies to all services in the reservation / order. The data type is [Reflist](/avia/common/reflist).
 -   **PricePart.SegmentRef** - A reference to the flight segments to which this price applies. Specificity of issuing several tickets for one flight. The data type is [Reflist](/avia/common/reflist).
 -   **PricePart.TotalPrice** - The total cost of this part of the price. The data type is [Money](/avia/common/money).
@@ -31,8 +31,8 @@ Contains the full information about the price and its formation for the reservat
 -   **PricePart.PassengerTypePriceBreakdown** - VI. The data type is the PassengerTypePrice array.
 -   **PricePart.AgencyMarkup** - The amount of charge for the whole fight. The data type is [Money](/avia/common/money).
 -   **PricePart.ChargeBreakdown** -  Contains a breakdown of charg from pricing rules.  The data type is [ChargeBreakdown](/avia/common/chargebreakdown).
--   **PricePart.PricingDebug.RulesDebugInfo** - The list of results of checking pricing rules. The custom data type.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData** - The result of checking the pricing rule. The custom data type.
+-   **PricePart.PricingDebug.RulesDebugInfo** - The list of results of checking pricing rules. The array data type.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData** - The result of checking the pricing rule. The array data type.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ID** - The rule ID. The data type is int32.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ValCompany** - The validating carrier. The data type is a string.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Commission** - The airline commission (as specified in the rule). The data type is a string.
@@ -53,26 +53,26 @@ Contains the full information about the price and its formation for the reservat
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.IsAutoticketingDisabled** - A sign that you need to turn off auto ticketing. The data type is bool.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BestRule** - A sign of the most appropriate rule. The data type is bool.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Success** - A sign of the passage of all checks by the rule. The data type is bool.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults** - The list of rule verification results. The custom data type.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check** - The result of checking. The custom data type.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults** - The list of rule verification results. The array data type.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check** - The result of checking. The array data type.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Name** - The name of the parameter to be checked. The data type is a string.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info** - Verification data. The custom data type.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info** - Verification data. The array data type.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info.Value** - The rule parameter value. The data type is a string.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info.Result** - The result of parameter check. The data type is bool.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CorpRule** - A sign of the rule for granting discounts for tour code to specific customers. The data type is bool.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BestCorpRule** - A sign of the most appropriate rule for granting a discount for tour code. The data type is bool.
 -   **FareFamiliesDescription** - contains descriptions of the tfare families presenting in the flight. The data type is [Description](/avia/common/ff-description).
--   **PassengerTypePrice** - The formation of the price for a certain type of the traveler. The custom data type.
+-   **PassengerTypePrice** - The formation of the price for a certain type of the traveler. The array data type.
 -   **PassengerTypePrice.TravellerRef** - A reference to travelers. The data type is [Reflist](/avia/common/reflist).
 -   **PassengerTypePrice.PricingType** - The type of passenger for which this price is formed may not coincide with the type of a traveler in the corresponding section. The data type is a string.
 -   **PassengerTypePrice.BaseFare** - The price at the fares in the currency of their establishment. The data type is [Money](/avia/common/money).
 -   **PassengerTypePrice.EquiveFare** - The price by fares in the currency of sale from GDS. The data type is [Money](/avia/common/money).
 -   **PassengerTypePrice.TotalFare** - The full price in the currency of sale from GDS. The data type is [Money](/avia/common/money).
 -   **PassengerTypePrice.Taxes** - Taxes. The data type is the Tax array.
--   **Tax** - The information about a specific tax. The custom data type, the heir [Money](/avia/common/money).
+-   **Tax** - The information about a specific tax. The array data type, the heir [Money](/avia/common/money).
 -   **Tax.TaxCode** - The tax code. The data type is a string.
 -   **PassengerTypePrice.Tariffs** - Tariffs. The data type is the Tariff array.
--   **Tariff** - The description of the tariff, which takes part in the formation of this price. The custom data type, the description is given for AirTariff.
+-   **Tariff** - The description of the tariff, which takes part in the formation of this price. The array data type, the description is given for AirTariff.
 -   **Tariff.Code** - The tariff code. The data type is a string.
 -   **Tariff.Type** - The tariff type. The data type is enumeration, possible values:
     -   Public
@@ -120,7 +120,7 @@ Contains the full information about the price and its formation for the reservat
 -   **PassengerTypePrice.TotalAgencyFare** - The amount tariff and tax in the agency currency. The data type is [Money](/avia/common/money).
 -   **PassengerTypePrice.ChargeBreakdown** - Charge breakdown. The data type is - array ChargeBreakdown.
 -   **ChargeBreakdown** - Contains a breakdown of the charge from pricing on passenger, the amount of rounding when converting to a currency of the agency.
--   **ChargeBreakdown.Charge** - The container for charge. The custom data type.
+-   **ChargeBreakdown.Charge** - The container for charge. The array data type.
 -   **ChargeBreakdown.Charge.Amount** - The absolute value of the charge, roundings. The data type is a fractional number.
 -   **ChargeBreakdown.Charge.RuleID** - The Rule ID. The data type is an integer.
 -   **ChargeBreakdown.Charge.Type** - The type of charge. Data type - enumeration, possible values:
