@@ -11,10 +11,10 @@ taxonomy:
 
 #### Запрос
 
--   **ObjectForOperations** — содержит идентификатор объекта, для которого требуется выполнить дополнительные операции. Тип данных — сложный. Можно указывать только один из вложенных элементов.
+-   **ObjectForOperations** — содержит идентификатор объекта, для которого требуется выполнить дополнительные операции. Тип данных — массив. Можно указывать только один из вложенных элементов.
 -   **ObjectForOperations.FlightID** — идентификатор перелёта, для которого требуется выполнить дополнительные операции. Тип данных — целое 128-битное число.
 -   **ObjectForOperations.BookID** — идентификатор брони, для которого требуется выполнить дополнительные операции. Тип данных — целое 64-битное число.
--   **Operations** — список дополнительных операций, которые требуется выполнить. Тип данных — сложный.
+-   **Operations** — список дополнительных операций, которые требуется выполнить. Тип данных — массив.
 -   **Operations.Operation** — одна из операций, которые требуется выполнить. Тип данных — перечисление. Возможные значения:
     -   **CheckAvailability** — проверка доступности, выполняется только для перелёта;
     -   **GetFareRules** — получение тарифных правил;
@@ -26,15 +26,15 @@ taxonomy:
     -   **ActualizeFlight** — актуализация перелёта;
     -   **GetFareFamilies** — получение варианта оценки перелёта тарифами из разных семейств;
     -   **GetSubsidizedTariffs** — получение списка субсидированных тарифов для перелёта.
--   **OperationsRestrictions** — дополнительная информация для выполнения указанных операций (необязательный). Тип данных — сложный.
+-   **OperationsRestrictions** — дополнительная информация для выполнения указанных операций (необязательный). Тип данных — массив.
 -   **OperationsRestrictions.CheckAvailabilityWithBookingRequest** — использовать запрос взятия мест для проверки доступности перелёта для бронирования. Тип данных — булевский.
--   **OperationsRestrictions.PricingInfo** — дополнительная информация о ценовой составляющей перелёта, для которого требуется выполнить дополнительные операции. Тип данных — сложный.
--   **OperationsRestrictions.PricingInfo.BookingClassCodes** — информация о классах перелёта, для которых требуется найти цену перелёта. Тип данных — сложный.
--   **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment** — информация о классе перелёта для конкретного сегмента. Тип данных — сложный.
+-   **OperationsRestrictions.PricingInfo** — дополнительная информация о ценовой составляющей перелёта, для которого требуется выполнить дополнительные операции. Тип данных — массив.
+-   **OperationsRestrictions.PricingInfo.BookingClassCodes** — информация о классах перелёта, для которых требуется найти цену перелёта. Тип данных — массив.
+-   **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment** — информация о классе перелёта для конкретного сегмента. Тип данных — массив.
 -   **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment.SegmentNumber** — номер сегмента в перелёте. Тип данных — целое 32-битное число.
 -   **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment.BookingClassCode** — литера класса перелёта для данного сегмента. Тип данных — строка.
--   **OperationsRestrictions.PricingInfo.Passengers** — содержит информацию о пассажирах, для которых требуется найти цену перелёта. Тип данных — сложный.
--   **OperationsRestrictions.PricingInfo.Passengers.Passenger** — содержит информацию об одном из типов пассажиров, для которых требуется найти цену перелёта. Тип данных — сложный.
+-   **OperationsRestrictions.PricingInfo.Passengers** — содержит информацию о пассажирах, для которых требуется найти цену перелёта. Тип данных — массив.
+-   **OperationsRestrictions.PricingInfo.Passengers.Passenger** — содержит информацию об одном из типов пассажиров, для которых требуется найти цену перелёта. Тип данных — массив.
 -   **OperationsRestrictions.PricingInfo.Passengers.Passenger.Type** — тип пассажира. Тип данных — перечисление.
 -   **OperationsRestrictions.PricingInfo.Passengers.Passenger.Count** — количество пассажиров данного типа. Тип данных — целое 32-битное число.
 -   **OperationsRestrictions.PricingInfo.CurrencyCode** — ISO Alpha3 код валюты, в которой требуется найти цену. Тип данных — строка.
@@ -81,27 +81,27 @@ taxonomy:
 -   **ActualizedFlight.Segments.Segment.SupplierInfo** — информация о статусах сегментов в случае если перелёт не доступен для бронирования и операция выполнялась с помощью запроса взятия мест. Тип данных - строка. Поддерживается у GalileoUapi, Sabre, Amadeus, Galileo.
 -   **FlightsByFareFamily** — содержит результат операции **GetFareFamilies**. Тип данных — массив [Flight](/avia/common/flight).
 -   **SubsidizedTariffs** — содержит результат операции **GetSubsidizedTariffs**. Тип данных — массив [Flight](/avia/common/flight).
--   **ObjectForOperations** — содержит идентификатор объекта, для которого требуется выполнить допоперации. Тип данных - сложный. Аналогичен соответствующему элементу из запроса.
--   **CheckAvailabilityResult** — результат проверки доступности перелёта для бронирования. Тип данных - сложный.
+-   **ObjectForOperations** — содержит идентификатор объекта, для которого требуется выполнить допоперации. Тип данных - массив. Аналогичен соответствующему элементу из запроса.
+-   **CheckAvailabilityResult** — результат проверки доступности перелёта для бронирования. Тип данных - массив.
 -   **CheckAvailabilityResult.IsAvail** — признак доступности перелёта для бронирования. Тип данных - булевский.
--   **GetFareRulesResult** — результат получения тарифных правил. Тип данных - сложный.
--   **GetFareRulesResult.Rules** — массив тарифных правил, применяемых к данному объекту. Тип данных - сложный.
--   **GetFareRulesResult.Rules.Rule** — тарифное правило. Тип данных - сложный.
+-   **GetFareRulesResult** — результат получения тарифных правил. Тип данных - массив.
+-   **GetFareRulesResult.Rules** — массив тарифных правил, применяемых к данному объекту. Тип данных - массив.
+-   **GetFareRulesResult.Rules.Rule** — тарифное правило. Тип данных - массив.
 -   **GetFareRulesResult.Rules.Rule.Code** — код секции тарифного правила. Тип данных - строка.
 -   **GetFareRulesResult.Rules.Rule.Tariff** — код тарифа, к которому применяется данное правило. Тип данных - строка.
 -   **GetFareRulesResult.Rules.Rule.Name** — заголовок тарифного правила. Тип данных - строка.
 -   **GetFareRulesResult.Rules.Rule.RuleText** — текст тарифного правила. Тип данных - строка.
--   **GetSeatMapResult** — Результат получения карты мест. Тип данных - сложный.
--   **GetSeatMapResult.SeatMapSegments** — контейнер для карт мест по каждому из сегментов перелёта. Тип данных - сложный.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment** — карта мест для конкретного сегмента перелёта. Тип данных - сложный. Встречается 1 и более раз.
+-   **GetSeatMapResult** — Результат получения карты мест. Тип данных - массив.
+-   **GetSeatMapResult.SeatMapSegments** — контейнер для карт мест по каждому из сегментов перелёта. Тип данных - массив.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment** — карта мест для конкретного сегмента перелёта. Тип данных - массив. Встречается 1 и более раз.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Num** — номер сегмента из перелёта. Тип данных - целое 32 битное число.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors** — контейнер для этажей в самолёте. Тип данных - сложный.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor** — карта мест для конкретного этажа в самолёте. Тип данных - сложный. Встречается 1 и более раз.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors** — контейнер для этажей в самолёте. Тип данных - массив.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor** — карта мест для конкретного этажа в самолёте. Тип данных - массив. Встречается 1 и более раз.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.IsUpper** — признак верхнего этажа в самолёте. Тип данных - булевский.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow** — информация по умолчанию для рядов мест на этаже самолёта. Тип данных - сложный.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow** — информация по умолчанию для рядов мест на этаже самолёта. Тип данных - массив.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Num** — номер ряда мест этажа в самолёте. Тип данных - целое 32 битное число.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats** — контейнер для информации о местах. Тип данных - сложный.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat** — информация о конкретном месте в самолёте. Тип данных - сложный. Встречается 1 и более раз.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats** — контейнер для информации о местах. Тип данных - массив.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat** — информация о конкретном месте в самолёте. Тип данных - массив. Встречается 1 и более раз.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Number** — номер места. Тип данных - строка.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Type** — положение места. Тип данных - строка. Возможные значения:
     -   **W** — у окна;
@@ -114,13 +114,13 @@ taxonomy:
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Price** — цена места в случае если оно платное. Тип данных - [Money](/avia/common/money).
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.RFISC** — RFISC места. Тип данных - строка.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Characteristics** - характеристика ряда. Тип данных - строка.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows** - контейнер для информации о рядах мест на этаже. Тип данных - сложный.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow** - информация о конкретном ряде мест на этаже в самолёте. Тип данных - сложный. Формат элемента аналогичен элементу DefaultRow
--   **GetPriceResult** - результат получения актуальной цены перелёта. Тип данных - сложный.
--   **GetPriceResult.Flight** - плоский перелёт v1.1. Тип данных - сложный.
--   **FindAdditionalServicesResult** - результат получения списка доступных допуслуг. Тип данных - сложный. 
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows** - контейнер для информации о рядах мест на этаже. Тип данных - массив.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow** - информация о конкретном ряде мест на этаже в самолёте. Тип данных - массив. Формат элемента аналогичен элементу DefaultRow
+-   **GetPriceResult** - результат получения актуальной цены перелёта. Тип данных - массив.
+-   **GetPriceResult.Flight** - плоский перелёт v1.1. Тип данных - массив.
+-   **FindAdditionalServicesResult** - результат получения списка доступных допуслуг. Тип данных - массив. 
 -   **FindAdditionalServicesResult.Services** - список доступных допуслуг. Тип данных - массив. 
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS** - допуслуга. Тип данных - сложный.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS** - допуслуга. Тип данных - массив.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.ID** - ИД услуги в системе поставщика. Тип данных - целове 32 битное число.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Name** - описание допуслуги (ATPCO commercial name) Тип данных - строка.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Group** - группа допуслуги. Тип данных - строка.
@@ -133,8 +133,8 @@ taxonomy:
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Refundability** - возвратность услуги. Тип данных - перечисление.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRDescriptionRequired** - признак того, что для бронирования данной допуслуги нужно передавать её описание от пользователя. Тип данных - булево значение.
 -   **FindAdditionalServicesResult.Services.Prices** - список цен допуступных допуслуг. Тип данных - массив.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice**  - цена допуслуг. Тип данных - сложный.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value** - объект цены. Тип данных - сложный. 
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice**  - цена допуслуг. Тип данных - массив.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value** - объект цены. Тип данных - массив. 
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value.Amount** - сумма. Тип данных - плавающее c двойной точностью.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value.Currency** - валюта. Тип данных - строка.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.ServiceRef** - ссылки на услуги, для которых применима данная цена. Тип данных - массив. 
@@ -143,10 +143,10 @@ taxonomy:
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.SegmentRef.Ref** - ссылка на сегмент. Тип данных - целое 32 битное число.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes** - типы пассажиров к которым применима данная цена. Тип данных - массив.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes.PassTypes** - тип пассажира. Тип - данных перечисление.
--   **GetAllowedCCsResult** - результат получения списка кодов карт для оплаты ГДС процессингом. Тип данных - сложный.
--   **GetAllowedCCsResult.AllowedCCs** - список кодов допустимых карт для оплаты брони ГДС процессингом. Тип данных - сложный.
+-   **GetAllowedCCsResult** - результат получения списка кодов карт для оплаты ГДС процессингом. Тип данных - массив.
+-   **GetAllowedCCsResult.AllowedCCs** - список кодов допустимых карт для оплаты брони ГДС процессингом. Тип данных - массив.
 -   **GetAllowedCCsResult.AllowedCCs.Code** - код кредитной карты, которой можно оплатить указанную бронь с помощью ГДС процессинга. Тип данных - строка.
--   **GetAllowedLoyaltyCardsResult** - массив тарифных правил, применяемых к данному перелёту. Тип данных - сложный.
+-   **GetAllowedLoyaltyCardsResult** - массив тарифных правил, применяемых к данному перелёту. Тип данных - массив.
 
 >>>> В результате выполнения запроса, будет получен перелен с новым ID, именно этот ID следует использовать в дальнейших операциях, например в бронировании.
 
