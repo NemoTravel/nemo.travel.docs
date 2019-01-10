@@ -54,7 +54,7 @@ The description of the flight
     -   hRT
     -   mOW - The flight is a possible leg of multi-flight 
 -   **Segments** - The flight segments. The data type is an array of [FlightSegment](/avia/grouping/flightsegment) elements.
--   **FlightSegment** - The flight segment. The custom data type.
+-   **FlightSegment** - The flight segment. The array data type.
 -   **FlightSegment.ID** - The segment ID within this flight. The data type is Int32.
 -   **FlightSegment.DepatureAirport** - The information about the departure airport. The data type is TripPointInformation.
 -   **FlightSegment.DepatureAirport.Code** - The Airport code. The data type is a string.
@@ -63,7 +63,7 @@ The description of the flight
 -   **FlightSegment.DepatureAirport.UTC** - The time zone. The data type is float.
 -   **FlightSegment.ArrivalAirport** - The arrival airport information. The data type is TripPointInformation. The format is the same as FlightSegment.DepatureAirport.
 -   **FlightSegment.StopPoints** - Stop points on this segment. The data type is an array of StopPoint elements.
--   **FlightSegment.StopPoints.StopPoint** - The stop point on this segment. The custom data type, the successor to TripPointInformation.
+-   **FlightSegment.StopPoints.StopPoint** - The stop point on this segment. The array data type, the successor to TripPointInformation.
 -   **FlightSegment.StopPoints.StopPoint.Code** - The Airport code. The data type is a string.
 -   **FlightSegment.StopPoints.StopPoint.CityCode** - The city code, if airports have an aggregation. The data type is a string.
 -   **FlightSegment.StopPoints.StopPoint.UTC** - The time zone. The data type is float.
