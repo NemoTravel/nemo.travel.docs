@@ -25,12 +25,12 @@ Ancillary services, consist of the following elements:
     -   **E** — Airport Services;
     -   **F** — Merchandise;
     -   **G** — In-flight Services.
-* **RFISC** - Ancillary services RFISC ((Reason For Issuance Sub-Codes), consisting of three symbols. RFISC Sub-codes are established by the airline itself and determine the specific type of service, for example, 0DG - payment for excess baggage, 0B3 - provision of special meals. The data type is a string.
+* **RFISC** - Ancillary services RFISC (Reason For Issuance Sub-Codes), consisting of three symbols. RFISC Sub-codes are established by the airline itself and determine the specific type of service, for example, 0DG - payment for excess baggage, 0B3 - provision of special meals. The data type is a string.
 * **SSRCode** -The SSR code associated with the given ancillary service, which must be added to the PNR in case of the book of this ancillary service. The data type is a string.
 * **SSRText** - The SSR text associated with the given ancillary service. The data type is a string.
 * **SegmentRef** - A reference to the segment on which the ancillary service is added. The data type is integer.
 * **CompanyCode** - The code of the airline to which the service belongs. The data type is a string.
-* **Refundability** - Returnable or non-returnable service . The data type is a string.
+* **Refundability** - Returnable or non-returnable service . The data type is an enumeration.
 * **ServiceRefs** - List of IDs of the ancillary service in book for which an operation is required. The data type is an integer array.
 * **ServiceRefs.Ref** - ID of the ancillary service in the book for which the operation is required. The data type is integer.
 * **SSRDescription** -  Description for ancillary services SSR (Optional). Data type is string.
