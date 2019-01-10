@@ -16,7 +16,7 @@ The latest request version, the differences are only in the response in the anci
 
 -  **BookID** -The ID of the booking for which you want to issue an EMD. The data type is long.
 -  **AncillaryServices** - The list of ancillary services for discharge. The data type is the AncillaryService array.
--  **AncillaryServices.AncillaryService** - The element of links for work with the ancillary service. The custom data type.
+-  **AncillaryServices.AncillaryService** - The element of links for work with the ancillary service. The array data type.
 -  **AncillaryServices.AncillaryService.ServiceRef** - The ID of ancillary service in the booking for which is needed to issue an EMD. The data type is int.
 -  **AncillaryServices.AncillaryService.SegmentRef** - An array of multi-links to the segments for which you want to issue an EMD. The data type is an int array.
 -  **AncillaryServices.AncillaryService.SegmentRef.MRef** - The element of an array of multi-links to segments. The data type is int.
