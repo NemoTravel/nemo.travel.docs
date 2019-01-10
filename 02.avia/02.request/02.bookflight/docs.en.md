@@ -37,15 +37,15 @@ Similar to the previous version of BookFlight_2_0, the difference is only in the
 - **AncillaryServices.AncillaryService.RFIC** - RFIC of ancillary service. The data type is a string.
 - **AncillaryServices.AncillaryService.RFISC** - RFISC of ancillary service. The data type is a string.
 - **AncillaryServices.AncillaryService.Group** - Ancillary Service group. Data type is a string.
-**AncillaryServices.AncillaryService.Subgroup** - Ancillary Service subgroup. Data type is a string.
+- **AncillaryServices.AncillaryService.Subgroup** - Ancillary Service subgroup. Data type is a string.
 - **AncillaryServices.AncillaryService.SSRCode** - SSR code for booked ancillary service (Optional). Data type is a string.
 - **AncillaryServices.AncillaryService.SSRDescription** - The description for SSR booked ancillary service (Optional). Data type is string.
 - **AncillaryServices.AncillaryService.Type** - The type of ancillary service (Mandatory only for Sirena). The data type is a string.
 - **AncillaryServices.AncillaryService.TravellerRef** - The passenger ID for which the ancillary service is added. The data type is int.
 - **AncillaryServices.AncillaryService.SegmentRef** - Container with references to segments to which the ancillary service is added. The data type is custom.
 - **AncillaryServices.AncillaryService.SegmentRef.Ref** - Segment reference. Data type - int.
--   **AncillaryServices.AncillaryService.Quantity** - Number of repetitions for that ancillary service. Data type is int.
--   **AncillaryServices.AncillaryService.EMDType** - EMD type. The data type is a string.
+- **AncillaryServices.AncillaryService.Quantity** - Number of repetitions for that ancillary service. Data type is int.
+- **AncillaryServices.AncillaryService.EMDType** - EMD type. The data type is a string.
 
     ### BookFlight_2_1
 
