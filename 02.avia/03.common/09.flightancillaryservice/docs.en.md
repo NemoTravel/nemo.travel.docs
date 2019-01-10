@@ -11,8 +11,8 @@ Ancillary services, consist of the following elements:
 
 * **ID** - Service ID in the supplier system. The data type is integer.
 * **Status** - The current status of the ancillary service. The data type is a string.
-* **TravellerRef** -  A reference to passengers in the reservation, to which the ancillary service applies. The data type is custom.
-* **TravellerRef.Ref** -The number of the passenger in the reservation to which this item belongs. The data type is integer.
+* **TravellerRef** -  A reference to passengers in the book, to which the ancillary service applies. The data type is custom.
+* **TravellerRef.Ref** -The number of the passenger in the book to which this item belongs. The data type is integer.
 * **Name** - Description of the ancillary service. The data type is a string.
 * **Group** - Group of ancillary service. The data type is a string.
 * **SubGroup** - Subgroup of ancillary service. The data type is a string.
@@ -26,13 +26,13 @@ Ancillary services, consist of the following elements:
     -   **F** — Merchandise;
     -   **G** — In-flight Services.
 * **RFISC** - Ancillary services RFISC ((Reason For Issuance Sub-Codes), consisting of three symbols. RFISC Sub-codes are established by the airline itself and determine the specific type of service, for example, 0DG - payment for excess baggage, 0B3 - provision of special meals. The data type is a string.
-* **SSRCode** -The SSR code associated with the given ancillary service, which must be added to the PNR in case of the reservation of this ancillary service. The data type is a string.
+* **SSRCode** -The SSR code associated with the given ancillary service, which must be added to the PNR in case of the book of this ancillary service. The data type is a string.
 * **SSRText** - The SSR text associated with the given ancillary service. The data type is a string.
 * **SegmentRef** - A reference to the segment on which the ancillary service is added. The data type is integer.
 * **CompanyCode** - The code of the airline to which the service belongs. The data type is a string.
 * **Refundability** - Returnable or non-returnable service . The data type is a string.
-* **ServiceRefs** - List of IDs of the ancillary service in reservation for which an operation is required. The data type is an integer array.
-* **ServiceRefs.Ref** - ID of the ancillary service in the reservation for which the operation is required. The data type is integer.
+* **ServiceRefs** - List of IDs of the ancillary service in book for which an operation is required. The data type is an integer array.
+* **ServiceRefs.Ref** - ID of the ancillary service in the book for which the operation is required. The data type is integer.
 * **SSRDescription** -  Description for ancillary services SSR (Optional). Data type is string.
 * **SSRDescriptionRequired** - A sign that you need to transfer ancillary services description from the user in order to book this service. The data type is boolean.
 * **Quantity** -The number of repetitions of the service. The data type is integer.
@@ -86,7 +86,7 @@ The list of available ancillary services is triggered by the SearchAncillaryServ
  In the above example, the price matches the service with ID 3 (displayed in the ServiceRef parameter) on the first segment displayed in the SegmentRef parameter).
    
    
-  You can add a service to the reservation via a [BookFlight](/avia/request/bookflight) request, or, if the reservation has already been created, through a [ModifyBook](/avia/request/modifybook) request.
+  You can add a service to the book via a [BookFlight](/avia/request/bookflight) request, or, if the book has already been created, through a [ModifyBook](/avia/request/modifybook) request.
      ### A BookFlight request example.
    ```xml
       <a:AncillaryServiceRQ_1_1>
