@@ -11,7 +11,7 @@ taxonomy:
 
 #### Описание формата
 
--   **Description** — описание семейства тарифов. Тип данных - сложный.
+-   **Description** — описание семейства тарифов. Тип данных - массив.
 -   **Description.ID** — идентификатор описания в рамках перелёта. Тип данных — целое число.
 -   **Description.Name** — названия семейства тарифов. Тип данных — строка.
 -   **Description.Carryon** — мера ручной клади. Тип данных — строка.
@@ -38,7 +38,7 @@ taxonomy:
 -   **Description.FlownMiles** — процент миль, зачисляемых на карту лояльности пассажира. Тип данных — целое число.
 -   **Description.VIPServices** — наличие VIP-услуг. Тип данных — булевский.
 -   **Description.UniversalParameters** — универсальные параметры, описывающие услуги семейства тарифов. Тип данных — массив элементов FareFamilyParameter:
--   **Description.UniversalParameters.FareFamilyParameter** — универсальный параметр. Тип данных — сложный.
+-   **Description.UniversalParameters.FareFamilyParameter** — универсальный параметр. Тип данных — массив.
 -   **Description.UniversalParameters.FareFamilyParameter.Code** — код универсального параметра. Тип данных — перечисление, возможные значения:
     -   **description** — описание семейства тарифа;
     -   **carry_on** — ручная кладь;
@@ -51,7 +51,7 @@ taxonomy:
     -   **exchangeable** — возможность обмена;
     -   **sales_restrictions** — ограничения по продажам.
 -   **Description.UniversalParameters.FareFamilyParameter.ShortDescription** — контейнер для краткого описания параметра. Тип данных — массив элементов типа LangItem:
--   **Description.UniversalParameters.FareFamilyParameter.ShortDescription.LangItem** — краткое описание параметра. Тип данных — сложный.
+-   **Description.UniversalParameters.FareFamilyParameter.ShortDescription.LangItem** — краткое описание параметра. Тип данных — массив.
 -   **Description.UniversalParameters.FareFamilyParameter.ShortDescription.LangItem.Code** — код языка описания. Тип данных — строка.
 -   **Description.UniversalParameters.FareFamilyParameter.ShortDescription.LangItem.Value** — текст описания. Тип данных — строка.
 -   **Description.UniversalParameters.FareFamilyParameter.FullDescription** — контейнер для краткого описания параметра. Тип данных — массив элементов типа LangItem.
