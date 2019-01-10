@@ -45,7 +45,7 @@ Similar to the previous version of BookFlight_2_0, the difference is only in the
 - **AncillaryServices.AncillaryService.SegmentRef** - Container with references to segments to which the ancillary service is added. The data type is custom.
 - **AncillaryServices.AncillaryService.SegmentRef.Ref** - Segment reference. Data type - int.
 - **AncillaryServices.AncillaryService.Quantity** - Number of repetitions for that ancillary service. Data type is int.
--  **AncillaryServices.AncillaryService.EMDType** - EMD type. The data type is a string.
+- **AncillaryServices.AncillaryService.EMDType** - EMD type. The data type is a string.
 
 
     ### BookFlight_2_1
