@@ -13,23 +13,23 @@ taxonomy:
 
 #### Запрос
 
--   **RequestedFlightInfo** — содержит информацию о сегментах перелёта, который требуется найти. Тип данных — сложный.
+-   **RequestedFlightInfo** — содержит информацию о сегментах перелёта, который требуется найти. Тип данных — массив.
 -   **RequestedFlightInfo.Direct** — индикатор поиска только прямых перелётов (необязательный). Тип данных — булевский. 
 -   **RequestedFlightInfo.AroundDates** — значение для поиска по окружным датам (необязательный). Тип данных — целое беззнаковое 32-битное число.
--   **RequestedFlightInfo.ODPairs** — содержит информацию о сегментах перелёта, который требуется найти. Тип данных — сложный.
--   **RequestedFlightInfo.ODPair** — сегмент перелёта, который требуется найти. Тип данных — сложный.
+-   **RequestedFlightInfo.ODPairs** — содержит информацию о сегментах перелёта, который требуется найти. Тип данных — массив.
+-   **RequestedFlightInfo.ODPair** — сегмент перелёта, который требуется найти. Тип данных — массив.
 -   **RequestedFlightInfo.ODPair.DepatureDateTime** — дата и время, с которого начинается желаемое время вылета. Тип данных — строка, формат — <code>yyyy-MM-ddTHH:mm:ss</code>.
 -   **RequestedFlightInfo.ODPair.MaxDepatureTime** — максимально допустимое время вылета (необязательный). Тип данных — строка, формат — <code>HH:mm</code>.
--   **RequestedFlightInfo.ODPair.DepaturePoint** — содержит информацию о точки отправления. Тип данных — сложный.
+-   **RequestedFlightInfo.ODPair.DepaturePoint** — содержит информацию о точки отправления. Тип данных — массив.
 -   **RequestedFlightInfo.ODPair.DepaturePoint.Code** — 3-х буквенный код аэропорта или города отправления. Тип данных — строка.
 -   **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** — признак что в качестве точки отправления указан код города (агрегатора аэропортов) (необязательный). Тип данных — булевский.
--   **RequestedFlightInfo.ODPair.DepatureAltPoints** - содержит список альтернативных аэропортов отправления (необязательный). Тип данных - сложный.
--   **RequestedFlightInfo.ODPair.DepatureAltPoints.AltPoint** - альтернативный пункт перелета, содержит информацию о точке перелета. Тип данных - сложный. Формат аналогичен элементу **DepaturePoint**
--   **RequestedFlightInfo.ODPair.ArrivalPoint** — содержит информацию о точки прибытия. Тип данных — сложный. Формат аналогичен элементу **DepaturePoint**.
--   **RequestedFlightInfo.ODPair.ArrivalAltPoints** - содержит список альтернативных аэропортов прибытия. Тип данных - сложный. Формат аналогичен элементу **DepatureAltPoints**
+-   **RequestedFlightInfo.ODPair.DepatureAltPoints** - содержит список альтернативных аэропортов отправления (необязательный). Тип данных - массив.
+-   **RequestedFlightInfo.ODPair.DepatureAltPoints.AltPoint** - альтернативный пункт перелета, содержит информацию о точке перелета. Тип данных - массив. Формат аналогичен элементу **DepaturePoint**
+-   **RequestedFlightInfo.ODPair.ArrivalPoint** — содержит информацию о точки прибытия. Тип данных — массив. Формат аналогичен элементу **DepaturePoint**.
+-   **RequestedFlightInfo.ODPair.ArrivalAltPoints** - содержит список альтернативных аэропортов прибытия. Тип данных - массив. Формат аналогичен элементу **DepatureAltPoints**
 -   **RequestedFlightInfo.ODPair.ID** — идентификатор элемента. Используется при поиске вариантов для обмена (необязательный).
 -   **Passengers** — массив информации о пассажирах, для которых требуется найти перелёт. Тип данных — массив.
--   **Passengers.Passenger** — информация о типе пассажиров, для которых требуется найти перелёт. Тип данных — сложный.
+-   **Passengers.Passenger** — информация о типе пассажиров, для которых требуется найти перелёт. Тип данных — массив.
 -   **Passengers.Passenger.Type** — тип пассажиров, для которого требуется найти перелёт. Тип данных — перечисление, возможные значения:
     -   **ADT** — взрослый — пассажир старше 12-ти лет (по умолчанию);
     -   **UNN** — ребёнок — пассажир старше 2-х и младше 12-ти лет без сопровождения взрослых;
@@ -42,7 +42,7 @@ taxonomy:
     -   **STU** — студент;
     -   **YTH** — молодёжь.
 -   **Passengers.Passenger.Count** — количество пассажиров выбранного типа, для которых требуется найти перелёт. Тип данных — целое 32-битное число. Не может быть меньше 1.
--   **Restrictions** — содержит различные ограничения, применяемые к результатам поиска (необязательный). Тип данных — сложный.
+-   **Restrictions** — содержит различные ограничения, применяемые к результатам поиска (необязательный). Тип данных — массив.
 -   **Restrictions.CurrencyCode** — 3-х буквенный код валюты выдачи результатов поиска. Тип данных — строка. Параметр не поддерживается.
 -   **Restrictions.CompanyFilter** — массив фильтров по авиакомпаниям. Тип данных — массив.
 -   **Restrictions.CompanyFilter.Company** — информация о фильтрации по авиакомпаниям. Тип данных — массив.
@@ -50,7 +50,7 @@ taxonomy:
 -   **Restrictions.CompanyFilter.Company.Include** — тип фильтрации. Тип данных — булевский. В случае, если указано <code>false</code>, указанная авиакомпания будет исключена из результатов поиска; если указано <code>true</code>, то только данная авиакомпания будет присутствовать в выдаче, за исключением других авиакомпаний, указанных в параметрах фильтрации с параметром <code>true</code>.
 -   **Restrictions.CompanyFilter.Company.SegmentNumber** — номер запрошенного сегмента перелёта (нумерация в данном случае с 1), для которого требуется данная авиакомпания. Тип данных — целое 32-битное число.
 -   **Restrictions.PrivateFaresOnly** — искать только приватные тарифы, по дефолту будут искаться и приватные и публичные, где это поддерживается. Тип данных — булевский.
--   **Restrictions.ClassPreference** — содержит список предпочитаемых классов перелёта. Тип данных — сложный.
+-   **Restrictions.ClassPreference** — содержит список предпочитаемых классов перелёта. Тип данных — массив.
 -   **Restrictions.ClassPreference.ClassOfService** — тип предпочитаемого класса перелёта. Тип данных — перечисление, возможные значения:
     -   **Economy** — только эконом класс (по умолчанию);
     -   **Business** — только бизнес класс;
@@ -61,7 +61,7 @@ taxonomy:
 -   **Restrictions.ResultsGrouping** — тип группировки выдачи. Тип данных — перечисление, возможные значения:
     -   **Simple** — простая группировка, выдача идёт в формате [GroupSearch](/avia/grouping) (по умолчанию);
     -   **None** — без группировки.
--   **Restrictions.SourcePreference** - список предпочитаемых источников перелётов. Тип данных - сложный.
+-   **Restrictions.SourcePreference** - список предпочитаемых источников перелётов. Тип данных - массив.
 -   **Restrictions.SourcePreference.Source** - ID предпочитаемого источника перелётов. Тип данных - целое 32 битное число.
 -   **Restrictions.RequestorTags** — метки отправителя запроса. Тип данных — массив.
 -   **Restrictions.RequestorTags.Tag** — одна из меток отправителя запроса, описывающая его по некоему критерию. Тип данных — строка.
@@ -73,8 +73,8 @@ taxonomy:
 -   **Restrictions.AsyncSearch** — режим запроса: <code>false</code> (по умолчанию) — синхронный поиск как и раньше, <code>true</code> — асинхронный поиск с возможностью пуллинга порций ответов поставщиков. Тип данных — булевский.
 -   **Restrictions.Nemo2Pricing** — признак необходимости выполнения ценообразования. Тип данных — булевский.
 -   **Restrictions.ThreeDomainAgreementNumber** — код корпоративного клиента в трехстороннем договоре. Тип данных — строка.
--   **EndUserData** — данные конечного пользователя (необязательный). Тип данных - сложный, формат аналогичен элементу **EndUserData** из [DataItem](/avia/common/dataitem).
--   **SellingPointDescription** — описание точки продажи (необязательный). тип данных - сложный, формат аналогичен элементу **SellingPointDescription** из [DataItem](/avia/common/dataitem).
+-   **EndUserData** — данные конечного пользователя (необязательный). Тип данных - массив, формат аналогичен элементу **EndUserData** из [DataItem](/avia/common/dataitem).
+-   **SellingPointDescription** — описание точки продажи (необязательный). тип данных - массив, формат аналогичен элементу **SellingPointDescription** из [DataItem](/avia/common/dataitem).
 
 ##### Пример
 
@@ -141,16 +141,16 @@ taxonomy:
 
 #### Ответ
 
--   **SearchData** — данные о поиске. Тип данных — сложный.
+-   **SearchData** — данные о поиске. Тип данных — массив.
 -   **SearchData.StartTime** — дата и время начала поиска на сервере. Тип данных — строка, формат — <code>yyyy-MM-dd HH:mm:ss ±HH:mm</code>.
 -   **SearchData.EndTime** — дата и время окончания поиска на сервере. Тип данных — строка, формат — <code>yyyy-MM-dd HH:mm:ss ±HH:mm</code>.
 -   **SearchData.IsAsync** — признак асинхронного поиска. Тип данных — булевский.
 -   **SearchData.Sources** — данные об источниках (пакетах), откуда получены результаты. Тип данных — массив.
--   **SearchData.Sources.SourceInfo** — описание источника, откуда получены результаты. Тип данных — сложный.
+-   **SearchData.Sources.SourceInfo** — описание источника, откуда получены результаты. Тип данных — массив.
 -   **SearchData.Sources.SourceInfo.ID** — идентификатор источника, откуда получены результаты. Тип данных — целое 64-битное число.
 -   **SearchData.Sources.SourceInfo.Supplier** — поставщик данного источника. Тип данных — перечисление с поставщиками авиа.
 -   **SearchData.SearchThreads** — данные о поисковых потоках с запросами к поставщикам. Тип данных — массив.
--   **SearchData.SearchThreads.SearchThreadInfo** — данные об одном из поисковых потоков. Тип данных — сложный.
+-   **SearchData.SearchThreads.SearchThreadInfo** — данные об одном из поисковых потоков. Тип данных — массив.
 -   **SearchThreadInfo.SourceID** — идентификатор источника, в рамках которого был запущен поисковый поток. Тип данных — целое 64-битное число.
 -   **SearchThreadInfo.IsComplete** — признак что поток завершил работу. Тип данных — булевский.
 -   **SearchThreadInfo.StartTime** — дата и время запуска потока. Тип данных — строка, формат — <code>yyyy-MM-dd HH:mm:ss ±HH:mm</code>.
@@ -158,27 +158,27 @@ taxonomy:
 -   **SearchThreadInfo.FromCache** — признак что результаты по данному потоку взяты из кэша. Тип данных — булевский.
 -   **SearchThreadInfo.OriginalSearchID** — идентификатор оригинального поиска, в рамках которого результаты были получены от поставщика. Тип данных — целое 64-битное число.
 -   **PlaneFlights** — содержит поисковую выдачу. Тип данных — массив элементов [Flight](/avia/common/flight).
--   **SimpleGroupedFlights** - Содержит поисковую выдачу в формате [GroupSearch](/avia/grouping). Тип данных - сложный.
+-   **SimpleGroupedFlights** - Содержит поисковую выдачу в формате [GroupSearch](/avia/grouping). Тип данных - массив.
 -   **SubsidiesInformation** - Информация о субсидиях. Если тариф в перелете субсидированный, то у него будет ссылка на элемент в этом массиве. Тип данных - аналогичен ***SubsidiesInformation*** в объекте [Flight](/avia/common/flight).
-- **ProcessingData** - Контейнер с отладочной информацией по фильтрам запросов и маршрутизаторору. Тип данных - сложный.
+- **ProcessingData** - Контейнер с отладочной информацией по фильтрам запросов и маршрутизаторору. Тип данных - массив.
 - **ProcessingData.FlightsFromSuppliersCount** - Указывает, сколько перелетов было получено от поставщика. Тип данных - int.
-- **ProcessingData.FlightsFromSuppliersSources** - Контейнер с информацией по поставщикам. Тип данных - сложный.
-- **ProcessingData.FlightsFromSuppliersSources.SourceData** - Контейнер с информацией по конкретному поставщику. Тип данных - сложный.
+- **ProcessingData.FlightsFromSuppliersSources** - Контейнер с информацией по поставщикам. Тип данных - массив.
+- **ProcessingData.FlightsFromSuppliersSources.SourceData** - Контейнер с информацией по конкретному поставщику. Тип данных - массив.
 - **ProcessingData.FlightsFromSuppliersSources.SourceData.SourceID** - ID поставщика. Тип данных - int.
 - **ProcessingData.FlightsFromSuppliersSources.SourceData.Count** - Количество перелетов от данного поставщика. Тип данных - int.
-- **ProcessingData.PropogatedFlightsCount** - Контейнер с информацией о клонированных перелетах. Тип данных - сложный.
-- **ProcessingData.PropogatedFlightsSources** - Контейнер с информацией о клонированных перелетах по поставщикам. Тип данных - сложный.
+- **ProcessingData.PropogatedFlightsCount** - Контейнер с информацией о клонированных перелетах. Тип данных - массив.
+- **ProcessingData.PropogatedFlightsSources** - Контейнер с информацией о клонированных перелетах по поставщикам. Тип данных - массив.
 - **ProcessingData.PropogatedFlightsSources.SourceData.SourceID** - ID поставщика. Тип данных - int.
 - **ProcessingData.PropogatedFlightsSources.SourceData.Count** - Указывает, сколько перелетов было получено от поставщика. Тип данных - int
 - **ProcessingData.PricingRulesCount** - Счетчик количества сработанных правил ЦО. Тип данных - int.
 - **ProcessingData.PricingDuration** - Длительность выполнения ЦО. Тип данных - строка. 
-- **ProcessingData.AppliedRouterRules** - Контейнер с информацией маршрутизатора. Тип данных - сложный.
-- **ProcessingData.AppliedRouterRules.RouterRule** -  Контейнер с информацией о примененных правилах маршрутизатора. Тип данных - сложный. 
+- **ProcessingData.AppliedRouterRules** - Контейнер с информацией маршрутизатора. Тип данных - массив.
+- **ProcessingData.AppliedRouterRules.RouterRule** -  Контейнер с информацией о примененных правилах маршрутизатора. Тип данных - массив. 
 - **ProcessingData.AppliedRouterRules.RuleID** - ID сработанного правила. Тип данных - int.
-- **ProcessingData.AppliedRouterRules.TargetPackages** - Контейнер с информацией  о пакетах в которых был осуществлен поиск согласно маршрутизатору. Тип данных - сложный. 
+- **ProcessingData.AppliedRouterRules.TargetPackages** - Контейнер с информацией  о пакетах в которых был осуществлен поиск согласно маршрутизатору. Тип данных - массив. 
 - **ProcessingData.AppliedRouterRules.TargetPackages.PackageID** - ID пакета, в котором  был осуществлен поиск согласно маршрутизатору. Тип данных - int.
-- **ProcessingData.TriggeredRequestFilters** - Контейнер с информацией по задействованным фильтрам запросов. Тип данных - сложный. 
-- **ProcessingData.TriggeredRequestFilters.TriggeredRequestFilter** -  Контейнер с информацией по конкретному фильтру. Тип данных - сложный. 
+- **ProcessingData.TriggeredRequestFilters** - Контейнер с информацией по задействованным фильтрам запросов. Тип данных - массив. 
+- **ProcessingData.TriggeredRequestFilters.TriggeredRequestFilter** -  Контейнер с информацией по конкретному фильтру. Тип данных - массив. 
 - **ProcessingData.TriggeredRequestFilters.TriggeredRequestFilter.FilterID** - ID фильтра. Тип данных int.
 - **ProcessingData.TriggeredRequestFilters.TriggeredRequestFilter.PackageID** - ID пакета, в котором сработал фильтр. Тип данных int.
 
