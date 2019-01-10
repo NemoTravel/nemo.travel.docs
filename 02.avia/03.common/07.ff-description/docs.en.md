@@ -11,7 +11,7 @@ Describe the services of the fare families.
 
 #### Format description 
 
--   **Description** - The description of the fare families. The custom data type.
+-   **Description** - The description of the fare families. The array data type.
 -   **Description.ID** - The description ID within the flight. The data type is an integer.
 -   **Description.Name** - fare families names. The data type is a string.
 -   **Description.Carryon** - a measure of carry-on baggage. The data type is a string.
@@ -38,7 +38,7 @@ Describe the services of the fare families.
 -   **Description.FlownMiles** - the percentage of miles credited to the passenger loyalty card. The data type is an integer.
 -   **Description.VIPServices** - The availability of VIP-services. The data type is boolean.
 -   **Description.UniversalParameters** - universal parameters describing the services of the fare families. The data type is an array of FareFamilyParameter elements:
--   **Description.UniversalParameters.FareFamilyParameter** - The universal parameter. The custom data type.
+-   **Description.UniversalParameters.FareFamilyParameter** - The universal parameter. The array data type.
 -   **Description.UniversalParameters.FareFamilyParameter.Code** - The universal parameter code. Data type - enumeration, possible values:
     - **description** - the description of the fare families;
 	- **carry_on** - a carry-on baggage;
@@ -51,7 +51,7 @@ Describe the services of the fare families.
 	- **exchangeable** - possibility of exchange;
 	- **sales_restrictions** - sales restrictions.
 - **Description.UniversalParameters.FareFamilyParameter.ShortDescription** - The container for a short description of the parameter. Data type is an array of LangItem elements:
-- **Description.UniversalParameters.FareFamilyParameter.ShortDescription.LangItem** - The short description of the parameter. The custom data type.
+- **Description.UniversalParameters.FareFamilyParameter.ShortDescription.LangItem** - The short description of the parameter. The array data type.
 - **Description.UniversalParameters.FareFamilyParameter.ShortDescription.LangItem.Code** - The language description code. The data type is a string.
 - **Description.UniversalParameters.FareFamilyParameter.ShortDescription.LangItem.Value** - The description text. The data type is a string.
 - **Description.UniversalParameters.FareFamilyParameter.FullDescription** - The container for a short description of the parameter. The data type is an array of LangItem elements.
