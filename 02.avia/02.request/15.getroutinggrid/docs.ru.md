@@ -47,15 +47,15 @@ taxonomy:
 ##### Описание формата
 
 
--   **RoutingGrid** — список элементов с информацией о маршрутах. Тип данных — сложный.
+-   **RoutingGrid** — список элементов с информацией о маршрутах. Тип данных — массив.
 -   **RoutingGrid.Routes** — список маршрутов. Тип данных — массив.
--   **RoutingGrid.Routes.Departure** — точка отправления маршрута. Тип данных — сложный.
+-   **RoutingGrid.Routes.Departure** — точка отправления маршрута. Тип данных — массив.
 -   **RoutingGrid.Routes.Departure.Code** — код аэропорта точки отправления. Тип данных — строка.
 -   **RoutingGrid.Routes.Departure.CityCode** — код города точки отправления. Тип данных — строка.
 -   **RoutingGrid.Routes.Arrival** — список точек прибытия маршрута. Тип данных — массив.
--   **RoutingGrid.Routes.Arrival.Route** — точка прибытия маршрута. Тип данных — сложный.
+-   **RoutingGrid.Routes.Arrival.Route** — точка прибытия маршрута. Тип данных — массив.
 -   **RoutingGrid.Routes.Arrival.IsDirect** — признак прямого маршрута. Тип данных — булевский.
--   **RoutingGrid.Routes.Arrival.ArrPoint** — точка прибытия маршрута. Тип данных — сложный.
+-   **RoutingGrid.Routes.Arrival.ArrPoint** — точка прибытия маршрута. Тип данных — массив.
 -   **RoutingGrid.Routes.Arrival.ArrPoint.Code** — код аэропорта точки прибытия. Тип данных — строка.
 -   **RoutingGrid.Routes.Arrival.ArrPoint.CityCode** — код города точки прибытия. Тип данных — строка.
 
