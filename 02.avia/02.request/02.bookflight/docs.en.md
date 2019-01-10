@@ -47,6 +47,7 @@ Similar to the previous version of BookFlight_2_0, the difference is only in the
 - **AncillaryServices.AncillaryService.Quantity** - Number of repetitions for that ancillary service. Data type is int.
 - **AncillaryServices.AncillaryService.EMDType** - EMD type. The data type is a string.
 
+
     ### BookFlight_2_1
 
 An operation to create a flight booking working with a 2.1 booking structure.
