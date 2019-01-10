@@ -46,7 +46,7 @@ To store different booking content.
 	-   ReferencedBooks
 	-   DiscountDocument
 	-   LinkedBooks
--  **Remark** - The rext note (optional). The custom data type.
+-  **Remark** - The rext note (optional). The array data type.
 -  **Remark.Type** - The type of remark. Data type - enumeration, possible values:
     -   General
     -   Itinerary
@@ -58,7 +58,7 @@ To store different booking content.
     -   Confidential
     -   MiniItinerary
 -  **Remark.Text** - The text of the remark. The data type is a string.
--  **TimeLimits** - Time limits (optional). The custom data type.
+-  **TimeLimits** - Time limits (optional). The array data type.
 -  **TimeLimits.EffectiveTimeLimit** - Effective TL is defined as the minimum of all TLs except TLA for entering. The data type is the date and time with the time zone specified.
 -  **TimeLimits.PriceTimeLimit** - TL from the GDS price. The data type is the date and time with the time zone specified.
 <!--  **TimeLimits.SegmentsTimeLimit** - TL segments, currently not used. The data type is the date and time with the time zone specified.-->
@@ -82,9 +82,9 @@ To store different booking content.
 -  **Commission.Percent** - Commission in%. The data type is float.
 -  **Commission.Amount** - The commission amount. The data type is float.
 -  **Commission.Currency** - The currency code for the amount. The data type is a string.
--  **FOPInfo** - The form of payment for transfer to the system of the service provider (optional). The custom data type.
--  **FOPInfo.FOPs** - Contains a list of payment forms for prescribing to the reservation. The custom data type.
--  **FOPInfo.FOPs.FOP** - The information about one of the forms of payment in the reservation. The custom data type.
+-  **FOPInfo** - The form of payment for transfer to the system of the service provider (optional). The array data type.
+-  **FOPInfo.FOPs** - Contains a list of payment forms for prescribing to the reservation. The array data type.
+-  **FOPInfo.FOPs.FOP** - The information about one of the forms of payment in the reservation. The array data type.
 -  **FOPInfo.FOPs.FOP.type** - CML attribute, contains the indication of the type of the payment form class, necessary for the correct transfer of credit card data via CML. The data type is a string. Example filling - "<FOP i: type =" stl: CreditCardFOP ">" Possible values:
 	- stl: CreditCardFOP - for credit card details
 	- stl: NumberedFOP - for a payment form with only the number (PP / IN)
@@ -101,7 +101,7 @@ To store different booking content.
 -  **FOPInfo.FOPs.FOP.ExpireDate** - The expiration date of the card. Data type - date in MM.yyyy format
 -  **FOPInfo.FOPs.FOP.ManualApprovalCode** - The code of the payment transaction for which the funds are to be debited. The data type is a string.
 <!--  **FOPInfo.FOPs.FOP.Subtype** - FOP subtype, used when specifying "stl: PaymentOrderFOP". The data type is a string.-->
--  **SourceInfo** - The information about the source where the service reservation was created (optional). The custom data type.
+-  **SourceInfo** - The information about the source where the service reservation was created (optional). The array data type.
 -  **SourceInfo.ID** - The ID of the package of details. The data type is Int32.
 -  **SourceInfo.BookingSupplierAgencyID** - The ID of the details in the provider system in which the service reservation is created. The data type is a string.
 -  **SourceInfo.TicketingSupplierAgencyID** - ID details in the supplier's system, in which the service book is issued. The data type is a string.
@@ -120,23 +120,23 @@ To store different booking content.
     -   CERT
     -   PROD
 - **SourceInfo.TicketingIATAValidator** - The information about the source where the service reservation was created. The data type is a string.
-- **Document** - The document proving the identity of the traveler (optional). The custom data type.
+- **Document** - The document proving the identity of the traveler (optional). The array data type.
 - **Document.Type** - The document type. The data type is an enumeration<!-- the possible values are described in [Document Types](Document Types "wikilink")-->.
 - **Document.Number** - The number of the document proving the identity of the traveler. The data type is a string.
 - **Document.IssueCountryCode** - ISO Alpha2 or ISO Alpha3 country code of the document. The data type is a string.
 - **Document.ElapsedTime** - The document expiration date. The data type is the date in dd.mm.yyyy format.
 - **Document.AddedAsDOCS** - A sign of the document entry as SSR DOCS in the NDP. The data type is bool.
 - **Document.AddedAsFOID** - A sign of entering the document as SSR FOID in the NDP. The data type is bool.
-- **ContactInfo** - Contact details (in the case of booking in Farelogix and using SirenaAviaPlus, the contact information is necessarily). The custom data type.
+- **ContactInfo** - Contact details (in the case of booking in Farelogix and using SirenaAviaPlus, the contact information is necessarily). The array data type.
 - **ContactInfo.EmailID** - E-mail. The data type is a string.
-- **ContactInfo.Telephone** - Thecontact phone. The custom data type.
+- **ContactInfo.Telephone** - Thecontact phone. The array data type.
 - **ContactInfo.Telephone.Type** - The phone type. Data type - enumeration, possible values:
 	- A - Agency
 	- B - Working
 	- M - Mobile
 	- H - Home
 - **ContactInfo.Telephone.PhoneNumber** - The phone number. The data type is a string.
-- **LoyaltyCard** - The Loyalty card (optional). The custom data type.
+- **LoyaltyCard** - The Loyalty card (optional). The array data type.
 - **LoyaltyCard.OwnerType** - The type of the issuer of the loyalty card. Data type - enumeration, possible values:
 	- Airline
 	- Agent
@@ -152,7 +152,7 @@ To store different booking content.
     - Rejected
 - **LoyaltyCard.StatusCode** - The industrial status code. The data type is a string.
 - **Meal** - Special meal (optional). The data type is SSRDataItem.
-- **ElectronicDocument** - Some electronic document (ED) (ticket / EMD) (optional). The custom data type.
+- **ElectronicDocument** - Some electronic document (ED) (ticket / EMD) (optional). The array data type.
 - **ElectronicDocument.Number** - The number of ED (a required element and its omission leads to a data structure violation, which makes it impossible to process such a response). The data type is a string.
 - **ElectronicDocument.ConjunctionNumbers** - "Attached" numbers. The data type is an array.
 - **ElectronicDocument.ConjunctionNumbers.Number** - The number of the "affiliated" ticket. The data type is a string.
@@ -174,12 +174,12 @@ To store different booking content.
 - **ElectronicDocument.NotStoredInPNR** - A sign that this ticket was not saved in PNR. The data type is bool.
 - **ElectronicDocument.ExecutionTimeLimit** - TL to provide services for this ED. The data type is the date and time with the time zone specified.
 - **ElectronicDocument.VAT** - VAT for this ED service. The data type is [Money](/avia/common/money).
-- **ElectronicDocument.VATBreakdown** - The structure of VAT for the service of this ED. The custom data type.
-- **ElectronicDocument.EMDSpecificData** - Contains the data specific for EMD. The custom data type.
+- **ElectronicDocument.VATBreakdown** - The structure of VAT for the service of this ED. The array data type.
+- **ElectronicDocument.EMDSpecificData** - Contains the data specific for EMD. The array data type.
 - **ElectronicDocument.EMDSpecificData.EMDType** - The type of EMD. The data type is a string, the possible values are A / S, A - associated, S - standalone.
 - **ElectronicDocument.EMDSpecificData.ParentTicket** - The ticket number, in the binding to which the given EMD is issued. Basically, it makes sense only for EMD-A. The data type is a string.
 - **ElectronicDocument.EMDSpecificData.Description** - A textual description of the service of this ED (specific for some types of EMDs). The data type is a string.
-- **PaperDocument** - A paper document (optional). The custom data type.
+- **PaperDocument** - A paper document (optional). The array data type.
 - **PaperDocument.Type** - The document type. Data type - enumeration, possible values:
     - ItinReceipt
     - EMD
@@ -189,22 +189,22 @@ To store different booking content.
 - **PaperDocument.Encoding** - The document encoding. The data type is a string.
 - **PaperDocument.DocumentData** - the document data. The data type is a string.
 - **PaperDocument.IsBase64Wrapped** - The attribute of the document wrapper in Base64. The data type is bool.
-- **Endorsements** - Endorsements (optional). The custom data type.
+- **Endorsements** - Endorsements (optional). The array data type.
 - **Endorsements.EndorsementText** - The text of endorsments. The data type is an array.
 - **Endorsements.EndorsementText.Text** - One line of endorsments. The data type is a string.
-- **Visa** - The Visa details (optional). The custom data type.
+- **Visa** - The Visa details (optional). The array data type.
 - **Visa.ApplicableCountry** - ISO Alpha2 or ISO Alpha3 country code for which the visa is valid. The data type is a string.
 - **Visa.BirthPlace** - The place of birth of the traveler, who was issued a visa. The data type is a string.
 - **Visa.IssueDate** - The date of issue of the visa. The data type is the date in dd.mm.yyyy format.
 - **Visa.IssuePlace** - The place of issue of the visa. The data type is a string.
 - **Visa.Number** - The Visa number. The data type is a string.
-- **ArrivalAddress** - The address of the stay (optional). The custom data type.
+- **ArrivalAddress** - The address of the stay (optional). The array data type.
 - **ArrivalAddress.CountryCode** - ISO Alpha2 or ISO Alpha3 country code of the host country. The data type is a string.
 - **ArrivalAddress.City** - The City of arrival. The data type is a string.
 - **ArrivalAddress.State** - The State /= of arrival. The data type is a string.
 - **ArrivalAddress.StreetAddress** - The address of the stay. The data type is a string.
 - **ArrivalAddress.PostalCode** - The postal code of arrival. The data type is a string.
-- **BookedSeat** - The data of the booked seat from the seat card (optional). The custom data type.
+- **BookedSeat** - The data of the booked seat from the seat card (optional). The array data type.
 - **BookedSeat.Number** - The number of the place. The data type is a string.
 - **BookedSeat.Characteristic** - Characteristics of the place. The data type is a string.
 - **BookedSeat.SmokingPreference** - A sign of the smoking preference seat. The data type is bool.
@@ -217,10 +217,10 @@ To store different booking content.
     - OnRequest
     - Rejected
 - **BookedSeat.StatusCode** - The industrial status code. The data type is a string.
-- **ValidatingCompany** - The information about the validating carrier (optional). The custom data type.
+- **ValidatingCompany** - The information about the validating carrier (optional). The array data type.
 - **ValidatingCompany.Code** - The company code. The data type is a string.
 - **ValidatingCompany.IsForced** - A sign of the redefined validating covpany. The data type is bool.
-- **TourCode** - The tour code (optional). The custom data type.
+- **TourCode** - The tour code (optional). The array data type.
 - **TourCode.Type** - Type of the tour code. Data type - enumeration, possible values:
     - Default
     - Unprintable
@@ -228,30 +228,30 @@ To store different booking content.
     - BulkTour
     - BSPInclusiveTour
 - **TourCode.Value** - The value of the tour code. The data type is a string.
-- **Discount** - The discount from the fare (optional). The custom data type.
+- **Discount** - The discount from the fare (optional). The array data type.
 - **Discount.Percent** - The discount value in%. The data type is float.
 - **Discount.Amount** - The discount amount. The data type is float.
 - **Discount.Currency** - The discount currency code. The data type is a string.
 - **Discount.AuthCode** - The discount authorization code, as a rule, is displayed as a ticket of the designator in the fare. The data type is a string.
-- **FareSourceCode** - The information about the unique tariff code (Specificity Mystifly) (optional). The custom data type.
+- **FareSourceCode** - The information about the unique tariff code (Specificity Mystifly) (optional). The array data type.
 - **FareSourceCode.Code** - The tariff code determining the flight in the system Mystifly. The data type is a string.
-- **AdditionalLocators** - Use in uAPI and NemoNetwork to display the locator by which you can read the PNR in the terminal of the GDS (optional). The custom data type.
+- **AdditionalLocators** - Use in uAPI and NemoNetwork to display the locator by which you can read the PNR in the terminal of the GDS (optional). The array data type.
 - **AdditionalLocators.GalileoHostLocator** - The locator in Galileo terminal. The data type is a string.
 - **AdditionalLocators.Other** - Other locators in PNR uAPI. The data type is an array.
 - **AdditionalLocators.Other.Locator** - locator in PNR uAPI. The data type is a string.
 - **AdditionalLocators.HostLocator** - booking locator in the GDS terminal. The data type is a string.
 - **AdditionalLocators.HostSupplier** - GDS, which refers to the previous parameter. The data type is enumeration supported by Nemo providers.
-- **OSI** - (Other Service Information) The aditional information sent to airline (optional). The custom data type.
+- **OSI** - (Other Service Information) The aditional information sent to airline (optional). The array data type.
 - **OSI.Text** - Th text with the information. The data type is a string.
 - **ReferencedBooks** - The data on connected booking (parent and child) (optional). Appear after the separation of the booking.
-- **ReferencedBooks.ParentBook** - The parental booking data. The custom data type.
+- **ReferencedBooks.ParentBook** - The parental booking data. The array data type.
 - **ReferencedBooks.ParentBook.ID** - The booking ID in Nemo. The data type is an integer 64-bit number.
 - **ReferencedBooks.ParentBook.SupplierID** - The booking code in the supplier's system. The data type is a string.
 - **ReferencedBooks.ChildBooks** - The data about child booking. The data type is an array.
-- **ReferencedBooks.ChildBooks.BookIDs** - The booking IDs - the custom data type.
+- **ReferencedBooks.ChildBooks.BookIDs** - The booking IDs - the array data type.
 - **ReferencedBooks.ChildBooks.BookIDs.ID** - The booking ID in Nemo. The data type is an integer 64-bit number.
 - **ReferencedBooks.ChildBooks.BookIDs.SupplierID** - The booking code in the supplier's system. The data type is a string.
-- **DiscountDocument** - The passenger document, which is the basis for the subsidy / discount (optional). The custom data type.
+- **DiscountDocument** - The passenger document, which is the basis for the subsidy / discount (optional). The array data type.
 	- **SPR** - THE REFERENCE FROM MATENITY HOSPITAL
 	- **GD** - THE DOCUMENT OF THE STATE DUMA DEPUTY OF THE FEDERAL ASSEMBLY OF THE RUSSIAN FEDERATION
 	- **KU** - THE BUSINESS TRIP DOCUMENT
@@ -280,11 +280,11 @@ To store different booking content.
 	- **CN** - AN AWARDS CODE 
 - **DiscountDocument.Number** - The basis document number of the subsidy / discount. The data type is a string.
 - **DiscountDocument.ElapsedTime** - The elapsed time of the subsidy / discount basis document. The data type is the date in dd.mm.yyyy format.
-- **CashValueForMultiFOPProxing** - Contains the value of the amount for the cash part when multiplexing GDDS processing through third-party PN (optional). The custom data type.
+- **CashValueForMultiFOPProxing** - Contains the value of the amount for the cash part when multiplexing GDDS processing through third-party PN (optional). The array data type.
 - **CashValueForMultiFOPProxing.CashValue** - a value of the amount for the cash part for multi-FDD GDS processing via third-party PN. The data type is [Money](/avia/common/money).
-- **PNRFOP** - Contains the form of payment in the reservation (optional). The custom data type. It is used only in the answers for the transfer of the actually stated form of payment in PNR.
+- **PNRFOP** - Contains the form of payment in the reservation (optional). The array data type. It is used only in the answers for the transfer of the actually stated form of payment in PNR.
 - **PNRFOP.FOPs** - Contains a list of payment forms for prescribing to the reservation. The data type is an array.
-- **PNRFOP.FOPs.FOP** - One of the forms of payment in the reservation. The custom data type.
+- **PNRFOP.FOPs.FOP** - One of the forms of payment in the reservation. The array data type.
 - **PNRFOP.FOPs.FOP.Type** - The type of this FOP. Data type - enumeration, possible values:
     - CA - cash
     - CC - a credit card
@@ -293,34 +293,34 @@ To store different booking content.
 - **PNRFOP.FOPs.FOP.CreditCardNumber** - Masked credit card number, if the payment formats are a credit card. The data type is a string.
 - **PNRFOP.FOPs.FOP.Number** - FOP number in PNRe
 - **SubagentCommission** - The Subagent commission (optional). The data type is CommissionDataItem:
-- **TicketDesignator** - The information about the ticket designator for prescribing to the reservation (optional). The custom data type.
+- **TicketDesignator** - The information about the ticket designator for prescribing to the reservation (optional). The array data type.
 - **TicketDesignator.Value** - The value of the ticket designator for prescription in the reservation. The data type is a string.
-- **Markup** - The information about the charge of the agent (optional). The custom data type.
+- **Markup** - The information about the charge of the agent (optional). The array data type.
 - **Markup.MarkupValue** - The value of the agent charge. The data type is [Money](/avia/common/money).
-- **Markup.VAT** - VAT data. The custom data type.
+- **Markup.VAT** - VAT data. The array data type.
 - **Markup.VAT.VATValue** - The amount of VAT. The data type is [Money](/avia/common/money).
 - **Markup.VAT.VATRate** - VAT rate in%. The data type is double.
-- **TicketingProxy** - The data for ticketing proxy throught the payment gateway (optional). The custom data type.
+- **TicketingProxy** - The data for ticketing proxy throught the payment gateway (optional). The array data type.
 - **TicketingProxy.Gateway** - The payment gateway through which payment was made. Data type - enumeration, valid value:
     - platron
     - uniteller
 - **TicketingProxy.ProxingParams** - Get parameters necessary to correctly ticketing proxy. The data type is a string.
-- **CRMIntegration** - This is for prescribing in PNR for integration with CRM / BO systems working with supplier systems (optional). The custom data type.
+- **CRMIntegration** - This is for prescribing in PNR for integration with CRM / BO systems working with supplier systems (optional). The array data type.
 - **CRMIntegration.ClientID** - The agent / subagent ID in the CRM / BO system. The data type is a string.
 - **CRMIntegration.NemoClientID** - The agent / subagent ID in Nemo. The data type is int.
 - **CRMIntegration.OrderID** - The order ID in Nemo. The data type is a string.
 - **CRMIntegration.PricingRuleID** - The ID of the worked out price rule in Nemo. The data type is int.
 - **CRMIntegration.PaymentGateway** - The  payment gateway / Payment method. The data type is a string.
-- **CRMIntegration.PaymentGatewayMarkup** - The payment gateway markup. The custom data type.
+- **CRMIntegration.PaymentGatewayMarkup** - The payment gateway markup. The array data type.
 - **CRMIntegration.SalesChannel** - The sales channel. The data type is enumeration, valid value:
     - Meta
     - API
     - AgentSite
-- **EndUserData** - End user data of the system (optional). The custom data type.
+- **EndUserData** - End user data of the system (optional). The array data type.
 - **EndUserData.EndUserIP** - The IP address of the end user. The data type is a string.
 - **EndUserData.EndUserBrowserAgent** - Identify the client software of the final user. The data type is a string.
 - **EndUserData.RequestOrigin** - The origin source of the transition. The data type is a string.
-- **SellingPointDescription** - The description of the point of sale (optional). The custom data type.
+- **SellingPointDescription** - The description of the point of sale (optional). The array data type.
 - **SellingPointDescription.SubAgencyID** - The ID of the extrabudgetary subagency. The data type is an integer 32-bit number.
 
 #### Example
