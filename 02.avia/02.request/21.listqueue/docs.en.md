@@ -13,10 +13,10 @@ If the request does not indicate the packages for which it is necessary to read 
 
 ##### Format Description
 
--  **Packages** - The list of ID packets for which you want to read queues. The custom data type. Optional. If not specified, then a survey is carried out for all the included packages that have the requisites of the booking without binding to the airline.
+-  **Packages** - The list of ID packets for which you want to read queues. The array data type. Optional. If not specified, then a survey is carried out for all the included packages that have the requisites of the booking without binding to the airline.
 -  **PackageID** - The package requisites ID. The data type is an int array.
--  **QueueList** - The list of queues to check. The custom data type
--  **Queue** - The name of the queue. Data type is an array of the QueueName enumeration. Possible values ​​are:
+-  **QueueList** - The list of queues to check. The array data type
+-  **Queue** - The name of the queue. Data type is an array of the QueueName enumeration. Possible values are:
  - GeneralQueue -General queue
  - ScheduleChanged - a Queue with schedule changes  
  - TicketsAdded - a Queue with added tickets
@@ -33,7 +33,7 @@ If the request does not indicate the packages for which it is necessary to read 
 
 ##### Format Description
 
--  **QueueInfoList** - The list of information on named queues. The custom data type
+-  **QueueInfoList** - The list of information on named queues. The array data type
 -  **QueueInfo** - The information about the named queue. Data type - array
 -  **Queue** - the name of the queue. Data type - enumeration QueueName
 -  **BookInfoList** - The list of orders in the queue
@@ -53,7 +53,7 @@ If the request does not indicate the packages for which it is necessary to read 
  - Travelfusion
  - Mystifly
  - GalileoUAPI
--  **UnnamedQQueueInfoList** - The list of information for unnamed queues. The custom data type
+-  **UnnamedQQueueInfoList** - The list of information for unnamed queues. The array data type
 -  **QueueInfo** - The information about the named queue. Data type - array
 -  **Queue** - the number / name of the queue (depending on the GDS). The data type is string
 -  **BookInfoList** -The list of orders in the queue, the format is similar to the one described above.
