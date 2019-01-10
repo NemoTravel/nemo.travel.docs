@@ -11,18 +11,18 @@ taxonomy:
 
 ##### Описание формата
 
--   **RequestedFlightInfo** — содержит информацию о сегментах перелёта, который требуется найти. Тип данных — сложный.
+-   **RequestedFlightInfo** — содержит информацию о сегментах перелёта, который требуется найти. Тип данных — массив.
 -   **RequestedFlightInfo.Direct** — индикатор поиска только прямых перелётов. Тип данных — булевский.
--   **RequestedFlightInfo.ODPair** — сегмент перелёта, который требуется найти. Тип данных — сложный.
+-   **RequestedFlightInfo.ODPair** — сегмент перелёта, который требуется найти. Тип данных — массив.
 -   **RequestedFlightInfo.ODPair.DepatureDateTime** — дата вылета или дата начала периода и время (необязательно), с которого начинается желаемое время вылета. Тип данных — строка, формат — <code>yyyy-MM-dd\[THH:mm:ss\]</code>.
 -   **RequestedFlightInfo.ODPair.DepatureDateTime2** — дата окончания периода. Тип данных — строка, формат — <code>yyyy-MM-dd</code>.
 -   **RequestedFlightInfo.ODPair.MaxDepatureTime** — максимально-допустимое время вылета. Тип данных — строка, формат — <code>HH:mm</code>.
--   **RequestedFlightInfo.ODPair.DepaturePoint** — содержит информацию о точки отправления. Тип данных — сложный.
+-   **RequestedFlightInfo.ODPair.DepaturePoint** — содержит информацию о точки отправления. Тип данных — массив.
 -   **RequestedFlightInfo.ODPair.DepaturePoint.Code** — трехбуквенный код аэропорта/города отправления. Тип данных — строка.
 -   **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** — признак что в качестве точки отправления указан код города-агрегатора аэропортов. Тип данных — булевский.
--   **RequestedFlightInfo.ODPair.ArrivalPoint** — содержит информацию о точки прибытия. Тип данных — сложный. Формат аналогичен элементу **DepaturePoint**.
+-   **RequestedFlightInfo.ODPair.ArrivalPoint** — содержит информацию о точки прибытия. Тип данных — массив. Формат аналогичен элементу **DepaturePoint**.
 -   **Restrictions** — аналогичен параметру **Restrictions** из запроса [Search\_1\_2](/avia/request/search) (необязательный).
--   **EndUserData** — данные конечного пользователя. Тип данных — сложный, формат аналогичен элементу **EndUserData** из [DataItem](/avia/common/dataitem) (необязательный).
+-   **EndUserData** — данные конечного пользователя. Тип данных — массив, формат аналогичен элементу **EndUserData** из [DataItem](/avia/common/dataitem) (необязательный).
 
 ##### Пример
 
@@ -68,20 +68,20 @@ taxonomy:
 
 #### Ответ
 
--   **Flights** — контейнер для результатов поиска. Тип данных — сложный.
--   **Flights.ScheduleFlight** — найденный перелёт в расписании. Тип данных — сложный. Формат аналогичен элементу **Flight** из ответа на запрос  [Search\_1\_2](/avia/request/search), но вместо свойства **Segments** используется свойство **ScheduleSegments**, описанное ниже.
--   **ScheduleFlight.ScheduleSegments** — массив элементов **ScheduleSegment**. Тип данных — сложный.
--   **ScheduleSegment** — информация о сегменте перелёта. Тип данных — сложный.
+-   **Flights** — контейнер для результатов поиска. Тип данных — массив.
+-   **Flights.ScheduleFlight** — найденный перелёт в расписании. Тип данных — массив. Формат аналогичен элементу **Flight** из ответа на запрос  [Search\_1\_2](/avia/request/search), но вместо свойства **Segments** используется свойство **ScheduleSegments**, описанное ниже.
+-   **ScheduleFlight.ScheduleSegments** — массив элементов **ScheduleSegment**. Тип данных — массив.
+-   **ScheduleSegment** — информация о сегменте перелёта. Тип данных — массив.
 -   **ScheduleSegment.ID** — порядковый номер данного сегмента в перелёте. Тип данных — целое 32-битное число.
--   **ScheduleSegment.DepAirp** — информация об аэропорте отправления для данного сегмента. Тип данных — сложный.
+-   **ScheduleSegment.DepAirp** — информация об аэропорте отправления для данного сегмента. Тип данных — массив.
 -   **ScheduleSegment.DepAirp.AirportCode** — код аэропорта. Тип данных — строка.
 -   **ScheduleSegment.DepAirp.CityCode** — код города (агрегационный код). Тип данных — строка.
 -   **ScheduleSegment.DepAirp.UTC** — часовой пояс аэропорта. Тип данных — строка.
 -   **ScheduleSegment.DepAirp.Terminal** — код терминала. Тип данных — строка.
--   **ScheduleSegment.ArrAirp** — информация об аэропорте прибытия для данного сегмента. Тип данных — сложный. Формат аналогичен аэропорту отправления.
+-   **ScheduleSegment.ArrAirp** — информация об аэропорте прибытия для данного сегмента. Тип данных — массив. Формат аналогичен аэропорту отправления.
 -   **ScheduleSegment.ETicket** — признак возможности выписки электронного билета на данном сегменте. Тип данных — булевский.
--   **ScheduleSegment.StopPoints** — список точек остановок на данном сегменте перелёта. Тип данных — сложный.
--   **ScheduleSegment.StopPoints.StopPoint** — информация об одной из точек остановок на данном сегменте перелёта. Тип данных — сложный.
+-   **ScheduleSegment.StopPoints** — список точек остановок на данном сегменте перелёта. Тип данных — массив.
+-   **ScheduleSegment.StopPoints.StopPoint** — информация об одной из точек остановок на данном сегменте перелёта. Тип данных — массив.
 -   **ScheduleSegment.StopPoints.StopPoint.AirportCode** — код аэропорта точки остановки. Тип данных — строка.
 -   **ScheduleSegment.StopPoints.StopPoint.CityCode** — код города точки остановки. Тип данных — строка.
 -   **ScheduleSegment.StopPoints.StopPoint.UTC** — часовой пояс точки остановки. Тип данных — строка.
@@ -99,7 +99,7 @@ taxonomy:
 -   **ScheduleSegment.ArrivalDaysChange** — смещение дня прибытия относительно дня вылета. Тип данных — целое 32-битное число.
 -   **ScheduleSegment.StartDate** - дата начала периода вылетов в формате <code>yyyy-MM-dd</code>. Тип данных — строка.
 -   **ScheduleSegment.EndDate** - дата окончания периода вылетов в формате <code>yyyy-MM-dd</code>. Тип данных — строка.
--   **ScheduleSegment.OperatedDaysOfWeek** — массив дней вылетов. Тип данных — сложный.
+-   **ScheduleSegment.OperatedDaysOfWeek** — массив дней вылетов. Тип данных — массив.
 -   **ScheduleSegment.OperatedDaysOfWeek.DayOfWeek** — день недели, в который будет вылет. Тип данных — перечисление, возможные значения:
     -   **Sunday** — воскресенье;
     -   **Monday** — понедельник;
@@ -108,7 +108,7 @@ taxonomy:
     -   **Thursday** — четверг;
     -   **Friday** — пятница;
     -   **Saturday** — суббота.
--   **ScheduleSegment.BaseClasses** — массив с доступными базовыми классами перелёта. Тип данных — сложный.
+-   **ScheduleSegment.BaseClasses** — массив с доступными базовыми классами перелёта. Тип данных — массив.
 -   **ScheduleSegment.BaseClasses.BaseClass** — базовый класс перелёта. Тип данных — перечисление, возможные значения:
     -   **Economy** — эконом-класс (и стандарт, и премиум);
     -   **Business** — бизнес-класс (и стандарт, и премиум);
