@@ -10,7 +10,7 @@ taxonomy:
 Used to update the flight booking information from [Book version 2.0](/avia/common/book) as the response.
 
 #### UpdateBook_2_2
-The latest version of the request, differences are only in the response to the request in the work unit with additional services from the [Book_2_2](/avia/request/bookflight) request.
+The latest version of the request, differences are only in the response to the request in the additional services block from the [Book_2_2](/avia/request/bookflight) request.
 
 #### Request
 
