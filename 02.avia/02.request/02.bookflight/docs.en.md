@@ -31,8 +31,8 @@ Similar to the previous version of BookFlight_2_0, the difference is only in the
           </ns3:AncillaryServices>
  ```         
 
-- **AncillaryServices** - The list of ancillary services for booking (optional). The custom data type.
-- **AncillaryServices.AncillaryService** - The ancillary service. The custom data type.
+- **AncillaryServices** - The list of ancillary services for booking (optional). The array data type.
+- **AncillaryServices.AncillaryService** - The ancillary service. The array data type.
 - **AncillaryServices.AncillaryService.ID** - The ID of the variable ancillary service (not taken into account when booking). The data type is int.
 - **AncillaryServices.AncillaryService.RFIC** - RFIC of ancillary service. The data type is a string.
 - **AncillaryServices.AncillaryService.RFISC** - RFISC of ancillary service. The data type is a string.
@@ -42,7 +42,7 @@ Similar to the previous version of BookFlight_2_0, the difference is only in the
 - **AncillaryServices.AncillaryService.SSRDescription** - The description for SSR booked ancillary service (Optional). Data type is string.
 - **AncillaryServices.AncillaryService.Type** - The type of ancillary service (Mandatory only for Sirena). The data type is a string.
 - **AncillaryServices.AncillaryService.TravellerRef** - The passenger ID for which the ancillary service is added. The data type is int.
-- **AncillaryServices.AncillaryService.SegmentRef** - Container with references to segments to which the ancillary service is added. The data type is custom.
+- **AncillaryServices.AncillaryService.SegmentRef** - Container with references to segments to which the ancillary service is added. The data type is array.
 - **AncillaryServices.AncillaryService.SegmentRef.Ref** - Segment reference. Data type - int.
 - **AncillaryServices.AncillaryService.Quantity** - Number of repetitions for that ancillary service. Data type is int.
 - **AncillaryServices.AncillaryService.EMDType** - EMD type. The data type is a string.
@@ -57,7 +57,7 @@ An operation to create a flight booking working with a 2.1 booking structure.
 Similar to the previous version of BookFlight_2_0, the difference is only in the flat format of ancillary services
 
 -   **AncillaryServices** - The list of ancillary services for booking (optional). The data type is an array.
--   **AncillaryServices.AncillaryServiceRQ_1_1** - The ancillary service. The custom data type.
+-   **AncillaryServices.AncillaryServiceRQ_1_1** - The ancillary service. The array data type.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.ID** - The ID of the variable ancillary service (not taken into account when booking). The data type is int.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.RFIC** - RFIC of ancillary service. The data type is a string.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.RFISC** - RFISC of ancillary service. The data type is a string.
@@ -101,16 +101,16 @@ An operation to create a flight booking working with a 2.0 booking structure. Di
 -  **FlightID** - The flight ID which will be booked. It supports the format of two flight IDs with the delimiter «+». This format will allow to book compound flight from different searches and GDS. The data type is a string.
 -  **Travelers** - travelers for whom a flight reservation is created. The data type is an array[Traveller](/avia/common/traveller).
 - **DataItems** - content to create the booking (optional). The data type is an array of [DataItem](/avia/common/dataitem).
-- **AdditionalActions** - An additional actions to be performed with the flight reservation (optional). The custom data type.
+- **AdditionalActions** - An additional actions to be performed with the flight reservation (optional). The array data type.
 - **AdditionalActions.QueueNum** - the number of the queue to which to place the reservation after its creation. The data type is a string.
 - **AdditionalActions.CalculatePrice** - A sign of the need to calculate pricing. The data type is bool.
 - **AdditionalActions.HostCommandsToExecute** - The terminal commands set (Optional, only supported for uAPI). Data type is an array of strings.
-- **PricingOptions** - additional options for charging the reservation (optional). The custom data type.
+- **PricingOptions** - additional options for charging the reservation (optional). The array data type.
 - **PricingOptions.FOPsForAlternativePrices** - FOPs for which you need to get an additional estimate of the booking. The data type is an array.
 - **PricingOptions.FOPsForAlternativePrices.Type** - FOPs, for which you need to get an estimate of the booking. The data type is a string.
 - **PricingOptions.BookSubsidyTariffs** - Includes reservation of subsidized tariffs. The data type is bool.
 - **AncillaryServices** - The list of ancillary services for booking (optional). The data type is an array.
-- **AncillaryServices.AncillaryService** -The ancillary service. The custom data type.
+- **AncillaryServices.AncillaryService** -The ancillary service. The array data type.
 - **AncillaryServices.AncillaryService.ID** - The ID of the variable ancillary service (not taken into account when booking). The data type is int.
 - **AncillaryServices.AncillaryService.RFIC** - RFIC of ancillary service. The data type is a string.
 - **AncillaryServices.AncillaryService.RFISC** - RFISC of ancillary services. The data type is a string.
