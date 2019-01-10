@@ -31,8 +31,8 @@ taxonomy:
             </ns3:AncillaryService>
           </ns3:AncillaryServices>
  ```         
--   **AncillaryServices** - Список дополнительных услуг для бронирования (необязательный). Тип данных - сложный.
--   **AncillaryServices.AncillaryService** - Дополнительная услуга. Тип данных - сложный.
+-   **AncillaryServices** - Список дополнительных услуг для бронирования (необязательный). Тип данных - массив.
+-   **AncillaryServices.AncillaryService** - Дополнительная услуга. Тип данных - массив.
 -   **AncillaryServices.AncillaryService.ID** - идентификатор изменяемой дополнительной услуги (Не учитывается при бронировании). Тип данных - int.
 -   **AncillaryServices.AncillaryService.RFIC** - RFIC дополнительной услуги. Тип данных - строка.
 -   **AncillaryServices.AncillaryService.RFISC** - RFISC дополнительной услуги. Тип данных - строка.
@@ -42,7 +42,7 @@ taxonomy:
 -   **AncillaryServices.AncillaryService.SSRDescription** - Описание для SSR бронируемой допуслуги (Необязательный) Тип данных - строка.
 -   **AncillaryServices.AncillaryService.Type** - Тип дополнительной услуги (Обязателен только для Сирены). Тип данных - строка.
 -   **AncillaryServices.AncillaryService.TravellerRef** - идентификатор пассажира для которого добавляется дополнительная услуга. Тип данных - int.
--   **AncillaryServices.AncillaryService.SegmentRef** - Контейнер с ссылками на сегменты на которые добавляется дополнительная услуга. Тип данных - сложный.
+-   **AncillaryServices.AncillaryService.SegmentRef** - Контейнер с ссылками на сегменты на которые добавляется дополнительная услуга. Тип данных - массив.
 -   **AncillaryServices.AncillaryService.SegmentRef.Ref** - Ссылка на сегмент.Тип данных - int.
 -   **AncillaryServices.AncillaryService.Quantity** - Количество повторений данной дополнительной услуги. Тип данных - int.
 -   **AncillaryServices.AncillaryService.EMDType** - Тип EMD. Тип данных - строка.
@@ -56,7 +56,7 @@ taxonomy:
 Аналогичен версии BookFlight_2_0, отличие только в плоском формате дополнительных услуг:
 
 -   **AncillaryServices** - Список дополнительных услуг для бронирования (необязательный). Тип данных - массив.
--   **AncillaryServices.AncillaryServiceRQ_1_1** - Дополнительная услуга. Тип данных - сложный.
+-   **AncillaryServices.AncillaryServiceRQ_1_1** - Дополнительная услуга. Тип данных - массив.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.ID** - идентификатор изменяемой дополнительной услуги (Не учитывается при бронировании). Тип данных - int.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.RFIC** - RFIC дополнительной услуги. Тип данных - строка.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.RFISC** - RFISC дополнительной услуги. Тип данных - строка.
@@ -99,17 +99,17 @@ taxonomy:
 -   **FlightID** — идентификатор перелёта, который будем бронировать. Поддерживает формат из двух идентификаторов перелета с разделителем «+». Такой формат позволит бронировать составные рейсы из разных поисков и GDS. Тип данных — строка.
 -   **Travellers** — пассажиры, для которых создаётся бронь перелёта. Тип данных — массив элементов типа [Traveller](/avia/common/traveller).
 -   **DataItems** — контент для создания брони (необязательный). Тип данных — массив элементов типа [DataItem](/avia/common/dataitem).
--   **AdditionalActions** — дополнительные действия, которые нужно выполнить с бронью перелёта (необязательный). Тип данных — сложный.
+-   **AdditionalActions** — дополнительные действия, которые нужно выполнить с бронью перелёта (необязательный). Тип данных — массив.
 -   **AdditionalActions.QueueNum** — номер очереди, в которую нужно поместить бронь после её создания. Тип данных — строка.
 <!---   **AdditionalActions.CalculatePrice** — признак необходимости расчета ценообразования. Тип данных — булевский.-->
 -   **AdditionalActions.HostCommandsToExecute** — набор терминальных команд (необязательный, поддерживается только для Galileo uAPI и Amadeus). Тип данных — массив строк.
 -   **AdditionalActions.BusinessProfileToTransfer** — название профиля, из которого необходимо перености данные (необязательный, поддерживается только для Amadeus). Тип данных - строка.
--   **PricingOptions** — дополнительные опции тарификации брони (необязательный). Тип данных — сложный.
+-   **PricingOptions** — дополнительные опции тарификации брони (необязательный). Тип данных — массив.
 -   **PricingOptions.FOPsForAlternativePrices** — FOP'ы (Form Of Payment), для которых нужно получить дополнительную оценку брони. Тип данных — массив.
 -   **PricingOptions.FOPsForAlternativePrices.Type** — FOP, для которой нужно получить допоценку брони. Тип данных — строка.
 -   **PricingOptions.BookSubsidyTariffs** — включает бронирование субсидированных тарифов. Тип данных — булевский.
 -   **AncillaryServices** — список дополнительных услуг для бронирования (необязательный). Тип данных — массив.
--   **AncillaryServices.AncillaryService** — дополнительная услуга. Тип данных — сложный.
+-   **AncillaryServices.AncillaryService** — дополнительная услуга. Тип данных — массив.
 -   **AncillaryServices.AncillaryService.ID** — идентификатор изменяемой дополнительной услуги (не учитывается при бронировании). Тип данных — целое число.
 -   **AncillaryServices.AncillaryService.RFIC** — RFIC-код дополнительной услуги. Тип данных — строка.
 -   **AncillaryServices.AncillaryService.RFISC** — RFISC-код дополнительной услуги. Тип данных — строка.
