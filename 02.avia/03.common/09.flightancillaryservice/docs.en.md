@@ -20,7 +20,7 @@ Ancillary services, consist of the following elements:
 * **RFIC** - Ancillary services RFIC ( Reason For Issuance Codes), consists of one symbol and is used to indicate the basis (cause) for adding EMD. The data type is a string. List of RFIC Codes:
     -   **A** — Air Transportation;
     -   **B** — Surface Transportation/Non Air Services;
-    -   **C** — Baggage ;
+    -   **C** — Baggage;
     -   **D** — Financial Impact;
     -   **E** — Airport Services;
     -   **F** — Merchandise;
