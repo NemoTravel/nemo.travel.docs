@@ -55,7 +55,7 @@ taxonomy:
     -   **hRT** — RT/2;
     -   **mOW** — перелёт является возможным плечом мультиOW перелёта.
 -   **Segments** — сегменты перелёта. Тип данных — массив элементов [FlightSegment](/avia/grouping/flightsegment).
--   **FlightSegment** — сегмент перелёт. Тип данных — сложный.
+-   **FlightSegment** — сегмент перелёт. Тип данных — массив.
 -   **FlightSegment.ID** — идентификатор сегмента в рамках данного перелёта. Тип данных — целое 32-битное число.
 -   **FlightSegment.DepatureAirport** — информация об аэропорте отправления. Тип данных — TripPointInformation:
 -   **FlightSegment.DepatureAirport.Code** — код аэропорта. Тип данных — строка.
@@ -64,7 +64,7 @@ taxonomy:
 -   **FlightSegment.DepatureAirport.UTC** — часовой пояс. Тип данных — дробное число.
 -   **FlightSegment.ArrivalAirport** — информация об аэропорте прибытия. Тип данных — TripPointInformation. Формат аналогичен FlightSegment.DepatureAirport.
 -   **FlightSegment.StopPoints** — точки остановки на данном сегменте. Тип данных — массив элементов StopPoint:
--   **FlightSegment.StopPoints.StopPoint** — точка остановки на данном сегменте. Тип данных — сложный, наследник TripPointInformation.
+-   **FlightSegment.StopPoints.StopPoint** — точка остановки на данном сегменте. Тип данных — массив, наследник TripPointInformation.
 -   **FlightSegment.StopPoints.StopPoint.Code** - код аэропорта. Тип данных — строка.
 -   **FlightSegment.StopPoints.StopPoint.CityCode** - код города, при наличии агрегации аэропортов. Тип данных — строка.
 -   **FlightSegment.StopPoints.StopPoint.UTC** - часовой пояс. Тип данных — дробное число.
