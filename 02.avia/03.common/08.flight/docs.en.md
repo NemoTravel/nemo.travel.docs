@@ -9,10 +9,10 @@ taxonomy:
 
 Flight presentation format 1.1.
 
--   **Flight** — The root element, inside of which there are flight data. The custom data type.
+-   **Flight** — The root element, inside of which there are flight data. The array data type.
 -   **Flight.ID** — The Flight ID.  The data type is a string.
 -   **Flight.SourceID** — the identifier of the package of requisites from which this flight was received. The data type is an integer 32-bit number.
--   **Flight.TypeInfo** —the typification of the flight according to various criteria. The custom data type.
+-   **Flight.TypeInfo** —the typification of the flight according to various criteria. The array data type.
 -   **Flight.TypeInfo.Type** — The type of flight. Data type - enumeration, possible values:
     -   **Regular** — regular flight;
     -   **Charter** — charter;
@@ -27,18 +27,18 @@ Flight presentation format 1.1.
 <!--	- **hRT** - RT / 2 - a simple OW flight was requested, but on the basis of the settings of a certain package of requisites RT / 2 search was launched; -->
 	- **mOW** - multipleOW - OW + OW + - the requested flight from several segments was found as a set of separate search results.
 -   **Flight.MandatoryLatinNames** - a sign of the obligation to create a reservation with the full name in Latin. The data type is boolean.
--   **Flight.Segments** - The container for flight segments. The custom data type.
--   **Flight.Segments.Segment** - The information about the flight segment. The custom data type.
+-   **Flight.Segments** - The container for flight segments. The array data type.
+-   **Flight.Segments.Segment** - The information about the flight segment. The array data type.
 -   **Segment.ID** - the serial number of this segment in the flight. The data type is an integer 32-bit number.
--   **Segment.DepAirp** - The information about the departure airport for this segment. The custom data type.
+-   **Segment.DepAirp** - The information about the departure airport for this segment. The array data type.
 -   **Segment.DepAirp.AirportCode** - The airport code. The data type is a string.
 -   **Segment.DepAirp.CityCode** - The city code (airport aggregator). The data type is a string.
 -   **Segment.DepAirp.UTC** - The time zone of the airport. The data type is a string.
 -   **Segment.DepAirp.Terminal** - The terminal code. The data type is a string.
--   **Segment.ArrAirp** - The information about the arrival airport for this segment. The custom data type. The format is the same as the departure airport
+-   **Segment.ArrAirp** - The information about the arrival airport for this segment. The array data type. The format is the same as the departure airport
 -   **Segment.ETicket** - a sign of the possibility of ticketing an electronic ticket on this segment. The data type is boolean.
--   **Segment.StopPoints** - The list of stop points on this segment of the flight. The custom data type.
--   **Segment.StopPoints.StopPoint** - The information about one of the stop points on this segment of the flight. The custom data type.
+-   **Segment.StopPoints** - The list of stop points on this segment of the flight. The array data type.
+-   **Segment.StopPoints.StopPoint** - The information about one of the stop points on this segment of the flight. The array data type.
 -   **Segment.StopPoints.StopPoint.AirportCode** - The airport stop code. The data type is a string.
 -   **Segment.StopPoints.StopPoint.CityCode** - The city code of the stop point. The data type is a string.
 - 	**Segment.StopPoints.StopPoint.UTC** - the time zone of the stop point. The data type is a string.
@@ -52,8 +52,8 @@ Flight presentation format 1.1.
 -   **Segment.AircraftType** - the type code of the aircraft. The data type is a string.
 -	**Segment.DepDateTime** - The departure date and time in the format </code> yyyy-MM-ddTHH: mm: ss </code>. The data type is a string.
 - 	**Segment.ArrDateTime** - The date and time of arrival in the format </code> yyyy-MM-ddTHH: mm: ss </code>. The data type is a string.
-- 	**Segment.BookingClass** - The information about the flight class for this segment of the flight. The custom data type.
-- 	**Segment.BookingClass.BaseClass** - the base class of the flight. The data type is an enumeration. Possible values ​​are:
+- 	**Segment.BookingClass** - The information about the flight class for this segment of the flight. The array data type.
+- 	**Segment.BookingClass.BaseClass** - the base class of the flight. The data type is an enumeration. Possible values are:
 	- **Economy** - economy class;
 	- **PremiumEconomy** - premium economy;
 	- **Business** - business class;
@@ -62,8 +62,8 @@ Flight presentation format 1.1.
 -   **Segment.BookingClass.BookingClassCode** - the class code of the flight. The data type is a string.
 -   **Segment.BookingClass.FreeSeatCount** - the number of available seats for this class of flight. The data type is an integer 32-bit number.
 -   **Segment.BookingClass.MealType** - The available type of meal for this class of flight. The data type is a string.
--   **Flight.PriceInfo** - The information about the prices for this flight. The custom data type.
--   **Flight.PriceInfo.Price** - The information about the specific price for a given flight. The custom data type.
+-   **Flight.PriceInfo** - The information about the prices for this flight. The array data type.
+-   **Flight.PriceInfo.Price** - The information about the specific price for a given flight. The array data type.
 -   **Flight.PriceInfo.Price.ID** - the serial number of the price within the flight. The data type is an integer 32-bit number.
 -   **Flight.PriceInfo.Price.ValidatingCompany** - the code of the validating carrier providing this price. The data type is a string.
 -   **Flight.PriceInfo.Price.Refundable** - The type of refund ticket for the flight with a given price. Data type - enumeration, possible values:
@@ -73,8 +73,8 @@ Flight presentation format 1.1.
 -   **PenaltiesApplies** - refundable with penalties.
 -   **Flight.PriceInfo.Price.PrivateFareInd** - a sign of the presence of private tariffs in this price. The data type is boolean.
 -   **Flight.PriceInfo.Price.TicketTimeLimit** - the time-limit for this price (the price is valid until) in the format </code> yyyy-MM-ddTHH: mm: ss </ code>. The data type is a string.
--   **Flight.PriceInfo.Price.PassengerFares** - an array of price components for passenger types. The custom data type.
--   **Flight.PriceInfo.Price.PassengerFares.PassengerFare** - The price component for a particular type of passenger. The custom data type.
+-   **Flight.PriceInfo.Price.PassengerFares** - an array of price components for passenger types. The array data type.
+-   **Flight.PriceInfo.Price.PassengerFares.PassengerFare** - The price component for a particular type of passenger. The array data type.
 -   **PassengerFare.SegmentRef** - links to the segments to which this passenger-price applies. If there is no - it means that the price is applied to all segments. The data type is an array.
 -   **PassengerFare.SegmentRef.Ref** - The reference to the segment to which this passenger-price applies. The data type is an integer 32-bit number.
 -   **PassengerFare.Type** - The passenger type for which this component is applied. Data type - enumeration, possible values:
@@ -94,14 +94,14 @@ Flight presentation format 1.1.
 -   **PassengerFare.BaseFare.Amount** - the amount of the base price. The data type is a fractional number. ->
 -   **PassengerFare.EquiveFare** - The base price in equivalent currency for 1 passenger of this type. The data type is [Money](/avia/common/money).
 -   **PassengerFare.TotalFare** - The full price (tariffs + taxes) for 1 passenger of this type in an equivalent currency. The data type is [Money](/avia/common/money).
--   **PassengerFare.Taxes** - The container for the price of this price component. The custom data type.
--   **PassengerFare.Taxes.Tax** - The information about a specific taxes. The custom data type.
+-   **PassengerFare.Taxes** - The container for the price of this price component. The array data type.
+-   **PassengerFare.Taxes.Tax** - The information about a specific taxes. The array data type.
 -   **PassengerFare.Taxes.Tax.Currency** - The currency code of the tax. The data type is a string.
 -   **PassengerFare.Taxes.Tax.Amount** - the amount of the tax. The data type is a fractional number.
 -   **PassengerFare.Taxes.Tax.TaxCode** - the code of the tax. The data type is a string.
 -   **PassengerFare.Taxes.Tax.AgencyAmount** - the amount of the tax in agency currency. The data type is a fractional number.
--   **PassengerFare.Tariffs** - The container for tariffs of this price component. The custom data type.
--   **PassengerFare.Tariffs.Tariff** - The information about one of the tariffs of this price component. The custom data type.
+-   **PassengerFare.Tariffs** - The container for tariffs of this price component. The array data type.
+-   **PassengerFare.Tariffs.Tariff** - The information about one of the tariffs of this price component. The array data type.
 -   **PassengerFare.Tariffs.Tariff.Code** - The tariff code. The data type is a string.
 -   **PassengerFare.Tariffs.Tariff.Type** - The type of tariff. Data type - enumeration, possible values:
 	- **Public** - the public (non-private) tariff;
@@ -110,7 +110,7 @@ Flight presentation format 1.1.
 	- **NonCat35** - tariffs that are not suitable for issue in category 35;
 	- **Private** - all other private tariffs.
 -   **Flight.PriceInfo.Price.PassengerFares.PassengerFare.Tariffs.Tariff.SegNum** - The segment number for which this tariff is applied. The data type is an integer 32-bit number.
--   **Flight.PriceInfo.Price.PassengerFares.PassengerFare.Tariffs.Tariff.FreeBaggage** - The contains information about free baggage at this fare. The custom data type.
+-   **Flight.PriceInfo.Price.PassengerFares.PassengerFare.Tariffs.Tariff.FreeBaggage** - The contains information about free baggage at this fare. The array data type.
 -   **Flight.PriceInfo.Price.PassengerFares.PassengerFare.Tariffs.Tariff.FreeBaggage.Measure** - Theunit baggage measure. Data type - enumeration, possible values:
 	- **Kilograms** - kilos;
 	- **Pounds** - pounds;
@@ -121,7 +121,7 @@ Flight presentation format 1.1.
 -   **PassengerFare.Tariffs.Tariff.FreeBaggage.Value** - the amount of free baggage at this fare. The data type is a string.
 -   **PassengerFare.Tariffs.Tariff.FareFamilyDescID** - the identifier of the fare families descriptions. The data type is an integer.
 -   **PassengerFare.Tariffs.Tariff.FareFamilyCode** - the airline code of the fare families. The data type is a string.
--   **PassengerFare.Commission** - the information about the commission for this price component from GDS. The custom data type.
+-   **PassengerFare.Commission** - the information about the commission for this price component from GDS. The array data type.
 -   **PassengerFare.Commission.Amount** - the absolute value of the commission. The data type is a fractional number.
 -   **PassengerFare.Commission.Percent** - The commission value in percent. The data type is a fractional number.
 -   **PassengerFare.Commission.Currency** - the currency code of the commission. The data type is a string.
@@ -129,7 +129,7 @@ Flight presentation format 1.1.
 -   **PassengerFare.Markup** - the amount charge for this price. Тип данных — [Money](/avia/common/money).
 -   **PassengerFare.AgencyFare** - price of the tariff in the agency currency. The data type is a fractional number.
 -   **PassengerFare.ChargeBreakdown** - contains a breakdown of the charge from pricing on passenger, the amount of rounding when converting to a currency of the agency.
--   **PassengerFare.ChargeBreakdown.Charge** - The container for charge. The custom data type.
+-   **PassengerFare.ChargeBreakdown.Charge** - The container for charge. The array data type.
 -   **PassengerFare.ChargeBreakdown.Charge.Amount** - The absolute value of the charge, roundings. The data type is a fractional number.
 -   **PassengerFare.ChargeBreakdown.Charge.RuleID** - The Rule ID. The data type is an integer.
 -   **PassengerFare.ChargeBreakdown.Charge.Type** - The type of charge. Data type - enumeration, possible values:
@@ -139,8 +139,8 @@ Flight presentation format 1.1.
 	- **MarkupRound** - rounding value of the markup;
 -   **PassengerFare.TotalAgencyFare** - The amount tariff and charge in the agency currency.The data type is [Money](/avia/common/money).
 -   **Flight.Price.AgencyMarkup** - the amount of charge for the whole fight (for all the passengers). The data type is [Money](/avia/common/money).
--   **PassengerFare.ExchangePriceInfo** - the total exchange fare (the item will only be on receipt of exchange options). The custom data type
--   **PassengerFare.ExchangePriceInfo.AirlinePenalty** - the airline's penalty for the exchange. The custom data type.
+-   **PassengerFare.ExchangePriceInfo** - the total exchange fare (the item will only be on receipt of exchange options). The array data type
+-   **PassengerFare.ExchangePriceInfo.AirlinePenalty** - the airline's penalty for the exchange. The array data type.
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty.Currency** - The penalty currency code. The data type is a string.
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty.Amount** - the amount of the penalty. The data type is a fractional number.
 -   **PassengerFare.ExchangePriceInfo.FlightPriceDifference** - the difference in the cost with the flight in the reservation. If the flight is cheaper, the difference will be with a "-" sign. The data type is [Money](/avia/common/money).
