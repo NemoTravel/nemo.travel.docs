@@ -16,7 +16,7 @@ The latest version of the request, differences are only in the response to the r
 
 -  **BookID** - The booking ID that you want to update. The data type is long.
 -  **CancelPayment** - A sign of the need to cancel the old payment of the reservation (optional). The data type is boolean.
--  **PricingOptions** - additional options for charging the reservation (optional). The custom data type.
+-  **PricingOptions** - additional options for charging the reservation (optional). The array data type.
 -  **PricingOptions.FOPsForAlternativePrices** - FOP for which you need to get an additional estimate of the booking. The data type is an array.
 -  **PricingOptions.FOPsForAlternativePrices.Type** - FOP, for which you need to get an estimate of the booking. The data type is a string.
 -  **PricingOptions.NoReprice** - Turns off the re-pricing (actualization of the price) booking, supported for Galileo, Sabre, Amadeus, SITAGabriel, uAPI. The data type is bool.
