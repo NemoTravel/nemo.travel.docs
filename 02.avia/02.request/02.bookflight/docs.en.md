@@ -99,16 +99,16 @@ An operation to create a flight booking working with a 2.0 booking structure. Di
 #### Request
 
 -  **FlightID** - The flight ID which will be booked. It supports the format of two flight IDs with the delimiter «+». This format will allow to book compound flight from different searches and GDS. The data type is a string.
--  **Travelers** - travelers for whom a flight book is created. The data type is an array[Traveller](/avia/common/traveller).
+-  **Travelers** - travelers for whom a flight booking is created. The data type is an array[Traveller](/avia/common/traveller).
 - **DataItems** - content to create the booking (optional). The data type is an array of [DataItem](/avia/common/dataitem).
-- **AdditionalActions** - An additional actions to be performed with the flight book (optional). The array data type.
-- **AdditionalActions.QueueNum** - the number of the queue to which to place the book after its creation. The data type is a string.
+- **AdditionalActions** - An additional actions to be performed with the flight booking (optional). The array data type.
+- **AdditionalActions.QueueNum** - the number of the queue to which to place the booking after its creation. The data type is a string.
 - **AdditionalActions.CalculatePrice** - A sign of the need to calculate pricing. The data type is bool.
 - **AdditionalActions.HostCommandsToExecute** - The terminal commands set (Optional, only supported for uAPI). Data type is an array of strings.
-- **PricingOptions** - additional options for charging the book (optional). The array data type.
+- **PricingOptions** - additional options for charging the booking (optional). The array data type.
 - **PricingOptions.FOPsForAlternativePrices** - FOPs for which you need to get an additional estimate of the booking. The data type is an array.
 - **PricingOptions.FOPsForAlternativePrices.Type** - FOPs, for which you need to get an estimate of the booking. The data type is a string.
-- **PricingOptions.BookSubsidyTariffs** - Includes book of subsidized tariffs. The data type is bool.
+- **PricingOptions.BookSubsidyTariffs** - Includes booking of subsidized tariffs. The data type is bool.
 - **AncillaryServices** - The list of ancillary services for booking (optional). The data type is an array.
 - **AncillaryServices.AncillaryService** -The ancillary service. The array data type.
 - **AncillaryServices.AncillaryService.ID** - The ID of the variable ancillary service (not taken into account when booking). The data type is int.
@@ -121,7 +121,7 @@ An operation to create a flight booking working with a 2.0 booking structure. Di
 - **AncillaryServices.AncillaryService.SegmentRef** - The array of multi-links to segments to which the ancillary service is added. The data type is an int array.
 - **AncillaryServices.AncillaryService.SegmentRef.MRef** - The element of an array of multi-links to segments. The data type is int.
 
-##### Example
+##### Exampleto book
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
