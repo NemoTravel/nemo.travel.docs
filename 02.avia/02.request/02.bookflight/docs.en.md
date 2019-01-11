@@ -219,7 +219,7 @@ An operation to create a flight booking working with a 2.0 booking structure. Di
 
 >>>> Attention! In the response for booking request Traveller.ID parameters may not match the parameters shown in the request. Passengers order may be changed due to the special features of the interaction with some GDS/providers.
 
-[Book](/avia/common/book).
+[Version 2.1 Book](/avia/common/book).
 
 ##### Example
 ```xml
