@@ -19,8 +19,8 @@ The latest request version, the differences are only in the response in the anci
 
 -  **BookID** - The booking ID with passengers. The data type is an integer 64-bit number.
 -  **FlightID** - The flight ID, on which the exchange will take place. Data type - string
--  **Passengers** - The numbers of passengers in the reservation, whose tickets are required to be exchanged. The data type is an array.
--  **Passengers.Ref** - The passenger number in the reservation. The data type is an integer 32-bit number.
+-  **Passengers** - The numbers of passengers in the booking, whose tickets are required to be exchanged. The data type is an array.
+-  **Passengers.Ref** - The passenger number in the booking. The data type is an integer 32-bit number.
 
 ##### Example
 
@@ -89,7 +89,7 @@ The latest request version, the differences are only in the response in the anci
     
 #### Response
 
-If there is a partial exchange, the reservation will be divided into two: the first (with the old ID) will contain passengers whose tickets are not exchanged; The second reservation (with a new ID) will contain passengers whose tickets are exchanged.
+If there is a partial exchange, the booking will be divided into two: the first (with the old ID) will contain passengers whose tickets are not exchanged; The second booking (with a new ID) will contain passengers whose tickets are exchanged.
 
 ##### Format Description
 
