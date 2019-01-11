@@ -14,9 +14,9 @@ The latest version of the request, differences are only in the response to the r
 
 ### VoidEMD_1_1
 #### Request format
-* **BookID** - ID of the reservation for which the operation is performed. The data type is long.
-* **ServiceRefs** - List of IDs of the ancillary services  in the reservation for which an operation is required. The data type is an integer array.
-* **ServiceRefs.Ref** - ID of the ancillary service in the reservation for which the operation is required. The data type is integer.
+* **BookID** - ID of the booking for which the operation is performed. The data type is long.
+* **ServiceRefs** - List of IDs of the ancillary services  in the booking for which an operation is required. The data type is an integer array.
+* **ServiceRefs.Ref** - ID of the ancillary service in the booking for which the operation is required. The data type is integer.
 #### Request example 
 
 ```xml
