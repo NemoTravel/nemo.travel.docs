@@ -18,7 +18,7 @@ The latest version of the request, differences are only in the response to the r
 ##### Format Description
 
 - **BookID** - The booking ID with passengers. The data type is an integer 64-bit number.
-- **Passengers** - The number of passengers in the reservation,  for which is needed to receive the refund information. The data type is an array.
+- **Passengers** - The number of passengers in the booking,  for which is needed to receive the refund information. The data type is an array.
 - **Passengers.Ref** -  The Passenger number in the booking. The data type is an integer 32 bit number.
 - **Involuntary** - A sign of the involuntary refund (Optional). The data type is boolean.
 - **SegmentsToRefund** - Segments for the refund. The data type is an array.
