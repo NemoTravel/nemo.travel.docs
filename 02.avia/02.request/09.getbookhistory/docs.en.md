@@ -42,7 +42,7 @@ Used to get the history of changes in booking from GDS.
 ##### Format Description
 
 -  **BookID** - The booking ID that you want to cancel. The data type is an integer 64-bit number.
--  **PNRCode** - The reservation code in the GDS. The data type is a string.
+-  **PNRCode** - The booking code in the GDS. The data type is a string.
 -  **HistoryElements** - Container for elements in booking history. The array data type.
 -  **HistoryElements.HistoryElement** - The booking history element. The array data type. It occurs 1 or more times.
 -  **HistoryElements.HistoryElement.DateTime** - Date and time of the booking in the format yyyy-MM-ddTHH: mm: ss. The data type is a string.
