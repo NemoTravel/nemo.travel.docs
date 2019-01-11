@@ -8,17 +8,17 @@ taxonomy:
 Price
 -----
 
-Contains the full information about the price and its formation for the reservation or order.
+Contains the full information about the price and its formation for the booking or order.
 
--   **TotalPrice** - The total cost of this reservation or order in the agent's selling currency. The data type is [Money](/avia/common/money).
--   **ExpectedTicketCount** - The expected number of tickets to be issued for this reservation. The data type is int32.
--   **FOPPrices** - Contains the price difference for specific FOPs relative to the price of the reservation without specifying the planned FOP. The array data type.
--   **FOPPrices.FOPPrice** - Contains the price difference for a particular FOP relative to the price of the reservation without specifying the planned FOP. The data type is an array.
+-   **TotalPrice** - The total cost of this booking or order in the agent's selling currency. The data type is [Money](/avia/common/money).
+-   **ExpectedTicketCount** - The expected number of tickets to be issued for this booking. The data type is int32.
+-   **FOPPrices** - Contains the price difference for specific FOPs relative to the price of the booking without specifying the planned FOP. The array data type.
+-   **FOPPrices.FOPPrice** - Contains the price difference for a particular FOP relative to the price of the booking without specifying the planned FOP. The data type is an array.
 -   **FOPPrices.FOPPrice.FOP** - FOP, for which the price difference is represented. The data type is a string.
 -   **FOPPrices.FOPPrice.Price** - The price difference for this FOP. The data type is [Money](/avia/common/money).
 -   **PriceBreakdown** - The breackdown with the formation of the price of the object. The data type is the PricePart array.
 -   **PricePart** - The part of the price of the object, usually for one of the services in this order. The array data type.
--   **PricePart.ServiceRef** - A reference to the services in the reservation / order for which this price applies. Not indicated if the price applies to all services in the reservation / order. The data type is [Reflist](/avia/common/reflist).
+-   **PricePart.ServiceRef** - A reference to the services in the booking / order for which this price applies. Not indicated if the price applies to all services in the booking / order. The data type is [Reflist](/avia/common/reflist).
 -   **PricePart.SegmentRef** - A reference to the flight segments to which this price applies. Specificity of issuing several tickets for one flight. The data type is [Reflist](/avia/common/reflist).
 -   **PricePart.TotalPrice** - The total cost of this part of the price. The data type is [Money](/avia/common/money).
 -   **PricePart.ValidatingCompany** - The validating carrier. The data type is a string.
