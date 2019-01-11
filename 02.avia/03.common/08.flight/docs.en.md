@@ -26,7 +26,7 @@ Flight presentation format 1.1.
 	- **DoubleOJ** - double Open Jaw - a flight from 2 legs, in which the departure point of the first leg does not coincide with the arrival point of the second leg and the point of arrival of the first leg does not coincide with the departure point of the second leg;
 <!--	- **hRT** - RT / 2 - a simple OW flight was requested, but on the basis of the settings of a certain package of requisites RT / 2 search was launched; -->
 	- **mOW** - multipleOW - OW + OW + - the requested flight from several segments was found as a set of separate search results.
--   **Flight.MandatoryLatinNames** - a sign of the obligation to create a reservation with the full name in Latin. The data type is boolean.
+-   **Flight.MandatoryLatinNames** - a sign of the obligation to create a booking with the full name in Latin. The data type is boolean.
 -   **Flight.Segments** - The container for flight segments. The array data type.
 -   **Flight.Segments.Segment** - The information about the flight segment. The array data type.
 -   **Segment.ID** - the serial number of this segment in the flight. The data type is an integer 32-bit number.
@@ -143,6 +143,6 @@ Flight presentation format 1.1.
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty** - the airline's penalty for the exchange. The array data type.
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty.Currency** - The penalty currency code. The data type is a string.
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty.Amount** - the amount of the penalty. The data type is a fractional number.
--   **PassengerFare.ExchangePriceInfo.FlightPriceDifference** - the difference in the cost with the flight in the reservation. If the flight is cheaper, the difference will be with a "-" sign. The data type is [Money](/avia/common/money).
+-   **PassengerFare.ExchangePriceInfo.FlightPriceDifference** - the difference in the cost with the flight in the booking. If the flight is cheaper, the difference will be with a "-" sign. The data type is [Money](/avia/common/money).
 -   **Flight.FareFamiliesDescription** - contains descriptions of the tfare families presenting in the flight. The data type is [Description](/avia/common/ff-description).
 
