@@ -43,7 +43,7 @@ The latest request version, the differences are only in the response in the anci
 
 #### Response
 
-There is the reservation in the responseas the response is similar to the response to the request [BookFlight\_2\_0](/avia/request/bookflight).
+The booking is in the response, i.e. the response is similar to the response to [BookFlight\_2\_0](/avia/request/bookflight) request.
 
 ##### Example
 
