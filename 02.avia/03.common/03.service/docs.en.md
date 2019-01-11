@@ -9,18 +9,18 @@ taxonomy:
 
 Each of the base and ancillary services is inherited from the BaseService class and contains the following fields:
 
--   **ID** - The ID of this service within this object (reservation / order). The data type is Int32.
+-   **ID** - The ID of this service within this object (booking / order). The data type is Int32.
 -   **SupplierID** - The ID of the service in the supplier's system. The data type is a string.
 -   **IsOffline** - A sign of offline services. The data type is bool.
 -   **Status** - the status of the service in the supplier's system. Data type - enumeration **PNRStatus**, possible values:
     -   Booked
     -   Canceled
     -   Ticketed
-    -   AwaitingTicketing - mainly for cases with charters, when the reservation was sent to the queue for the ticketing.
-    -   Partial - part of the reservation / order is in one condition, the rest in the other (for example, partially booked reservation, or different services have different statuses)
+    -   AwaitingTicketing - mainly for cases with charters, when the booking was sent to the queue for the ticketing.
+    -   Partial - part of the booking / order is in one condition, the rest in the other (for example, partially booked reservation, or different services having different statuses)
     -   Requested
     -   Rejected
-    -   Problematic - the problematic reservation / order / service, if this status is available in the sub-statuses, it is indicated what exactly is wrong with the reservation
+    -   Problematic - the problematic booking / order / service, if this status is available in the sub-statuses, it is indicated what exactly is wrong with the booking
 -   **SubStatus** - The list of sub-statuses clarifying the current status of the service. The data type is enumeration, possible values:
 	-   InvalidSegmentStatus
 	-   SegmentStatusForManualConfirmation - if for some reason it was not possible to automatically confirm them (meaning TK / KK statuses)
@@ -29,11 +29,11 @@ Each of the base and ancillary services is inherited from the BaseService class 
 	-   NoValidFare - the NDP in the GDS has no active and valid price, Galileo's specifics in general
 	-   UnremovedVoidedTicketElements - specific in Amadeus
 	-   PaidBook - Siren, when the NDP was paid through their PN, but for some reason he did not sign out yet.
-	-   FailedToActualizePrice - Failed to get the current price for the reservation
+	-   FailedToActualizePrice - Failed to get the current price for the booking
 	-   UnconfirmedInfant - the unconfirmed baby, manual processing is required.
 	-   UnconfirmedLoyaltyCard - the unconfirmed loyalty card.
 -   **TravelerRef** - the reference to the travelers to whom the service belongs. If the service is applied to all travelers, then the element is not specified. The data type is the [RefList](/avia/common/reflist) array.
--   **TravelerRef.Ref** - a link to a particular traveler within the reservation / order. The data type is Int32.
+-   **TravelerRef.Ref** - a link to a particular traveler within the booking / order. The data type is Int32.
 
 ### Flight service
 
