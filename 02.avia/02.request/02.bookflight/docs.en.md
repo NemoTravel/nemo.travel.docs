@@ -121,7 +121,7 @@ An operation to create a flight booking working with a 2.0 booking structure. Di
 - **AncillaryServices.AncillaryService.SegmentRef** - The array of multi-links to segments to which the ancillary service is added. The data type is an int array.
 - **AncillaryServices.AncillaryService.SegmentRef.MRef** - The element of an array of multi-links to segments. The data type is int.
 
-##### Exampleto book
+##### Example
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
