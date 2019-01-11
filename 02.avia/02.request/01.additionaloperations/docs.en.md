@@ -20,8 +20,8 @@ Request for execution before version 1.2
 	- GetFareRules - Get tariff rules.
 	- GetSeatMap - Get a map of places.
 	- GetPrice - Get the actual price of the flight. It is only for the flight.
-	- SearchAncillaryServices- Obtaining a list of available services for a flight or reservation (only for GDS Sirena and Amadeus).
-	- GetAllowedCCs - Get a list of credit card codes that can be used to pay this reservation through GDS processing.
+	- SearchAncillaryServices- Obtaining a list of available services for a flight or book (only for GDS Sirena and Amadeus).
+	- GetAllowedCCs - Get a list of credit card codes that can be used to pay this book through GDS processing.
 	- GetAllowedLoyaltyCards - Get information about loyalty cards that can be used on this flight. At the moment there is no support for this operation.
 	- ActualizeFlight - Actualize the flight
 	- GetFareFamilies - Getting a variant of the flight cost estimation from different families
@@ -43,7 +43,7 @@ Request for execution before version 1.2
 -  **OperationsRestrictions.PricingInfo.IgnoreRepricingSettings** - Allows you to ignore the refresh settings. The data type is bool.
 -  **OperationsRestrictions.PricingInfo.PriceSpecifiedPassTypesOnly** - When re-selling, use only specific passenger type codes, if possible. The data type is bool.
 -  **OperationsRestrictions.PricingInfo.ThreeDomainAgreementNumber** — 3D Flow corporate number. The data type is a string.
--  **OperationsRestrictions.UpdateCachedFareRules** - Update cached in the reservation fare rules. The data type is bool.
+-  **OperationsRestrictions.UpdateCachedFareRules** - Update cached in the booking fare rules. The data type is bool.
 -  **OperationsRestrictions.ListFaresIfNoFamiliesDifined** - Enables refund of the fare list from GDS in case they do not have a reference to the fare families. The data type is bool.
 
 ##### Example
@@ -127,11 +127,11 @@ Includes the set of elements caused by operstion in the request:
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SubGroup** - additional service subgroup. The data type is a string. 
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.RFIC** - additional service RFIC. The data type is a string.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.RFISC** - additional service RFISC. The data type is a string.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRCode** - SSR code, which should be added to the PNR in case of reservation of this additional service. The data type is a string.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRCode** - SSR code, which should be added to the PNR in case of booking of this additional service. The data type is a string.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Type** - additional service type (at the moment - specific of Sirena Travel). The data type is a string.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.CompanyCode** - IATA code of the airline providing this additional service. The data type is a string.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Refundability** - service recurrence. The data type is an enumeration.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRDescriptionRequired** - a sign that for the reservation of this additional service it is necessary to transfer its description from the user. The data type is bool.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRDescriptionRequired** - a sign that for the booking of this additional service it is necessary to transfer its description from the user. The data type is bool.
 -   **FindAdditionalServicesResult.Services.Prices** - list of prices for admissible additional services. The data type is array.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice**  - price of additional services. The array data type.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value** - price object. The array data type. 
@@ -144,8 +144,8 @@ Includes the set of elements caused by operstion in the request:
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes** - the types of passengers to which this price applies. The data type is array.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes.PassTypes** - passenger type. The data type is an enumeration.
 -   **GetAllowedCCsResult** - the result of obtaining a list of card codes for payment of GDS processing. The array data type.
--   **GetAllowedCCsResult.AllowedCCs** - list of codes of acceptable cards for payment of GDS reservation by processing. The array data type.
--   **GetAllowedCCsResult.AllowedCCs.Code** - credit card code, which you can pay for the specified reservation with the GDS processing. The data type is a string.
+-   **GetAllowedCCsResult.AllowedCCs** - list of codes of acceptable cards for payment of GDS booking by processing. The array data type.
+-   **GetAllowedCCsResult.AllowedCCs.Code** - credit card code, which you can pay for the specified booking with the GDS processing. The data type is a string.
 -   **GetAllowedLoyaltyCardsResult** - array of tariff rules applied to the given flight. The array data type.
 
 >>>> The flight with the new ID will be received as a result of the request, this ID should be used in further operations, for example, in the booking.
