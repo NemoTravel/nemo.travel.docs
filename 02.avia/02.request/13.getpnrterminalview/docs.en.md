@@ -41,7 +41,7 @@ Used to get a terminal view of the PNR for the booking.
 
 ##### Format Description
 
--  **TerminalView** - the terminal view of the PNR, to which the specified reservation corresponds. The data type is a string.
+-  **TerminalView** - the terminal view of the PNR, to which the specified booking corresponds. The data type is a string.
 
 ##### Example
 

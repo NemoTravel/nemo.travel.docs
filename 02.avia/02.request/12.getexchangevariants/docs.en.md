@@ -7,15 +7,15 @@ taxonomy:
 
 ### GetExchangeVariants
 
-Get exchange variants (exchange variants) with information about the penalty and the difference in price with the current flight reservation.
+Get exchange variants (exchange variants) with information about the penalty and the difference in price with the current flight booking.
 
 #### Request
 
 ##### Format Description
 
 -  **BookID** - The booking ID with passengers. The data type is an integer 64-bit number.
--  **Passengers** - The numbers of passengers in the reservation, whose tickets are required to be exchanged. The data type is an array.
--  **Passengers.Ref** - The passenger number in the reservation. The data type is an integer 32-bit number.
+-  **Passengers** - The numbers of passengers in the booking, whose tickets are required to be exchanged. The data type is an array.
+-  **Passengers.Ref** - The passenger number in the booking. The data type is an integer 32-bit number.
 -  **RequestedFlightInfo** - Similar to the parameter * RequestedFlightInfo * from the [Search request](/avia/request/search).
 
 To exchange a part of the segments, you need to indicate at sought-for flight legs the identifiers (**RequestedFlightInfo.ODPair.ID**) flight legs in booking which are needed to be exchange.
