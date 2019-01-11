@@ -19,9 +19,9 @@ process:
 -   **[GetBookHistory](/avia/request/getbookhistory)** — Used to get the history of changes in booking from GDS.
 -   **[GetCurrencyConversion](/avia/request/getcurrencyconversion)** — Used to get currency rates from GDS.
 -   **[GetEMDRefundData](/avia/request/getemdrefunddata)** — Used to get a refund calculation.
--   **[GetExchangeVariants](/avia/request/getexchangevariants)** — Get exchange variants (exchange variants) with information about the penalty and the difference in price with the current flight reservation.
+-   **[GetExchangeVariants](/avia/request/getexchangevariants)** — Get exchange variants (exchange variants) with information about the penalty and the difference in price with the current flight book.
 -   **[GetPNRTerminalView](/avia/request/getpnrterminalview)** — Used to get a terminal view of the PNR for the booking.
--   **[GetRefundData](/avia/request/getrefunddata)** - Used to get on refund tickets and EMD, in case of their presence in the reservation.
+-   **[GetRefundData](/avia/request/getrefunddata)** - Used to get on refund tickets and EMD, in case of their presence in the book.
 -   **[GetRoutingGrid](/avia/request/getroutinggrid)** - Get airline's routing grid.
 -   **[GetSearchResults](/avia/request/getsearchresults)** - Getting the results of a certain search from an air server.
 -   **[GetSupplierStatic](/avia/request/getsupplierstatic)** - Used to get statics from suppliers systems.
@@ -34,8 +34,8 @@ process:
 -   **[RefundTicket](/avia/request/refundticket)** - Used for the tickets and EMD refund while its presence in the booking.
 -   **[Search](/avia/request/search)** - Performs a search for flights.
 -   **[Schedule search](/avia/request/schedulesearch)** - Search by schedule
--   **[SplitBook](/avia/request/splitbook)** - Used to separate (split) a part of passengers into a separate new reservation.
+-   **[SplitBook](/avia/request/splitbook)** - Used to separate (split) a part of passengers into a separate new book.
 -   **[UpdateBook](/avia/request/updatebook)** - Used to update the flight booking information.
--   **[Ticket](/avia/request/ticket)** - Ticketing for the reservation.
+-   **[Ticket](/avia/request/ticket)** - Ticketing for the book.
 -   **[VoidTicket](/avia/request/voidticket)** - Used for refunding of tickets received as a result of ticketing. 
 -   **[VoidEMD](/avia/request/voidemd)** - Used to void the EMD for various ancillary services in the booking.
