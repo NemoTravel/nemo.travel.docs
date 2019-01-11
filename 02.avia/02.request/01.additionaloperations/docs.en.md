@@ -20,8 +20,8 @@ Request for execution before version 1.2
 	- GetFareRules - Get tariff rules.
 	- GetSeatMap - Get a map of places.
 	- GetPrice - Get the actual price of the flight. It is only for the flight.
-	- SearchAncillaryServices- Obtaining a list of available services for a flight or book (only for GDS Sirena and Amadeus).
-	- GetAllowedCCs - Get a list of credit card codes that can be used to pay this book through GDS processing.
+	- SearchAncillaryServices- Obtaining a list of available services for a flight or booking (only for GDS Sirena and Amadeus).
+	- GetAllowedCCs - Get a list of credit card codes that can be used to pay this booking through GDS processing.
 	- GetAllowedLoyaltyCards - Get information about loyalty cards that can be used on this flight. At the moment there is no support for this operation.
 	- ActualizeFlight - Actualize the flight
 	- GetFareFamilies - Getting a variant of the flight cost estimation from different families
