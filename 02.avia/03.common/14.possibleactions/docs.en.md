@@ -8,7 +8,7 @@ taxonomy:
 PossibleActions
 ---------------
 
-Contains a list of possible actions with a reservation or an order, which is centrally determined for each object. Through it the possibility of perfoming an operation in a .net server is determined. It is an array of Action elements.
+Contains a list of possible actions with a booking or an order, which is centrally determined for each object. Through it the possibility of perfoming an operation in a .net server is determined. It is an array of Action elements.
 
 -   **Action** - A valid action with an object. Data type - enumeration, possible values:
     -   Get
@@ -18,7 +18,7 @@ Contains a list of possible actions with a reservation or an order, which is cen
     -   Ticket
     -   Void
     -   Refund
-    -   Split - keep in mind the analogue of the HDS split, in which one reservation is disassembled for 2 with different passengers
+    -   Split - keep in mind the analogue of the HDS split, in which one booking is disassembled for 2 with different passengers
     -   Modify
     -   ProcessPayment
     -   GetHistory
