@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-### Cancel your reservation (CancelBook)
+### Cancel your booking (CancelBook)
 
 Used to cancel flight booking.
 
