@@ -7,7 +7,7 @@ taxonomy:
 
 ### SplitBook
 
-Used to separate (split) a part of passengers into a separate new reservation.
+Used to separate (split) a part of passengers into a separate new booking.
 
 #### SplitBook_2_2
 
@@ -18,8 +18,8 @@ The latest version of the request, differences are only in the response to the r
 ##### Format Description
 
 -  **BookID** - The booking ID. The data type is long.
--  **Passengers** - The numbers of passengers in the booking, which need to be separated into a new reservation. The data type is an array.
--  **Passengers.Ref** - The passenger number in the reservation. The data type is an integer 32-bit number.
+-  **Passengers** - The numbers of passengers in the booking, which need to be separated into a new booking. The data type is an array.
+-  **Passengers.Ref** - The passenger number in the booking. The data type is an integer 32-bit number.
 
 ##### Example
 
@@ -48,7 +48,7 @@ The latest version of the request, differences are only in the response to the r
     
 #### Response
 
-[2.0 version Reservation](/avia/common/book)
+[2.0 version Booking](/avia/common/book)
 with the splitted passengers. Information about the parent and child booking is stored in the ***DataItems.[DataItem](/avia/common/dataitem).ReferencedBooks***.
 
 ** [Warning] ** When importing a reservation in this item, only the parent and child PNR codes from the provider system will be displayed.
