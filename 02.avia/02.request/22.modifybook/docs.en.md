@@ -51,7 +51,7 @@ Similar to the previous version, the only difference is in the flat format of an
 ```
 
 ### ModifyBook_2_0
-Used to make changes to the reservation with [reservation version 2.0](/avia/common/book) as a response. It includes the functionality of ModifyBook and AddInformation of earlier versions.
+Used to make changes to the booking with [booking version 2.0](/avia/common/book) as a response. It includes the functionality of ModifyBook and AddInformation of earlier versions.
 
 #### Request
 
@@ -62,8 +62,8 @@ Used to make changes to the reservation with [reservation version 2.0](/avia/com
 	- Add
 	- Modify
 	- Remove
--  **Travellers.Traveller.Traveller** - The new traveler's data for making a reservation. The data type is [Traveler](/avia/common/traveller).
--  **Flight** - contains information about the changes in the flight that you want to make to the reservation (optional). The array data type.
+-  **Travellers.Traveller.Traveller** - The new traveler's data for making a booking. The data type is [Traveler](/avia/common/traveller).
+-  **Flight** - contains information about the changes in the flight that you want to make to the booking (optional). The array data type.
 -  **Flight.Segments** - The information about actions with flight segments. The data type is an array.
 -  **Flight.Segments.Segment** - contains information about changes in one of the flight segments. The array data type.
 -  **Segment.Action** - An action with the segment that you want to execute. As of September 3, 2015, actions are not supported. Data type - enumeration, possible values:
@@ -77,7 +77,7 @@ Used to make changes to the reservation with [reservation version 2.0](/avia/com
 -  **Segment.FlightNumber** - The flight number. The data type is a string.
 -  **Segment.DepatureDateTime** - date and time of departure. The data type is the date and time in the format yyyy-MM-ddTHH: mm: ss.
 -  **Segment.BookingClassCode** - the class book of booking. The data type is a string.
--  **DataItems** - contains information about changes in the content of the reservation (optional). The data type is an array.
+-  **DataItems** - contains information about changes in the content of the booking (optional). The data type is an array.
 -  **DataItems.ModifyDataItem** - contains information about changes in one of the blocks of content data. The array data type.
 -  **ModifyDataItem.Action** - An action with the content that you want to perform. As of 03/09/2015, it is supported only by changing existing content. Data type - enumeration, possible values:
 	- Add
@@ -86,8 +86,8 @@ Used to make changes to the reservation with [reservation version 2.0](/avia/com
 -  **ModifyDataItem.DataItem** - contains the actual data on the content. The data type is [DataItem](/avia/common/dataitem).
 -  **AncillaryServices** - contains information about the variable admissions (optional). The data type is an array.
 -  **ModifyAncillaryService** - contains information about one of the variable admissions. The array data type.
--  **Action** - An action with content that you want to perform (Modify is not allowed for admissions) The format is similar to other data blocks. Additional services with EMDs can be removed from the reservation only after entering their EMD.
-- **AncillaryService** - An ancillary services on which there will be a change in the reservation. The data type, format and filling logic, in case of booking, is similar to AncillaryService in the [booking request](/avia/request/bookflight). In case of deletion, only the ID is the required element.
+-  **Action** - An action with content that you want to perform (Modify is not allowed for admissions) The format is similar to other data blocks. Additional services with EMDs can be removed from the booking only after entering their EMD.
+- **AncillaryService** - An ancillary services on which there will be a change in the booking. The data type, format and filling logic, in case of booking, is similar to AncillaryService in the [booking request](/avia/request/bookflight). In case of deletion, only the ID is the required element.
 -  **CalculatePrice** - a sign of necessity of calculation of pricing after modification. The data type is bool.
 
 >>>> While adding a new element to the order, should be indicated the ID of the DataItem to be -1. While modifying an existing DataItem, must be used an ID that matches the existing DataItem ID .
