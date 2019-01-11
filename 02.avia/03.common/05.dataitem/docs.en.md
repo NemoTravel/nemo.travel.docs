@@ -13,7 +13,7 @@ To store different booking content.
 
 -  **ID** - The ID of this given dataitem. The data type is Int32.
 -  **TravelerRef** - A reference to travelers (optional). The data type is [RefList](/avia/common/reflist).
--  **ServiceRef** - A reference to the services in the reservation / order (optional). The data type is [RefList](/avia/common/reflist).
+-  **ServiceRef** - A reference to the services in the booking / order (optional). The data type is [RefList](/avia/common/reflist).
 -  **SegmentRef** - A reference to segments (optional). The data type is [RefList](/avia/common/reflist).
 -  **Type** - The type of content in this data block. Data type - enumeration, possible values:
 	-   SSR
@@ -27,7 +27,7 @@ To store different booking content.
 	-   Remark
 	-   CashValueForMultiFOPProxing - used in conjunction with the TicketingProxy for multifunction GDDS processing via PN
 	-   Commission
-	-   SourceInfo - information about the package of details in which the reservation was created
+	-   SourceInfo - information about the package of details in which the booking was created
 	-   IDDocument - the document proving the identity of the passenger (passport and other)
 	-   Meal
 	-   Visa
@@ -83,8 +83,8 @@ To store different booking content.
 -  **Commission.Amount** - The commission amount. The data type is float.
 -  **Commission.Currency** - The currency code for the amount. The data type is a string.
 -  **FOPInfo** - The form of payment for transfer to the system of the service provider (optional). The array data type.
--  **FOPInfo.FOPs** - Contains a list of payment forms for prescribing to the reservation. The array data type.
--  **FOPInfo.FOPs.FOP** - The information about one of the forms of payment in the reservation. The array data type.
+-  **FOPInfo.FOPs** - Contains a list of payment forms for prescribing to the booking. The array data type.
+-  **FOPInfo.FOPs.FOP** - The information about one of the forms of payment in the booking. The array data type.
 -  **FOPInfo.FOPs.FOP.type** - CML attribute, contains the indication of the type of the payment form class, necessary for the correct transfer of credit card data via CML. The data type is a string. Example filling - "<FOP i: type =" stl: CreditCardFOP ">" Possible values:
 	- stl: CreditCardFOP - for credit card details
 	- stl: NumberedFOP - for a payment form with only the number (PP / IN)
@@ -101,9 +101,9 @@ To store different booking content.
 -  **FOPInfo.FOPs.FOP.ExpireDate** - The expiration date of the card. Data type - date in MM.yyyy format
 -  **FOPInfo.FOPs.FOP.ManualApprovalCode** - The code of the payment transaction for which the funds are to be debited. The data type is a string.
 <!--  **FOPInfo.FOPs.FOP.Subtype** - FOP subtype, used when specifying "stl: PaymentOrderFOP". The data type is a string.-->
--  **SourceInfo** - The information about the source where the service reservation was created (optional). The array data type.
+-  **SourceInfo** - The information about the source where the service booking was created (optional). The array data type.
 -  **SourceInfo.ID** - The ID of the package of details. The data type is Int32.
--  **SourceInfo.BookingSupplierAgencyID** - The ID of the details in the provider system in which the service reservation is created. The data type is a string.
+-  **SourceInfo.BookingSupplierAgencyID** - The ID of the details in the provider system in which the service booking is created. The data type is a string.
 -  **SourceInfo.TicketingSupplierAgencyID** - ID details in the supplier's system, in which the service book is issued. The data type is a string.
 -  **SourceInfo.Supplier** - Service Provider. Data type - enumeration, possible values:
     -   Sabre
@@ -119,7 +119,7 @@ To store different booking content.
     -   TEST
     -   CERT
     -   PROD
-- **SourceInfo.TicketingIATAValidator** - The information about the source where the service reservation was created. The data type is a string.
+- **SourceInfo.TicketingIATAValidator** - The information about the source where the service booking was created. The data type is a string.
 - **Document** - The document proving the identity of the traveler (optional). The array data type.
 - **Document.Type** - The document type. The data type is an enumeration<!-- the possible values are described in [Document Types](Document Types "wikilink")-->.
 - **Document.Number** - The number of the document proving the identity of the traveler. The data type is a string.
@@ -282,9 +282,9 @@ To store different booking content.
 - **DiscountDocument.ElapsedTime** - The elapsed time of the subsidy / discount basis document. The data type is the date in dd.mm.yyyy format.
 - **CashValueForMultiFOPProxing** - Contains the value of the amount for the cash part when multiplexing GDDS processing through third-party PN (optional). The array data type.
 - **CashValueForMultiFOPProxing.CashValue** - a value of the amount for the cash part for multi-FDD GDS processing via third-party PN. The data type is [Money](/avia/common/money).
-- **PNRFOP** - Contains the form of payment in the reservation (optional). The array data type. It is used only in the answers for the transfer of the actually stated form of payment in PNR.
-- **PNRFOP.FOPs** - Contains a list of payment forms for prescribing to the reservation. The data type is an array.
-- **PNRFOP.FOPs.FOP** - One of the forms of payment in the reservation. The array data type.
+- **PNRFOP** - Contains the form of payment in the booking (optional). The array data type. It is used only in the answers for the transfer of the actually stated form of payment in PNR.
+- **PNRFOP.FOPs** - Contains a list of payment forms for prescribing to the booking. The data type is an array.
+- **PNRFOP.FOPs.FOP** - One of the forms of payment in the booking. The array data type.
 - **PNRFOP.FOPs.FOP.Type** - The type of this FOP. Data type - enumeration, possible values:
     - CA - cash
     - CC - a credit card
@@ -293,8 +293,8 @@ To store different booking content.
 - **PNRFOP.FOPs.FOP.CreditCardNumber** - Masked credit card number, if the payment formats are a credit card. The data type is a string.
 - **PNRFOP.FOPs.FOP.Number** - FOP number in PNRe
 - **SubagentCommission** - The Subagent commission (optional). The data type is CommissionDataItem:
-- **TicketDesignator** - The information about the ticket designator for prescribing to the reservation (optional). The array data type.
-- **TicketDesignator.Value** - The value of the ticket designator for prescription in the reservation. The data type is a string.
+- **TicketDesignator** - The information about the ticket designator for prescribing to the booking (optional). The array data type.
+- **TicketDesignator.Value** - The value of the ticket designator for prescription in the booking. The data type is a string.
 - **Markup** - The information about the charge of the agent (optional). The array data type.
 - **Markup.MarkupValue** - The value of the agent charge. The data type is [Money](/avia/common/money).
 - **Markup.VAT** - VAT data. The array data type.
