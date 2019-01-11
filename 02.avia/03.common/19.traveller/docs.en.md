@@ -10,7 +10,7 @@ Traveler
 
 Describes personal information about the traveler. It consists of the following elements:
 
--  **ID** - The ID of this traveler within the given object (reservation / order). The data type is а positive integer.
+-  **ID** - The ID of this traveler within the given object (booking / order). The data type is а positive integer.
 -  **Type** - The passenger type. Data type - enumeration, possible values:
 	-   ADT - an adult - a passenger over 12 years of age
 	-   UNN - a child - a passenger older than 2 and under 12 years of age - unaccompanied by an adult
