@@ -10,7 +10,7 @@ taxonomy:
 Ticketing for the reservation with the support of API 2.0.
 
 #### Ticket_2_2
-The latest version of the request, differences are only in the response to the request in the additional services block from the [Book_2_2](/avia/request/bookflight) request.
+The latest version of the request, differences are only in the response in the additional services block from the [Book_2_2](/avia/request/bookflight) request.
 
 #### Request
 
