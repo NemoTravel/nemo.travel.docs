@@ -98,24 +98,23 @@ taxonomy:
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors** — контейнер для этажей в самолёте. Тип данных - массив.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor** — карта мест для конкретного этажа в самолёте. Тип данных - массив. Встречается 1 и более раз.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.IsUpper** — признак верхнего этажа в самолёте. Тип данных - булевский.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow** — информация по умолчанию для рядов мест на этаже самолёта. Тип данных - массив.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Num** — номер ряда мест этажа в самолёте. Тип данных - целое 32 битное число.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats** — контейнер для информации о местах. Тип данных - массив.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat** — информация о конкретном месте в самолёте. Тип данных - массив. Встречается 1 и более раз.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Number** — номер места. Тип данных - строка.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Type** — положение места. Тип данных - строка. Возможные значения:
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows** - контейнер для информации о рядах мест на этаже. Тип данных - массив.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow** - информация о конкретном ряде мест на этаже в самолёте. Тип данных - массив.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Num** — номер ряда мест этажа в самолёте. Тип данных - целое 32 битное число.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats** — контейнер для информации о местах. Тип данных - массив.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat** — информация о конкретном месте в самолёте. Тип данных - массив. Встречается 1 и более раз.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Number** — номер места. Тип данных - строка.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Type** — положение места. Тип данных - строка. Возможные значения:
     -   **W** — у окна;
     -   **NPW** — у прохода (Near Passenger Way);
     -   **M** — месту между W и NPW;
 <!--    -   **любой тип + постфикс " NE"** — места не существует.-->
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Characteristics** — дефолтная характеристика места. Тип данных - строка.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.IsFree** — признак что место свободно. Тип данных - bool.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.NotExists** — признак того, что место не существует. Тип данных - bool.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Price** — цена места в случае если оно платное. Тип данных - [Money](/avia/common/money).
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.RFISC** — RFISC места. Тип данных - строка.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Characteristics** - характеристика ряда. Тип данных - строка.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows** - контейнер для информации о рядах мест на этаже. Тип данных - массив.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow** - информация о конкретном ряде мест на этаже в самолёте. Тип данных - массив. Формат элемента аналогичен элементу DefaultRow
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Characteristics** — дефолтная характеристика места. Тип данных - строка.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.IsFree** — признак что место свободно. Тип данных - bool.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.NotExists** — признак того, что место не существует. Тип данных - bool.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Price** — цена места в случае если оно платное. Тип данных - [Money](/avia/common/money).
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.RFISC** — RFISC места. Тип данных - строка.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Characteristics** - характеристика ряда. Тип данных - строка.
 -   **GetPriceResult** - результат получения актуальной цены перелёта. Тип данных - массив.
 -   **GetPriceResult.Flight** - плоский перелёт v1.1. Тип данных - массив.
 -   **FindAdditionalServicesResult** - результат получения списка доступных допуслуг. Тип данных - массив. 
