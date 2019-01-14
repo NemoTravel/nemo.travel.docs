@@ -98,24 +98,23 @@ Includes the set of elements caused by operstion in the request:
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors** — container for floors in an aircraft. The array data type.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor** — map of seats for a particular floor in an aircraft. The array data type. It occurs 1 or more times.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.IsUpper** — flag of the top floor in an aircraft. The data type is bool.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow** — the default information for the rows of seats on the floor of the aircraft. The array data type.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Num** — number of the rows of seats in the aircraft. The data type is an integer 32-bit number.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats** — container for information about places. The array data type.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat** — information about a specific place in the airplane. The array data type. It occurs 1 or more times.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Number** — place number. The data type is a string.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Type** — position of the place. The data type is a string. Possible values:
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows** - container for information on rows of seats on the floor. The array data type.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow** - information about a specific number of places on the floor in an aircraft. The array data type.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Num** — number of the rows of seats in the aircraft. The data type is an integer 32-bit number.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats** — container for information about places. The array data type.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat** — information about a specific place in the airplane. The array data type. It occurs 1 or more times.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Number** — place number. The data type is a string.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Type** — position of the place. The data type is a string. Possible values:
     -   **W** — near the window;
     -   **NPW** — Near Passenger Way;
     -   **M** — place between W and NPW;
 <!--    -   **any type + postfix "NE"** — place does not exist. -->
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Characteristics** — default characteristics of place. The data type is a string.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.IsFree** — a sign that the place is free. The data type is bool.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.NotExists** — a sign that the place does not exist. The data type is bool.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Price** — the price of the site in case it is paid. The data type is - [Money](/avia/common/money).
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.RFISC** — RFISC of the place. The data type is a string.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Characteristics** - characteristics of the row of places. The data type is a string.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows** - container for information on rows of seats on the floor. The array data type.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow** - information about a specific number of places on the floor in an aircraft. The array data type. The element format is the same as the DefaultRow element.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Characteristics** — default characteristics of place. The data type is a string.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.IsFree** — a sign that the place is free. The data type is bool.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.NotExists** — a sign that the place does not exist. The data type is bool.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Price** — the price of the site in case it is paid. The data type is - [Money](/avia/common/money).
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.RFISC** — RFISC of the place. The data type is a string.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Characteristics** - characteristics of the row of places. The data type is a string.
 -   **GetPriceResult** - the result of getting the actual price of the flight. The array data type.
 -   **GetPriceResult.Flight** - flat flight v1.1. The array data type.
 -   **FindAdditionalServicesResult** - result of obtaining a list of available additional services. The array data type. 
