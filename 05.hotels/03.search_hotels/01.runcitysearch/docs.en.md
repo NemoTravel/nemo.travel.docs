@@ -4,7 +4,7 @@ title: 'RunCitySearch Request'
 
 ### RunCitySearch
 
-After sending the request the results are given separately through the getsearchresult request. 
+After sending the request the results are given separately through the [GetCitySearchResult](/hotels/search_hotels/getcitysearchresult) request. 
 
 #### Request
 
