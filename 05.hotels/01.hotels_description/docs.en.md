@@ -10,7 +10,7 @@ Hotel server provides the following functionality:
     -   Searching for hotels using the following request: [CitySearch](/hotels/search_hotels/citysearch)
     -   Searching for hotels using the following request: [RunCitySearch](/hotels/search_hotels/runcitysearch)
     -   Getting search results using the following request: [GetCitySearchResult](/hotels/search_hotels/getcitysearchresult)
-    -   Getting search results using the following request: [GetCitySearchParameters](/hotels/search_hotels/getcitysearchparameters)
+    -   Getting search parameters using the following request: [GetCitySearchParameters](/hotels/search_hotels/getcitysearchparameters)
     -   Checking room availability using the following request: [GetHotelAvailability](/hotels/search_hotels/gethotelavailability)
 -   Book
     -   Room books using the following request: [Book](/hotels/book_hotels/bookhotels)
