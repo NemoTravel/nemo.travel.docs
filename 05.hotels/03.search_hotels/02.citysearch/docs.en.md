@@ -111,7 +111,7 @@ Same as the request of the following format: [RunCitySearch](/hotels/search_hote
 -   **Hotels.Hotel.RoomGroups.Room.SearchRoomID** - ID for the sequence number of the room being searched for, this value is used in RoomData.RoomSearchIndex when booking. Data type - unsigned 32-bit integer.
 -   **Hotels.Hotel.RoomGroups.Room.RoomVariants** - container for room numbers suitable for a request. Data type - custom.
 -   **Hotels.Hotel.RoomGroups.Room.RoomVariants.RoomID** - ID of suitable rooms. Data type - unsigned 32-bit integer.
--   **Hotels.Hotel.RoomGroups.Room.Markups** - contains information on markups calculated in accordance with the settings. Data type - custom.
+-   **Hotels.Hotel.RoomGroups.Room.Markups** - container with information on markups calculated in accordance with the settings. Data type - custom.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup** - container for information on the markup. Data type - custom.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.RoomVariantID** - room ID. Data type - unsigned 32-bit integer.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.Sum** - container with the information on the amount and currency of the markup. Data type - custom.
