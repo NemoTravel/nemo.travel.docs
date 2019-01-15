@@ -103,7 +103,7 @@ title: 'GetHotelAvailability Request'
 -   **Hotels.Hotel.RoomGroups.Room.SearchRoomID** - ID of the requested room from the request RunCitySearch Rooms.Room. Data type - unsigned 32-bit integer.
 -   **Hotels.Hotel.RoomGroups.Room.RoomVariants** - container with rooms numbers suitable for a request. Data type - custom.
 -   **Hotels.Hotel.RoomGroups.Room.RoomVariants.RoomID** - ID of suitable rooms. Data type - unsigned 32-bit integer.
--   **Hotels.Hotel.RoomGroups.Room.Markups** - contains information on markups calculated in accordance with the settings. Data type - custom.
+-   **Hotels.Hotel.RoomGroups.Room.Markups** - container with information on markups calculated in accordance with the settings. Data type - custom.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup** - container with information on the markup. Data type is custom.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.RoomVariantID** - room ID. Data type - unsigned 32-bit integer.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.Sum** - container with information on the amount and currency of the markup. Data type - custom.
