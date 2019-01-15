@@ -71,8 +71,8 @@ Same as the request of the following format: [RunCitySearch](/hotels/search_hote
 	-   **HB** - Half board
 	-   **FB** - Full board
 	-   **AI** - All inclusive
-	-   **DN** - Dinner (Bronevik provider transmits "Ужин" ("Dinner") in this parameter)
-	-   **LU** - Lunch (Bronevik provider transmits "Обед" ("Lunch") in this parameter)
+	-   **DN** - Dinner (Bronevik provider transmits «Ужин» ("Dinner") in this parameter)
+	-   **LU** - Lunch (Bronevik provider transmits «Обед» ("Lunch") in this parameter)
 -   **RoomMealsGroup.Meal.Name** - name of the meal type. Data type - string.
 	- 	**Room only** - No meals
 	-   **Breakfast** - Breakfast
