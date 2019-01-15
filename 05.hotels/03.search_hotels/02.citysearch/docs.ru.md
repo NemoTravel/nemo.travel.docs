@@ -111,7 +111,7 @@ title: 'Запрос CitySearch'
 -   **Hotels.Hotel.RoomGroups.Room.SearchRoomID** - идентификатор порядкового номера искомой комнаты, данное значение используется в RoomData.RoomSearchIndex при бронировании. Тип данных - целое беззнаковое 32-битное число.
 -   **Hotels.Hotel.RoomGroups.Room.RoomVariants** - контейнер для номеров комнат подходящих под запрос. Тип данных - сложный.
 -   **Hotels.Hotel.RoomGroups.Room.RoomVariants.RoomID** - идентификатор подходящих комнат. Тип данных - целое беззнаковое 32-битное число.
--   **Hotels.Hotel.RoomGroups.Room.Markups** - содержит информацию о наценках, рассчитываемых в соответствии с настройками. Тип данных - сложный.
+-   **Hotels.Hotel.RoomGroups.Room.Markups** - контейнер для информации о наценках, рассчитываемых в соответствии с настройками. Тип данных - сложный.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup** - контейнер для информации о наценке. Тип данных - сложный.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.RoomVariantID** - идентификатор комнаты. Тип данных - целое беззнаковое 32-битное число.
 -   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.Sum** - контейнер с информацией о сумме и валюте наценки. Тип данных - сложный.
