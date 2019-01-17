@@ -22,6 +22,7 @@ FCm
 -   **PaymentProxy.ProxyURL** - URL address of the external system to which the request will be sent. Data type - string.
 -   **AdditionalActions** - container with additional actions that must be performed with the reservation (optional). Data type - custom.
 -   **AdditionalActions.HostCommandsToExecute** - set of terminal commands (optional, supported only for Travelport). Data type - array of strings.
+-   **AdditionalActions.HostCommandsToExecute.Command** - terminal commands to be performed. Data type - 
 -   **RetPath3ds** - URL to which the user will be redirected after confirming payment via 3-D Secure (required for passing 3-D Secure, only Ostrovok is supported). Data type - string.
 -   **EndUserData** - container with system end user data (optional, but required for the supplier Ostrovok). Data type - custom.
 -   **EndUserData.EndUserIP** — IP address of the end user. Data type - string.
