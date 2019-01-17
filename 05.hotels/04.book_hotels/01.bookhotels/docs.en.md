@@ -20,15 +20,22 @@ title: 'Book Request'
 -   **Guests.Guest.Email** - guest's email. Data type - string.
 -   **Guests.Guest.Type** - ADT - adult if the guest’s age is over 16, otherwise CLD - child. Data type - string.
 -   **Guests.Guest.Age** - guest’s age. Data type - unsigned 32-bit integer.
+-   **Guests.Guest.Nationality** - guest’s nationality. Data type - string.
+-   **Guests.Guest.Gender** - guest’s gender. Data type - string.
+-   **Guests.Guest.DateOfBirth** - guest’s date of birth. Data type -
+-   **Guests.Guest.AdditionalInfo** - additional information on the guest. Data type - string.
 -   **Client** - container with information on the contact person. Data type - custom.
 -   **Client.LastName** - name of the contact person. Data type - string.
 -   **Client.FirstName** - name of the contact person. Data type - string.
 -   **Client.Phone** - phone number of the contact person. Data type - 32-bit integer.
 -   **Client.Email** - email of the contact person. Data type - string.
+-   **Client.Nationality** - nationality of the contact person. Data type - string.
 -   **CheckInParams** - container with information on the selected early check-in option at the hotel from the ones provided in the **GetHotelAvailability** response. Data type - custom.
 -   **CheckInParams.Critical** - attribute of criticalness. Data type - boolean.
 -   **CheckInParams.Time** - container with information on the selected time. Data type - complex hh:mm format.
 -   **CheckOutParams** - container with information on the selected late check-out option at the hotel from the ones provided in the **GetHotelAvailability** response. Data type - custom. Identical to CheckInParams
+-   **CheckOutParams.Critical** - attribute of criticalness. Data type - boolean.
+-   **CheckOutParams.Time** - container with information on the selected time. Data type - complex hh:mm format.
 
 ##### Sample Request (XML)
 ```xml
