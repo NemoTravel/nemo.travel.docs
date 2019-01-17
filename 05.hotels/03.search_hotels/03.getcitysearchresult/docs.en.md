@@ -7,6 +7,7 @@ title: 'GetCitySearchResult Request'
 #### Request
 
 -   **ActionID** - ID of the executed search. Data type - 32-bit integer.
+-   **HotelId** - Filter by hotel. Data type - 
 
 ##### Sample Request (XML)
 ```xml
