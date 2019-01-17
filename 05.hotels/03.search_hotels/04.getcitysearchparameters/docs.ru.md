@@ -6,7 +6,7 @@ title: 'Запрос GetCitySearchParameters'
 
 #### Запрос
 
--   **SearchID** - идентификатор совершившегося поиска. Тип данных - целое 32-битное число.
+-   **ActionID** - идентификатор совершившегося поиска. Тип данных - целое 32-битное число.
 
 ##### Пример запроса (XML)
 ```xml
@@ -24,7 +24,7 @@ title: 'Запрос GetCitySearchParameters'
             </stl:Requisites>
             <stl:UserID>...</stl:UserID>
             <stl:RequestBody>
-               <hot:SearchId>41344</hot:SearchId>
+               <hot:ActionID>41344</hot:ActionID>
             </stl:RequestBody>
          </tem:Request>
       </tem:GetCitySearchParameters>
