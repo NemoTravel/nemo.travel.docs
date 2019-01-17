@@ -11,6 +11,10 @@ After sending the request the results are given separately through the [GetCityS
 -   **CheckInDate** - date of the arrival to the room. Data type - string, the format is yyyy-mm-ddthh:mm:ss.
 -   **CheckOutDate** - date of the departure from the room. Data type - string, the format is yyyy-mm-ddthh:mm:ss.
 -   **CityId** - ID of the city for which the search will be executed. Data type - nonnegative 32-bit integer.
+-   **IsAirport** - 
+-   **CompanyCode** - company code. Data type - 
+-   **Number** - 
+-   **LoyaltyCard** - loyalty card. Data type - 
 -   **HotelId** - ID of the hotel for which the search will be executed. Data type - nonnegative 32-bit integer .
 -   **Rooms** - container with information on the rooms required to be found. Data type - custom.
 -   **Rooms.Room** - container with information on the number of guests. Data type - custom.
@@ -20,6 +24,11 @@ After sending the request the results are given separately through the [GetCityS
 -   **Rooms.Room.ChildrenAges.Age** - children age in the request. Data type - nonnegative 32-bit integer.
 -   **Rooms.CurrencyCode** - 3-letter currency code of the search results. Data type - string.
 -   **Rooms.ClientNationality** - 2-letter nationality code of the client. Data type - string.
+-   **Rooms.PackageId** - 
+-   **Rooms.GetHotelsOnRequest** - 
+-   **Rooms.CityInnerId** - 
+-   **Rooms.MaxKmDistanceFromCityCenter** - 
+-   **Rooms.LoyaltyCard** - 
 
 
 
