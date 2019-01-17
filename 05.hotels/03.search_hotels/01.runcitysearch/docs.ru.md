@@ -11,6 +11,9 @@ title: 'Запрос RunCitySearch'
 -   **CheckInDate** - дата заезда в номер. Тип данных - строка, формат yyyy-mm-ddthh:mm:ss.
 -   **CheckOutDate** - дата выезда из номера. Тип данных - строка, формат yyyy-mm-ddthh:mm:ss.
 -   **CityId** - индентификатор города для которого будет происходить поиск. Тип данных - неотрицательный integer 32.
+-   **IsAirport** - 
+-   **CompanyCode** - код компании. Тип данных - 
+-   **Number** - 
 -   **HotelId** - индентификатор отеля для которого будет происходить поиск. Тип данных - неотрицательный integer 32.
 -   **Rooms** - контейнер с информацией о комнатах, которую требуется найти. Тип данных - сложный.
 -   **Rooms.Room** - контейнер с информацией о количестве постояльцев. Тип данных - сложный.
@@ -20,6 +23,11 @@ title: 'Запрос RunCitySearch'
 -   **Rooms.Room.ChildrenAges.Age** - возраст детей в запросе. Тип данных - неотрицательный integer 32.
 -   **Rooms.CurrencyCode** - 3-х буквенный код валюты выдачи результатов поиска. Тип данных - строка.
 -   **Rooms.ClientNationality** - 2-х буквенный код национальности клиента. Тип данных - строка.
+-   **Rooms.PackageId** -
+-   **Rooms.GetHotelsOnRequest** -
+-   **Rooms.CityInnerId** -
+-   **Rooms.MaxKmDistanceFromCityCenter** -
+-   **Rooms.LoyaltyCard** - 
 
 ##### Пример запроса (XML)
   ```xml
