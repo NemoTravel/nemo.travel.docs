@@ -6,7 +6,7 @@ title: 'GetCitySearchResult Request'
 
 #### Request
 
--   **SearchID** - ID of the executed search. Data type - 32-bit integer.
+-   **ActionID** - ID of the executed search. Data type - 32-bit integer.
 
 ##### Sample Request (XML)
 ```xml
@@ -21,7 +21,7 @@ title: 'GetCitySearchResult Request'
             </stl:Requisites>
             <stl:UserID>...</stl:UserID>
             <stl:RequestBody>
-               <hot:SearchId>10208</hot:SearchId>
+               <hot:ActionID>10208</hot:ActionID>
             </stl:RequestBody>
          </tem:Request>
       </tem:GetCitySearchResult>
