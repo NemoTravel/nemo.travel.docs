@@ -159,7 +159,7 @@ taxonomy:
 -   **SearchThreadInfo.OriginalSearchID** — идентификатор оригинального поиска, в рамках которого результаты были получены от поставщика. Тип данных — целое 64-битное число.
 -   **PlaneFlights** — содержит поисковую выдачу. Тип данных — массив элементов [Flight](/avia/common/flight).
 -   **SimpleGroupedFlights** - Содержит поисковую выдачу в формате [GroupSearch](/avia/grouping). Тип данных - массив.
--   **SubsidiesInformation** - Информация о субсидиях. Если тариф в перелете субсидированный, то у него будет ссылка на элемент в этом массиве. Тип данных - аналогичен ***SubsidiesInformation*** в объекте [Flight](/avia/common/flight).
+-   **SubsidiesInformation** - Информация о субсидиях. Если тариф в перелете субсидированный, то у него будет ссылка на элемент в этом массиве. Тип данных - аналогичен ***SubsidiesInformation*** в объекте [SubsidiesInformation](/avia/common/subsidiesinformation).
 - **ProcessingData** - Контейнер с отладочной информацией по фильтрам запросов и маршрутизаторору. Тип данных - массив.
 - **ProcessingData.FlightsFromSuppliersCount** - Указывает, сколько перелетов было получено от поставщика. Тип данных - int.
 - **ProcessingData.FlightsFromSuppliersSources** - Контейнер с информацией по поставщикам. Тип данных - массив.
