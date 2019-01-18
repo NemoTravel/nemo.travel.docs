@@ -161,7 +161,7 @@ Search for v 1.2
 -  **SearchThreadInfo.OriginalSearchID** - The ID of the original search, within which results were received from the vendor. The data type is int64.
 -  **PlaneFlights** - Contains search output (Flight elements) in the Search v1.1 format. The data type is an array of elements [Flight](/avia/common/flight).
 -  **SimpleGroupedFlights** - Contains search output in the format [GroupSearch](/avia/grouping). The array data type.
--  **Subsidies Information** - The information on subsidies. If the fare is subsidized in the flight, then it will have a link to the element in this array. The data type is the same as ***SubsidiesInformation*** in the object [Flight](/avia/common/flight).
+-  **Subsidies Information** - The information on subsidies. If the fare is subsidized in the flight, then it will have a link to the element in this array. The data type is the same as ***SubsidiesInformation*** in the object [SubsidiesInformation](/avia/common/subsidiesinformation).
 
 ##### Example
 ```xml
