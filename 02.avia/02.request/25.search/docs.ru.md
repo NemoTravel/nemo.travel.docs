@@ -181,6 +181,12 @@ taxonomy:
 - **ProcessingData.TriggeredRequestFilters.TriggeredRequestFilter** -  Контейнер с информацией по конкретному фильтру. Тип данных - массив. 
 - **ProcessingData.TriggeredRequestFilters.TriggeredRequestFilter.FilterID** - ID фильтра. Тип данных int.
 - **ProcessingData.TriggeredRequestFilters.TriggeredRequestFilter.PackageID** - ID пакета, в котором сработал фильтр. Тип данных int.
+- **Errors** - Контейнер с данными об ошибках. Тип данных - массив. 
+- **Errors.Error** - Контейнер с данными по конеретной ошибке. Тип данных - массив. 
+- **Errors.Error.Level** - Уровень, на котором произошла ошибка. Возможные значения: **APIFormat** - Уровень формата запроса к серверу; **Supplier** - Уровень общения с поставщиком; **Runtime** - Уровень выполнения определённой операции на сервере; **Network** - Сетевые проблемы. Тип данных - перечисление. 
+- **Errors.Error.Code** - Код ошибки. Тип данных - строка.
+- **Errors.Error.Message** - Текст ошибки от авиа сервера. Тип данных - строка.
+- **Errors.Error.ServiceMessage** - Текст ошибки от поставщика. Тип данных - строка.
 
 ##### Пример
 ```xml
