@@ -4,43 +4,44 @@ title: SubsidiesInformation
 
 Содержит полную информацию о субсидиях.
 
-SubsidiesInformation
-SubsidiesInformation.SubsidyInformation
-SubsidiesInformation.ID
-SubsidiesInformation.PassengerTypes
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Code
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription.GeneralType
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription.MaxAge
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription.NeedAccompaniment
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription.IsDisabled
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription.AccompaniesTheDisabled
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription.NeedMiddleName
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidDocuments
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidDocuments.Document
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item.Language
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item.Value
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForAgent
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item.Language
-SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item.Value
-SubsidiesInformation.ShortDescription
-SubsidiesInformation.ShortDescription.Item
-SubsidiesInformation.ShortDescription.Item.Language
-SubsidiesInformation.ShortDescription.Item.Value
-SubsidiesInformation.Description
-SubsidiesInformation.Descriptionэ.Item
-SubsidiesInformation.Descriptionэ.Item.Language
-SubsidiesInformation.Descriptionэ.Item.Value
-SubsidiesInformation.AllowAgentCharges
-SubsidiesInformation.AllowCombine
-SubsidiesInformation.DocumentationUrl
+**SubsidiesInformation**  - Параметр
+**SubsidiesInformation.SubsidyInformation** - Параметр
+**SubsidiesInformation.ID** - Параметр
+**SubsidiesInformation.PassengerTypes** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Code** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription.GeneralType** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription.MaxAge** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription.NeedAccompaniment** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription.IsDisabled** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription.AccompaniesTheDisabled** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription.NeedMiddleName** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidDocuments** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidDocuments.Document** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item.Language** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item.Value** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForAgent** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item.Language** - Параметр
+**SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item.Value** - Параметр
+**SubsidiesInformation.ShortDescription** - Параметр
+**SubsidiesInformation.ShortDescription.Item** - Параметр
+**SubsidiesInformation.ShortDescription.Item.Language** - Параметр
+**SubsidiesInformation.ShortDescription.Item.Value** - Параметр
+**SubsidiesInformation.Description** - Параметр
+**SubsidiesInformation.Descriptionэ.Item** - Параметр
+**SubsidiesInformation.Descriptionэ.Item.Language** - Параметр
+**SubsidiesInformation.Descriptionэ.Item.Value** - Параметр
+**SubsidiesInformation.AllowAgentCharges** - Параметр
+**SubsidiesInformation.AllowCombine** - Параметр
+**SubsidiesInformation.DocumentationUrl** - Параметр
 
+### Пример
 
-<a:SubsidiesInformation>
+    <a:SubsidiesInformation>
       <a:SubsidyInformation>
         <ID>0</ID>
         <a:PassengerTypes>
