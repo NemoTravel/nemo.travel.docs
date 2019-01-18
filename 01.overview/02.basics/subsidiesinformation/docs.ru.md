@@ -12,7 +12,7 @@ title: SubsidiesInformation
 * **SubsidiesInformation.ID** - Номер сегмента перелёта для которого есть субсидии. ТИп данных - целое 32-битное число.
 * **SubsidiesInformation.PassengerTypes** - Контейнер с перечислением типов пассажиров.  Тип данных - сложный.
 * **SubsidiesInformation.PassengerTypes.PassengerTypeDescription** - Контейнер с описанием типа пассажира для которого могут применятся субсидии.  Тип данных - сложный.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Code** - 
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Code** - Код субсидии. Тип данных — строка.
 * **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.GeneralType** -  Тип пассажира. Тип данных - перечисление.
 * **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.MaxAge** - Максимальный возраст. Тип данных - целое 32-битное число.
 * **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.NeedAccompaniment** - Требование к сопровождению. Тип данных — булевский.
@@ -22,27 +22,27 @@ title: SubsidiesInformation
 * **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidDocuments** - Требования к документам. Тип данных - массив.
 * **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidDocuments.Document** - Требуемый тип документа. Тип данных - массив.
 * **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidSpecialsDocuments** - Требования к дополнительным документам. Тип данных - массив.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidSpecialsDocuments.Document** - Требуемый тип дополнительного документа.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidSpecialsDocuments.Document** - Требуемый тип дополнительного документа. Тип данных — строка.
 * **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer** - Описание для клиента. Тип данных - массив.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item** - 
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item.Language** - Язык описания.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item.Value** - Описание.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForAgent** - Описание для агента.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header** - Название субсидии
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item** - 
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item.Language** - Язык 
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item.Value** - Название 
-* **SubsidiesInformation.ShortDescription** - Блок с кратким описанием 
-* **SubsidiesInformation.ShortDescription.Item** - 
-* **SubsidiesInformation.ShortDescription.Item.Language** - Язык описания 
-* **SubsidiesInformation.ShortDescription.Item.Value** - Описание 
-* **SubsidiesInformation.Description** - Блок с описанием пакета субсидий
-* **SubsidiesInformation.Description.Item** - 
-* **SubsidiesInformation.Description.Item.Language** - Язык описания
-* **SubsidiesInformation.Description.Item.Value** - Описание 
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item** - Блок с переводами описаний. Тип данных - массив.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item.Language** - Язык описания. Тип данных — строка.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item.Value** - Описание. Тип данных — строка.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForAgent** - Описание для агента. Тип данных — строка.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header** - Название субсидии. Тип данных — строка.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item** - Блок с переводами названий. Тип данных - массив.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item.Language** - Язык. Тип данных — строка.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item.Value** - Название. Тип данных — строка.
+* **SubsidiesInformation.ShortDescription** - Блок с кратким описанием. Тип данных - массив.
+* **SubsidiesInformation.ShortDescription.Item** - Блок с переводами краткого описания. Тип данных - массив.
+* **SubsidiesInformation.ShortDescription.Item.Language** - Язык описания. Тип данных — строка.
+* **SubsidiesInformation.ShortDescription.Item.Value** - Описание. Тип данных — строка.
+* **SubsidiesInformation.Description** - Блок с описанием пакета субсидий. Тип данных - массив.
+* **SubsidiesInformation.Description.Item** - Блок с переводами описания пакета субсидий.
+* **SubsidiesInformation.Description.Item.Language** - Язык описания. Тип данных — строка.
+* **SubsidiesInformation.Description.Item.Value** - Описание. Тип данных — строка.
 * **SubsidiesInformation.AllowAgentCharges** - Разрешение на объединение агентских сборов. Тип данных — булевский.
 * **SubsidiesInformation.AllowCombine** - Разрешение на объединение. Тип данных — булевский.
-* **SubsidiesInformation.DocumentationUrl** - адрес для получения документации по субсидиям.
+* **SubsidiesInformation.DocumentationUrl** - Адрес для получения документации по субсидиям.
 
 #### Пример
 
