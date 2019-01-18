@@ -9,9 +9,9 @@ title: SubsidiesInformation
 
 * **SubsidiesInformation**  - Контейнер с доступными субсидиями. Тип данных - сложный.
 * **SubsidiesInformation.SubsidyInformation** - Контейнер с информацией о доступной субсидии. Тип данных - сложный.
-* **SubsidiesInformation.ID** - Номер сегмента перелёта для которого есть субсидии. ТИп данных - целое 32-битное число.
+* **SubsidiesInformation.ID** - Номер сегмента перелёта, для которого есть субсидии. ТИп данных - целое 32-битное число.
 * **SubsidiesInformation.PassengerTypes** - Контейнер с перечислением типов пассажиров.  Тип данных - сложный.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription** - Контейнер с описанием типа пассажира для которого могут применятся субсидии.  Тип данных - сложный.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription** - Контейнер с описанием типа пассажира, для которого могут применятся субсидии.  Тип данных - сложный.
 * **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Code** - Код субсидии. Тип данных — строка.
 * **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.GeneralType** -  Тип пассажира. Тип данных - перечисление.
 * **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.MaxAge** - Максимальный возраст. Тип данных - целое 32-битное число.
