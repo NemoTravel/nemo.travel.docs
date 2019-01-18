@@ -7,40 +7,42 @@ title: SubsidiesInformation
 
 #### Параметры
 
-* **SubsidiesInformation**  - Параметр
-* **SubsidiesInformation.SubsidyInformation** - Параметр
-* **SubsidiesInformation.ID** - Параметр
-* **SubsidiesInformation.PassengerTypes** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Code** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.GeneralType** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.MaxAge** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.NeedAccompaniment** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.IsDisabled** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.AccompaniesTheDisabled** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.NeedMiddleName** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidDocuments** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidDocuments.Document** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item.Language** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item.Value** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForAgent** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item.Language** - Параметр
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item.Value** - Параметр
-* **SubsidiesInformation.ShortDescription** - Параметр
-* **SubsidiesInformation.ShortDescription.Item** - Параметр
-* **SubsidiesInformation.ShortDescription.Item.Language** - Параметр
-* **SubsidiesInformation.ShortDescription.Item.Value** - Параметр
-* **SubsidiesInformation.Description** - Параметр
-* **SubsidiesInformation.Descriptionэ.Item** - Параметр
-* **SubsidiesInformation.Descriptionэ.Item.Language** - Параметр
-* **SubsidiesInformation.Descriptionэ.Item.Value** - Параметр
-* **SubsidiesInformation.AllowAgentCharges** - Параметр
-* **SubsidiesInformation.AllowCombine** - Параметр
-* **SubsidiesInformation.DocumentationUrl** - Параметр
+* **SubsidiesInformation**  - Контейнер с доступными субсидиями. Тип данных - сложный.
+* **SubsidiesInformation.SubsidyInformation** - Контейнер с информацией о доступной субсидии. Тип данных - сложный.
+* **SubsidiesInformation.ID** - Номер сегмента перелёта для которого есть субсидии. ТИп данных - целое 32-битное число.
+* **SubsidiesInformation.PassengerTypes** - Контейнер с перечислением типов пассажиров.  Тип данных - сложный.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription** - Контейнер с описанием типа пассажира для которого могут применятся субсидии.  Тип данных - сложный.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Code** - 
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.GeneralType** -  Тип пассажира. Тип данных - перечисление.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.MaxAge** - Максимальный возраст. Тип данных - целое 32-битное число.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.NeedAccompaniment** - Требование к сопровождению. Тип данных — булевский.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.IsDisabled** - Признак доступности для инвалида. Тип данных — булевский.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.AccompaniesTheDisabled** - Требование к сопровождению инвалида.  Тип данных — булевский.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.NeedMiddleName** - Требование к отчеству. Тип данных — булевский.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidDocuments** - Требования к документам. Тип данных - массив.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidDocuments.Document** - Требуемый тип документа. Тип данных - массив.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidSpecialsDocuments** - Требования к дополнительным документам. Тип данных - массив.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidSpecialsDocuments.Document** - Требуемый тип дополнительного документа.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer** - Описание для клиента. Тип данных - массив.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item** - 
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item.Language** - Язык описания.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item.Value** - Описание.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForAgent** - Описание для агента.
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header** - Название субсидии
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item** - 
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item.Language** - Язык 
+* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item.Value** - Название 
+* **SubsidiesInformation.ShortDescription** - Блок с кратким описанием 
+* **SubsidiesInformation.ShortDescription.Item** - 
+* **SubsidiesInformation.ShortDescription.Item.Language** - Язык описания 
+* **SubsidiesInformation.ShortDescription.Item.Value** - Описание 
+* **SubsidiesInformation.Description** - Блок с описанием пакета субсидий
+* **SubsidiesInformation.Description.Item** - 
+* **SubsidiesInformation.Description.Item.Language** - Язык описания
+* **SubsidiesInformation.Description.Item.Value** - Описание 
+* **SubsidiesInformation.AllowAgentCharges** - Разрешение на объединение агентских сборов. Тип данных — булевский.
+* **SubsidiesInformation.AllowCombine** - Разрешение на объединение. Тип данных — булевский.
+* **SubsidiesInformation.DocumentationUrl** - адрес для получения документации по субсидиям.
 
 #### Пример
 
