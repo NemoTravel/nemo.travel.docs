@@ -24,11 +24,11 @@ After sending the request the results are given separately through the [GetCityS
 -   **Rooms.Room.ChildrenAges.Age** - children age in the request. Data type - nonnegative 32-bit integer.
 -   **Rooms.CurrencyCode** - 3-letter currency code of the search results. Data type - string.
 -   **Rooms.ClientNationality** - 2-letter nationality code of the client. Data type - string.
--   **Rooms.PackageId** - 
+-   **Rooms.PackageId** - ID of the package from which the data will be downloaded.
 -   **Rooms.GetHotelsOnRequest** - 
 -   **Rooms.CityInnerId** - 
--   **Rooms.MaxKmDistanceFromCityCenter** - 
--   **Rooms.LoyaltyCard** - 
+-   **Rooms.MaxKmDistanceFromCityCenter** - distance to the city centre in kilometers.
+-   **Rooms.LoyaltyCard** - loyalty card. 
 
 
 
