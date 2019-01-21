@@ -23,11 +23,11 @@ title: 'Запрос RunCitySearch'
 -   **Rooms.Room.ChildrenAges.Age** - возраст детей в запросе. Тип данных - неотрицательный integer 32.
 -   **Rooms.CurrencyCode** - 3-х буквенный код валюты выдачи результатов поиска. Тип данных - строка.
 -   **Rooms.ClientNationality** - 2-х буквенный код национальности клиента. Тип данных - строка.
--   **Rooms.PackageId** -
+-   **Rooms.PackageId** - ID пакета, из которого будут подгружаться данные. Тип данных - строка. 
 -   **Rooms.GetHotelsOnRequest** -
 -   **Rooms.CityInnerId** -
--   **Rooms.MaxKmDistanceFromCityCenter** -
--   **Rooms.LoyaltyCard** - 
+-   **Rooms.MaxKmDistanceFromCityCenter** - расстояние до центра города в километрах. 
+-   **Rooms.LoyaltyCard** - карта лояльности. 
 
 ##### Пример запроса (XML)
   ```xml
