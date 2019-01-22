@@ -25,7 +25,7 @@ After sending the request the results are given separately through the [GetCityS
 -   **GetHotelsOnRequest** - attribute of requested hotels being included in the search results. Data type - boolean.
 -   **CityInnerId** - city ID in the Nemo system. Data type - string.
 -   **MaxKmDistanceFromCityCenter** - distance to the city centre in kilometers. Data type - double. 
--   **LoyaltyCard** - loyalty card. Data type - custom. 
+-   **LoyaltyCard** - container with the loyalty card data. Data type - custom. 
 -   **LoyaltyCard.CompanyCode** - company code. Data type - string.
 -   **LoyaltyCard.Number** - loyalty card number. Data type - string.
 
