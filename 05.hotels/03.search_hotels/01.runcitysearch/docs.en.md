@@ -13,6 +13,7 @@ After sending the request the results are given separately through the [GetCityS
 -   **CityId** - ID of the city for which the search will be executed. Data type - nonnegative 32-bit integer.
 -   **IsAirport** - whether the hotel is in the airport (for the supplier Travelport). Data type - boolean. 
 -   **HotelId** - ID of the hotel for which the search will be executed. Data type - nonnegative 32-bit integer .
+-   **PackageId** - ID of the package from which the data will be applied. Data type - string.
 -   **Rooms** - container with information on the rooms required to be found. Data type - custom.
 -   **Rooms.Room** - container with information on the number of guests. Data type - custom.
 -   **Rooms.Room.AdultsCount** - number of adult guests. Data type - unsigned 32-bit integer.
