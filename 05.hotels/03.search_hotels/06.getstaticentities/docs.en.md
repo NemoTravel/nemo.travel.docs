@@ -16,7 +16,7 @@ Getting statics from the supplier.
 -   **IDs** - container with IDs of the requested objects. Data type - custom.
 -   **IDs.ID** - ID of the requested object. Data type - string.
 -   **Language** - language in which statics will be obtained. Data type - string.
--   **PackageId** - ID of the package from which the statics will be downloaded. Data type - string.
+-   **PackageId** - ID of the package from which the statics will be applied. Data type - string.
 
 ##### Sample Request (XML)
 ```xml
