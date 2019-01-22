@@ -22,7 +22,7 @@ After sending the request the results are given separately through the [GetCityS
 -   **Rooms.CurrencyCode** - 3-letter currency code of the search results. Data type - string.
 -   **Rooms.ClientNationality** - 2-letter nationality code of the client. Data type - string.
 -   **Rooms.PackageId** - ID of the package from which the data will be downloaded. Data type - string.
--   **GetHotelsOnRequest** - attribute of requested hotels being included in the search results. Data type - string.
+-   **GetHotelsOnRequest** - attribute of requested hotels being included in the search results. Data type - boolean.
 -   **CityInnerId** - city ID in the Nemo system. Data type - string.
 -   **MaxKmDistanceFromCityCenter** - distance to the city centre in kilometers. Data type - double. 
 -   **LoyaltyCard** - loyalty card. Data type - custom. 
