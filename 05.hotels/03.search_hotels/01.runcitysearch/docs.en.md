@@ -12,7 +12,7 @@ After sending the request the results are given separately through the [GetCityS
 -   **CheckOutDate** - date of the departure from the room. Data type - string, the format is yyyy-mm-ddthh:mm:ss.
 -   **CityId** - ID of the city for which the search will be executed. Data type - nonnegative 32-bit integer.
 -   **IsAirport** - whether the hotel is in the airport (for the supplier Travelport). Data type - boolean. 
--   **HotelId** - ID of the hotel for which the search will be executed. Data type - nonnegative 32-bit integer .
+-   **HotelId** - ID of the hotel for which the search will be executed. Data type - nonnegative 32-bit integer.
 -   **PackageId** - ID of the package from which the data will be applied. Data type - string.
 -   **Rooms** - container with information on the rooms required to be found. Data type - custom.
 -   **Rooms.Room** - container with information on the number of guests. Data type - custom.
@@ -22,7 +22,7 @@ After sending the request the results are given separately through the [GetCityS
 -   **Rooms.Room.ChildrenAges.Age** - children age in the request. Data type - nonnegative 32-bit integer.
 -   **Rooms.CurrencyCode** - 3-letter currency code of the search results. Data type - string.
 -   **Rooms.ClientNationality** - 2-letter nationality code of the client. Data type - string.
--   **Rooms.PackageId** - ID of the package from which the data will be downloaded. Data type - string.
+-   **Rooms.DiscountID** - ID of the discount. Data type - string.
 -   **GetHotelsOnRequest** - attribute of requested hotels being included in the search results. Data type - boolean.
 -   **CityInnerId** - city ID in the Nemo system. Data type - string.
 -   **MaxKmDistanceFromCityCenter** - distance to the city centre in kilometers. Data type - double. 
