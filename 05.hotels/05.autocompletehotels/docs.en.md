@@ -13,7 +13,7 @@ Returns 10 objects for each selected parameter (city, country, hotel), correspon
 -   **SearchHotels** - Attribute of the necessity to execute autocomplete by hotels. Data type - boolean.
 -   **SearchCities** - Attribute of the necessity to execute autocomplete by cities. Data type - boolean.
 -   **SearchCountries** - Attribute of the necessity to execute autocomplete by countries. Data type - boolean.
--   **PackageId** - ID of the package from which the autocomplete data will be downloaded.
+-   **PackageId** - ID of the package from which the autocomplete data will be applied.
 
 ##### Sample Request (XML)
 ```xml
