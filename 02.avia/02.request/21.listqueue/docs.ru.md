@@ -8,19 +8,17 @@ taxonomy:
 ### Чтение очередей (ListQueue)
 
 #### Запрос ListQueue_2_0
-- **BookQueueList.BookQueueInfo.QueuesByName** - контейнер с очередями, сортированными по названию. Тип данных - массив.
-- **BookQueueList.BookQueueInfo.QueuesByName.Queue** - название очереди. Тип данных - массив перечисления QueueName. Соответствует параметру _**.BookQueueInfo.QueueNames.Queue**_ из запроса предыдущей версии.
-- **BookQueueList.BookQueueInfo.QueuesByNumber** - контейнер с очередями, сортированными по порядковому номеру. Тип данных  - массив int.
+- **ListQueueConfig** - контейнер с файлами конфигурации очереди. Тип данных - массив.
+- **ListQueueConfig.QueueConfig** - контейнер с информацией о запрашиваемых очередях. Тип данных - массив.
+- **ListQueueConfig.QueueConfig.SourceIDs** - контейнер с информацией об ID источников. Тип данных - массив.
+- **ListQueueConfig.QueueConfig.SourceIDs.SourceID** - ID источника данных об очередях. Тип данных - integer.
+- **ListQueueConfig.QueueConfig.QueuesByName** - контейнер с очередями, сортированными по названию. Тип данных - массив. 
+- **ListQueueConfig.QueueConfig.QueuesByName.Queue** - название очереди. Тип данных - массив перечисления QueueName. Соответствует параметру **Queue** из запроса предыдущей версии. 
+- **ListQueueConfig.QueueConfig.QueuesByNumber** - контейнер с очередями, отсортированными по порядковому номеру. Тип данных  - массив int.
 - **ListQueueConfig.QueueConfig.QueuesByNumber.QueueNumber** - порядковый номер очереди. Тип данных - int. 
-- **ExternalBookQueueList** - контейнер с PNR, которые были созданы вне системы Nemo. Тип данных - массив.   
-- **ExternalBookQueueList.ExternalBookQueueInfo** - контейнер с информацией о созданных вне системы PNR. Тип данных - массив. 
-- **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByName** - соответствует параметру _**BookQueueList.BookQueueInfo.QueuesByName**_
-- **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByName.Queue** - соответствует параметру _**BookQueueList.BookQueueInfo.QueuesByName.Queue**_
-- **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByNumber** - соответствует параметру _**BookQueueList.BookQueueInfo.QueuesByNumber**_.
-- **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByNumber.QueueNumber** - соответствует параметру _**BookQueueList.BookQueueInfo.QueuesByNumber**_.
-**ExternalBookQueueList.ExternalBookQueueInfo.Locator** - идентификатор брони в системе ГРС. Тип данных - строка.
-- **ExternalBookQueueList.ExternalBookQueueInfo.SourceID** - ID источника данных об очередях. Тип данных - integer. 
-- **ExternalBookQueueList.ExternalBookQueueInfo.SupplierRequisiteID** - идентификатор агентства, которому принадлежит PNR, в ГРС. Тип данных - строка.
+- **ListQueueConfig.QueueConfig.ListAgencyQueues** - признак необходимости чтения очередей из настроек агентства. Тип данных - bool. 
+- **ListQueueConfig.QueueConfig.DisplayExternalPNRs** - включает отображение PNR, которые были созданы вне системы Nemo. Тип данных - bool. 
+
 
 #### Ответ ListQueue_2_0
 Соответствует предыдущей версии.  
