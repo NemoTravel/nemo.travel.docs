@@ -11,7 +11,7 @@ taxonomy:
 - **ListQueueConfig** - контейнер с файлами конфигурации очереди. Тип данных - массив.
 - **ListQueueConfig.QueueConfig** - контейнер с информацией о запрашиваемых очередях. Тип данных - массив.
 - **ListQueueConfig.QueueConfig.SourceIDs** - контейнер с информацией об ID источников. Тип данных - массив.
-- **ListQueueConfig.QueueConfig.SourceIDs.SourceID** - ID источника данных об очередях. Тип данных - integer.
+- **ListQueueConfig.QueueConfig.SourceIDs.SourceID** - ID источника данных об очередях. Тип данных - int.
 - **ListQueueConfig.QueueConfig.QueuesByName** - контейнер с очередями, сортированными по названию. Тип данных - массив. 
 - **ListQueueConfig.QueueConfig.QueuesByName.Queue** - название очереди. Тип данных - массив перечисления QueueName. Соответствует параметру _**Queue**_ из запроса предыдущей версии. 
 - **ListQueueConfig.QueueConfig.QueuesByNumber** - контейнер с очередями, отсортированными по порядковому номеру. Тип данных  - массив int.
