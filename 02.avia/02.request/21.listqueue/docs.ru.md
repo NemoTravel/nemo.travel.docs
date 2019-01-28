@@ -19,7 +19,6 @@ taxonomy:
 - **ListQueueConfig.QueueConfig.ListAgencyQueues** - признак необходимости чтения очередей из настроек агентства. Тип данных - bool. 
 - **ListQueueConfig.QueueConfig.DisplayExternalPNRs** - включает отображение PNR, которые были созданы вне системы Nemo. Тип данных - bool. 
 
-
 #### Ответ ListQueue_2_0
 Соответствует предыдущей версии.  
 
