@@ -15,16 +15,16 @@ The body of the any request consists of three basic elements.
 
 ##### Requisites
 
-* **Requisites** - the details of access to the server. The custom data type.
-* **Requisites.Login** - The login to access the server. The data type is a string.
-* **Requisites.Password** is the password for accessing the server. The data type is a string.
-* **Requisites.AuthToken** - the key of access to the server. The data type is a string. You either need to specify an access key or a login string with a password.
-* **Requisites.NemoOneAuthToken** - the key for authorization by user ID in Nemo 1. The data type is a string.
+* **Requisites** - the details of access to the server (optional). The custom data type.
+* **Requisites.Login** - The login to access the server (optional). The data type is a string.
+* **Requisites.Password** is the password for accessing the server (optional). The data type is a string.
+* **Requisites.AuthToken** - the key of access to the server (optional). The data type is a string. You either need to specify an access key or a login string with a password.
+* **Requisites.NemoOneAuthToken** - the key for authorization by user ID in Nemo 1 (optional). The data type is a string.
 
 
 ##### User ID
 
-* **UserID** - the identifier of the user executing the request to the server. The data type is a non-negative integer 32-bit number.
+* **UserID** - the identifier of the user executing the request to the server (optional). The data type is a non-negative integer 32-bit number.
 
 ##### Request body
 
