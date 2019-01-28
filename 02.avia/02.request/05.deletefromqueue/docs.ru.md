@@ -17,7 +17,7 @@ title: DeleteFromQueue
 - **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByNumber** - соответствует параметру _**BookQueueList.BookQueueInfo.QueuesByNumber**_.
 - **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByNumber.QueueNumber** - соответствует параметру _**BookQueueList.BookQueueInfo.QueuesByNumber**_.
 **ExternalBookQueueList.ExternalBookQueueInfo.Locator** - идентификатор брони в системе ГРС. Тип данных - строка.
-- **ExternalBookQueueList.ExternalBookQueueInfo.SourceID** - ID источника данных об очередях. Тип данных - integer. 
+- **ExternalBookQueueList.ExternalBookQueueInfo.SourceID** - ID источника данных об очередях. Тип данных - int. 
 - **ExternalBookQueueList.ExternalBookQueueInfo.SupplierRequisiteID** - идентификатор агентства, которому принадлежит PNR, в ГРС. Тип данных - строка.
 
 ### Ответ DeleteFromQueue_2_0
