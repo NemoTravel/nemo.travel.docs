@@ -18,7 +18,7 @@ taxonomy:
 - **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByName.Queue** - соответствует параметру **BookQueueList.BookQueueInfo.QueuesByName.Queue**
 - **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByNumber** - соответствует параметру **BookQueueList.BookQueueInfo.QueuesByNumber**.
 - **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByNumber.QueueNumber** - соответствует параметру **BookQueueList.BookQueueInfo.QueuesByNumber**.
-ExternalBookQueueList.ExternalBookQueueInfo.Locator** - идентификатор брони в системе ГРС. Тип данных - строка.
+**ExternalBookQueueList.ExternalBookQueueInfo.Locator** - идентификатор брони в системе ГРС. Тип данных - строка.
 - **ExternalBookQueueList.ExternalBookQueueInfo.SourceID** - ID источника данных об очередях. Тип данных - integer. 
 - **ExternalBookQueueList.ExternalBookQueueInfo.SupplierRequisiteID** - идентификатор агентства, которому принадлежит PNR, в ГРС. Тип данных - строка.
 
