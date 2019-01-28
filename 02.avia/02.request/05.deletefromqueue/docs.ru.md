@@ -10,8 +10,8 @@ title: DeleteFromQueue
 - **BookQueueList.BookQueueInfo.QueuesByName.Queue** - название очереди. Тип данных - массив перечисления QueueName. Соответствует параметру _**.BookQueueInfo.QueueNames.Queue**_ из запроса предыдущей версии.
 - **BookQueueList.BookQueueInfo.QueuesByNumber** - контейнер с очередями, сортированными по порядковому номеру. Тип данных  - массив int.
 - **ListQueueConfig.QueueConfig.QueuesByNumber.QueueNumber** - порядковый номер очереди. Тип данных - int. 
-- **ExternalBookQueueList** - контейнер с PNR, которые были созданы вне системы Nemo. Тип данных - массив.   
-- **ExternalBookQueueList.ExternalBookQueueInfo** - контейнер с информацией о созданных вне системы PNR. Тип данных - массив. 
+- **ExternalBookQueueList** - контейнер с PNR, которые были созданы вне системы Nemo. Тип данных - сложный.   
+- **ExternalBookQueueList.ExternalBookQueueInfo** - контейнер с информацией о созданных вне системы PNR. Тип данных - сложный. 
 - **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByName** - соответствует параметру _**BookQueueList.BookQueueInfo.QueuesByName**_
 - **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByName.Queue** - соответствует параметру _**BookQueueList.BookQueueInfo.QueuesByName.Queue**_
 - **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByNumber** - соответствует параметру _**BookQueueList.BookQueueInfo.QueuesByNumber**_.
