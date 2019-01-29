@@ -18,7 +18,7 @@ Used to delete one or more bookings from one or more queues.
 - **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByNumber.QueueNumber** - corresponds to the _**BookQueueList.BookQueueInfo.QueuesByNumber**_ parameter.
 - **ExternalBookQueueList.ExternalBookQueueInfo.Locator** - booking ID in the GDS system. Data type is a string.
 - **ExternalBookQueueList.ExternalBookQueueInfo.SourceID** - ID of the queue data source. The data type is int.
-- **ExternalBookQueueList.ExternalBookQueueInfo.SupplierRequisiteID** - ID of the agency that owns the PNR in the GDS. Data type is a string.
+- **ExternalBookQueueList.ExternalBookQueueInfo.SupplierRequisiteID** - GDS ID of the agency that owns the PNR. Data type is a string.
 
 #### DeleteFromQueue_2_0 Response
 Corresponds to the previous version.
