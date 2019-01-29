@@ -3,7 +3,26 @@ title: DeleteFromQueue
 ---
 
 ### DeleteFromQueue 
-Used to delete one or more bookings from one or more queues
+Used to delete one or more bookings from one or more queues.
+
+### DeleteFromQueue_2_0 Request
+- **BookQueueList.BookQueueInfo.QueuesByName** - container with queues sorted by name. The data type is an array.
+- **BookQueueList.BookQueueInfo.QueuesByName.Queue** - queue name. The data type is an array of the QueueName enumeration. Corresponds to the _**.BookQueueInfo.QueueNames.Queue**_  parameter from the previous version request.
+- **BookQueueList.BookQueueInfo.QueuesByNumber** - container with queues sorted by sequence number. The data type is int array.
+- **ListQueueConfig.QueueConfig.QueuesByNumber.QueueNumber** - sequence number of the queue. The data type is int.
+- **ExternalBookQueueList** - container with PNRs that were created outside the Nemo system. The data type is custom.
+- **ExternalBookQueueList.ExternalBookQueueInfo** - container with information about PNRs created outside the system. The data type is custom.
+- **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByName** - corresponds to the _**BookQueueList.BookQueueInfo.QueuesByName**_ parameter
+- **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByName.Queue** - corresponds to the _**BookQueueList.BookQueueInfo.QueuesByName.Queue**_ parameter.
+- **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByNumber** - corresponds to the _**BookQueueList.BookQueueInfo.QueuesByNumber**_ parameter.
+- **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByNumber.QueueNumber** - corresponds to the _**BookQueueList.BookQueueInfo.QueuesByNumber**_ parameter.
+- **ExternalBookQueueList.ExternalBookQueueInfo.Locator** - booking ID in the GDS system. Data type is a string.
+- **ExternalBookQueueList.ExternalBookQueueInfo.SourceID** - ID of the queue data source. The data type is int.
+- **ExternalBookQueueList.ExternalBookQueueInfo.SupplierRequisiteID** - ID of the agency that owns the PNR in the GDS. Data type is a string.
+
+### DeleteFromQueue_2_0 Response
+Corresponds to the previous version.
+
 
 ### Request 
 ### Format description
