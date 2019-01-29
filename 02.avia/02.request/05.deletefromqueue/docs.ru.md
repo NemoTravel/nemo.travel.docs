@@ -5,7 +5,7 @@ title: DeleteFromQueue
 ### DeleteFromQueue 
 Используется для удаления одной или нескольких броней из одной или нескольких очередей 
 
-### Запрос DeleteFromQueue_2_0
+#### Запрос DeleteFromQueue_2_0
 - **BookQueueList.BookQueueInfo.QueuesByName** - контейнер с очередями, сортированными по названию. Тип данных - массив.
 - **BookQueueList.BookQueueInfo.QueuesByName.Queue** - название очереди. Тип данных - массив перечисления QueueName. Соответствует параметру _**.BookQueueInfo.QueueNames.Queue**_ из запроса предыдущей версии.
 - **BookQueueList.BookQueueInfo.QueuesByNumber** - контейнер с очередями, сортированными по порядковому номеру. Тип данных  - массив int.
@@ -20,7 +20,7 @@ title: DeleteFromQueue
 - **ExternalBookQueueList.ExternalBookQueueInfo.SourceID** - ID источника данных об очередях. Тип данных - int. 
 - **ExternalBookQueueList.ExternalBookQueueInfo.SupplierRequisiteID** - идентификатор агентства, которому принадлежит PNR, в ГРС. Тип данных - строка.
 
-### Ответ DeleteFromQueue_2_0
+#### Ответ DeleteFromQueue_2_0
 Соответствует предыдущей версии.  
 
 ### Запрос 
