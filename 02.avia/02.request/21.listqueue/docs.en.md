@@ -12,9 +12,9 @@ taxonomy:
 - **ListQueueConfig.QueueConfig** - container with information about the requested queues. The data type is an array.
 - **ListQueueConfig.QueueConfig.SourceIDs** - container with information about source IDs. The data type is an array.
 - **ListQueueConfig.QueueConfig.SourceIDs.SourceID** - ID of the queue data source. The data type is int.
-- **ListQueueConfig.QueueConfig.QueuesByName** - container with queues sorted by name. The data type is an array.
+- **ListQueueConfig.QueueConfig.QueuesByName** - container with queue names. The data type is an array.
 - **ListQueueConfig.QueueConfig.QueuesByName.Queue** - queue name. The data type is an array of the QueueName enumeration. Corresponds to the _**Queue**_ parameter from the request of the previous version.
-- **ListQueueConfig.QueueConfig.QueuesByNumber** - container with queues sorted by sequence number. The data type is an int array.
+- **ListQueueConfig.QueueConfig.QueuesByNumber** - container with queue sequence numbers. The data type is an int array.
 - **ListQueueConfig.QueueConfig.QueuesByNumber.QueueNumber** - sequence number of the queue. The data type is int.
 - **ListQueueConfig.QueueConfig.ListAgencyQueues** - attribute of the need to read the queues from the agency settings. The data type is bool.
 - **ListQueueConfig.QueueConfig.DisplayExternalPNRs** - includes mapping of PNRs that were created outside of the Nemo system. The data type is bool.
