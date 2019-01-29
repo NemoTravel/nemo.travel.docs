@@ -78,5 +78,3 @@ taxonomy:
 ||
 | MilitaryOfficerDocument          | The millitary officer document                                | M                 | UL                                                                                                                                              |
 ||
-| KZIdentification                 |  The Identity card of the Republic of Kazakhstan                                        | I                 | NP                                                                                                                                              |
-||
