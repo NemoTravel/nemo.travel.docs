@@ -121,7 +121,7 @@ To store different booking content.
     -   PROD
 - **SourceInfo.TicketingIATAValidator** - The information about the source where the service booking was created. The data type is a string.
 - **Document** - The document proving the identity of the traveler (optional). The array data type.
-- **Document.Type** - The document type. The data type is an enumeration<!-- the possible values are described in [Document Types](Document Types "wikilink")-->.
+- **Document.Type** - The document type. The data type is an enumeration the possible values are described in [Document types](http://docs.nemo.travel/en/avia/process/booking).
 - **Document.Number** - The number of the document proving the identity of the traveler. The data type is a string.
 - **Document.IssueCountryCode** - ISO Alpha2 or ISO Alpha3 country code of the document. The data type is a string.
 - **Document.ElapsedTime** - The document expiration date. The data type is the date in dd.mm.yyyy format.
