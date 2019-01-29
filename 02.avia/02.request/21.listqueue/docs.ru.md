@@ -12,9 +12,9 @@ taxonomy:
 - **ListQueueConfig.QueueConfig** - контейнер с информацией о запрашиваемых очередях. Тип данных - массив.
 - **ListQueueConfig.QueueConfig.SourceIDs** - контейнер с информацией об ID источников. Тип данных - массив.
 - **ListQueueConfig.QueueConfig.SourceIDs.SourceID** - ID источника данных об очередях. Тип данных - int.
-- **ListQueueConfig.QueueConfig.QueuesByName** - контейнер с очередями, сортированными по названию. Тип данных - массив. 
+- **ListQueueConfig.QueueConfig.QueuesByName** - контейнер, в котором указаны названия очередей. Тип данных - массив. 
 - **ListQueueConfig.QueueConfig.QueuesByName.Queue** - название очереди. Тип данных - массив перечисления QueueName. Соответствует параметру _**Queue**_ из запроса предыдущей версии. 
-- **ListQueueConfig.QueueConfig.QueuesByNumber** - контейнер с очередями, отсортированными по порядковому номеру. Тип данных  - массив int.
+- **ListQueueConfig.QueueConfig.QueuesByNumber** - контейнер, в котором указаны порядковые номера очередей.  Тип данных  - массив int.
 - **ListQueueConfig.QueueConfig.QueuesByNumber.QueueNumber** - порядковый номер очереди. Тип данных - int. 
 - **ListQueueConfig.QueueConfig.ListAgencyQueues** - признак необходимости чтения очередей из настроек агентства. Тип данных - bool. 
 - **ListQueueConfig.QueueConfig.DisplayExternalPNRs** - включает отображение PNR, которые были созданы вне системы Nemo. Тип данных - bool. 
