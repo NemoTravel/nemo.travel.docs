@@ -6,9 +6,9 @@ title: DeleteFromQueue
 Используется для удаления одной или нескольких броней из одной или нескольких очередей 
 
 #### Запрос DeleteFromQueue_2_0
-- **BookQueueList.BookQueueInfo.QueuesByName** - контейнер с очередями, сортированными по названию. Тип данных - массив.
+- **BookQueueList.BookQueueInfo.QueuesByName** - контейнер, в котором указаны названия очередей. Тип данных - массив.
 - **BookQueueList.BookQueueInfo.QueuesByName.Queue** - название очереди. Тип данных - массив перечисления QueueName. Соответствует параметру _**.BookQueueInfo.QueueNames.Queue**_ из запроса предыдущей версии.
-- **BookQueueList.BookQueueInfo.QueuesByNumber** - контейнер с очередями, сортированными по порядковому номеру. Тип данных  - массив int.
+- **BookQueueList.BookQueueInfo.QueuesByNumber** - контейнер, в котором указаны порядковые номера очередей. Тип данных  - массив int.
 - **ListQueueConfig.QueueConfig.QueuesByNumber.QueueNumber** - порядковый номер очереди. Тип данных - int. 
 - **ExternalBookQueueList** - контейнер с PNR, которые были созданы вне системы Nemo. Тип данных - сложный.   
 - **ExternalBookQueueList.ExternalBookQueueInfo** - контейнер с информацией о созданных вне системы PNR. Тип данных - сложный. 
