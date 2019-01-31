@@ -30,6 +30,7 @@ Flight presentation format 1.1.
 -   **Flight.Segments** - The container for flight segments. The array data type.
 -   **Flight.Segments.Segment** - The information about the flight segment. The array data type.
 -   **Segment.ID** - the serial number of this segment in the flight. The data type is an integer 32-bit number.
+-   **Segment.RequestedSegment** - segment number from the search query. The data type is an integer 32-bit number.
 -   **Segment.DepAirp** - The information about the departure airport for this segment. The array data type.
 -   **Segment.DepAirp.AirportCode** - The airport code. The data type is a string.
 -   **Segment.DepAirp.CityCode** - The city code (airport aggregator). The data type is a string.
