@@ -11,60 +11,59 @@ All Avia server requests and responses have a certain set of common elements.
 
 #### Request
 
-The body of the any request consists of three basic elements.
+The body of any request consists of three basic elements.
 
 ##### Requisites
 
-* **Requisites** - the details of access to the server (optional). The custom data type.
-* **Requisites.Login** - The login to access the server (optional). The data type is a string.
-* **Requisites.Password** is the password for accessing the server (optional). The data type is a string.
-* **Requisites.AuthToken** - the key of access to the server (optional). The data type is a string. You either need to specify an access key or a login string with a password.
-* **Requisites.NemoOneAuthToken** - the key for authorization by user ID in Nemo 1 (optional). The data type is a string.
-
+* **Requisites** - details to access the server (optional). Data type - custom. 
+* **Requisites.Login** - login to access the server (optional). Data type - string.
+* **Requisites.Password** - password to access the server (optional). Data type - string.
+* **Requisites.AuthToken** - access key for the server (optional). Data type - string. You either need to specify an access key or a login and password pair. 
+* **Requisites.NemoOneAuthToken** - key for authorization by user ID in Nemo 1 (optional). Data type - string.
 
 ##### User ID
 
-* **UserID** - the identifier of the user executing the request to the server (optional). The data type is a non-negative integer 32-bit number.
+* **UserID** - ID of the user executing the request to the server (optional). Data type - non-negative 32-bit integer .
 
 ##### Request body
 
-* **RequestBody** - the body of the request to the server. The custom data type.
+* **RequestBody** - body of the request to the server. Data type - custom.
 
 #### Response
 
-The main elements of the any response
+The main elements of any response.
 
 ##### Request ID
 
-* **RequestID** - The identifier of the processed request. The data type is an integer 64-bit number. Can not be less than 0.
+* **RequestID** - ID of the processed request. Data type - 64-bit integer . Cannot be less than 0.
 
 ##### Errors
-
-* **Errors** - an array of information about the errors that occurred during the processing of the request. The data type is an array.
-* **Errors.Error** - The information about one error that occurred during the processing of the request. The custom data type.
-* **Errors.Error.Level** - The error message received from the vendor. Data type - enumeration, possible values:
-* **APIFormat** - the error level of the request validation.
-* **Supplier** - The error received from the service provider or external data source
-* **Runtime** - The error while processing request
-* **Errors.Error.Code** - the code of the error that occurred. The data type is a 16-bit unsigned integral (ushort).
-* **Errors.Error.Message** - The server error message. The data type is a string.
-* **Errors.Error.ServiceErrorMessage** - The error message received from the provider. The data type is a string.
-* **Errors.Error.AdditionalInfo** - contains various additional information about the error. The custom data type.
-* **Errors.Error.AdditionalInfo.InfoItem** is a single additional error information. The custom data type.
-* **Errors.Error.AdditionalInfo.InfoItem.InfoKey** - The type of additional information. Data type - enumeration, possible values:
-* **Errors.Error.AdditionalInfo.InfoItem.InfoValue** - additional information about the error. The data type is a string.
-* **SegmentsStatus** - The information about the statuses of segments with the invalid status of one of them when booking. It is transmitted in the format <syntaxhighlight lang="text" enclose="none" style="font-size: 1.2em; padding: 0 3px; background: #F0F0F0; border: 1px dashed #2F6FAB;">segment_number:segment_status,segment_number:segment_status</syntaxhighlight>, and so on by the number of segments where "," is the separator of information about different segments, and ":" is the number separator (numbered from 0) and the status of this segment.
+* **Errors** - array of information about the errors that occurred during the request processing. Data type - array.
+* **Errors.Error** - information about a single error that occurred during the request processing. Data type - custom.
+* **Errors.Error.Level** - error message received from the vendor. Data type - enumeration, possible values:
+* **APIFormat** - request validation level error.
+* **Supplier** - error received from the service provider or an external data source
+* **Runtime** - error in the request processing
+* **Errors.Error.Code** - code of the error that has occurred. Data type - ushort (unsigned  16-bit number).
+* **Errors.Error.Message** - server error message. Data type - string.
+* **Errors.Error.ServiceErrorMessage** - error message received from the provider. Data type - string.
+* **Errors.Error.AdditionalInfo** - contains various additional information about the error. Data type - custom.
+* **Errors.Error.AdditionalInfo.InfoItem** - single additional error information.  Data type - custom.
+* **Errors.Error.AdditionalInfo.InfoItem.InfoKey** - additional information type. Data type - enumeration, possible values:
+* **Errors.Error.AdditionalInfo.InfoItem.InfoValue** - additional information about the error. Data type - string.
+* **SegmentsStatus** - information about the segment statuses with the status of one of them when booking is invalid. It is transmitted in the format <syntaxhighlight lang="text" enclose="none" style="font-size: 1.2em; padding: 0 3px; background: #F0F0F0; border: 1px dashed #2F6FAB;">segment_number:segment_status,segment_number:segment_status</syntaxhighlight> format, and so on by the number of segments where "," is the separator of information about different segments, and ":" is the separator of the number (numbered from 0) and the status of this segment.
 
 ##### Warnings
 
-* **Warnings** - an array of important information messages about the specifics of request processing. The data type is an array.
-* **Warnings.Warning** - The information message about the specifics of request processing. The custom data type.
-* **Warnings.Warning.Code** - The message type code. The data type is a 16-bit unsigned integral (ushort).
-* **Warnings.Warning.Message** - the text of the message. The data type is a string.
+* **Warnings** - array of important information messages about the specifics of request processing. Data type - array.
+* **Warnings.Warning** - information message about the specifics of request processing. Data type - custom.
+* **Warnings.Warning.Code** - message type code. Data type - ushort (unsigned 16-bit number).
+* **Warnings.Warning.Message** - text of the message. Data type - string.
 
-##### The response body
+##### Response body
 
-* **ResponseBody** - The container for the response body. The custom data type.
+* **ResponseBody** - container for the response body. Data type - custom.
+
 
 ##### Example of autorization block by AuthToken
 ```xml
