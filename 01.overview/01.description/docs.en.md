@@ -5,9 +5,9 @@ taxonomy:
         - docs
 ---
 
-The Nemo Connect web services is written using .NET Framework technologies and located on IIS servers. To interact with the service an interaction protocol [SOAP](https://en.wikipedia.org/wiki/SOAP) is used, to work with the service you need to implement the work on its side with the right methods, it is not necessary to make the support of all the available methods.
+The Nemo Connect web service is developed using .NET Framework technologies and located on the IIS servers. To interact with the service an interaction protocol [SOAP](https://en.wikipedia.org/wiki/SOAP) is used, to work with the service you need to implement the work on your side with the required methods; it is not necessary to establish the support of all the available methods.
 
-In the process of integration is recommended to use the tool [SoapUI OpenSource](https://www.soapui.org/downloads/soapui.html) to test requests.
+In the process of integration it is recommended to use the tool [SoapUI OpenSource](https://www.soapui.org/downloads/soapui.html) to test requests.
 
 Address for requests:
 https://avia.prod.backend.nemo.travel/Avia.svc, scheme: https://avia.prod.backend.nemo.travel/Avia.svc?singleWsdl
