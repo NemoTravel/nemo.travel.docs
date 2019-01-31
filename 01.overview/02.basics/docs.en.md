@@ -19,7 +19,7 @@ The body of any request consists of three basic elements.
 * **Requisites.Login** - login to access the server (optional). Data type - string.
 * **Requisites.Password** - password to access the server (optional). Data type - string.
 * **Requisites.AuthToken** - access key for the server (optional). Data type - string. You either need to specify an access key or a login and password pair. 
-* **Requisites.NemoOneAuthToken** - key for authorization by user ID in Nemo 1 (optional). Data type - string.
+* **Requisites.NemoOneAuthToken** - key for authorization via the user ID in Nemo 1 (optional). Data type - string.
 
 ##### User ID
 
@@ -51,7 +51,7 @@ The main elements of any response.
 * **Errors.Error.AdditionalInfo.InfoItem** - single additional error information.  Data type - custom.
 * **Errors.Error.AdditionalInfo.InfoItem.InfoKey** - additional information type. Data type - enumeration, possible values:
 * **Errors.Error.AdditionalInfo.InfoItem.InfoValue** - additional information about the error. Data type - string.
-* **SegmentsStatus** - information about the segment statuses with the status of one of them when booking is invalid. It is transmitted in the format <syntaxhighlight lang="text" enclose="none" style="font-size: 1.2em; padding: 0 3px; background: #F0F0F0; border: 1px dashed #2F6FAB;">segment_number:segment_status,segment_number:segment_status</syntaxhighlight> format, and so on by the number of segments where "," is the separator of information about different segments, and ":" is the separator of the number (numbered from 0) and the status of this segment.
+* **SegmentsStatus** - information about the segment statuses with the status of one of them when booking is invalid. It is transmitted in the format <syntaxhighlight lang="text" enclose="none" style="font-size: 1.2em; padding: 0 3px; background: #F0F0F0; border: 1px dashed #2F6FAB;">segment_number:segment_status,segment_number:segment_status</syntaxhighlight> format, and so on by the number of segments where "," separates information about different segments, and ":" separates the number (numbered from 0) and the status of this segment.
 
 ##### Warnings
 
