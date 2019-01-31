@@ -37,5 +37,5 @@ process:
 -   **[SplitBook](/avia/request/splitbook)** - Used to separate (split) a part of passengers into a separate new booking.
 -   **[UpdateBook](/avia/request/updatebook)** - Used to update the flight booking information.
 -   **[Ticket](/avia/request/ticket)** - Ticketing for the booking.
--   **[VoidTicket](/avia/request/voidticket)** - Used for refunding of tickets received as a result of ticketing. 
+-   **[VoidTicket](/avia/request/voidticket)** - Used for tickets refund received as a result of ticketing. 
 -   **[VoidEMD](/avia/request/voidemd)** - Used to void the EMD for various ancillary services in the booking.
