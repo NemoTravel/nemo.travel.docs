@@ -20,13 +20,13 @@ The file contains an array of objects, each rule object describes one fare famil
 | ------------- |---------------| ------|
 | owner          | String        | The two-character IATA airline code |
 | baseClass      | String        |  The flight service class to which the set of fare rules applies. The allowed values are `economy`,` premiumEconomy`, `business`,` first`|
-| tariffCodePattern  | String      |    The regular expression describing the tariff code |
-| priority  | Number      | An airline recommended order of display |
+| tariffCodePattern  | String      |    The regular pattern describing the tariff code |
+| priority  | Number      | An order of display recommended by the airline |
 | saleTimeSince  | String      |    An acceptable sale time "Since" (Format ISO 8601) |
 | saleTimeUntil  | String      |    An acceptable sale time "Until" (Format ISO 8601) |
 | flightTimeSince  | String      |     An acceptable flight time "Since" (Format ISO 8601) |
 | flightTimeUntil  | String      |    An acceptable flight time "Until" (Format ISO 8601) |
-| parameters| Object[] | Tariff options that characterize the family  |
+| parameters| Object[] | Fare options characterizing the family  |
 
 **Description of the tariff option:**
 
@@ -45,10 +45,10 @@ The file contains an array of objects, each rule object describes one fare famil
 
 | Name  | Description |
 | ------------- |-------|
-| description | The name and the description of the fare family |
+| description | The name and the fare family description |
 | meal | Available meals on board |
 | baggage | The baggage information |
-| carryOn | The hand luggage |
+| carryOn | The hand baggage |
 | refundable | Refund rules |
 | exchangeable | Exchange rules |
 | seatsRegistration | The information about seats in the plane |
