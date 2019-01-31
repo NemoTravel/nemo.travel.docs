@@ -9,7 +9,7 @@ taxonomy:
 
 В процессе интеграции для тестирования запросов рекомендуется использовать инструмент [SoapUI OpenSource](https://www.soapui.org/downloads/soapui.html).
 
-Адрес для оправки запросов:  
+Адрес для отправки запросов:  
 https://avia.prod.backend.nemo.travel/Avia.svc, 
 схема:
 https://avia.prod.backend.nemo.travel/Avia.svc?singleWsdl
