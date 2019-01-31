@@ -21,7 +21,7 @@ The extension of the files `.json`, the format of the data` JSON`, the encoding 
 ## Airlines
 
 * File: airlines.json
-* Identifier: IATA code (if available)
+* ID: IATA code (if available)
 * Example:
 ```
 "6W":{"name":{"ru":"Саратовские авиалинии","en":"Saravia"},"country":"RU","logo":{"file":"5676-03408f4218f81e33b26b81197fa3b656.png","width":"231","height":"50"}},
