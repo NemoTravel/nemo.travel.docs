@@ -77,9 +77,6 @@ Request for execution before version 1.2
 
 Includes the set of elements caused by operstion in the request:
 
--  **ActualizedFlight** - contains updated flight. The data type is [Flight](/avia/common/flight).
--  **FlightsByFareFamily** - contains the result of the GetFareFamilies operation. The data type is the array [Flight](/avia/common/flight).
--  **SubsidizedTariffs** - contains the result of the GetSubsidizedTariffs operation. The data type is the array [Flight](/avia/common/flight).
 -   **ObjectForOperations** — contains the identifier of the object for which you want to perform additional operations. The array data type. It is similar to the corresponding element from the request.
 -   **CheckAvailabilityResult** — the result of checking the availability of the flight for booking. The array data type.
 -   **CheckAvailabilityResult.IsAvail** — a sign of the availability of the flight for booking. The data type is bool.
@@ -142,6 +139,9 @@ Includes the set of elements caused by operstion in the request:
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.SegmentRef.Ref** - segment reference. The data type is an integer 32-bit number.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes** - the types of passengers to which this price applies. The data type is array.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes.PassTypes** - passenger type. The data type is an enumeration.
+-   **ActualizedFlight** - contains updated flight. The data type is [Flight](/avia/common/flight).
+-   **FlightsByFareFamily** - contains the result of the GetFareFamilies operation. The data type is the array [Flight](/avia/common/flight).
+-   **SubsidizedTariffs** - contains the result of the GetSubsidizedTariffs operation. The data type is the array [Flight](/avia/common/flight).
 -   **GetAllowedCCsResult** - the result of obtaining a list of card codes for payment of GDS processing. The array data type.
 -   **GetAllowedCCsResult.AllowedCCs** - list of codes of acceptable cards for payment of GDS booking by processing. The array data type.
 -   **GetAllowedCCsResult.AllowedCCs.Code** - credit card code, which you can pay for the specified booking with the GDS processing. The data type is a string.
