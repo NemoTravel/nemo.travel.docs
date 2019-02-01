@@ -7,7 +7,7 @@ taxonomy:
 
 ### GetExchangeVariants
 
-Get exchange variants (exchange variants) with information about the penalty and the difference in price with the current flight booking.
+Getting flights (exchange variants) with information about the return penalty and the difference in price with the current flight booking.
 
 #### Request
 
