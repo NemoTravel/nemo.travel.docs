@@ -396,18 +396,18 @@ taxonomy:
               </a:ContactInfo>
             </a:DataItem>
             <a:DataItem>
-        	 <ID>7</ID>
-             <TravellerRef>
-                 <Ref>1</Ref>
-             </TravellerRef>
-             <Type>LoyaltyCard</Type>
-             <LoyaltyCard>
-               <OwnerType>Airline</OwnerType>
-               <Owner>SU</Owner>
-               <Number>111458666</Number>
-               <Status>Confirmed</Status>
-               <StatusCode>HK</StatusCode>
-             </LoyaltyCard>
+        	 <a:ID>6</a:ID>
+             <a:TravellerRef>
+                 <a:Ref>1</a:Ref>
+             </a:TravellerRef>
+             <a:Type>LoyaltyCard</a:Type>
+             <a:LoyaltyCard>
+               <a:OwnerType>Airline</a:OwnerType>
+               <a:Owner>SU</a:Owner>
+               <a:Number>111458666</a:Number>
+               <a:Status>Confirmed</a:Status>
+               <a:StatusCode>HK</a:StatusCode>
+             </a:LoyaltyCard>
             </a:DataItem>
           </a:DataItems>
         </a:ResponseBody>
