@@ -7,15 +7,15 @@ taxonomy:
 
 ### FlightRepricing
 
-Carry out the the flight repricing, includes a check of the availability of the flight. Saves the user-selected fare families.
+Performs the flight repricing, includes the availability check of the flight. Saves the user-selected fare families.
 
 #### Request
 
 ##### Format Description
 
--  **FlightID** - The flight ID for which you need to carry out the repricing. The data type is a string.
+-  **FlightID** - ID of the flight for which you need to performs the repricing. Data type - string.
 
-##### Example
+##### Sample
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
@@ -40,10 +40,10 @@ Carry out the the flight repricing, includes a check of the availability of the 
 
 ##### Format Description
 
--  **NoServiceLevelDowngrade** - The list of variants of flight, in which there is no decrease in the level of service. The data type is the array [Flight](/avia/common/flight).
--  **BaggageDowngrade** - The list of variants of flight, in which lowering the level of service on luggage. The data type is the array [Flight](/avia/common/flight).
+-  **NoServiceLevelDowngrade** - list of flight variants in which there is no service level decrease. Data type - [Flight](/avia/common/flight) array.
+-  **BaggageDowngrade** -  list of flight variants in which luggage service level is lowered. Data type - [Flight](/avia/common/flight) array.
 
-##### Example
+##### Sample
 ```xml
 <?xml version="1.0"?>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
