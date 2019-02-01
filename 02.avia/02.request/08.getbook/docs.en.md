@@ -13,9 +13,9 @@ The latest request version, the differences are only in the response in the anci
 
 #### Request
 
--  **BookID** - The ID of the booking that you want to receive. The data type is long.
+-  **BookID** - ID of the booking you want to receive. Data type - long.
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -41,7 +41,7 @@ The latest request version, the differences are only in the response in the anci
 
 [2.0 Version Booking](/avia/common/book).
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
