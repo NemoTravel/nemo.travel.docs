@@ -17,12 +17,12 @@ The latest request version, the differences are only in the response in the anci
 
 ##### Format Description
 
--  **BookID** - The booking ID with passengers. The data type is an integer 64-bit number.
--  **FlightID** - The flight ID, on which the exchange will take place. Data type - string
--  **Passengers** - The numbers of passengers in the booking, whose tickets are required to be exchanged. The data type is an array.
--  **Passengers.Ref** - The passenger number in the booking. The data type is an integer 32-bit number.
+-  **BookID** - ID of the booking with passengers. Data type - 64-bit integer.
+-  **FlightID** - ID of the flight on which the exchange will take place. Data type - string.
+-  **Passengers** - numbers of passengers in the booking, whose tickets are required to be exchanged. Data type - array.
+-  **Passengers.Ref** - passenger number in the booking. Data type - 32-bit integer.
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -93,10 +93,10 @@ If there is a partial exchange, the booking will be divided into two: the first 
 
 ##### Format Description
 
--  **BookIDWithNotExchangedTickets** - The booking ID with passengers whose tickets have not been exchanged. The data type is an integer 64-bit number.
--  **BookWithExchangedTickets** - The booking with passengers whose tickets have been exchanged.
+-  **BookIDWithNotExchangedTickets** - ID of the booking with passengers whose tickets have not been exchanged. Data type - 64-bit integer.
+-  **BookWithExchangedTickets** - booking with passengers whose tickets have been exchanged.
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
