@@ -43,4 +43,4 @@ Corresponds to the previous version.
 - **.BookQueueInfo.UnnamedQueues.Queue** - number of the queue from which you want to delete the booking. Data type - string.
 
 ### Response
-If no errors were returned, the operation was successful.
+If no errors were returned, the operation had been successful.
