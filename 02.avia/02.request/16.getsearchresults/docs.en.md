@@ -7,23 +7,23 @@ taxonomy:
 
 ### GetSearchResults
 
-Getting the results of a certain search from an air server.
+Getting the results of a certain search from the avia server.
 
 #### Request
 
-- ** SearchID ** - The ID of the search occasion which results need to get. The data type is long.
-- ** FlightID ** - The flight ID that need to get. The data type is a string.
-- ** RawData ** - A sign of getting xml content of search requests to the supplier (optional). The data type is bool.
+- ** SearchID ** - ID of the search occasion which results are needed to get. Data type - long.
+- ** FlightID ** - flight ID that is needed to get. Data type - string.
+- ** RawData ** - attribute of getting xml content of search requests to the supplier (optional). Data type - bool.
 
 #### Response
 
 Includes all fields from the [Search response](/avia/request/search). Also additionally has the following fields:
 
-- ** RawData ** - xml content of search requests to the supplier. The data type is an array.
-- ** RawData.LogData ** - the content of one of the search requests to the supplier. The array data type.
-- ** LogData.ServiceLogID ** - The ID of the service log of communication with the supplier. The data type is long.
-- ** LogData.OriginalSourceID ** - The ID of the source (package), within which this log was received. The data type is int32.
-- ** LogData.SearchDT ** - the date and time of the search. The data type is DateTime.
-- ** LogData.RequestName ** - The name of the request to the supplier. The data type is a string.
-- ** LogData.Request ** - xml content of the request to the supplier. The data type is a string.
-- ** LogData.Response ** - xml content of the provider's response. The data type is a string.
+- ** RawData ** - xml content of search requests to the supplier. Data type - array.
+- ** RawData.LogData ** - content of one of the search requests to the supplier. Data type - array.
+- ** LogData.ServiceLogID ** - ID of the service log of communication with the supplier. Data type - long.
+- ** LogData.OriginalSourceID ** - ID of the source (package), within which this log was received. Data type - int32.
+- ** LogData.SearchDT ** - date and time of the search. Data type - DateTime.
+- ** LogData.RequestName ** - name of the request to the supplier. Data type - string.
+- ** LogData.Request ** - xml content of the request to the supplier. Data type - string.
+- ** LogData.Response ** - xml content of the supplier's response. Data type - string.
