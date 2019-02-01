@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-### Cancel your booking (CancelBook)
+### Booking cancel (CancelBook)
 
 Used to cancel flight booking.
 
@@ -13,9 +13,9 @@ Used to cancel flight booking.
 
 ##### Format Description
 
-- **BookID** - The booking ID that you want to cancel. The data type is an integer 64-bit number.
+- **BookID** - ID of the booking that you want to cancel. Data type - 64-bit integer.
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -41,10 +41,10 @@ Used to cancel flight booking.
 
 ##### Format Description
 
-- **BookID** - The booking ID that you want to cancel. The data type is an integer 64-bit number.
-- **Success** - A sign of the success of the cancellation. The data type is boolean.
+- **BookID** - ID of the booking that you want to cancel. Data type - 64-bit integer.
+- **Success** - attribute of the cancellation success. Data type - boolean.
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
