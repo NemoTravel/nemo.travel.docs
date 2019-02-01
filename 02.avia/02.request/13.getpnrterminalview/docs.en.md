@@ -13,9 +13,9 @@ Used to get a terminal view of the PNR for the booking.
 
 ##### Format Description
 
--  **BookID** - The booking ID, for which you want to get a terminal view. The data type is an integer 64-bit number.
+-  **BookID** - ID of the booking for which you want to get a terminal view. Data type - 64-bit integer.
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -41,9 +41,9 @@ Used to get a terminal view of the PNR for the booking.
 
 ##### Format Description
 
--  **TerminalView** - the terminal view of the PNR, to which the specified booking corresponds. The data type is a string.
+-  **TerminalView** - terminal view of the PNR with which the specified booking corresponds. Data type - string.
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
