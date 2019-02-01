@@ -7,15 +7,15 @@ taxonomy:
 
 ### Get Book History from GDS (GetBookHistory)
 
-Used to get the history of changes in booking from GDS.
+Used to get the history of modifications in booking from GDS.
 
 #### Request
 
 ##### Format Description
 
--  **BookID** - The booking ID, the history of which you want to receive. The data type is an integer 64-bit number.
+-  **BookID** - ID of the booking the history of which you want to receive. Data type - 64-bit integer.
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -41,16 +41,16 @@ Used to get the history of changes in booking from GDS.
 
 ##### Format Description
 
--  **BookID** - The booking ID that you want to cancel. The data type is an integer 64-bit number.
--  **PNRCode** - The booking code in the GDS. The data type is a string.
--  **HistoryElements** - Container for elements in booking history. The array data type.
--  **HistoryElements.HistoryElement** - The booking history element. The array data type. It occurs 1 or more times.
--  **HistoryElements.HistoryElement.DateTime** - Date and time of the booking in the format yyyy-MM-ddTHH: mm: ss. The data type is a string.
--  **HistoryElements.HistoryElement.ChangeSource** - The source of the change. The data type is a string.
--  **HistoryElements.HistoryElement.HistoryRemarks** - Container for change notes. The array data type.
--  **HistoryElements.HistoryElement.HistoryRemarks.HistoryRemark** - Remark of the change. The data type is a string. It occurs 1 or more times.
+-  **BookID** - ID of the booking you want to cancel. Data type - 64-bit integer.
+-  **PNRCode** - booking code in the GDS. Data type - string.
+-  **HistoryElements** - container for elements in booking history. Data type - array.
+-  **HistoryElements.HistoryElement** - booking history element. Data type - array. Occurs 1 or more times.
+-  **HistoryElements.HistoryElement.DateTime** - date and time of the booking in the yyyy-mm-ddthh:mm:ss format. Data type - string.
+-  **HistoryElements.HistoryElement.ChangeSource** - source of the change. Data type - string.
+-  **HistoryElements.HistoryElement.HistoryRemarks** - container for modification remarks. Data type - array.
+-  **HistoryElements.HistoryElement.HistoryRemarks.HistoryRemark** - modification remark. Data type - string. Occurs 1 or more times.
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
