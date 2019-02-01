@@ -14,15 +14,15 @@ The latest request version, the differences are only in the response in the anci
 
 #### Request Format
 
--  **BookID** -The ID of the booking for which you want to issue an EMD. The data type is long.
--  **AncillaryServices** - The list of ancillary services for discharge. The data type is the AncillaryService array.
--  **AncillaryServices.AncillaryService** - The element of links for work with the ancillary service. The array data type.
--  **AncillaryServices.AncillaryService.ServiceRef** - The ID of ancillary service in the booking for which is needed to issue an EMD. The data type is int.
--  **AncillaryServices.AncillaryService.SegmentRef** - An array of multi-links to the segments for which you want to issue an EMD. The data type is an int array.
--  **AncillaryServices.AncillaryService.SegmentRef.MRef** - The element of an array of multi-links to segments. The data type is int.
--  **AncillaryServices.AncillaryService.FOPInfo** - The form of payment to be used during the issuing an EMD (Optional). The data type is the same as FOPInfo from [DataItem](/avia/common/dataitem)
+-  **BookID** -ID of the booking for which you want to issue an EMD. Data type - long.
+-  **AncillaryServices** - list of ancillary services for ticketing. Data type - AncillaryService array.
+-  **AncillaryServices.AncillaryService** - element of links for work with the ancillary service. Data type - array.
+-  **AncillaryServices.AncillaryService.ServiceRef** - ID of ancillary service in the booking for which it is needed to issue an EMD. Data type - int.
+-  **AncillaryServices.AncillaryService.SegmentRef** - array of multi-links to the segments for which you want to issue an EMD. Data type - int array.
+-  **AncillaryServices.AncillaryService.SegmentRef.MRef** - element of the array of multi-links to segments. Data type - int.
+-  **AncillaryServices.AncillaryService.FOPInfo** - form of payment to be used during the issuing of an EMD (Optional). Data type - same as FOPInfo from [DataItem](/avia/common/dataitem)
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -63,7 +63,7 @@ The latest request version, the differences are only in the response in the anci
 
 [Book 2.0](/avia/common/book)
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
