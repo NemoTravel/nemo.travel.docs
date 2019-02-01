@@ -7,7 +7,7 @@ taxonomy:
 
 ### GetEMDRefundData
 
-Used to get a refund calculation.
+Used to get EMD refund calculation.
 
 #### Request Format
 
