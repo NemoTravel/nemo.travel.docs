@@ -22,8 +22,22 @@ Used to get the data on refund tickets and EMD if they are present in the bookin
 
 #### Response
 
+-    **Refunds** - ticket refund information. Data type - array.
+-    **RefundedTicket** - information on the refund of one particular ticket. Data type - custom.
+-    **RefundedTicket.Number** - ticket number. Data type - string.
+-    **RefundedTicket.PassengerRef** - number of the passenger who wns the ticket. Data type - 32-bit integer.
+-    **RefundedTicket.Refundable** - ticket refundability attribute. Data type - bool.
+-    **RefundedTicket.RefundMoney** - amount to be refunded. Data type - custom.
+-    **RefundedTicket.RefundMoney.Currency** - currency code of the amount to be refunded. Data type - string.
+-    **RefundedTicket.RefundMoney.Amount** - amount to be refunded. Data type - fractional number.
+-    **RefundedTicket.RefundTaxes** - container with tax information. However, not all the suppliers return detailed information. Data type - custom.
+-    **RefundedTicket.RefundTaxes.Tax** - container with a particular tax information. Data type - custom.
+-    **RefundedTicket.RefundTaxes.Tax.Amount** - tax amount. Data type - fractional number.
+-    **RefundedTicket.RefundTaxes.Tax.Currency** - currency code. Data type - string.
+-    **RefundedTicket.RefundTaxes.Tax.TaxCode** - tax code. Data type - string.
+
 ##### Format Description
 
-- ** TicketsRefundData ** - The calculation of the ticket refund. The data type is an array of elements [RefundData](/avia/common/refunddata).
-- ** EMDsRefundData ** - The calculation of the EMD refund. The data type is an array of elements [RefundData](/avia/common/refunddata).
+- ** TicketsRefundData ** - calculation of the ticket refund. Data type - array of [RefundData](/avia/common/refunddata) elements.
+- ** EMDsRefundData ** - calculation of the EMD refund. Data type - array of [RefundData](/avia/common/refunddata) elements.
 
