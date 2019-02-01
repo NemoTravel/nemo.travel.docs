@@ -396,6 +396,20 @@ Used to make changes to the booking with [booking version 2.0](/avia/common/book
                 <a:EmailID>EMAIL@EMAIL.COM</a:EmailID>
               </a:ContactInfo>
             </a:DataItem>
+            <a:DataItem>
+        	 <a:ID>6</a:ID>
+             <a:TravellerRef>
+                 <a:Ref>1</a:Ref>
+             </a:TravellerRef>
+             <a:Type>LoyaltyCard</a:Type>
+             <a:LoyaltyCard>
+               <a:OwnerType>Airline</a:OwnerType>
+               <a:Owner>SU</a:Owner>
+               <a:Number>111111111</a:Number>
+               <a:Status>Confirmed</a:Status>
+               <a:StatusCode>HK</a:StatusCode>
+             </a:LoyaltyCard>
+            </a:DataItem>
           </a:DataItems>
         </a:ResponseBody>
       </ModifyBook_2_0Result>
