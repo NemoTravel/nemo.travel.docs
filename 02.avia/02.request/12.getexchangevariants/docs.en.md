@@ -13,18 +13,18 @@ Getting flights (exchange variants) with information about the return penalty an
 
 ##### Format Description
 
--  **BookID** - The booking ID with passengers. The data type is an integer 64-bit number.
--  **Passengers** - The numbers of passengers in the booking, whose tickets are required to be exchanged. The data type is an array.
--  **Passengers.Ref** - The passenger number in the booking. The data type is an integer 32-bit number.
--  **RequestedFlightInfo** - Similar to the parameter * RequestedFlightInfo * from the [Search request](/avia/request/search).
+-  **BookID** - ID of the booking with passengers. Data type - 64-bit integer.
+-  **Passengers** - numbers of passengers whose tickets are needed to be exchanged in the booking. Data type - array.
+-  **Passengers.Ref** - passenger number in the booking. Data type - 32-bit integer.
+-  **RequestedFlightInfo** - similar to the parameter * RequestedFlightInfo * from the [Search request](/avia/request/search).
 
-To exchange a part of the segments, you need to indicate at sought-for flight legs the identifiers (**RequestedFlightInfo.ODPair.ID**) flight legs in booking which are needed to be exchange.
+To exchange a part of the segments, for required flight legs you need to indicate the IDs (**RequestedFlightInfo.ODPair.ID**) of flight legs from the booking which are needed to be exchanged.
 
-To exchange all segments for a completely new flight, you do not need to indicate any flifht leg identifier.
+To exchange all segments for a completely new flight, you do not need to indicate any flight leg IDs.
 
--  **Restrictions** - Similar to the * Restrictions * parameter from the [Search request](/avia/request/search).
+-  **Restrictions** - similar to the * Restrictions * parameter from the [Search request](/avia/request/search).
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -92,10 +92,10 @@ To exchange all segments for a completely new flight, you do not need to indicat
 
 ##### Format Description
 
--  **PlaneFlights** - Similar to the *PlaneFlights* parameter from the [Search response](/avia/request/search).
--  **SimpleGroupedFlights** - Similar to the *SimpleGroupedFlights* parameter from the [Search response](/avia/request/search).
+-  **PlaneFlights** - similar to the *PlaneFlights* parameter from the [Search response](/avia/request/search).
+-  **SimpleGroupedFlights** - similar to the *SimpleGroupedFlights* parameter from the [Search response](/avia/request/search).
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
