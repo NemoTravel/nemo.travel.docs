@@ -11,42 +11,41 @@ Request for additional operations execution before version 1.2.
 
 #### Request
 
--  **ObjectForOperations** - Contains the identifier of the object for which you want to perform additional operations. The array data type. You can specify only one of the nested elements.
--  **ObjectForOperations.FlightID** - The flight ID for which you want to perform additional operations. The data type is an integer 128 bit number.
--  **ObjectForOperations.BookID** - The booking ID for which you want to perform additional operations. The data type is an integer 64-bit number.
--  **Operations** - The list of additional operations that you want to perform. The array data type.
--  **Operations.Operation** - One of the operations that you want to perform. The data type is enumeration. Possible values are:
-	- CheckAvailability - An availability check. It is only for the flight.
-	- GetFareRules - Get tariff rules.
-	- GetSeatMap - Get a map of places.
-	- GetPrice - Get the actual price of the flight. It is only for the flight.
-	- SearchAncillaryServices- Obtaining a list of available services for a flight or booking (only for GDS Sirena and Amadeus).
-	- GetAllowedCCs - Get a list of credit card codes that can be used to pay this booking through GDS processing.
-	- GetAllowedLoyaltyCards - Get information about loyalty cards that can be used on this flight. At the moment there is no support for this operation.
-	- ActualizeFlight - Actualize the flight
-	- GetFareFamilies - Getting a variant of the flight cost estimation from different families
-	- GetSubsidizedTariffs - Getting a list of subsidized fares for a flight
--  **OperationsRestrictions** - An additional information for performing the specified operations (optional). The array data type.
--  **OperationsRestrictions.CheckAvailabilityWithBookingRequest** - Use the request to take places to check the availability of the flight for booking. The data type is boolean.
--  **OperationsRestrictions.PricingInfo** - An additional information about the price component of the flight, for which you need to perform additional operations. The array data type.
--  **OperationsRestrictions.PricingInfo.BookingClassCodes** - The information about the flight classes for which you want to find the price of the flight. The array data type.
--  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment** - The information about the flight class for a particular segment. The array data type.
--  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment.SegmentNumber** - The segment number in the flight. The data type is an integer 32-bit number.
--  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment.BookingClassCode** - The class of the flight class for this segment. The data type is a string.
--  **OperationsRestrictions.PricingInfo.Passengers** - Contains information about passengers for whom you want to find the price of the flight. The array data type.
--  **OperationsRestrictions.PricingInfo.Passengers.Passenger** - Contains information about one of the types of passengers for whom you want to find the price of the flight. The array data type.
--  **OperationsRestrictions.PricingInfo.Passengers.Passenger.Type** - The passenger type. The data type is enumeration.
--  **OperationsRestrictions.PricingInfo.Passengers.Passenger.Count** - The number of passengers of this type. The data type is an integer 32-bit number.
--  **OperationsRestrictions.PricingInfo.CurrencyCode** - ISO Alpha3 is the currency code in which you want to find the price. The data type is a string.
--  **OperationsRestrictions.PricingInfo.PrivateFaresOnly** - A symptom of searching only private tariffs. The data type is boolean.
--  **OperationsRestrictions.PricingInfo.ValidatingCompany** - IATA code of the VI, the prices of which are of interest. The data type is a string.
--  **OperationsRestrictions.PricingInfo.IgnoreRepricingSettings** - Allows you to ignore the refresh settings. The data type is bool.
--  **OperationsRestrictions.PricingInfo.PriceSpecifiedPassTypesOnly** - When re-selling, use only specific passenger type codes, if possible. The data type is bool.
--  **OperationsRestrictions.PricingInfo.ThreeDomainAgreementNumber** — 3D Flow corporate number. The data type is a string.
--  **OperationsRestrictions.UpdateCachedFareRules** - Update cached in the booking fare rules. The data type is bool.
--  **OperationsRestrictions.ListFaresIfNoFamiliesDifined** - Enables refund of the fare list from GDS in case they do not have a reference to the fare families. The data type is bool.
+-  **ObjectForOperations** - Contains the ID of the object for which you want to perform additional operations. Data type - array. You can specify only one of the attached elements.
+-  **ObjectForOperations.FlightID** - ID of the flight for which you want to perform additional operations. Data type -128 bit integer.
+-  **ObjectForOperations.BookID** - ID of the booking for which you want to perform additional operations. Data type - 64 bit integer.
+-  **Operations** - list of additional operations that you want to perform. Data type - array.
+-  **Operations.Operation** - one of the operations that you want to perform. Data type - enumeration. Possible values are:
+    - CheckAvailability - Availability check, performed only for the flight.
+    - GetFareRules - Get fare rules.
+    - GetSeatMap - Get seat map.
+    - GetPrice - Get the current price of the flight. Performed only for the flight.
+    - SearchAncillaryServices - Obtaining a list of available ancillary services for a flight or a booking (only for Sirena and Amadeus GDSs).
+    - GetAllowedCCs - Get a list of credit card codes that can be used to pay for this booking through GDS processing.
+    - ActualizeFlight - Actualizing the flight.
+    - GetFareFamilies - Getting a variant of the flight cost estimation from different fare families
+    - GetSubsidizedTariffs - Getting a list of subsidized fares for a flight
+-  **OperationsRestrictions** - additional information for performing the specified operations (optional). Data type - array.
+-  **OperationsRestrictions.CheckAvailabilityWithBookingRequest** - Use the request to take places to check the availability of the flight for booking. Data type - bool.
+-  **OperationsRestrictions.PricingInfo** - additional information about the price component of the flight, for which you need to perform additional operations. Data type - array.
+-  **OperationsRestrictions.PricingInfo.BookingClassCodes** - information about the flight classes for which you want to find the flight price. Data type - array.
+-  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment** - information about the flight class for a particular segment. Data type - array.
+-  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment.SegmentNumber** - segment number in the flight. Data type - 32-bit integer.
+-  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment.BookingClassCode** - flight class letter for this segment. Data type - string.
+-  **OperationsRestrictions.PricingInfo.Passengers** - contains information about passengers for whom you want to find the flight price. Data type - array.
+-  **OperationsRestrictions.PricingInfo.Passengers.Passenger** - contains information about one of the types of passengers for whom you want to find the flight price. Data type - array.
+-  **OperationsRestrictions.PricingInfo.Passengers.Passenger.Type** - passenger type. Data type - enumeration.
+-  **OperationsRestrictions.PricingInfo.Passengers.Passenger.Count** - number of passengers of this type. Data type - 32-bit integer.
+-  **OperationsRestrictions.PricingInfo.CurrencyCode** - ISO Alpha3 currency code in which you want to find the price. Data type - string.
+-  **OperationsRestrictions.PricingInfo.PrivateFaresOnly** - Attribute of searching only private fares. Data type - bool.
+-  **OperationsRestrictions.PricingInfo.ValidatingCompany** - IATA code of the validating carrier, the prices of which are of interest. Data type - string.
+-  **OperationsRestrictions.PricingInfo.IgnoreRepricingSettings** - allows to ignore the repricing settings. Data type - bool.
+-  **OperationsRestrictions.PricingInfo.PriceSpecifiedPassTypesOnly** - allows to use only specific passenger type codes while performing repricing, if possible. Data type - bool.
+-  **OperationsRestrictions.PricingInfo.ThreeDomainAgreementNumber** - corporate client code in the three-party agreement. Data type - string.
+-  **OperationsRestrictions.UpdateCachedFareRules** - update of the fare rules cached in the booking. Data type - bool.
+-  **OperationsRestrictions.ListFaresIfNoFamiliesDifined** - enables the return of the GDS fare list in case they do not have a reference to the fare family. Data type - bool.
 
-##### Example
+##### Sample
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
@@ -75,81 +74,80 @@ Request for additional operations execution before version 1.2.
 
 #### Response
 
-Includes the set of elements caused by operstion in the request:
+Includes the set of elements depending on the operations summonned in the request:
 
--   **ObjectForOperations** — contains the identifier of the object for which you want to perform additional operations. The array data type. It is similar to the corresponding element from the request.
--   **CheckAvailabilityResult** — the result of checking the availability of the flight for booking. The array data type.
--   **CheckAvailabilityResult.IsAvail** — a sign of the availability of the flight for booking. The data type is bool.
--   **CheckAvailabilityResult.SegmentsStatusInfo** — information on the status of segments in the event that the flight is not available for booking and the operation was performed using a request for seats. The data type is a string.
--   **GetFareRulesResult** — result of receiving tariff rules. The array data type.
--   **GetFareRulesResult.Rules** — array of tariff rules applied to this object. The array data type.
--   **GetFareRulesResult.Rules.Rule** — tariff rule. The array data type.
--   **GetFareRulesResult.Rules.Rule.Code** — section code of the tariff rule. The data type is a string.
--   **GetFareRulesResult.Rules.Rule.Tariff** — tariff code to which this rule applies. The data type is a string.
--   **GetFareRulesResult.Rules.Rule.Name** — tariff rule header. The data type is a string.
--   **GetFareRulesResult.Rules.Rule.RuleText** — tariff rule text. The data type is a string.
--   **GetSeatMapResult** — the result is a map of places. The array data type.
--   **GetSeatMapResult.SeatMapSegments** — container for seat maps for each of the segments of the flight. The array data type.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment** — map of places for a particular segment of flight. The array data type. It occurs 1 or more times.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Num** — segment number from flight. The data type is an integer 32-bit number.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors** — container for floors in an aircraft. The array data type.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor** — map of seats for a particular floor in an aircraft. The array data type. It occurs 1 or more times.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.IsUpper** — flag of the top floor in an aircraft. The data type is bool.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows** - container for information on rows of seats on the floor. The array data type.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow** - information about a specific number of places on the floor in an aircraft. The array data type.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Num** — number of the rows of seats in the aircraft. The data type is an integer 32-bit number.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats** — container for information about places. The array data type.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat** — information about a specific place in the airplane. The array data type. It occurs 1 or more times.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Number** — place number. The data type is a string.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Type** — position of the place. The data type is a string. Possible values:
-    -   **W** — near the window;
-    -   **NPW** — Near Passenger Way;
-    -   **M** — place between W and NPW;
-<!--    -   **any type + postfix "NE"** — place does not exist. -->
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Characteristics** — default characteristics of place. The data type is a string.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.IsFree** — a sign that the place is free. The data type is bool.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.NotExists** — a sign that the place does not exist. The data type is bool.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Price** — the price of the site in case it is paid. The data type is - [Money](/avia/common/money).
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.RFISC** — RFISC of the place. The data type is a string.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Characteristics** - characteristics of the row of places. The data type is a string.
--   **GetPriceResult** - the result of getting the actual price of the flight. The array data type.
--   **GetPriceResult.Flight** - flat flight v1.1. The array data type.
--   **FindAdditionalServicesResult** - result of obtaining a list of available additional services. The array data type. 
--   **FindAdditionalServicesResult.Services** - list of available additional services. The data type is array. 
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS** - the additional service. The array data type.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.ID** - additional service ID in the supplier system. The data type is an integer 32-bit number.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Name** - description of additional service (ATPCO commercial name). The data type is a string.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Group** - additional service group. The data type is a string.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SubGroup** - additional service subgroup. The data type is a string. 
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.RFIC** - additional service RFIC. The data type is a string.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.RFISC** - additional service RFISC. The data type is a string.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRCode** - SSR code, which should be added to the PNR in case of booking of this additional service. The data type is a string.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Type** - additional service type (at the moment - specific of Sirena Travel). The data type is a string.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.CompanyCode** - IATA code of the airline providing this additional service. The data type is a string.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Refundability** - service recurrence. The data type is an enumeration.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRDescriptionRequired** - a sign that for the booking of this additional service it is necessary to transfer its description from the user. The data type is bool.
--   **FindAdditionalServicesResult.Services.Prices** - list of prices for admissible additional services. The data type is array.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice**  - price of additional services. The array data type.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value** - price object. The array data type. 
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value.Amount** - amount. Data type - floating double precision.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value.Currency** - currency. The data type is a string.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.ServiceRef** - links to services for which this price is applicable. The data type is array. 
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.ServiceRef.Ref** - service reference. The data type is an integer 32-bit number.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.SegmentRef** - links to the segments to which the service belongs. The data type is array. 
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.SegmentRef.Ref** - segment reference. The data type is an integer 32-bit number.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes** - the types of passengers to which this price applies. The data type is array.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes.PassTypes** - passenger type. The data type is an enumeration.
--   **ActualizedFlight** - contains updated flight. The data type is [Flight](/avia/common/flight).
--   **FlightsByFareFamily** - contains the result of the GetFareFamilies operation. The data type is the array [Flight](/avia/common/flight).
--   **SubsidizedTariffs** - contains the result of the GetSubsidizedTariffs operation. The data type is the array [Flight](/avia/common/flight).
--   **GetAllowedCCsResult** - the result of obtaining a list of card codes for payment of GDS processing. The array data type.
--   **GetAllowedCCsResult.AllowedCCs** - list of codes of acceptable cards for payment of GDS booking by processing. The array data type.
--   **GetAllowedCCsResult.AllowedCCs.Code** - credit card code, which you can pay for the specified booking with the GDS processing. The data type is a string.
--   **GetAllowedLoyaltyCardsResult** - array of tariff rules applied to the given flight. The array data type.
+-   **ObjectForOperations** - contains the ID of the object for which you want to perform additional operations. Data type - array. Similar to the corresponding element from the request.
+-   **CheckAvailabilityResult** - result of checking the availability of the flight for booking. Data type - array.
+-   **CheckAvailabilityResult.IsAvail** - attribute of the availability of the flight for booking. Data type - bool.
+-   **GetFareRulesResult** - result of receiving tariff rules. Data type - array.
+-   **GetFareRulesResult.Rules** - array of fare rules applied to this object. Data type - array.
+-   **GetFareRulesResult.Rules.Rule** - fare rule. Data type - array.
+-   **GetFareRulesResult.Rules.Rule.Code** - section code of the fare rule. Data type - string.
+-   **GetFareRulesResult.Rules.Rule.Tariff** - fare code to which this rule applies. Data type - string.
+-   **GetFareRulesResult.Rules.Rule.Name** - fare rule heading.  Data type - string.
+-   **GetFareRulesResult.Rules.Rule.RuleText** - fare rule text.  Data type - string.
+-   **GetSeatMapResult** - result of obtaining the seat map. Data type - array.
+-   **GetSeatMapResult.SeatMapSegments** - container for seat maps for each of the flight segments. Data type - array.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment** - seat map for a particular flight segment. Data type - array. Occurs 1 or more times.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Num** - segment number from the flight. Data type - 32-bit integer.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors** - container for floors in an aircraft. Data type - array.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor** - seat map for a particular floor in an aircraft. Data type - array. Occurs 1 or more times.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.IsUpper** - attrinute of the top floor in an aircraft. Data type - bool.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows** - container for information on seat rows on the floor. Data type - array. 
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow** - information about a specific number of seats on the floor in an aircraft. Data type - array. 
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Num** - number of the rows of seats in the aircraft. Data type - 32-bit integer.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats** - container for seat information. Data type - array. 
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat** - information about a specific seat in the aircraft. Data type - array. Occurs 1 or more times.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Number** - place number. Data type - string.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Type** - seat position. Data type - string. Possible values:
+    -   **W** - near the window;
+    -   **NPW** - Near Passenger Way;
+    -   **M** - seat between W and NPW;
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Characteristics** - seat’s default characteristics. Data type - string.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.IsFree** - attribute of the seat being free. Data type - bool.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.NotExists** - attribute of the place not existing. Data type - bool.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Price** - price of the site in case it is paid. Data type - [Money](/avia/common/money).
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.RFISC** - RFISC of the seat. Data type - string.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Characteristics** - characteristics of the row of places. Data type - string.
+-   **GetPriceResult** - result of getting the current flight price. Data type - array.
+-   **GetPriceResult.Flight** - flat flight v1.1. Data type - array.
+-   **FindAdditionalServicesResult** - result of obtaining a list of available additional services. Data type - array.
+-   **FindAdditionalServicesResult.Services** - list of available additional services. Data type - array.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS** - ancillary service. Data type - array.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.ID** - ancillary service ID in the supplier system. Data type - 32-bit integer.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Name** - ancillary service description (ATPCO commercial name). Data type - string.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Group** - ancillary service group. Data type - string.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SubGroup** - ancillary service subgroup. Data type - string.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.RFIC** - ancillary service RFIC. Data type - string.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.RFISC** - ancillary service RFISC. Data type - string.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRCode** - SSR code which should be added to the PNR in case of this ancillary service booking . Data type - string.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Type** - ancillary service type (at the moment - specific for Sirena Travel). Data type - string.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.CompanyCode** - IATA code of the airline providing this additional service. Data type - string.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Refundability** - service refundability. Data type - enumeration.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRDescriptionRequired** - attribute of the necessity to transfer the description from the user in order to book this ancillary service. Data type - bool.
+-   **FindAdditionalServicesResult.Services.Prices** - list of prices for available ancillary services. Data type - array.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice**  - ancillary services price. Data type - array.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value** - price object. Data type - array.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value.Amount** - the sum. Data type - floating with double precision.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value.Currency** - currency. Data type - string.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.ServiceRef** - references to services for which this price is applicable. Data type - array.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.ServiceRef.Ref** - reference to a service. Data type - 32-bit integer.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.SegmentRef** - references to the segments to which the service belongs. Data type - array.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.SegmentRef.Ref** - segment reference. Data type - 32-bit integer.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes** - passenger typess to which this price is applied. Data type - array.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes.PassTypes** - passenger type. Data type - enumeration.
+-   **ActualizedFlight** - contains the actualized flight. Data type - [Flight](/avia/common/flight).
+-   **FlightsByFareFamily** - contains the result of the GetFareFamilies operation. Data type - [Flight](/avia/common/flight) array.
+-   **SubsidizedTariffs** - contains the result of the GetSubsidizedTariffs operation. Data type - [Flight](/avia/common/flight) array.
+-   **GetAllowedCCsResult** - result of obtaining a list of card codes for payment via the GDS processing. Data type - array.
+-   **GetAllowedCCsResult.AllowedCCs** - list of codes of acceptable cards for payment of GDS booking by processing. Data type - array.
+-   **GetAllowedCCsResult.AllowedCCs.Code** - code of the credit card by which you can pay for the specified booking via the GDS processing. Data type - string.
+-   **GetAllowedLoyaltyCardsResult** - array of fare rules applied to the given flight. Data type - array.
 
->>>> The flight with the new ID will be received as a result of the request, this ID should be used in further operations, for example, in the booking.
+>>>> As a result of the request, the flight with the new ID will be received. Only this ID should be used in further operations, for example, in the booking.
 
-##### Example
+
+##### Sample
 ```xml
 <?xml version="1.0"?>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
