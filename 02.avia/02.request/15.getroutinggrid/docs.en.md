@@ -13,12 +13,12 @@ Get airline's routing grid.
 
 ##### Format Description
 
--   **SourceID** —the identifier of the package for which the routing grid will be searched. The data type is an integer 32-bit number.
--   **AirlineCode** — the airline code for which the routing grid will be searched. The data type is a string.
--   **DepthLimit** — limiting the length of the route at constructing a routing grid (with a value of zero or one, the construction will not be performed - the route grid from the vendor will be displayed). The data type is an integer 32-bit number.
--   **AllowAirportChange** — allow airport change (change) at the point of the route. The data type is boolean. Optional. Default value: <code>false</code>.
+-   **SourceID** - ID of the package for which the routing grid will be searched. Data type - 32-bit integer.
+-   **AirlineCode** - airline code for which the routing grid will be searched. Data type - string.
+-   **DepthLimit** - limiting the length of the route at constructing a routing grid (with a value of zero or one, the construction will not be performed - the route grid from the vendor will be displayed). Data type - 32-bit integer.
+-   **AllowAirportChange** - allow airport change (transfer) at the point of the route. Data type - bool. Optional. Default value: <code>false</code>.
 
-##### Examples
+##### Samples
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -47,19 +47,19 @@ Get airline's routing grid.
 ##### Format Description
 
 
--   **RoutingGrid** — the list of elements with information about the routes. The array data type.
--   **RoutingGrid.Routes** — the list of routes. Data type - array.
--   **RoutingGrid.Routes.Departure** — the point of departure. The array data type.
--   **RoutingGrid.Routes.Departure.Code** — the airport code of departure point. Data type - string.
--   **RoutingGrid.Routes.Departure.CityCode** — the city code of the point of departure. Data type - string.
--   **RoutingGrid.Routes.Arrival** — the list of  arrival points. Data type - array.
--   **RoutingGrid.Routes.Arrival.Route** — the arrival point of the route. The array data type.
--   **RoutingGrid.Routes.Arrival.IsDirect** — a sign of a direct route. The data type is Boolean.
--   **RoutingGrid.Routes.Arrival.ArrPoint** — the arrival point of the route. The array data type.
--   **RoutingGrid.Routes.Arrival.ArrPoint.Code** — the airport code of the arrival point. Data type - string.
--   **RoutingGrid.Routes.Arrival.ArrPoint.CityCode** —the city code of the arrival point. Data type - string.
+-   **RoutingGrid** - list of elements with information about the routes. Data type - array.
+-   **RoutingGrid.Routes** - list of routes. Data type - array.
+-   **RoutingGrid.Routes.Departure** - point of departure. Data type - array.
+-   **RoutingGrid.Routes.Departure.Code** - airport code of departure point. Data type - string.
+-   **RoutingGrid.Routes.Departure.CityCode** - city code of the departure point. Data type - string.
+-   **RoutingGrid.Routes.Arrival** - list of arrival points. Data type - array.
+-   **RoutingGrid.Routes.Arrival.Route** - arrival point of the route. Data type - array.
+-   **RoutingGrid.Routes.Arrival.IsDirect** - attribute of a direct route. Data type - bool.
+-   **RoutingGrid.Routes.Arrival.ArrPoint** - arrival point of the route. The array data type.
+-   **RoutingGrid.Routes.Arrival.ArrPoint.Code** - arrival point airport code. Data type - string.
+-   **RoutingGrid.Routes.Arrival.ArrPoint.CityCode** - arrival point city code. Data type - string.
 
-##### Examples
+##### Samples
 ```xml
 <?xml version="1.0"?>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
