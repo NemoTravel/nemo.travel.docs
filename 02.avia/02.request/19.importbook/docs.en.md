@@ -16,16 +16,16 @@ The latest request version, the differences are only in the response in the anci
 
 ##### Format Description
 
-- **Source** - The source ID in which the PNR is located, on the basis of which it is required to create the booking. The data type is an integer 32-bit number:
-- **PNRCode** - The ID of the PNR in the GDS. The data type is a string.
-- **MainPassengerLastName** - The last name of the main passenger in the PNR, mandatory parameter in case of working with the GDS Siren. The data type is a string.
-- **WithReprice** - A sign of the need to actualize the booking price after the creation. The data type is a Boolean value.
-- **ValidatingCompany** - The validating company of the booking, needed to the correctly booking import in case of situations when different requisites are used in a package for the different airlines. The data type is a string.
-- **UseFlexFares** - A sign of using flex fare families while the booking import (specificity of SITA Gabriel) The data type is a boolean value.
-- **SourceDescription.Supplier** - Supplier. The data type is enumeration with air suppliers.
-- **SourceDescription.SupplierRequisiteID** - Booking ID package for the specified supplier, e.g. PCC. The data type is a non-negative integer 32-bit number.
+- **Source** -  ID of the source in which the PNR is located, on the basis of which it is required to create the booking. Data type - 32-bit integer:
+- **PNRCode** - ID of the PNR in the GDS. Data type - string.
+- **MainPassengerLastName** - last name of the main passenger in the PNR, required parameter while of working with the GDS Sirena. Data type - string.
+- **WithReprice** - attribute of the need to actualize the booking price after its creation. Data type - bool.
+- **ValidatingCompany** - validating company of the booking, needed to the correct booking import in case of situations when different requisites are used in a package for the different airlines. Data type - string.
+- **UseFlexFares** - attribute of using flex fare families while importing the booking (specific feature of SITA Gabriel) Data type - bool.
+- **SourceDescription.Supplier** - supplier. Data type - enumeration with air suppliers.
+- **SourceDescription.SupplierRequisiteID** - booking package ID for the specified supplier, e.g. PCC. Data type - non-negative 32-bit integer.
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -50,9 +50,9 @@ The latest request version, the differences are only in the response in the anci
 ```
 #### Response
 
-Similarly for the booking format of the [Book](/avia/common/book).
+Similar to the booking format of the [Book](/avia/common/book).
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
