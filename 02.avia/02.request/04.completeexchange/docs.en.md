@@ -16,9 +16,9 @@ The latest request version, the differences are only in the response in the anci
 
 ##### Format Description
 
--  **BookID** - Booking ID for which you want to complete the exchange. The data type is an integer 64-bit number.
+-  **BookID** - ID of the booking for which you want to complete the exchange. Data type - 64-bit integer.
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -45,7 +45,7 @@ The latest request version, the differences are only in the response in the anci
 
 The booking is in the response, i.e. the response is similar to the response to [BookFlight\_2\_0](/avia/request/bookflight) request.
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
