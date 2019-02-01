@@ -7,17 +7,17 @@ taxonomy:
 
 ### Running the Terminal Command (HostCommand)
 
-Used to execute the terminal command in the GDS.
+Used to execute a terminal command in the GDS.
 
 #### Request
 
 ##### Format Description
 
--  **Source** - The ID of the package of requisites (source) under which you want to execute the command. The data type is an integer 32-bit number.
--  **SessionID** - The session ID, within which the command will be executed. The data type is a string.
--  **Command** - The execute command. The data type is a string.
+-  **Source** - ID of the package of requisites (source) under which you want to execute the command. Data type - 32-bit integer.
+-  **SessionID** - ID of the session within which the command is to be executed. Data type - string.
+-  **Command** - executed command. Data type - string.
 
-##### Example
+##### Sample
 
 ```xml
 <Source>1</Source>
@@ -29,9 +29,9 @@ Used to execute the terminal command in the GDS.
 
 ##### Format Description
 
--  **Response** - The result of the terminal command execution. The data type is a string.
+-  **Response** - result of the terminal command execution. Data type - string.
 
-##### Example
+##### Sample
 
 ```xml
 <Response> FAAAA </ Response>
