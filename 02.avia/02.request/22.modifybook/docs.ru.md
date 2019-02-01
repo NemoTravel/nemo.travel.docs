@@ -395,6 +395,20 @@ taxonomy:
                 <a:EmailID>EMAIL@EMAIL.COM</a:EmailID>
               </a:ContactInfo>
             </a:DataItem>
+            <a:DataItem>
+        	 <ID>7</ID>
+             <TravellerRef>
+                 <Ref>1</Ref>
+             </TravellerRef>
+             <Type>LoyaltyCard</Type>
+             <LoyaltyCard>
+               <OwnerType>Airline</OwnerType>
+               <Owner>SU</Owner>
+               <Number>111458666</Number>
+               <Status>Confirmed</Status>
+               <StatusCode>HK</StatusCode>
+             </LoyaltyCard>
+            </a:DataItem>
           </a:DataItems>
         </a:ResponseBody>
       </ModifyBook_2_0Result>
