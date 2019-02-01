@@ -404,7 +404,7 @@ taxonomy:
              <a:LoyaltyCard>
                <a:OwnerType>Airline</a:OwnerType>
                <a:Owner>SU</a:Owner>
-               <a:Number>111458666</a:Number>
+               <a:Number>111111111</a:Number>
                <a:Status>Confirmed</a:Status>
                <a:StatusCode>HK</a:StatusCode>
              </a:LoyaltyCard>
