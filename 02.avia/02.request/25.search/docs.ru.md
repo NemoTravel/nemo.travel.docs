@@ -260,6 +260,7 @@ taxonomy:
                   </BookingClass>
                   <ETicket>true</ETicket>
                   <RequestedSegment>0</RequestedSegment>
+ 				<a:NotAirplaneSegmentInd>false</a:NotAirplaneSegmentInd>
                 </Segment>
               </Segments>
               <PriceInfo>
