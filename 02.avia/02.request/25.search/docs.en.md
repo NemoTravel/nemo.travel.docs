@@ -31,18 +31,17 @@ Search for v 1.2
 -  **Passengers** - an array of information about passengers for whom you want to find a flight. The data type is an array.
 -  **Passengers.Passenger** - the information about the type of passengers for whom you want to find a flight. The array data type.
 -  **Passengers.Passenger.Type** - the type of passengers for which you want to find a flight. Data type - enumeration, possible values:
-    
-    - ADT - adult - a passenger over 12 years (default)
-	- UNN - child - a passenger older than 2 and under 12 years of age - unaccompanied by an adult
-	- CNN - child - a passenger over 2 and under 12 years of age
-	- INF - infant - a passenger under 2 years old - not occupying seats in the airplane
-	- INS - infant - a passenger under 2 years old - occupying seats in the airplane
+    - ADT - adult - passenger over 12 years (default)
+	- UNN - child - passenger older than 2 and under 12 years of age - unaccompanied by an adult
+	- CNN - child - passenger over 2 and under 12 years of age
+	- INF - infant -  passenger under 2 years old - not occupying seats in the airplane
+	- INS - infant - passenger under 2 years old - occupying seats in the airplane
 	- MIL - military
-	- SEA - a seaman
-	- SRC - an elderly passenger
-	- STU - a student
+	- SEA - seaman
+	- SRC - elderly passenger
+	- STU - student
 	- YTH - youth
--  **Passengers.Passenger.Count** - the number of passengers of this type for which you want to find a flight. The data type is an integer 32-bit number. It can not be less than 1.
+-  **Passengers.Passenger.Count** - number of passengers of this type for which you want to find a flight. The data type is an integer 32-bit number. It can not be less than 1.
 -  **Restrictions** - contains various restrictions applied to search results (optional). The array data type.
 -  **Restrictions.CurrencyCode** - a 3-letter code for the currency of the search results output. Data type - string. Parameter is no longer supported.
 -  **Restrictions.CompanyFilter** - an array of filters for an airline. The data type is an array.
@@ -78,7 +77,7 @@ Search for v 1.2
 -  **EndUserData** - End user data (optional). The array data type, the format is similar to the element * EndUserData * from the [DataItem](/avia/common/dataitem)
 -  **SellingPointDescription** - The description of the point of sale (optional). The array data type, the format is similar to the element **SellingPointDescription** from [DataItem](/avia/common/dataitem)
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -143,27 +142,27 @@ Search for v 1.2
 
 #### Response
 
--  **SearchData** - The search data. The array data type.
--  **SearchData.StartTime** - the date and time the search began on the server. The data type is DateTime.
--  **SearchData.EndTime** - the end date and time of the search on the server. The data type is DateTime.
--  **SearchData.IsAsync** - an attribute of asynchronous search. The data type is bool.
--  **SearchData.Sources** - the  about the sources (packages), where the results were obtained. The data type is an array.
--  **SearchData.Sources.SourceInfo** - a description of the source from which the results were obtained. The array data type.
--  **SearchData.Sources.SourceInfo.ID** - the source ID, where the results were obtained. The data type is int64.
--  **SearchData.Sources.SourceInfo.Supplier** - a suoolkier from this source. The data type is an enumeration with air carriers.
--  **SearchData.SearchThreads** - The data about search threads with requests to suppliers. The data type is an array.
--  **SearchData.SearchThreads.SearchThreadInfo** - The data about one of the search threads. The array data type.
+-  **SearchData** - search data. Data type - array.
+-  **SearchData.StartTime** - date and time of the search beginning on the server. Data type - string, the format is <code>yyyy-mm-dd hh:mm:ss ±hh:mm</code>.
+-  **SearchData.EndTime** - date and time of the search end on the server. Data type - string, the format is <code>yyyy-mm-dd hh:mm:ss ±hh:mm</code>.
+-  **SearchData.IsAsync** - attribute of asynchronous search. Data type - bool.
+-  **SearchData.Sources** -  data on the sources (packages), where the results were obtained. Data type - array.
+-  **SearchData.Sources.SourceInfo** - description of the source from which the results were obtained. Data type - array.
+-  **SearchData.Sources.SourceInfo.ID** - ID of the source where the results were obtained. Data type - int64.
+-  **SearchData.Sources.SourceInfo.Supplier** - provider of this search. Data type - enumeration with air providers.
+-  **SearchData.SearchThreads** - data about search threads with requests to providers. Data type - array.
+-  **SearchData.SearchThreads.SearchThreadInfo** - data about one of the search thread. Data type - array.
 -  **SearchThreadInfo.SourceID** - The ID, in which the search thread was launched. The data type is int64.
--  **SearchThreadInfo.IsComplete** - a sign that the thread has completed its work. The data type is bool.
--  **SearchThreadInfo.StartTime** - The date and time of the thread start. The data type is DateTime.
--  **SearchThreadInfo.Duration** - the duration of the flow. The data type is Time.
--  **SearchThreadInfo.FromCache** - a sign that the results for this thread are taken from the cache. The data type is bool.
--  **SearchThreadInfo.OriginalSearchID** - The ID of the original search, within which results were received from the vendor. The data type is int64.
--  **PlaneFlights** - Contains search output (Flight elements) in the Search v1.1 format. The data type is an array of elements [Flight](/avia/common/flight).
--  **SimpleGroupedFlights** - Contains search output in the format [GroupSearch](/avia/grouping). The array data type.
--  **Subsidies Information** - The information on subsidies. If the fare is subsidized in the flight, then it will have a link to the element in this array. The data type is the same as ***SubsidiesInformation*** in the object [SubsidiesInformation](/avia/common/subsidiesinformation).
+-  **SearchThreadInfo.IsComplete** - attribute showing that the thread has completed its work. Data type - bool.
+-  **SearchThreadInfo.StartTime** - date and time of the thread. Data type - string, the format is <code>yyyy-mm-dd hh:mm:ss ±hh:mm</code>.
+-  **SearchThreadInfo.Duration** - duration of the flow. Data type - string, the format is <code>h:mm:ss</code>.
+-  **SearchThreadInfo.FromCache** - attribute showing that the results for this thread are taken from the cache. Data type - bool.
+-  **SearchThreadInfo.OriginalSearchID** - ID of the original search within which results were received from the provider. Data type - int64.
+-  **PlaneFlights** - contains search output. Data type - array of [Flight](/avia/common/flight) elements .
+-  **SimpleGroupedFlights** - Contains search output in the format [GroupSearch](/avia/grouping). Data type - array.
+-  **SubsidiesInformation** - Subsidies information. If the flight fare is subsidized, then it will have a reference to the element in this array. Data type - same as ***SubsidiesInformation*** in the [SubsidiesInformation](/avia/common/subsidiesinformation) object.
 
-##### Example
+##### Sample
 ```xml
 <?xml version="1.0"?>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
