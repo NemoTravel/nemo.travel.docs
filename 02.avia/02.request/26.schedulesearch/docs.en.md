@@ -19,7 +19,7 @@ taxonomy:
 - ** RequestedFlightInfo.ODPair.MaxDepatureTime ** - maximum-allowed departure time. Data type - string, the format is <code>hh:mm</code>.
 - ** RequestedFlightInfo.ODPair.DepaturePoint ** - contains information about the origin point. Data type - array.
 - ** RequestedFlightInfo.ODPair.DepaturePoint.Code ** - 3 letter code of the airport/city of departure. Data type - string.
-- ** RequestedFlightInfo.ODPair.DepaturePoint.IsCity ** - attribute showing that code of the city which is the airport aggregator is indicated as the departure point. Data type - bool.
+- ** RequestedFlightInfo.ODPair.DepaturePoint.IsCity ** - attribute showing that code of the city, which is the airport aggregator, is indicated as the departure point. Data type - bool.
 - ** RequestedFlightInfo.ODPair.ArrivalPoint ** - contains information about the arrival point. Data type - array. The format is similar to the * DepaturePoint * element.
 - ** Restrictions ** - similar to the * Restrictions * parameter from the  [Search\_1\_2](/avia/request/search) (optional).
 - ** EndUserData ** - end user data. Data type - array, the format is similar to the * EndUserData * element from the [DataItem](/avia/common/dataitem) (optional).
@@ -70,10 +70,10 @@ taxonomy:
 
 - ** Flights ** - container for the search results. Data type - array.
 - ** Flights.ScheduleFlight ** - found flight in the schedule. Data type - array. The format is similar to the **Flight** element from the [Search\_1\_2](/avia/request/search), but instead of the Segments property, the ScheduleSegments property, described below, is used.
-- ** ScheduleFlight.ScheduleSegments ** - An array of ScheduleSegment elements. Data type - array.
+- ** ScheduleFlight.ScheduleSegments ** - array of ScheduleSegment elements. Data type - array.
 - ** ScheduleSegment ** - information about the flight segment. Data type - array.
 - ** ScheduleSegment.ID ** - sequence number of this segment of the flight. Data type - 32-bit integer.
-- ** ScheduleSegment.DepAirp ** - The information about the departure airport for this segment. Data type - array.
+- ** ScheduleSegment.DepAirp ** - information about the departure airport for this segment. Data type - array.
 - ** ScheduleSegment.DepAirp.AirportCode ** - airport code. Data type - string.
 - ** ScheduleSegment.DepAirp.CityCode ** - city code (aggregation code). Data type - string.
 - ** ScheduleSegment.DepAirp.UTC ** - time zone of the airport. Data type - string.
