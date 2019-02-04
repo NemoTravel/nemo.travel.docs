@@ -1,5 +1,5 @@
 ---
-title: ' AdditionalOperations'
+title: AdditionalOperations
 taxonomy:
     category:
         - docs
@@ -7,45 +7,46 @@ taxonomy:
 
 ### AdditionalOperations_1_2
 
-Request for additional operations execution before version 1.2.
+Запрос выполнения дополнительных операций версии 1.2.
 
-#### Request
+#### Запрос
 
--  **ObjectForOperations** - Contains the ID of the object for which you want to perform additional operations. Data type - array. You can specify only one of the attached elements.
--  **ObjectForOperations.FlightID** - ID of the flight for which you want to perform additional operations. Data type -128 bit integer.
--  **ObjectForOperations.BookID** - ID of the booking for which you want to perform additional operations. Data type - 64 bit integer.
--  **Operations** - list of additional operations that you want to perform. Data type - array.
--  **Operations.Operation** - one of the operations that you want to perform. Data type - enumeration. Possible values are:
-    - CheckAvailability - Availability check, performed only for the flight.
-    - GetFareRules - Get fare rules.
-    - GetSeatMap - Get seat map.
-    - GetPrice - Get the current price of the flight. Performed only for the flight.
-    - SearchAncillaryServices - Obtaining a list of available ancillary services for a flight or a booking (only for Sirena and Amadeus GDSs).
-    - GetAllowedCCs - Get a list of credit card codes that can be used to pay for this booking through GDS processing.
-    - ActualizeFlight - Actualizing the flight.
-    - GetFareFamilies - Getting a variant of the flight cost estimation from different fare families
-    - GetSubsidizedTariffs - Getting a list of subsidized fares for a flight
--  **OperationsRestrictions** - additional information for performing the specified operations (optional). Data type - array.
--  **OperationsRestrictions.CheckAvailabilityWithBookingRequest** - Use the request to take places to check the availability of the flight for booking. Data type - bool.
--  **OperationsRestrictions.PricingInfo** - additional information about the price component of the flight, for which you need to perform additional operations. Data type - array.
--  **OperationsRestrictions.PricingInfo.BookingClassCodes** - information about the flight classes for which you want to find the flight price. Data type - array.
--  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment** - information about the flight class for a particular segment. Data type - array.
--  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment.SegmentNumber** - segment number in the flight. Data type - 32-bit integer.
--  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment.BookingClassCode** - flight class letter for this segment. Data type - string.
--  **OperationsRestrictions.PricingInfo.Passengers** - contains information about passengers for whom you want to find the flight price. Data type - array.
--  **OperationsRestrictions.PricingInfo.Passengers.Passenger** - contains information about one of the types of passengers for whom you want to find the flight price. Data type - array.
--  **OperationsRestrictions.PricingInfo.Passengers.Passenger.Type** - passenger type. Data type - enumeration.
--  **OperationsRestrictions.PricingInfo.Passengers.Passenger.Count** - number of passengers of this type. Data type - 32-bit integer.
--  **OperationsRestrictions.PricingInfo.CurrencyCode** - ISO Alpha3 currency code in which you want to find the price. Data type - string.
--  **OperationsRestrictions.PricingInfo.PrivateFaresOnly** - Attribute of searching only private fares. Data type - bool.
--  **OperationsRestrictions.PricingInfo.ValidatingCompany** - IATA code of the validating carrier, the prices of which are of interest. Data type - string.
--  **OperationsRestrictions.PricingInfo.IgnoreRepricingSettings** - allows to ignore the repricing settings. Data type - bool.
--  **OperationsRestrictions.PricingInfo.PriceSpecifiedPassTypesOnly** - allows to use only specific passenger type codes while performing repricing, if possible. Data type - bool.
--  **OperationsRestrictions.PricingInfo.ThreeDomainAgreementNumber** - corporate client code in the three-party agreement. Data type - string.
--  **OperationsRestrictions.UpdateCachedFareRules** - update of the fare rules cached in the booking. Data type - bool.
--  **OperationsRestrictions.ListFaresIfNoFamiliesDifined** - enables the return of the GDS fare list in case they do not have a reference to the fare family. Data type - bool.
+-   **ObjectForOperations** — содержит идентификатор объекта, для которого требуется выполнить дополнительные операции. Тип данных — массив. Можно указывать только один из вложенных элементов.
+-   **ObjectForOperations.FlightID** — идентификатор перелёта, для которого требуется выполнить дополнительные операции. Тип данных — целое 128-битное число.
+-   **ObjectForOperations.BookID** — идентификатор брони, для которого требуется выполнить дополнительные операции. Тип данных — целое 64-битное число.
+-   **Operations** — список дополнительных операций, которые требуется выполнить. Тип данных — массив.
+-   **Operations.Operation** — одна из операций, которые требуется выполнить. Тип данных — перечисление. Возможные значения:
+    -   **CheckAvailability** — проверка доступности, выполняется только для перелёта;
+    -   **GetFareRules** — получение тарифных правил;
+    -   **GetSeatMap** — получение карты мест;
+    -   **GetPrice** — получение актуальной цены перелёта, выполняется только для перелёта;
+    -   **SearchAncillaryServices** — получение списка доступных дополнительных услуг для перелета или брони (реализован только для ГРС Sirena и Amadeus);
+    -   **GetAllowedCCs** — получение списка кодов кредитных карт, которыми можно оплатить данную бронь через GDS-процессинг;
+<!--    -   **GetAllowedLoyaltyCards** — получение информации о карточках лояльности, которые можно использовать на данном перелёте. На данный момент поддержки данной операции нет; -->
+    -   **ActualizeFlight** — актуализация перелёта;
+    -   **GetFareFamilies** — получение варианта оценки перелёта тарифами из разных семейств;
+    -   **GetSubsidizedTariffs** — получение списка субсидированных тарифов для перелёта.
+-   **OperationsRestrictions** — дополнительная информация для выполнения указанных операций (необязательный). Тип данных — массив.
+-   **OperationsRestrictions.CheckAvailabilityWithBookingRequest** — использовать запрос взятия мест для проверки доступности перелёта для бронирования. Тип данных — булевский.
+-   **OperationsRestrictions.PricingInfo** — дополнительная информация о ценовой составляющей перелёта, для которого требуется выполнить дополнительные операции. Тип данных — массив.
+-   **OperationsRestrictions.PricingInfo.BookingClassCodes** — информация о классах перелёта, для которых требуется найти цену перелёта. Тип данных — массив.
+-   **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment** — информация о классе перелёта для конкретного сегмента. Тип данных — массив.
+-   **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment.SegmentNumber** — номер сегмента в перелёте. Тип данных — целое 32-битное число.
+-   **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment.BookingClassCode** — литера класса перелёта для данного сегмента. Тип данных — строка.
+-   **OperationsRestrictions.PricingInfo.Passengers** — содержит информацию о пассажирах, для которых требуется найти цену перелёта. Тип данных — массив.
+-   **OperationsRestrictions.PricingInfo.Passengers.Passenger** — содержит информацию об одном из типов пассажиров, для которых требуется найти цену перелёта. Тип данных — массив.
+-   **OperationsRestrictions.PricingInfo.Passengers.Passenger.Type** — тип пассажира. Тип данных — перечисление.
+-   **OperationsRestrictions.PricingInfo.Passengers.Passenger.Count** — количество пассажиров данного типа. Тип данных — целое 32-битное число.
+-   **OperationsRestrictions.PricingInfo.CurrencyCode** — ISO Alpha3 код валюты, в которой требуется найти цену. Тип данных — строка.
+-   **OperationsRestrictions.PricingInfo.PrivateFaresOnly** — признак поиска только приватных тарифов. Тип данных — булевский.
+-   **OperationsRestrictions.PricingInfo.ValidatingCompany** — IATA-код валидирующего перевозчика, цены которого интересуют. Тип данных — строка.
+-   **OperationsRestrictions.PricingInfo.IgnoreRepricingSettings** — позволяет игнорировать настройки репрайсинга. Тип данных — булевский.
+-   **OperationsRestrictions.PricingInfo.PriceSpecifiedPassTypesOnly** — при репрайсинге использовать только конкретные коды типов пассажиров, по возможности. Тип данных — булевский.
+-   **OperationsRestrictions.PricingInfo.ThreeDomainAgreementNumber** — код корпоративного клиента в трехстороннем договоре. Тип данных — строка.
+-   **OperationsRestrictions.UpdateCachedFareRules** — обновление закэшированных в брони тарифных правил. Тип данных — булевский.
+-   **OperationsRestrictions.ListFaresIfNoFamiliesDifined** — включает возврат списка тарифов от GDS в случае если у них нет отсылки к семейству. Тип данных — булевский.
 
-##### Sample
+##### Пример
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
@@ -72,82 +73,84 @@ Request for additional operations execution before version 1.2.
 </SOAP-ENV:Envelope>
 ```
 
-#### Response
+#### Ответ
 
-Includes the set of elements depending on the operations summonned in the request:
+Включает в себя набор элементов в зависимости от вызванных операций в запросе:
 
--   **ObjectForOperations** - contains the ID of the object for which you want to perform additional operations. Data type - array. Similar to the corresponding element from the request.
--   **CheckAvailabilityResult** - result of checking the availability of the flight for booking. Data type - array.
--   **CheckAvailabilityResult.IsAvail** - attribute of the availability of the flight for booking. Data type - bool.
--   **GetFareRulesResult** - result of receiving tariff rules. Data type - array.
--   **GetFareRulesResult.Rules** - array of fare rules applied to this object. Data type - array.
--   **GetFareRulesResult.Rules.Rule** - fare rule. Data type - array.
--   **GetFareRulesResult.Rules.Rule.Code** - section code of the fare rule. Data type - string.
--   **GetFareRulesResult.Rules.Rule.Tariff** - fare code to which this rule applies. Data type - string.
--   **GetFareRulesResult.Rules.Rule.Name** - fare rule heading.  Data type - string.
--   **GetFareRulesResult.Rules.Rule.RuleText** - fare rule text.  Data type - string.
--   **GetSeatMapResult** - result of obtaining the seat map. Data type - array.
--   **GetSeatMapResult.SeatMapSegments** - container for seat maps for each of the flight segments. Data type - array.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment** - seat map for a particular flight segment. Data type - array. Occurs 1 or more times.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Num** - segment number from the flight. Data type - 32-bit integer.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors** - container for floors in an aircraft. Data type - array.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor** - seat map for a particular floor in an aircraft. Data type - array. Occurs 1 or more times.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.IsUpper** - attrinute of the top floor in an aircraft. Data type - bool.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows** - container for information on seat rows on the floor. Data type - array. 
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow** - information about a specific number of seats on the floor in an aircraft. Data type - array. 
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Num** - number of the rows of seats in the aircraft. Data type - 32-bit integer.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats** - container for seat information. Data type - array. 
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat** - information about a specific seat in the aircraft. Data type - array. Occurs 1 or more times.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Number** - place number. Data type - string.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Type** - seat position. Data type - string. Possible values:
-    -   **W** - near the window;
-    -   **NPW** - Near Passenger Way;
-    -   **M** - seat between W and NPW;
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Characteristics** - seat’s default characteristics. Data type - string.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.IsFree** - attribute of the seat being free. Data type - bool.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.NotExists** - attribute of the place not existing. Data type - bool.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Price** - price of the site in case it is paid. Data type - [Money](/avia/common/money).
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.RFISC** - RFISC of the seat. Data type - string.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Characteristics** - characteristics of the row of places. Data type - string.
--   **GetPriceResult** - result of getting the current flight price. Data type - array.
--   **GetPriceResult.Flight** - flat flight v1.1. Data type - array.
--   **FindAdditionalServicesResult** - result of obtaining a list of available additional services. Data type - array.
--   **FindAdditionalServicesResult.Services** - list of available additional services. Data type - array.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS** - ancillary service. Data type - array.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.ID** - ancillary service ID in the supplier system. Data type - 32-bit integer.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Name** - ancillary service description (ATPCO commercial name). Data type - string.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Group** - ancillary service group. Data type - string.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SubGroup** - ancillary service subgroup. Data type - string.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.RFIC** - ancillary service RFIC. Data type - string.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.RFISC** - ancillary service RFISC. Data type - string.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRCode** - SSR code which should be added to the PNR in case of this ancillary service booking . Data type - string.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Type** - ancillary service type (at the moment - specific for Sirena Travel). Data type - string.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.CompanyCode** - IATA code of the airline providing this additional service. Data type - string.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Refundability** - service refundability. Data type - enumeration.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRDescriptionRequired** - attribute of the necessity to transfer the description from the user in order to book this ancillary service. Data type - bool.
--   **FindAdditionalServicesResult.Services.Prices** - list of prices for available ancillary services. Data type - array.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice**  - ancillary services price. Data type - array.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value** - price object. Data type - array.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value.Amount** - the sum. Data type - floating with double precision.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value.Currency** - currency. Data type - string.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.ServiceRef** - references to services for which this price is applicable. Data type - array.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.ServiceRef.Ref** - reference to a service. Data type - 32-bit integer.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.SegmentRef** - references to the segments to which the service belongs. Data type - array.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.SegmentRef.Ref** - segment reference. Data type - 32-bit integer.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes** - passenger typess to which this price is applied. Data type - array.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes.PassTypes** - passenger type. Data type - enumeration.
--   **ActualizedFlight** - contains the actualized flight. Data type - [Flight](/avia/common/flight).
--   **FlightsByFareFamily** - contains the result of the GetFareFamilies operation. Data type - [Flight](/avia/common/flight) array.
--   **SubsidizedTariffs** - contains the result of the GetSubsidizedTariffs operation. Data type - [Flight](/avia/common/flight) array.
--   **GetAllowedCCsResult** - result of obtaining a list of card codes for payment via the GDS processing. Data type - array.
--   **GetAllowedCCsResult.AllowedCCs** - list of codes of acceptable cards for payment of GDS booking by processing. Data type - array.
--   **GetAllowedCCsResult.AllowedCCs.Code** - code of the credit card by which you can pay for the specified booking via the GDS processing. Data type - string.
--   **GetAllowedLoyaltyCardsResult** - array of fare rules applied to the given flight. Data type - array.
+-   **ObjectForOperations** - содержит идентификатор объекта, для которого требуется выполнить допоперации. Тип данных - массив. Аналогичен соответствующему элементу из запроса.
+-   **CheckAvailabilityResult** - результат проверки доступности перелёта для бронирования. Тип данных - массив.
+-   **CheckAvailabilityResult.IsAvail** - признак доступности перелёта для бронирования. Тип данных - булевский.
+-   **GetFareRulesResult** - результат получения тарифных правил. Тип данных - массив.
+-   **GetFareRulesResult.Rules** — массив тарифных правил, применяемых к данному объекту. Тип данных - массив.
+-   **GetFareRulesResult.Rules.Rule** - тарифное правило. Тип данных - массив.
+-   **GetFareRulesResult.Rules.Rule.Code** - код секции тарифного правила. Тип данных - строка.
+-   **GetFareRulesResult.Rules.Rule.Tariff** - код тарифа, к которому применяется данное правило. Тип данных - строка.
+-   **GetFareRulesResult.Rules.Rule.Name** - заголовок тарифного правила. Тип данных - строка.
+-   **GetFareRulesResult.Rules.Rule.RuleText** - текст тарифного правила. Тип данных - строка.
+-   **GetSeatMapResult** — Результат получения карты мест. Тип данных - массив.
+-   **GetSeatMapResult.SeatMapSegments** - контейнер для карт мест по каждому из сегментов перелёта. Тип данных - массив.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment** - карта мест для конкретного сегмента перелёта. Тип данных - массив. Встречается 1 и более раз.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Num** - номер сегмента из перелёта. Тип данных - целое 32 битное число.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors** - контейнер для этажей в самолёте. Тип данных - массив.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor** — карта мест для конкретного этажа в самолёте. Тип данных - массив. Встречается 1 и более раз.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.IsUpper** - признак верхнего этажа в самолёте. Тип данных - булевский.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows** - контейнер для информации о рядах мест на этаже. Тип данных - массив.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow** - информация о конкретном ряде мест на этаже в самолёте. Тип данных - массив.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Num** - номер ряда мест этажа в самолёте. Тип данных - целое 32 битное число.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats** - контейнер для информации о местах. Тип данных - массив.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat** - информация о конкретном месте в самолёте. Тип данных - массив. Встречается 1 и более раз.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Number** - номер места. Тип данных - строка.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Type** - положение места. Тип данных - строка. Возможные значения:
+    -   **W** — у окна;
+    -   **NPW** — у прохода (Near Passenger Way);
+    -   **M** — месту между W и NPW;
+<!--    -   **любой тип + постфикс " NE"** — места не существует.-->
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Characteristics** - дефолтная характеристика места. Тип данных - строка.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.IsFree** - признак что место свободно. Тип данных - bool.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.NotExists** - признак того, что место не существует. Тип данных - bool.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Price** - цена места в случае если оно платное. Тип данных - [Money](/avia/common/money).
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.RFISC** - RFISC места. Тип данных - строка.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Characteristics** - характеристика ряда. Тип данных - строка.
+-   **GetPriceResult** - результат получения актуальной цены перелёта. Тип данных - массив.
+-   **GetPriceResult.Flight** - плоский перелёт v1.1. Тип данных - массив.
+-   **FindAdditionalServicesResult** - результат получения списка доступных допуслуг. Тип данных - массив. 
+-   **FindAdditionalServicesResult.Services** - список доступных допуслуг. Тип данных - массив. 
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS** - допуслуга. Тип данных - массив.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.ID** - ИД услуги в системе поставщика. Тип данных - целове 32 битное число.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Name** - описание допуслуги (ATPCO commercial name) Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Group** - группа допуслуги. Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SubGroup** - подгруппа услуги. Тип данных - строка. 
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.RFIC** - RFIC услуги. Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.RFISC** - RFISC услуги. Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRCode** - код SSR, которую необходимо добавить в ПНР в случае бронирования данной допуслуги. Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Type** - тип допуслуги(На данный момент - специфика Сирены). Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.CompanyCode** - ИАТА код а/к, предоставляющей данную допуслугу. Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Refundability** - возвратность услуги. Тип данных - перечисление.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRDescriptionRequired** - признак того, что для бронирования данной допуслуги нужно передавать её описание от пользователя. Тип данных - булево значение.
+-   **FindAdditionalServicesResult.Services.Prices** - список цен доступных допуслуг. Тип данных - массив.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice**  - цена допуслуг. Тип данных - массив.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value** - объект цены. Тип данных - массив. 
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value.Amount** - сумма. Тип данных - плавающее c двойной точностью.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value.Currency** - валюта. Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.ServiceRef** - ссылки на услуги, для которых применима данная цена. Тип данных - массив. 
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.ServiceRef.Ref** - ссылка на услугу. Тип данных - целое 32 битное число.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.SegmentRef** - ссылки на сегменты, которым принадлежит услуга. Тип данных - массив. 
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.SegmentRef.Ref** - ссылка на сегмент. Тип данных - целое 32 битное число.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes** - типы пассажиров к которым применима данная цена. Тип данных - массив.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes.PassTypes** - тип пассажира. Тип - данных перечисление.
+-   **ActualizedFlight** — содержит актуализированный перелёт. Тип данных — [Flight](/avia/common/flight).
+-   **ActualizedFlight.Segments.Segment.SupplierInfo** - информация о статусах сегментов в случае если перелёт не доступен для бронирования и операция выполнялась с помощью запроса взятия мест. Тип данных - строка. Поддерживается у GalileoUapi, Sabre, Amadeus, Galileo.
 
->>>> As a result of the request, the flight with the new ID will be received. Only this ID should be used in further operations, for example, in the booking.
+-   **FlightsByFareFamily** - содержит результат операции **GetFareFamilies**. Тип данных — массив [Flight](/avia/common/flight).
+-   **SubsidizedTariffs** - содержит результат операции **GetSubsidizedTariffs**. Тип данных — массив [Flight](/avia/common/flight).
+-   **GetAllowedCCsResult** - результат получения списка кодов карт для оплаты ГДС процессингом. Тип данных - массив.
+-   **GetAllowedCCsResult.AllowedCCs** - список кодов допустимых карт для оплаты брони ГДС процессингом. Тип данных - массив.
+-   **GetAllowedCCsResult.AllowedCCs.Code** - код кредитной карты, которой можно оплатить указанную бронь с помощью ГДС процессинга. Тип данных - строка.
+-   **GetAllowedLoyaltyCardsResult** - массив тарифных правил, применяемых к данному перелёту. Тип данных - массив.
 
+>>>> В результате выполнения запроса, будет получен перелен с новым ID, именно этот ID следует использовать в дальнейших операциях, например в бронировании.
 
-##### Sample
+##### Пример
 ```xml
 <?xml version="1.0"?>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
@@ -198,6 +201,38 @@ Includes the set of elements depending on the operations summonned in the reques
                 </SupplierInfo>
                 <RequestedSegment>0</RequestedSegment>
               </Segment>
+ 			<a:Segment>
+          <ID>2</ID>
+          <a:DepAirp>
+            <a:AirportCode>UKS</a:AirportCode>
+            <a:CityCode>UKS</a:CityCode>
+            <a:UTC>3</a:UTC>
+          </a:DepAirp>
+          <a:ArrAirp>
+            <a:AirportCode>SIP</a:AirportCode>
+            <a:CityCode>SIP</a:CityCode>
+            <a:UTC>3</a:UTC>
+          </a:ArrAirp>
+          <a:FlightNumber>148</a:FlightNumber>
+          <a:FlightTime>120</a:FlightTime>
+          <a:OpAirline>Э4</a:OpAirline>
+          <a:MarkAirline>Э4</a:MarkAirline>
+          <a:AircraftType>BUS</a:AircraftType>
+          <a:DepDateTime>2019-06-28T00:35:00</a:DepDateTime>
+          <a:ArrDateTime>2019-06-28T02:35:00</a:ArrDateTime>
+          <a:BookingClass>
+            <a:BaseClass>Economy</a:BaseClass>
+            <a:BookingClassCode>Y</a:BookingClassCode>
+            <a:FreeSeatCount>9</a:FreeSeatCount>
+          </a:BookingClass>
+          <a:ETicket>true</a:ETicket>
+          <a:SupplierInfo>
+            <a:Status>NN</a:Status>
+            <a:GeneralizedStatus>OnRequest</a:GeneralizedStatus>
+          </a:SupplierInfo>
+          <a:RequestedSegment>0</a:RequestedSegment>
+          <a:NotAirplaneSegmentInd>true</a:NotAirplaneSegmentInd>
+        </a:Segment>
             </Segments>
             <PriceInfo>
               <Price>
