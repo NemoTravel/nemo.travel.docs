@@ -161,7 +161,35 @@ Search for v 1.2
 -  **PlaneFlights** - contains search output. Data type - array of [Flight](/avia/common/flight) elements .
 -  **SimpleGroupedFlights** - Contains search output in the format [GroupSearch](/avia/grouping). Data type - array.
 -  **SubsidiesInformation** - Subsidies information. If the flight fare is subsidized, then it will have a reference to the element in this array. Data type - same as ***SubsidiesInformation*** in the [SubsidiesInformation](/avia/common/subsidiesinformation) object.
-
+- **ProcessingData** - container with processing data on search filters and router. Data type - array. 
+- **ProcessingData.FlightsFromSuppliersCount** - indicates how many flights were received from the supplier. Data type - int. 
+- **ProcessingData.FlightsFromSuppliersSources** - container with supplier data. Data type - array. 
+- **ProcessingData.FlightsFromSuppliersSources.SourceData** - container with the data on a particular. Data type - array. 
+- **ProcessingData.FlightsFromSuppliersSources.SourceData.SourceID** - supplier ID. Data type - int. 
+- **ProcessingData.FlightsFromSuppliersSources.SourceData.Count** - number of flights from this supplier. Data type - int. 
+- **ProcessingData.PropogatedFlightsCount** - container with the information on propagated flights. Data type - array. 
+- **ProcessingData.PropogatedFlightsSources** - container with the information on propagated flights by supplier. Data type - array. 
+- **ProcessingData.PropogatedFlightsSources.SourceData.SourceID** - supplier ID. Data type - int. 
+- **ProcessingData.PropogatedFlightsSources.SourceData.Count** - indicates how many flights were received from the supplier. Data type - int. 
+- **ProcessingData.PricingRulesCount** - counter of the number of triggered pricing rules. Data type - int. 
+- **ProcessingData.PricingDuration** - pricing duration. Data type - string.
+- **ProcessingData.AppliedRouterRules** - container with router information. Data type - array. 
+- **ProcessingData.AppliedRouterRules.RouterRule** - container with information on applied router rules. Data type - array. 
+- **ProcessingData.AppliedRouterRules.RuleID** - ID of the applied rule. Data type - int. 
+- **ProcessingData.AppliedRouterRules.TargetPackages** - container with information on the packages in which the search was executed according to the router. Data type - array. 
+- **ProcessingData.AppliedRouterRules.TargetPackages.PackageID** - ID of the package in which the search was executed according to the router. Data type - int.
+- **ProcessingData.TriggeredRequestFilters** - container with information on the request filters used. Data type - array. 
+- **ProcessingData.TriggeredRequestFilters.TriggeredRequestFilter** - container with information on a particular filter. Data type - array. 
+- **ProcessingData.TriggeredRequestFilters.TriggeredRequestFilter.FilterID** - filter ID. Data type - int.
+- **ProcessingData.TriggeredRequestFilters.TriggeredRequestFilter.PackageID** - ID of the package in which the filter was triggered. Data type - int.
+- **Errors** - container with error data. Data type - array. 
+- **Errors.Error** - container with data on a particular error. Data type - array. 
+- **Errors.Error.Level** - level on which the error occured. Possible values: 
+**APIFormat** - level of the server request format; **Supplier** - supplier communication level; **Runtime** - level of executing a certain operation on the server; **Network** - network problems. Data type - enumeration. 
+- **Errors.Error.Code** - error code. Data type - string.
+- **Errors.Error.Message** - error text from the air server. Data type - string.
+- **Errors.Error.ServiceMessage** - error text from the supplier. Data type - string.
+ 
 ##### Sample
 ```xml
 <?xml version="1.0"?>
