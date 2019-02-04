@@ -7,7 +7,7 @@ taxonomy:
 
 ### RefundTicket_1_1
 
-Used for the tickets and EMD refund if they are present in the booking.
+Used for gatting information on the tickets refund and EMD, if they are present in the booking.
 
 #### RefundTicket_2_2
 
@@ -17,19 +17,19 @@ The latest version of the request, differences are only in the response to the r
 
 ##### Format Description
 
-- **BookID** - The booking ID with passengers. The data type is an integer 64-bit number.
-- **Passengers** - The number of passengers in the booking,  for which is needed to receive the refund information. The data type is an array.
-- **Passengers.Ref** -  The Passenger number in the booking. The data type is an integer 32 bit number.
-- **Involuntary** - A sign of the involuntary refund (Optional). The data type is boolean.
-- **SegmentsToRefund** - Segments for the refund. The data type is an array.
-- **SegmentsToRefund.Ref** - The segment for he refund. The data type is an integer 32 bit number.
+- **BookID** - ID of the booking with passengers. Data type - 64-bit integer.
+- **Passengers** - number of passengers in the booking, for which it is needed to receive the refund information. Data type - array.
+- **Passengers.Ref** -  The Passenger number in the booking. Data type - 32 bit integer.
+- **Involuntary** - attribute of the involuntary refund (Optional). Data type - bool.
+- **SegmentsToRefund** - Segments for the refund. Data type - array.
+- **SegmentsToRefund.Ref** - segment for the refund. Data type - 32 bit integer.
 
 #### Response
 
 ##### Format Description
 
-- **TicketsRefundData** - The information on ticket refunds. The data type is an array of elements [RefundData](/avia/common/refunddata).
-- **EMDsRefundData** - Information on EMD refurnds. The data type is an array of elements [RefundData](/avia/common/refunddata).
-- **ActiveBook** - The booking after the ticket refund, is returned in case of partial refunding.
-- **SplitedBook** - The booking with the refundable tickets, is returned in case of refunding only for a part of passengers.
-- **SplitedPNRLocator** - The PNR number with the refunded tickets in the GDS, is returned in case of partial refunding. The data type is a string.
+- **TicketsRefundData** - information on ticket refunds. Data type - array of [RefundData](/avia/common/refunddata) elements.
+- **EMDsRefundData** - Information on EMD refunds. Data type - array of [RefundData](/avia/common/refunddata) elements.
+- **ActiveBook** - booking after the ticket refund, is returned in case of partial refunding.
+- **SplitedBook** - booking with the refundable tickets, is returned in case of refunding only for a part of passengers.
+- **SplitedPNRLocator** - number of the PNR with the refunded tickets in the GDS, is returned in case of partial refunding. Data type - string.
