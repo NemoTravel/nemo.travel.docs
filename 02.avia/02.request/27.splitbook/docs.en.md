@@ -17,11 +17,11 @@ The latest version of the request, differences are only in the response to the r
 
 ##### Format Description
 
--  **BookID** - The booking ID. The data type is long.
--  **Passengers** - The numbers of passengers in the booking, which need to be separated into a new booking. The data type is an array.
--  **Passengers.Ref** - The passenger number in the booking. The data type is an integer 32-bit number.
+-  **BookID** - booking ID. Data type - long.
+-  **Passengers** - numbers of passengers in the booking who need to be separated into a new booking. Data type - array.
+-  **Passengers.Ref** - passenger number in the booking. Data type - 32-bit integer. 
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -55,9 +55,9 @@ with the splitted passengers. Information about the parent and child booking is 
 
 ** [Warning] ** For the uAPI provider, information about the parent and child PNR will be lost, since it is not stored in the PNR.
 
-** [Warning] ** For the SitaGabriel PNR provider that are linked to the current one through the third one will also be parsed into the children, because there is no way to distinguish them.
+** [Warning] ** For the SitaGabriel provider PNRs that are linked to the current one through the third one will also be parsed into the child PNRs, because there is no way to distinguish them.
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
