@@ -18,8 +18,8 @@ taxonomy:
 -   **RequestedFlightInfo.AroundDates** — значение для поиска по окружным датам (необязательный). Тип данных — целое беззнаковое 32-битное число.
 -   **RequestedFlightInfo.ODPairs** — содержит информацию о сегментах перелёта, который требуется найти. Тип данных — массив.
 -   **RequestedFlightInfo.ODPair** — сегмент перелёта, который требуется найти. Тип данных — массив.
--   **RequestedFlightInfo.ODPair.DepatureDateTime** — дата и время, с которого начинается желаемое время вылета. Тип данных — строка, формат — <code>yyyy-MM-ddTHH:mm:ss</code>.
--   **RequestedFlightInfo.ODPair.MaxDepatureTime** — максимально допустимое время вылета (необязательный). Тип данных — строка, формат — <code>HH:mm</code>.
+-   **RequestedFlightInfo.ODPair.DepatureDateTime** — дата и время, с которого начинается желаемое время вылета. Тип данных — строка, формат — <code>yyyy-mm-ddthh:mm:ss</code>.
+-   **RequestedFlightInfo.ODPair.MaxDepatureTime** — максимально допустимое время вылета (необязательный). Тип данных — строка, формат — <code>hh:mm</code>.
 -   **RequestedFlightInfo.ODPair.DepaturePoint** — содержит информацию о точки отправления. Тип данных — массив.
 -   **RequestedFlightInfo.ODPair.DepaturePoint.Code** — 3-х буквенный код аэропорта или города отправления. Тип данных — строка.
 -   **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** — признак что в качестве точки отправления указан код города (агрегатора аэропортов) (необязательный). Тип данных — булевский.
@@ -142,8 +142,8 @@ taxonomy:
 #### Ответ
 
 -   **SearchData** — данные о поиске. Тип данных — массив.
--   **SearchData.StartTime** — дата и время начала поиска на сервере. Тип данных — строка, формат — <code>yyyy-MM-dd HH:mm:ss ±HH:mm</code>.
--   **SearchData.EndTime** — дата и время окончания поиска на сервере. Тип данных — строка, формат — <code>yyyy-MM-dd HH:mm:ss ±HH:mm</code>.
+-   **SearchData.StartTime** — дата и время начала поиска на сервере. Тип данных — строка, формат — <code>yyyy-mm-dd hh:mm:ss ±hh:mm</code>.
+-   **SearchData.EndTime** — дата и время окончания поиска на сервере. Тип данных — строка, формат — <code>yyyy-mm-dd m:mm:ss ±hh:mm</code>.
 -   **SearchData.IsAsync** — признак асинхронного поиска. Тип данных — булевский.
 -   **SearchData.Sources** — данные об источниках (пакетах), откуда получены результаты. Тип данных — массив.
 -   **SearchData.Sources.SourceInfo** — описание источника, откуда получены результаты. Тип данных — массив.
@@ -153,8 +153,8 @@ taxonomy:
 -   **SearchData.SearchThreads.SearchThreadInfo** — данные об одном из поисковых потоков. Тип данных — массив.
 -   **SearchThreadInfo.SourceID** — идентификатор источника, в рамках которого был запущен поисковый поток. Тип данных — целое 64-битное число.
 -   **SearchThreadInfo.IsComplete** — признак что поток завершил работу. Тип данных — булевский.
--   **SearchThreadInfo.StartTime** — дата и время запуска потока. Тип данных — строка, формат — <code>yyyy-MM-dd HH:mm:ss ±HH:mm</code>.
--   **SearchThreadInfo.Duration** — длительность работы потока. Тип данных — строка, формат — <code>HH:mm:ss</code>.
+-   **SearchThreadInfo.StartTime** — дата и время запуска потока. Тип данных — строка, формат — <code>yyyy-mm-dd hh:mm:ss ±hh:mm</code>.
+-   **SearchThreadInfo.Duration** — длительность работы потока. Тип данных — строка, формат — <code>hh:mm:ss</code>.
 -   **SearchThreadInfo.FromCache** — признак что результаты по данному потоку взяты из кэша. Тип данных — булевский.
 -   **SearchThreadInfo.OriginalSearchID** — идентификатор оригинального поиска, в рамках которого результаты были получены от поставщика. Тип данных — целое 64-битное число.
 -   **PlaneFlights** — содержит поисковую выдачу. Тип данных — массив элементов [Flight](/avia/common/flight).
@@ -182,7 +182,7 @@ taxonomy:
 - **ProcessingData.TriggeredRequestFilters.TriggeredRequestFilter.FilterID** - ID фильтра. Тип данных int.
 - **ProcessingData.TriggeredRequestFilters.TriggeredRequestFilter.PackageID** - ID пакета, в котором сработал фильтр. Тип данных int.
 - **Errors** - Контейнер с данными об ошибках. Тип данных - массив. 
-- **Errors.Error** - Контейнер с данными по конеретной ошибке. Тип данных - массив. 
+- **Errors.Error** - Контейнер с данными по конкретной ошибке. Тип данных - массив. 
 - **Errors.Error.Level** - Уровень, на котором произошла ошибка. Возможные значения: **APIFormat** - Уровень формата запроса к серверу; **Supplier** - Уровень общения с поставщиком; **Runtime** - Уровень выполнения определённой операции на сервере; **Network** - Сетевые проблемы. Тип данных - перечисление. 
 - **Errors.Error.Code** - Код ошибки. Тип данных - строка.
 - **Errors.Error.Message** - Текст ошибки от авиа сервера. Тип данных - строка.
@@ -451,7 +451,6 @@ taxonomy:
                   </BookingClass>
                   <ETicket>true</ETicket>
                   <RequestedSegment>0</RequestedSegment>
-  			<a:NotAirplaneSegmentInd>false</a:NotAirplaneSegmentInd>
                 </Segment>
               </Segments>
               <PriceInfo>
