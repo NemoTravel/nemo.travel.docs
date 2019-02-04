@@ -30,7 +30,7 @@ The latest version of the ModifyBook request. Similar to the ModifyBook_2_1 vers
  ```
 ### ModifyBook_2_1
 
-Similar to the previous version, the only difference is in the flat format of ancillary services from the Book_2_1 request. [booking version 2.0](/avia/common/book) request.
+Similar to the previous version, the only difference is in the flat format of ancillary services from the [Book_2_1](/avia/request/bookflight) request.
 
  ### Sample container with ancillary services from the ModifyBook_2_1 request.
  ```xml
@@ -55,44 +55,44 @@ Used to make changes to the booking with [booking version 2.0](/avia/common/book
 
 #### Request
 
--  **BookID** - The booking ID in which you want to make changes. The data type is long.
--  **Travelers** - The information about the travelers that needs to be changed (optional). The data type is an array.
--  **Travellers.Traveller** - The information about the traveler that needs to be changed. The array data type.
--  **Travellers.Traveller.Action** - The action with the traveler that you want to perform. As of 03.09.2015 it is supported only by changing the already existing traveler. Data type - enumeration, possible values:
+-  **BookID** - ID of the booking in which you want to make changes. Data type - long.
+-  **Travelers** - information about the travelers that needs to be changed (optional). Data type - array.
+-  **Travellers.Traveller** - information about the traveler that needs to be changed. Data type - array.
+-  **Travellers.Traveller.Action** - action with the traveler that you want to perform. As of 03.09.2015 it is supported only by changing the already existing traveler. Data type - enumeration, possible values:
 	- Add
 	- Modify
 	- Remove
--  **Travellers.Traveller.Traveller** - The new traveler's data for making a booking. The data type is [Traveler](/avia/common/traveller).
--  **Flight** - contains information about the changes in the flight that you want to make to the booking (optional). The array data type.
--  **Flight.Segments** - The information about actions with flight segments. The data type is an array.
--  **Flight.Segments.Segment** - contains information about changes in one of the flight segments. The array data type.
--  **Segment.Action** - An action with the segment that you want to execute. As of September 3, 2015, actions are not supported. Data type - enumeration, possible values:
+-  **Travellers.Traveller.Traveller** - new traveler's data to add to a booking. Data type - [Traveler](/avia/common/traveller).
+-  **Flight** - contains information about the changes in the flight that you want to make to the booking (optional). Data type - array.
+-  **Flight.Segments** - information about actions with flight segments. Data type - array.
+-  **Flight.Segments.Segment** - contains information about changes in one of the flight segments. Data type - array.
+-  **Segment.Action** - An action with the segment that you want to execute. As of 03.09.2015, actions are not supported. Data type - enumeration, possible values:
 	- Add
 	- Modify
 	- Remove
--  **Segment.SegmentID** -The segment ID in the flight. The data type is int32.
--  **Segment.DepatureAirport** - The airport code of departure. The data type is a string.
--  **Segment.ArrivalAirport** - The airport arrival code. The data type is a string.
--  **Segment.MarketingAirline** - the code of the airline that provides the flight. The data type is a string.
--  **Segment.FlightNumber** - The flight number. The data type is a string.
--  **Segment.DepatureDateTime** - date and time of departure. The data type is the date and time in the format yyyy-MM-ddTHH: mm: ss.
--  **Segment.BookingClassCode** - the class book of booking. The data type is a string.
--  **DataItems** - contains information about changes in the content of the booking (optional). The data type is an array.
--  **DataItems.ModifyDataItem** - contains information about changes in one of the blocks of content data. The array data type.
--  **ModifyDataItem.Action** - An action with the content that you want to perform. As of 03/09/2015, it is supported only by changing existing content. Data type - enumeration, possible values:
+-  **Segment.SegmentID** - segment ID in the flight. Data type - int32.
+-  **Segment.DepatureAirport** - departure airport code. Data type - string.
+-  **Segment.ArrivalAirport** - arrival airport code. Data type - string.
+-  **Segment.MarketingAirline** - code of the airline that provides the flight. Data type - string.
+-  **Segment.FlightNumber** - flight number. Data type - string.
+-  **Segment.DepatureDateTime** - date and time of departure. Data type - date and time in the yyyy-mm-ddthh:mm:ss format.
+-  **Segment.BookingClassCode** - booking class letter. Data type - string.
+-  **DataItems** - contains information about the changes in the content of the booking (optional). Data type - array.
+-  **DataItems.ModifyDataItem** - contains information about changes in one of the blocks of content data. Data type - array.
+-  **ModifyDataItem.Action** - action with the content that you want to perform. As of 03/09/2015, it is supported only by changing existing content. Data type - enumeration, possible values:
 	- Add
 	- Modify
 	- Remove
--  **ModifyDataItem.DataItem** - contains the actual data on the content. The data type is [DataItem](/avia/common/dataitem).
--  **AncillaryServices** - contains information about the variable admissions (optional). The data type is an array.
--  **ModifyAncillaryService** - contains information about one of the variable admissions. The array data type.
--  **Action** - An action with content that you want to perform (Modify is not allowed for admissions) The format is similar to other data blocks. Additional services with EMDs can be removed from the booking only after entering their EMD.
-- **AncillaryService** - An ancillary services on which there will be a change in the booking. The data type, format and filling logic, in case of booking, is similar to AncillaryService in the [booking request](/avia/request/bookflight). In case of deletion, only the ID is the required element.
--  **CalculatePrice** - a sign of necessity of calculation of pricing after modification. The data type is bool.
+-  **ModifyDataItem.DataItem** - contains the actual data on the content. Data type - [DataItem](/avia/common/dataitem).
+-  **AncillaryServices** - contains information about the variable admissions (optional). Data type - array.
+-  **ModifyAncillaryService** - contains information about one of the variable admissions. Data type - array.
+-  **Action** - action with content that you want to perform (Modify is not allowed for ancillary services) The format is similar to other data blocks. Ancillary services with EMDs can be removed from the booking only after voiding their EMD.
+- **AncillaryService** - ancillary services on which there will be a change in the booking. Data type, format and filling logic, in case of booking, is similar to AncillaryService in the [booking request](/avia/request/bookflight). In case of deletion, only the ID is the required element.
+-  **CalculatePrice** - attribute of necessity of pricing calculation after modification. Data type - bool.
 
->>>> While adding a new element to the order, should be indicated the ID of the DataItem to be -1. While modifying an existing DataItem, must be used an ID that matches the existing DataItem ID .
+>>>> While adding a new element to the order, the ID of the DataItem should be indicated to be -1. While modifying an existing DataItem, an ID that matches the existing DataItem ID must be used.
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -136,7 +136,7 @@ Used to make changes to the booking with [booking version 2.0](/avia/common/book
 
 [2.0 version booking](/avia/common/book).
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
