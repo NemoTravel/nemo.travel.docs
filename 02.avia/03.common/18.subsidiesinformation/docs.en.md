@@ -9,7 +9,7 @@ Contains the complete information on subsidies.
 
 * **Subsidies Information** - Container with available subsidies. Data type - custom.
 * **SubsidiesInformation.SubsidyInformation** - Container with information about the available subsidy. Data type - custom.
-* **SubsidiesInformation.SubsidyInformation.ID** - Number of the flight segment for which subsidies are available. Data type - 32-bit integer.
+* **SubsidiesInformation.SubsidyInformation.ID** - Subsidies package ID. Data type - 32-bit integer.
 * **SubsidiesInformation.SubsidyInformation.PassengerTypes** - Container with a list of passenger types. Data type - custom.
 * **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription** - Container with a description of the passenger type for which subsidies can be applied. Data type - custom.
 * **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.Code** - Subsidy code. Data type - string.
