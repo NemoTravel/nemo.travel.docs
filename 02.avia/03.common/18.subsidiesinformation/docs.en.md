@@ -9,40 +9,40 @@ Contains the complete information on subsidies.
 
 * **Subsidies Information** - Container with available subsidies. Data type - custom.
 * **SubsidiesInformation.SubsidyInformation** - Container with information about the available subsidy. Data type - custom.
-* **SubsidiesInformation.ID** - Number of the flight segment for which subsidies are available. Data type - 32-bit integer.
-* **SubsidiesInformation.PassengerTypes** - Container with a list of passenger types. Data type - custom.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription** - Container with a description of the passenger type for which subsidies can be applied. Data type - custom.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Code** - Subsidy code. Data type - string.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.GeneralType** - Passenger type. Data type - enumeration.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.MaxAge** - Maximum age. Data type - 32-bit integer.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.NeedAccompaniment** - Support requirement. Data type - boolean.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.IsDisabled** - Attribute of accessibility for the disabled. Data type - boolean.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.AccompaniesTheDisabled** - Requirement to accompany a disabled person. Data type - boolean.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.NeedMiddleName** - Requirement of a patronymic. Data type - boolean.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidDocuments** - Document requirements. Data type - array.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidDocuments.Document** - Required document type. Data type - array.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidSpecialsDocuments** - Requirements for additional documents. Data type - array.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.ValidSpecialsDocuments.Document** - Required type of additional document. Data type - string. 
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer** - Description for the client. Data type - array.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item** - Block with description translations . Data type - array.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item.Language** - Description language. Data type - string.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item.Value** - Description. Data type - string.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.DescriptionForAgent** - Description for the agent. Data type - string.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header** - Name of the subsidy. Data type - string.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item** - Block with title translations . Data type - array.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item.Language** - Language. Data type is a string.
-* **SubsidiesInformation.PassengerTypes.PassengerTypeDescription.Header.Item.Value** - Name. Data type - string.
-* **SubsidiesInformation.ShortDescription** - Block with a short description. Data type - array.
-* **SubsidiesInformation.ShortDescription.Item** - Block with short description translations. Data type - array.
-* **SubsidiesInformation.ShortDescription.Item.Language** - Description language. Data type - string.
-* **SubsidiesInformation.ShortDescription.Item.Value** - Description. Data type - string.
-* **SubsidiesInformation.Description** - Block with a description of the subsidy package. Data type - array.
-* **SubsidiesInformation.Description.Item** - Block with translations of the subsidy package description.
-* **SubsidiesInformation.Description.Item.Language** - Description language. Data type - string.
-* **SubsidiesInformation.Description.Item.Value** - Description. Data type is a string.
+* **SubsidiesInformation.SubsidyInformation.ID** - Number of the flight segment for which subsidies are available. Data type - 32-bit integer.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes** - Container with a list of passenger types. Data type - custom.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription** - Container with a description of the passenger type for which subsidies can be applied. Data type - custom.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.Code** - Subsidy code. Data type - string.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.GeneralType** - Passenger type. Data type - enumeration.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.MaxAge** - Maximum age. Data type - 32-bit integer.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.NeedAccompaniment** - Support requirement. Data type - boolean.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.IsDisabled** - Attribute of accessibility for the disabled. Data type - boolean.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.AccompaniesTheDisabled** - Requirement to accompany a disabled person. Data type - boolean.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.NeedMiddleName** - Requirement of a patronymic. Data type - boolean.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.ValidDocuments** - Document requirements. Data type - array.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.ValidDocuments.Document** - Required document type. Data type - array.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.ValidSpecialsDocuments** - Requirements for additional documents. Data type - array.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.ValidSpecialsDocuments.Document** - Required type of additional document. Data type - string. 
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer** - Description for the client. Data type - array.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item** - Block with description translations . Data type - array.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item.Language** - Description language. Data type - string.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.DescriptionForCustomer.Item.Value** - Description. Data type - string.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.DescriptionForAgent** - Description for the agent. Data type - string.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.Header** - Name of the subsidy. Data type - string.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.Header.Item** - Block with title translations . Data type - array.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.Header.Item.Language** - Language. Data type is a string.
+* **SubsidiesInformation.SubsidyInformation.PassengerTypes.PassengerTypeDescription.Header.Item.Value** - Name. Data type - string.
+* **SubsidiesInformation.SubsidyInformation.ShortDescription** - Block with a short description. Data type - array.
+* **SubsidiesInformation.SubsidyInformation.ShortDescription.Item** - Block with short description translations. Data type - array.
+* **SubsidiesInformation.SubsidyInformation.ShortDescription.Item.Language** - Description language. Data type - string.
+* **SubsidiesInformation.SubsidyInformation.ShortDescription.Item.Value** - Description. Data type - string.
+* **SubsidiesInformation.SubsidyInformation.Description** - Block with a description of the subsidy package. Data type - array.
+* **SubsidiesInformation.SubsidyInformation.Description.Item** - Block with translations of the subsidy package description.
+* **SubsidiesInformation.SubsidyInformation.Description.Item.Language** - Description language. Data type - string.
+* **SubsidiesInformation.SubsidyInformation.Description.Item.Value** - Description. Data type is a string.
 * **SubsidiesInformation.AllowAgentCharges** - Permission to combine agent fees. Data type - boolean.
-* **SubsidiesInformation.AllowCombine** - Permission to merge. Data type - boolean.
-* **SubsidiesInformation.DocumentationUrl** - Address for receiving documentation on subsidies.
+* **SubsidiesInformation.SubsidyInformation.AllowCombine** - Permission to merge. Data type - boolean.
+* **SubsidiesInformation.SubsidyInformation.DocumentationUrl** - Address for receiving documentation on subsidies.
 
 #### Sample
 
