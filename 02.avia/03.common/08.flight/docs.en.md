@@ -61,6 +61,7 @@ Flight presentation format 1.1.
 	- **First** - first class;
 	- **Other** - all other classes that do not belong to any of the above.
 -   **Segment.BookingClass.BookingClassCode** - the class code of the flight. The data type is a string.
+-   **Segment.NotAirplaneSegmentInd** — ground/ not airplane segment identifier. Data type: boolean
 -   **Segment.BookingClass.FreeSeatCount** - the number of available seats for this class of flight. The data type is an integer 32-bit number.
 -   **Segment.BookingClass.MealType** - The available type of meal for this class of flight. The data type is a string.
 -   **Flight.PriceInfo** - The information about the prices for this flight. The array data type.
