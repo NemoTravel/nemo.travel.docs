@@ -33,3 +33,8 @@ The latest version of the request, differences are only in the response to the r
 - **ActiveBook** - booking after the ticket refund, is returned in case of partial refunding.
 - **SplitedBook** - booking with the refundable tickets, is returned in case of refunding only for a part of passengers.
 - **SplitedPNRLocator** - number of the PNR with the refunded tickets in the GDS, is returned in case of partial refunding. Data type - string.
+- **RefundedTicket.RefundTaxes** - container with tax information. Not all the providers give the detailed data. Data type - custom.
+- **RefundedTicket.RefundTaxes.Tax** - container with information on a particular tax. Data type - custom.
+- **RefundedTicket.RefundTaxes.Tax.Amount** - tax amount. Data type - fractional number.
+- **RefundedTicket.RefundTaxes.Tax.Currency** - currency code. Data type - string.
+- **RefundedTicket.RefundTaxes.Tax.TaxCode** - tax code. Data type - string.
