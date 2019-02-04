@@ -11,20 +11,20 @@ taxonomy:
 
 ##### Format Description
 
-- ** RequestedFlightInfo ** - contains information about the flight segments you want to find. The array data type.
-- ** RequestedFlightInfo.Direct ** - the indicator of search of only direct flights. The data type is bool.
-- ** RequestedFlightInfo.ODPair ** - the segment of the flight you want to find. The array data type.
-- ** RequestedFlightInfo.ODPair.DepatureDateTime ** - The departure date or start date of the period and time (optional), from which the desired departure time begins. The data type is a string, the format is <code>yyyy-MM-dd\[THH:mm:ss\]</code>.
-- ** RequestedFlightInfo.ODPair.DepatureDateTime2 ** - the end date of the period. The data type is a string, the format is yyyy-MM-dd.
-- ** RequestedFlightInfo.ODPair.MaxDepatureTime ** - the maximum-allowed departure time. The data type is a string, the format is HH: mm.
-- ** RequestedFlightInfo.ODPair.DepaturePoint ** - Contains information about the origin point. The array data type.
-- ** RequestedFlightInfo.ODPair.DepaturePoint.Code ** - a 3 letter code of the airport / city of departure. The data type is a string.
-- ** RequestedFlightInfo.ODPair.DepaturePoint.IsCity ** - a sign that the airport code of the airport city is indicated as the departure point. The data type is boolean.
-- ** RequestedFlightInfo.ODPair.ArrivalPoint ** - Contains information about the arrival point. The array data type. The format is similar to the element * DepaturePoint *
-- ** Restrictions ** - Similar to the * Restrictions * parameter from the  [Search\_1\_2](/avia/request/search) (optional).
-- ** EndUserData ** - End user data. The array data type, the format is similar to the element * EndUserData * from the [DataItem](/avia/common/dataitem) (optional).
+- ** RequestedFlightInfo ** - contains information about the flight segments you want to find. Data type - array.
+- ** RequestedFlightInfo.Direct ** - indicator of search of only direct flights. Data type - bool.
+- ** RequestedFlightInfo.ODPair ** - segment of the flight you want to find. Data type - array.
+- ** RequestedFlightInfo.ODPair.DepatureDateTime ** - departure date or period start date and time (optional), from which the desired departure time begins. Data type - string, the format is <code>yyyy-mm-dd\[thh:mm:ss\]</code>.
+- ** RequestedFlightInfo.ODPair.DepatureDateTime2 ** - end date of the period. Data type - string, the format is <code>yyyy-mm-dd</code>.
+- ** RequestedFlightInfo.ODPair.MaxDepatureTime ** - maximum-allowed departure time. Data type - string, the format is <code>hh:mm</code>.
+- ** RequestedFlightInfo.ODPair.DepaturePoint ** - contains information about the origin point. Data type - array.
+- ** RequestedFlightInfo.ODPair.DepaturePoint.Code ** - 3 letter code of the airport/city of departure. Data type - string.
+- ** RequestedFlightInfo.ODPair.DepaturePoint.IsCity ** - attribute showing that code of the city which is the airport aggregator is indicated as the departure point. Data type - bool.
+- ** RequestedFlightInfo.ODPair.ArrivalPoint ** - contains information about the arrival point. Data type - array. The format is similar to the * DepaturePoint * element.
+- ** Restrictions ** - similar to the * Restrictions * parameter from the  [Search\_1\_2](/avia/request/search) (optional).
+- ** EndUserData ** - end user data. Data type - array, the format is similar to the * EndUserData * element from the [DataItem](/avia/common/dataitem) (optional).
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
