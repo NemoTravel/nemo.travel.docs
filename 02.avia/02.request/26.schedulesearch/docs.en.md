@@ -68,39 +68,39 @@ taxonomy:
 
 #### Response
 
-- ** Flights ** - Container for search results. The array data type.
-- ** Flights.ScheduleFlight ** - The Flight founded in the schedule. The array data type. The format is similar to the Flight element from the [Search\_1\_2](/avia/request/search), but instead of the Segments property, the ScheduleSegments property described below.
-- ** ScheduleFlight.ScheduleSegments ** - An array of ScheduleSegment elements. The array data type.
-- ** ScheduleSegment ** - The information about the flight segment. The array data type.
-- ** ScheduleSegment.ID ** - Sequence number of this segment on the flight. The data type is an integer 32-bit number.
-- ** ScheduleSegment.DepAirp ** - The information about the departure airport for this segment. The array data type.
-- ** ScheduleSegment.DepAirp.AirportCode ** - The airport code. The data type is a string.
-- ** ScheduleSegment.DepAirp.CityCode ** - The city code (aggregation code). The data type is a string.
-- ** ScheduleSegment.DepAirp.UTC ** - Time zone of the airport. The data type is a string.
-- ** ScheduleSegment.DepAirp.Terminal ** - The terminal code. The data type is a string.
-- ** ScheduleSegment.ArrAirp ** - The Arrival airport information for this segment. The array data type. The format is similar to the departure airport
-- ** ScheduleSegment.ETicket ** - A sign of the possibility of issuing an electronic ticket on this segment. The data type is boolean.
-- ** ScheduleSegment.StopPoints ** - The list of stop points on this segment of the flight. The array data type.
-- ** ScheduleSegment.StopPoints.StopPoint ** - The information about one of the stop points on this segment of the flight. The array data type.
-- ** ScheduleSegment.StopPoints.StopPoint.AirportCode ** - The airport code of the stop point. The data type is a string.
-- ** ScheduleSegment.StopPoints.StopPoint.CityCode ** - The code for the city of the stop point. The data type is a string.
-- ** ScheduleSegment.StopPoints.StopPoint.UTC ** - The time zone of the stop point. The data type is a string.
-- ** ScheduleSegment.StopPoints.StopPoint.Terminal ** - Terminal at the airport. The data type is a string.
-- ** ScheduleSegment.StopPoints.StopPoint.ArrDateTime ** - The date and time of arrival at the stop point in the format yyyy-MM-ddTHH: mm: ss. The data type is a string.
-- ** ScheduleSegment.StopPoints.StopPoint.DepDateTime ** - The date and time of departure from the stop point in the format yyyy-MM-ddTHH: mm: ss. The data type is a string.
-- ** ScheduleSegment.FlightNumber ** - The Flight number for this flight segment. The data type is an integer 32-bit number.
-- ** ScheduleSegment.FlightTime ** - The flight time in minutes. The data type is an integer 32-bit number.
-- ** ScheduleSegment.OpAirline ** - The airline code directly executing this flight. The data type is a string.
-- ** ScheduleSegment.MarkAirline ** - The airline code for the given flight. The data type is a string.
-- ** ScheduleSegment.AircraftType ** - The aircraft type code. The data type is a string.
-- ** ScheduleSegment.DepartueTime ** - Departure time in HH: mm format. The data type is a string.
-- ** ScheduleSegment.ArrivalTime ** - Arrival time in HH: mm format. The data type is a string.
-- ** ScheduleSegment.DepartureDaysChange ** - Offset of the departure day relative to the departure date of the first segment of the entire flight. The data type is an integer 32-bit number.
-- ** ScheduleSegment.ArrivalDaysChange ** - Offset of the day of arrival relative to the departure day. The data type is an integer 32-bit number.
-- ** ScheduleSegment.StartDate ** - Start date of the departure period in the format yyyy-MM-dd. The data type is a string.
-- ** ScheduleSegment.EndDate ** - End date of the departure period in the format yyyy-MM-dd. The data type is a string.
-- ** ScheduleSegment.OperatedDaysOfWeek ** - An array of departure days. The array data type.
-- ** ScheduleSegment.OperatedDaysOfWeek.DayOfWeek ** - The day of the week in which the flight will take place. Data type - enumeration, possible values:
+- ** Flights ** - container for the search results. Data type - array.
+- ** Flights.ScheduleFlight ** - found flight in the schedule. Data type - array. The format is similar to the **Flight** element from the [Search\_1\_2](/avia/request/search), but instead of the Segments property, the ScheduleSegments property, described below, is used.
+- ** ScheduleFlight.ScheduleSegments ** - An array of ScheduleSegment elements. Data type - array.
+- ** ScheduleSegment ** - information about the flight segment. Data type - array.
+- ** ScheduleSegment.ID ** - sequence number of this segment of the flight. Data type - 32-bit integer.
+- ** ScheduleSegment.DepAirp ** - The information about the departure airport for this segment. Data type - array.
+- ** ScheduleSegment.DepAirp.AirportCode ** - airport code. Data type - string.
+- ** ScheduleSegment.DepAirp.CityCode ** - city code (aggregation code). Data type - string.
+- ** ScheduleSegment.DepAirp.UTC ** - time zone of the airport. Data type - string.
+- ** ScheduleSegment.DepAirp.Terminal ** - terminal code. Data type - string.
+- ** ScheduleSegment.ArrAirp ** - arrival airport information for this segment. Data type - array. The format is similar to the departure airport.
+- ** ScheduleSegment.ETicket ** - attribute of the possibility of issuing an e-ticket on this segment. Data type - bool.
+- ** ScheduleSegment.StopPoints ** - list of stop points on this segment of the flight. Data type - array.
+- ** ScheduleSegment.StopPoints.StopPoint ** - information about one of the stop points on this segment of the flight. Data type - array.
+- ** ScheduleSegment.StopPoints.StopPoint.AirportCode ** - stop point airport code. Data type - string.
+- ** ScheduleSegment.StopPoints.StopPoint.CityCode ** - stop point city code. Data type - string.
+- ** ScheduleSegment.StopPoints.StopPoint.UTC ** - time zone of the stop point. Data type - string.
+- ** ScheduleSegment.StopPoints.StopPoint.Terminal ** - terminal at the airport. Data type - string.
+- ** ScheduleSegment.StopPoints.StopPoint.ArrDateTime ** - date and time of arrival at the stop point in the format yyyy-mm-ddthh:mm:ss. Data type - string.
+- ** ScheduleSegment.StopPoints.StopPoint.DepDateTime ** - date and time of departure from the stop point in the format yyyy-mm-ddthh:mm:ss. Data type - string.
+- ** ScheduleSegment.FlightNumber ** - flight number for this flight segment. Data type - 32-bit integer.
+- ** ScheduleSegment.FlightTime ** - flight time in minutes. Data type - 32-bit integer.
+- ** ScheduleSegment.OpAirline ** - code of the airline directly executing this flight. Data type - string.
+- ** ScheduleSegment.MarkAirline ** - airline code for the given flight. Data type - string.
+- ** ScheduleSegment.AircraftType ** - aircraft type code. Data type - string.
+- ** ScheduleSegment.DepartueTime ** - departure time in hh:mm format. Data type - string.
+- ** ScheduleSegment.ArrivalTime ** - arrival time in hh:mm format. Data type - string.
+- ** ScheduleSegment.DepartureDaysChange ** - shift of the departure day relative to the departure date of the first segment of the entire flight. Data type - 32-bit integer.
+- ** ScheduleSegment.ArrivalDaysChange ** - shift of the day of arrival relative to the departure day. Data type - 32-bit integer.
+- ** ScheduleSegment.StartDate ** - start date of the departure period in the format yyyy-mm-dd. Data type - string.
+- ** ScheduleSegment.EndDate ** - end date of the departure period in the format yyyy-mm-dd. Data type - string.
+- ** ScheduleSegment.OperatedDaysOfWeek ** - array of departure days. Data type - array.
+- ** ScheduleSegment.OperatedDaysOfWeek.DayOfWeek ** - day of the week in which the flight will take place. Data type - enumeration, possible values:
     - Sunday - Sunday.
     - Monday - Monday.
     - Tuesday - Tuesday.
@@ -108,14 +108,14 @@ taxonomy:
     - Thursday - Thursday.
     - Friday - Friday.
     - Saturday - Saturday.
-- ** ScheduleSegment.BaseClasses ** - An array with available base flight classes. The array data type.
-- ** ScheduleSegment.BaseClasses.BaseClass ** - The base flight class. The data type is enumeration. Possible values ​​are:
-    Economy - Economy class (both standard and premium).
+- ** ScheduleSegment.BaseClasses ** - array with available base flight classes. Data type - array.
+- ** ScheduleSegment.BaseClasses.BaseClass ** - base flight class. Data type - enumeration. Possible values:
+    - Economy - Economy class (both standard and premium).
     - Business - Business class (both standard and premium).
-    First - First class (both standard and premium).
+    - First - First class (both standard and premium).
     - Other - All other classes that do not belong to any of the above.
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
