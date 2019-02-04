@@ -18,6 +18,7 @@ taxonomy:
 -   **DepatureDateTime** - Дата и время отправления в формате yyyy-MM-ddTHH:mm:ss. Тип данных - строка.
 -   **ArrivalDateTime** - Дата и время прибытия в формате yyyy-MM-ddTHH:mm:ss. Тип данных - строка.
 -   **FlightTime** - Время в пути в минутах. Тип данных - целое 32 битное число.
+-   **NotAirplaneSegmentInd** - Признак/ идентификатор наземного сегмента. Тип данных- булевый
 
 ##### Пример
 
@@ -78,6 +79,7 @@ taxonomy:
                 <FlightTime>190</FlightTime>
                 <ETicket>true</ETicket>
               </FlightSegment>
+
             </FlightSegments>
             <FlightPriceGroups>
               <FlightPriceGroup/>
