@@ -66,7 +66,7 @@ Used to make changes to the booking with [booking version 2.0](/avia/common/book
 -  **Flight** - contains information about the changes in the flight that you want to make to the booking (optional). Data type - array.
 -  **Flight.Segments** - information about actions with flight segments. Data type - array.
 -  **Flight.Segments.Segment** - contains information about changes in one of the flight segments. Data type - array.
--  **Segment.Action** - An action with the segment that you want to execute. As of 03.09.2015, actions are not supported. Data type - enumeration, possible values:
+-  **Segment.Action** - action with the segment that you want to execute. As of 03.09.2015, actions are not supported. Data type - enumeration, possible values:
 	- Add
 	- Modify
 	- Remove
@@ -79,7 +79,7 @@ Used to make changes to the booking with [booking version 2.0](/avia/common/book
 -  **Segment.BookingClassCode** - booking class letter. Data type - string.
 -  **DataItems** - contains information about the changes in the content of the booking (optional). Data type - array.
 -  **DataItems.ModifyDataItem** - contains information about changes in one of the blocks of content data. Data type - array.
--  **ModifyDataItem.Action** - action with the content that you want to perform. As of 03/09/2015, it is supported only by changing existing content. Data type - enumeration, possible values:
+-  **ModifyDataItem.Action** - action with the content that it is required to perform. As of 03/09/2015, it is supported only by changing existing content. Data type - enumeration, possible values:
 	- Add
 	- Modify
 	- Remove
