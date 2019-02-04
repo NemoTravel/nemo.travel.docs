@@ -9,73 +9,73 @@ taxonomy:
 
 Search for v 1.2
 
->>>> The GDS restriction: requesting alternative airports alternative flight classes / fares  will not be requested for the Sabre GDS
+>>>> The GDS restriction: while requesting alternative airports, alternative flight classes/fares will not be requested for the Sabre GDS.
 
 #### Request
 
--  **RequestedFlightInfo** - contains information about the flight segments you want to find. The array data type.
--  **RequestedFlightInfo.Direct** - the indicator of search of only direct flights (optional). The data type is boolean.
--  **RequestedFlightInfo.AroundDates** - a value for searching by district dates (optional). The data type is an unsigned integer 32-bit number.
--  **RequestedFlightInfo.ODPairs** - contains information about the segments of the flight that you want to find. The array data type.
--  **RequestedFlightInfo.ODPair** - the segment of the flight you want to find. The array data type.
--  **RequestedFlightInfo.ODPair.DepatureDateTime** - the date and time from which the desired departure time begins. The data type is a string, the format is yyyy-MM-ddTHH: mm: ss.
--  **RequestedFlightInfo.ODPair.MaxDepatureTime** - the maximum-allowed departure time (optional). The data type is a string, the format is HH: mm.
--  **RequestedFlightInfo.ODPair.DepaturePoint** - Contains information about the departure point. The array data type.
--  **RequestedFlightInfo.ODPair.DepaturePoint.Code** - a 3 letter code of the airport / city of departure. The data type is a string.
--  **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** - a sign that the airport code of the airport city is indicated as the departure point (optional). The data type is boolean.
--  **RequestedFlightInfo.ODPair.DepatureAltPoints** - Contains a list of alternative departure airports / cities. The array data type (optional).
--  **RequestedFlightInfo.ODPair.DepatureAltPoints.AltPoint** - Contains information about the flight point. The array data type. The format is similar to the element **DepaturePoint**
--  **RequestedFlightInfo.ODPair.ArrivalPoint** - Contains information about the arrival point. The array data type. The format is similar to the element **DepaturePoint**
--  **RequestedFlightInfo.ODPair.ArrivalAltPoints** - Contains a list of alternative arrival airports / cities. The array data type. The format is similar to the element **DepatureAltPoints**
--  **RequestedFlightInfo.ODPair.ID** - The identifier of the element. Used when searching for options for exchange (optional).
--  **Passengers** - an array of information about passengers for whom you want to find a flight. The data type is an array.
--  **Passengers.Passenger** - the information about the type of passengers for whom you want to find a flight. The array data type.
--  **Passengers.Passenger.Type** - the type of passengers for which you want to find a flight. Data type - enumeration, possible values:
-    - ADT - adult - passenger over 12 years (default)
-	- UNN - child - passenger older than 2 and under 12 years of age - unaccompanied by an adult
-	- CNN - child - passenger over 2 and under 12 years of age
-	- INF - infant -  passenger under 2 years old - not occupying seats in the airplane
-	- INS - infant - passenger under 2 years old - occupying seats in the airplane
-	- MIL - military
-	- SEA - seaman
-	- SRC - elderly passenger
-	- STU - student
-	- YTH - youth
--  **Passengers.Passenger.Count** - number of passengers of this type for which you want to find a flight. The data type is an integer 32-bit number. It can not be less than 1.
--  **Restrictions** - contains various restrictions applied to search results (optional). The array data type.
--  **Restrictions.CurrencyCode** - a 3-letter code for the currency of the search results output. Data type - string. Parameter is no longer supported.
--  **Restrictions.CompanyFilter** - an array of filters for an airline. The data type is an array.
--  **Restrictions.CompanyFilter.Company** - the information about filtering on the airline. The data type is an array.
-- **Restrictions.CompanyFilter.Company.Code** - a 2-letter airline code, which will trigger the filter criteria. The data type is a string.
--  **Restrictions.CompanyFilter.Company.Include** - the type of filtering. The data type is boolean. If *** false *** is specified, the specified airline will be excluded from the search results if *** true *** is specified - only this airline will be present in the issuance, except the other airline specified in filter parameters with the parameter *** true *** .
--  **Restrictions.CompanyFilter.Company.SegmentNumber** - the number of the requested flight segment (numbering in this case from 1), for which this a / k is required. The data type is an integer 32-bit number.
--  **Restrictions.PrivateFaresOnly** - search only for private tariffs, default will be sought and private and public, where it is supported. The data type is boolean.
--  **Restrictions.ClassPreference** - Contains a list of preferred flight classes. The array data type.
--  **Restrictions.ClassPreference.ClassOfService** - the type of preferred flight class. Data type - enumeration, possible values:
-	- Economy - only economy class (default)
-	- Business - only business class
-	- First - first class only
-	- PremiumEconomy - premium economy
-	- All - all classes
--  **Restrictions.MaxConnectionTime** - The maximum time to connection in minutes. The data type is an integer 32 bit number. Only for GWS (Galileo Web Services).
--  **Restrictions.ResultsGrouping** - The grouping type of the issue. Data type - enumeration, possible values:
-	- Simple - (by default) simple grouping, the output is in the format GroupSearch v1.1
-	- Advanced - (not supported) advanced grouping
-	- None - without grouping, the output is in the format Search v1.1
--  **Restrictions.SourcePreference** (*debugging parameter, when the release is removed*) - the list of preferred sources of flights. The array data type.
--  **Restrictions.SourcePreference.Source** (*debugging parameter, when the release is removed*) - the ID of the preferred source of flights. The data type is an integer 32-bit number.
--  **Restrictions.RequestorTags** - Tags of the sender of the request. The data type is an array.
--  **Restrictions.RequestorTags.Tag** - One of the labels of the sender of the request, describing it by some criterion. The data type is a string.
--  **Restrictions.MaxResultCount** - Maximum number of flights in the GDS response. The data type is an integer 32 bit number.
--  **Restrictions.PriceRefundType** - The search price type in the searche request. Data type - enumeration, possible values:
-	-   AnyLowest - lowest prices (default)
-	-   Refundable - the lowest prices with the possibility of a free refund
-	-   Both - a set of search retrieval searches for minimum and minimum return prices
--  **Restrictions.AsyncSearch** - Query mode: (default) false - synchronous search as before, true - asynchronous search with the ability to pull out the portions of supplier responses. The data type is bool.
--  **Restrictions.Nemo2Pricing** - A sign of the need for pricing. The data type is bool.
--  **Restrictions.ThreeDomainAgreementNumber** - 3D Flow corporate number. The data type is a string.
--  **EndUserData** - End user data (optional). The array data type, the format is similar to the element * EndUserData * from the [DataItem](/avia/common/dataitem)
--  **SellingPointDescription** - The description of the point of sale (optional). The array data type, the format is similar to the element **SellingPointDescription** from [DataItem](/avia/common/dataitem)
+-  **RequestedFlightInfo** - contains information about the flight segments you want to find. Data type - array.
+-  **RequestedFlightInfo.Direct** - indicator of only direct flights search (optional). Data type - bool.
+-  **RequestedFlightInfo.AroundDates** - value for searching by district dates (optional). Data type - unsigned 32-bit integer .
+-  **RequestedFlightInfo.ODPairs** - contains information about the segments of the flight that you want to find. Data type - array.
+-  **RequestedFlightInfo.ODPair** - segment of the flight you want to find. Data type - array.
+-  **RequestedFlightInfo.ODPair.DepatureDateTime** - date and time from which the desired departure time begins. Data type - string, the format is <code>yyyy-mm-ddthh:mm:ss</code>.
+-  **RequestedFlightInfo.ODPair.MaxDepatureTime** - maximum-allowed departure time (optional). Data type - string, the format is <code>hh:mm</code>.
+-  **RequestedFlightInfo.ODPair.DepaturePoint** - contains information about the departure point. Data type - array.
+-  **RequestedFlightInfo.ODPair.DepaturePoint.Code** - 3-letter code of the airport/city of departure. Data type - string.
+-  **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** - attribute showing that the city code is used as the departure point (optional). Data type - bool.
+-  **RequestedFlightInfo.ODPair.DepatureAltPoints** - contains a list of alternative departure airports/cities. Data type - array. (optional).
+-  **RequestedFlightInfo.ODPair.DepatureAltPoints.AltPoint** - alternative flight point. Contains information about the flight point. Data type - array. The format is similar to the **DepaturePoint** element. 
+-  **RequestedFlightInfo.ODPair.ArrivalPoint** - contains information about the arrival point. Data type - array.  The format is similar to the **DepaturePoint** element.
+-  **RequestedFlightInfo.ODPair.ArrivalAltPoints** - Contains a list of alternative arrival points. Data type - array. The format is similar to the **DepatureAltPoints** element.
+-  **RequestedFlightInfo.ODPair.ID** - ID of the element. Used when searching for options for exchange (optional).
+-  **Passengers** - array of information about passengers for whom you want to find a flight. Data type - array.
+-  **Passengers.Passenger** - information about the type of passengers for whom you want to find a flight. Data type - array.
+-  **Passengers.Passenger.Type** - type of passengers for which you want to find a flight. Data type - enumeration, possible values: 
+  
+    - ADT - adult - a passenger over 12 years (default)
+    - UNN - child - a passenger older than 2 and under 12 years of age - unaccompanied by an adult
+    - CNN - child - passenger over 2 and under 12 years of age
+    - INF - infant - passenger under 2 years old - not occupying seats in the aircraft.
+    - INS - infant - passenger under 2 years old - occupying seats in the aircraft.
+    - MIL - military
+    - SEA - seaman
+    - SRC - elderly passenger
+    - STU - student
+    - YTH - youth
+-  **Passengers.Passenger.Count** - number of passengers of  chosen type for which you want to find a flight. Data type - 32-bit integer. Cannot be less than 1.
+-  **Restrictions** - contains various restrictions applied to search results (optional). Data type - array.
+-  **Restrictions.CurrencyCode** - 3-letter code for the currency of the search results output. Data type - string. Parameter is not supported.
+-  **Restrictions.CompanyFilter** - array of airline filters. Data type - array.
+-  **Restrictions.CompanyFilter.Company** - information about airline filtering. Data type - array.
+- **Restrictions.CompanyFilter.Company.Code** - 2-letter airline code which triggers the filter criteria. Data type - string.
+-  **Restrictions.CompanyFilter.Company.Include** - filtering type. Data type - bool. If <code>false</code> is indicated, the specified airline will be excluded from the search results; if <code>true</code> is indicated - only this airline will be present in the search results, except the other airline specified in filter parameters with the <code>true</code> parameter.
+-  **Restrictions.CompanyFilter.Company.SegmentNumber** - number of the requested flight segment (numbering from 1 in this case), for which this airline is required. Data type - 32-bit integer.
+-  **Restrictions.PrivateFaresOnly** - search only for private fares, by default both private and public fares will be searched for, where it is supported. Data type - bool.
+-  **Restrictions.ClassPreference** - contains a list of preferred flight classes. Data type - array.
+-  **Restrictions.ClassPreference.ClassOfService** - type of preferred flight class. Data type - enumeration, possible values:
+    - Economy - economy class only  (default)
+    - Business - business class only 
+    - First - first class only
+    - PremiumEconomy - premium economy
+    - All - all classes
+-  **Restrictions.MaxConnectionTime** - maximum connection time in minutes. Data type - 32-bit integer. Only for GWS (Galileo Web Services).
+-  **Restrictions.ResultsGrouping** - type of search results grouping. Data type - enumeration, possible values:
+    - Simple - (default) simple grouping, the output is in the [GroupSearch](/avia/grouping) format
+    - None - no grouping
+-  **Restrictions.SourcePreference** - list of preferred flight sources. Data type - array.
+-  **Restrictions.SourcePreference.Source** - ID of the preferred flight source. Data type - 32-bit integer.
+-  **Restrictions.RequestorTags** - request sender tags. Data type - array.
+-  **Restrictions.RequestorTags.Tag** - one of the request sender tags which describes it by some criterion. For example, with a “debug” tag in the response, a detailed ProcessingData block is returned. Data type - string.
+-  **Restrictions.MaxResultCount** - maximum number of flights in the GDS response. Data type - 32-bit integer.
+-  **Restrictions.PriceRefundType** - required price type in the search request. Data type - enumeration, possible values:
+    -   AnyLowest - the lowest prices (default)
+    -   Refundable - the lowest prices with the possibility of a free refund
+    -   Both - set of search retrieval searches for minimum and minimum return prices
+-  **Restrictions.AsyncSearch** - requestmode: false (default) - synchronous search as before, true - asynchronous search with the ability to pull out the portions of supplier responses. Data type - bool.
+-  **Restrictions.Nemo2Pricing** - attribute of the need for pricing. Data type - bool.
+-  **Restrictions.ThreeDomainAgreementNumber** - corporate client number in a three-party agreement. Data type - string.
+-  **EndUserData** - end user data (optional). Data type - array, the format is similar to the *EndUserData* element  from the [DataItem](/avia/common/dataitem)
+-  **SellingPointDescription** - description of the selling point (optional). Data type - array, the format is similar to the **SellingPointDescription** element from [DataItem](/avia/common/dataitem).
 
 ##### Sample
 
