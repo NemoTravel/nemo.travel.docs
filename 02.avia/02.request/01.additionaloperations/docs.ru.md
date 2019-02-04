@@ -200,6 +200,38 @@ taxonomy:
                 </SupplierInfo>
                 <RequestedSegment>0</RequestedSegment>
               </Segment>
+ 			<a:Segment>
+          <ID>2</ID>
+          <a:DepAirp>
+            <a:AirportCode>UKS</a:AirportCode>
+            <a:CityCode>UKS</a:CityCode>
+            <a:UTC>3</a:UTC>
+          </a:DepAirp>
+          <a:ArrAirp>
+            <a:AirportCode>SIP</a:AirportCode>
+            <a:CityCode>SIP</a:CityCode>
+            <a:UTC>3</a:UTC>
+          </a:ArrAirp>
+          <a:FlightNumber>148</a:FlightNumber>
+          <a:FlightTime>120</a:FlightTime>
+          <a:OpAirline>Э4</a:OpAirline>
+          <a:MarkAirline>Э4</a:MarkAirline>
+          <a:AircraftType>BUS</a:AircraftType>
+          <a:DepDateTime>2019-06-28T00:35:00</a:DepDateTime>
+          <a:ArrDateTime>2019-06-28T02:35:00</a:ArrDateTime>
+          <a:BookingClass>
+            <a:BaseClass>Economy</a:BaseClass>
+            <a:BookingClassCode>Y</a:BookingClassCode>
+            <a:FreeSeatCount>9</a:FreeSeatCount>
+          </a:BookingClass>
+          <a:ETicket>true</a:ETicket>
+          <a:SupplierInfo>
+            <a:Status>NN</a:Status>
+            <a:GeneralizedStatus>OnRequest</a:GeneralizedStatus>
+          </a:SupplierInfo>
+          <a:RequestedSegment>0</a:RequestedSegment>
+          <a:NotAirplaneSegmentInd>true</a:NotAirplaneSegmentInd>
+        </a:Segment>
             </Segments>
             <PriceInfo>
               <Price>
