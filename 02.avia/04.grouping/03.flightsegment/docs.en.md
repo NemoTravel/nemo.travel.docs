@@ -18,7 +18,7 @@ Contains the following parameters:
 -   **DepatureDateTime** - The date and time of departure in the format yyyy-MM-ddTHH: mm: ss. The data type is a string.
 -   **ArrivalDateTime** - The date and time of arrival in the format yyyy-MM-ddTHH: mm: ss. The data type is a string.
 -   **FlightTime** - The flight time in minutes. The data type is an integer 32-bit number.
-
+-   **NotAirplaneSegmentInd** - Ground/ not airplane segment identifier. Data type: boolean
 ##### Example
 
 ```xml
@@ -77,6 +77,7 @@ Contains the following parameters:
                 <ArrivalDateTime>2017-09-06T09:35:00</ArrivalDateTime>
                 <FlightTime>190</FlightTime>
                 <ETicket>true</ETicket>
+		 <a:NotAirplaneSegmentInd>false</a:NotAirplaneSegmentInd>
               </FlightSegment>
             </FlightSegments>
             <FlightPriceGroups>
