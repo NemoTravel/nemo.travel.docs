@@ -23,7 +23,7 @@ taxonomy:
 -   **RequestBody.ResponseParameters.Language** - язык ответа. Тип данных - строковый.
 -   **RequestBody.ResponseParameters.SendStaticData** - возвращать ли статику в ответе. Тип данных - булевый.
 
-   **Пример**
+#### Пример
       ```xml  
     <Requisites>
     <Login>Login</Login>
@@ -32,9 +32,10 @@ taxonomy:
   <UserID>30328</UserID>
   <RequestType>P</RequestType>
     ```  
-    При авторизации через Nemo.Travel, заказы экспортируются при условии, что тип запроса был отличный от **P**.  Запросы с типом **P** не экспортируются.
+При авторизации через Nemo.Travel, заказы экспортируются при условии, что тип запроса был отличный от **P**.  Запросы с типом **P** не экспортируются.
     
- **Пример**
+#### Пример
+
    ```xml    
       <Requisites>
     <NemoOneAuthToken>***</NemoOneAuthToken>
