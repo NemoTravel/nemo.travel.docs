@@ -35,8 +35,7 @@ taxonomy:
 При авторизации через Nemo.Travel, заказы экспортируются при условии, что тип запроса был отличный от **P**.  Запросы с типом **P** не экспортируются.
     
 #### Пример
-
-   ```xml    
+        ```xml    
       <Requisites>
     <NemoOneAuthToken>***</NemoOneAuthToken>
   </Requisites>
