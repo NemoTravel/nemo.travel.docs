@@ -28,18 +28,19 @@ taxonomy:
     <Requisites>
     <Login>Login</Login>
     <Password>Password</Password>
-  </Requisites>
-  <UserID>30328</UserID>
-  <RequestType>P</RequestType>
+    </Requisites>
+    <UserID>30328</UserID>
+    <RequestType>P</RequestType>
     ```  
 При авторизации через Nemo.Travel, заказы экспортируются при условии, что тип запроса был отличный от **P**.  Запросы с типом **P** не экспортируются.
     
 #### Пример
+
         ```xml    
       <Requisites>
     <NemoOneAuthToken>***</NemoOneAuthToken>
-  </Requisites>
-  <UserID>9815</UserID>
-  <RequestType>U</RequestType>
+    </Requisites>
+    <UserID>9815</UserID>
+    <RequestType>U</RequestType>
   ```  
   
