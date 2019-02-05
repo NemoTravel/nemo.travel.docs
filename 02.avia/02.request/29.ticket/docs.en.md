@@ -7,17 +7,17 @@ taxonomy:
 
 ### Ticket_2_0
 
-Ticketing for the booking with the support of API 2.0.
+Ticketing for the booking with the support of API 2.0. **ATTENTION**! *TicketDesignator* element from the version 1.х should be transferred as the AuthCode value for the Discount element with Percent = 0.
 
 #### Ticket_2_2
 The latest version of the request, differences are only in the response in the additional services block from the [Book_2_2](/avia/request/bookflight) request.
 
 #### Request
 
--  **BookID** - The booking ID that should be ticketed. The data type is long.
--  **DataItems** - the booking content required for a correct ticketing (optional). The data type is an array of [DataItem](/avia/common/dataitem).
+-  **BookID** - ID of the booking that should be ticketed. Data type - long.
+-  **DataItems** - booking content required for a correct ticketing (optional). Data type - [DataItem](/avia/common/dataitem) array.
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -64,7 +64,7 @@ The latest version of the request, differences are only in the response in the a
 
 [Book version 2.0](/avia/common/book).
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
