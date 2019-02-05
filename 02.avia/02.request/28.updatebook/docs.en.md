@@ -14,15 +14,15 @@ The latest version of the request, differences are only in the response to the r
 
 #### Request
 
--  **BookID** - The booking ID that you want to update. The data type is long.
--  **CancelPayment** - A sign of the need to cancel the old payment of the booking (optional). The data type is boolean.
--  **PricingOptions** - additional options for charging the booking (optional). The array data type.
--  **PricingOptions.FOPsForAlternativePrices** - FOP for which you need to get an additional estimate of the booking. The data type is an array.
--  **PricingOptions.FOPsForAlternativePrices.Type** - FOP, for which you need to get an estimate of the booking. The data type is a string.
--  **PricingOptions.NoReprice** - Turns off the re-pricing (actualization of the price) booking, supported for Galileo, Sabre, Amadeus, SITAGabriel, uAPI. The data type is bool.
+-  **BookID** - ID of the booking that you want to update. Data type - long.
+-  **CancelPayment** - attribute of the need to cancel the old booking payment (optional). Data type - bool.
+-  **PricingOptions** - additional options for tariffing of the booking (optional). Data type - array.
+-  **PricingOptions.FOPsForAlternativePrices** - FOPs for which you need to get an additional estimation of the booking. Data type - array.
+-  **PricingOptions.FOPsForAlternativePrices.Type** - FOP, for which you need to get an additional estimation of the booking. Data type - string.
+-  **PricingOptions.NoReprice** - turns off the re-pricing (actualization of the price) of the booking, supported for Galileo, Sabre, Amadeus, SITAGabriel, uAPI. Data type - bool.
 
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -47,7 +47,7 @@ The latest version of the request, differences are only in the response to the r
 
 [2.0 version Booking](/avia/common/book).
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
