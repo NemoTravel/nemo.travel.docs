@@ -14,10 +14,10 @@ The latest version of the request, differences are only in the response to the r
 
 ### VoidEMD_1_1
 #### Request format
-* **BookID** - ID of the booking for which the operation is performed. The data type is long.
-* **ServiceRefs** - List of IDs of the ancillary services  in the booking for which an operation is required. The data type is an integer array.
-* **ServiceRefs.Ref** - ID of the ancillary service in the booking for which the operation is required. The data type is integer.
-#### Request example 
+* **BookID** - ID of the booking for which the operation is performed. Data type - long.
+* **ServiceRefs** - list of IDs of the ancillary services in the booking for which an operation is required. Data type - integer array.
+* **ServiceRefs.Ref** - ID of the ancillary service in the booking for which the operation is required. Data type - integer.
+#### Sample request  
 
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avia="http://nemo-ibe.com/Avia" xmlns:stl="http://nemo-ibe.com/STL">
@@ -47,12 +47,12 @@ The latest version of the request, differences are only in the response to the r
     ```
  ### VoidEMD_1_0
 
-#### Request Format
+#### Request format
 
--  **BookID** - The booking ID , including the EMD, which you need to void. The data type is long.
--  **AncillaryServices** - List of ancillary services for the void. The data type is similar - AncillaryServices from the query [IssueEMD](/avia/request/issueemd).
+-  **BookID** - ID of the booking, to which the EMD is related, which you need to void. Data type - long.
+-  **AncillaryServices** - list of ancillary services for voiding. The data type is similar - AncillaryServices from the query [IssueEMD](/avia/request/issueemd).
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -86,7 +86,7 @@ The latest version of the request, differences are only in the response to the r
 
 [Booking 2.0](/avia/common/book).
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
