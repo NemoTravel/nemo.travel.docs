@@ -147,4 +147,6 @@ Flight presentation format 1.1.
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty.Amount** - the amount of the penalty. The data type is a fractional number.
 -   **PassengerFare.ExchangePriceInfo.FlightPriceDifference** - the difference in the cost with the flight in the booking. If the flight is cheaper, the difference will be with a "-" sign. The data type is [Money](/avia/common/money).
 -   **Flight.FareFamiliesDescription** - contains descriptions of the tfare families presenting in the flight. The data type is [Description](/avia/common/ff-description).
+-   **Flight.CanHaveSubsidizedTariffs** - attribute of the possibility to apply subsidies to this fare. Data type - bool.
+-   **Flight.BookingURL** - URL to which the user will be redirected for the following flight registration. Data type - string.
 
