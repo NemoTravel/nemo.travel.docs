@@ -90,8 +90,8 @@ taxonomy:
 -   **PassengerFare.Quantity** — количество пассажиров данного типа. Тип данных — целое 32-битное число.
 -   **PassengerFare.PricedAs** — ценовой тип пассажира, для которого была получена цена для данного типа пассажира от GDS. Тип данных — строка.
 -   **PassengerFare.BaseFare** — базовая цена (чисто тарифы без такс) для 1 пассажира данного типа. Тип данных — [Money](/avia/common/money).
-<!--   **PassengerFare.BaseFare.Currency** — код валюты базовой цены. Тип данных — строка.
-   **PassengerFare.BaseFare.Amount** — сумма базовой цены. Тип данных — дробное число. -->
+-   **PassengerFare.BaseFare.Currency** — код валюты базовой цены. Тип данных — строка.
+-   **PassengerFare.BaseFare.Amount** — сумма базовой цены. Тип данных — дробное число. -->
 -   **PassengerFare.EquiveFare** — базовая цена в эквивалентной валюте для 1 пассажира данного типа. Тип данных — [Money](/avia/common/money).
 -   **PassengerFare.TotalFare** — полная цена (тарифы + таксы) для 1 пассажира данного типа в эквивалентной валюте. Тип данных — [Money](/avia/common/money).
 -   **PassengerFare.Taxes** — контейнер для такс данной ценовой составляющей. Тип данных — сложный.
@@ -119,7 +119,7 @@ taxonomy:
     -   **SpecialCharge** — спецкладь;
     -   **Size** — размер багажа;
 <!--     -   **ValueOfMeasure** — какое-то значение, взято из документации GDS; -->
-    -   **Weight** — вес.
+   -    **Weight** — вес.
 -   **PassengerFare.Tariffs.Tariff.FreeBaggage.Value** — количество бесплатного багажа по данному тарифу. Тип данных — строка.
 -   **PassengerFare.Tariffs.Tariff.FareFamilyDescID** — идентификатор описания семейства тарифов. Тип данных — целое число.
 -   **PassengerFare.Tariffs.Tariff.FareFamilyCode** — код авиакомпании семейства тарифов. Тип данных — строка.
