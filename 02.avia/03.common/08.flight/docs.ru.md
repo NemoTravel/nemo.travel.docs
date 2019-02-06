@@ -123,6 +123,7 @@ taxonomy:
 -   **PassengerFare.Tariffs.Tariff.FreeBaggage.Value** — количество бесплатного багажа по данному тарифу. Тип данных — строка.
 -   **PassengerFare.Tariffs.Tariff.FareFamilyDescID** — идентификатор описания семейства тарифов. Тип данных — целое число.
 -   **PassengerFare.Tariffs.Tariff.FareFamilyCode** — код авиакомпании семейства тарифов. Тип данных — строка.
+-   **PassengerFare.Tariffs.Tariff.SubsidyInfoID** - номер подходящего пакета субсидий для этого тарифа. Тип данных - целое 32-битное число.
 -   **PassengerFare.Commission** — информация о комиссии для данной ценовой составляющей от GDS. Тип данных — сложный.
 -   **PassengerFare.Commission.Amount** — абсолютное значение комиссии. Тип данных — дробное число.
 -   **PassengerFare.Commission.Percent** — значение комиссии в процентах. Тип данных — дробное число.
@@ -165,5 +166,6 @@ taxonomy:
 -   **Flight.Price.SubAgentMarkup** - сбор субагента за весь перелёт. Тип данных — [Money](/avia/common/money).
 -   **Flight.Price.SubAgentChargeBreakdown** — разбивка составляющих сбора субагента по правилам (расчитан по правилам ценообразования). Тип данных — [ChargeBreakdown](/avia/common/chargebreakdown).
 -   **Flight.FareFamiliesDescription** — содержит описания семейств тарифов, присутствующих в перелёте. Тип данных — [Description](/avia/common/ff-description).
+-   **Flight.CanHaveSubsidizedTariffs** - признак возможности применения субсидий к данному тарифу. Тип данных - булев.
 -   **Flight.BookingURL** - URL, на который будет перенаправлен пользователь для последующего оформления перелета. Тип данных - строка.
 
