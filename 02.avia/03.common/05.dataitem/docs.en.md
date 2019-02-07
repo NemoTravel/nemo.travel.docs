@@ -285,41 +285,41 @@ To store different booking content.
 - **PNRFOP.FOPs.FOP** - one of the FOPs in the booking. Data type - array.
 - **PNRFOP.FOPs.FOP.Type** - FOP type. Data type - enumeration, possible values:
     - **CA** - cash
-    - **CC** - a credit card
-    - **CK** - a check, bank check
-    - **IN** - an invoice
+    - **CC** - credit card
+    - **CK** - bank check
+    - **IN** - invoice
 - **PNRFOP.FOPs.FOP.CreditCardNumber** - masked credit card number, if the payment formats are a credit card. Data type - string.
 - **PNRFOP.FOPs.FOP.Number** - FOP number in the PNR.
 - **SubagentCommission** - subagent commission (optional). The data type is CommissionDataItem:
-- **TicketDesignator** - The information about the ticket designator for prescribing to the booking (optional). The array data type.
-- **TicketDesignator.Value** - The value of the ticket designator for prescription in the booking. The data type is a string.
-- **Markup** - The information about the charge of the agent (optional). The array data type.
-- **Markup.MarkupValue** - The value of the agent charge. The data type is [Money](/avia/common/money).
-- **Markup.VAT** - VAT data. The array data type.
-- **Markup.VAT.VATValue** - The amount of VAT. The data type is [Money](/avia/common/money).
-- **Markup.VAT.VATRate** - VAT rate in%. The data type is double.
-- **TicketingProxy** - The data for ticketing proxy throught the payment gateway (optional). The array data type.
-- **TicketingProxy.Gateway** - The payment gateway through which payment was made. Data type - enumeration, valid value:
+- **TicketDesignator** - information about the ticket designator for adding to the booking (optional). Data type - array.
+- **TicketDesignator.Value** - The value of the ticket designator for prescription in the booking. Data type - string.
+- **Markup** - The information about the charge of the agent (optional). Data type - array.
+- **Markup.MarkupValue** - The value of the agent charge. Data type - [Money](/avia/common/money).
+- **Markup.VAT** - VAT data. Data type - array.
+- **Markup.VAT.VATValue** - VAT amount. Data type - [Money](/avia/common/money).
+- **Markup.VAT.VATRate** - VAT rate in percents. Data type - double.
+- **TicketingProxy** - data for ticketing proxy through the payment gateway (optional). Data type - array.
+- **TicketingProxy.Gateway** - payment gateway through which the payment was made. Data type - enumeration, valid value:
     - **platron**
     - **uniteller**
-- **TicketingProxy.ProxingParams** - Get parameters necessary to correctly ticketing proxy. The data type is a string.
-- **CRMIntegration** - This is for prescribing in PNR for integration with CRM / BO systems working with supplier systems (optional). The array data type.
-- **CRMIntegration.ClientID** - The agent / subagent ID in the CRM / BO system. The data type is a string.
-- **CRMIntegration.NemoClientID** - The agent / subagent ID in Nemo. The data type is int.
-- **CRMIntegration.OrderID** - The order ID in Nemo. The data type is a string.
-- **CRMIntegration.PricingRuleID** - The ID of the worked out price rule in Nemo. The data type is int.
-- **CRMIntegration.PaymentGateway** - The  payment gateway / Payment method. The data type is a string.
-- **CRMIntegration.PaymentGatewayMarkup** - The payment gateway markup. The array data type.
-- **CRMIntegration.SalesChannel** - The sales channel. The data type is enumeration, valid value:
+- **TicketingProxy.ProxingParams** - GET-parameters necessary for correct proxying of the ticketing. Data type - string.
+- **CRMIntegration** - data for prescribing in PNR for integration with CRM/BO systems working with supplier systems (optional). Data type - array.
+- **CRMIntegration.ClientID** - agent/subagent ID in the CRM/BO system. Data type - string.
+- **CRMIntegration.NemoClientID** - agent/subagent ID in Nemo. Data type - int.
+- **CRMIntegration.OrderID** - order ID in Nemo. Data type - string.
+- **CRMIntegration.PricingRuleID** - ID of the triggered pricing rule in Nemo. Data type - int.
+- **CRMIntegration.PaymentGateway** -  payment gateway/payment method. Data type - string.
+- **CRMIntegration.PaymentGatewayMarkup** - payment gateway markup. Data type - array.
+- **CRMIntegration.SalesChannel** - sales channel. Data type - enumeration, valid value:
     - **Meta**
     - **API**
     - **AgentSite**
-- **EndUserData** - End user data of the system (optional). The array data type.
-- **EndUserData.EndUserIP** - The IP address of the end user. The data type is a string.
-- **EndUserData.EndUserBrowserAgent** - Identify the client software of the final user. The data type is a string.
-- **EndUserData.RequestOrigin** - The origin source of the transition. The data type is a string.
-- **SellingPointDescription** - The description of the point of sale (optional). The array data type.
-- **SellingPointDescription.SubAgencyID** - The ID of the extrabudgetary subagency. The data type is an integer 32-bit number.
+- **EndUserData** - end user data of the system (optional). Data type - array.
+- **EndUserData.EndUserIP** - IP address of the end user. Data type - string.
+- **EndUserData.EndUserBrowserAgent** - Identify the client software of the final user. Data type - string.
+- **EndUserData.RequestOrigin** - original source of the transition. Data type - string.
+- **SellingPointDescription** - description of the selling point (optional). Data type - array.
+- **SellingPointDescription.SubAgencyID** - ID of the external subagency. Data type - 32-bit integer.
 
 #### Sample
 
