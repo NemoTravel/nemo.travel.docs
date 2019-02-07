@@ -16,9 +16,9 @@ The booking of a basic service with a set of ancillary services from the supplie
 -   **PossibleActions** - a list of valid actions with this booking. Data type - [PossibleActions](/avia/common/possibleactions).
 -   **Travelers** - list of travelers for whom this booking was created. Data type - [Traveller](/avia/common/traveller) array.
 -   **Services** - list of basic services reserved within this booking. Data type - [Service](/avia/common/service) array .
--   **AncillaryServices** - a list of ancillary services from the supplier booked within this booking. Data type - [Service](/avia/common/service) array.
--   **ProcessingServices** - a list of processing services. Data type - [ProcessingService](/avia/common/processingservice) array.
--   **Price** - price of the booking. Data type - [Price](/avia/common/price).
+-   **AncillaryServices** - list of supplier's ancillary services reserved within this booking. Data type - [Service](/avia/common/service) array.
+-   **ProcessingServices** - list of processing services. Data type - [ProcessingService](/avia/common/processingservice) array.
+-   **Price** - booking price. Data type - [Price](/avia/common/price).
 -   **DataItems** - content of the booking. Data type - [DataItem](/avia/common/dataitem).
 
 #### Sample
