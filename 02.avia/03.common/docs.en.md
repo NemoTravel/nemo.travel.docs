@@ -11,9 +11,9 @@ All the requests and responses of the Avia Server have a certain number of commo
 -   **Requisites** - server access requisites. Data type - custom. 
 -   **Requisites.Login** - server access login. Data type - string.
 -   **Requisites.Password** - server access password. Data type - string.
--   **Requisites.UserContextId** - ID of the user by which the preferences will be applied (request filters, currency rates, pricing, flight cloning, router, mixer, airlines' timetable). Data type - string. 
+-   **Requisites.UserContextId** - ID of the user to which the preferences will be applied (request filters, currency rates, pricing, flight cloning, router, mixer, airlines timetable). Data type - string. 
 -   **Requisites.AuthToken** - server access key. Data type - string. It is required to specify either this key or the login+password pair.
--   **RequestType** - request initializer type. Data type - enumeration, possible values: тип инициализатора запроса. Тип данных - перечисление, возможные значения:
+-   **RequestType** - request initializer type. Data type - enumeration, possible values: 
     -   **0 (U)** - user (default)
     -   **1 (F)** - background
     -   **2 (S)** - scheduled
