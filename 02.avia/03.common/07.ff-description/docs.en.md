@@ -32,7 +32,7 @@ Describe the services of the fare families.
 -   **Description.Refundable** - refundable ticket on this fare families. Data type - enumeration, the set of values is similar to the price refund.
 -   **Description.PerSegmentRefundPenalty** - airline penalty for refunded flights. Data type - [Money](/avia/common/money).
 -   **Description.PerTicketRefundPenalty** - airline penalty for ticket refund. Data type - [Money](/avia/common/money).
--   **Description.Exchangable** - The possibility of ticket exchange. Data type - bool.
+-   **Description.Exchangable** - possibility of ticket exchange. Data type - bool.
 -   **Description.PerSegmentExchangePenalty** - airline ticket exchange penalty per segment. Data type - [Money](/avia/common/money).
 -   **Description.PerTicketExchangePenalty** - airline penalty for ticket exchange. Data type - [Money](/avia/common/money).
 -   **Description.FlownMiles** - percentage of miles credited to the passenger's loyalty card. Data type - integer.
