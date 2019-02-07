@@ -13,12 +13,13 @@ The booking of a basic service with a set of ancillary services from the supplie
 -   **ID** - unique ID of this booking. Data type - long.
 -   **OwnerID** - owner's booking ID in the system. Data type - int32.
 -   **DateInfo** - information about the time of various events from this booking. Data type - [DateInfo](/avia/common/dateinfo).
--   **PossibleActions** - a list of valid actions with this booking. Data type - [PossibleActions](/avia/common/possibleactions).
+-   **PossibleActions** - list of valid actions with this booking. Data type - [PossibleActions](/avia/common/possibleactions).
 -   **Travelers** - list of travelers for whom this booking was created. Data type - [Traveller](/avia/common/traveller) array.
 -   **Services** - list of basic services reserved within this booking. Data type - [Service](/avia/common/service) array .
 -   **AncillaryServices** - list of supplier's ancillary services reserved within this booking. Data type - [Service](/avia/common/service) array.
 -   **ProcessingServices** - list of processing services. Data type - [ProcessingService](/avia/common/processingservice) array.
 -   **Price** - booking price. Data type - [Price](/avia/common/price).
+-   **AgencyPrice** - booking price in agency's selling currency. Data type - [AgencyPrice](/avia/common/agencyprice). **It is returned only in responses to requests of version 2.2 and newer**.
 -   **DataItems** - content of the booking. Data type - [DataItem](/avia/common/dataitem).
 
 #### Sample
