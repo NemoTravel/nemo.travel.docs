@@ -7,9 +7,9 @@ taxonomy:
 
 ### ArbitraryService
 
-The arbitary ancillary service. Just a text description of some service that the agent provides to the traveler.
+The arbitrary ancillary service. It is simply a text description of some service that the agent provides to the traveler.
 
--   **PreDefinedServiceID** - the ID of the predefined arbitrary service. The data type is Int32.
--   **Name** - the name of the service. The data type is a string.
--   **ShortDescription** - a short description. The data type is a string.
--   **Description** - a full description of the service. The data type is a string.
+-   **PreDefinedServiceID** - ID of the predefined arbitrary service. Data type - int32.
+-   **Name** - service name. Data type - string.
+-   **ShortDescription** - short description. Data type - string.
+-   **Description** - full service description. Data type - string.
