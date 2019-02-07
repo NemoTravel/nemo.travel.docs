@@ -8,20 +8,20 @@ taxonomy:
 Book
 ----
 
-The booking of a  basic service with a set of ancillary services from the supplier.
+The booking of a basic service with a set of ancillary services from the supplier.
 
--   **ID** - the unique ID of this booking. The data type is long.
--   **OwnerID** - The owner's booking ID in the system. The data type is int32.
--   **DateInfo** - the information about the time of various events from this booking. The data type is [DateInfo](/avia/common/dateinfo).
--   **PossibleActions** - a list of valid actions with this booking. The data type is [PossibleActions](/avia/common/possibleactions).
--   **Travelers** - a list of travelers for whom this booking was created. The data type is an array [Traveller](/avia/common/traveller).
--   **Services** - a list of basic services booked within this booking. The data type is the [Service](/avia/common/service) array .
--   **AncillaryServices** - a list of ancillary services from the supplier booked within this booking. The data type is the [Service](/avia/common/service) array.
--   **ProcessingServices** - a list of processing services. The data type is an array [ProcessingService](/avia/common/processingservice)
--   **Price** - the price of the booking. The data type is [Price](/avia/common/price).
--   **DataItems** - The booking content. The data type is [DataItem](/avia/common/dataitem).
+-   **ID** - unique ID of this booking. Data type - long.
+-   **OwnerID** - owner's booking ID in the system. Data type - int32.
+-   **DateInfo** - information about the time of various events from this booking. Data type - [DateInfo](/avia/common/dateinfo).
+-   **PossibleActions** - a list of valid actions with this booking. Data type - [PossibleActions](/avia/common/possibleactions).
+-   **Travelers** - list of travelers for whom this booking was created. Data type - [Traveller](/avia/common/traveller) array.
+-   **Services** - list of basic services reserved within this booking. Data type - [Service](/avia/common/service) array .
+-   **AncillaryServices** - a list of ancillary services from the supplier booked within this booking. Data type - [Service](/avia/common/service) array.
+-   **ProcessingServices** - a list of processing services. Data type - [ProcessingService](/avia/common/processingservice) array.
+-   **Price** - price of the booking. Data type - [Price](/avia/common/price).
+-   **DataItems** - content of the booking. Data type - [DataItem](/avia/common/dataitem).
 
-### Example
+#### Sample
 
     <ResponseBody>
         <ID>140819</ID>
