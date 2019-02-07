@@ -9,31 +9,31 @@ taxonomy:
 
 Each of the base and ancillary services is inherited from the BaseService class and contains the following fields:
 
--   **ID** - The ID of this service within this object (booking / order). The data type is Int32.
--   **SupplierID** - The ID of the service in the supplier's system. The data type is a string.
--   **IsOffline** - A sign of offline services. The data type is bool.
--   **Status** - the status of the service in the supplier's system. Data type - enumeration **PNRStatus**, possible values:
-    -   Booked
-    -   Canceled
-    -   Ticketed
-    -   AwaitingTicketing - mainly for cases with charters, when the booking was sent to the queue for the ticketing.
-    -   Partial - part of the booking / order is in one condition, the rest in the other (for example, partially booked reservation, or different services having different statuses)
-    -   Requested
-    -   Rejected
-    -   Problematic - the problematic booking / order / service, if this status is available in the sub-statuses, it is indicated what exactly is wrong with the booking
--   **SubStatus** - The list of sub-statuses clarifying the current status of the service. The data type is enumeration, possible values:
-	-   InvalidSegmentStatus
-	-   SegmentStatusForManualConfirmation - if for some reason it was not possible to automatically confirm them (meaning TK / KK statuses)
-	-   HaveNotStoredTickets - the active ticket issued is not in the PNR
-	-   NotActualTicketStatus - one of the tickets in PNR has not the actual status - basically it is specific for glitches of the test environment of different GDS and Galileo after entering
-	-   NoValidFare - the NDP in the GDS has no active and valid price, Galileo's specifics in general
-	-   UnremovedVoidedTicketElements - specific in Amadeus
-	-   PaidBook - Siren, when the NDP was paid through their PN, but for some reason he did not sign out yet.
-	-   FailedToActualizePrice - Failed to get the current price for the booking
-	-   UnconfirmedInfant - the unconfirmed baby, manual processing is required.
-	-   UnconfirmedLoyaltyCard - the unconfirmed loyalty card.
--   **TravelerRef** - the reference to the travelers to whom the service belongs. If the service is applied to all travelers, then the element is not specified. The data type is the [RefList](/avia/common/reflist) array.
--   **TravelerRef.Ref** - a link to a particular traveler within the booking / order. The data type is Int32.
+-   **ID** - ID of this service within this object (booking/order). Data type - int32.
+-   **SupplierID** - ID of this service in the supplier's system. Data type - string.
+-   **IsOffline** - attribute of offline service. Data type - bool.
+-   **Status** - status of the service in the supplier's system. Data type - **PNRStatus** enumeration, possible values:
+    -   **Booked**;
+    -   **Canceled**;
+    -   **Ticketed**;
+    -   **AwaitingTicketing** - mainly appears in cases with charters, when the booking was sent to the queue for the ticketing.
+    -   **Partial** - part of the booking/order is in one condition, the rest is in the other (for example, partially booked reservation, or different services having different statuses)
+    -   **Requested**;
+    -   **Rejected**;
+    -   **Problematic** - problematic booking/order/service; if this status is available in the sub-statuses, the exact problem is indicated
+-   **SubStatus** - list of sub-statuses clarifying the current status of the service. Data type - enumeration, possible values:
+	-   **InvalidSegmentStatus**
+	-   **SegmentStatusForManualConfirmation** - appears in cases when for some reason it was not possible to automatically confirm segments (meaning TK/KK statuses)
+	-   **HaveNotStoredTickets** - active ticket issued is not in the PNR
+	-   **NotActualTicketStatus** - one of the tickets in the PNR has the irrelevant status - basically it is specific for glitches of the test environment of different GDS and Galileo after voiding
+	-   **NoValidFare** - PNR in the GDS has no active and valid price (GDS Galileo's specifics)
+	-   **UnremovedVoidedTicketElements** - specific for Amadeus
+	-   **PaidBook** - PNR is paid through the Sirena payment gateway but has not yet been ticketed
+	-   **FailedToActualizePrice** - failed to get the current price for the booking
+	-   **UnconfirmedInfant** - unconfirmed baby, manual processing is required.
+	-   **UnconfirmedLoyaltyCard** - unconfirmed loyalty card.
+-   **TravelerRef** - reference to the travelers to whom the service relate. If the service is applied to all travelers, then the element is not specified. Data type - [RefList](/avia/common/reflist) array.
+-   **TravelerRef.Ref** - reference to a particular traveler within the booking/order. Data type - int32.
 
 ### Flight service
 
@@ -41,58 +41,60 @@ The description of the flight
 
 #### Format Description 
 
--  **Type** - The type of the flight. The data type is enumeration, possible values:
-    -   Regular
-    -   Charter
-    -   LowCost
--   **DirectionType** - The type of the flight direction. The data type is an enumeration (similar to **DirectionType** in [Flight](/avia/common/flight)), possible values:
-    -   OW
-    -   RT
-    -   CT
-    -   SingleOJ
-    -   DoubleOJ
-    -   hRT
-    -   mOW - The flight is a possible leg of multi-flight 
--   **Segments** - The flight segments. The data type is an array of [FlightSegment](/avia/grouping/flightsegment) elements.
--   **FlightSegment** - The flight segment. The array data type.
--   **FlightSegment.ID** - The segment ID within this flight. The data type is Int32.
--   **FlightSegment.DepatureAirport** - The information about the departure airport. The data type is TripPointInformation.
--   **FlightSegment.DepatureAirport.Code** - The Airport code. The data type is a string.
--   **FlightSegment.DepatureAirport.SubPointCode** - The terminal code. The data type is a string.
--   **FlightSegment.DepatureAirport.CityCode** - The city code, if airports have an aggregation. The data type is a string.
--   **FlightSegment.DepatureAirport.UTC** - The time zone. The data type is float.
--   **FlightSegment.ArrivalAirport** - The arrival airport information. The data type is TripPointInformation. The format is the same as FlightSegment.DepatureAirport.
--   **FlightSegment.StopPoints** - Stop points on this segment. The data type is an array of StopPoint elements.
--   **FlightSegment.StopPoints.StopPoint** - The stop point on this segment. The array data type, the successor to TripPointInformation.
--   **FlightSegment.StopPoints.StopPoint.Code** - The Airport code. The data type is a string.
--   **FlightSegment.StopPoints.StopPoint.CityCode** - The city code, if airports have an aggregation. The data type is a string.
--   **FlightSegment.StopPoints.StopPoint.UTC** - The time zone. The data type is float.
--   **FlightSegment.StopPoints.StopPoint.ArrDateTime** - The date and time of the arrival to the stop point. The data type is the date and time.
--   **FlightSegment.StopPoints.StopPoint.DepDateTime** - The date and time of the departure from the stop point. The data type is the date and time.
--   **FlightSegment.StopPoints.StopPoint.PassengerLanding** - A sign of disembarking passengers from an airplane. The data type is bool.
--   **FlightSegment.DepatureDateTime** - The date and time of segment departure, local for the departure airport. The data type is the date and time.
--   **FlightSegment.ArrivalDateTime** - The date and time of segment arrival, local for the arrival airport. The data type is the date and time.
--   **FlightSegment.FlightTime** - The total travel time on this segment. The data type is Int32.
--   **FlightSegment.FlightNumber** - The flight number. The data type is a string.
--   **FlightSegment.AircraftType** - The Aircraft type code. The data type is a string.
--   **FlightSegment.OperatingAirline** - The airline code, whose airplane is carrying passengers. The data type is a string.
--   **FlightSegment.MarketingAirline** - The airline code that performs the sale of seats on this flight. The data type is a string.
--   **FlightSegment.Charterer** - The charterer of seats sold. The data type is a string.
--   **FlightSegment.ETicket** - Flight segments. The data type is bool.
--   **FlightSegment.BookingClassCode** - The booking class's letters to this segment. The data type is a string.
--   **FlightSegment.Status** - The segment status. The data type is enumeration, possible values:
-    -   Confirmed
-    -   NeedConfirmation
-    -   NotConfirmed
-    -   Canceled
-    -   Flew
-    -   OnRequest
-    -   Rejected
--   **FlightSegment.StatusCode** - The industrial segment status code. The data type is a string.
--   **FlightSegment.SupplierRef** - The booking ID of the segment in the inventory airline system. The data type is a string.
--   **FlightSegment.RequestedSegment** - A segment reference from the user's request. The data type is Int32.
+-  **Type** - flight type. Data type - enumeration, possible values:
+    -   **Regular**
+    -   **Charter**
+    -   **LowCost**
+-   **DirectionType** - type of the flight direction. The data type is an enumeration (similar to **DirectionType** in [Flight](/avia/common/flight)), possible values:
+    -   OW - one direction
+    -   RT - round trip
+    -   CT - complex trip
+    -   SingleOJ - single open jaw
+    -   DoubleOJ - double open jaw
+    -   hRT - RT/2
+    -   mOW - flight is a possible leg of a multi-OW flight 
+-   **Segments** - flight segments. Data type - array of [FlightSegment](/avia/grouping/flightsegment) elements.
+-   **FlightSegment** - flight segment. Data type - array.
+-   **FlightSegment.ID** - ID of the segment within this flight. Data type - int32.
+-   **FlightSegment.DepatureAirport** - information about the departure airport. Data type - TripPointInformation.
+-   **FlightSegment.DepatureAirport.Code** - airport code. Data type - string.
+-   **FlightSegment.DepatureAirport.SubPointCode** - terminal code. Data type - string.
+-   **FlightSegment.DepatureAirport.CityCode** - city code, if airports have an aggregation. Data type - string.
+-   **FlightSegment.DepatureAirport.UTC** - time zone. Data type - fractional number.
+-   **FlightSegment.ArrivalAirport** - arrival airport information. Data type - TripPointInformation. The format is the same as FlightSegment.DepatureAirport.
+-   **FlightSegment.StopPoints** - stop points on this segment. Data type - array of StopPoint elements.
+-   **FlightSegment.StopPoints.StopPoint** - stop point on this segment. Data type - array, the successor of TripPointInformation.
+-   **FlightSegment.StopPoints.StopPoint.Code** - airport code. Data type - string.
+-   **FlightSegment.StopPoints.StopPoint.CityCode** - city code, if airports have an aggregation. Data type - string.
+-   **FlightSegment.StopPoints.StopPoint.UTC** - time zone. Data type - fractional number.
+-   **FlightSegment.StopPoints.StopPoint.ArrDateTime** - date and time of the arrival to the stop point. Data type - date and time.
+-   **FlightSegment.StopPoints.StopPoint.DepDateTime** - date and time of the departure from the stop point. Data type - date and time.
+-   **FlightSegment.StopPoints.StopPoint.PassengerLanding** - A sign of disembarking passengers from an airplane. Data type - bool.
+-   **FlightSegment.DepatureDateTime** - date and time of segment departure, local for the departure airport. Data type - date and time.
+-   **FlightSegment.ArrivalDateTime** - date and time of segment arrival, local for the arrival airport. Data type - date and time.
+-   **FlightSegment.FlightTime** - total travel time on this segment. Data type - int32.
+-   **FlightSegment.FlightNumber** - flight number. Data type - string.
+-   **FlightSegment.AircraftType** - aircraft type code. Data type - string.
+-   **FlightSegment.OperatingAirline** - code of the airline whose airplane is carrying the passengers. Data type - string.
+-   **FlightSegment.MarketingAirline** - code of the airline that performs the sale of seats on this flight. Data type - string.
+-   **FlightSegment.Charterer** - charterer of seats being sold. Data type - string.
+-   **FlightSegment.ETicket** - flight segments. Data type - bool.
+-   **FlightSegment.BookingClassCode** - booking class's letters for this segment. Data type - string.
+-   **FlightSegment.Status** - segment status. Data type - enumeration, possible values:
+    -   **Confirmed**
+    -   **NeedConfirmation**
+    -   **NotConfirmed**
+    -   **Canceled**
+    -   **Flew**
+    -   **OnRequest**
+    -   **Rejected**
+-   **FlightSegment.StatusCode** - industrial segment status code. Data type - string.
+-   **FlightSegment.SupplierRef** - segment booking ID in the airline's inventory system. Data type - string.
+-   **FlightSegment.RequestedSegment** - segment reference from the user's request. Data type - int32.
+-   **FlightSegment.FlightDistance** - numerical value of flight distance in miles (relevant fo GDS Amadeus). Data type - int32.
+-   **FlightSegment.CO2Emission** - CO2 exhaust in kg/m (relevant fo GDS Amadeus). Data type - int32.
 
-#### Example
+#### Sample
 
 ```xml
 <?xml version="1.0"?>
