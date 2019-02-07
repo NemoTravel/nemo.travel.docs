@@ -67,11 +67,11 @@ The description of the flight
 -   **FlightSegment.StopPoints.StopPoint.Code** - airport code. Data type - string.
 -   **FlightSegment.StopPoints.StopPoint.CityCode** - city code, if airports have an aggregation. Data type - string.
 -   **FlightSegment.StopPoints.StopPoint.UTC** - time zone. Data type - fractional number.
--   **FlightSegment.StopPoints.StopPoint.ArrDateTime** - date and time of the arrival to the stop point. Data type - date and time.
--   **FlightSegment.StopPoints.StopPoint.DepDateTime** - date and time of the departure from the stop point. Data type - date and time.
+-   **FlightSegment.StopPoints.StopPoint.ArrDateTime** - date and time of the arrival to the stop point. Data type - <code>yyyy-mm-ddthh:mm:ss</code>.
+-   **FlightSegment.StopPoints.StopPoint.DepDateTime** - date and time of the departure from the stop point. Data type - <code>yyyy-mm-ddthh:mm:ss</code>.
 -   **FlightSegment.StopPoints.StopPoint.PassengerLanding** - A sign of disembarking passengers from an airplane. Data type - bool.
--   **FlightSegment.DepatureDateTime** - date and time of segment departure, local for the departure airport. Data type - date and time.
--   **FlightSegment.ArrivalDateTime** - date and time of segment arrival, local for the arrival airport. Data type - date and time.
+-   **FlightSegment.DepatureDateTime** - date and time of segment departure, local for the departure airport. Data type - <code>yyyy-mm-ddthh:mm:ss</code>.
+-   **FlightSegment.ArrivalDateTime** - date and time of segment arrival, local for the arrival airport. Data type - <code>yyyy-mm-ddthh:mm:ss</code>.F
 -   **FlightSegment.FlightTime** - total travel time on this segment. Data type - int32.
 -   **FlightSegment.FlightNumber** - flight number. Data type - string.
 -   **FlightSegment.AircraftType** - aircraft type code. Data type - string.
