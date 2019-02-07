@@ -68,11 +68,11 @@ taxonomy:
 -   **FlightSegment.StopPoints.StopPoint.Code** - код аэропорта. Тип данных — строка.
 -   **FlightSegment.StopPoints.StopPoint.CityCode** - код города, при наличии агрегации аэропортов. Тип данных — строка.
 -   **FlightSegment.StopPoints.StopPoint.UTC** - часовой пояс. Тип данных — дробное число.
--   **FlightSegment.StopPoints.StopPoint.ArrDateTime** — дата и время прилёта в точку остановки. Тип данных — строка, формат <code>yyyy-MM-ddTHH:mm:ss</code>.
--   **FlightSegment.StopPoints.StopPoint.DepDateTime** — дата и время вылета из точки остановки. Тип данных — строка, формат <code>yyyy-MM-ddTHH:mm:ss</code>.
+-   **FlightSegment.StopPoints.StopPoint.ArrDateTime** — дата и время прилёта в точку остановки. Тип данных — строка, формат <code>yyyy-mm-ddthh:mm:ss</code>.
+-   **FlightSegment.StopPoints.StopPoint.DepDateTime** — дата и время вылета из точки остановки. Тип данных — строка, формат <code>yyyy-mm-ddthh:mm:ss</code>.
 -   **FlightSegment.StopPoints.StopPoint.PassengerLanding** — признак высадки пассажиров из самолёта. Тип данных — булевский.
--   **FlightSegment.DepatureDateTime** — дата и время вылета сегмента, местное для аэропорта вылета. Тип данных — <code>yyyy-MM-ddTHH:mm:ss</code>.
--   **FlightSegment.ArrivalDateTime** — дата и время прилёта сегмента, местное для аэропорта прибытия. Тип данных — <code>yyyy-MM-ddTHH:mm:ss</code>.
+-   **FlightSegment.DepatureDateTime** — дата и время вылета сегмента, местное для аэропорта вылета. Тип данных — <code>yyyy-mm-ddthh:mm:ss</code>.
+-   **FlightSegment.ArrivalDateTime** — дата и время прилёта сегмента, местное для аэропорта прибытия. Тип данных — <code>yyyy-mm-ddthh:mm:ss</code>.
 -   **FlightSegment.FlightTime** — суммарное время в пути на данном сегменте. Тип данных — целое 32-битное число.
 -   **FlightSegment.FlightNumber** — номер рейса. Тип данных — строка.
 -   **FlightSegment.AircraftType** — код типа воздушного судна. Тип данных — строка.
