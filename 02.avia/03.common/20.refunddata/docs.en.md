@@ -4,14 +4,14 @@ title: RefundData
 
 #### RefundData
 
-The calculation of the one electronic document refund (ticket or EMD).
+The calculation of the refund of one electronic document (ticket or EMD).
 
 ##### Format Description
 
-- ** EDNumber ** - The number of the electronic document (ED) for which this calculation is generated. The data type is a string.
-- ** EDType ** - The type of ED. Data type - enumeration, possible values:
+- **EDNumber** - electronic document number (ED) for which this calculation is formed. Data type - string.
+- **EDType** - ED type. Data type - enumeration, possible values:
   - Ticket
   - EMD
-- ** TravelerRef ** - The ID of the passenger to which the ED belongs. The data type is int.
-- ** Refundable ** - A sign of the possibility of a refund. The data type is bool.
-- ** RefundMoney ** - The amount to be refunded. The data type is [Money](/avia/common/money).
+- **TravelerRef** - ID of the passenger to which the ED belongs. Data type - int.
+- **Refundable** - attribute of the possibility of a refund. Data type - bool.
+- **RefundMoney** - amount to be refunded. Data type - [Money](/avia/common/money).
