@@ -11,9 +11,9 @@ Contains the following parameters:
 
 -   **ID** - unique ID of this price. Data type - 64-bit integer.
 -   **Refundable** - refundable ticket for this fare/price. Data type - enumeration, possible values:
-   - 0 (Unknown)
-   - 1 (Refundable)
-   - 2 (NonRefundable)
+    -  0 (Unknown)
+    -  1 (Refundable)
+    -  2 (NonRefundable)
 -   **PrivateFareInd** - attribute of the availability of a private fare in the price. Data type - bool.
 -   **TicketTimeLimit** - time-limit of the given price (the price is valid till) in the format <code>yyyy-mm-ddthh:mm:ss</code> format. Data type - string.
 -   **PassengerFares** - container for the information about the price component for a certain type of passenger. Data type - array.
@@ -56,11 +56,11 @@ Contains the following parameters:
 -   **PassengerFares.PassengerFare.Tariffs.Tariff** - information about one of the fares of this price component. Data type - array.
 -   **PassengerFares.PassengerFare.Tariffs.Tariff.Code** - fare code. The data type is a string.
 -   **PassengerFares.PassengerFare.Tariffs.Tariff.Type** - fare type. DThe data type - enumeration, possible values:
-    - 0 (Public) - public (not private) fare
-	- 1 (Coded) - fare received through corporate ID / account code / tour code, etc.
-	- 2 (Cat35) - category 35, also called contractual tariffs.
-	- 3 (NonCat35) - fares "unsuitable for ticketing in category 35". 
-	- 4 (Private) - all the other private rates
+    -  0 (Public) - public (not private) fare
+	-  1 (Coded) - fare received through corporate ID / account code / tour code, etc.
+	-  2 (Cat35) - category 35, also called contractual tariffs.
+	-  3 (NonCat35) - fares "unsuitable for ticketing in category 35". 
+	-  4 (Private) - all the other private rates
 -  **PassengerFares.PassengerFare.Tariffs.Tariff.IsSystemTransfer** - attribute of the system transfer. Data type - bool.
 -   **PassengerFares.PassengerFare.Tariffs.Tariff.SegNum** - segment number for which this fare is applied. Data type - 32-bit integer.
 -   **PassengerFares.PassengerFare.Commission** - information about the commission for this price component from the GDS. Data type - array.
