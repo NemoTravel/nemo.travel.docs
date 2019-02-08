@@ -9,15 +9,15 @@ taxonomy:
 
 Ancillary services, consist of the following elements:
 
-* **ID** - Service ID in the supplier system. The data type is integer.
-* **Status** - The current status of the ancillary service. The data type is a string.
-* **TravellerRef** -  A reference to passengers in the book, to which the ancillary service applies. The data type is array.
-* **TravellerRef.Ref** - The number of passenger in the book to which this item belongs. The data type is integer.
-* **Name** - Description of the ancillary service. The data type is a string.
-* **Group** - Group of ancillary service. The data type is a string.
-* **SubGroup** - Subgroup of ancillary service. The data type is a string.
-* **Type** - The code for the type of ancillary service. The data type is a string.
-* **RFIC** - Ancillary services RFIC ( Reason For Issuance Codes), consists of one symbol and is used to indicate the basis (cause) for adding EMD. The data type is a string. List of RFIC Codes:
+* **ID** - service ID in the supplier system. Data type - int.
+* **Status** - current status of the ancillary service. Data type - string.
+* **TravellerRef** -  reference to passengers in the book, to which the ancillary service applies. Data type - array.
+* **TravellerRef.Ref** - number of passenger in the book to whom this item belongs. Data type - int.
+* **Name** - ancillary service description. Data type - string.
+* **Group** - ancillary service group. Data type - string.
+* **SubGroup** - ancillary service subgroup. Data type - string.
+* **Type** - code of the ancillary service type. Data type - string.
+* **RFIC** - ancillary services RFIC (Reason For Issuance Codes), consists of one symbol and is used to indicate the basis (cause) for adding EMD. Data type - string. List of RFIC Codes:
     -   **A** — Air Transportation;
     -   **B** — Surface Transportation/Non Air Services;
     -   **C** — Baggage;
@@ -25,21 +25,21 @@ Ancillary services, consist of the following elements:
     -   **E** — Airport Services;
     -   **F** — Merchandise;
     -   **G** — In-flight Services.
-* **RFISC** - Ancillary services RFISC (Reason For Issuance Sub-Codes), consisting of three symbols. RFISC Sub-codes are established by the airline itself and determine the specific type of service, for example, 0DG - payment for excess baggage, 0B3 - provision of special meals. The data type is a string.
-* **SSRCode** -The SSR code associated with the given ancillary service, which must be added to the PNR in case of the book of this ancillary service. The data type is a string.
-* **SSRText** - The SSR text associated with the given ancillary service. The data type is a string.
-* **SegmentRef** - A reference to the segment on which the ancillary service is added. The data type is integer.
-* **CompanyCode** - The code of the airline to which the service belongs. The data type is a string.
-* **Refundability** - Returnable or non-returnable service . The data type is an enumeration.
-* **ServiceRefs** - List of IDs of the ancillary service in book for which an operation is required. The data type is an integer array.
-* **ServiceRefs.Ref** - ID of the ancillary service in the book for which the operation is required. The data type is integer.
-* **SSRDescription** -  Description for ancillary services SSR (Optional). Data type is string.
-* **SSRDescriptionRequired** - A sign that you need to transfer ancillary services description from the user in order to book this service. The data type is boolean.
-* **Quantity** -The number of repetitions of the service. The data type is integer.
+* **RFISC** - ancillary services RFISC (Reason For Issuance Sub-Codes) consisting of three symbols. RFISC are established by the airline itself and determine the specific type of service, for example, 0DG - payment for excess baggage, 0B3 - provision of special meals. Data type - string.
+* **SSRCode** - code of the SSR associated with the given ancillary service which must be added to the PNR in case of the booking of this ancillary service. Data type - string.
+* **SSRText** - text of the SSR associated with the given ancillary service. Data type - string.
+* **SegmentRef** - reference to the segment on which the ancillary service is added. Data type - int.
+* **CompanyCode** - code of the airline to which the service belongs. Data type - string.
+* **Refundability** - returnable or non-returnable service . Data type - enumeration.
+* **ServiceRefs** - list of the ancillary service IDs in booking for which an operation is required. Data type - int array.
+* **ServiceRefs.Ref** - ID of the ancillary service in the booking for which the operation is required. Data type - int.
+* **SSRDescription** -  description for the SSR of ancillary service booked (optional). Data type - string.
+* **SSRDescriptionRequired** - attribute of the need to transfer ancillary services description from the user in order to book this service. Data type - bool.
+* **Quantity** - number of repetitions of the service. Data type - int.
 
-The list of available ancillary services is triggered by the SearchAncillaryServices parameter in the  [AdditionalOperations](/avia/request/additionaloperations) request. In response to this request you will receive a list of services available on current flight.
+The list of available ancillary services is triggered by the SearchAncillaryServices parameter in the  [AdditionalOperations](/avia/request/additionaloperations) request. In response to this request you will receive a list of ancillary services available on the current flight.
 
-### Sirena response example
+### Sample Sirena response 
 ```xml
         <AncillaryServiceRS>
           <ID>3</ID>
@@ -52,7 +52,7 @@ The list of available ancillary services is triggered by the SearchAncillaryServ
           <CompanyCode>UT</CompanyCode>
         </AncillaryServiceRS>
  ```
-###  Amadeus response example
+###  Sample Amadeus response
 ```xml
        <AncillaryServiceRS>
           <ID>1</ID>
@@ -87,7 +87,8 @@ The list of available ancillary services is triggered by the SearchAncillaryServ
    
    
   You can add a service to the book via a [BookFlight](/avia/request/bookflight) request, or, if the book has already been created, through a [ModifyBook](/avia/request/modifybook) request.
-     ### A BookFlight request example.
+  
+  ### Sample BookFlight request.
    ```xml
       <a:AncillaryServiceRQ_1_1>
         <a:ID>0</a:ID>
@@ -110,7 +111,7 @@ The list of available ancillary services is triggered by the SearchAncillaryServ
         <a:Quantity>1</a:Quantity>
       </a:AncillaryServiceRQ_1_1>
     ```
-  ### A BookFlight response example.  
+  ### Sample BookFlight response.  
     
   ```xml
       <AncillaryServices>
@@ -145,7 +146,7 @@ The list of available ancillary services is triggered by the SearchAncillaryServ
     </AncillaryServices>
    ```         
    
-   ### A ModifyBook request example.
+   ### Sample ModifyBook request.
               <Action>Add</Action>
               <AncillaryService>
                 <Name xsi:nil="true"/>
@@ -161,7 +162,7 @@ The list of available ancillary services is triggered by the SearchAncillaryServ
                 <Quantity>1</Quantity>
               </AncillaryService>
         
-   ### A ModifyBook response. 
+   ### Sample ModifyBook response. 
 ```xml
            <Service i:type="a:FlightAncillaryService">
               <ID>7</ID>
