@@ -5,16 +5,16 @@ taxonomy:
         - docs
 ---
 
-**Group search** - in fact, it is a selection of common elements from different results and assigning connections between them, on which it is possible to collect flights. The same as the normalization procedure in relational databases.
+**Group search** - in fact is a selection of common elements from different results and assigning connections on which it is possible to collect flights between them. Analogical to the normalization procedure in relational databases.
 
 Within the grouping of flights, the following structural elements were singled out:
 
-* **AirItinerary ([AirItinerary](/avia/grouping/airitinerary))** - information about air itinerary between a certain pair of airports provided by a certain airline.
-* **FlightSegment ([FlightSegment](/avia/grouping/flightsegment))** - information about a certain flight on a certain itinerary. For one itinerary there can be several segments (for example, an airplane with the same flight flying several times a day).
+* **[AirItinerary](/avia/grouping/airitinerary)** - information about air itinerary between a certain pair of airports provided by a certain airline.
+* **[FlightSegment](/avia/grouping/flightsegment)** - information about a certain flight on a certain itinerary. For one itinerary there can be several segments (for example, an airplane with the same flight flying several times a day).
 * **Price ([GroupedPrice](/avia/grouping/groupedprice))** - information about the price of a certain set of itineraries.
 * **Flight ([FlightPriceGroup](/avia/grouping/flightpricegroup))** - the link between a certain set of segments is a de facto flight along a certain itinerary (including a composite one), and one or more prices that apply to this flight. 
 
-##### Examples:
+##### Sample:
 
 ```xml
 <?xml version="1.0"?>
@@ -56,6 +56,6 @@ Within the grouping of flights, the following structural elements were singled o
 </s:Envelope>
 ```
 
-To successfully parsing of the response need to compare the elements in different groups by their identifiers**ID**
+For successful parsing of the response it is required to compare the elements in different groups by their identifiers (**ID**)
 
->>>> To optimize your group search handler, it is recommended to carry out the go-round of elements in 2 steps. At first you bypass all the elements of each group and index them by the specified value in the ** ID ** field. And that, once you bypass flights ** FlightPriceGroup ** and fill them with data on segments and prices by selecting data from the index. For indexing, you can use the hash tables of your programming language.
+>>>> To optimize your group search handler, it is recommended to carry out the go-round of elements in 2 steps. At first you bypass all the elements of each group and index them by the specified value in the **ID** field. And that, once you bypass flights **FlightPriceGroup** and fill them with data on segments and prices by selecting data from the index. For indexing, you can use the hash tables of your programming language.
