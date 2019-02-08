@@ -9,37 +9,37 @@ taxonomy:
 
 Contains the following parameters:
 
-- ** OrderedFlightSegments ** - An ordered set of flight segments. The array data type.
-- ** OrderedFlightSegments.FlightSegment ** - The information about the flight segment, contains the number of the flight segment. The array data type.
-- ** OrderedFlightSegments.FlightSegment.RequestedSegment ** - The number of the flight segment from the search request. The data type is an integer 32-bit number.
-- ** OrderedFlightSegments.FlightSegment.SegmentNumber ** - The number of the flight segment. The data type is an integer 64-bit number.
-- ** Flights ** - An array of flights that are based on this set of segments. The array data type.
-- ** Flights.Flight ** - Contains information about one flight based on a given set of segments. The array data type.
-- ** Flights.Flight.FlightID ** - The flight number, in fact, is the identifier of a certain combination of a set of flight segments, each of which is uniquely associated with a certain itinerary, and a certain price. Booking a flight is made on it. The data type is a string.
-- ** Flights.Flight.PriceID ** - The [price](/avia/grouping/groupedprice) ID on which this flight is based. The data type is an integer 64-bit number.
-- ** Flights.Flight.TypeInfo.Type ** - The type of flight. Data type - enumeration, possible values:
+- ** OrderedFlightSegments ** - ordered set of flight segments. Data type - array.
+- ** OrderedFlightSegments.FlightSegment ** - information about the flight segment, contains the flight segment number. Data type - array.
+- ** OrderedFlightSegments.FlightSegment.RequestedSegment ** - flight segment number from the search request. Data type - 32-bit integer.
+- ** OrderedFlightSegments.FlightSegment.SegmentNumber ** - flight segment number. Data type - 64-bit integer.
+- ** Flights ** - array of flights that are based on this set of segments. Data type - array.
+- ** Flights.Flight ** - contains information about one flight based on a given set of segments. Data type - array.
+- ** Flights.Flight.FlightID ** - flight number, in fact the identifier of a certain combination of a flight segments set, each of which is uniquely associated with a certain itinerary and a particular price. Booking a flight is made by it. Data type - string.
+- ** Flights.Flight.PriceID ** - ID of the [price](/avia/grouping/groupedprice) on which this flight is based. Data type - 64-bit integer.
+- ** Flights.Flight.TypeInfo.Type ** - flight type. Data type - enumeration, possible values:
     -   0 (Regular) - Regular flight.
     -   1 (Charter) - Charter.
     -   2 (LowCost) - Low cost.
-- ** Flights.Flight.TypeInfo.MultyOWLeg ** - A sign that this flight is the flight leg of a multi-way flight. The data type is boolean.
-- ** Flights.Flight.TypeInfo.DirectionType ** - The type of the flight itinerary. Data type - enumeration, possible values:
-	- 0 (OW) - the flight in one direction. Simple flight consisting of one segment.
-	- 1 (RT) - there and back. Flight from 2 segments, in which the departure point of the first segment coincides with the arrival point of the second segment And the point of arrival of the first segment coincides with the departure point of the second segment.
-	- 2 (CT) - the route is complicated. Some arbitrary set of segments
-	- 3 (SingleOJ) - single Open Jaw. Flight from 2 segments, in which the departure point of the first segment coincides with the arrival point of the second segment OR the point of arrival of the first segment coincides with the departure point of the second segment.
-	- 4 (DoubleOJ) - double Open Jaw. Flight from 2 segments, in which the departure point of the first segment does not coincide with the arrival point of the second segment. And the point of arrival of the first segment does not coincide with the departure point of the second segment.
-	- 5 (hRT) - RT / 2. A simple OW flight was requested, but on the basis of the settings of a certain package of requisites RT / 2 search was started.
+- ** Flights.Flight.TypeInfo.MultyOWLeg ** - attribute showing that this flight is the leg of a multi-OW trip. Data type - bool.
+- ** Flights.Flight.TypeInfo.DirectionType ** - type of the flight itinerary. Data type - enumeration, possible values:
+	- 0 (OW) - one direction flight. Simple flight consisting of one segment.
+	- 1 (RT) - round trip. A 2-segment flight in which the departure point of the first segment coincides with the arrival point of the second segment AND the arrival point of the first segment coincides with the departure point of the second segment.
+	- 2 (CT) - complex route. An arbitrary set of segments.
+	- 3 (SingleOJ) - single Open Jaw. A 2-segment flight in which the departure point of the first segment coincides with the arrival point of the second segment OR the point of arrival of the first segment coincides with the departure point of the second segment.
+	- 4 (DoubleOJ) - double Open Jaw. A 2-segment flight in which the departure point of the first segment DOES NOT coincide with the arrival point of the second segment AND the point of arrival of the first segment DOES NOT coincide with the departure point of the second segment.
+	- 5 (hRT) - RT/2. A simple OW flight was requested, but on the basis of the settings of a certain package of requisites RT/2 search was initiated.
 	- 6 (mOW) - OW + OW +. The requested flight from several segments was found as a collection of individual search results.
-- ** Flights.Flight.AdditionalPriceInfo ** - The additional price flight information, contains information about the commission and taxes, margin for this flight. The array data type.
-- ** Flights.Flight.AdditionalPriceInfo.Commission ** - The commission for this flight. The array data type.
-- ** Flights.Flight.AdditionalPriceInfo.Commission.AbsoluteValue ** - The commission amount. The data type is a fractional 32-bit number.
-- ** Flights.Flight.AdditionalPriceInfo.Commission.RelativeValue ** - The percentage value of the commission. The data type is a fractional 32-bit number.
-- ** Flights.Flight.AdditionalPriceInfo.Commission.Currency ** - ISO Alpha3 currency code. The data type is a string.
-- ** Flights.Flight.AdditionalPriceInfo.Markup ** - The tax for this flight. The array data type. The format is similar to the element **Flights.Flight.AdditionalPriceInfo.Commission**.
-- ** Flights.Flight.AdditionalPriceInfo.Margin ** - The agency's profit for this flight. The array data type. The format is similar to the element **Flights.Flight.AdditionalPriceInfo.Commission**.
-- ** SegmentSummaryConnectionTimeout ** - The total waiting time between flight segments in the format (d.) Hh: mm: ss. The time between segments from the request is not taken into account. The data type is a string.
+- ** Flights.Flight.AdditionalPriceInfo ** - additional price information of the flight, contains information about the commission and taxes, margin for this flight. Data type - array.
+- ** Flights.Flight.AdditionalPriceInfo.Commission ** - commission for this flight. Data type - array.
+- ** Flights.Flight.AdditionalPriceInfo.Commission.AbsoluteValue ** - commission amount. Data type - fractional 32-bit number.
+- ** Flights.Flight.AdditionalPriceInfo.Commission.RelativeValue ** - percentage value of the commission. Data type - fractional 32-bit number.
+- ** Flights.Flight.AdditionalPriceInfo.Commission.Currency ** - ISO Alpha3 currency code. Data type - string.
+- ** Flights.Flight.AdditionalPriceInfo.Markup ** - charge for this flight. The array data type. The format is similar to the **Flights.Flight.AdditionalPriceInfo.Commission** element.
+- ** Flights.Flight.AdditionalPriceInfo.Margin ** - agency's profit for this flight. Data type - array. The format is similar to the **Flights.Flight.AdditionalPriceInfo.Commission** element.
+- ** SegmentSummaryConnectionTimeout ** - total waiting time between flight segments in the format (d.)hh:mm:ss. The time between segments from the request is not taken into account. Data type - string.
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
