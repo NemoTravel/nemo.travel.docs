@@ -9,17 +9,18 @@ taxonomy:
 
 Contains the following parameters:
 
--   **ID** - The flight segment unique ID, according to which the system will differ it from others. The data type is an integer 64-bit number.
--   **ItineraryID** - The number of the [itinerary](/avia/grouping/airitinerary) to which this segment of the flight belongs. The data type is an integer 64-bit number.
--   **OperatingCompany** - An airline code directly executing this flight. The data type is a string.
--   **MarketingCompany** - An airline code for the given flight. The data type is a string.
--   **FlightNumber** - The flight number code. The data type is a string.
--   **AircraftType** - The aircraft type code.
--   **DepatureDateTime** - The date and time of departure in the format yyyy-MM-ddTHH: mm: ss. The data type is a string.
--   **ArrivalDateTime** - The date and time of arrival in the format yyyy-MM-ddTHH: mm: ss. The data type is a string.
--   **FlightTime** - The flight time in minutes. The data type is an integer 32-bit number.
--   **NotAirplaneSegmentInd** - Ground/ not airplane segment identifier. Data type: boolean
-##### Example
+-   **ID** - unique ID of the flight segment, according to which the system will differ it from others. Data type - 64-bit integer.
+-   **ItineraryID** - [itinerary](/avia/grouping/airitinerary) number to which this segment of the flight belongs. Data type - 64-bit integer.
+-   **OperatingCompany** - code of the airline directly operating this flight. Data type - string.
+-   **MarketingCompany** - code of the airline providing this flight. Data type - string.
+-   **FlightNumber** - flight number code. Data type - string.
+-   **AircraftType** - aircraft type code. Data type - string.
+-   **DepatureDateTime** - date and time of departure in the <code>yyyy-mm-ddthh:mm:ss</code> format. Data type - string.
+-   **ArrivalDateTime** - date and time of arrival in the format <code>yyyy-mm-ddthh:mm:ss</code> format. Data type - string.
+-   **FlightTime** - flight time in minutes. Data type - 32-bit integer.
+-   **NotAirplaneSegmentInd** - ground/not airplane segment ID. Data type: bool.
+
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
