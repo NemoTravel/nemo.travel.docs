@@ -149,6 +149,6 @@ Flight representation format 1.1.
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty** - airline penalty for the exchange. Data type - array.
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty.Currency** - penalty currency code. Data type - string.
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty.Amount** - penalty amount. Data type - fractional number.
--   **Flight.FareFamiliesDescription** - contains descriptions of the tfare families presenting in the flight. Data type - [Description](/avia/common/ff-description).
+-   **Flight.FareFamiliesDescription** - contains descriptions of the fare families in the flight. Data type - [Description](/avia/common/ff-description).
 -   **Flight.CanHaveSubsidizedTariffs** - attribute of the possibility to apply subsidies to this fare. Data type - bool.
 -   **Flight.BookingURL** - URL to which the user will be redirected for the following flight registration. Data type - string.
