@@ -11,8 +11,11 @@ Contains the following parameters:
 
 -   **ID** - unique ID of this price. Data type - 64-bit integer.
 -   **Refundable** - The refundable ticket for this fare/price. Data type - enumeration, possible values:
+
     - 0 (Unknown)
+    
     - 1 (Refundable)
+    
     - 2 (NonRefundable)
 -   **PrivateFareInd** - attribute of the availability of a private fare in the price. Data type - bool.
 -   **TicketTimeLimit** - time-limit of the given price (the price is valid till) in the format <code>yyyy-mm-ddthh:mm:ss</code> format. Data type - string.
@@ -60,7 +63,7 @@ Contains the following parameters:
 	- 1 (Coded) - fare received through corporate ID / account code / tour code, etc.
 	- 2 (Cat35) - category 35, also called contractual tariffs.
 	- 3 (NonCat35) - fares "unsuitable for ticketing in category 35". 
-	- 4 (Private) - all other private rates
+	- 4 (Private) - all the other private rates
 -  **PassengerFares.PassengerFare.Tariffs.Tariff.IsSystemTransfer** - attribute of the system transfer. Data type - bool.
 -   **PassengerFares.PassengerFare.Tariffs.Tariff.SegNum** - segment number for which this fare is applied. Data type - 32-bit integer.
 -   **PassengerFares.PassengerFare.Commission** - information about the commission for this price component from the GDS. Data type - array.
@@ -68,25 +71,24 @@ Contains the following parameters:
 - **PassengerFares.PassengerFare.Commission.Percent*** - commission value in percent. Data type - fractional number.
 -   **PassengerFares.PassengerFare.Commission.Currency** - commission currency code. Data type - string.
 -   **PassengerFares.PassengerFare.FareCalc** - string for calculating the price. Data type - string.
--   **SourceID** - The ID of the package of requisites from which the given price was received
--   **ValidatingCompany** - The validating carrier for a given price
--   **BookingClassInfo** - The information about the flight classes to which this price applies. The array data type.
--   **BookingClassInfo.BookingClass** - The information about the flight class for a particular flight segment. The array data type.
--   **BookingClassInfo.BookingClass.SegmentNumber** - The number of the flight segment to which this flight class belongs. The data type is an integer 32-bit number.
--   **BookingClassInfo.BookingClass.BaseClass** - The base class of flight. The data type is enumeration. Possible values are:
-	- 0 (Economy) - Economy class (both standard and premium).
-	- 1 (Business) - Business class (both standard and premium).
-	- 2 (First) - First class (both standard and premium).
-	- 5 (Other) - All other classes that do not belong to any of the above.
--   **BookingClassInfo.BookingClass.BookingClassCode** - The Flight class code. The data type is a string.
--   **BookingClassInfo.BookingClass.FreeSeatCount** - The number of available seats for this class of flight. The data type is an integer 32-bit number.
--   **BookingClassInfo.BookingClass.MealType** - The available type of meal for this class of flight. The data type is a string.
--   **BookingClassInfo.BookingClass.Baggage** - The permissible measure of free baggage allowance for this class of flight. The array data type.
--   **BookingClassInfo.BookingClass.Baggage.Measure** - The measure the amount of luggage. The data type is a string.
--   **BookingClassInfo.BookingClass.Baggage.Value** - Quantitatively the value for the allowable amount of baggage. The data type is a string.
+-   **SourceID** - ID of the requisite package from which the given price was received.
+-   **ValidatingCompany** - validating carrier for a given price.
+-   **BookingClassInfo** - information about the flight classes to which this price applies. Data type - array.
+-   **BookingClassInfo.BookingClass** - information about the flight class for a particular flight segment. Data type - array.
+-   **BookingClassInfo.BookingClass.SegmentNumber** - The number of the flight segment to which this flight class belongs. Data type - 32-bit integer.
+-   **BookingClassInfo.BookingClass.BaseClass** - base flight class. Data type - enumeration. Possible values are:
+	- 0 (Economy) - economy class (both standard and premium).
+	- 1 (Business) - business class (both standard and premium).
+	- 2 (First) - first class (both standard and premium).
+	- 5 (Other) - all the other classes that do not belong to any of the above.
+-   **BookingClassInfo.BookingClass.BookingClassCode** - flight class code. Data type - string.
+-   **BookingClassInfo.BookingClass.FreeSeatCount** - number of available seats for this flight class. Data type - 32-bit integer.
+-   **BookingClassInfo.BookingClass.MealType** - available type of meal for this flight class. Data type - string.
+-   **BookingClassInfo.BookingClass.Baggage** - permissible measure of free baggage allowance for this flight class. Data type - array.
+-   **BookingClassInfo.BookingClass.Baggage.Measure** - measure of the baggage amount. Data type - string.
+-   **BookingClassInfo.BookingClass.Baggage.Value** - Quantitatively the value for the allowable amount of baggage. Data type - string.
 
-##### Example
-
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
