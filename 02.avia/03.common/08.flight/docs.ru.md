@@ -136,7 +136,7 @@ taxonomy:
 -   **PassengerFare.ExchangePriceInfo.FlightPriceDifference** — разница в стоимости с перелётом в бронировании. Если найденный перелёт стоит дешевле, то разница будет со знаком «-». Тип данных — [Money](/avia/common/money).
 -   **PassengerFare.Markup** - сумма сбора для данной цены. Тип данных — [Money](/avia/common/money).
 -   **PassengerFare.AgencyFare** - стоимость тарифа в валюте агентства. Тип данных — [Money](/avia/common/money).
--   **PassengerFare.ChargeBreakdown** - содерджит разбивку составляющих сбора из ценообразования на пассажира, а также величину округления при конвертации в валюту агентства.
+-   **PassengerFare.ChargeBreakdown** - содержит разбивку составляющих сбора из ценообразования на пассажира, а также величину округления при конвертации в валюту агентства.
 -   **PassengerFare.ChargeBreakdown.Charge** - информация о конкретном сборе, величине округления. Тип данных — сложный.
 -   **PassengerFare.ChargeBreakdown.Charge.Amount** - абсолютное значение сбора, округления. Тип данных — дробное число.
 -   **PassengerFare.ChargeBreakdown.Charge.Currency** - код валюты агентства. Тип данных — строка.
@@ -147,7 +147,7 @@ taxonomy:
 	- **FareRound** - величина округления, полученная при конвертации стоимости тарифа в валюту агентства;
 	- **MarkupRound** - величина округления сбора;
 -   **PassengerFare.TotalAgencyFare** - сумма тарифа и такс в валюте агентства. Тип данных — [Money](/avia/common/money).
--   **Flight.Price.AgencyMarkup** - сбор агентсва за весь перелёт. Тип данных — [Money](/avia/common/money).
+-   **Flight.Price.AgencyMarkup** - сбор агентства за весь перелёт. Тип данных — [Money](/avia/common/money).
 -   **Flight.Price.DiscountByPromoAction** — скидка по промо-коду (расчитана по правилам ценообразования). Тип данных — [Money](/avia/common/money).
 -   **Flight.Price.PricingData** — результаты расчета ценообразования. Тип данных — сложный.
 -   **Flight.Price.PricingData.PricingRule** — идентификатор применившегося правила ценообразования. Тип данных — целое число.
