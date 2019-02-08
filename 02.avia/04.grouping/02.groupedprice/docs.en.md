@@ -11,11 +11,8 @@ Contains the following parameters:
 
 -   **ID** - unique ID of this price. Data type - 64-bit integer.
 -   **Refundable** - The refundable ticket for this fare/price. Data type - enumeration, possible values:
-
-    - 0 (Unknown)
-    
+    - 0 (Unknown)
     - 1 (Refundable)
-    
     - 2 (NonRefundable)
 -   **PrivateFareInd** - attribute of the availability of a private fare in the price. Data type - bool.
 -   **TicketTimeLimit** - time-limit of the given price (the price is valid till) in the format <code>yyyy-mm-ddthh:mm:ss</code> format. Data type - string.
@@ -59,7 +56,6 @@ Contains the following parameters:
 -   **PassengerFares.PassengerFare.Tariffs.Tariff** - information about one of the fares of this price component. Data type - array.
 -   **PassengerFares.PassengerFare.Tariffs.Tariff.Code** - fare code. The data type is a string.
 -   **PassengerFares.PassengerFare.Tariffs.Tariff.Type** - fare type. DThe data type - enumeration, possible values:
-
     - 0 (Public) - public (not private) fare
 	- 1 (Coded) - fare received through corporate ID / account code / tour code, etc.
 	- 2 (Cat35) - category 35, also called contractual tariffs.
