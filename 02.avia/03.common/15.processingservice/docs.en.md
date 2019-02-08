@@ -10,7 +10,7 @@ taxonomy:
 Not inherited from BaseService. Contains a description of some service processing order, ideologically represents a variety of charges.
 
 -   **ID** - ID of this service within the given object (order). Data type - int32.
--   **Type** - The type of action for processing the order. Data type - enumeration, possible values:
+-   **Type** - type of the order processing action. Data type - enumeration, possible values:
     -   Creation
     -   Ticketing
     -   Payment - some kind of tax
