@@ -7,12 +7,12 @@ taxonomy:
 
 ### Cost
 
-Contains information about the amount and currency.
+Contains information about the amount and currency of the cost.
 
 #### Formar description 
 
--   **Amount** - The amount.
--   **Currency** - The currency code.
+-   **Amount** - amount.
+-   **Currency** - currency code.
 
 #### Example
 
