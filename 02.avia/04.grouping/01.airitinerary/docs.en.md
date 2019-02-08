@@ -5,21 +5,21 @@ taxonomy:
         - docs
 ---
 
-### Itinerary (AirItinerary)
+### Air Itinerary
 
 Contains the following parameters:
 
--   **ID** - The unique number of this air itinerary, according to which the system will differ it from others. The data type is an integer 64-bit number.
--   **DepAirp** - The Departure airport information for this segment. The array data type.
--   **DepAirp.AirportCode** - The airport code. The data type is a string.
--   **DepAirp.CityCode** - The city code (the aggregation code). The data type is a string.
--   **DepAirp.UTC** - The time zone of the airport. The data type is a string.
--   **DepAirp.Terminal** - The terminal code. The data type is a string.
--   **ArrAirp** - The arrival airport information for this segment. The array data type. The format is similar to the departure airport.
--   **StopNum** - The number of stops on this segment of the flight. The data type is an integer 32-bit number.
--   **ETicket** - A sign of the possibility of ticketing an electronic ticket on this segment. The data type is boolean.
+-   **ID** - unique number of this air itinerary, according to which the system will distinguish it from others. Data type - 64-bit integer.
+-   **DepAirp** - departure airport information for this segment. Data type - array.
+-   **DepAirp.AirportCode** - airport code. Data type - string.
+-   **DepAirp.CityCode** - city code (aggregation code). Data type - string.
+-   **DepAirp.UTC** - airport time zone. Data type - string.
+-   **DepAirp.Terminal** - terminal code. Data type - string.
+-   **ArrAirp** - arrival airport information for this segment. Data type - array. The format is similar to the departure airport.
+-   **StopNum** - number of stops on this flight segment. Data type - 32-bit integer.
+-   **ETicket** - attribute of the possibility of ticketing an electronic ticket on this segment. Data type - bool.
 
-##### Example
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
