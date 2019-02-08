@@ -39,9 +39,9 @@ Contains the complete information on subsidies.
 * **SubsidiesInformation.SubsidyInformation.Description** - Block with a description of the subsidy package. Data type - array.
 * **SubsidiesInformation.SubsidyInformation.Description.Item** - Block with translations of the subsidy package description.
 * **SubsidiesInformation.SubsidyInformation.Description.Item.Language** - Description language. Data type - string.
-* **SubsidiesInformation.SubsidyInformation.Description.Item.Value** - Description. Data type is a string.
-* **SubsidiesInformation.AllowAgentCharges** - Permission to combine agent fees. Data type - boolean.
-* **SubsidiesInformation.SubsidyInformation.AllowCombine** - Permission to merge. Data type - boolean.
+* **SubsidiesInformation.SubsidyInformation.Description.Item.Value** - Description. Data type - string.
+* **SubsidiesInformation.AllowAgentCharges** - Permission to combine agent fees. Data type - bool.
+* **SubsidiesInformation.SubsidyInformation.AllowCombine** - Permission to merge. Data type - bool.
 * **SubsidiesInformation.SubsidyInformation.DocumentationUrl** - Address for receiving documentation on subsidies.
 
 #### Sample
