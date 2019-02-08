@@ -7,10 +7,10 @@ taxonomy:
 
 ### ProcessingService
 
-Not inherited from BaseService. It contains a description of some service processing order, ideologically represents a variety of fees.
+Not inherited from BaseService. Contains a description of some service processing order, ideologically represents a variety of charges.
 
--   **ID** - The ID of this service within the given object (order). The data type is Int32.
--   **Type** - The type of action for processing the order. The data type is enumeration, possible values:
+-   **ID** - ID of this service within the given object (order). Data type - int32.
+-   **Type** - The type of action for processing the order. Data type - enumeration, possible values:
     -   Creation
     -   Ticketing
     -   Payment - some kind of tax
@@ -18,12 +18,12 @@ Not inherited from BaseService. It contains a description of some service proces
     -   Refund
     -   Modification
     -   Cancellation
--   **Status** - The status of the service. The data type is enumeration, possible values:
+-   **Status** - service status. Data type - enumeration, possible values:
     -   Requested
     -   Executed
     -   Rejected
--   **FromSupplier** - A sign that this processing service was received from the supplier, and not formed in Nemo. The data type is bool.
--   **IncludedInMainServicePrice** - A sign that the price of this service is already taken into account in the price of the basic service from the supplier (flight) and the allocation of the price makes for the convenience of forming the MK / EMD. The data type is bool.
--   **RuleID** - The ID of the rule in Nemo, on which this service is formed. The data type is a string.
--   *' RFISC*' - Reason For Issuance Code The EMD associated with this service
--   *' RFISC*' - Reason For Issuance Sub Code The EMD associated with this service
+-   **FromSupplier** - attribute of this processing service being received from the supplier and not formed in Nemo. Data type - bool.
+-   **IncludedInMainServicePrice** - attribute of the price of this service being already taken into account in the price of the basic service from the supplier (flight) and the allocation of the price is made for the convenience of forming the MK/EMD. Data type - bool.
+-   **RuleID** - ID of the rule in Nemo on which this service is formed. Data type - string.
+-   *' RFISC*' - Reason For Issuance Code of the EMD associated with this service
+-   *' RFISC*' - Reason For Issuance Sub Code of the EMD associated with this service
