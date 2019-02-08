@@ -9,13 +9,13 @@ taxonomy:
 
 ### The list of Identifiers
 
-This type is an array of fields Ref, used to send a list of identifiers of other objects.
+This type is the array of Ref fields, used to send a list of identifiers of other objects.
 
 #### Format description
 
--   **Ref** - the pointer to the identifier of the object specified in the parent field
+-   **Ref** - pointer to the identifier of the object specified in the parent field
 
-#### Example
+#### Sample
 
 The Ref field indicates the object from the parent field, in this example it is the passenger.
 
