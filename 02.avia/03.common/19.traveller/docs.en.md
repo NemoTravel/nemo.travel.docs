@@ -10,31 +10,31 @@ Traveler
 
 Describes personal information about the traveler. It consists of the following elements:
 
--  **ID** - The ID of this traveler within the given object (booking / order). The data type is а positive integer.
--  **Type** - The passenger type. Data type - enumeration, possible values:
-	-   ADT - an adult - a passenger over 12 years of age
-	-   UNN - a child - a passenger older than 2 and under 12 years of age - unaccompanied by an adult
-	-   CNN - a child - a passenger over 2 and under 12 years of age
-	-   INF - an infant - a passenger under 2 years old - not occupying space in the airplane
-	-   INS - an infant - a passenger under 2 years old - occupying seats in the airplane
-	-   MIL - a military
-	-   SEA - a seaman
-	-   SRC - an elderly passenger
-	-   STU - a student
--  **NamePrefix** - The prefix / title of this passenger (optional). The data type is a string.
+-  **ID** - ID of this traveler within the given object (booking/order). Data type - positive integer.
+-  **Type** - passenger type. Data type - enumeration, possible values:
+	-   ADT - adult - passenger over 12 years of age
+	-   UNN - child - passenger older than 2 and under 12 years of age - unaccompanied by an adult
+	-   CNN - child - passenger over 2 and under 12 years old
+	-   INF - infant - passenger under 2 years old - not occupying a seat in the airplane
+	-   INS - infant - a passenger under 2 years old - occupying a seat in the aircraft
+	-   MIL - military
+	-   SEA - seaman
+	-   SRC - elderly passenger
+	-   STU - student
+-  **NamePrefix** - prefix/title of this passenger (optional). The data type is a string.
 -  **Name** - The name of the passenger. The data type is a string.
 -  **LastName** - The last name of the passenger. The data type is a string.
--  **MiddleName** - The middle name of the passenger (optional). The data type is a string.
--  **DateOfBirth** - The date of birth of the passenger.
--  **Nationality** - The nationality of the passenger. The data type is string, ISO Alpha2 or ISO Alpha3 country code
--  **Gender** - The sex of the passenger. The data type is  enumeration, possible values:
+-  **MiddleName** - The middle name of the passenger (optional). Data type - string.
+-  **DateOfBirth** - passenger's date of birth. Data type - date in the <code>dd.mm.yyyy</code>
+-  **Nationality** - passenger's nationality. Data type - string, ISO Alpha2 or ISO Alpha3 country code
+-  **Gender** - passenger's sex. Data type - enumeration, possible values:
 	- M   - male
 	- F   - female
--  **LinkedTo** - Binding a passenger to another passenger, makes sense and is mandatory only for infants without a seat (optional). The data type is Int32.
--  **IsDisabled** - A sign of a disabled passenger (optional). The data type is bool.
--  **ExternalID** - Custom passenger id in the external system (optional). The data type is string, without using Cyrillic, special characters are not recommended.
+-  **LinkedTo** - binding a passenger to another passenger, makes sense and is mandatory only for infants without a seat (optional). Data type - int32.
+-  **IsDisabled** - attribute of a disabled passenger (optional). Data type - bool.
+-  **ExternalID** - custom passenger id in the external system (optional). Data type - string, without using Cyrillic, special characters are not recommended.
 
-### Example
+#### Sample
 
     <Traveller>
        <ID>1</ID>
