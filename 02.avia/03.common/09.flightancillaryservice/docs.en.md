@@ -184,13 +184,13 @@ The list of available ancillary services is triggered by the SearchAncillaryServ
             
    
    
-  If there was an error with ancillary service while process of issuing the ticket, it can be issued separately through an  [IssueEMD](/avia/request/issueemd) request.
+If there was an error with ancillary service during the process of issuing the ticket, it can be issued separately through an  [IssueEMD](/avia/request/issueemd) request.
    
-   To void an ancillary service use a [VoidEMD](/avia/request/voidemd) request.
+To void an ancillary service use a [VoidEMD](/avia/request/voidemd) request.
    
-  To obtain the calculation of the return of the EMD, a [GetEMDRefundData](/avia/request/getemdrefunddata) request is used.
+To obtain the calculation of the EMD refund, a [GetEMDRefundData](/avia/request/getemdrefunddata) request is used.
    
-   To make an EMD return, a [RefundEMD](/avia/request/refundemd) request is used.
+To make an EMD refund, a [RefundEMD](/avia/request/refundemd) request is used.
   
     
    
