@@ -9,7 +9,7 @@ taxonomy:
 
 The insurance.
 
--   **Vendor** - The vendor of insurance services. Data type - enumeration, possible values:
+-   **Vendor** - insurance services vendor. Data type - enumeration, possible values:
     -   AlphaInsurance
--   **InsuranceLevel** - The level / program of insurance. The data type is a string.
--   **DocumentURL** - The link to the document with insurance. The data type is a string.
+-   **InsuranceLevel** - level/program of insurance. Data type - string.
+-   **DocumentURL** - reference to the document with insurance. Data type - string.
