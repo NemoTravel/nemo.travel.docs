@@ -10,10 +10,10 @@ taxonomy:
 Contains the following parameters:
 
 -   **ID** - unique ID of this price. Data type - 64-bit integer.
--   **Refundable** - The refundable ticket for this fare/price. Data type - enumeration, possible values:
-  - 0 (Unknown)
-  - 1 (Refundable)
-  - 2 (NonRefundable)
+-   **Refundable** - refundable ticket for this fare/price. Data type - enumeration, possible values:
+   - 0 (Unknown)
+   - 1 (Refundable)
+   - 2 (NonRefundable)
 -   **PrivateFareInd** - attribute of the availability of a private fare in the price. Data type - bool.
 -   **TicketTimeLimit** - time-limit of the given price (the price is valid till) in the format <code>yyyy-mm-ddthh:mm:ss</code> format. Data type - string.
 -   **PassengerFares** - container for the information about the price component for a certain type of passenger. Data type - array.
