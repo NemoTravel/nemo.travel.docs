@@ -9,65 +9,65 @@ taxonomy:
 
 Contains the following parameters:
 
--   **ID** - The price unique ID. The data type is an integer 64-bit number.
--   **Refundable** - The refundable ticket for this fare / price. Data type - enumeration, possible values:
-    - 0 (Unknown) - Unknown
-    - 1 (Refundable) - Returnable
-    - 2 (NonRefundable) - Non-returnable
--   **PrivateFareInd** - A sign of the availability of a private fare in the price. The data type is boolean.
--   **TicketTimeLimit** - The time-limit of this price (the price is valid until) in the format yyyy-MM-ddTHH: mm: ss. The data type is a string.
--   **PassengerFares** - The container for the information about the price component for a certain type of passenger. The array data type.
--   **PassengerFares.PassengerFare** - The information on the price component for a certain type of passenger. The array data type.
--   **PassengerFares.PassengerFare.Type** - The passenger type for which this price component is applied. Data type - enumeration, possible values:
-    - ADT - adult - a passenger over 12 years of age
-	- UNN - child - a passenger older than 2 and under 12 years of age - unaccompanied by an adult
-	- CNN - child - a passenger over 2 and under 12 years of age
-	- INF - infant - a passenger under 2 years old - not occupying space in the airplane
-	- MIL - a Military
-	- SEA - a seaman
-	- SRC - an elderly passenger (pensioner)
-	- STU - a student
+-   **ID** - unique ID of this price. Data type - 64-bit integer.
+-   **Refundable** - The refundable ticket for this fare/price. Data type - enumeration, possible values:
+    - 0 (Unknown)
+    - 1 (Refundable)
+    - 2 (NonRefundable)
+-   **PrivateFareInd** - attribute of the availability of a private fare in the price. Data type - bool.
+-   **TicketTimeLimit** - time-limit of the given price (the price is valid till) in the format <code>yyyy-mm-ddthh:mm:ss</code> format. Data type - string.
+-   **PassengerFares** - container for the information about the price component for a certain type of passenger. Data type - array.
+-   **PassengerFares.PassengerFare** - information on the price component for a certain type of passenger. Data type - array.
+-   **PassengerFares.PassengerFare.Type** - type of the passenger for which this price component is applied. Data type - enumeration, possible values:
+    - ADT - adult - passenger over 12 years old
+	- UNN - child - passenger older than 2 and under 12 years old - unaccompanied by an adult
+	- CNN - child - passenger over 2 and under 12 years old
+	- INF - infant - passenger under 2 years old - not occupying space in the airplane
+	- MIL - Military
+	- SEA - seaman
+	- SRC - elderly passenger (pensioner)
+	- STU - student
 	- YTH - youth
--   **PassengerFares.PassengerFare.Quantity** - The number of passengers of this type. The data type is an integer 32-bit number.
--   **PassengerFares.PassengerFare.PricedAs** - The price type of the passenger for whom the price was received for this type of passenger from the GDS. Data type - enumeration, possible values:
-	- ADT - adult - a passenger over 12 years of age
-	- UNN - child - a passenger older than 2 and under 12 years of age - unaccompanied by an adult
-	- CNN - child - a passenger over 2 and under 12 years of age
-	- INF - infant - a passenger under 2 years old - not occupying seat in the airplane
-	- MIL - a Military
-	- SEA - a seaman
-	- SRC - an elderly passenger (pensioner)
-	- STU - a student
+-   **PassengerFares.PassengerFare.Quantity** - number of passengers of this type. Data type - 32-bit integer.
+-   **PassengerFares.PassengerFare.PricedAs** - price type of the passenger for whom the price was received for this passenger type from the GDS. Data type - enumeration, possible values:
+	- ADT - adult - passenger over 12 years old
+	- UNN - child - passenger older than 2 and under 12 years old - unaccompanied by an adult
+	- CNN - child - passenger over 2 and under 12 years old
+	- INF - infant - passenger under 2 years old - not occupying seat in the airplane
+	- MIL - military
+	- SEA - seaman
+	- SRC - elderly passenger (pensioner)
+	- STU - student
 	- YTH - youth
-	- JCB - "wholesale" type - an adult
-	- JNN - "wholesale" type - a child or an infant having a seat
-	- JNF - "wholesale" type - a baby without a seat
--   **PassengerFares.PassengerFare.BaseFare** - The base price (pure fares without taxes) for 1 passenger of this type. The array data type.
--   **PassengerFares.PassengerFare.BaseFare.Currency** - The code of the base price currency. The data type is a string.
--   **PassengerFares.PassengerFare.BaseFare.Amount** - The amount of the base price. The data type is a fractional number.
--   **PassengerFares.PassengerFare.EquiveFare** - The base price in the equivalent currency for 1 passenger of this type. The array data type. The element format is similar to the **BaseFare** element.
--   **PassengerFares.PassengerFare.TotalFare** - The full price (tariffs + taxes) for 1 passenger of this type in an equivalent currency. The array data type. The element format is similar to the **BaseFare** element.
--   **PassengerFares.PassengerFare.Taxes** - The container for taxes for this price component. The array data type.
--   **PassengerFares.PassengerFare.Taxes.Tax** - The information about the certain tax. The array data type.
--   **PassengerFares.PassengerFare.Taxes.Tax.Currency** - The currency tax code. The data type is a string.
--   **PassengerFares.PassengerFare.Taxes.Tax.Amount** - The amount of the taxes. The data type is a fractional number.
--   **PassengerFares.PassengerFare.Taxes.Tax.TaxCode** - The code of the tax. The data type is a string.
--   **PassengerFares.PassengerFare.Tariffs** - The container for tariffs of this price component. The array data type.
--   **PassengerFares.PassengerFare.Tariffs.Tariff** - The information about one of the tariffs of this price component. The array data type.
--   **PassengerFares.PassengerFare.Tariffs.Tariff.Code** - The tariff code. The data type is a string.
--   **PassengerFares.PassengerFare.Tariffs.Tariff.Type** - The tariff type. DThe data type - enumeration, possible values:
-    - 0 (Public) - Public (not private) tariff
-	- 1 (Coded) - Tariff received through corporate ID / account code / tour code, etc.
-	- 2 (Cat35) - Category 35, also called contractual tariffs.
-	- 3 (NonCat35) - Tariffs "unsuitable for ticketing in category 35". 
-	- 4 (Private) - All other private rates
--  **PassengerFares.PassengerFare.Tariffs.Tariff.IsSystemTransfer** - A sign of the system transfer. The data type is boolean.
--   **PassengerFares.PassengerFare.Tariffs.Tariff.SegNum** - The segment number for which this tariff is applied. The data type is an integer 32-bit number.
--   **PassengerFares.PassengerFare.Commission** - The Information about the commission for this price component from the GDS. The array data type.
-- **PassengerFares.PassengerFare.Commission.Amount** - The absolute value of the commission. The data type is a fractional number.
-- **PassengerFares.PassengerFare.Commission.Percent*** - The commission value in percent. The data type is a fractional number.
--   **PassengerFares.PassengerFare.Commission.Currency** - The code of the commission currency. The data type is a string.
--   **PassengerFares.PassengerFare.FareCalc** - The line for calculating the price. The data type is a string.
+	- JCB - "wholesale" type - adult
+	- JNN - "wholesale" type - child or an infant having a seat
+	- JNF - "wholesale" type - baby without a seat
+-   **PassengerFares.PassengerFare.BaseFare** - base price (pure fares without taxes) for 1 passenger of this type. Data type - array.
+-   **PassengerFares.PassengerFare.BaseFare.Currency** - base price currency code. Data type - string.
+-   **PassengerFares.PassengerFare.BaseFare.Amount** - base price amount. Data type - fractional number.
+-   **PassengerFares.PassengerFare.EquiveFare** - base price in the equivalent currency for 1 passenger of this type. Data type - array. The element format is similar to the **BaseFare** element.
+-   **PassengerFares.PassengerFare.TotalFare** - total price (fares + taxes) for 1 passenger of this type in an equivalent currency. Data type - array. The element format is similar to the **BaseFare** element.
+-   **PassengerFares.PassengerFare.Taxes** - container for taxes for this price component. Data type - array.
+-   **PassengerFares.PassengerFare.Taxes.Tax** - information about the certain tax. Data type - array.
+-   **PassengerFares.PassengerFare.Taxes.Tax.Currency** - tax currency code. Data type - string.
+-   **PassengerFares.PassengerFare.Taxes.Tax.Amount** - amount of the taxes. Data type - fractional number.
+-   **PassengerFares.PassengerFare.Taxes.Tax.TaxCode** - tax code. Data type - string.
+-   **PassengerFares.PassengerFare.Tariffs** - container for fares of this price component. Data type - array.
+-   **PassengerFares.PassengerFare.Tariffs.Tariff** - information about one of the fares of this price component. Data type - array.
+-   **PassengerFares.PassengerFare.Tariffs.Tariff.Code** - fare code. The data type is a string.
+-   **PassengerFares.PassengerFare.Tariffs.Tariff.Type** - fare type. DThe data type - enumeration, possible values:
+    - 0 (Public) - public (not private) fare
+	- 1 (Coded) - fare received through corporate ID / account code / tour code, etc.
+	- 2 (Cat35) - category 35, also called contractual tariffs.
+	- 3 (NonCat35) - fares "unsuitable for ticketing in category 35". 
+	- 4 (Private) - all other private rates
+-  **PassengerFares.PassengerFare.Tariffs.Tariff.IsSystemTransfer** - attribute of the system transfer. Data type - bool.
+-   **PassengerFares.PassengerFare.Tariffs.Tariff.SegNum** - segment number for which this fare is applied. Data type - 32-bit integer.
+-   **PassengerFares.PassengerFare.Commission** - information about the commission for this price component from the GDS. Data type - array.
+- **PassengerFares.PassengerFare.Commission.Amount** - absolute value of the commission. Data type - fractional number.
+- **PassengerFares.PassengerFare.Commission.Percent*** - commission value in percent. Data type - fractional number.
+-   **PassengerFares.PassengerFare.Commission.Currency** - commission currency code. Data type - string.
+-   **PassengerFares.PassengerFare.FareCalc** - string for calculating the price. Data type - string.
 -   **SourceID** - The ID of the package of requisites from which the given price was received
 -   **ValidatingCompany** - The validating carrier for a given price
 -   **BookingClassInfo** - The information about the flight classes to which this price applies. The array data type.
