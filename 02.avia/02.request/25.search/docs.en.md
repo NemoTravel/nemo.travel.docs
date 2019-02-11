@@ -173,6 +173,11 @@ Search for v 1.2
 - **ProcessingData.PropogatedFlightsSources.SourceData.Count** - indicates how many flights were received from the supplier. Data type - int. 
 - **ProcessingData.PricingRulesCount** - counter of the number of triggered pricing rules. Data type - int. 
 - **ProcessingData.PricingDuration** - pricing duration. Data type - string.
+- **ProcessingData.MixedFlightsCount** - number of flights after the mixing. Data type - int.
+- **ProcessingData.MixedFlightsSources** - container with mixing information. Data type - array. 
+- **ProcessingData.MixedFlightsSources.SourceData** - container with information on a particular supplier. Data type - array.
+- **ProcessingData.MixedFlightsSources.SourceData.SourceID** - supplier ID. Data type - int.
+- **ProcessingData.MixedFlightsSources.SourceData.Count** - number of flights after the mixing within the given supplier. Data type - int.
 - **ProcessingData.AppliedRouterRules** - container with router information. Data type - array. 
 - **ProcessingData.AppliedRouterRules.RouterRule** - container with information on applied router rules. Data type - array. 
 - **ProcessingData.AppliedRouterRules.RuleID** - ID of the applied rule. Data type - int. 
