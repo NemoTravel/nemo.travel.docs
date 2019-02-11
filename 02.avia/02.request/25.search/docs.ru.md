@@ -142,6 +142,7 @@ taxonomy:
 #### Ответ
 
 -   **SearchData** — данные о поиске. Тип данных — массив.
+-   **SearchData.Now** - аналогично SearchData.EndTime.
 -   **SearchData.StartTime** — дата и время начала поиска на сервере. Тип данных — строка, формат — <code>yyyy-mm-dd hh:mm:ss ±hh:mm</code>.
 -   **SearchData.EndTime** — дата и время окончания поиска на сервере. Тип данных — строка, формат — <code>yyyy-mm-dd m:mm:ss ±hh:mm</code>.
 -   **SearchData.IsAsync** — признак асинхронного поиска. Тип данных — булевский.
