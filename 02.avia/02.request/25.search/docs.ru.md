@@ -172,10 +172,15 @@ taxonomy:
 - **ProcessingData.PropogatedFlightsSources.SourceData.Count** - Указывает, сколько перелетов было получено от поставщика. Тип данных - int
 - **ProcessingData.PricingRulesCount** - Счетчик количества сработанных правил ЦО. Тип данных - int.
 - **ProcessingData.PricingDuration** - Длительность выполнения ЦО. Тип данных - строка. 
+- **ProcessingData.MixedFlightsCount** - Количество перелётов после микширования. Тип данных - int.
+- **ProcessingData.MixedFlightsSources** - Контейнер с информацией о микшировании. Тип данных - массив.
+- **ProcessingData.MixedFlightsSources.SourceData** - Контейнер с информацией по конкретному поставщику. Тип данных - массив.
+- **ProcessingData.MixedFlightsSources.SourceData.SourceID** - ID поставщика. Тип данных - int.
+- **ProcessingData.MixedFlightsSources.SourceData.Count** - Количество перелетов после микширования в рамках данного поставщика. Тип данных - int.
 - **ProcessingData.AppliedRouterRules** - Контейнер с информацией маршрутизатора. Тип данных - массив.
 - **ProcessingData.AppliedRouterRules.RouterRule** -  Контейнер с информацией о примененных правилах маршрутизатора. Тип данных - массив. 
 - **ProcessingData.AppliedRouterRules.RuleID** - ID сработанного правила. Тип данных - int.
-- **ProcessingData.AppliedRouterRules.TargetPackages** - Контейнер с информацией  о пакетах в которых был осуществлен поиск согласно маршрутизатору. Тип данных - массив. 
+- **ProcessingData.AppliedRouterRules.TargetPackages** - Контейнер с информацией о пакетах в, которых был осуществлен поиск согласно маршрутизатору. Тип данных - массив. 
 - **ProcessingData.AppliedRouterRules.TargetPackages.PackageID** - ID пакета, в котором  был осуществлен поиск согласно маршрутизатору. Тип данных - int.
 - **ProcessingData.TriggeredRequestFilters** - Контейнер с информацией по задействованным фильтрам запросов. Тип данных - массив. 
 - **ProcessingData.TriggeredRequestFilters.TriggeredRequestFilter** -  Контейнер с информацией по конкретному фильтру. Тип данных - массив. 
