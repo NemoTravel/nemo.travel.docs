@@ -47,11 +47,11 @@ title: 'Бронирование мест в поезде'
 -   **Passengers.BookRQPerson.Document.DocNum** - Номер документа. Тип данных - строка.
 -   **Passengers.BookRQPerson.NeedServices** - Доп. Тип данных - перечисление. Возможные значения аналогичны параметру Car.Services из ответа на запрос [поиска](/trains/trains_stages/searchtrains) поездов.
 -   **Passengers.BookRQPerson.ReturnTrainNeedServices** - Доп для поезда обратно, если оформляется ЖД перевозка типа "туда-обратно". Аналогичен параметру BookRQPerson.NeedServices.
--   **Passengers.BookRQPerson.ReturnTrainRzhdBDiscountCard** - Для поезда обратно, карта РЖД Бонус для получения скидки (UFS). Тип данных - строка.Аналогичен параметру BookRQPerson.RzhdBDiscountCard.
--   **Passengers.BookRQPerson.ReturnTrainRzhdBBonusCard**- Для поезда обратно, карта РЖД Бонус для получения скидки (UFS). Тип данных - строка. Аналогичен параметру BookRQPerson.RzhdBBonusCard.
--   **Passengers.BookRQPerson.RzhdBBonusCard** - Номер карты "РЖД Бонус" для начисления баллов за поездку (UFS, Sirena). Тип данных - строка.
--   **Passengers.BookRQPerson.RzhdBDiscountCard** - Номер карты "РЖД Бонус" для получения скидки на поездку (UFS, Sirena). Тип данных - строка. 
--   **Passengers.BookRQPerson.DiscountCard** - Номер "Дорожная карта РЖД" для получения скидки на поездку (UFS, Sirena). А так же, Дисконтная карта - бронирование оформляется на номер карты, вместо документа пассажира (KTZ). Тип данных - строка.
+-   **Passengers.BookRQPerson.ReturnTrainRzhdBDiscountCard** - Для поезда обратно, карта "РЖД Бонус" (UFS) для получения скидки. Тип данных - строка. Аналогичен параметру BookRQPerson.RzhdBDiscountCard.
+-   **Passengers.BookRQPerson.ReturnTrainRzhdBBonusCard**- Для поезда обратно, карта "РЖД Бонус" (UFS) для получения скидки. Тип данных - строка. Аналогичен параметру BookRQPerson.RzhdBBonusCard.
+-   **Passengers.BookRQPerson.RzhdBBonusCard** - Номер карты "РЖД Бонус" (UFS, Sirena) для начисления баллов за поездку. Тип данных - строка.
+-   **Passengers.BookRQPerson.RzhdBDiscountCard** - Номер карты "РЖД Бонус" (UFS, Sirena) для получения скидки на поездку. Тип данных - строка. 
+-   **Passengers.BookRQPerson.DiscountCard** - Номер "Дорожная карта РЖД" (UFS, Sirena) для получения скидки на поездку. А так же, Дисконтная карта (KTZ) - бронирование оформляется на номер карты, вместо документа пассажира. Тип данных - строка.
 -   **BlankPrefferredType** - Предпочитаемый формат бланков маршрутных квитанций. Тип данных - перечисление. Возможные значения (может быть null):
     -   **pdf**
     -   **rtf**
