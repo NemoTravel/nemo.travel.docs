@@ -143,6 +143,7 @@ Search for v 1.2
 #### Response
 
 -  **SearchData** - search data. Data type - array.
+-  **SearchData.Now** - similar to SearchData.EndTime.
 -  **SearchData.StartTime** - date and time of the search beginning on the server. Data type - string, the format is <code>yyyy-mm-dd hh:mm:ss ±hh:mm</code>.
 -  **SearchData.EndTime** - date and time of the search end on the server. Data type - string, the format is <code>yyyy-mm-dd hh:mm:ss ±hh:mm</code>.
 -  **SearchData.IsAsync** - attribute of asynchronous search. Data type - bool.
