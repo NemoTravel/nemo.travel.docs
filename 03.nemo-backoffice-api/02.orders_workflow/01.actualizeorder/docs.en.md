@@ -8,20 +8,20 @@ taxonomy:
 ### ActualizeOrder
 To update the order status, use the ActualizeOrder request. This request can update order information from the Nemo.travel back-office or update the status of payment transactions.
 #### Request parameters
-* **OrderID** - the order number from the back office of Nemo.travel. To get the parameter value for an order, you should run a GetOrder request with the  FlightsBookingID parameter (Booking ID from Nemo Connect).
-* **ActualizePayment** - allows you to send a request to the payment system to update the status of the payment transaction. Possible values: true / false.
-* **ActualizeFlightsBooking** - initiates a  [UpdateBook](/avia/request/updatebook) request to Nemo Connect. Possible values: true / false.
-* **CallbackUrl** - the callback from Nemo.travel will be returned information about order status when it is changed to this address. Example: http(s)://domain.
-* **PaymentBackRedirectUrl** - URL address for redirect after a successful payment. http(s)://domain/query?parameters.
-* **PaymentBackRedirectUrlFailure** - URL address for redirect after a failed payment (optional parameter).
+* **OrderID** - order number from the back office of Nemo.travel. To get the parameter value for an order, it is required to run a GetOrder request with specifying the FlightsBookingID parameter (Booking ID from Nemo Connect). 
+* **ActualizePayment** - allows to send a request to the payment system to update the status of the payment transaction. Possible values: true/false.
+* **ActualizeFlightsBooking** - initiates an [UpdateBook](/avia/request/updatebook) request to Nemo Connect. Possible values: true/false.
+* **CallbackUrl** - callback from Nemo.travel will be returned information about order status when it is changed to this address. Example: http(s)://domain.
+* **PaymentBackRedirectUrl** - URL address for the following redirect after a successful payment. http(s)://domain/query?parameters.
+* **PaymentBackRedirectUrlFailure** - URL address for the following redirect after a failed payment (optional parameter).
 * **NemoOneAuthToken** - API key, issued by Nemo.travel staff (out-of-date parameter, recommended to use AuthToken).
-* **AuthToken** - API key, issued by Nemo.travel staff.
-* **UserID** - User ID in the Nemo.travel system, issued by Nemo.travel staff.
+* **AuthToken** - API key issued by Nemo.travel staff.
+* **UserID** - user ID in the Nemo.travel system, issued by Nemo.travel staff. 
 
 #### Response parameters
 Identical to the parameters from [GetOrder](/nemo-backoffice-api/orders_workflow/getorder).
 
-#### Request example 
+#### Sample request 
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="***">
    <soapenv:Header/>
@@ -44,7 +44,7 @@ Identical to the parameters from [GetOrder](/nemo-backoffice-api/orders_workflow
    </soapenv:Body>
 </soapenv:Envelope>
 ```
-#### Response example
+#### Sample response
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="***" xmlns:xsi="***">
    <SOAP-ENV:Body>
