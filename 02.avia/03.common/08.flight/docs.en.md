@@ -26,11 +26,12 @@ Flight representation format 1.1.
     - **DoubleOJ** - double Open Jaw - 2-leg flight in which the departure point of the first leg DOES NOT coincide with the arrival point of the second leg AND the point of arrival of the first leg DOES NOT coincide with the departure point of the second leg;
     - **hRT** - RT/2 - a simple OW flight was requested, but on the basis of the settings of a certain requisite package RT/2 search was launched; 
     - **mOW** - multipleOW - OW + OW + - the requested flight from several segments was found as a set of separate search results.
+-   **Flight.ExpectedTicketCount** - shows how many tickets are to be ticketed. Data type - 32-bit integer.
 -   **Flight.MandatoryLatinNames** - attribute of the obligation to create a booking with the full name in Latin. Data type - bool.
 -   **Flight.Segments** - container for flight segments. Data type - array.
 -   **Flight.Segments.Segment** - information about the flight segment. Data type - array.
--   **Segment.ID** - serial number of this segment in the flight. Data type - 32-bit integer .
--   **Segment.RequestedSegment** - segment number from the search query. Data type - 32-bit integer .
+-   **Segment.ID** - serial number of this segment in the flight. Data type - 32-bit integer.
+-   **Segment.RequestedSegment** - segment number from the search query. Data type - 32-bit integer.
 -   **Segment.DepAirp** - information about the departure airport for this segment. Data type - array.
 -   **Segment.DepAirp.AirportCode** - airport code. Data type - string.
 -   **Segment.DepAirp.CityCode** - city code (airport aggregator). Data type - string.
