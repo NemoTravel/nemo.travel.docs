@@ -45,6 +45,7 @@ taxonomy:
 -   **OperationsRestrictions.PricingInfo.ThreeDomainAgreementNumber** — код корпоративного клиента в трехстороннем договоре. Тип данных — строка.
 -   **OperationsRestrictions.UpdateCachedFareRules** — обновление закэшированных в брони тарифных правил. Тип данных — булевский.
 -   **OperationsRestrictions.ListFaresIfNoFamiliesDifined** — включает возврат списка тарифов от GDS в случае если у них нет отсылки к семейству. Тип данных — булевский.
+-   **IsMixerDisabled** - Признак отключения микшера перелётов. Тип данных - булевский.
 
 ##### Пример
 ```xml
