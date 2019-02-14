@@ -44,7 +44,7 @@ taxonomy:
 -   **OperationsRestrictions.PricingInfo.PriceSpecifiedPassTypesOnly** — при репрайсинге использовать только конкретные коды типов пассажиров, по возможности. Тип данных — булевский.
 -   **OperationsRestrictions.PricingInfo.RefererID** - Если указан, то переопределяет пользователя Nemo 1, для которого будет производится расчёт ЦО. Тип данных - int.
 -   **OperationsRestrictions.PricingInfo.ThreeDomainAgreementNumber** — код корпоративного клиента в трехстороннем договоре. Тип данных — строка.
--   **OperationsRestrictions.PricingInfo.IsMixerDisabled** - Признак отключения микшера перелётов. Тип данных - булевский.
+-   **OperationsRestrictions.PricingInfo.IsMixerDisabled** - отключает микширование вариантов оценки перелёта, полученных в процессе репрайсинга. Тип данных - булевский.
 -   **OperationsRestrictions.UpdateCachedFareRules** — обновление закэшированных в брони тарифных правил. Тип данных — булевский.
 -   **OperationsRestrictions.ListFaresIfNoFamiliesDifined** — включает возврат списка тарифов от GDS в случае если у них нет отсылки к семейству. Тип данных — булевский.
 
