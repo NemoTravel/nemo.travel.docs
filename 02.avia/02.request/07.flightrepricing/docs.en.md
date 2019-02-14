@@ -14,6 +14,7 @@ Performs the flight repricing, includes the availability check of the flight. Sa
 ##### Format Description
 
 -  **FlightID** - ID of the flight for which you need to performs the repricing. Data type - string.
+-  **IsMixerDisabled** - attribute for disabling mixer. Data type - boolean.
 
 ##### Sample
 ```xml
