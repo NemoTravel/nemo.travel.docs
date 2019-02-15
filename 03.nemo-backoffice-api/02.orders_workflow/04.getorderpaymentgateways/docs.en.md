@@ -8,7 +8,7 @@ visible: true
 This request is designed to get the information on the available payment methods.
 In response to this request Nemo.travel will return the following parameters:
 * address for transferring card data to the payment system in the parameter UrlForCardDataSubmit; 
-* the request content, in which you should replace the placeholder with the card data and send it to the address that will also be in the reply in the CardDataRequestContent parameter;
+* request content, in which you should replace the placeholder with the card data and send it to the address that will also be in the reply in the CardDataRequestContent parameter;
 
 #### Request  parameters
 * **OrderID** -  the order number from the back office of Nemo.travel. To get the parameter value for an order, you should run a GetOrder request with the parameters FlightsBookingID (Booking ID from Nemo Connect).
