@@ -33,7 +33,7 @@ In response to this request Nemo.travel will return the following parameters:
 * **CardDataRequestContent.proxy-placeholder-holderName** - name and surname of the holder of the bank card (in Latin). Example: Ivan Ivanov.
 * **CardDataRequestContent.proxy-placeholder-customerIp** - IP address from which the user entered bank card data. Format: IP v4 address.
 * **CardDataRequestContent.proxy-placeholder-customerAgent** - name of the client browser (User-Agent HTTP header). Example: Mozilla.
-* **RequestType** - type of request. The available values are: POST / GET.
+* **RequestType** - type of request. The available values are: POST/GET.
 
 #### Sample request
 ```xml
