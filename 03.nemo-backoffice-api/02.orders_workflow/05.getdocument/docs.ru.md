@@ -2,7 +2,7 @@
 title: GetDocument
 ---
 
-### GetDocumet
+### GetDocument
  Запрос предназначен для получения документа из заказа системы Nemo.
 
 
