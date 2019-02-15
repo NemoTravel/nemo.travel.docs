@@ -12,14 +12,14 @@ This request is designed to get the document from the order in Nemo.travel syste
 * **AuthToken** - API key, issued by Nemo.travel staff.
 * **UserID** - User ID in the Nemo.travel system, issued by Nemo.travel staff.
 
-#### Параметры ответа
+#### Response parameters
 * **PaperDocument.Type** - type of the returned document.
 * **PaperDocument.Format** - format of the returned document.
 * **PaperDocument.Encoding** - encoding of the returned document (is not used).
 * **PaperDocument.DocumentData** - the document data.
 * **PaperDocument.IsBase64Wrapped** - indicates if the contents of the document is encoded in Base64.
 
-#### Request example
+#### Sample request
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="***">
   <soapenv:Header/>
@@ -40,7 +40,7 @@ This request is designed to get the document from the order in Nemo.travel syste
   </soapenv:Body>
 </soapenv:Envelope>
 ```
-#### Response example
+#### Sample response
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="***">
   <SOAP-ENV:Body>
