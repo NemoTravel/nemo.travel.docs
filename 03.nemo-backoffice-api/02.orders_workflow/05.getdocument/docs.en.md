@@ -2,7 +2,7 @@
 title: GetDocument
 ---
 
-### GetDocumet
+### GetDocument
 This request is designed to get the document from the order in Nemo.travel system.
 
 
