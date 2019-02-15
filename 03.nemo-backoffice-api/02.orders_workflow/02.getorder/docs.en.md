@@ -13,41 +13,41 @@ In response to this request Nemo.travel will return the following parameters:
 *  list of available additional services (service package, insurance programs) in the Services parameter. 
 
 #### Request parameters
-* **OrderID** - the order number in the back office of Nemo.travel. To get the parameter value for an order, you should run a GetOrder request with one of the Flights Booking ID or TrainsBookingID parameters (Booking ID from Nemo Connect).
+* **OrderID** - order number in the Nemo.travel back office. To get the parameter value for an order, you should run a GetOrder request with one of the Flights Booking ID or TrainsBookingID parameters (Booking ID from Nemo Connect).
 * **FlightsBookingID** - Nemo Connect avia booking ID, the value is returned in the GetBook response in ID parameter.
 * **TrainsBookingID** - Nemo Connect rail booking ID, the value is returned in the GetBook response in BookID parameter. 
-* **CallbackUrl** - the callback from Nemo.travel will be returned information about order status when it is changed to this address. Example: http(s)://domain.
-* **PaymentBackRedirectUrl** - URL address for redirect after a successful payment. http(s)://domain/query?parameters.
-* **PaymentBackRedirectUrlFailure** - URL address for redirect after a failed payment (optional parameter).
+* **CallbackUrl** - address to which callback from Nemo.travel with information on order status after its change will be returned. Example: http(s)://domain.
+* **PaymentBackRedirectUrl** - URL address for further redirect after a successful payment. Format: http(s)://domain/query?parameters.
+* **PaymentBackRedirectUrlFailure** - URL address for redirect after a failed payment (optional, if not specified PaymentBackRedirectUrl parameter will be used).
 * **NemoOneAuthToken** - API key, issued by Nemo.travel staff (out-of-date parameter, recommended to use AuthToken).
 * **AuthToken** - API key, issued by Nemo.travel staff.
-* **UserID** - User ID in the Nemo.travel system, issued by Nemo.travel staff.
+* **UserID** - user ID in the Nemo.travel system, issued by Nemo.travel staff.
 
 #### Response parameters
-* **Item.ID** - the service ID in the service package.
+* **Item.ID** - service ID in the service package.
 * **Item.Price** - cost of service (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
 * **Item.Name** - name of the service.
 * **Item.ShortDescription** - short description of the service.
 * **Item.FullDescription** - full description of the service.
 * **Package.ID** - id of service package.
 * **Package.Price** - total cost of service package (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
-* **Package.Name** - name of the  service package.
-* **Package.ShortDescription** -  short description of the service package.
+* **Package.Name** - name of the service package.
+* **Package.ShortDescription** - short description of the service package.
 * **Package.FullDescription** - full description of the service package.
-* **IsEditable** - presence of possibility of a choice of a service package via ModifyOrder request. Values: true / false.
-* **SelectedPackageId** - identifier of the selected service package.
+* **IsEditable** - presence of possibility of a choice of a service package via ModifyOrder request. Values: true/false.
+* **SelectedPackageId** - ID of the selected service package.
 * **FlightsBookingID** - Nemo Connect booking ID.
 * **OrderStatus** - order status. Possible values: New, Booked, Canceled, Confirmed.
 * **PaymentStatus** - payment status. Possible values: NotPaid, PartiallyPaid, FullPaid.
-* **Transaction.ID** - the number of payment transaction.
-* **Transaction.Status** - status of payment transaction. Possible values: New, Cancelled, Refunded, PreAuthorized, Paid.
-* **Transaction.GatewayName** - the name of the payment gateway, entered by the agent in the settings.
-* **Transaction.MoneyPaid** - the amount that has already been paid in this transaction (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
-* **Transaction.PaymentDateTime** - date and time of receipt of payment for the transaction. Format: YYYY-MM-DDTHH: MM: SS.
-* **Transaction.CreateDateTime** - the date and time the payment transaction was created. Format: YYYY-MM-DDTHH: MM: SS.
+* **Transaction.ID** - payment transaction number.
+* **Transaction.Status** - payment transaction status. Possible values: New, Cancelled, Refunded, PreAuthorized, Paid.
+* **Transaction.GatewayName** - payment gateway name, entered by the agent in the settings.
+* **Transaction.MoneyPaid** - amount that has already been paid in this transaction (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
+* **Transaction.PaymentDateTime** - date and time of receipt of payment for the transaction. Format: YYYY-MM-DDTHH:MM:SS.
+* **Transaction.CreateDateTime** - date and time the payment transaction was created. Format: YYYY-MM-DDTHH:MM:SS.
 
 
-#### Request example
+#### Sample request 
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="***">
 	<soapenv:Header/>
@@ -68,7 +68,7 @@ In response to this request Nemo.travel will return the following parameters:
 	</soapenv:Body>
 </soapenv:Envelope>
 ```
-#### Response example
+#### Sample response
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="***" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
