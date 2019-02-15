@@ -10,19 +10,19 @@ taxonomy:
 This request is designed to change the already created order in the back-office, for example, you can add a service package to the order.
 
 #### Request  parameters
-* **OrderID** -  the order number from the back office of Nemo.travel. To get the parameter value for an order, you should run a GetOrder request with the parameters FlightsBookingID (Booking ID from Nemo Connect).
-* **SelectedPackageId** - the number of the service package that you want to select in the order. The value is returned in the GetOrder and ActualizeOrder responses in the Services.Service.ServicePack.Packages.Package.ID parameter.
-* **CallbackUrl** - The callback from Nemo.travel will be returned information about order status when it is changed to this address. Example: http(s)://domain.
+* **OrderID** - number of the order from the Nemo.travel back office. To get the parameter value for an order, you should run a GetOrder request with the parameters FlightsBookingID (Booking ID from Nemo Connect).
+* **SelectedPackageId** - number of the service package that you want to select in the order. The value is returned in the GetOrder and ActualizeOrder responses in the Services.Service.ServicePack.Packages.Package.ID parameter.
+* **CallbackUrl** - address to which callback from Nemo.travel with information on order status (if it is changed) will be returned. Example: http(s)://domain.
 * **PaymentBackRedirectUrl** - URL address for redirect after a successful payment. http(s)://domain/query?parameters.
 * **PaymentBackRedirectUrlFailure** - URL address for redirect after a failed payment (optional parameter).
-* **NemoOneAuthToken** - API key, issued by Nemo.travel staff (out-of-date parameter, recommended to use AuthToken).
-* **AuthToken** -  API key, issued by Nemo.travel staff.
+* **NemoOneAuthToken** - API key issued by Nemo.travel staff (out-of-date parameter, recommended to use AuthToken).
+* **AuthToken** - API key issued by Nemo.travel staff.
 * **UserID** - User ID in the Nemo.travel system, issued by Nemo.travel staff.
 
 #### Response parameters
 Identical to the parameters from [GetOrder](/nemo-backoffice-api/orders_workflow/getorder).
 
-#### Request example
+#### Sample request
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ver="http://DOMAIN/nemoflights/?version%3D2.0%26for%3DOrders">
 	<soapenv:Header/>
@@ -50,7 +50,7 @@ Identical to the parameters from [GetOrder](/nemo-backoffice-api/orders_workflow
 	</soapenv:Body>
 </soapenv:Envelope>
 ```
-#### Response example
+#### Sample response
 ```xml
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1=*** xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <SOAP-ENV:Body>
