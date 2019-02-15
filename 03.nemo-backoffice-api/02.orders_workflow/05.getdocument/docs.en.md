@@ -16,7 +16,7 @@ This request is designed to get the document from the order in Nemo.travel syste
 * **PaperDocument.Type** - type of the returned document.
 * **PaperDocument.Format** - format of the returned document.
 * **PaperDocument.Encoding** - encoding of the returned document (is not used).
-* **PaperDocument.DocumentData** - the document data.
+* **PaperDocument.DocumentData** - document data.
 * **PaperDocument.IsBase64Wrapped** - indicates if the contents of the document is encoded in Base64.
 
 #### Sample request
