@@ -9,15 +9,15 @@ Request for data on the counterparty.
 
 #### Request parameters
 
--   **method** — information about the type of request. The data type is a string.
--   **apiVersion** — information about the API version. The data type is a string. 
--   **params** — parameters of the object. The custom data type.
--   **params.type** — object type. The data type is a string.
--   **params.companyId** — subagency ID. The data type is Int32. 
--   **params.requestId** — order ID. The data type is a string.
--   **params.sign** — request signature. The data type is a string.
+-   **method** — information about the type of request. Data type - string.
+-   **apiVersion** — information about the API version. Data type - string.
+-   **params** — parameters of the object. Data type - custom.
+-   **params.type** — object type. Data type - string.
+-   **params.companyId** — subagency ID. Data type - int32. 
+-   **params.requestId** — order ID. Data type - string.
+-   **params.sign** — request signature. Data type - string.
 
-##### Request example
+##### Sample request
 ```json
 {
     "method": "import",
@@ -33,40 +33,40 @@ Request for data on the counterparty.
 
 #### Response parameters
 
--   **method** — information about the type of request. The data type is a string.
--   **apiVersion** — information about the API version. The data type is a string. 
--   **params** — parameters of the object. The custom data type.
--   **params.type** — object type. The data type is a string.
--   **params.companyId** — subagency ID. The data type is Int32.
--   **params.requestId** — order ID. The data type is a string.
--   **data** — data container. The custom data type. 
--   **data.success** — sign of success. The data type is bool.
--   **data.info** — information about the counterparty. The custom data type.
--   **data.info.name** — company name. The data type is a string.
--   **data.info.tin** — TIN. The data type is Int32.
--   **data.info.ogrn** — OGRN.  The data type is Int32.
--   **data.info.currency** — currency. The data type is a string.
--   **data.info.country** — country. The data type is a string.
--   **data.info.city** — city. The data type is a string.
--   **data.info.street** — street.  The data type is a string.
--   **data.info.house** — house number.  The data type is a string.
--   **data.info.office** — office. The data type is a string.
--   **data.info.phone** — phone of the agency. The data type is a string.
--   **data.info.email** — e-mail address. The data type is a string.
--   **data.info.taxType** — type of taxation. The data type is a string.
--   **data.info.bankRequisites** — bank details. The custom data type.
--   **data.info.bankRequisites.recipient** — recipient. The data type is a string.
--   **data.info.bankRequisites.tin** — TIN. The data type is Int32.
--   **data.info.bankRequisites.bik** — Bank Identification Code. The data type is Int32.
--   **data.info.bankRequisites.bill** — beneficiary bank account. The data type is Int32.
--   **data.info.bankRequisites.okpo** — code on the all-Russian classifier of enterprises and organizations. The data type is Int32.
--   **data.info.bankRequisites.okved** — code on the all-Russian classifier of economic activities. The data type is Int32.
--   **data.info.manager** — information about the manager. The custom data type.
--   **data.info.manager.first_name** — manager's name. The data type is a string.
--   **data.info.manager.last_name** — manager's surname. The data type is a string.
--   **data.info.manager.phone** — manager's contact phone number. The data type is a string.
+-   **method** — information about the request type. Data type - string.
+-   **apiVersion** — information about the API version. Data type - string. 
+-   **params** — parameters of the object. Data type - custom.
+-   **params.type** — object type. Data type - string.
+-   **params.companyId** — subagency ID. Data type - int32.
+-   **params.requestId** — order ID. Data type - string.
+-   **data** — data container. Data type - custom. 
+-   **data.success** — sign of success. Data type - bool.
+-   **data.info** — information about the counterparty. Data type - custom.
+-   **data.info.name** — company name. Data type - string.
+-   **data.info.tin** — TIN. Data type - int32.
+-   **data.info.ogrn** — OGRN. Data type - int32.
+-   **data.info.currency** — currency. Data type - string.
+-   **data.info.country** — country. Data type - string.
+-   **data.info.city** — city. Data type - string.
+-   **data.info.street** — street. Data type - string.
+-   **data.info.house** — house number. Data type - string.
+-   **data.info.office** — office. Data type - string.
+-   **data.info.phone** — phone of the agency. Data type - string.
+-   **data.info.email** — e-mail address. Data type - string.
+-   **data.info.taxType** — tax type. Data type - string.
+-   **data.info.bankRequisites** — bank requisites. Data type - custom.
+-   **data.info.bankRequisites.recipient** — recipient. Data type - string.
+-   **data.info.bankRequisites.tin** — TIN. Data type - int32.
+-   **data.info.bankRequisites.bik** — Bank Identification Code. Data type - int32.
+-   **data.info.bankRequisites.bill** — beneficiary bank account. Data type - int32.
+-   **data.info.bankRequisites.okpo** — code on the all-Russian classifier of enterprises and organizations. Data type - int32.
+-   **data.info.bankRequisites.okved** — code on the all-Russian classifier of economic activities. Data type - int32.
+-   **data.info.manager** — information about the manager. Data type - custom.
+-   **data.info.manager.first_name** — manager's name. Data type - string.
+-   **data.info.manager.last_name** — manager's surname. Data type - string.
+-   **data.info.manager.phone** — manager's contact phone number. Data type - string.
 
-##### Response example
+##### Sample response
 ```json
 {
     "method": "import",
