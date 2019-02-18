@@ -9,15 +9,15 @@ Request to receive a counterparty balance.
 
 #### Request parameters
 
--   **method** — information about the type of request. The data type is a string.
--   **apiVersion** — information about the API version. The data type is a string. 
--   **params** — parameters of the object. The custom data type.
--   **params.type** — object type. The data type is a string.
--   **params.companyId** — subagency ID. The data type is Int32.
--   **params.requestId** — order identifier. The data type is a string.
--   **params.sign** — request signature. The data type is a string.
+-   **method** — information about the type of request. Data type - string.
+-   **apiVersion** — information about the API version. Data type - string. 
+-   **params** — parameters of the object. Data type - custom.
+-   **params.type** — object type. Data type - string.
+-   **params.companyId** — subagency ID. Data type - int32.
+-   **params.requestId** — order identifier. Data type - string.
+-   **params.sign** — request signature. Data type - string.
 
-##### Request example
+##### Sample request
 ```json
 {
     "method": "import",
@@ -33,29 +33,29 @@ Request to receive a counterparty balance.
 
 #### Response parameters
 
--   **method** — information about the type of request. The data type is a string.
--   **apiVersion** — information about the API version. The data type is a string. 
--   **params** — parameters of the object. The custom data type.
--   **params.type** — object type. The data type is a string.
--   **params.companyId** — subagency ID. The data type is Int32.
--   **params.requestId** — order identifier. The data type is a string.
--   **data** — data container. The custom data type. 
--   **data.success** — sign of success. The data type is bool.
--   **data.balance** — container with balance data. The custom data type.
--   **data.balance.deposit** —  container with data on the state of the account. The custom data type.
--   **data.balance.deposit.amount** — amount of personal account. The data type is a string.
--   **data.balance.deposit.currency** — personal account currency code. The data type is a string.
--   **data.balance.credit** — container with data on the state of the maximum overdraft. The custom data type.
--   **data.balance.credit.amount** — amount of the maximum overdraft. The data type is a string.
--   **data.balance.credit.currency** — maximum overdraft currency code. The data type is a string.
--   **data.balance.paymentExtraInfo** — additional payment information. The custom data type.
--   **data.balance.paymentExtraInfo.type** — object type. The data type is a string.
--   **data.balance.paymentExtraInfo.name** — name. The data type is a string.
--   **data.balance.paymentExtraInfo.money** — monetary expression. The custom data type.
--   **data.balance.paymentExtraInfo.money.amount** — amount. The data type is a string.
--   **data.balance.paymentExtraInfo.money.currency** — currency code. The data type is a string.
+-   **method** — information about the request type. Data type - string.
+-   **apiVersion** — information about the API version. Data type - string.
+-   **params** — parameters of the object. Data type - custom.
+-   **params.type** — object type. Data type - string.
+-   **params.companyId** — subagency ID. Data type - int32.
+-   **params.requestId** — order identifier. Data type - string.
+-   **data** — data container. Data type - custom. 
+-   **data.success** — sign of success. Data type - bool.
+-   **data.balance** — container with balance data. Data type - custom.
+-   **data.balance.deposit** —  container with data on the state of the account. Data type - custom.
+-   **data.balance.deposit.amount** — personal account amount. Data type - string.
+-   **data.balance.deposit.currency** — personal account currency code. Data type - string.
+-   **data.balance.credit** — container with data on the state of the maximum overdraft.  Data type - custom.
+-   **data.balance.credit.amount** — amount of the maximum overdraft. Data type - string.
+-   **data.balance.credit.currency** — maximum overdraft currency code. Data type - string.
+-   **data.balance.paymentExtraInfo** — additional payment information. Data type - custom.
+-   **data.balance.paymentExtraInfo.type** — object type. Data type - string.
+-   **data.balance.paymentExtraInfo.name** — name. Data type - string.
+-   **data.balance.paymentExtraInfo.money** — monetary expression. Data type - custom.
+-   **data.balance.paymentExtraInfo.money.amount** — amount. Data type - string.
+-   **data.balance.paymentExtraInfo.money.currency** — currency code. Data type - string.
 
-##### Response example
+##### Sample response
 ```json
 {
     "method": "import",
