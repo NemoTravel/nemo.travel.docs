@@ -9,15 +9,15 @@ When you try to complete the order, you are sent a request to block funds on the
 
 #### Request parameters
 
--   **method** — contains information on the type of upload / request. The data type is a string.
--   **apiVersion** — information about the API version. The data type is a string.
--   **params** — request parameters. The custom data type.
--   **params.type** — object type. The data type is a string.
--   **params.transactionId** — transaction identifier from Nemo1. The data type is Int32.
--   **params.requestId** — order identifier. The data type is a string.
--   **params.sign** — request signature. The data type is a string.
+-   **method** — contains information on the type of upload/request. Data type - string.
+-   **apiVersion** — information about the API version.  Data type - string.
+-   **params** — request parameters. Data type - custom.
+-   **params.type** — object type.  Data type - string.
+-   **params.transactionId** — transaction ID from Nemo1. Data type - int32.
+-   **params.requestId** — order identifier.  Data type - string.
+-   **params.sign** — request signature.  Data type - string.
 
-##### Request example
+##### Sample request 
 ```json
 {
     "method": "payment",
@@ -33,18 +33,18 @@ When you try to complete the order, you are sent a request to block funds on the
 
 #### Response parameters
 
--   **method** — contains information on the type of request. The data type is a string.
--   **apiVersion** — information about the API version. The data type is a string.
--   **params** — request parameters. The custom data type.
--   **params.type** — object type. The data type is a string.
--   **params.transactionId** — transaction identifier from Nemo1. The data type is Int32. 
--   **params.requestId** — rder identifier. The data type is a string.
--   **data** — container with data about the object. The custom data type. 
--   **data.success** — sign of success. The data type is bool.
--   **data.needComplete** — a sign of the need to send payment.complete. The data type is bool.
--   **data.comment** — additional Information. The data type is a string.
+-   **method** — contains information on the type of request. Data type - string.
+-   **apiVersion** — information about the API version. Data type - string.
+-   **params** — request parameters. Data type - custom.
+-   **params.type** — object type. Data type - string.
+-   **params.transactionId** — transaction identifier from Nemo1. Data type - int32. 
+-   **params.requestId** — rder identifier. Data type - string.
+-   **data** — container with data about the object. Data type - custom. 
+-   **data.success** — sign of success. Data type - bool.
+-   **data.needComplete** — attribute of the need to send payment.complete. Data type - bool.
+-   **data.comment** — additional information. Data type - string.
 
-##### Response example
+##### Sample response
 ```json
 {
     "method": "payment",
