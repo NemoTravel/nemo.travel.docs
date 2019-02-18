@@ -44,19 +44,19 @@ Request to receive document content for order.
 
 #### Response parameters
 
--   **method** — information about the type of request. The data type is a string.
--   **apiVersion** — information about the API version. The data type is a string. 
--   **params** — parameters of the object. The custom data type.
--   **params.type** — object type. The data type is a string.
--   **params.transactionId** — transaction identifier from Nemo1. The data type is Int32. 
--   **params.orderId** — Order ID from Nemo1. The data type is Int32.
--   **params.requestId** — order identifier. The data type is a string.
--   **data** — container with data about the object. The custom data type.
--   **data.success** — sign of success. The data type is bool.
--   **data.documentsList** — document container. The custom data type.
--   **data.documentsList.name** — the name of the generated document. The data type is a string.
--   **data.documentsList.type** — type of generated document. The data type is a string.
--   **data.documentsList.content** — base64 document content. The data type is a string.
+-   **method** — information about the type of request. Data type - string.
+-   **apiVersion** — information about the API version. Data type - string.
+-   **params** — object parameters. Data type - custom.
+-   **params.type** — object type. Data type - string.
+-   **params.transactionId** — transaction identifier from Nemo1. Data type - int32.
+-   **params.orderId** — Order ID from Nemo1. Data type - int32.
+-   **params.requestId** — order ID. Data type - string.
+-   **data** — container with data about the object. Data type - custom.
+-   **data.success** — success attribute. Data type - bool.
+-   **data.documentsList** — document container. Data type - custom.
+-   **data.documentsList.name** — name of the generated document. Data type - string.
+-   **data.documentsList.type** — type of generated document. Data type - string.
+-   **data.documentsList.content** — base64 document content. Data type - string.
 
 ##### Sample response
 ```json
