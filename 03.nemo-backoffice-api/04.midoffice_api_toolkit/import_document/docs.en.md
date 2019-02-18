@@ -1,27 +1,27 @@
 ---
-title: 'Documents receiving'
+title: 'Documents reception'
 visible: true
 ---
 
-### Documents receiving
+### Documents reception
 
 Request to receive document content for order.
 
 #### Request parameters
 
--   **method** — information about the type of request. The data type is a string.
--   **apiVersion** — information about the API version. The data type is a string. 
--   **params** — parameters of the object. The custom data type.
--   **params.type** — object type. The data type is a string.
--   **params.transactionId** — transaction identifier from Nemo1. The data type is Int32. 
--   **params.orderId** — Order ID from Nemo1. The data type is Int32.
--   **params.documents** — container with data about documents. The custom data type.
--   **params.documents.name** — document name. The data type is a string.
--   **params.documents.type** — document type. The data type is a string.
--   **params.requestId** — order identifier. The data type is a string.
--   **params.sign** — request signature. The data type is a string.
+-   **method** — information about the type of request. Data type - string.
+-   **apiVersion** — information about the API version. Data type - string. 
+-   **params** — object parameters. Data type - custom.
+-   **params.type** — object type. Data type - string.
+-   **params.transactionId** — transaction identifier from Nemo1. Data type - int32. 
+-   **params.orderId** — Order ID from Nemo1. Data type - int32.
+-   **params.documents** — container with data about documents. Data type - custom.
+-   **params.documents.name** — document name. Data type - string.
+-   **params.documents.type** — document type. Data type - string.
+-   **params.requestId** — order ID. Data type - string.
+-   **params.sign** — request signature. Data type - string.
 
-##### Request example
+##### Sample request
 ```json
 {
     "method": "import",
@@ -58,7 +58,7 @@ Request to receive document content for order.
 -   **data.documentsList.type** — type of generated document. The data type is a string.
 -   **data.documentsList.content** — base64 document content. The data type is a string.
 
-##### Response example
+##### Sample response
 ```json
 {
     "method": "import",
