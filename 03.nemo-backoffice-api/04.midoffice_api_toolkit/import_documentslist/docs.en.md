@@ -9,17 +9,17 @@ Request to receive a list of documents for the order.
 
 #### Request parameters
 
--   **method** — information about the type of request. The data type is a string.
--   **apiVersion** — information about the API version. The data type is a string.
--   **params** — request parameters. The custom data type.
--   **params.type** — object type. The data type is a string.
--   **params.companyId** — subagency ID. The data type is Int32.
--   **params.orderId** — Order ID from Nemo1. The data type is Int32.
--   **params.dateFrom/params.dateTo** — date range for which documents are submitted. The data type is a string.
--   **params.requestId** — order identifier. The data type is a string.
--   **params.sign** — request signature. The data type is a string.
+-   **method** — information about the type of request. Data type - string.
+-   **apiVersion** — information about the API version. Data type - string.
+-   **params** — request parameters. Data type -custom.
+-   **params.type** — object type. Data type - string.
+-   **params.companyId** — subagency ID. Data type - int32.
+-   **params.orderId** — Order ID from Nemo1. Data type - int32.
+-   **params.dateFrom/params.dateTo** — date range for which documents are submitted. Data type - string.
+-   **params.requestId** — order ID. Data type - string.
+-   **params.sign** — request signature. Data type - string.
 
-##### Request example
+##### Sample request 
 ```json
 {
     "method": "import",
@@ -38,23 +38,23 @@ Request to receive a list of documents for the order.
 
 #### Response parameters
 
--   **method** — contains information on the type of upload / request. The data type is a string.
--   **apiVersion** — information about the API version. The data type is a string. 
--   **params** — request parameters. The custom data type.
--   **params.type** — request type. The data type is a string.
--   **params.companyId** — subagency ID. The data type is Int32. 
--   **params.orderId** — Order ID from Nemo1. The data type is Int32.
--   **params.dateFrom/params.dateTo** — date range for which documents are submitted. The data type is a string.
--   **params.requestId** — order identifier. The data type is a string.
--   **data** — container with data about the object. The custom data type.
--   **data.success** — sign of success. The data type is bool.
--   **data.documentsList** — document container.The custom data type.
--   **data.documentsList.type** — type of generated document. The data type is a string.
--   **data.documentsList.name** — the name of the generated document. The data type is a string.
--   **data.documentsList.transactionId** — transaction identifier. The data type is Int32.
--   **data.documentsList.downloadUrl** — link to view the received document. The data type is a string.
+-   **method** — contains information on the type of upload/request. Data type - string.
+-   **apiVersion** — information about the API version. Data type - string.
+-   **params** — request parameters. Data type - custom.
+-   **params.type** — request type. Data type - string.
+-   **params.companyId** — subagency ID. Data type - int32.
+-   **params.orderId** — Order ID from Nemo1. Data type - int32.
+-   **params.dateFrom/params.dateTo** — date range for which documents are submitted. Data type - string.
+-   **params.requestId** — order ID. Data type - string.
+-   **data** — container with data about the object. Data type - custom.
+-   **data.success** — attribute of success. Data type - bool.
+-   **data.documentsList** — document container.Data type - custom.
+-   **data.documentsList.type** — type of generated document. Data type - string.
+-   **data.documentsList.name** — name of the generated document. Data type - string.
+-   **data.documentsList.transactionId** — transaction ID. Data type - int32.
+-   **data.documentsList.downloadUrl** — reference to view the received document. Data type - string.
 
-##### Response example
+##### Sample response
 ```json
 {
     "method": "import",
