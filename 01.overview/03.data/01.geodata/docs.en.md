@@ -32,13 +32,13 @@ The extension of the files `.json`, the format of the data` JSON`, the encoding 
 | Field        | Type           | Description  |
 | ------------- |---------------| ------|
 | name          | Object        | Airline names in different languages |
-| name.ru          | String        | The name in Russian |
-| name.en          | String        | The name in English |
-| country      | String        |  The country code of the airline registration (can be unavailable) |
-| logo  | Object      |    The information about the airline logo (can be unavailable) |
-| logo.file  | String      |  The image file name from the images folder |
-| logo.width  | Number      |   The image width in pixels |
-| logo.height  | Number      |    The image height in pixels |
+| name.ru          | String        | Name in Russian |
+| name.en          | String        | Name in English |
+| country      | String        |  Country code of the airline registration (can be unavailable) |
+| logo  | Object      |    Information about the airline logo (can be unavailable) |
+| logo.file  | String      |  Image file name from the images folder |
+| logo.width  | Number      |   Image width in pixels |
+| logo.height  | Number      |    Image height in pixels |
 
 ##  Airports
 
@@ -54,16 +54,16 @@ The extension of the files `.json`, the format of the data` JSON`, the encoding 
 | Field        | Type           | Description  |
 | ------------- |---------------| ------|
 | cityName          | Object        | City names in different languages |
-| cityName.ru          | String        | The city name in Russian |
-| cityName.en          | String        | The city name in English |
+| cityName.ru          | String        | City name in Russian |
+| cityName.en          | String        | City name in English |
 | airportName          | Object        | Airport names in different languages (can be unavailable) |
-| airportName.ru          | String        | The airport name in Russian |
-| airportName.en          | String        | The airport name in English |
-| area          | String        | The metropolitan area code (if available) |
-| country      | String        |  The country code (can be unavailable) |
-| lat  | Number      |   The latitude of the airport location (can be unavailable) |
-| lng  | Number      |    The longitude of the airport location (can be unavailable) |
-| timezone  | String      | The time zone of the airport (can be unavailable) |
+| airportName.ru          | String        | Airport name in Russian |
+| airportName.en          | String        | Airport name in English |
+| area          | String        | Metropolitan area code (if available) |
+| country      | String        |  Country code (can be unavailable) |
+| lat  | Number      |   Latitude of the airport location (can be unavailable) |
+| lng  | Number      |    Longitude of the airport location (can be unavailable) |
+| timezone  | String      | Time zone of the airport (can be unavailable) |
 
 
 ## Metropolitan areas
@@ -80,9 +80,9 @@ The extension of the files `.json`, the format of the data` JSON`, the encoding 
 | Field        | Type           | Description  |
 | ------------- |---------------| ------|
 | name          | Object        | Names in different languages |
-| name.ru          | String        | The name in Russian |
-| name.en          | String        | The name in English |
-| country      | String        |  The country code |
+| name.ru          | String        | Name in Russian |
+| name.en          | String        | Name in English |
+| country      | String        |  Country code |
 
 
 ## Countries
@@ -99,9 +99,9 @@ The extension of the files `.json`, the format of the data` JSON`, the encoding 
 | Field        | Type           | Description  |
 | ------------- |---------------| ------|
 | name          | Object        | Names in different languages |
-| name.ru          | String        | The name in Russian |
-| name.en          | String        | The name in English |
-| continent      | String        |  The continent code |
+| name.ru          | String        | Name in Russian |
+| name.en          | String        | Name in English |
+| continent      | String        |  Continent code |
 
 ## Aircrafts
 
@@ -117,4 +117,4 @@ The extension of the files `.json`, the format of the data` JSON`, the encoding 
 | Field        | Type           | Description  |
 | ------------- |---------------| ------|
 | name          | Object        | Names in different languages |
-| name.en          | String        | The name in English |
+| name.en          | String        | Name in English |
