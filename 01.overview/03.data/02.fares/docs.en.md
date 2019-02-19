@@ -56,8 +56,8 @@ The file contains an array of objects, each rule object describes one fare famil
 
 **Possible field values for the `needToPay` field:**
 
-* **null**: The parameter is not applicable to this tariff option
-* **notAvailable**: The service is not available
-* **free**: The service is available and free 
-* **charge**: The service is available at an additional cost
+* **null**: parameter is not applicable to this fare option
+* **notAvailable**: service unavailable
+* **free**: service is available and free 
+* **charge**: service is available at an additional cost
 
