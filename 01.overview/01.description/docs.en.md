@@ -12,7 +12,7 @@ In the process of integration it is recommended to use the tool [SoapUI OpenSour
 Address for requests:
 https://avia.prod.backend.nemo.travel/Avia.svc, scheme: https://avia.prod.backend.nemo.travel/Avia.svc?singleWsdl
 
-An example of implementing a connection to the Nemo Connect using SoapClient in the PHP5 programming language
+An example of implementing a connection to the Nemo Connect using SoapClient in the PHP5 programming language:
 
 ```php
 $request = [
