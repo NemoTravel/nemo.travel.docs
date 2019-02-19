@@ -5,23 +5,23 @@ visible: true
 
 ### Order registration
 
-Request for payment registration, in the response come the names of the formed documents for the order.Dispatched right after booking an order in Nemo.travel
+Request for payment registration, in the response the names of the formed documents for the order are sent. Dispatched immediately after booking an order in Nemo.travel
 
-#### Запрос
+#### Request
 
--   **method** — contains information on the type of upload / request. The data type is a string.
--   **apiVersion** — information about the API version. The data type is a string. 
--   **params** — request parameters. The custom data type.
--   **params.type** — object type. The data type is a string.
--   **params.companyId** — subagency ID. The data type is Int32.
--   **params.transactionId** — transaction identifier from Nemo1. The data type is Int32. 
--   **params.orderId** — Order ID from Nemo1. The data type is Int32.
--   **params.products** — identifiers of paid services. The data type is Int32.
--   **params.requestId** — order identifier. The data type is a string.
--   **params.sign** — request signature. The data type is a string.
+-   **method** — contains information on the type of upload/request. Data type - string.
+-   **apiVersion** — information about the API version. Data type - string. 
+-   **params** — request parameters. Data type - custom.
+-   **params.type** — object type. Data type - string.
+-   **params.companyId** — subagency ID. Data type - int32. 
+-   **params.transactionId** — transaction ID from Nemo1. Data type - int32. 
+-   **params.orderId** — Order ID from Nemo1. Data type - int32. 
+-   **params.products** — identifiers of paid services. Data type - int32. 
+-   **params.requestId** — order ID. Data type - string.
+-   **params.sign** — request signature. Data type - string.
 -   **data** — standard set of order fields ( [см. Экспорт заказа](/nemo-backoffice-api/json_api/order_export)).
 
-##### Request example
+##### Sample request 
 ```json
 {
     "method": "payment",
@@ -45,23 +45,23 @@ Request for payment registration, in the response come the names of the formed d
 
 Includes a set of elements depending on the called operations in the request:
 
--   **method** — contains information on the type of upload / request. The data type is a string.
--   **apiVersion** — information about the API version. The data type is a string. 
--   **params** — request parameters. The custom data type.
--   **params.type** — object type. The data type is a string.
--   **params.companyId** — subagency ID. The data type is Int32. 
--   **params.transactionId** — transaction identifier from Nemo1. The data type is Int32.
--   **params.requestId** — order identifier. The data type is a string.
--   **data** — container with data about the object of unloading. The custom data type.
--   **data.success** — sign of success. The data type is bool.
--   **data.documentsList** — document container. The custom data type.
--   **data.documentsList.type** — type of generated document. The data type is a string.
--   **data.documentsList.name** — the name of the generated document. The data type is a string. 
--   **data.documentsList.transactionId** — transaction identifier. The data type is Int32.
--   **data.documentsList.downloadUrl** — link to view the received document. The data type is a string.
+-   **method** — contains information on the type of upload/request. Data type - string.
+-   **apiVersion** — information about the API version. Data type - string. 
+-   **params** — request parameters. Data type - custom.
+-   **params.type** — object type. Data type - string.
+-   **params.companyId** — subagency ID. Data type - int32.
+-   **params.transactionId** — transaction ID from Nemo1. Data type - int32.
+-   **params.requestId** — order ID. Data type - string.
+-   **data** — container with data about the object of unloading. Data type - custom.
+-   **data.success** — attibute of success. Data type - bool.
+-   **data.documentsList** — document container. Data type - custom.
+-   **data.documentsList.type** — type of generated document. Data type - string.
+-   **data.documentsList.name** — name of the generated document. Data type - string. 
+-   **data.documentsList.transactionId** — transaction ID. Data type - int32.
+-   **data.documentsList.downloadUrl** — reference to view the received document. Data type - string.
 
 
-##### Response example
+##### Sample response
 ```json
 {
     "method": "payment",
