@@ -22,7 +22,7 @@ The extension of the files `.json`, the format of the data` JSON`, the encoding 
 
 * File: airlines.json
 * ID: IATA code (if available)
-* Example:
+* Sample:
 ```
 "6W":{"name":{"ru":"Саратовские авиалинии","en":"Saravia"},"country":"RU","logo":{"file":"5676-03408f4218f81e33b26b81197fa3b656.png","width":"231","height":"50"}},
 ```
@@ -44,7 +44,7 @@ The extension of the files `.json`, the format of the data` JSON`, the encoding 
 
 * File: airports.json
 * Identifier: IATA code (if available)
-* Example:
+* Sample:
 ```
 "DME":{"cityName":{"ru":"Москва","en":"Moscow"},"airportName":{"ru":"Домодедово","en":"Domodedovo"},"area":"MOW","country":"RU","lat":55.4145,"lng":37.8999,"timezone":"Europe/Moscow"},
 ```
@@ -70,7 +70,7 @@ The extension of the files `.json`, the format of the data` JSON`, the encoding 
 
 * File: metropolitanAreas.json
 * Identifier: IATA code
-* Example:
+* Sample:
 ```
 "BER":{"name":{"ru":"Берлин","en":"Berlin"},"country":"DE"},
 ```
@@ -89,7 +89,7 @@ The extension of the files `.json`, the format of the data` JSON`, the encoding 
 
 * File: countries.json
 * Identifier: ISO3166-1 Alpha2 code
-* Example:
+* Sample:
 ```
 "AT":{"name":{"ru":"Австрия","en":"Austria"},"continent":"EU"},
 ```
@@ -107,7 +107,7 @@ The extension of the files `.json`, the format of the data` JSON`, the encoding 
 
 * File: aircraft.json
 * Identifier: IATA code
-* Example:
+* Sample:
 ```
 "747":{"name":{"en":"Boeing 747"}},
 ```
