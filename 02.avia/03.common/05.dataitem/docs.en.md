@@ -93,6 +93,7 @@ To store different booking content.
 	-  **CC** - credit card
 	-  **CK** - bank check
 	-  **IN** - invoice
+	-  **VZ** - clearing
 	-  **PP** - Payment Order, with its use, the indication of the <code>type = NumberedFOP</code> attribute and the filling of the Number field are required
 -  **FOPInfo.FOPs.FOP.VendorCode** - two-letter code of the credit card provider. Data type - string.
 -  **FOPInfo.FOPs.FOP.Number** - document number of the payment form (credit card or document for payment). Data type - string.
@@ -288,6 +289,7 @@ To store different booking content.
     - **CC** - credit card
     - **CK** - bank check
     - **IN** - invoice
+    - **VZ** - clearing
 - **PNRFOP.FOPs.FOP.CreditCardNumber** - masked credit card number, if the payment formats are a credit card. Data type - string.
 - **PNRFOP.FOPs.FOP.Number** - FOP number in the PNR.
 - **SubagentCommission** - subagent commission (optional). The data type is CommissionDataItem:
