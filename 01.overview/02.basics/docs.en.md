@@ -15,7 +15,7 @@ The body of any request consists of three basic elements.
 
 ##### Requisites
 
-* **Requisites** - details to access the server (optional). Data type - custom. 
+* **Requisites** - requisites to access the server (optional). Data type - custom. 
 * **Requisites.Login** - login to access the server (optional). Data type - string.
 * **Requisites.Password** - password to access the server (optional). Data type - string.
 * **Requisites.AuthToken** - access key for the server (optional). Data type - string. You either need to specify an access key or a login and password pair. 
@@ -35,7 +35,7 @@ The main elements of any response.
 
 ##### Request ID
 
-* **RequestID** - ID of the processed request. Data type - 64-bit integer . Cannot be less than 0.
+* **RequestID** - ID of the processed request. Data type - 64-bit integer. Cannot be less than 0.
 
 ##### Errors
 * **Errors** - array of information about the errors that occurred during the request processing. Data type - array.
