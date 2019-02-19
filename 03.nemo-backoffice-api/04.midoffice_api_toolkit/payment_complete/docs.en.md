@@ -9,15 +9,15 @@ Request to debit money from personal account.
 
 #### Request parameters
 
--   **method** — contains information on the type of the request. The data type is a string.
--   **apiVersion** — information about the API version. The data type is a string. 
--   **params** — request parameters. The custom data type.
--   **params.type** — object type. The data type is a string.
--   **params.transactionId** — transaction identifier from Nemo1. The data type is Int32.
--   **params.requestId** — order identifier. The data type is a string.
--   **params.sign** — request signature. The data type is a string.
+-   **method** — contains information on the type of the request. Data type - string.
+-   **apiVersion** — information about the API version. Data type - string. 
+-   **params** — request parameters. Data type - custom.
+-   **params.type** — object type. Data type - string.
+-   **params.transactionId** — transaction ID from Nemo1. Data type - int32.
+-   **params.requestId** — order identifier. Data type - string.
+-   **params.sign** — request signature. Data type - string.
 
-##### Request example
+##### Sample request
 ```json
 {
     "method": "payment",
@@ -33,16 +33,16 @@ Request to debit money from personal account.
 
 #### Response parameters
 
--   **method** — contains information on the type of the request. The data type is a string.
--   **apiVersion** — information about the API version. The data type is a string. 
--   **params** — request parameters. The custom data type.
--   **params.type** — object type. The data type is a string.
--   **params.transactionId** — transaction identifier from Nemo1. The data type is Int32.
--   **params.requestId** — order identifier. The data type is a string.
--   **data** — container with data. The custom data type. 
--   **data.success** — sign of success. The data type is bool.
+-   **method** — contains information on the type of the request. Data type - string.
+-   **apiVersion** — information about the API version. Data type - string.
+-   **params** — request parameters. Data type - custom.
+-   **params.type** — object type. Data type - string.
+-   **params.transactionId** — transaction ID from Nemo1. Data type - int32.
+-   **params.requestId** — order ID. Data type - string.
+-   **data** — container with data. Data type - custom.
+-   **data.success** — attribute of success. Data type - bool.
 
-##### Response example
+##### Sample response
 ```json
 {
     "method": "payment",
