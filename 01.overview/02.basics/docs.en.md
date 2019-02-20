@@ -15,10 +15,10 @@ The body of any request consists of three basic elements.
 
 ##### Requisites
 
-* **Requisites** - requisites to access the server (optional). Data type - custom. 
-* **Requisites.Login** - login to access the server (optional). Data type - string.
-* **Requisites.Password** - password to access the server (optional). Data type - string.
-* **Requisites.AuthToken** - access key for the server (optional). Data type - string. You either need to specify an access key or a login and password pair. 
+* **Requisites** - server access requisites (optional). Data type - custom. 
+* **Requisites.Login** - server access login (optional). Data type - string.
+* **Requisites.Password** - server access password (optional). Data type - string.
+* **Requisites.AuthToken** - server access key (optional). Data type - string. You either need to specify an access key or a login+password pair. 
 * **Requisites.NemoOneAuthToken** - key for authorization via the user ID in Nemo 1 (optional). Data type - string.
 
 ##### User ID
@@ -31,7 +31,7 @@ The body of any request consists of three basic elements.
 
 #### Response
 
-The main elements of any response.
+Main elements of any response.
 
 ##### Request ID
 
@@ -41,17 +41,17 @@ The main elements of any response.
 * **Errors** - array of information about the errors that occurred during the request processing. Data type - array.
 * **Errors.Error** - information about a single error that occurred during the request processing. Data type - custom.
 * **Errors.Error.Level** - error message received from the vendor. Data type - enumeration, possible values:
-* **APIFormat** - request validation level error.
-* **Supplier** - error received from the service provider or an external data source
-* **Runtime** - error in the request processing
+* **APIFormat** - error of request validation level.
+* **Supplier** - error received from the service provider or an external data source.
+* **Runtime** - error in the request processing.
 * **Errors.Error.Code** - code of the error that has occurred. Data type - ushort (unsigned  16-bit number).
 * **Errors.Error.Message** - server error message. Data type - string.
-* **Errors.Error.ServiceErrorMessage** - error message received from the provider. Data type - string.
+* **Errors.Error.ServiceErrorMessage** - error message received from the supplier. Data type - string.
 * **Errors.Error.AdditionalInfo** - contains various additional information about the error. Data type - custom.
 * **Errors.Error.AdditionalInfo.InfoItem** - single additional error information.  Data type - custom.
 * **Errors.Error.AdditionalInfo.InfoItem.InfoKey** - additional information type. Data type - enumeration, possible values:
 * **Errors.Error.AdditionalInfo.InfoItem.InfoValue** - additional information about the error. Data type - string.
-* **SegmentsStatus** - information about the segment statuses with the status of one of them when booking is invalid. It is transmitted in the format <syntaxhighlight lang="text" enclose="none" style="font-size: 1.2em; padding: 0 3px; background: #F0F0F0; border: 1px dashed #2F6FAB;">segment_number:segment_status,segment_number:segment_status</syntaxhighlight> format, and so on by the number of segments where "," separates information about different segments, and ":" separates the number (numbered from 0) and the status of this segment.
+* **SegmentsStatus** - information about the segment statuses with the invalid status of one of them when booking. It is transmitted in the format <syntaxhighlight lang="text" enclose="none" style="font-size: 1.2em; padding: 0 3px; background: #F0F0F0; border: 1px dashed #2F6FAB;">segment_number:segment_status,segment_number:segment_status</syntaxhighlight> format, and so on by the number of segments where "," separates information about different segments, and ":" separates the number (numbered from 0) and the status of this segment.
 
 ##### Warnings
 
@@ -65,7 +65,7 @@ The main elements of any response.
 * **ResponseBody** - container for the response body. Data type - custom.
 
 
-##### Example of autorization block by AuthToken
+##### AuthToken autorization block sample
 ```xml
         <ns1:Requisites>
           <stl:AuthToken>****</stl:AuthToken>
