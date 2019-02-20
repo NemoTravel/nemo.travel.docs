@@ -7,7 +7,7 @@ taxonomy:
 
 **Link to the repository:** [https://github.com/NemoTravel/nemo.travel.fares](https://github.com/NemoTravel/nemo.travel.fares)
  
-The fareFamilies directory contains information about airline fare families with descriptions of tariff options.
+The fareFamilies directory contains information about airline fare families with descriptions of fare options.
 The data is grouped into files by airlines, the IATA code is used as the file name.
 The extension of the files `.json`, the format of the data` JSON`, the encoding `UTF-8`
 
@@ -20,7 +20,7 @@ The file contains an array of objects, each rule object describes one fare famil
 | ------------- |---------------| ------|
 | owner          | String        | Two-character IATA airline code |
 | baseClass      | String        |  Flight service class to which the set of fare rules applies. The allowed values are `economy`,` premiumEconomy`, `business`,` first`|
-| tariffCodePattern  | String      |    Regular pattern describing the tariff code |
+| tariffCodePattern  | String      |    Regular pattern describing the fare code |
 | priority  | Number      | Order of display recommended by the airline |
 | saleTimeSince  | String      |    Acceptable sale time "Since" (Format ISO 8601) |
 | saleTimeUntil  | String      |    Acceptable sale time "Until" (Format ISO 8601) |
