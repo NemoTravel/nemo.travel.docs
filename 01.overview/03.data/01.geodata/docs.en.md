@@ -15,8 +15,8 @@ The repository contains background information about:
 * Countries
 * Aircrafts
 
-Data are grouped into categories into separate files
-The extension of the files `.json`, the format of the data` JSON`, the encoding `UTF-8`
+Data are grouped into categories into separate files.
+The extension of the files is `.json`, the format of the data is ` JSON`, the encoding is `UTF-8`
 
 ## Airlines
 
