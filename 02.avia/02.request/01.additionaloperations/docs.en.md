@@ -5,7 +5,6 @@ taxonomy:
         - docs
 ---
 
-
 ### AdditionalOperations_1_2
 
 Request for execution before version 1.2
@@ -15,7 +14,7 @@ Request for execution before version 1.2
 -  **ObjectForOperations** - contains the ID of the object for which you want to perform additional operations. Data type - custom. You can specify only one of the attached elements.
 -  **ObjectForOperations.FlightID** - ID of the flight for which you want to perform additional operations. Data type - 128-bit integer.
 -  **ObjectForOperations.BookID** - ID of the booking for which you want to perform additional operations. Data type - 64-bit integer.
--  **Operations** - The list of additional operations that you want to perform. Data type - custom.
+-  **Operations** - list of additional operations that you want to perform. Data type - custom.
 -  **Operations.Operation** - one of the operations you want to perform. Data type - enumeration. Possible values are:
 	- CheckAvailability - Availability check, performed only for the flight.
 	- GetFareRules - Get fare rules.
