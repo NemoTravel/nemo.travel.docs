@@ -64,7 +64,7 @@ Similar to the previous version of BookFlight_2_0, the difference is only in the
 -   **AncillaryServices.AncillaryServiceRQ_1_1.RFISC** - RFISC of the ancillary service. Data type - string.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.SSRCode** - SSR code for booked ancillary service (Optional). Data type - string.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.SSRDescription** - description for SSR of booked ancillary service (Optional). Data type - string.
--   **AncillaryServices.AncillaryServiceRQ_1_1.Type** - type of ancillary services (required only for Sirena). Data type - string.
+-   **AncillaryServices.AncillaryServiceRQ_1_1.Type** - ancillary service type (required only for Sirena). Data type - string.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.TravellerRef** - passenger ID for which the ancillary service is added. Data type - int.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.SegmentRef** - reference to segments to which the ancillary service is added. Data type - int.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.Quantity** - number of repetitions for that ancillary service. Data type - int.
@@ -108,8 +108,8 @@ An operation to create a flight booking working with a 2.0 booking structure. Di
 - **AdditionalActions.CalculatePrice** - attribute of the need to calculate pricing. Data type - bool.
 - **AdditionalActions.HostCommandsToExecute** - terminal commands set (Optional, only supported for uAPI). Data type - array of strings.
 - **PricingOptions** - additional pricing options (optional). Data type - array.
-- **PricingOptions.FOPsForAlternativePrices** - FOPs (Form Of Payment) for which you need to get an additional estimation of the booking. Data type - array.
-- **PricingOptions.FOPsForAlternativePrices.Type** - FOPs, for which you need to get an estimate of the booking. Data type - string.
+- **PricingOptions.FOPsForAlternativePrices** - FOPs (Forms Of Payment) for which you need to get an additional booking estimation. Data type - array.
+- **PricingOptions.FOPsForAlternativePrices.Type** - FOPs for which you need to get a booking estimation. Data type - string.
 - **PricingOptions.BookSubsidyTariffs** - includes booking of subsidized fares. Data type - bool.
 - **AncillaryServices** - list of ancillary services for booking (optional). Data type - array.
 - **AncillaryServices.AncillaryService** ancillary service. Data type - array.
