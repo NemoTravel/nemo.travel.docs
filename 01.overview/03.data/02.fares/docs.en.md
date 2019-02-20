@@ -9,10 +9,10 @@ taxonomy:
  
 The fareFamilies directory contains information about airline fare families with descriptions of fare options.
 The data is grouped into files by airlines, the IATA code is used as the file name.
-The extension of the files `.json`, the format of the data` JSON`, the encoding `UTF-8`
+The extension of the files is `.json`, the format of the data is ` JSON`, the encoding is `UTF-8`
 
 ### Structure of the Fare Rules File
-The file contains an array of objects, each rule object describes one fare family
+The file contains an array of objects, each rule object describes one fare family.
 
 **Family description:**
  
