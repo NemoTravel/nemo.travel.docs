@@ -14,7 +14,7 @@ taxonomy:
 
 ### The list of document types supported during the booking
 
-| XML value                     | Explanation                                                                        | The SSR value of DOCS | The value in Sirena                                                                                                                               |
+| XML value                     | Definition                                                                        | The SSR value of DOCS | The value in Sirena                                                                                                                               |
 |----------------------------------|------------------------------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | AutosetByNumber                  | The type auto-detection by the document number                                           | P                 | Depends on the document number and country of issue. If the number fails to determine the type, then there will be an error asking to add the type or correct the document number. |
 ||
@@ -42,13 +42,13 @@ taxonomy:
 ||
 | MilitaryIDCard                   | Military card                              | M                 | VB                                                                                                                                              |
 ||
-| DocOfPassportLusing              | The temporary identity card when the passport was lost or replaced                    | F                 | SPU                                                                                                                                             |
+| DocOfPassportLusing              | The temporary identity card if the passport is lost or replaced                    | F                 | SPU                                                                                                                                             |
 ||
 | DiplomaticPassport               | Diplomatic passport                                                            | P                 | DP                                                                                                                                              |
 ||
 | InternationalPassportNotRU       | The International passport of a citizen of any country except Russia                               | A                 | ZA                                                                                                                                              |
 ||
-| InternationalPassportTJ          | The International passport of a citizen of Tajikistan                                        | A                 | ZB                                                                                                                                              |
+| InternationalPassportTJ          | The International passport of a Tajikistan citizen                                        | A                 | ZB                                                                                                                                              |
 ||
 | InternationalPassportRU          | The International passport of a Russian citizen                                                  | A                 | PSP                                                                                                                                             |
 ||
