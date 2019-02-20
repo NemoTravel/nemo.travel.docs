@@ -7,13 +7,13 @@ taxonomy:
 
 ### BookFlight_2_2
 
-Операция по созданию брони перелёта работающая с 2.2 структурой брони. Самая новая версия запроса BookFlight.
+Операция по созданию брони перелёта, работающая с 2.2 структурой брони. Самая новая версия запроса BookFlight.
 
 #### Запрос
 
 Аналогичен версии BookFlight_2_0, отличия только в блоке работы с допуслугами.
 
-##### Пример контейнера  с допуслугами из запроса BookFlight_2_2.
+##### Пример контейнера с допуслугами из запроса BookFlight_2_2.
  ```xml
  		  <ns3:AncillaryServices>
             <ns3:AncillaryService>
@@ -41,15 +41,15 @@ taxonomy:
 -   **AncillaryServices.AncillaryService.SSRCode** - SSR код для бронируемой дополнительной услуги (Необязательный) Тип данных - строка.
 -   **AncillaryServices.AncillaryService.SSRDescription** - Описание для SSR бронируемой допуслуги (Необязательный) Тип данных - строка.
 -   **AncillaryServices.AncillaryService.Type** - Тип дополнительной услуги (Обязателен только для Сирены). Тип данных - строка.
--   **AncillaryServices.AncillaryService.TravellerRef** - идентификатор пассажира для которого добавляется дополнительная услуга. Тип данных - int.
--   **AncillaryServices.AncillaryService.SegmentRef** - Контейнер с ссылками на сегменты на которые добавляется дополнительная услуга. Тип данных - массив.
+-   **AncillaryServices.AncillaryService.TravellerRef** - Идентификатор пассажира, для которого добавляется дополнительная услуга. Тип данных - int.
+-   **AncillaryServices.AncillaryService.SegmentRef** - Контейнер с ссылками на сегменты, на которые добавляется дополнительная услуга. Тип данных - массив.
 -   **AncillaryServices.AncillaryService.SegmentRef.Ref** - Ссылка на сегмент.Тип данных - int.
 -   **AncillaryServices.AncillaryService.Quantity** - Количество повторений данной дополнительной услуги. Тип данных - int.
 -   **AncillaryServices.AncillaryService.EMDType** - Тип EMD. Тип данных - строка.
 
 ### BookFlight_2_1
 
-Операция по созданию брони перелёта работающая с 2.1 структурой брони.
+Операция по созданию брони перелёта, работающая с 2.1 структурой брони.
 
 #### Запрос
 
@@ -57,17 +57,17 @@ taxonomy:
 
 -   **AncillaryServices** - Список дополнительных услуг для бронирования (необязательный). Тип данных - массив.
 -   **AncillaryServices.AncillaryServiceRQ_1_1** - Дополнительная услуга. Тип данных - массив.
--   **AncillaryServices.AncillaryServiceRQ_1_1.ID** - идентификатор изменяемой дополнительной услуги (Не учитывается при бронировании). Тип данных - int.
+-   **AncillaryServices.AncillaryServiceRQ_1_1.ID** - Идентификатор изменяемой дополнительной услуги (Не учитывается при бронировании). Тип данных - int.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.RFIC** - RFIC дополнительной услуги. Тип данных - строка.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.RFISC** - RFISC дополнительной услуги. Тип данных - строка.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.SSRCode** - SSR код для бронируемой дополнительной услуги (Необязательный) Тип данных - строка.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.SSRDescription** - Описание для SSR бронируемой допуслуги (Необязательный) Тип данных - строка.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.Type** - Тип дополнительной услуги (Обязателен только для Сирены). Тип данных - строка.
--   **AncillaryServices.AncillaryServiceRQ_1_1.TravellerRef** - идентификатор пассажира для которого добавляется дополнительная услуга. Тип данных - int.
--   **AncillaryServices.AncillaryServiceRQ_1_1.SegmentRef** - Cсылка на сегмент на который добавляется дополнительная услуга. Тип данных - int.
+-   **AncillaryServices.AncillaryServiceRQ_1_1.TravellerRef** - Идентификатор пассажира для которого добавляется дополнительная услуга. Тип данных - int.
+-   **AncillaryServices.AncillaryServiceRQ_1_1.SegmentRef** - Cсылка на сегмент, на который добавляется дополнительная услуга. Тип данных - int.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.Quantity** - Количество повторений данной дополнительной услуги. Тип данных - int.
 
-##### Пример контейнера  с допуслугами из запроса BookFlight_2_1.
+##### Пример контейнера с допуслугами из запроса BookFlight_2_1.
   ```xml
       <a:AncillaryServiceRQ_1_1>
         <a:ID>0</a:ID>
@@ -92,7 +92,7 @@ taxonomy:
     ```
 ### BookFlight_2_0
 
-Операция по созданию брони перелёта работающая с 2.0 структурой брони. Отличия только в блоке работы с допуслугами.
+Операция по созданию брони перелёта, работающая с 2.0 структурой брони. Отличия только в блоке работы с допуслугами.
 
 #### Запрос
 
@@ -116,8 +116,8 @@ taxonomy:
 -   **AncillaryServices.AncillaryService.SSRCode** — SSR-код для бронируемой дополнительной услуги (необязательный). Тип данных — строка.
 -   **AncillaryServices.AncillaryService.SSRDescription** — описание для SSR бронируемой дополнительной услуги (необязательный). Тип данных — строка.
 -   **AncillaryServices.AncillaryService.Type** — тип дополнительной услуги (обязателен только для GDS Sirena Travel). Тип данных — строка.
--   **AncillaryServices.AncillaryService.TravellerRef** — идентификатор пассажира для которого добавляется допуслуга. Тип данных — целое число.
--   **AncillaryServices.AncillaryService.SegmentRef** — массив мульти-ссылок на сегменты на которые добавляется допуслуга. Тип данных — массив целое число.
+-   **AncillaryServices.AncillaryService.TravellerRef** — идентификатор пассажира, для которого добавляется допуслуга. Тип данных — целое число.
+-   **AncillaryServices.AncillaryService.SegmentRef** — массив мульти-ссылок на сегменты, на которые добавляется допуслуга. Тип данных — массив целое число.
 -   **AncillaryServices.AncillaryService.SegmentRef.MRef** — элемент массива мульти-ссылок на сегменты. Тип данных — целое число.
 
 ##### Пример
