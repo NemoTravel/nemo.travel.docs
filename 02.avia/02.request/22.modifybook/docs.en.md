@@ -89,6 +89,8 @@ Used to make changes to the booking with [booking version 2.0](/avia/common/book
 -  **Action** - action with content that you want to perform (Modify is not allowed for ancillary services) The format is similar to other data blocks. Ancillary services with EMDs can be removed from the booking only after voiding their EMD.
 - **AncillaryService** - ancillary services on which there will be a change in the booking. Data type, format and filling logic, in case of booking, is similar to AncillaryService in the [booking request](/avia/request/bookflight). In case of deletion, only the ID is the required element.
 -  **CalculatePrice** - attribute of necessity of pricing calculation after modification. Data type - bool.
+-  **PricingOptions** - additional booking tariffication options (optional). Data type - array.
+-  **PricingOptions.FlightID** - ID of the flight acquired by the BookID for fare family change. Data type - string.
 
 >>>> While adding a new element to the order, the ID of the DataItem should be indicated to be -1. While modifying an existing DataItem, an ID that matches the existing DataItem ID must be used.
 
