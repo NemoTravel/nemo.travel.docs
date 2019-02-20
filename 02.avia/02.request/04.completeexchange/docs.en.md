@@ -7,7 +7,7 @@ taxonomy:
 
 ### CompleteEMDProcessing
 
-Completion of tickets exchange. Within this request, the necessary steps are taken to complete the exchange of tickets. For example, during an exchange in Amadeus, special EMD documents can be generated, which will be in the booking. For correctness of reports in Amadeus it is necessary to make a refund for these EMDs (for some sales offices the refund of EMD can be done only the day after the exchanges).
+Completion of ticket exchange. Within this request, the necessary steps are taken to complete the exchange of tickets. For example, during an exchange in Amadeus, special EMD documents can be generated, they will be in the booking. For correctness of reports in Amadeus it is necessary to make a refund for these EMDs (for some sales offices the refund of EMD can be done only the day after the exchanges).
 
 #### CompleteEMDProcessing
 The latest request version, the differences are only in the response in the ancillary services block from [Book_2_2](/avia/request/bookflight) request.
