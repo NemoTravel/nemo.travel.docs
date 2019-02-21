@@ -19,11 +19,11 @@ Getting the results of a certain search from the avia server.
 
 Includes all fields from the [Search response](/avia/request/search). Also additionally has the following fields:
 
-- ** RawData ** - xml content of search requests to the supplier. Data type - array.
+- ** RawData ** - XML content of search requests to the supplier. Data type - array.
 - ** RawData.LogData ** - content of one of the search requests to the supplier. Data type - array.
 - ** LogData.ServiceLogID ** - ID of the service log of communication with the supplier. Data type - long.
 - ** LogData.OriginalSourceID ** - ID of the source (package), within which this log was received. Data type - int32.
 - ** LogData.SearchDT ** - date and time of the search. Data type - DateTime.
 - ** LogData.RequestName ** - name of the request to the supplier. Data type - string.
-- ** LogData.Request ** - xml content of the request to the supplier. Data type - string.
-- ** LogData.Response ** - xml content of the supplier's response. Data type - string.
+- ** LogData.Request ** - XML content of the request to the supplier. Data type - string.
+- ** LogData.Response ** - XML content of the supplier's response. Data type - string.
