@@ -21,7 +21,7 @@ The latest request version, the differences are only in the response in the anci
 - **MainPassengerLastName** - last name of the main passenger in the PNR, required parameter while of working with the GDS Sirena. Data type - string.
 - **WithReprice** - attribute of the need to actualize the booking price after its creation. Data type - bool.
 - **ValidatingCompany** - validating company of the booking, needed to the correct booking import in case of situations when different requisites are used in a package for the different airlines. Data type - string.
-- **UseFlexFares** - attribute of using flex fare families while importing the booking (specific feature of SITA Gabriel) Data type - bool.
+- **UseFlexFares** - attribute of using flex fare families while importing the booking (specific feature of SITA Gabriel). Data type - bool.
 - **SourceDescription.Supplier** - supplier. Data type - enumeration with air suppliers.
 - **SourceDescription.SupplierRequisiteID** - booking package ID for the specified supplier, e.g. PCC. Data type - non-negative 32-bit integer.
 
