@@ -45,7 +45,7 @@ taxonomy:
 -   **PNRCode** - Код брони в ГДС. Тип данных - строка.
 -   **HistoryElements** - Контейнер для элементов истории брони. Тип данных - массив.
 -   **HistoryElements.HistoryElement** - Элемент истории брони. Тип данных - массив. Встречается 1 и более раз.
--   **HistoryElements.HistoryElement.DateTime** - Дата и время изменения брони в формате yyyy-MM-ddTHH:mm:ss. Тип данных - строка.
+-   **HistoryElements.HistoryElement.DateTime** - Дата и время изменения брони в формате yyyy-mm-ddthh:mm:ss. Тип данных - строка.
 -   **HistoryElements.HistoryElement.ChangeSource** - Источник изменения. Тип данных - строка.
 -   **HistoryElements.HistoryElement.HistoryRemarks** - Контейнер для ремарок изменений. Тип данных - массив.
 -   **HistoryElements.HistoryElement.HistoryRemarks.HistoryRemark** - Ремарка изменения. Тип данных - строка. Встречается 1 и более раз.
