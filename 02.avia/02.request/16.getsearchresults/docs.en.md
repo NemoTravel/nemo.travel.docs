@@ -13,7 +13,7 @@ Getting the results of a certain search from the avia server.
 
 - ** SearchID ** - ID of the search occasion which results are needed to get. Data type - long.
 - ** FlightID ** - flight ID that is needed to get. Data type - string.
-- ** RawData ** - attribute of getting xml content of search requests to the supplier (optional). Data type - bool.
+- ** RawData ** - attribute of getting XML content of search requests to the supplier (optional). Data type - bool.
 
 #### Response
 
