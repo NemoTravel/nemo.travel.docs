@@ -23,7 +23,7 @@ The latest request version, the differences are only in the response in the anci
 - **ValidatingCompany** - validating company of the booking, needed to the correct booking import in case of situations when different requisites are used in a package for the different airlines. Data type - string.
 - **UseFlexFares** - attribute of using flex fare families while importing the booking (specific feature of SITA Gabriel). Data type - bool.
 - **SourceDescription.Supplier** - supplier. Data type - enumeration with air suppliers.
-- **SourceDescription.SupplierRequisiteID** - booking package ID for the specified supplier, e.g. PCC. Data type - non-negative 32-bit integer.
+- **SourceDescription.SupplierRequisiteID** - booking package ID for the specified supplier, for example, PCC. Data type - non-negative 32-bit integer.
 
 ##### Sample
 
