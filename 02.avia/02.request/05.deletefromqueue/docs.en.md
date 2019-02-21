@@ -6,8 +6,8 @@ title: DeleteFromQueue
 Used to delete one or more bookings from one or more queues.
 
 #### DeleteFromQueue_2_0 Request
-- **BookQueueList.BookQueueInfo.QueuesByName** - container with queue names. The data type is an array.
-- **BookQueueList.BookQueueInfo.QueuesByName.Queue** - queue name. The data type is an array of the QueueName enumeration. Corresponds to the _**.BookQueueInfo.QueueNames.Queue**_  parameter from the previous version request.
+- **BookQueueList.BookQueueInfo.QueuesByName** - container with queue names. Data type - array.
+- **BookQueueList.BookQueueInfo.QueuesByName.Queue** - queue name. Data type - array of the QueueName enumeration. Corresponds to the _**.BookQueueInfo.QueueNames.Queue**_  parameter from the previous version request.
 - **BookQueueList.BookQueueInfo.QueuesByNumber** - container with queue sequence numbers. Data type - int array.
 - **ListQueueConfig.QueueConfig.QueuesByNumber.QueueNumber** - sequence number of the queue. Data type - int.
 - **ExternalBookQueueList** - container with PNRs that were created outside the Nemo system. Data type - custom.
