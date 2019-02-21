@@ -20,7 +20,7 @@ The latest request version, the differences are only in the response in the anci
 -  **AncillaryServices.AncillaryService.ServiceRef** - ID of ancillary service in the booking for which it is needed to issue an EMD. Data type - int.
 -  **AncillaryServices.AncillaryService.SegmentRef** - array of multi-links to the segments for which you want to issue an EMD. Data type - int array.
 -  **AncillaryServices.AncillaryService.SegmentRef.MRef** - element of the array of multi-links to segments. Data type - int.
--  **AncillaryServices.AncillaryService.FOPInfo** - form of payment to be used during the issuing of an EMD (Optional). Data type - same as FOPInfo from [DataItem](/avia/common/dataitem)
+-  **AncillaryServices.AncillaryService.FOPInfo** - form of payment to be used during the issuing of an EMD (Optional). Data type - same as FOPInfo from [DataItem](/avia/common/dataitem).
 
 ##### Sample
 
