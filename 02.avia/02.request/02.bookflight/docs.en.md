@@ -59,7 +59,7 @@ Similar to the previous version of BookFlight_2_0, the difference is only in the
 
 -   **AncillaryServices** - list of ancillary services for booking (optional). Data type - array.
 -   **AncillaryServices.AncillaryServiceRQ_1_1** - ancillary service. Data type - array.
--   **AncillaryServices.AncillaryServiceRQ_1_1.ID** - ID of the changeable ancillary service (not taken into account when booking). Data type - int.
+-   **AncillaryServices.AncillaryServiceRQ_1_1.ID** - ID of the changeable ancillary service (not accounted when booking). Data type - int.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.RFIC** - RFIC of the ancillary service. Data type - string.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.RFISC** - RFISC of the ancillary service. Data type - string.
 -   **AncillaryServices.AncillaryServiceRQ_1_1.SSRCode** - SSR code for booked ancillary service (Optional). Data type - string.
