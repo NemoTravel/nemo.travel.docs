@@ -33,14 +33,14 @@ If the request does not indicate the packages for which it is necessary to read 
 -  **PackageID** - package requisites ID. Data type - int array.
 -  **QueueList** - list of queues to check. Data type - array.
 -  **Queue** - name of the queue. Data type - array of the QueueName enumeration. Possible values are:
- - GeneralQueue - General queue
- - ScheduleChanged - a Queue with schedule changes  
- - TicketsAdded - a Queue with added tickets
- - SegmentsCancelled - a Queue with canceled segments
- - UnconfirmedSegments - a Queue with unconfirmed segments
- - WaitingConfirmation - a Queue of waiting confirmation
- - ServiceInfoChanged - a Queue with changes in SSR
- - TimeLimit - a Queue with expiring TL
+ - GeneralQueue - general queue
+ - ScheduleChanged - queue with schedule changes  
+ - TicketsAdded - queue with added tickets
+ - SegmentsCancelled - queue with canceled segments
+ - UnconfirmedSegments - queue with unconfirmed segments
+ - WaitingConfirmation - queue of waiting confirmation
+ - ServiceInfoChanged - queue with changes in SSR
+ - TimeLimit - queue with expiring TL
 -  **UpdateAll** - attribute of the need to update all found orders. Data type - bool.
 -  **RemoveAfterRead** - remove orders from the queue after reading. Data type - bool.
 -  **ListAgencyQueues** - attribute of the need to read queues from the agency settings. Data type - bool.
@@ -51,12 +51,12 @@ If the request does not indicate the packages for which it is necessary to read 
 
 -  **QueueInfoList** - list of information on named queues. Data type - array.
 -  **QueueInfo** - The information about the named queue. Data type - array.
--  **Queue** - name of the queue. Data type - enumeration QueueName.
--  **BookInfoList** - list of orders in the queue.
+-  **Queue** - name of the queue. Data type - QueueName enumeration.
+-  **BookInfoList** - list of the orders in the queue.
 -  **BookInfo** - order information.
 -  **BookID** - order ID. Data type - long.
 -  **Locator** - order locator in the GDS. Data type - string.
--  **Supplier** - The supplier. Data type - enumeration. Possible values are:
+-  **Supplier** - supplier. Data type - enumeration. Possible values are:
  - Saber
  - Sirena
  - Galileo
@@ -70,6 +70,6 @@ If the request does not indicate the packages for which it is necessary to read 
  - Mystifly
  - GalileoUAPI
 -  **UnnamedQQueueInfoList** - list of information on the unnamed queues. Data type - array.
--  **QueueInfo** - The information about the named queue. Data type - array.
--  **Queue** - the number / name of the queue (depending on the GDS). Data type - string.
+-  **QueueInfo** - information about the named queue. Data type - array.
+-  **Queue** - number/name of the queue (depending on the GDS). Data type - string.
 -  **BookInfoList** - list of orders in the queue, the format is similar to the one described above.
