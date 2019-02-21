@@ -50,7 +50,7 @@ If the request does not indicate the packages for which it is necessary to read 
 ##### Format Description
 
 -  **QueueInfoList** - list of information on named queues. Data type - array.
--  **QueueInfo** - The information about the named queue. Data type - array.
+-  **QueueInfo** - information about the named queue. Data type - array.
 -  **Queue** - name of the queue. Data type - QueueName enumeration.
 -  **BookInfoList** - list of the orders in the queue.
 -  **BookInfo** - order information.
