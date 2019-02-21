@@ -16,18 +16,18 @@ Request for execution before version 1.2
 -  **ObjectForOperations.BookID** - ID of the booking for which you want to perform additional operations. Data type - 64-bit integer.
 -  **Operations** - list of additional operations that you want to perform. Data type - custom.
 -  **Operations.Operation** - one of the operations you want to perform. Data type - enumeration. Possible values are:
-	- CheckAvailability - Availability check, performed only for the flight.
-	- GetFareRules - Get fare rules.
-	- GetSeatMap - Get a seat map.
-	- GetPrice - Get the current flight price. It is only for the flight.
-	- SearchAncillaryServices - Obtaining a list of available services for a flight or reservation (only for GDS Sirena and Amadeus).
-	- GetAllowedCCs - Get a list of credit card codes that can be used to pay this reservation through GDS processing.
-	- GetAllowedLoyaltyCards - Get information about loyalty cards that can be used on this flight. At the moment there is no support for this operation.
-	- ActualizeFlight - Actualize the flight
-	- GetFareFamilies - Getting a variant of the flight cost estimation from different families
-	- GetSubsidizedTariffs - Getting a list of subsidized fares for a flight
+	- **CheckAvailability** - availability check, performed only for the flight.
+	- **GetFareRules** - get fare rules.
+	- **GetSeatMap** - get the seat map.
+	- **GetPrice** - get the current flight price. It is only for the flight.
+	- **SearchAncillaryServices** - obtaining a list of available services for a flight or reservation (only for GDS Sirena and Amadeus).
+	- **GetAllowedCCs** - get the list of credit card codes that can be used to pay this reservation through GDS processing.
+	- **GetAllowedLoyaltyCards** - get information about loyalty cards that can be used on this flight. At the moment there is no support for this operation.
+	- **ActualizeFlight** - actualize the flight
+	- **GetFareFamilies** - getting the variant of the flight cost estimation from different families
+	- **GetSubsidizedTariffs** - getting a list of subsidized fares for a flight
 -  **OperationsRestrictions** - additional information for performing the specified operations (optional). Data type - custom.
--  **OperationsRestrictions.CheckAvailabilityWithBookingRequest** - Use the request to take places to check the availability of the flight for booking. Data type - bool.
+-  **OperationsRestrictions.CheckAvailabilityWithBookingRequest** - use the request to take places to check the availability of the flight for booking. Data type - bool.
 -  **OperationsRestrictions.PricingInfo** - additional information about the price component of the flight, for which you need to perform additional operations. Data type - custom.
 -  **OperationsRestrictions.PricingInfo.BookingClassCodes** - information about the flight classes for which you want to find the flight price. Data type - custom.
 -  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment** - The information about the flight class for a particular segment. Data type - custom.
@@ -78,7 +78,7 @@ Request for execution before version 1.2
 
 Includes the set of elements caused by operstion in the request:
 
--  **ActualizedFlight** - contains updated flight. The data type is [Flight](/avia/common/flight).
+-  **ActualizedFlight** - contains updated flight. Data type - [Flight](/avia/common/flight).
 -  **ActualizedFlight.Segments.Segment.SupplierInfo** - information about the segment statuses if the flight is unavailable for booking and operation was executed via the seat taking request. Data type - string. Supported by GalileoUapi, Sabre, Amadeus, Galileo.
 -  **FlightsByFareFamily** - contains the result of the GetFareFamilies operation. Data type - [Flight](/avia/common/flight) array.
 -  **SubsidizedTariffs** - contains the result of GetSubsidizedTariffs operation. Data type - [Flight](/avia/common/flight) array.
@@ -127,10 +127,10 @@ Includes the set of elements caused by operstion in the request:
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.RFIC** - ancillary service RFIC. Data type - string.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.RFISC** - ancillary service RFISC. Data type - string.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRCode** - SSR code which should be added to the PNR in case of reservation of this ancillary service. Data type - string.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Type** - ancillary service type (at the moment - specific for Sirena Travel). Data type - string.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Type** - ancillary service type (at the moment - specific of Sirena Travel). Data type - string.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.CompanyCode** - IATA code of the airline providing this ancillary service. Data type - string.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Refundability** - service recurrence. Data type - enumeration.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRDescriptionRequired** - attribute showing that for the reservation of this additional service it is necessary to transfer its description from the user. Data type - bool.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Refundability** - service refundability. Data type - enumeration.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRDescriptionRequired** - attribute showing that for the reservation of this ancillary service it is necessary to transfer its description from the user. Data type - bool.
 -   **FindAdditionalServicesResult.Services.Prices** - list of prices for admissible ancillary services. Data type - array.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice**  - ancillary service price. Data type - custom.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value** - price object. Data type - custom. 
