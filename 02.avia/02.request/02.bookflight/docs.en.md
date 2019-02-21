@@ -106,7 +106,7 @@ An operation to create a flight booking working with a 2.0 booking structure. Di
 - **AdditionalActions** - additional actions to be performed with the flight booking (optional). Data type - array.
 - **AdditionalActions.QueueNum** - number of the queue to which the booking must be placed after its creation. Data type - string.
 - **AdditionalActions.CalculatePrice** - attribute of the need to calculate pricing. Data type - bool.
-- **AdditionalActions.HostCommandsToExecute** - terminal commands set (Optional, only supported for uAPI). Data type - array of strings.
+- **AdditionalActions.HostCommandsToExecute** - terminal commands set (optional, only supported for uAPI). Data type - array of strings.
 - **PricingOptions** - additional pricing options (optional). Data type - array.
 - **PricingOptions.FOPsForAlternativePrices** - FOPs (Forms Of Payment) for which you need to get an additional booking estimation. Data type - array.
 - **PricingOptions.FOPsForAlternativePrices.Type** - FOPs for which you need to get a booking estimation. Data type - string.
@@ -116,8 +116,8 @@ An operation to create a flight booking working with a 2.0 booking structure. Di
 - **AncillaryServices.AncillaryService.ID** - ID of the changeable ancillary service (not taken into account when booking). Data type - int.
 - **AncillaryServices.AncillaryService.RFIC** - RFIC of the ancillary service. Data type - string.
 - **AncillaryServices.AncillaryService.RFISC** - RFISC of the ancillary services. Data type - string.
-- **AncillaryServices.AncillaryService.SSRCode** - SSR code for booked ancillary service (Optional) Data type - string.
-- **AncillaryServices.AncillaryService.SSRDescription** - description for SSR booked ancillary service (Optional) Data type - string.
+- **AncillaryServices.AncillaryService.SSRCode** - SSR code for booked ancillary service (optional) Data type - string.
+- **AncillaryServices.AncillaryService.SSRDescription** - description for SSR booked ancillary service (optional) Data type - string.
 - **AncillaryServices.AncillaryService.Type** - type of ancillary services (required only for Sirena). Data type - string.
 - **AncillaryServices.AncillaryService.TravellerRef** - passenger ID for which the ancillary service is added. Data type - int.
 - **AncillaryServices.AncillaryService.SegmentRef** - array of multi-links to segments to which the ancillary service is added. Data type - int array.
