@@ -17,7 +17,7 @@ Getting the results of a certain search from the avia server.
 
 #### Response
 
-Includes all fields from the [Search response](/avia/request/search). Also additionally has the following fields:
+Includes all fields from the [Search](/avia/request/search) response. Also additionally has the following fields:
 
 - ** RawData ** - XML content of search requests to the supplier. Data type - array.
 - ** RawData.LogData ** - content of one of the search requests to the supplier. Data type - array.
