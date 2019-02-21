@@ -55,7 +55,7 @@ Get airline's routing grid.
 -   **RoutingGrid.Routes.Arrival** - list of arrival points. Data type - array.
 -   **RoutingGrid.Routes.Arrival.Route** - arrival point of the route. Data type - array.
 -   **RoutingGrid.Routes.Arrival.IsDirect** - attribute of a direct route. Data type - bool.
--   **RoutingGrid.Routes.Arrival.ArrPoint** - arrival point of the route. The array data type.
+-   **RoutingGrid.Routes.Arrival.ArrPoint** - arrival point of the route. Data type - array.
 -   **RoutingGrid.Routes.Arrival.ArrPoint.Code** - arrival point airport code. Data type - string.
 -   **RoutingGrid.Routes.Arrival.ArrPoint.CityCode** - arrival point city code. Data type - string.
 
