@@ -13,16 +13,16 @@ taxonomy:
 
 ##### Описание формата
 
--   **BookID** - ИД брони с пассажирами. Тип данных - целое 64 битное число.
+-   **BookID** - ИД брони с пассажирами. Тип данных - целое 64-битное число.
 -   **Passengers** - Номера пассажиров в брони, билеты которых требуется обменять. Тип данных - массив.
--   **Passengers.Ref** - Номер пассажира в брони. Тип данных - целое 32 битное число.
--   **RequestedFlightInfo** - Аналогичен параметру *RequestedFlightInfo* из [запроса Search](/avia/request/search).
+-   **Passengers.Ref** - Номер пассажира в брони. Тип данных - целое 32-битное число.
+-   **RequestedFlightInfo** - Аналогичен параметру *RequestedFlightInfo* из запроса [Search](/avia/request/search).
 
 Для обмена части сегментов необходимо у искомых плечей указывать идентификаторы (**RequestedFlightInfo.ODPair.ID**) плечей из брони, которые необходимо обменять.
 
 Для обмена всех сегментов на полностью новый перелет следует не указывать ни одного идентификатора плеча.
 
--   **Restrictions** - Аналогичен параметру *Restrictions* из [запроса Search](/avia/request/search).
+-   **Restrictions** - Аналогичен параметру *Restrictions* из запроса [Search](/avia/request/search).
 
 ##### Пример
 
@@ -93,8 +93,8 @@ taxonomy:
 
 ##### Описание формата
 
--   **PlaneFlights** - Аналогичен параметру *PlaneFlights* из [ответа Search](/avia/request/search).
--   **SimpleGroupedFlights** - Аналогичен параметру *SimpleGroupedFlights* из [ответа Search](/avia/request/search).
+-   **PlaneFlights** - Аналогичен параметру *PlaneFlights* из ответа [Search](/avia/request/search).
+-   **SimpleGroupedFlights** - Аналогичен параметру *SimpleGroupedFlights* из ответа [Search](/avia/request/search).
 
 ##### Примеры
 
