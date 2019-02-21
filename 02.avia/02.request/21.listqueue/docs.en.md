@@ -25,11 +25,11 @@ Corresponds to the previous version.
 
 #### Request
 
-If the request does not indicate the packages for which it is necessary to read the queue, then all active user packages are used
+If the request does not indicate the packages for which it is necessary to read the queue, then all active user packages are used.
 
 ##### Format Description
 
--  **Packages** - list of ID packets for which you want to read queues. The array data type. Optional. If not specified, then a survey is carried out for all the included packages that have the requisites of the booking without binding to the airline.
+-  **Packages** - list of ID packets for which you want to read queues. Data type - array. Optional. If not specified, then a survey is carried out for all the included packages that have the requisites of the booking without binding to the airline.
 -  **PackageID** - package requisites ID. Data type - int array.
 -  **QueueList** - list of queues to check. Data type - array.
 -  **Queue** - name of the queue. Data type - array of the QueueName enumeration. Possible values are:
