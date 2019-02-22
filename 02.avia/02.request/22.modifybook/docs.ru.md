@@ -69,7 +69,7 @@ taxonomy:
     -   Add
     -   Modify
     -   Remove
--   **Segment.SegmentID** - ИД сегмента в перелёте. Тип данных - int32.
+-   **Segment.SegmentID** - ID сегмента в перелёте. Тип данных - int32.
 -   **Segment.DepatureAirport** - код аэропорта отправления. Тип данных - строка.
 -   **Segment.ArrivalAirport** - код аэропорта прибытия. Тип данных - строка.
 -   **Segment.MarketingAirline** - код а/к, предоставляющей рейс. Тип данных - строка.
