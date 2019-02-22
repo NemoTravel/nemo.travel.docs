@@ -26,13 +26,13 @@ Search for v 1.2
 -  **RequestedFlightInfo.ODPair.DepatureAltPoints** - contains a list of alternative departure airports/cities. Data type - array. (optional).
 -  **RequestedFlightInfo.ODPair.DepatureAltPoints.AltPoint** - alternative flight point. Contains information about the flight point. Data type - array. The format is similar to the **DepaturePoint** element. 
 -  **RequestedFlightInfo.ODPair.ArrivalPoint** - contains information about the arrival point. Data type - array. Format is similar to the **DepaturePoint** element.
--  **RequestedFlightInfo.ODPair.ArrivalAltPoints** - Contains a list of alternative arrival points. Data type - array. Format is similar to the **DepatureAltPoints** element.
+-  **RequestedFlightInfo.ODPair.ArrivalAltPoints** - contains a list of alternative arrival points. Data type - array. Format is similar to the **DepatureAltPoints** element.
 -  **RequestedFlightInfo.ODPair.ID** - ID of the element. Used when searching for options for exchange (optional).
 -  **Passengers** - array of information about passengers for whom you want to find a flight. Data type - array.
 -  **Passengers.Passenger** - information about the type of passengers for whom you want to find a flight. Data type - array.
 -  **Passengers.Passenger.Type** - type of passengers for which you want to find a flight. Data type - enumeration, possible values: 
-    - **ADT** - adult - a passenger over 12 years (default)
-    - **UNN** - child - a passenger older than 2 and under 12 years of age - unaccompanied by an adult
+    - **ADT** - adult - passenger over 12 years (default)
+    - **UNN** - child - passenger older than 2 and under 12 years of age - unaccompanied by an adult
     - **CNN** - child - passenger over 2 and under 12 years of age
     - **INF** - infant - passenger under 2 years old - not occupying seats in the aircraft.
     - **INS** - infant - passenger under 2 years old - occupying seats in the aircraft.
@@ -146,7 +146,7 @@ Search for v 1.2
 -  **SearchData.StartTime** - date and time of the search beginning on the server. Data type - string, the format is <code>yyyy-mm-dd hh:mm:ss ±hh:mm</code>.
 -  **SearchData.EndTime** - date and time of the search end on the server. Data type - string, the format is <code>yyyy-mm-dd hh:mm:ss ±hh:mm</code>.
 -  **SearchData.IsAsync** - attribute of asynchronous search. Data type - bool.
--  **SearchData.Sources** -  data on the sources (packages), where the results were obtained. Data type - array.
+-  **SearchData.Sources** - data on the sources (packages), where the results were obtained. Data type - array.
 -  **SearchData.Sources.SourceInfo** - description of the source from which the results were obtained. Data type - array.
 -  **SearchData.Sources.SourceInfo.ID** - ID of the source where the results were obtained. Data type - int64.
 -  **SearchData.Sources.SourceInfo.Supplier** - provider of this search. Data type - enumeration with air providers.
