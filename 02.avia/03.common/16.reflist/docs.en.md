@@ -13,7 +13,7 @@ This type is the array of Ref fields, used to send a list of identifiers of othe
 
 #### Format description
 
--   **Ref** - pointer to the identifier of the object specified in the parent field
+-   **Ref** - pointer to the ID of the object specified in the parent field
 
 #### Sample
 
