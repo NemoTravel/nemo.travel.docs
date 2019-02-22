@@ -18,7 +18,7 @@ taxonomy:
 - ** RequestedFlightInfo.ODPair.DepatureDateTime2 ** - end date of the period. Data type - string, the format is <code>yyyy-mm-dd</code>.
 - ** RequestedFlightInfo.ODPair.MaxDepatureTime ** - maximum-allowed departure time. Data type - string, the format is <code>hh:mm</code>.
 - ** RequestedFlightInfo.ODPair.DepaturePoint ** - contains information about the origin point. Data type - array.
-- ** RequestedFlightInfo.ODPair.DepaturePoint.Code ** - 3 letter code of the airport/city of departure. Data type - string.
+- ** RequestedFlightInfo.ODPair.DepaturePoint.Code ** - 3-letter code of the airport/city of departure. Data type - string.
 - ** RequestedFlightInfo.ODPair.DepaturePoint.IsCity ** - attribute showing that code of the city, which is the airport aggregator, is indicated as the departure point. Data type - bool.
 - ** RequestedFlightInfo.ODPair.ArrivalPoint ** - contains information about the arrival point. Data type - array. The format is similar to the * DepaturePoint * element.
 - ** Restrictions ** - similar to the * Restrictions * parameter from the  [Search\_1\_2](/avia/request/search) (optional).
