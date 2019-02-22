@@ -73,7 +73,7 @@ Search for v 1.2
 -  **Restrictions.AsyncSearch** - requestmode: false (default) - synchronous search as before, true - asynchronous search with the ability to pull out the portions of supplier responses. Data type - bool.
 -  **Restrictions.Nemo2Pricing** - attribute of the need for pricing. Data type - bool.
 -  **Restrictions.ThreeDomainAgreementNumber** - corporate client number in a three-party agreement. Data type - string.
--  **EndUserData** - end user data (optional). Data type - array, the format is similar to the *EndUserData* element  from the [DataItem](/avia/common/dataitem)
+-  **EndUserData** - end user data (optional). Data type - array, the format is similar to the *EndUserData* element  from the [DataItem](/avia/common/dataitem).
 -  **SellingPointDescription** - description of the selling point (optional). Data type - array, the format is similar to the **SellingPointDescription** element from [DataItem](/avia/common/dataitem).
 
 ##### Sample
@@ -152,15 +152,15 @@ Search for v 1.2
 -  **SearchData.Sources.SourceInfo.Supplier** - provider of this search. Data type - enumeration with air providers.
 -  **SearchData.SearchThreads** - data about search threads with requests to providers. Data type - array.
 -  **SearchData.SearchThreads.SearchThreadInfo** - data about one of the search thread. Data type - array.
--  **SearchThreadInfo.SourceID** - The ID, in which the search thread was launched. The data type is int64.
+-  **SearchThreadInfo.SourceID** - ID in which the search thread was launched. The data type is int64.
 -  **SearchThreadInfo.IsComplete** - attribute showing that the thread has completed its work. Data type - bool.
 -  **SearchThreadInfo.StartTime** - date and time of the thread. Data type - string, the format is <code>yyyy-mm-dd hh:mm:ss ±hh:mm</code>.
 -  **SearchThreadInfo.Duration** - duration of the flow. Data type - string, the format is <code>h:mm:ss</code>.
 -  **SearchThreadInfo.FromCache** - attribute showing that the results for this thread are taken from the cache. Data type - bool.
 -  **SearchThreadInfo.OriginalSearchID** - ID of the original search within which results were received from the provider. Data type - int64.
--  **PlaneFlights** - contains search output. Data type - array of [Flight](/avia/common/flight) elements .
--  **SimpleGroupedFlights** - Contains search output in the format [GroupSearch](/avia/grouping). Data type - array.
--  **SubsidiesInformation** - Subsidies information. If the flight fare is subsidized, then it will have a reference to the element in this array. Data type - same as ***SubsidiesInformation*** in the [SubsidiesInformation](/avia/common/subsidiesinformation) object.
+-  **PlaneFlights** - contains search output. Data type - array of [Flight](/avia/common/flight) elements.
+-  **SimpleGroupedFlights** - contains search output in the [GroupSearch](/avia/grouping) format. Data type - array.
+-  **SubsidiesInformation** - subsidies information. If the flight fare is subsidized, then it will have a reference to the element in this array. Data type - same as ***SubsidiesInformation*** in the [SubsidiesInformation](/avia/common/subsidiesinformation) object.
 - **ProcessingData** - container with processing data on search filters and router. Data type - array. 
 - **ProcessingData.FlightsFromSuppliersCount** - indicates how many flights were received from the supplier. Data type - int. 
 - **ProcessingData.FlightsFromSuppliersSources** - container with supplier data. Data type - array. 
