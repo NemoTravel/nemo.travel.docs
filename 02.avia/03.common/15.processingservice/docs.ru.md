@@ -13,7 +13,7 @@ taxonomy:
 -   **Type** - Тип действия по обработке заказа. Тип данных - перечисление, возможные значения:
     -   Creation
     -   Ticketing
-    -   Payment - сбор ПШ типо
+    -   Payment 
     -   Exchange
     -   Refund
     -   Modification
