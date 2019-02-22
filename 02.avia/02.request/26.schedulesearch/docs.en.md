@@ -86,19 +86,19 @@ taxonomy:
 - ** ScheduleSegment.StopPoints.StopPoint.CityCode ** - stop point city code. Data type - string.
 - ** ScheduleSegment.StopPoints.StopPoint.UTC ** - time zone of the stop point. Data type - string.
 - ** ScheduleSegment.StopPoints.StopPoint.Terminal ** - terminal at the airport. Data type - string.
-- ** ScheduleSegment.StopPoints.StopPoint.ArrDateTime ** - date and time of arrival at the stop point in the format yyyy-mm-ddthh:mm:ss. Data type - string.
-- ** ScheduleSegment.StopPoints.StopPoint.DepDateTime ** - date and time of departure from the stop point in the format yyyy-mm-ddthh:mm:ss. Data type - string.
+- ** ScheduleSegment.StopPoints.StopPoint.ArrDateTime ** - date and time of arrival at the stop point in the format <code>yyyy-mm-ddthh:mm:ss</code>. Data type - string.
+- ** ScheduleSegment.StopPoints.StopPoint.DepDateTime ** - date and time of departure from the stop point in the format <code>yyyy-mm-ddthh:mm:ss</code>. Data type - string.
 - ** ScheduleSegment.FlightNumber ** - flight number for this flight segment. Data type - 32-bit integer.
 - ** ScheduleSegment.FlightTime ** - flight time in minutes. Data type - 32-bit integer.
 - ** ScheduleSegment.OpAirline ** - code of the airline directly executing this flight. Data type - string.
 - ** ScheduleSegment.MarkAirline ** - airline code for the given flight. Data type - string.
 - ** ScheduleSegment.AircraftType ** - aircraft type code. Data type - string.
-- ** ScheduleSegment.DepartueTime ** - departure time in hh:mm format. Data type - string.
-- ** ScheduleSegment.ArrivalTime ** - arrival time in hh:mm format. Data type - string.
+- ** ScheduleSegment.DepartueTime ** - departure time in <code>hh:mm</code> format. Data type - string.
+- ** ScheduleSegment.ArrivalTime ** - arrival time in <code>hh:mm</code> format. Data type - string.
 - ** ScheduleSegment.DepartureDaysChange ** - shift of the departure day relative to the departure date of the first segment of the entire flight. Data type - 32-bit integer.
 - ** ScheduleSegment.ArrivalDaysChange ** - shift of the day of arrival relative to the departure day. Data type - 32-bit integer.
-- ** ScheduleSegment.StartDate ** - start date of the departure period in the format yyyy-mm-dd. Data type - string.
-- ** ScheduleSegment.EndDate ** - end date of the departure period in the format yyyy-mm-dd. Data type - string.
+- ** ScheduleSegment.StartDate ** - start date of the departure period in the format <code>yyyy-mm-dd</code>. Data type - string.
+- ** ScheduleSegment.EndDate ** - end date of the departure period in the format <code>yyyy-mm-dd</code>. Data type - string.
 - ** ScheduleSegment.OperatedDaysOfWeek ** - array of departure days. Data type - array.
 - ** ScheduleSegment.OperatedDaysOfWeek.DayOfWeek ** - day of the week in which the flight will take place. Data type - enumeration, possible values:
     - Sunday - Sunday.
