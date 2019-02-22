@@ -14,9 +14,9 @@ The latest request version, the differences are only in the response in the anci
 
 #### Request Format
 
--  **BookID** -ID of the booking for which you want to issue an EMD. Data type - long.
+-  **BookID** - ID of the booking for which you want to issue an EMD. Data type - long.
 -  **AncillaryServices** - list of ancillary services for ticketing. Data type - AncillaryService array.
--  **AncillaryServices.AncillaryService** - element of links for work with the ancillary service. Data type - array.
+-  **AncillaryServices.AncillaryService** - element of references for work with the ancillary service. Data type - array.
 -  **AncillaryServices.AncillaryService.ServiceRef** - ID of ancillary service in the booking for which it is needed to issue an EMD. Data type - int.
 -  **AncillaryServices.AncillaryService.SegmentRef** - array of multi-links to the segments for which you want to issue an EMD. Data type - int array.
 -  **AncillaryServices.AncillaryService.SegmentRef.MRef** - element of the array of multi-links to segments. Data type - int.
