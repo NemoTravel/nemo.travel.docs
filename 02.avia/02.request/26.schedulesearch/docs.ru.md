@@ -14,7 +14,7 @@ taxonomy:
 -   **RequestedFlightInfo** — содержит информацию о сегментах перелёта, который требуется найти. Тип данных — массив.
 -   **RequestedFlightInfo.Direct** — индикатор поиска только прямых перелётов. Тип данных — булевский.
 -   **RequestedFlightInfo.ODPair** — сегмент перелёта, который требуется найти. Тип данных — массив.
--   **RequestedFlightInfo.ODPair.DepatureDateTime** — дата вылета или дата начала периода и время (необязательно), с которого начинается желаемое время вылета. Тип данных — строка, формат — <code>yyyy-MM-dd\[THH:mm:ss\]</code>.
+-   **RequestedFlightInfo.ODPair.DepatureDateTime** — дата вылета или дата начала периода и время (необязательно), с которого начинается желаемое время вылета. Тип данных — строка, формат — <code>yyyy-mm-dd\[thh:mm:ss\]</code>.
 -   **RequestedFlightInfo.ODPair.DepatureDateTime2** — дата окончания периода. Тип данных — строка, формат — <code>yyyy-mm-dd</code>.
 -   **RequestedFlightInfo.ODPair.MaxDepatureTime** — максимально-допустимое время вылета. Тип данных — строка, формат — <code>hh:mm</code>.
 -   **RequestedFlightInfo.ODPair.DepaturePoint** — содержит информацию о точки отправления. Тип данных — массив.
