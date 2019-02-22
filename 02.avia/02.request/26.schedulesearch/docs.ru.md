@@ -15,8 +15,8 @@ taxonomy:
 -   **RequestedFlightInfo.Direct** — индикатор поиска только прямых перелётов. Тип данных — булевский.
 -   **RequestedFlightInfo.ODPair** — сегмент перелёта, который требуется найти. Тип данных — массив.
 -   **RequestedFlightInfo.ODPair.DepatureDateTime** — дата вылета или дата начала периода и время (необязательно), с которого начинается желаемое время вылета. Тип данных — строка, формат — <code>yyyy-MM-dd\[THH:mm:ss\]</code>.
--   **RequestedFlightInfo.ODPair.DepatureDateTime2** — дата окончания периода. Тип данных — строка, формат — <code>yyyy-MM-dd</code>.
--   **RequestedFlightInfo.ODPair.MaxDepatureTime** — максимально-допустимое время вылета. Тип данных — строка, формат — <code>HH:mm</code>.
+-   **RequestedFlightInfo.ODPair.DepatureDateTime2** — дата окончания периода. Тип данных — строка, формат — <code>yyyy-mm-dd</code>.
+-   **RequestedFlightInfo.ODPair.MaxDepatureTime** — максимально-допустимое время вылета. Тип данных — строка, формат — <code>hh:mm</code>.
 -   **RequestedFlightInfo.ODPair.DepaturePoint** — содержит информацию о точки отправления. Тип данных — массив.
 -   **RequestedFlightInfo.ODPair.DepaturePoint.Code** — трехбуквенный код аэропорта/города отправления. Тип данных — строка.
 -   **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** — признак что в качестве точки отправления указан код города-агрегатора аэропортов. Тип данных — булевский.
@@ -86,19 +86,19 @@ taxonomy:
 -   **ScheduleSegment.StopPoints.StopPoint.CityCode** — код города точки остановки. Тип данных — строка.
 -   **ScheduleSegment.StopPoints.StopPoint.UTC** — часовой пояс точки остановки. Тип данных — строка.
 -   **ScheduleSegment.StopPoints.StopPoint.Terminal** — терминал в аэропорте. Тип данных — строка.
--   **ScheduleSegment.StopPoints.StopPoint.ArrDateTime** — дата и время прибытия в точку остановки в формате <code>yyyy-MM-ddTHH:mm:ss</code>. Тип данных — строка.
--   **ScheduleSegment.StopPoints.StopPoint.DepDateTime** — дата и время отправления из точки остановки в формате <code>yyyy-MM-ddTHH:mm:ss</code>. Тип данных — строка.
+-   **ScheduleSegment.StopPoints.StopPoint.ArrDateTime** — дата и время прибытия в точку остановки в формате <code>yyyy-mm-ddthh:mm:ss</code>. Тип данных — строка.
+-   **ScheduleSegment.StopPoints.StopPoint.DepDateTime** — дата и время отправления из точки остановки в формате <code>yyyy-mm-ddthh:mm:ss</code>. Тип данных — строка.
 -   **ScheduleSegment.FlightNumber** — номер рейса для данного сегмента перелёта. Тип данных — целое 32-битное число.
 -   **ScheduleSegment.FlightTime** — время в пути в минутах. Тип данных — целое 32-битное число.
 -   **ScheduleSegment.OpAirline** — код а/к, непосредственно выполняющая данный рейс. Тип данных — строка.
 -   **ScheduleSegment.MarkAirline** — код а/к предоставляющей данный рейс. Тип данных — строка.
 -   **ScheduleSegment.AircraftType** — код типа самолёта. Тип данных — строка.
--   **ScheduleSegment.DepartueTime** — время отправления в формате <code>HH:mm</code>. Тип данных — строка.
--   **ScheduleSegment.ArrivalTime** — время прибытия в формате <code>HH:mm</code>. Тип данных — строка.
+-   **ScheduleSegment.DepartueTime** — время отправления в формате <code>hh:mm</code>. Тип данных — строка.
+-   **ScheduleSegment.ArrivalTime** — время прибытия в формате <code>hh:mm</code>. Тип данных — строка.
 -   **ScheduleSegment.DepartureDaysChange** — смещение дня вылета относительно даты вылета первого сегмента всего перелёта. Тип данных — целое 32-битное число.
 -   **ScheduleSegment.ArrivalDaysChange** — смещение дня прибытия относительно дня вылета. Тип данных — целое 32-битное число.
--   **ScheduleSegment.StartDate** - дата начала периода вылетов в формате <code>yyyy-MM-dd</code>. Тип данных — строка.
--   **ScheduleSegment.EndDate** - дата окончания периода вылетов в формате <code>yyyy-MM-dd</code>. Тип данных — строка.
+-   **ScheduleSegment.StartDate** - дата начала периода вылетов в формате <code>yyyy-mm-dd</code>. Тип данных — строка.
+-   **ScheduleSegment.EndDate** - дата окончания периода вылетов в формате <code>yyyy-mm-dd</code>. Тип данных — строка.
 -   **ScheduleSegment.OperatedDaysOfWeek** — массив дней вылетов. Тип данных — массив.
 -   **ScheduleSegment.OperatedDaysOfWeek.DayOfWeek** — день недели, в который будет вылет. Тип данных — перечисление, возможные значения:
     -   **Sunday** — воскресенье;
