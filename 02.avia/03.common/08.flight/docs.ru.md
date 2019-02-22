@@ -44,15 +44,15 @@ taxonomy:
 -   **Segment.StopPoints.StopPoint.CityCode** — код города точки остановки. Тип данных — строка.
 -   **Segment.StopPoints.StopPoint.UTC** — часовой пояс точки остановки. Тип данных — строка.
 -   **Segment.StopPoints.StopPoint.Terminal** — терминал в аэропорте. Тип данных — строка.
--   **Segment.StopPoints.StopPoint.ArrDateTime** — дата и время прибытия в точку остановки в формате <code>yyyy-MM-ddTHH:mm:ss</code>. Тип данных — строка.
--   **Segment.StopPoints.StopPoint.DepDateTime** — дата и время отправления из точки остановки в формате <code>yyyy-MM-ddTHH:mm:ss</code>. Тип данных — строка.
+-   **Segment.StopPoints.StopPoint.ArrDateTime** — дата и время прибытия в точку остановки в формате <code>yyyy-mm-ddthh:mm:ss</code>. Тип данных — строка.
+-   **Segment.StopPoints.StopPoint.DepDateTime** — дата и время отправления из точки остановки в формате <code>yyyy-mm-ddthh:mm:ss</code>. Тип данных — строка.
 -   **Segment.FlightNumber** — номер рейса для данного сегмента перелёта. Тип данных — строка.
 -   **Segment.FlightTime** — время в пути в минутах. Тип данных — целое 32-битное число.
 -   **Segment.OpAirline** — код авиакомпании, непосредственно выполняющей данный рейс. Тип данных — строка.
 -   **Segment.MarkAirline** — код авиакомпании, предоставляющей данный рейс. Тип данных — строка.
 -   **Segment.AircraftType** — код типа самолёта. Тип данных — строка.
--   **Segment.DepDateTime** — дата и время отправления в формате <code>yyyy-MM-ddTHH:mm:ss</code>. Тип данных — строка.
--   **Segment.ArrDateTime** — дата и время прибытия в формате <code>yyyy-MM-ddTHH:mm:ss</code>. Тип данных — строка.
+-   **Segment.DepDateTime** — дата и время отправления в формате <code>yyyy-mm-ddthh:mm:ss</code>. Тип данных — строка.
+-   **Segment.ArrDateTime** — дата и время прибытия в формате <code>yyyy-mm-ddthh:mm:ss</code>. Тип данных — строка.
 -   **Segment.BookingClass** — информация о классе перелёта для данного сегмента перелёта. Тип данных — сложный.
 -   **Segment.BookingClass.BaseClass** — базовый класс перелёта. Тип данных — перечисление. Возможные значения:
     -   **Economy** — эконом-класс;
@@ -73,7 +73,7 @@ taxonomy:
     -   **NonRefundable** — невозвратный;
     -   **PenaltiesApplies** — возвратный со штрафами.
 -   **Flight.PriceInfo.Price.PrivateFareInd** — признак наличия приватных тарифов в данной цене. Тип данных — булевский.
--   **Flight.PriceInfo.Price.TicketTimeLimit** — таймлимит данной цены (цена действительная до) в формате <code>yyyy-MM-ddTHH:mm:ss</code>. Тип данных — строка.
+-   **Flight.PriceInfo.Price.TicketTimeLimit** — таймлимит данной цены (цена действительная до) в формате <code>yyyy-mm-ddthh:mm:ss</code>. Тип данных — строка.
 -   **Flight.PriceInfo.Price.PassengerFares** — массив ценовых составляющих по типам пассажиров. Тип данных — сложный.
 -   **Flight.PriceInfo.Price.PassengerFares.PassengerFare** — ценовая составляющая для конкретного типа пассажира. Тип данных — сложный.
 -   **PassengerFare.SegmentRef** — ссылки на сегменты, к которым относится данная пассажиро-цена. Если отсутствует — значит, цена применяется ко всем сегментам. Тип данных — массив.
@@ -110,13 +110,13 @@ taxonomy:
     -   **Cat35** — категория 35, они же договорные тарифы;
     -   **NonCat35** — тарифы, неподходящие для выписки в категории 35; 
 <!--  Не особо понятно что это, но такой тип есть в GDS Sabre (дословно из документации «Ticketing ineligible Category 35 fares»); -->
-    -   **Private** — все прочие приватные тарифы.
+   -   **Private** — все прочие приватные тарифы.
 -   **PassengerFare.Tariffs.Tariff.SegNum** — номер сегмента, для которого применяется данный тариф. Тип данных — целое 32-битное число.
 -   **PassengerFare.Tariffs.Tariff.FreeBaggage** — содержит информацию о бесплатном багаже по данному тарифу. Тип данных — сложный.
 -   **PassengerFare.Tariffs.Tariff.FreeBaggage.Measure** — единица измерения багажа. Тип данных — перечисление, возможные значения:
     -   **Kilograms** — килограммы;
     -   **Pounds** — фунты;
-    -   **Pieces** — сумки / места багажа;
+    -   **Pieces** — сумки/места багажа;
     -   **SpecialCharge** — спецкладь;
     -   **Size** — размер багажа;
 <!--     -   **ValueOfMeasure** — какое-то значение, взято из документации GDS; -->
