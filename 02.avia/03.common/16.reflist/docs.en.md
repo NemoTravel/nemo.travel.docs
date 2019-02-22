@@ -17,7 +17,7 @@ This type is the array of Ref fields, used to send a list of identifiers of othe
 
 #### Sample
 
-The Ref field indicates the object from the parent field, in this example it is the passenger.
+The **Ref** field indicates the object from the parent field, in this example it is the passenger.
 
 ```xml
 <TravellerRef>
