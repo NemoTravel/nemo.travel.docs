@@ -25,23 +25,22 @@ Search for v 1.2
 -  **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** - attribute showing that the city code is used as the departure point (optional). Data type - bool.
 -  **RequestedFlightInfo.ODPair.DepatureAltPoints** - contains a list of alternative departure airports/cities. Data type - array. (optional).
 -  **RequestedFlightInfo.ODPair.DepatureAltPoints.AltPoint** - alternative flight point. Contains information about the flight point. Data type - array. The format is similar to the **DepaturePoint** element. 
--  **RequestedFlightInfo.ODPair.ArrivalPoint** - contains information about the arrival point. Data type - array.  The format is similar to the **DepaturePoint** element.
--  **RequestedFlightInfo.ODPair.ArrivalAltPoints** - Contains a list of alternative arrival points. Data type - array. The format is similar to the **DepatureAltPoints** element.
+-  **RequestedFlightInfo.ODPair.ArrivalPoint** - contains information about the arrival point. Data type - array. Format is similar to the **DepaturePoint** element.
+-  **RequestedFlightInfo.ODPair.ArrivalAltPoints** - Contains a list of alternative arrival points. Data type - array. Format is similar to the **DepatureAltPoints** element.
 -  **RequestedFlightInfo.ODPair.ID** - ID of the element. Used when searching for options for exchange (optional).
 -  **Passengers** - array of information about passengers for whom you want to find a flight. Data type - array.
 -  **Passengers.Passenger** - information about the type of passengers for whom you want to find a flight. Data type - array.
 -  **Passengers.Passenger.Type** - type of passengers for which you want to find a flight. Data type - enumeration, possible values: 
-  
-    - ADT - adult - a passenger over 12 years (default)
-    - UNN - child - a passenger older than 2 and under 12 years of age - unaccompanied by an adult
-    - CNN - child - passenger over 2 and under 12 years of age
-    - INF - infant - passenger under 2 years old - not occupying seats in the aircraft.
-    - INS - infant - passenger under 2 years old - occupying seats in the aircraft.
-    - MIL - military
-    - SEA - seaman
-    - SRC - elderly passenger
-    - STU - student
-    - YTH - youth
+    - **ADT** - adult - a passenger over 12 years (default)
+    - **UNN** - child - a passenger older than 2 and under 12 years of age - unaccompanied by an adult
+    - **CNN** - child - passenger over 2 and under 12 years of age
+    - **INF** - infant - passenger under 2 years old - not occupying seats in the aircraft.
+    - **INS** - infant - passenger under 2 years old - occupying seats in the aircraft.
+    - **MIL** - military
+    - **SEA** - seaman
+    - **SRC** - elderly passenger
+    - **STU** - student
+    - **YTH** - youth
 -  **Passengers.Passenger.Count** - number of passengers of  chosen type for which you want to find a flight. Data type - 32-bit integer. Cannot be less than 1.
 -  **Restrictions** - contains various restrictions applied to search results (optional). Data type - array.
 -  **Restrictions.CurrencyCode** - 3-letter code for the currency of the search results output. Data type - string. Parameter is not supported.
@@ -53,24 +52,24 @@ Search for v 1.2
 -  **Restrictions.PrivateFaresOnly** - search only for private fares, by default both private and public fares will be searched for, where it is supported. Data type - bool.
 -  **Restrictions.ClassPreference** - contains a list of preferred flight classes. Data type - array.
 -  **Restrictions.ClassPreference.ClassOfService** - type of preferred flight class. Data type - enumeration, possible values:
-    - Economy - economy class only  (default)
-    - Business - business class only 
-    - First - first class only
-    - PremiumEconomy - premium economy
-    - All - all classes
+    - **Economy** - economy class only  (default)
+    - **Business** - business class only 
+    - **First** - first class only
+    - **PremiumEconomy** - premium economy
+    - **All** - all classes
 -  **Restrictions.MaxConnectionTime** - maximum connection time in minutes. Data type - 32-bit integer. Only for GWS (Galileo Web Services).
 -  **Restrictions.ResultsGrouping** - type of search results grouping. Data type - enumeration, possible values:
-    - Simple - (default) simple grouping, the output is in the [GroupSearch](/avia/grouping) format
-    - None - no grouping
+    - **Simple** - (default) simple grouping, the output is in the [GroupSearch](/avia/grouping) format
+    - **None** - no grouping
 -  **Restrictions.SourcePreference** - list of preferred flight sources. Data type - array.
 -  **Restrictions.SourcePreference.Source** - ID of the preferred flight source. Data type - 32-bit integer.
 -  **Restrictions.RequestorTags** - request sender tags. Data type - array.
 -  **Restrictions.RequestorTags.Tag** - one of the request sender tags which describes it by some criterion. For example, with a “debug” tag in the response, a detailed ProcessingData block is returned. Data type - string.
 -  **Restrictions.MaxResultCount** - maximum number of flights in the GDS response. Data type - 32-bit integer.
 -  **Restrictions.PriceRefundType** - required price type in the search request. Data type - enumeration, possible values:
-    -   AnyLowest - the lowest prices (default)
-    -   Refundable - the lowest prices with the possibility of a free refund
-    -   Both - set of search retrieval searches for minimum and minimum return prices
+    -   **AnyLowest** - the lowest prices (default)
+    -   **Refundable** - the lowest prices with the possibility of a free refund
+    -   **Both** - set of search retrieval searches for maximum and minimum return prices
 -  **Restrictions.AsyncSearch** - requestmode: false (default) - synchronous search as before, true - asynchronous search with the ability to pull out the portions of supplier responses. Data type - bool.
 -  **Restrictions.Nemo2Pricing** - attribute of the need for pricing. Data type - bool.
 -  **Restrictions.ThreeDomainAgreementNumber** - corporate client number in a three-party agreement. Data type - string.
