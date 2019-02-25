@@ -67,8 +67,7 @@ taxonomy:
 * **data.products.ID_FLT_N.dates.booking** — order reservation time. Data type - string.
 * **data.products.ID_FLT_N.dates.ticketing** — order ticketing time. Data type - string.
 * **data.products.ID_FLT_N.dates.void** — order void time. Data type - string.
-* **data.products.ID_FLT_N.dates.cancellation** — order revocation time. Data type - string.
-
+* **data.products.ID_FLT_N.dates.cancellation** — order cancellation time. Data type - string.
 * **data.products.ID_FLT_N.dates.timelimit** — container with information on time limits. Data type string.
 * **data.products.ID_FLT_N.dates.timelimit.price** — time limit of the price. Data type - string.
 * **data.products.ID_FLT_N.dates.timelimit.ticketing** — time limit for ticketing. Data type - string.
