@@ -14,25 +14,25 @@ visible: true
 * **OrderID** - номер заказа из бэк-офиса Nemo.travel. Чтобы получить значение параметра для заказа, необходимо выполнить запрос GetOrder с указанием параметра FlightsBookingID (ID бронирования из Nemo Connect).
 * **CallbackUrl** - адрес, на который будет возвращен callback от Nemo.travel с информацией о статусе заказа при его изменении. Формат: http(s)://domain.
 * **PaymentBackRedirectUrl** -  URL адрес для дальнейшего редиректа после оплаты. Формат: http(s)://domain/query?parameters.
-* **PaymentBackRedirectUrlFailure** - URL адрес для редиректа после неуспешный оплаты (необязательный, если не задан, будет использован PaymentBackRedirectUrl)
+* **PaymentBackRedirectUrlFailure** - URL адрес для редиректа после неуспешный оплаты (необязательный, если не задан, будет использован PaymentBackRedirectUrl).
 * **NemoOneAuthToken** - API ключ, выдается сотрудниками Nemo.travel (устаревший параметр, рекомендуется использовать AuthToken).
 * **AuthToken** - API ключ, выдается сотрудниками Nemo.travel.
 * **UserID** - ID пользователя в системе Nemo.travel, выдается сотрудниками Nemo.travel.
 
 #### Параметры ответа
 * **Gateway.PaymentMethodId** - идентификатор платежного шлюза.
-* **Gateway.PaymentCharge** - сумма сбора платежной системы. (Также содержит параметр Currency - валюта, в которой указана стоимость услуги)
+* **Gateway.PaymentCharge** - сумма сбора платежной системы (также содержит параметр Currency - валюта, в которой указана стоимость услуги).
 * **Gateway.RedirectUrl** - адрес для перенаправления на страницу платежной системы.
 * **Gateway.UrlToCatch** - адрес, на который будут отправляться нотификации об изменениях в заказе.
 * **Gateway.UrlForCardDataSubmit** - адрес, на который необходимо отправить данные банковской карты. Формат запроса указан в параметре CardDataRequestContent (для host2host интеграции).
-* **CardDataRequestContent** - содержимое запроса, в котором необходимо заменить placeholder на данные банковской карты (для host2host интеграции)
-* **CardDataRequestContent.proxy-placeholder-cardNumber** - номер банковской карты. Формат: цифры, без пробелов 
-* **CardDataRequestContent.proxy-placeholder-validThruYear** - год истечения срока действия карты. Формат: YYYY
-* **CardDataRequestContent.proxy-placeholder-validThruMonth** - месяц истечения срока действия карты. Формат: MM
+* **CardDataRequestContent** - содержимое запроса, в котором необходимо заменить placeholder на данные банковской карты (для host2host интеграции).
+* **CardDataRequestContent.proxy-placeholder-cardNumber** - номер банковской карты. Формат: цифры, без пробелов.
+* **CardDataRequestContent.proxy-placeholder-validThruYear** - год истечения срока действия карты. Формат: YYYY.
+* **CardDataRequestContent.proxy-placeholder-validThruMonth** - месяц истечения срока действия карты. Формат: MM.
 * **CardDataRequestContent.proxy-placeholder-securityCode** - код CVC2/CVV2/4DBC. Не используется только в случае, если банковская карта не имеет данного кода. Пример: 123
-* **CardDataRequestContent.proxy-placeholder-holderName** - имя и фамилия держателя банковской карты (на латинице). Пример: Ivan Ivanov 
-* **CardDataRequestContent.proxy-placeholder-customerIp** - IP адрес, с которого пользователем были введены данные банковской карты. Формат: IP v4 address
-* **CardDataRequestContent.proxy-placeholder-customerAgent** - название браузера клиента (User-Agent HTTP header). Пример: Mozilla
+* **CardDataRequestContent.proxy-placeholder-holderName** - имя и фамилия держателя банковской карты (на латинице). Пример: Ivan Ivanov. 
+* **CardDataRequestContent.proxy-placeholder-customerIp** - IP адрес, с которого пользователем были введены данные банковской карты. Формат: IP v4 address.
+* **CardDataRequestContent.proxy-placeholder-customerAgent** - название браузера клиента (User-Agent HTTP header). Пример: Mozilla.
 * **RequestType** - тип запроса. Доступные значения: POST/GET.
 
 #### Пример запроса
