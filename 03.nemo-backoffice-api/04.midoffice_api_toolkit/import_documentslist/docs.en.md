@@ -43,12 +43,12 @@ Request to receive a list of documents for the order.
 -   **params** — request parameters. Data type - custom.
 -   **params.type** — request type. Data type - string.
 -   **params.companyId** — subagency ID. Data type - int32.
--   **params.orderId** — Order ID from Nemo1. Data type - int32.
+-   **params.orderId** — order ID from Nemo1. Data type - int32.
 -   **params.dateFrom/params.dateTo** — date range for which documents are submitted. Data type - string.
 -   **params.requestId** — order ID. Data type - string.
 -   **data** — container with data about the object. Data type - custom.
 -   **data.success** — attribute of success. Data type - bool.
--   **data.documentsList** — document container.Data type - custom.
+-   **data.documentsList** — document container. Data type - custom.
 -   **data.documentsList.type** — type of generated document. Data type - string.
 -   **data.documentsList.name** — name of the generated document. Data type - string.
 -   **data.documentsList.transactionId** — transaction ID. Data type - int32.
