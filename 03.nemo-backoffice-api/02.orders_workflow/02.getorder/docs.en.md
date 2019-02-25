@@ -14,8 +14,8 @@ In response to this request Nemo.travel will return the following parameters:
 
 #### Request parameters
 * **OrderID** - order number in the Nemo.travel back office. To get the parameter value for an order, you should run a GetOrder request with one of the Flights Booking ID or TrainsBookingID parameters (Booking ID from Nemo Connect).
-* **FlightsBookingID** - Nemo Connect avia booking ID, the value is returned in the GetBook response in ID parameter.
-* **TrainsBookingID** - Nemo Connect rail booking ID, the value is returned in the GetBook response in BookID parameter. 
+* **FlightsBookingID** - Nemo Connect avia booking ID, the value is returned in the [BookFlight](/avia/request/bookflight) response in the ID parameter.
+* **TrainsBookingID** - Nemo Connect rail booking ID, the value is returned in the [BookTrain](trains/trains_stages/booktrain) response in the BookID parameter. 
 * **CallbackUrl** - address to which callback from Nemo.travel with information on order status after its change will be returned. Example: http(s)://domain.
 * **PaymentBackRedirectUrl** - URL address for further redirect after a successful payment. Format: http(s)://domain/query?parameters.
 * **PaymentBackRedirectUrlFailure** - URL address for redirect after a failed payment (optional, if not specified PaymentBackRedirectUrl parameter will be used).
