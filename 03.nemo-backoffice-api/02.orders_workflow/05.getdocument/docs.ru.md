@@ -9,7 +9,7 @@ title: GetDocument
 
 #### Параметры запроса
 * **OrderID** - номер заказа из бэк-офиса Nemo.travel. Чтобы получить значение параметра для заказа, необходимо выполнить запрос GetOrder с указанием параметра FlightsBookingID (ID бронирования из Nemo Connect).
-* **DocType** - Тип запрашиваемого документа, возможные значения: ItinReceiptNemo - авиа маршрут квитанция в формате Nemo. RailVoucher - Проездной документ в ЖД. RailMCF - Квитанция различных сборов.
+* **DocType** - Тип запрашиваемого документа, возможные значения: ItinReceiptNemo - авиа маршрут-квитанция в формате Nemo. RailVoucher - Проездной документ в ЖД. RailMCF - Квитанция различных сборов.
 * **NemoOneAuthToken** - API ключ, выдается сотрудниками Nemo.travel (устаревший параметр, рекомендуется использовать AuthToken).
 * **AuthToken** - API ключ, выдается сотрудниками Nemo.travel.
 * **UserID** - ID пользователя в системе Nemo.travel, выдается сотрудниками Nemo.travel.
@@ -18,7 +18,7 @@ title: GetDocument
 * **PaperDocument.Type** - Тип возвращаемого документа.
 * **PaperDocument.Format** - Формат возвращаемого документа.
 * **PaperDocument.Encoding** - Кодировка возвращаемого документа (не используется).
-* **PaperDocument.DocumentData** - Содержимое документа .
+* **PaperDocument.DocumentData** - Содержимое документа.
 * **PaperDocument.IsBase64Wrapped** - Параметр указывает, закодировано ли содержимое документа в Base64.
 
 #### Пример запроса
