@@ -26,37 +26,37 @@ taxonomy:
 
 #### Параметры ответа
 * **Item.ID** - идентификатор услуги в сервисном пакете.
-* **Item.Price** - стоимость услуги.(Также содержит параметр Currency - валюта, в которой указана стоимость услуги)
+* **Item.Price** - стоимость услуги (также содержит параметр Currency - валюта, в которой указана стоимость услуги).
 * **Item.Name** - название услуги.
 * **Item.ShortDescription** - краткое описание услуги.
 * **Item.FullDescription** - полное описание услуги.
 * **Package.ID** - индентификатор сервисного пакета.
-* **Package.Price** - общая стоимость сервисного пакета.(Также содержит параметр Currency - валюта, в которой указана стоимость услуги)
-* **Package.Name** - название сервисного пакета
-* **Package.ShortDescription** - краткое описание сервисного пакета 
-* **Package.FullDescription** - полное описание сервисного пакета
-* **IsEditable** - наличие возможности выбора сервисного пакета через запрос ModifyOrder. Значения: true/false
-* **SelectedPackageId** - идентификатор выбранного сервисного пакета
+* **Package.Price** - общая стоимость сервисного пакета (также содержит параметр Currency - валюта, в которой указана стоимость услуги).
+* **Package.Name** - название сервисного пакета.
+* **Package.ShortDescription** - краткое описание сервисного пакета .
+* **Package.FullDescription** - полное описание сервисного пакета.
+* **IsEditable** - наличие возможности выбора сервисного пакета через запрос ModifyOrder. Значения: true/false.
+* **SelectedPackageId** - идентификатор выбранного сервисного пакета.
 * **FlightsBookingID** - ID заказа Nemo Connect
 * **OrderStatus** - статус заказа. Возможные значения: New, Booked, Cancelled, Confirmed
 * **PaymentStatus** - статус оплаты. Возможные значения: NotPaid, PartiallyPaid, FullPaid
 * **Transaction.ID** - номер платежной транзакции.
 * **Transaction.Status** - статус платежной транзакции. Возможные значения: New, Cancelled, Refunded, PreAuthorized, Paid.
 * **Transaction.GatewayName** - название платежного шлюза, заведенное агентом в настройках.
-* **Transaction.MoneyPaid** - сумма, которая уже была внесена в рамках данной транзакции. (Также содержит параметр Currency - валюта, в которой указана стоимость услуги)
-* **Transaction.PaymentDateTime** - дата и время поступления оплаты по платежной транзакции. Формат: YYYY-MM-DDTHH:MM:SS
-* **Transaction.CreateDateTime** - дата и время создания платежной транзакции. Формат: YYYY-MM-DDTHH:MM:SS
-* **OrderID** - ID заказа в BackOffice API
-* **Services** - контейнер с услугами 
-* **Services.Service** - контейнер определяющий ЖД или авиа 
-* **Services.Service.Train** - контейнер с ID бронирования поезда
-* **Services.Service.Train.TrainsBookingID** - ID бронирования поезда 
-* **Services.Service.Flight** -  контейнер с ID бронирования авиабилета 
-* **Services.Service.Flight.FlightsBookingID** - ID бронирования авиабилета 
-* **PriceBreakdown** - контейнер с ценами
-* **PriceBreakdown.Price** - цена 
-* **PriceBreakdown.Price.Currency** - валюта для цены
-* **PriceBreakdown.Parts** - контейнер с ценовыми категориями
+* **Transaction.MoneyPaid** - сумма, которая уже была внесена в рамках данной транзакции (также содержит параметр Currency - валюта, в которой указана стоимость услуги).
+* **Transaction.PaymentDateTime** - дата и время поступления оплаты по платежной транзакции. Формат: YYYY-MM-DDTHH:MM:SS.
+* **Transaction.CreateDateTime** - дата и время создания платежной транзакции. Формат: YYYY-MM-DDTHH:MM:SS.
+* **OrderID** - ID заказа в BackOffice API.
+* **Services** - контейнер с услугами.
+* **Services.Service** - контейнер определяющий ЖД или авиа.
+* **Services.Service.Train** - контейнер с ID бронирования поезда.
+* **Services.Service.Train.TrainsBookingID** - ID бронирования поезда. 
+* **Services.Service.Flight** -  контейнер с ID бронирования авиабилета.
+* **Services.Service.Flight.FlightsBookingID** - ID бронирования авиабилета. 
+* **PriceBreakdown** - контейнер с ценами.
+* **PriceBreakdown.Price** - цена.
+* **PriceBreakdown.Price.Currency** - валюта для цены.
+* **PriceBreakdown.Parts** - контейнер с ценовыми категориями.
 * **PriceBreakdown.Parts.Part.Type** - тип. Возможные значения:  **Train** - цена за ж/д перевозку; **Flight** - цена за перелет; **Upsale** - сумма за все возможные дополнительные услуги, **ServicePack**-сервисные пакеты; **GdsService**- дополнительные услуги авиакомпании; **AgencyCharge** - агенстский сбор; **PaymentCharge** - сбор платежного шлюза; **Charge**- общий сбор; **Order** - общая цена за заказ со сборами; **Service**- общая цена за заказ без сборов.
 * **PriceBreakdown.Parts.Part.Price.Parts** - имеет такую же структуру как и **PriceBreakdown.Parts**
 * 
