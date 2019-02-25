@@ -17,10 +17,10 @@ taxonomy:
 * **FlightsBookingID** - ID авиа бронирования Nemo Connect, значение возвращается в ответе на запрос [BookFlight](/avia/request/bookflight) параметре ID.
 * **TrainsBookingID** - ID ЖД бронирования Nemo Connect, значение возвращается в ответе на запрос BookTrain параметре BookID.
 * **CallbackUrl** - адрес, на который будет возвращен callback от Nemo.travel с информацией о статусе заказа при его изменении. Формат: http(s)://domain.
-* **PaymentBackRedirectUrl** -  URL адрес для дальнейшего редиректа после оплаты. Формат: http(s)://domain/query?parameters.
-* **PaymentBackRedirectUrlFailure** - URL адрес для редиректа после неуспешный оплаты (необязательный, если не задан, будет использован PaymentBackRedirectUrl)
-* **NemoOneAuthToken** - API ключ, выдается сотрудниками Nemo.travel (устаревший параметр, рекомендуется использовать AuthToken).
-* **AuthToken** - API ключ, выдается сотрудниками Nemo.travel.
+* **PaymentBackRedirectUrl** -  URL-адрес для дальнейшего редиректа после оплаты. Формат: http(s)://domain/query?parameters.
+* **PaymentBackRedirectUrlFailure** - URL-адрес для редиректа после неуспешный оплаты (необязательный, если не задан, будет использован PaymentBackRedirectUrl)
+* **NemoOneAuthToken** - API-ключ, выдается сотрудниками Nemo.travel (устаревший параметр, рекомендуется использовать AuthToken).
+* **AuthToken** - API-ключ, выдается сотрудниками Nemo.travel.
 * **UserID** - ID пользователя в системе Nemo.travel, выдается сотрудниками Nemo.travel.
 
 
