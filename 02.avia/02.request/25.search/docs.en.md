@@ -71,7 +71,6 @@ Search for v 1.2
     -   **Refundable** - the lowest prices with the possibility of a free refund
     -   **Both** - set of search retrieval searches for maximum and minimum return prices
 -  **Restrictions.AsyncSearch** - requestmode: false (default) - synchronous search as before, true - asynchronous search with the ability to pull out the portions of supplier responses. Data type - bool.
--  **Restrictions.Nemo2Pricing** - attribute of the need for pricing. Data type - bool.
 -  **Restrictions.ThreeDomainAgreementNumber** - corporate client number in a three-party agreement. Data type - string.
 -  **EndUserData** - end user data (optional). Data type - array, the format is similar to the *EndUserData* element  from the [DataItem](/avia/common/dataitem).
 -  **SellingPointDescription** - description of the selling point (optional). Data type - array, the format is similar to the **SellingPointDescription** element from [DataItem](/avia/common/dataitem).
