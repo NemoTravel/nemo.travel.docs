@@ -19,7 +19,7 @@ The latest request version, the differences are only in the response in the anci
 
 -  **BookID** - ID of the booking with passengers. Data type - 64-bit integer.
 -  **FlightID** - ID of the flight on which the exchange will take place. Data type - string.
--  **Passengers** - numbers of passengers in the booking, whose tickets are required to be exchanged. Data type - array.
+-  **Passengers** - numbers of passengers in the booking whose tickets are required to be exchanged. Data type - array.
 -  **Passengers.Ref** - passenger number in the booking. Data type - 32-bit integer.
 
 ##### Sample
