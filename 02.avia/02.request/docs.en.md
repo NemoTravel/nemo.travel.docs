@@ -9,7 +9,7 @@ process:
 ---
 
 -   **[AdditionalOperations_1_1](/avia/request/additionaloperations)** — Request for additional operations execution before version 1.1.
--   **[BookFlight](/avia/request/bookflight)** — An operation to create a flight booking.
+-   **[BookFlight](/avia/request/bookflight)** — Operation to create a flight booking.
 -   **[CancelBook](/avia/request/cancelbook)** — Used to cancel a flight booking.
 -   **[CompleteEMDProcessing](/avia/request/completeexchange)** — Completion of tickets exchange. Within this request, the necessary steps are taken to complete the exchange of tickets.
 -   **[DeleteFromQueue](/avia/request/deletefromqueue)** — Used to delete one or more bookings from one or more queues.
@@ -34,7 +34,7 @@ process:
 -   **[RefundTicket](/avia/request/refundticket)** - Used for getting the info on the tickets and EMD refund if they are present in the booking.
 -   **[Search](/avia/request/search)** - Executes a flight search.
 -   **[Schedule search](/avia/request/schedulesearch)** - Search by schedule.
--   **[SplitBook](/avia/request/splitbook)** - Used to separate (split) a part of passengers into a separate new booking.
+-   **[SplitBook](/avia/request/splitbook)** - Used to split a part of passengers into a separate new booking.
 -   **[UpdateBook](/avia/request/updatebook)** - Used to update the flight booking information.
 -   **[Ticket](/avia/request/ticket)** - Ticketing for the booking.
 -   **[VoidTicket](/avia/request/voidticket)** - Used for tickets refund received as a result of ticketing. 
