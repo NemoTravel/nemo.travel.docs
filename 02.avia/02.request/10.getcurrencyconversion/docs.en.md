@@ -46,6 +46,8 @@ Used to get currency rates from GDS.
 -  **Conversions.Conversion** - currency rate. Data type - array.
 -  **Conversions.Conversion.CurrencyCode** - code of the currency which rate is indivated. Data type - ISO Alpha3 string.
 -  **Conversions.Conversion.Rate** - rate of the indicated currency. Data type - 32-bit floating-point number.
+-  **FromCurrencyCode** -rate of which currency is indicated. Data type - string.
+-  **Date** - date from which the requested currency rate is valid. Data type - date and time in the <code>yyyy-mm-ddThh:mm:ss</code> format.
 
 ##### Sample
 
