@@ -9,14 +9,14 @@ taxonomy:
 
 - [BookFlight](/avia/request/bookflight) - main booking method. 
 - [ModifyBook_2_0](/avia/request/modifybook) - modification of the order allows to add some passenger data that was not included in the booking, for example, information about passenger documents.
-- [UpdateBook_2_0](/avia/request/updatebook) - synchronization which allows to get the current status of the booking from GDS.
-- [CancelBook](/avia/request/cancelbook) - booking cancelling.
+- [UpdateBook_2_0](/avia/request/updatebook) - synchronization allows to get the current status of the booking from the  supplier (GDS, Global Distribution System).
+- [CancelBook](/avia/request/cancelbook) - cancellation of the booked order and the booking.
 
 ### The list of document types supported during the booking
 
 | XML value                     | Definition                                                                        | The SSR value of DOCS | The value in Sirena                                                                                                                               |
 |----------------------------------|------------------------------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| AutosetByNumber                  | The type auto-detection by the document number                                           | P                 | Depends on the document number and country of issue. If the number fails to determine the type, then there will be an error asking to add the type or correct the document number. |
+| AutosetByNumber                  | The type auto-detection by the document number                                           | P                 | Depends on the document number and country of issue. If the number fails to determine the type, then there will be an error asking to enter the document type or correct the document number. |
 ||
 | P                                | Passport,  SSR DOCS standard                                                       | P                 | PS                                                                                                                                              |
 ||
