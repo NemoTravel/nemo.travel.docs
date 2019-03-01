@@ -22,10 +22,10 @@ The file contains an array of objects, each rule object describes one fare famil
 | baseClass      | String        |  Flight service class to which the set of fare rules applies. The allowed values are `economy`,` premiumEconomy`, `business`,` first`|
 | tariffCodePattern  | String      |    Regular pattern describing the fare code |
 | priority  | Number      | Order of display recommended by the airline |
-| saleTimeSince  | String      |    Acceptable sale time "Since" (Format ISO 8601) |
-| saleTimeUntil  | String      |    Acceptable sale time "Until" (Format ISO 8601) |
-| flightTimeSince  | String      |     Acceptable flight time "Since" (Format ISO 8601) |
-| flightTimeUntil  | String      |    Acceptable flight time "Until" (Format ISO 8601) |
+| saleTimeSince  | String      |    Acceptable sale time "Since" (ISO 8601 format) |
+| saleTimeUntil  | String      |    Acceptable sale time "Until" (ISO 8601 format) |
+| flightTimeSince  | String      |     Acceptable flight time "Since" (ISO 8601 format) |
+| flightTimeUntil  | String      |    Acceptable flight time "Until" (ISO 8601 format) |
 | parameters| Object[] | Fare options characterizing the family  |
 
 **Description of the tariff option:**
@@ -36,7 +36,7 @@ The file contains an array of objects, each rule object describes one fare famil
 | shortDescription | Object | Short Description |
 | &nbsp;&nbsp;&nbsp;&nbsp; ru | String | Description in Russian |
 | &nbsp;&nbsp;&nbsp;&nbsp; en | String | Description in English |
-| fullDescription  | Object | Extended description of the parameter. Can be used with tooltips, for example. |
+| fullDescription  | Object | Extended description of the parameter. Can be used, for example, with tooltips  |
 | &nbsp;&nbsp;&nbsp;&nbsp; ru | String | Description in Russian |
 | &nbsp;&nbsp;&nbsp;&nbsp; en | String | Description in English |
 | needToPay | String \| Null | Parameter responsible for the payment or the acceptability of the service (see the description below)  |
@@ -59,5 +59,5 @@ The file contains an array of objects, each rule object describes one fare famil
 * **null**: parameter is not applicable to this fare option
 * **notAvailable**: service unavailable
 * **free**: service is available and free 
-* **charge**: service is available at an additional cost
+* **charge**: service is available for an additional charge
 
