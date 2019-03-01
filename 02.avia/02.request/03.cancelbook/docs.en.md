@@ -13,7 +13,7 @@ Used to cancel flight booking.
 
 ##### Format Description
 
-- **BookID** - ID of the booking that you want to cancel. Data type - 64-bit integer.
+- **BookID** - ID of the booking you want to cancel. Data type - 64-bit integer.
 
 ##### Sample
 
