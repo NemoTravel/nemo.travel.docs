@@ -51,21 +51,21 @@ Main elements of any response.
 * **Errors.Error.AdditionalInfo.InfoItem** - single additional error information.  Data type - custom.
 * **Errors.Error.AdditionalInfo.InfoItem.InfoKey** - additional information type. Data type - enumeration, possible values:
 * **Errors.Error.AdditionalInfo.InfoItem.InfoValue** - additional information about the error. Data type - string.
-* **SegmentsStatus** - information about the segment statuses with the invalid status of one of them when booking. It is transmitted in the format <syntaxhighlight lang="text" enclose="none" style="font-size: 1.2em; padding: 0 3px; background: #F0F0F0; border: 1px dashed #2F6FAB;">segment_number:segment_status,segment_number:segment_status</syntaxhighlight> format, and so on by the number of segments where "," separates information about different segments, and ":" separates the number (numbered from 0) and the status of this segment.
+* **SegmentsStatus** - information about the segment statuses with the invalid status of one of them when booking. It is transferred in the <syntaxhighlight lang="text" enclose="none" style="font-size: 1.2em; padding: 0 3px; background: #F0F0F0; border: 1px dashed #2F6FAB;">segment_number:segment_status,segment_number:segment_status</syntaxhighlight> format, and so on by the number of segments where "," separates information about different segments, and ":" separates the number (numbered from 0) and the status of this segment.
 
 ##### Warnings
 
 * **Warnings** - array of important information messages about the specifics of request processing. Data type - array.
 * **Warnings.Warning** - information message about the specifics of request processing. Data type - custom.
 * **Warnings.Warning.Code** - message type code. Data type - ushort (unsigned 16-bit number).
-* **Warnings.Warning.Message** - text of the message. Data type - string.
+* **Warnings.Warning.Message** - message text. Data type - string.
 
 ##### Response body
 
 * **ResponseBody** - container for the response body. Data type - custom.
 
 
-##### AuthToken autorization block sample
+##### Sample AuthToken autorization block
 ```xml
         <ns1:Requisites>
           <stl:AuthToken>****</stl:AuthToken>
