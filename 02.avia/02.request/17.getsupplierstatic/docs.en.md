@@ -16,8 +16,8 @@ Used to get statics from suppliers systems.
  - CreditCardSupport
  - FFPPartnership
  - ClassOfService
--  **CreditCardSupport** - contains clarifying information for getting information about credit card support (optional). Data type - array.
--  **CreditCardSupport.Airline** - airline code for which you want to get information about supported credit cards. Data type - string.
+-  **CreditCardSupport** - contains clarifying information needed to get the information about credit card support (optional). Data type - array.
+-  **CreditCardSupport.Airline** - airline code for which you want to get the information about supported credit cards. Data type - string.
 -  **CreditCardSupport.Country** - ISO Alpha2 country code for which the support of the specified airline cards is of interest. Data type - string.
 
 #### Response
