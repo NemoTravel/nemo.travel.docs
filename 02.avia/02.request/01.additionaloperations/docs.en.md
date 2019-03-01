@@ -19,8 +19,8 @@ Request for execution before version 1.2
 	- **CheckAvailability** - availability check, performed only for the flight.
 	- **GetFareRules** - get fare rules.
 	- **GetSeatMap** - get the seat map.
-	- **GetPrice** - get the current flight price. It is only for the flight.
-	- **SearchAncillaryServices** - obtaining a list of available services for a flight or reservation (only for GDS Sirena and Amadeus).
+	- **GetPrice** - get the current flight price. Performed only for the flight.
+	- **SearchAncillaryServices** - obtaining a list of available services for a flight or booking (only for GDS Sirena and Amadeus).
 	- **GetAllowedCCs** - get the list of credit card codes that can be used to pay this reservation through GDS processing.
 	- **GetAllowedLoyaltyCards** - get information about loyalty cards that can be used on this flight. At the moment there is no support for this operation.
 	- **ActualizeFlight** - actualize the flight
@@ -30,9 +30,9 @@ Request for execution before version 1.2
 -  **OperationsRestrictions.CheckAvailabilityWithBookingRequest** - use the request to take places to check the availability of the flight for booking. Data type - bool.
 -  **OperationsRestrictions.PricingInfo** - additional information about the price component of the flight, for which you need to perform additional operations. Data type - custom.
 -  **OperationsRestrictions.PricingInfo.BookingClassCodes** - information about the flight classes for which you want to find the flight price. Data type - custom.
--  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment** - The information about the flight class for a particular segment. Data type - custom.
+-  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment** - information about the flight class for a particular segment. Data type - custom.
 -  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment.SegmentNumber** - segment number in the flight. Data type - 32-bit integer.
--  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment.BookingClassCode** - The class of the flight class for this segment. Data type - string.
+-  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment.BookingClassCode** - flight class letter for this segment. Data type - string.
 -  **OperationsRestrictions.PricingInfo.Passengers** - contains information about passengers for whom you want to find the flight price. Data type - custom.
 -  **OperationsRestrictions.PricingInfo.Passengers.Passenger** - contains information about one of the types of passengers for whom you want to find the flight price. Data type - custom.
 -  **OperationsRestrictions.PricingInfo.Passengers.Passenger.Type** - passenger type. Data type - enumeration.
@@ -78,7 +78,7 @@ Request for execution before version 1.2
 
 Includes the set of elements caused by operstion in the request:
 
--  **ActualizedFlight** - contains updated flight. Data type - [Flight](/avia/common/flight).
+-  **ActualizedFlight** - contains the updated flight. Data type - [Flight](/avia/common/flight).
 -  **ActualizedFlight.Segments.Segment.SupplierInfo** - information about the segment statuses if the flight is unavailable for booking and operation was executed via the seat taking request. Data type - string. Supported by GalileoUapi, Sabre, Amadeus, Galileo.
 -  **FlightsByFareFamily** - contains the result of the GetFareFamilies operation. Data type - [Flight](/avia/common/flight) array.
 -  **SubsidizedTariffs** - contains the result of GetSubsidizedTariffs operation. Data type - [Flight](/avia/common/flight) array.
@@ -113,7 +113,7 @@ Includes the set of elements caused by operstion in the request:
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.IsFree** — attribute showing that the place is free. Data type - bool.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Price** — seat price in case it is paid. Data type - [Money](/avia/common/money).
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Characteristics** - seat row characteristics. Data type - string.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows** - container for information on rows of seats on the floor. Data type - custom.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows** - container for information on seat rows on the floor. Data type - custom.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow** - information about a specific number of seats on the floor in an aircraft. Data type - custom. Element format is the same as the DefaultRow element.
 -   **GetPriceResult** - result of getting the actual price of the flight. Data type - custom.
 -   **GetPriceResult.Flight** - flat flight v1.1. Data type - custom.
@@ -147,7 +147,7 @@ Includes the set of elements caused by operstion in the request:
 -   **GetAllowedCCsResult.AllowedCCs.Code** - code of the credit card which you can use to pay for the specified reservation via the GDS processing. Data type - string.
 -   **GetAllowedLoyaltyCardsResult** - array of fare rules applied to the given flight. Data type - custom.
 
->>>> The flight with the new ID will be received as a result of the request, this ID should be used in further operations, for example, in the booking.
+>>>> The flight with a new ID will be received as a result of the request, this ID should be used in further operations, for example, in the booking.
 
 ##### Sample
 ```xml
