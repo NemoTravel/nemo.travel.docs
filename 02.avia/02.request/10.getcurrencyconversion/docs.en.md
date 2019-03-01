@@ -13,6 +13,8 @@ Used to get currency rates from GDS.
 
 -  **Source** - ID of the requisite package (source) under which you want to perform getting the currency rate. Data type - 32-bit integer. Currently supports Galileo, Sabre, SITA.
 -  **CurrencyCode** - ISO Alpha3 currency code which rate is required to get. Data type - string.
+-  **FromCurrency** - rate of which currency is requested. Data type - string.
+-  **Date** - for which date it is required to get the currency rate. Data type - date in the <code>dd.mm.yyyy</code> format.
 
 ##### Sample
 
