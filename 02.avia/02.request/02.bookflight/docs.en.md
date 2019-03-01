@@ -36,8 +36,8 @@ Similar to the previous version of BookFlight_2_0, the difference is only in the
 - **AncillaryServices.AncillaryService.ID** - ID of the variable ancillary service (not taken into account when booking). Data type - int.
 - **AncillaryServices.AncillaryService.RFIC** - RFIC of the ancillary service. Data type - string.
 - **AncillaryServices.AncillaryService.RFISC** - RFISC of the ancillary service. Data type - string.
-- **AncillaryServices.AncillaryService.Group** - ancillary Service group. Data type - string.
-- **AncillaryServices.AncillaryService.Subgroup** - ancillary Service subgroup. Data type - string.
+- **AncillaryServices.AncillaryService.Group** - ancillary service group. Data type - string.
+- **AncillaryServices.AncillaryService.Subgroup** - ancillary service subgroup. Data type - string.
 - **AncillaryServices.AncillaryService.SSRCode** - SSR code for booked ancillary service (Optional). Data type - string.
 - **AncillaryServices.AncillaryService.SSRDescription** - description for SSR booked ancillary service (Optional). Data type - string.
 - **AncillaryServices.AncillaryService.Type** - type of ancillary service (required only for Sirena). Data type - string.
