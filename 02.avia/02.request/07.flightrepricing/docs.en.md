@@ -14,7 +14,23 @@ Performs the flight repricing, includes the availability check of the flight. Sa
 ##### Format Description
 
 -  **FlightID** - ID of the flight for which you need to performs the repricing. Data type - string.
--  **IsMixerDisabled** - attribute for disabling mixer. Data type - boolean.
+-  **PricingInfo** — additional information about the pricing component of the flight for which you need to perform additional operations. Data type - array.
+-  **PricingInfo.BookingClassCodes** — information about the flight classes for which you need to find the flight price. Data type - array. 
+-  **PricingInfo.BookingClassCodes.BookingClassCodesForSegment** — information about the flight class for a particular segment. Data type - array.
+-  **PricingInfo.BookingClassCodes.BookingClassCodesForSegment.SegmentNumber** — segment number in the flight. Data type - 32-bit integer. 
+-  **PricingInfo.BookingClassCodes.BookingClassCodesForSegment.BookingClassCode** — flight class letter for this segment. Data type - string.
+-  **PricingInfo.Passengers** — contains information on the passengers for whom you need to find the flight price. Data type - array. 
+-  **PricingInfo.Passengers.Passenger** — contains information on one of the passenger types for which you need to find the flight price. Data type - array.
+-  **PricingInfo.Passengers.Passenger.Type** — passenger type. Data type - enumeration.
+-  **PricingInfo.Passengers.Passenger.Count** — number of passengers of that type. Data type - 32-bit integer. 
+-  **PricingInfo.CurrencyCode** — ISO Alpha3 code of the currency in which you need to find the price. Data type - string.
+-  **PricingInfo.PrivateFaresOnly** — attribute of searching only for the private fares. Data type - bool.
+-  **PricingInfo.ValidatingCompany** — IATA-code of the validating carrier prices of which are of interest. Data type - string.
+-  **PricingInfo.IgnoreRepricingSettings** — allows you to ignore the repricing settings. Data type - bool.
+-  **PricingInfo.PriceSpecifiedPassTypesOnly** — if possible, using only particular passenger type codes. Data type - bool.
+-  **PricingInfo.RefererID** - if specified, redefines Nemo 1 user for which pricing estimation will be performed. Data type - int.
+-  **PricingInfo.ThreeDomainAgreementNumber** — corporate client code in the three-party agreement. Data type - string.
+-  **PricingInfo.IsMixerDisabled** - attribute of mixer being disabled. Data type - boolean.
 
 ##### Sample
 ```xml
