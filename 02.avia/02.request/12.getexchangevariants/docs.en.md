@@ -16,7 +16,7 @@ Getting flights (exchange variants) with information about the return penalty an
 -  **BookID** - ID of the booking with passengers. Data type - 64-bit integer.
 -  **Passengers** - numbers of passengers whose tickets are needed to be exchanged in the booking. Data type - array.
 -  **Passengers.Ref** - passenger number in the booking. Data type - 32-bit integer.
--  **RequestedFlightInfo** - similar to the parameter * RequestedFlightInfo * from the [Search](/avia/request/search) request.
+-  **RequestedFlightInfo** - similar to the * RequestedFlightInfo * parameter from the [Search](/avia/request/search) request.
 
 To exchange a part of the segments, for required flight legs you need to indicate the IDs (**RequestedFlightInfo.ODPair.ID**) of flight legs from the booking which are needed to be exchanged.
 
