@@ -33,7 +33,7 @@ Each of the base and ancillary services is inherited from the BaseService class 
 	-   **UnconfirmedInfant** - unconfirmed baby, manual processing is required.
 	-   **UnconfirmedLoyaltyCard** - unconfirmed loyalty card.
 -   **TravelerRef** - reference to the travelers to whom the service relate. If the service is applied to all travelers, then the element is not specified. Data type - [RefList](/avia/common/reflist) array.
--   **TravelerRef.Ref** - reference to a particular traveler within the booking/order. Data type - int32.
+-   **TravelerRef.Ref** - reference to the particular traveler within the booking/order. Data type - int32.
 
 ### Flight service
 
