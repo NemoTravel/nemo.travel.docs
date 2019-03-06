@@ -22,7 +22,7 @@ To store different booking content.
 	-   **LoyaltyCard** - loyalty card
 	-   **TL** - time limits, looks like this:
 	-   **ED** - electronic documents - tickets, EMD
-	-   **PD** - paper documents - MK and other
+	-   **PD** - paper documents - itinerary receipt and other
 	-   **FE** - endorsments
 	-   **Remark** - remark
 	-   **CashValueForMultiFOPProxing** - used in pair with the TicketingProxy for multi-FOP GDS processing through a payment gateway
@@ -32,12 +32,12 @@ To store different booking content.
 	-   **Meal** - meal
 	-   **Visa** - visa data
 	-   **ArrivalAddress**
-	-   **BookedSeat** - a booked seat in a plane
+	-   **BookedSeat** - booked seat in a plane
 	-   **ValidatingCompany** - validating carrier. You can also specify the attribute of the validating carrier being redefined 
 	-   **SubagentCommission** - subagent commission
 	-   **TicketDesignator**
 	-   **TourCode**
-	-   **Markup** - fee
+	-   **Markup** - charge
 	-   **TicketingProxy**
 	-   **CRMIntegration** - data for CRM (Customer Relationship Management) or BO (Back Office) systems working wth the suppliers' systems 
 	-   **Discount**
@@ -58,7 +58,7 @@ To store different booking content.
     -   **NemoInternal**
     -   **Confidential**
     -   **MiniItinerary**
--  **Remark.Text** - text of the remark. Data type - string.
+-  **Remark.Text** - remark text. Data type - string.
 -  **TimeLimits** - time limits (optional). Data type - array.
 -  **TimeLimits.EffectiveTimeLimit** - effective TL, defined as the minimal of all TLs except TL for voiding. Data type - date and time with the time zone specified.
 -  **TimeLimits.PriceTimeLimit** - TL from the GDS price. Data type - date and time with the time zone specified.
@@ -66,7 +66,7 @@ To store different booking content.
 -  **TimeLimits.TicketingTimeLimit** - ticketing TL. Data type - date and time with the time zone specified.
 -  **TimeLimits.AgencyTimeLimit** - agency TL. Data type - date and time with the time zone specified.
 -  **TimeLimits.VoidTimeLimit** - voiding TL from the GDS. Data type - date and time with the time zone specified.
--  **TimeLimits.AdvancedPurchaseTimeLimit** -  time limit from the Advanced Purchase section of terms of tariff application (if the setting is enabled, then we will parse time limit, which comes in the text of the tariff rules). Data type - date and time with the time zone specified.
+-  **TimeLimits.AdvancedPurchaseTimeLimit** - time limit from the Advanced Purchase section of terms of tariff application (if the setting is enabled, then we will parse time limit, which comes in the text of the tariff rules). Data type - date and time with the time zone specified.
 -  **SSR** - SSR item (optional). Data type - SSRDataItem.
 -  **SSR.Code** - SSR code. Data type - string.
 -  **SSR.Text** - SSR text. Data type - string.
@@ -119,16 +119,16 @@ To store different booking content.
     -   **CERT**
     -   **PROD**
 - **SourceInfo.TicketingIATAValidator** - information about the source where the service booking was created. Data type - string.
-- **Document** - The document proving the identity of the traveler (optional). Data type - array.
-- **Document.Type** - The document type. The data type is an enumeration the possible values are described in [Document types](http://docs.nemo.travel/en/avia/process/booking).
-- **Document.Number** - The number of the document proving the identity of the traveler. Data type - string.
+- **Document** - document proving the identity of the traveler (optional). Data type - array.
+- **Document.Type** - document type. Data type - enumeration, possible values are described in [Document types](http://docs.nemo.travel/en/avia/process/booking).
+- **Document.Number** - number of the document proving the identity of the traveler. Data type - string.
 - **Document.IssueCountryCode** - ISO Alpha2 or ISO Alpha3 country code of the document. Data type - string.
-- **Document.ElapsedTime** - The document expiration date. The data type is the date in <code>mm.yyyy</code> format.
-- **Document.AddedAsDOCS** - attribute of adiing to the PNR as SSR DOCS. Data type - bool.
+- **Document.ElapsedTime** - document expiration date. The data type is the date in <code>mm.yyyy</code> format.
+- **Document.AddedAsDOCS** - attribute of adding to the PNR as SSR DOCS. Data type - bool.
 - **Document.AddedAsFOID** - attribute of adiing to the PNR as SSR FOID. Data type - bool.
 - **ContactInfo** - contact information (in the case of booking in Farelogix and using SirenaAviaPlus, the contact information is necessarily). Data type - array.
 - **ContactInfo.EmailID** - E-mail. Data type - string.
-- **ContactInfo.Telephone** - Thecontact phone. Data type - array.
+- **ContactInfo.Telephone** - contact phone. Data type - array.
 - **ContactInfo.Telephone.Type** - phone type. Data type - enumeration, possible values:
 	- **A** - Agency
 	- **B** - Working
@@ -186,7 +186,7 @@ To store different booking content.
     - **Other**
 - **PaperDocument.Format** - document format. Data type - string.
 - **PaperDocument.Encoding** - document encoding. Data type - string.
-- **PaperDocument.DocumentData** - the document data. Data type - string.
+- **PaperDocument.DocumentData** - document data. Data type - string.
 - **PaperDocument.IsBase64Wrapped** - attribute of the document data being wrapped in Base64. Data type - bool.
 - **Endorsements** - endorsements (optional). Data type - array.
 - **Endorsements.EndorsementText** - text of endorsments. Data type - array.
@@ -204,8 +204,8 @@ To store different booking content.
 - **ArrivalAddress.StreetAddress** - address of the stay. Data type - string.
 - **ArrivalAddress.PostalCode** - postal code of the stay. Data type - string.
 - **BookedSeat** - data of the booked seat from the seat card (optional). Data type - array.
-- **BookedSeat.Number** - The number of the place. Data type - string.
-- **BookedSeat.Characteristic** - Characteristics of the place. Data type - string.
+- **BookedSeat.Number** - seat number. Data type - string.
+- **BookedSeat.Characteristic** - seat characteristics. Data type - string.
 - **BookedSeat.SmokingPreference** - attribute of the smoking preference seat. Data type - bool.
 - **BookedSeat.Status** - seat status. Data type - enumeration, possible values:
     - **Confirmed**
