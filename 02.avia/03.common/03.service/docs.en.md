@@ -32,7 +32,7 @@ Each of the base and ancillary services is inherited from the BaseService class 
 	-   **FailedToActualizePrice** - failed to get the current price for the booking
 	-   **UnconfirmedInfant** - unconfirmed baby, manual processing is required.
 	-   **UnconfirmedLoyaltyCard** - unconfirmed loyalty card.
--   **TravelerRef** - reference to the travelers to whom the service relate. If the service is applied to all travelers, then the element is not specified. Data type - [RefList](/avia/common/reflist) array.
+-   **TravelerRef** - reference to the travelers to whom the service relates. If the service is applied to all travelers, then the element is not specified. Data type - [RefList](/avia/common/reflist) array.
 -   **TravelerRef.Ref** - reference to the particular traveler within the booking/order. Data type - int32.
 
 ### Flight service
@@ -45,7 +45,7 @@ The description of the flight
     -   **Regular**
     -   **Charter**
     -   **LowCost**
--   **DirectionType** - type of the flight direction. The data type is an enumeration (similar to **DirectionType** in [Flight](/avia/common/flight)), possible values:
+-   **DirectionType** - type of the flight direction. Data type - enumeration (similar to **DirectionType** in [Flight](/avia/common/flight)), possible values:
     -   **OW** - one direction
     -   **RT** - round trip
     -   **CT** - complex trip
