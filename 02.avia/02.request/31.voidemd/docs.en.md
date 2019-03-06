@@ -49,7 +49,7 @@ The latest version of the request, differences are only in the response to the r
 
 #### Request format
 
--  **BookID** - ID of the booking, to which the EMD is related, which you need to void. Data type - long.
+-  **BookID** - ID of the booking that you need to void to which the EMD is related. Data type - long.
 -  **AncillaryServices** - list of ancillary services for voiding. The data type is similar - AncillaryServices from the query [IssueEMD](/avia/request/issueemd).
 
 ##### Sample
