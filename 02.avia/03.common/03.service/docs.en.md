@@ -71,7 +71,7 @@ The description of the flight
 -   **FlightSegment.StopPoints.StopPoint.DepDateTime** - date and time of the departure from the stop point. Data type - <code>yyyy-mm-ddthh:mm:ss</code>.
 -   **FlightSegment.StopPoints.StopPoint.PassengerLanding** - A sign of disembarking passengers from an airplane. Data type - bool.
 -   **FlightSegment.DepatureDateTime** - date and time of segment departure, local for the departure airport. Data type - <code>yyyy-mm-ddthh:mm:ss</code>.
--   **FlightSegment.ArrivalDateTime** - date and time of segment arrival, local for the arrival airport. Data type - <code>yyyy-mm-ddthh:mm:ss</code>.F
+-   **FlightSegment.ArrivalDateTime** - date and time of segment arrival, local for the arrival airport. Data type - <code>yyyy-mm-ddthh:mm:ss</code>.
 -   **FlightSegment.FlightTime** - total travel time on this segment. Data type - int32.
 -   **FlightSegment.FlightNumber** - flight number. Data type - string.
 -   **FlightSegment.AircraftType** - aircraft type code. Data type - string.
