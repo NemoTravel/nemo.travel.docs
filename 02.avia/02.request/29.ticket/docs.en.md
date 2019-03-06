@@ -7,7 +7,7 @@ taxonomy:
 
 ### Ticket_2_0
 
-Ticketing for the booking with the support of API 2.0. **ATTENTION**! *TicketDesignator* element from the version 1.х should be transferred as the AuthCode value for the Discount element with Percent = 0.
+Ticketing for the booking with API 2.0. support. **ATTENTION**! *TicketDesignator* element from the version 1.х should be transferred as the AuthCode value for the Discount element with Percent = 0.
 
 #### Ticket_2_2
 The latest version of the request, differences are only in the response in the additional services block from the [Book_2_2](/avia/request/bookflight) request.
