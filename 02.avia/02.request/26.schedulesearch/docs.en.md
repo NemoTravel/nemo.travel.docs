@@ -101,13 +101,13 @@ taxonomy:
 - ** ScheduleSegment.EndDate ** - end date of the departure period in the format <code>yyyy-mm-dd</code>. Data type - string.
 - ** ScheduleSegment.OperatedDaysOfWeek ** - array of departure days. Data type - array.
 - ** ScheduleSegment.OperatedDaysOfWeek.DayOfWeek ** - day of the week in which the flight will take place. Data type - enumeration, possible values:
-    - Sunday - Sunday.
-    - Monday - Monday.
-    - Tuesday - Tuesday.
-    - Wednesday - Wednesday.
-    - Thursday - Thursday.
-    - Friday - Friday.
-    - Saturday - Saturday.
+    - Sunday 
+    - Monday 
+    - Tuesday 
+    - Wednesday 
+    - Thursday
+    - Friday
+    - Saturday
 - ** ScheduleSegment.BaseClasses ** - array with available base flight classes. Data type - array.
 - ** ScheduleSegment.BaseClasses.BaseClass ** - base flight class. Data type - enumeration. Possible values:
     - Economy - Economy class (both standard and premium).
