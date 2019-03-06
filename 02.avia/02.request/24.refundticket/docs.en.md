@@ -19,10 +19,10 @@ The latest version of the request, differences are only in the response to the r
 
 - **BookID** - ID of the booking with passengers. Data type - 64-bit integer.
 - **Passengers** - passenger numbers in the booking, for which it is needed to receive the refund information. Data type - array.
-- **Passengers.Ref** -  passenger number in the booking. Data type - 32 bit integer.
+- **Passengers.Ref** -  passenger number in the booking. Data type - 32-bit integer.
 - **Involuntary** - attribute of the involuntary refund (optional). Data type - bool.
 - **SegmentsToRefund** - segments for the refund. Data type - array.
-- **SegmentsToRefund.Ref** - segment for the refund. Data type - 32 bit integer.
+- **SegmentsToRefund.Ref** - segment for the refund. Data type - 32-bit integer.
 
 #### Response
 
