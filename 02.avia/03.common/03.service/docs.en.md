@@ -92,7 +92,7 @@ The description of the flight
 -   **FlightSegment.SupplierRef** - segment booking ID in the airline's inventory system. Data type - string.
 -   **FlightSegment.RequestedSegment** - segment reference from the user's request. Data type - int32.
 -   **FlightSegment.FlightDistance** - numerical value of flight distance in miles (relevant fo GDS Amadeus). Data type - int32.
--   **FlightSegment.CO2Emission** - CO2 exhaust in kg/m (relevant fo GDS Amadeus). Data type - int32.
+-   **FlightSegment.CO2Emission** - CO2 exhaust in kg/m (relevant for GDS Amadeus). Data type - int32.
 
 #### Sample
 
