@@ -19,7 +19,7 @@ All the requests and responses of the Avia Server have a certain number of commo
     -   **2 (S)** - scheduled
     -   **3 (N)** - Nemo-Nemo request
     -   **4 (P)** - Nemo PHP request
--   **UserID** - ID of the user who wishes to initiate a request to the server. Data type - non-negative 32-bit integer.
+-   **UserID** - ID of the user who needs to initiate a request to the server. Data type - non-negative 32-bit integer.
 -   **RequestBody** - server request body. Data type - custom.
 -   **RequestBody.ResponseParameters** - response parameters. Data type - custom.
 -   **RequestBody.ResponseParameters.Language** - response language. Data type - string.
