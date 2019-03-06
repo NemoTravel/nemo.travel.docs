@@ -46,13 +46,13 @@ The description of the flight
     -   **Charter**
     -   **LowCost**
 -   **DirectionType** - type of the flight direction. The data type is an enumeration (similar to **DirectionType** in [Flight](/avia/common/flight)), possible values:
-    -   OW - one direction
-    -   RT - round trip
-    -   CT - complex trip
-    -   SingleOJ - single open jaw
-    -   DoubleOJ - double open jaw
-    -   hRT - RT/2
-    -   mOW - flight is a possible leg of a multi-OW flight 
+    -   **OW** - one direction
+    -   **RT** - round trip
+    -   **CT** - complex trip
+    -   **SingleOJ** - single open jaw
+    -   **DoubleOJ** - double open jaw
+    -   **hRT** - RT/2
+    -   **mOW** - flight is a possible leg of a multi-OW flight 
 -   **Segments** - flight segments. Data type - array of [FlightSegment](/avia/grouping/flightsegment) elements.
 -   **FlightSegment** - flight segment. Data type - array.
 -   **FlightSegment.ID** - ID of the segment within this flight. Data type - int32.
