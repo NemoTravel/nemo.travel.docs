@@ -17,7 +17,7 @@ The latest version of the request, differences are only in the response to the r
 
 ##### Format Description
 
--  **BookID** - booking ID. Data type - long.
+-  **BookID** - ID of the booking. Data type - long.
 -  **Passengers** - numbers of passengers in the booking who need to be separated into a new booking. Data type - array.
 -  **Passengers.Ref** - passenger number in the booking. Data type - 32-bit integer. 
 
