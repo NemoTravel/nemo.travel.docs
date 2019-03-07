@@ -97,8 +97,8 @@ taxonomy:
 -   **ScheduleSegment.ArrivalTime** — время прибытия в формате <code>hh:mm</code>. Тип данных — строка.
 -   **ScheduleSegment.DepartureDaysChange** — смещение дня вылета относительно даты вылета первого сегмента всего перелёта. Тип данных — целое 32-битное число.
 -   **ScheduleSegment.ArrivalDaysChange** — смещение дня прибытия относительно дня вылета. Тип данных — целое 32-битное число.
--   **ScheduleSegment.StartDate** - дата начала периода вылетов в формате <code>yyyy-mm-dd</code>. Тип данных — строка.
--   **ScheduleSegment.EndDate** - дата окончания периода вылетов в формате <code>yyyy-mm-dd</code>. Тип данных — строка.
+-   **ScheduleSegment.StartDate** — дата начала периода вылетов в формате <code>yyyy-mm-dd</code>. Тип данных — строка.
+-   **ScheduleSegment.EndDate** — дата окончания периода вылетов в формате <code>yyyy-mm-dd</code>. Тип данных — строка.
 -   **ScheduleSegment.OperatedDaysOfWeek** — массив дней вылетов. Тип данных — массив.
 -   **ScheduleSegment.OperatedDaysOfWeek.DayOfWeek** — день недели, в который будет вылет. Тип данных — перечисление, возможные значения:
     -   **Sunday** — воскресенье;
