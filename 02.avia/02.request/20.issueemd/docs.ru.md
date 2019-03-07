@@ -14,13 +14,13 @@ taxonomy:
 
 #### Формат запроса
 
--   **BookID** - ID брони, для которой требуется выписать ЕМД. Тип данных - long.
+-   **BookID** - ID брони, для которой требуется выписать EMD. Тип данных - long.
 -   **AncillaryServices** - Список допуслуг для выписки. Тип данных - массив AncillaryService.
 -   **AncillaryServices.AncillaryService** - Элемент ссылок для работы с допуслугой. Тип данных - массив.
 -   **AncillaryServices.AncillaryService.ServiceRef** - ID допуслуги в брони, для которой требуется выписать ЕМД. Тип данных - int.
 -   **AncillaryServices.AncillaryService.SegmentRef** - Массив мульти-ссылок на сегменты, для которых необходимо выписать ЕМД. Тип данных - массив int.
 -   **AncillaryServices.AncillaryService.SegmentRef.MRef** - Элемент массива мульти-ссылок на сегменты. Тип данных - int.
--   **AncillaryServices.AncillaryService.FOPInfo** - Форма оплаты, которую нужно использовать при выписке ЕМД (Необязательный). Тип данных - аналогичен FOPInfo из [DataItem](/avia/common/dataitem).
+-   **AncillaryServices.AncillaryService.FOPInfo** - Форма оплаты, которую нужно использовать при выписке EMD (необязательный). Тип данных - аналогичен FOPInfo из [DataItem](/avia/common/dataitem).
 
 ##### Пример
 
