@@ -55,7 +55,7 @@ with the splitted passengers. Information about the parent and child booking is 
 
 ** [Warning] ** For the uAPI provider, information about the parent and child PNR will be lost, since it is not stored in the PNR.
 
-** [Warning] ** For the SitaGabriel provider PNRs that are linked to the current one through the third one will also be parsed into the child PNRs, because there is no way to distinguish them.
+** [Warning] ** For the SitaGabriel provider, PNRs that are linked to the current one through the third one will also be parsed into the child PNRs, because there is no way to distinguish them.
 
 ##### Sample
 
