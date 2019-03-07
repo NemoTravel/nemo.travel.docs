@@ -18,7 +18,7 @@ taxonomy:
 - ** RequestedFlightInfo.ODPair.DepatureDateTime2 ** - end date of the period. Data type - string, the format is <code>yyyy-mm-dd</code>.
 - ** RequestedFlightInfo.ODPair.MaxDepatureTime ** - maximum-allowed departure time. Data type - string, the format is <code>hh:mm</code>.
 - ** RequestedFlightInfo.ODPair.DepaturePoint ** - contains information about the origin point. Data type - array.
-- ** RequestedFlightInfo.ODPair.DepaturePoint.Code ** - 3-letter code of the airport/city of departure. Data type - string.
+- ** RequestedFlightInfo.ODPair.DepaturePoint.Code ** - 3 letter code of the airport/city of departure. Data type - string.
 - ** RequestedFlightInfo.ODPair.DepaturePoint.IsCity ** - attribute showing that code of the city, which is the airport aggregator, is indicated as the departure point. Data type - bool.
 - ** RequestedFlightInfo.ODPair.ArrivalPoint ** - contains information about the arrival point. Data type - array. The format is similar to the * DepaturePoint * element.
 - ** Restrictions ** - similar to the * Restrictions * parameter from the  [Search\_1\_2](/avia/request/search) (optional).
@@ -76,7 +76,7 @@ taxonomy:
 - ** ScheduleSegment.DepAirp ** - information about the departure airport for this segment. Data type - array.
 - ** ScheduleSegment.DepAirp.AirportCode ** - airport code. Data type - string.
 - ** ScheduleSegment.DepAirp.CityCode ** - city code (aggregation code). Data type - string.
-- ** ScheduleSegment.DepAirp.UTC ** - time zone of the airport. Data type - string.
+- ** ScheduleSegment.DepAirp.UTC ** - airport timezone. Data type - string.
 - ** ScheduleSegment.DepAirp.Terminal ** - terminal code. Data type - string.
 - ** ScheduleSegment.ArrAirp ** - arrival airport information for this segment. Data type - array. The format is similar to the departure airport.
 - ** ScheduleSegment.ETicket ** - attribute of the possibility of issuing an e-ticket on this segment. Data type - bool.
@@ -101,19 +101,19 @@ taxonomy:
 - ** ScheduleSegment.EndDate ** - end date of the departure period in the format <code>yyyy-mm-dd</code>. Data type - string.
 - ** ScheduleSegment.OperatedDaysOfWeek ** - array of departure days. Data type - array.
 - ** ScheduleSegment.OperatedDaysOfWeek.DayOfWeek ** - day of the week in which the flight will take place. Data type - enumeration, possible values:
-    - Sunday 
-    - Monday 
-    - Tuesday 
-    - Wednesday 
-    - Thursday
-    - Friday
-    - Saturday
+    - **Sunday** 
+    - **Monday** 
+    - **Tuesday** 
+    - **Wednesday** 
+    - **Thursday**
+    - **Friday**
+    - **Saturday**
 - ** ScheduleSegment.BaseClasses ** - array with available base flight classes. Data type - array.
 - ** ScheduleSegment.BaseClasses.BaseClass ** - base flight class. Data type - enumeration. Possible values:
-    - Economy - Economy class (both standard and premium).
-    - Business - Business class (both standard and premium).
-    - First - First class (both standard and premium).
-    - Other - All other classes that do not belong to any of the above.
+    - **Economy** - Economy class (both standard and premium).
+    - **Business** - Business class (both standard and premium).
+    - **First** - First class (both standard and premium).
+    - **Other** - All other classes that do not belong to any of the above.
 
 ##### Sample
 
