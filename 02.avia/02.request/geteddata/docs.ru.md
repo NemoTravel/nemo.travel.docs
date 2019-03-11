@@ -63,14 +63,14 @@ title: GetEDData
 -	**Service** - содержит описание услуги, на которую применяется электронный документ. Тип данных - сложный.
 -	**Service.ProcessService** - содержит описание услуги по обработке. Тип данных - [ProcessingService](/avia/common/processingservice).
 -	**Service.FlightService** - содержит описание услуги авиаперелета. Тип данных - [Flight](/avia/common/flight).
--	**Service.AncillaryService** - содержит описание допольнительны услуг авиаперелета. Тип данных - [FlightAncillaryService](/avia/common/flightancillaryservice).
+-	**Service.AncillaryService** - содержит описание допольнительных услуг авиаперелета. Тип данных - [FlightAncillaryService](/avia/common/flightancillaryservice).
 -	**Price** - содержит полную информацию о цене услуги и её формировании. Тип данных - [Price](/avia/common/price)
 -	**DataItems** - блок данных для хранения различного контента маски. Тип данных - [DataItem](/avia/common/dataitem). В маске авиабилета этот блок содержит информацию о документе, удостоверяющий личность пассажира и контактных данных пассажира. В маске EMD за дополнителую услугу блок содержит информацию о зарезервированных местах. В маске EMD за услуги по обработке блок содержит дополнительную информация по EMD.
 -	**VATBreakdowns** - НДС по услуге данного электронного документа. Тип данных — массив.
 -	**VATBreakdowns.Tariff** - НДС от тарифа. Тип данных - [Money](/avia/common/money).
 -	**VATBreakdowns.Taxes** - НДС от суммы такс. Тип данных - [Money](/avia/common/money).
 -	**VATBreakdowns.Total** - НДС от суммы тарифа и такс. Тип данных - [Money](/avia/common/money).
--	**IssuierSupplierID** - идентификатор реквизита выписки.
+-	**IssuierSupplierID** - идентификатор реквизита выписки. Тип данных - строка.
 
 ##### Пример
 ```xml
