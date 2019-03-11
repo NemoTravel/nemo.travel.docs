@@ -24,6 +24,8 @@ Not inherited from BaseService. Contains a description of some service processin
     -   Rejected
 -   **FromSupplier** - attribute of this processing service being received from the supplier and not formed in Nemo. Data type - bool.
 -   **IncludedInMainServicePrice** - attribute of the price of this service being already taken into account in the price of the basic service from the supplier (flight) and the allocation of the price is made for the convenience of forming the MK/EMD. Data type - bool.
+-   **RelatedTickets** - contains the list of air tickets connected to this service.
+-   **RelatedTickets.RelatedTicket** - air ticket number. Data type - string.
 -   **RuleID** - ID of the rule in Nemo on which this service is formed. Data type - string.
 -   **RFISC** - Reason For Issuance Code of the EMD associated with this service.
 -   **RFISC** - Reason For Issuance Sub Code of the EMD associated with this service.
