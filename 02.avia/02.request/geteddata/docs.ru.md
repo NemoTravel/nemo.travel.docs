@@ -58,7 +58,7 @@ title: GetEDData
     -   **Penalty**;
     -   **FinancialImpact**;
     -   **ResidualValue**.
--	**IssueDateTime** - дата и время выписка электронного документа.
+-	**IssueDateTime** - дата и время выписки электронного документа.
 -	**Traveller** - сведения о пассажире, которому соответствует электронный документ. Тип данных - [Traveller](/avia/common/traveller).
 -	**Service** - содержит описание услуги, на которую применяется электронный документ. Тип данных - сложный.
 -	**Service.ProcessService** - содержит описание услуги по обработке. Тип данных - [ProcessingService](/avia/common/processingservice).
@@ -72,6 +72,7 @@ title: GetEDData
 -	**VATBreakdowns.Total** - НДС от суммы тарифа и такс. Тип данных - [Money](/avia/common/money).
 -	**IssuierSupplierID** - идентификатор реквизита выписки.
 
+##### Пример
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
    <s:Body>
