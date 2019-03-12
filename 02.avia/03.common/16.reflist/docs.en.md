@@ -13,11 +13,11 @@ This type is the array of Ref fields, used to send a list of identifiers of othe
 
 #### Format description
 
--   **Ref** - pointer to the ID of the object specified in the parent field
+-   **Ref** - indicator of the ID of the object specified in the parent field
 
 #### Sample
 
-The **Ref** field indicates the object from the parent field, in this example it is the passenger.
+The **Ref** field indicates the object from the parent field, in this sample it is the passenger.
 
 ```xml
 <TravellerRef>
