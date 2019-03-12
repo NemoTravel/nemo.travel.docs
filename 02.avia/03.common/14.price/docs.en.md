@@ -39,8 +39,8 @@ Contains the full information about the price and its formation for the booking 
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ComResult** - airline commissions (calculated). Data type - string.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AgencyCommission** - agency commission. Data type - string.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Bonus** - airline Bonus (as in the rule). Data type - string.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BonusResult** - The airline Bonus (calculated). Data type - string.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ChargeExt** - attribute of additional charge. Data type - string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BonusResult** - airline Bonus (calculated). Data type - string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ChargeExt** - attribute of an additional charge. Data type - string.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Charge** - charge (as in the rule). Data type - string.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ChargeValue** - charge (calculated). Data type - string.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.MinProfit** - minimal profit. Data type - string.
@@ -64,7 +64,7 @@ Contains the full information about the price and its formation for the booking 
 -   **FareFamiliesDescription** - contains descriptions of the tfare families presenting in the flight. Data type - [Description](/avia/common/ff-description).
 -   **PassengerTypePrice** - price formation for a certain type of the traveler. Data type - array.
 -   **PassengerTypePrice.TravellerRef** - reference to travelers. Data type - [Reflist](/avia/common/reflist).
--   **PassengerTypePrice.PricingType** - type of passenger for which this price is formed; may not coincide with the type of a traveler in the corresponding section. Data type - string.
+-   **PassengerTypePrice.PricingType** - type of passenger for which this price is formed; may not coincide with the type of a traveller in the corresponding section. Data type - string.
 -   **PassengerTypePrice.BaseFare** - price by fares in the currency of their establishment. Data type - [Money](/avia/common/money).
 -   **PassengerTypePrice.EquiveFare** - price by fares in the currency of sale from GDS. Data type - [Money](/avia/common/money).
 -   **PassengerTypePrice.TotalFare** - total price in the currency of sale from GDS. Data type - [Money](/avia/common/money).
