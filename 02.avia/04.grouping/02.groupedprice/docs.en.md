@@ -57,7 +57,7 @@ Contains the following parameters:
 -   **PassengerFares.PassengerFare.Tariffs.Tariff.Code** - fare code. The data type is a string.
 -   **PassengerFares.PassengerFare.Tariffs.Tariff.Type** - fare type. DThe data type - enumeration, possible values:
     -  0 (Public) - public (not private) fare
-	-  1 (Coded) - fare received through corporate ID / account code / tour code, etc.
+	-  1 (Coded) - fare received through corporate ID/account code/tour code, etc.
 	-  2 (Cat35) - category 35, also called contractual tariffs.
 	-  3 (NonCat35) - fares "unsuitable for ticketing in category 35". 
 	-  4 (Private) - all the other private rates
