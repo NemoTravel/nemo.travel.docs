@@ -121,8 +121,8 @@ Contains the full information about the price and its formation for the booking 
 -   **PassengerTypePrice.ChargeBreakdown** - charge breakdown. Data type - ChargeBreakdown array.
 -   **ChargeBreakdown** - contains charge breakdown from passenger pricing and the amount of rounding when converting to agency currency.
 -   **ChargeBreakdown.Charge** - container for charge. Data type - array.
--   **ChargeBreakdown.Charge.Amount** - The absolute value of the charge, roundings. Data type - fractional number.
--   **ChargeBreakdown.Charge.RuleID** - The Rule ID. Data type - int.
+-   **ChargeBreakdown.Charge.Amount** - absolute value of the charge, roundings. Data type - fractional number.
+-   **ChargeBreakdown.Charge.RuleID** - Rule ID. Data type - int.
 -   **ChargeBreakdown.Charge.Type** - The type of charge. Data type - enumeration, possible values:
     - **PriceRule**  - charge from the pricing table;
     - **TaxRound** - rounding amount received by converting tax value to agency currency;
