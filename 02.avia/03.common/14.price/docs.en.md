@@ -56,11 +56,11 @@ Contains the full information about the price and its formation for the booking 
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults** - list of rule checking results. Data type - array.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check** - checking result. Data type - array.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Name** - name of the parameter to be checked. Data type - string.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info** - Verification data. Data type - array.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info.Value** - The rule parameter value. Data type - string.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info.Result** - The result of parameter check. Data type - bool.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info** - verification data. Data type - array.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info.Value** - rule parameter value. Data type - string.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info.Result** - result of parameter check. Data type - bool.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CorpRule** - attribute of the rule for granting discounts for tour code to specific customers. Data type - bool.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BestCorpRule** - A sign of the most appropriate rule for granting a discount for tour code. Data type - bool.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BestCorpRule** - attribute of the most appropriate rule for granting a discount for tour code. Data type - bool.
 -   **FareFamiliesDescription** - contains descriptions of the tfare families presenting in the flight. Data type - [Description](/avia/common/ff-description).
 -   **PassengerTypePrice** - price formation for a certain type of the traveler. Data type - array.
 -   **PassengerTypePrice.TravellerRef** - reference to travelers. Data type - [Reflist](/avia/common/reflist).
@@ -101,7 +101,7 @@ Contains the full information about the price and its formation for the booking 
     -   Weight
 -   **Tariff.FreeBaggage.Size** - information on the size restrictions imposed on baggage. Data type - string.
 -   **Tariff.FreeMeal** - free meals in this fare. Data type - MealType array.
--   **MealType** - type of free meals according to the tariff. Data type - enumeration, possible values:
+-   **MealType** - type of free meals according to the fare. Data type - enumeration, possible values:
     -   AlcoholBeverages
     -   Beverages
     -   Breakfast
@@ -117,13 +117,13 @@ Contains the full information about the price and its formation for the booking 
 -   **PassengerTypePrice.FareCalc** - line for calculating the price. Data type - string.
 -   **PassengerTypePrice.Markup** - tax. Data type - [Money](/avia/common/money).
 -   **PassengerTypePrice.AgencyFare** - fare price in the agency currency. Data type - [Money](/avia/common/money).
--   **PassengerTypePrice.TotalAgencyFare** - fare and tax amount tariff in the agency currency. Data type - [Money](/avia/common/money).
+-   **PassengerTypePrice.TotalAgencyFare** - fare and tax amount in the agency currency. Data type - [Money](/avia/common/money).
 -   **PassengerTypePrice.ChargeBreakdown** - charge breakdown. Data type - ChargeBreakdown array.
 -   **ChargeBreakdown** - contains charge breakdown from passenger pricing and the amount of rounding when converting to agency currency.
 -   **ChargeBreakdown.Charge** - container for charge. Data type - array.
 -   **ChargeBreakdown.Charge.Amount** - absolute value of the charge, roundings. Data type - fractional number.
 -   **ChargeBreakdown.Charge.RuleID** - Rule ID. Data type - int.
--   **ChargeBreakdown.Charge.Type** - The type of charge. Data type - enumeration, possible values:
+-   **ChargeBreakdown.Charge.Type** - charge type. Data type - enumeration, possible values:
     - **PriceRule**  - charge from the pricing table;
     - **TaxRound** - rounding amount received by converting tax value to agency currency;
     - **FareRound** - rounding amount received by converting fare value to agency currency;
