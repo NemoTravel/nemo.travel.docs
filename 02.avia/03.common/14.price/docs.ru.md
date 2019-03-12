@@ -12,8 +12,8 @@ Price
 
 -   **TotalPrice** - Полная стоимость данной брони или заказа в валюте агентства или в валюте реквизитов (в зависимости от поставщика и настроек). Тип данных - [Money](/avia/common/money).
 -   **ExpectedTicketCount** - Ожидаемое количество билетов, которое будет выписано для данной брони. Тип данных - int32.
--   **FOPPrices** - Содержит разницу цен для определённых ФОПов относительно цены брони без указания планируемого FOP'a. Тип данных - массив.
--   **FOPPrices.FOPPrice** - Содержит разницу цены для конкретного ФОПа относительно цены брони без указания планируемого FOP'a. Тип данных - массив.
+-   **FOPPrices** - Содержит разницу цен для определённых FOP'ов относительно цены брони без указания планируемого FOP'a. Тип данных - массив.
+-   **FOPPrices.FOPPrice** - Содержит разницу цены для конкретного FOP'a относительно цены брони без указания планируемого FOP'a. Тип данных - массив.
 -   **FOPPrices.FOPPrice.FOP** - FOP, для которого представлена разница цен. Тип данных - строка.
 -   **FOPPrices.FOPPrice.PriceBreakdown** - Брэкдаун с формированием цены объекта для данного FOP'a. Тип данных - массив PricePart. <!--Разница цен для данного ФОПа. Тип данных - [Money](/avia/common/money).-->
 -   **PriceBreakdown** - Брэкдаун с формированием цены объекта. Тип данных - массив PricePart.
@@ -39,7 +39,7 @@ Price
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ComResult** - Коммиссия авиакомпании (рассчитанная). Тип данных - строка.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.AgencyCommission** - Комиссия агентства. Тип данных — строка.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Bonus** - Бонус авиакомпании (как в правиле). Тип данных — строка.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BonusResult** - Бонус АК (рассчитанный). Тип данных — строка. 
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BonusResult** - Бонус авиакомпании (рассчитанный). Тип данных — строка. 
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ChargeExt** - Признак доп. сбора. Тип данных - строка. 
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Charge** - Сбор (как в правиле). Тип данных - строка.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ChargeValue** - Сбор (рассчитанный). Тип данных - строка.
@@ -54,7 +54,7 @@ Price
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BestRule** - Признак наиболее подходящего правила. Тип данных — булевский.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Success** - Признак прохождения всех проверок правилом. Тип данных — булевский.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults** - Список результатов проверки правила. Тип данных - массив.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check** -Результат проверки. Тип данных - массив.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check** - Результат проверки. Тип данных - массив.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Name** - Название проверяемого параметра. Тип данных - строка.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info** - Данные проверки. Тип данных - массив.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info.Value** - Значение параметра правила. Тип данных - строка.
