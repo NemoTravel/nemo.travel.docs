@@ -11,12 +11,12 @@ taxonomy:
 
 -   **OrderedFlightSegments** - Упорядоченный набор сегментов перелёта. Тип данных - массив.
 -   **OrderedFlightSegments.FlightSegment** - Информация о сегменте перелёта, содержит номер сегмента перелёта. Тип данных - массив.
--   **OrderedFlightSegments.FlightSegment.RequestedSegment** - Номер сегмента перелёта из запроса поиска. Тип данных - целое 32 битное число.
--   **OrderedFlightSegments.FlightSegment.SegmentNumber** - Номер сегмента перелёта. Тип данных - целое 64 битное число.
+-   **OrderedFlightSegments.FlightSegment.RequestedSegment** - Номер сегмента перелёта из запроса поиска. Тип данных - целое 32-битное число.
+-   **OrderedFlightSegments.FlightSegment.SegmentNumber** - Номер сегмента перелёта. Тип данных - целое 64-битное число.
 -   **Flights** - Массив перелётов, которые основаны на данном наборе сегментов. Тип данных - массив.
 -   **Flights.Flight** - Содержит информацию об одном перелёте, основанном на данном наборе сегментов. Тип данных - массив.
 -   **Flights.Flight.FlightID** - Номер перелёта, по сути является идентификатором определённой комбинации набора сегментов перелёта, каждый из которых однозначно связан с определённым маршрутом, и конкретной цены. Бронирование перелёта производится именно по нему. Тип данных - строка.
--   **Flights.Flight.PriceID** - ИД [цены](/avia/grouping/groupedprice), на которой основан данный перелёт. Тип данных - целое 64-битное число.
+-   **Flights.Flight.PriceID** - ID [цены](/avia/grouping/groupedprice), на которой основан данный перелёт. Тип данных - целое 64-битное число.
 -   **Flights.Flight.TypeInfo.Type** - Тип перелёта. Тип данных - перечисление, возможные значения:
     -   0 (Regular) - Регулярный рейс.
     -   1 (Charter) - Чартерный рейс.
@@ -32,9 +32,9 @@ taxonomy:
     -   6 (mOW) - OW+OW+. Запрошенный перелёт из нескольких сегментов был найден как совокупность отдельных поисковых результатов.
 -   **Flights.Flight.AdditionalPriceInfo** - Дополнительная ценовая информация перелёта, содержит информацию о комиссии и сборе, марже по данному перелёту. Тип данных - массив.
 -   **Flights.Flight.AdditionalPriceInfo.Commission** - Комиссия по данному перелёту. Тип данных - массив.
--   **Flights.Flight.AdditionalPriceInfo.Commission.AbsoluteValue** - Сумма комиссии. Тип данных - дробное 32 битное число.
--   **Flights.Flight.AdditionalPriceInfo.Commission.RelativeValue** - Процентное значение комиссии. Тип данных - дробное 32 битное число.
--   **Flights.Flight.AdditionalPriceInfo.Commission.Currency** - ISO Alpha3 код валюты. Тип данных - строка.
+-   **Flights.Flight.AdditionalPriceInfo.Commission.AbsoluteValue** - Сумма комиссии. Тип данных - дробное 32-битное число.
+-   **Flights.Flight.AdditionalPriceInfo.Commission.RelativeValue** - Процентное значение комиссии. Тип данных - дробное 32-битное число.
+-   **Flights.Flight.AdditionalPriceInfo.Commission.Currency** - ISO Alpha3-код валюты. Тип данных - строка.
 -   **Flights.Flight.AdditionalPriceInfo.Markup** - Сбор по данному перелёту. Тип данных - массив. Формат аналогичен элементу **Flights.Flight.AdditionalPriceInfo.Commission**.
 -   **Flights.Flight.AdditionalPriceInfo.Margin** - Прибыль агентства по данному перелёту. Тип данных - массив. Формат аналогичен элементу **Flights.Flight.AdditionalPriceInfo.Commission**.
 -   **SegmentSummaryConnectionTimeout** - Суммарное время ожидания между сегментами перелёта в формате (д.)чч:мм:сс. Не учитывается время между сегментами из запроса. Тип данных - строка.
