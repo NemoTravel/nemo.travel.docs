@@ -12,28 +12,28 @@ Price
 
 -   **TotalPrice** - Полная стоимость данной брони или заказа в валюте агентства или в валюте реквизитов (в зависимости от поставщика и настроек). Тип данных - [Money](/avia/common/money).
 -   **ExpectedTicketCount** - Ожидаемое количество билетов, которое будет выписано для данной брони. Тип данных - int32.
--   **FOPPrices** - Содержит разницу цен для определённых ФОПов относительно цены брони без указания планируемого ФОПа. Тип данных - массив.
--   **FOPPrices.FOPPrice** - Содержит разницу цены для конкретного ФОПа относительно цены брони без указания планируемого ФОПа. Тип данных - массив.
--   **FOPPrices.FOPPrice.FOP** - ФОП, для которого представлена разница цен. Тип данных - строка.
--   **FOPPrices.FOPPrice.PriceBreakdown** - Брэкдаун с формированием цены объекта для данного ФОПа. Тип данных - массив PricePart. <!--Разница цен для данного ФОПа. Тип данных - [Money](/avia/common/money).-->
+-   **FOPPrices** - Содержит разницу цен для определённых ФОПов относительно цены брони без указания планируемого FOP'a. Тип данных - массив.
+-   **FOPPrices.FOPPrice** - Содержит разницу цены для конкретного ФОПа относительно цены брони без указания планируемого FOP'a. Тип данных - массив.
+-   **FOPPrices.FOPPrice.FOP** - FOP, для которого представлена разница цен. Тип данных - строка.
+-   **FOPPrices.FOPPrice.PriceBreakdown** - Брэкдаун с формированием цены объекта для данного FOP'a. Тип данных - массив PricePart. <!--Разница цен для данного ФОПа. Тип данных - [Money](/avia/common/money).-->
 -   **PriceBreakdown** - Брэкдаун с формированием цены объекта. Тип данных - массив PricePart.
 -   **PricePart** - Часть цены объекта, как правило для одной из услуг в данном заказе. Тип данных - массив.
 -   **PricePart.ServiceRef** - Ссылка на услуги в брони/заказе, для которых применяется данная цена. Не указывается если данная цена применяется ко всем услугам в брони/заказе. Тип данных - [Reflist](/avia/common/reflist).
 -   **PricePart.SegmentRef** - Ссылка на сегменты перелёта, к которым применяется данная цена. Специфика выписки нескольких билетов на один перелёт. Тип данных - [Reflist](/avia/common/reflist).
 -   **PricePart.TotalPrice** - Полная стоимость данной части цены. Тип данных - [Money](/avia/common/money).
--   **PricePart.ValidatingCompany** - ВП. Тип данных - строка.
+-   **PricePart.ValidatingCompany** - Валидирующий перевозчик. Тип данных - строка.
 -   **PricePart.Refundable** - Тип возвратности денег по данной цене услуги. Тип данных - перечисление, возможные значения:
     -   Unknown
     -   Refundable
     -   NonRefundable
     -   PenaltiesApplies
 -   **PricePart.PrivateFareInd** - Признак наличия приватных тарифов при формировании цены. Тип данных - bool.
--   **PricePart.PassengerTypePriceBreakdown** - ВП. Тип данных - массив PassengerTypePrice.
+-   **PricePart.PassengerTypePriceBreakdown** - Валидирующий перевозчик. Тип данных - массив PassengerTypePrice.
 -   **PricePart.AgencyMarkup** - Сбор агентства на весь перелет. Тип данных - [Money](/avia/common/money).
 -   **PricePart.ChargeBreakdown** - Разбивка составляющих сбора по правилам ценообразования. Тип данных — [ChargeBreakdown](/avia/common/chargebreakdown).
 -   **PricePart.PricingDebug.RulesDebugInfo** - Список результатов проверки правил ценообразования. Тип данных - массив.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData** - Результат проверки правила ценообразования. Тип данных - массив.
--   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ID** - ID правила. Тип данных - целое 32 битное число.
+-   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ID** - ID правила. Тип данных - целое 32-битное число.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ValCompany** - Валидирующий перевозчик. Тип данных - строка.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.Commission** - Комиссия авиакомпании (как указано в правиле). Тип данных - строка.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.ComResult** - Коммиссия авиакомпании (рассчитанная). Тип данных - строка.
@@ -72,8 +72,8 @@ Price
 -   **PassengerTypePrice.TravellerRef** - Ссылка на путешественников. Тип данных - [Reflist](/avia/common/reflist).
 -   **PassengerTypePrice.PricingType** - Тип пассажира, по которому сформирована данная цена, может не совпадать с типом путешественника в соответствующем разделе. Тип данных - строка.
 -   **PassengerTypePrice.BaseFare** - Цена по тарифам в валюте их заведения. Тип данных - [Money](/avia/common/money).
--   **PassengerTypePrice.EquiveFare** - Цена по тарифам в валюте продажи из ГДС. Тип данных - [Money](/avia/common/money).
--   **PassengerTypePrice.TotalFare** - Полная цена в валюте продажи из ГДС. Тип данных - [Money](/avia/common/money).
+-   **PassengerTypePrice.EquiveFare** - Цена по тарифам в валюте продажи из GDS. Тип данных - [Money](/avia/common/money).
+-   **PassengerTypePrice.TotalFare** - Полная цена в валюте продажи из GDS. Тип данных - [Money](/avia/common/money).
 -   **PassengerTypePrice.Taxes** - Таксы. Тип данных - массив Tax.
 -   **Tax** - Информация об определённой таксе (сборе). Тип данных - массив, наследник [Money](/avia/common/money).
 -   **Tax.TaxCode** - Код таксы. Тип данных - строка.
@@ -94,7 +94,7 @@ Price
     -   PremiumEconomy
     -   Other
 -   **Tariff.BookingClassCode** - Литера класса бронирования. Тип данных - строка.
--   **Tariff.SegmentID** - ИД сегмента перелёта, к которому применяется данный тариф. Тип данных - Int32.
+-   **Tariff.SegmentID** - ID сегмента перелёта, к которому применяется данный тариф. Тип данных - Int32.
 -   **Tariff.FreeBaggage** - Информация о бесплатном багаже по данному тарифу. Тип данных - Baggage.
 -   **Tariff.FreeBaggage.Value** - Значение меры бесплатного багажа. Тип данных - строка.
 -   **Tariff.FreeBaggage.Measure** - Единица меры бесплатного багажа. Тип данных - перечисление, возможные значения:
@@ -107,7 +107,7 @@ Price
     -   Weight
 -   **Tariff.FreeBaggage.Size** - Информация об ограничениях по размеру, накладываемых на багаж. Тип данных - строка.
 -   **Tariff.FreeMeal** - Бесплатное питание по данному тарифу. Тип данных - массив MealType.
--   **MealType** - тип бесплатного питания по тарифу. Тип данных - перечисление, возможные значения:
+-   **MealType** - Тип бесплатного питания по тарифу. Тип данных - перечисление, возможные значения:
     -   AlcoholBeverages
     -   Beverages
     -   Breakfast
