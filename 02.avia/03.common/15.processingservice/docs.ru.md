@@ -27,5 +27,5 @@ taxonomy:
 -   **RelatedTickets** - содержит список авиабилетов, связанных с данной услугой.
 -   **RelatedTickets.RelatedTicket** - номер авиабилета. Тип данных - строка.
 -   **RuleID** - ID правила в Nemo, по которому сформирована данная услуга. Тип данных - строка.
--   **RFIC** - Reason For Issuance Code для EMD, ассоциированного с данной услугой
--   **RFISC** - Reason For Issuance Sub Code ЭМД, ассоциированного с данной услугой
+-   **RFIC** - Reason For Issuance Code для EMD, ассоциированного с данной услугой.
+-   **RFISC** - Reason For Issuance Sub Code для EMD, ассоциированного с данной услугой.
