@@ -59,8 +59,8 @@ This request is used to get the electronic document mask from the GDS. At the mo
     -   **Penalty**;
     -   **FinancialImpact**;
     -   **ResidualValue**.
--    **IssueDateTime** - date and time of electronic document issue.
--    **Traveller** - passenger data to which the electronic document corresponds  Data type - [Traveller](/avia/common/traveller).
+-    **IssueDateTime** - date and time of electronic document's issue.
+-    **Traveller** - passenger data to which the electronic document corresponds. Data type - [Traveller](/avia/common/traveller).
 -    **Service** - contains the description of the service to which the electronic document applies. Data type - custom.
 -    **Service.ProcessService** - contains the description of a processing service. Data type - [ProcessingService](/avia/common/processingservice).
 -    **Service.FlightService** - contains the description of a flight service. Data type - [Flight](/avia/common/flight).
