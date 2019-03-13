@@ -13,10 +13,10 @@ visible: true
 #### Параметры запроса
 * **OrderID** - номер заказа из бэк-офиса Nemo.travel. Чтобы получить значение параметра для заказа, необходимо выполнить запрос GetOrder с указанием параметра FlightsBookingID (ID бронирования из Nemo Connect).
 * **CallbackUrl** - адрес, на который будет возвращен callback от Nemo.travel с информацией о статусе заказа при его изменении. Формат: http(s)://domain.
-* **PaymentBackRedirectUrl** -  URL адрес для дальнейшего редиректа после оплаты. Формат: http(s)://domain/query?parameters.
-* **PaymentBackRedirectUrlFailure** - URL адрес для редиректа после неуспешный оплаты (необязательный, если не задан, будет использован PaymentBackRedirectUrl).
+* **PaymentBackRedirectUrl** -  URL-адрес для дальнейшего редиректа после оплаты. Формат: http(s)://domain/query?parameters.
+* **PaymentBackRedirectUrlFailure** - URL-адрес для редиректа после неуспешный оплаты (необязательный, если не задан, будет использован PaymentBackRedirectUrl).
 * **NemoOneAuthToken** - API ключ, выдается сотрудниками Nemo.travel (устаревший параметр, рекомендуется использовать AuthToken).
-* **AuthToken** - API ключ, выдается сотрудниками Nemo.travel.
+* **AuthToken** - API-ключ, выдается сотрудниками Nemo.travel.
 * **UserID** - ID пользователя в системе Nemo.travel, выдается сотрудниками Nemo.travel.
 
 #### Параметры ответа
@@ -31,7 +31,7 @@ visible: true
 * **CardDataRequestContent.proxy-placeholder-validThruMonth** - месяц истечения срока действия карты. Формат: MM.
 * **CardDataRequestContent.proxy-placeholder-securityCode** - код CVC2/CVV2/4DBC. Не используется только в случае, если банковская карта не имеет данного кода. Пример: 123
 * **CardDataRequestContent.proxy-placeholder-holderName** - имя и фамилия держателя банковской карты (на латинице). Пример: Ivan Ivanov. 
-* **CardDataRequestContent.proxy-placeholder-customerIp** - IP адрес, с которого пользователем были введены данные банковской карты. Формат: IP v4 address.
+* **CardDataRequestContent.proxy-placeholder-customerIp** - IP-адрес, с которого пользователем были введены данные банковской карты. Формат: IP v4 address.
 * **CardDataRequestContent.proxy-placeholder-customerAgent** - название браузера клиента (User-Agent HTTP header). Пример: Mozilla.
 * **RequestType** - тип запроса. Доступные значения: POST/GET.
 
