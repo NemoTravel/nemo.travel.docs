@@ -14,7 +14,7 @@ Request to debit money from personal account.
 -   **params** — request parameters. Data type - custom.
 -   **params.type** — object type. Data type - string.
 -   **params.transactionId** — transaction ID from Nemo1. Data type - int32.
--   **params.requestId** — order identifier. Data type - string.
+-   **params.requestId** — order ID. Data type - string.
 -   **params.sign** — request signature. Data type - string.
 
 ##### Sample request
