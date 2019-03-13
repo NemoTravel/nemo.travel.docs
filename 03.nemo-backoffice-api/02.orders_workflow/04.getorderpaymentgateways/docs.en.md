@@ -23,8 +23,8 @@ In response to this request Nemo.travel will return the following parameters:
 * **Gateway.PaymentMethodId** - payment gateway ID.
 * **Gateway.PaymentCharge** - amount of the payment system fee (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
 * **Gateway.RedirectUrl** - address for redirection to the payment system page.
-* **Gateway.UrlToCatch** - address to which notifications about order changes in will be sent.
-* **Gateway.UrlForCardDataSubmit** - address to which you need to send bank card details. The request format is specified in the CardDataRequestContent parameter (for host2host integration).
+* **Gateway.UrlToCatch** - address to which notifications about order changes will be sent.
+* **Gateway.UrlForCardDataSubmit** - address to which you need to send bank card requisites. The request format is specified in the CardDataRequestContent parameter (for host2host integration).
 * **CardDataRequestContent** - content of the request, in which it is necessary to replace the placeholder with the bank card data (for host2host integration).
 * **CardDataRequestContent.proxy-placeholder-cardNumber** - bankcard number. Format: numbers, without gaps.
 * **CardDataRequestContent.proxy-placeholder-validThruYear** - expiration year of the card. Format: YYYY.
