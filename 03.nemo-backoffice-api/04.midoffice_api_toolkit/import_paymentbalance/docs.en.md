@@ -14,7 +14,7 @@ Request to receive a counterparty balance.
 -   **params** — parameters of the object. Data type - custom.
 -   **params.type** — object type. Data type - string.
 -   **params.companyId** — subagency ID. Data type - int32.
--   **params.requestId** — order identifier. Data type - string.
+-   **params.requestId** — order ID. Data type - string.
 -   **params.sign** — request signature. Data type - string.
 
 ##### Sample request
@@ -38,9 +38,9 @@ Request to receive a counterparty balance.
 -   **params** — parameters of the object. Data type - custom.
 -   **params.type** — object type. Data type - string.
 -   **params.companyId** — subagency ID. Data type - int32.
--   **params.requestId** — order identifier. Data type - string.
+-   **params.requestId** — order ID. Data type - string.
 -   **data** — data container. Data type - custom. 
--   **data.success** — sign of success. Data type - bool.
+-   **data.success** — attribute of success. Data type - bool.
 -   **data.balance** — container with balance data. Data type - custom.
 -   **data.balance.deposit** —  container with data on the state of the account. Data type - custom.
 -   **data.balance.deposit.amount** — personal account amount. Data type - string.
