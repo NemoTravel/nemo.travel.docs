@@ -25,16 +25,16 @@ In response to this request Nemo.travel will return the following parameters:
 
 #### Response parameters
 * **Item.ID** - service ID in the service package.
-* **Item.Price** - cost of service (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
-* **Item.Name** - name of the service.
+* **Item.Price** - service price (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
+* **Item.Name** - service name.
 * **Item.ShortDescription** - short description of the service.
 * **Item.FullDescription** - full description of the service.
-* **Package.ID** - id of service package.
-* **Package.Price** - total cost of service package (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
+* **Package.ID** - service package ID.
+* **Package.Price** - total cost of service package (also contains Currency parameter  - the currency in which the cost of the service is indicated).
 * **Package.Name** - name of the service package.
 * **Package.ShortDescription** - short description of the service package.
 * **Package.FullDescription** - full description of the service package.
-* **IsEditable** - presence of possibility of a choice of a service package via ModifyOrder request. Values: true/false.
+* **IsEditable** - presence of possibility to choose a service package via ModifyOrder request. Values: true/false.
 * **SelectedPackageId** - ID of the selected service package.
 * **FlightsBookingID** - Nemo Connect booking ID.
 * **OrderStatus** - order status. Possible values: New, Booked, Canceled, Confirmed.
@@ -42,7 +42,7 @@ In response to this request Nemo.travel will return the following parameters:
 * **Transaction.ID** - payment transaction number.
 * **Transaction.Status** - payment transaction status. Possible values: New, Cancelled, Refunded, PreAuthorized, Paid.
 * **Transaction.GatewayName** - payment gateway name, entered by the agent in the settings.
-* **Transaction.MoneyPaid** - amount that has already been paid in this transaction (also contains the Currency parameter  - the currency in which the cost of the service is indicated).
+* **Transaction.MoneyPaid** - amount that has already been paid in this transaction (also contains the Currency parameter - the currency in which the cost of the service is indicated).
 * **Transaction.PaymentDateTime** - date and time of receipt of payment for the transaction. Format: YYYY-MM-DDTHH:MM:SS.
 * **Transaction.CreateDateTime** - date and time the payment transaction was created. Format: YYYY-MM-DDTHH:MM:SS.
 
