@@ -16,8 +16,8 @@ In response to this request Nemo.travel will return the following parameters:
 * **PaymentBackRedirectUrl** - URL address for redirect after a successful payment. http(s)://domain/query?parameters.
 * **PaymentBackRedirectUrlFailure** - URL address for redirect after a failed payment (optional parameter).
 * **NemoOneAuthToken** - API key, issued by Nemo.travel staff (out-of-date parameter, recommended to use AuthToken).
-* **AuthToken** -  API key, issued by Nemo.travel staff.
-* **UserID** - User ID in the Nemo.travel system, issued by Nemo.travel staff.
+* **AuthToken** -  API key issued by Nemo.travel staff.
+* **UserID** - User ID in the Nemo.travel system issued by Nemo.travel staff.
 
 #### Response parameters
 * **Gateway.PaymentMethodId** - payment gateway ID.
@@ -27,13 +27,13 @@ In response to this request Nemo.travel will return the following parameters:
 * **Gateway.UrlForCardDataSubmit** - address to which you need to send bank card details. The request format is specified in the CardDataRequestContent parameter (for host2host integration).
 * **CardDataRequestContent** - content of the request, in which it is necessary to replace the placeholder with the bank card data (for host2host integration).
 * **CardDataRequestContent.proxy-placeholder-cardNumber** - bankcard number. Format: numbers, without gaps.
-* **CardDataRequestContent.proxy-placeholder-validThruYear** - year of expiry of the card. Format: YYYY.
-* **CardDataRequestContent.proxy-placeholder-validThruMonth** - month of expiry of the card. Format: MM.
+* **CardDataRequestContent.proxy-placeholder-validThruYear** - expiration year of the card. Format: YYYY.
+* **CardDataRequestContent.proxy-placeholder-validThruMonth** - expiration month of the card. Format: MM.
 * **CardDataRequestContent.proxy-placeholder-securityCode** - code CVC2/CVV2/4DBC. Not used only if the bank card does not have this code. Example: 123.
-* **CardDataRequestContent.proxy-placeholder-holderName** - name and surname of the holder of the bank card (in Latin). Example: Ivan Ivanov.
+* **CardDataRequestContent.proxy-placeholder-holderName** - name and surname of the bank card holder (in Latin). Example: Ivan Ivanov.
 * **CardDataRequestContent.proxy-placeholder-customerIp** - IP address from which the user entered bank card data. Format: IP v4 address.
 * **CardDataRequestContent.proxy-placeholder-customerAgent** - name of the client browser (User-Agent HTTP header). Example: Mozilla.
-* **RequestType** - type of request. The available values are: POST/GET.
+* **RequestType** - request type. The available values are: POST/GET.
 
 #### Sample request
 ```xml
