@@ -4,7 +4,7 @@ title: GetEDData
 
 ### GetEDData
 
-Используется для получения маски электронного документа из ГРС. На текущий момент поддерживается получение маски из ГРС Sirena.
+This request is used to get the electronic document mask from the GDS. At the moment acquiring the mask from GDS Sirena is supported. 
 
 #### Request
 
