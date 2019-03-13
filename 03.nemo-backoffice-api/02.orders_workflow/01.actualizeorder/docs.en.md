@@ -11,12 +11,12 @@ To update the order status, use the ActualizeOrder request. This request can upd
 * **OrderID** - order number from the back office of Nemo.travel. To get the parameter value for an order, it is required to run a GetOrder request with specifying the FlightsBookingID parameter (Booking ID from Nemo Connect). 
 * **ActualizePayment** - allows to send a request to the payment system to update the status of the payment transaction. Possible values: true/false.
 * **ActualizeFlightsBooking** - initiates an [UpdateBook](/avia/request/updatebook) request to Nemo Connect. Possible values: true/false.
-* **CallbackUrl** - callback from Nemo.travel will be returned information about order status when it is changed to this address. Example: http(s)://domain.
-* **PaymentBackRedirectUrl** - URL address for the following redirect after a successful payment. http(s)://domain/query?parameters.
+* **CallbackUrl** - address to which the callback from Nemo.travel with the information about order status will be returned when it is changed. Example: http(s)://domain.
+* **PaymentBackRedirectUrl** - URL address for the following redirect after a successful payment. http(s)://domain/query?parameters. 
 * **PaymentBackRedirectUrlFailure** - URL address for the following redirect after a failed payment (optional parameter).
-* **NemoOneAuthToken** - API key, issued by Nemo.travel staff (out-of-date parameter, recommended to use AuthToken).
+* **NemoOneAuthToken** - API key issued by Nemo.travel staff (out-of-date parameter, recommended to use AuthToken).
 * **AuthToken** - API key issued by Nemo.travel staff.
-* **UserID** - user ID in the Nemo.travel system, issued by Nemo.travel staff. 
+* **UserID** - user ID in the Nemo.travel system issued by Nemo.travel staff. 
 
 #### Response parameters
 Identical to the parameters from [GetOrder](/nemo-backoffice-api/orders_workflow/getorder).
