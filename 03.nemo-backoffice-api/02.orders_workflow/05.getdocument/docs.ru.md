@@ -8,10 +8,10 @@ title: GetDocument
 
 
 #### Параметры запроса
-* **OrderID** - номер заказа из бэк-офиса Nemo.travel. Чтобы получить значение параметра для заказа, необходимо выполнить запрос GetOrder с указанием параметра FlightsBookingID (ID бронирования из Nemo Connect).
+* **OrderID** - Номер заказа из бэк-офиса Nemo.travel. Чтобы получить значение параметра для заказа, необходимо выполнить запрос GetOrder с указанием параметра FlightsBookingID (ID бронирования из Nemo Connect).
 * **DocType** - Тип запрашиваемого документа, возможные значения: ItinReceiptNemo - авиа маршрут-квитанция в формате Nemo. RailVoucher - Проездной документ в ЖД. RailMCF - Квитанция различных сборов.
-* **NemoOneAuthToken** - API ключ, выдается сотрудниками Nemo.travel (устаревший параметр, рекомендуется использовать AuthToken).
-* **AuthToken** - API ключ, выдается сотрудниками Nemo.travel.
+* **NemoOneAuthToken** - API-ключ, выдается сотрудниками Nemo.travel (устаревший параметр, рекомендуется использовать AuthToken).
+* **AuthToken** - API-ключ, выдается сотрудниками Nemo.travel.
 * **UserID** - ID пользователя в системе Nemo.travel, выдается сотрудниками Nemo.travel.
 
 #### Параметры ответа
