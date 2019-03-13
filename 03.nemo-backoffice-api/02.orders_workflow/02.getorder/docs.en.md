@@ -34,7 +34,7 @@ In response to this request Nemo.travel will return the following parameters:
 * **Package.Name** - name of the service package.
 * **Package.ShortDescription** - short description of the service package.
 * **Package.FullDescription** - full description of the service package.
-* **IsEditable** - presence of possibility to choose a service package via ModifyOrder request. Values: true/false.
+* **IsEditable** - presence of the possibility to choose a service package via ModifyOrder request. Values: true/false.
 * **SelectedPackageId** - ID of the selected service package.
 * **FlightsBookingID** - Nemo Connect booking ID.
 * **OrderStatus** - order status. Possible values: New, Booked, Canceled, Confirmed.
