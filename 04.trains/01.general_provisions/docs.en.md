@@ -5,7 +5,7 @@ published: true
 
 ### General Information on the Railway Server
 
-The server works with several information suppliers on railways (trains, routes, booking of seats, cancellation of reservation, etc.).
+The server works with several information suppliers on railways (trains, routes, seats booking, booking cancellation etc.).
 Suppliers:
 
 * ** UFS (Universal Financial System) ** - Supplier of Russian Railways;
