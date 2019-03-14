@@ -7,7 +7,7 @@ title: 'Cancelling Train Seats Booking'
 #### Request
 
 -   **BookID** - Reservation ID. Data type - 32-bit integer.
--   **BlankIDs** -Ticket blanks IDs to be canceled. Data type - array of string elements.
+-   **BlankIDs** - Ticket blanks IDs to be canceled. Data type - array of string elements.
 -   **BlankIDs.BlankID** - Blank ID. Data type - string.
 -   
 The BlankIDs parameter is used for partial booking cancellation in UIT. If the parameter is empty, the entire reservation will be canceled.
