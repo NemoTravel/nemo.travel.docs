@@ -10,7 +10,7 @@ title: 'Бронирование багажа'
 
 -   **BookID** - Идентификатор брони. Тип данных - целое 32-битное число.
 -   **BaggagesOfTickets** - Список броней на багаж для всех билетов. Тип данных - массив элементов BaggagesOfTicket.
--   **BaggagesOfTickets.BaggagesOfTicket.BlankID** - ИД бланка билета, к которому будут привязаны брони на багаж. Тип данных - строка.
+-   **BaggagesOfTickets.BaggagesOfTicket.BlankID** - ID бланка билета, к которому будут привязаны брони на багаж. Тип данных - строка.
 -   **BaggagesOfTickets.BaggagesOfTicket.BaggageItems** - Список желаемых багажных броней. Тип данных - массив элементов BaggageItem.
 -   **BaggagesOfTickets.BaggagesOfTicket.BaggageItems.BaggageItem** - Информация о багаже. Тип данных - сложный.
 -   **BaggagesOfTickets.BaggagesOfTicket.BaggageItems.BaggageItem.Kind** - Вид багажа. Тип данных - перечисление. Возможные значения: аналогичны параметру TransportDoc.Kind из ответа на [запрос бронирования мест в поезде](/trains/trains_stages/booktrain).
