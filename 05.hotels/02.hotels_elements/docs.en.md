@@ -5,7 +5,7 @@ title: 'Common Elements'
 All the requests and responses of the hotel server have a certain set of common elements.
 
 #### Request
--   **Requisites** - container with server access details. Data type - custom.
+-   **Requisites** - container with server access requisites. Data type - custom.
 -   **Requisites.Login** - server access login. Data type - string.
 -   **Requisites.Password** - server access password. Data type - string.
 -   **Requisites.UserContextId** - ID of the user for whom the settings will be applied. Data type - string. 
