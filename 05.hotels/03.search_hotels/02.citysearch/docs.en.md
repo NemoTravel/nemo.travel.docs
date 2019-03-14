@@ -84,7 +84,7 @@ Same as the request of the following format: [RunCitySearch](/hotels/search_hote
 -   **RoomMealsGroup.Meal.CommonName** - common name for the meal type. Data type - string.
 -   **RoomRatesGroup** - container with information about the cost of rooms. Data type - custom.
 -   **RoomRatesGroup.Rate** - container with information about the cost, fare. Data type - custom.
--   **RoomRatesGroup.Rate.ID** - rate identifier within this search result. Data type - unsigned 32-bit integer.
+-   **RoomRatesGroup.Rate.ID** - fare ID within this search result. Data type - unsigned 32-bit integer.
 -   **RoomRatesGroup.Rate.Price** - container with currency information. Data type - custom.
 -   **RoomRatesGroup.Rate.Price.Amount** - base price amount. Data type - fractional number.
 -   **RoomRatesGroup.Rate.Price.Currency** - currency code of the base price. Data type - string.
