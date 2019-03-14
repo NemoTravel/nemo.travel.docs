@@ -10,7 +10,7 @@ title: 'Cancelling Train Seats Booking'
 -   **BlankIDs** -Ticket blanks IDs to be canceled. Data type - array of string elements.
 -   **BlankIDs.BlankID** - Blank ID. Data type - string.
 -   
-The parameter BlankIDs is used for partial cancellation of reservation in UIT. If the parameter is empty, the entire reservation will be canceled.
+The BlankIDs parameter is used for partial booking cancellation in UIT. If the parameter is empty, the entire reservation will be canceled.
 UFS does not respond to this parameter.
 
 ##### Sample Request (XML)
