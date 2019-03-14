@@ -24,7 +24,7 @@ title: 'Getting Information on the Route of a Particular Train'
 
 -   **TName** - Train name. Data type - string.
 -   **TNum** - Train number. Data type - string.
--   **DepDate** - Departure date. The format is yyyy-MM-dd, for example 2011-05-15. Data type - string.
+-   **DepDate** - Departure date. The format is yyyy-mm-dd, for example 2011-05-15. Data type - string.
 -   **Items** - Stops along the route. Data type - array of TRouteItem elements.
 -   **Items.TRouteItem** - A stop. Data type - custom.
 -   **Items.TRouteItem.StationName** - Station name. Data type - string.
