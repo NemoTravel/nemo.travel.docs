@@ -46,7 +46,7 @@ title: 'Получение маршрут-квитанции для опреде
 -   **TicketBlanks** - Бланки брони. Тип данных - массив элементов TicketBlank.
 -   **TicketBlanks.TicketBlank** - Содержит маршрут квитанцию. Тип данных - сложный.
 -   **TicketBlanks.TicketBlank.BlankID** - Идентификатор бланка. Тип данных - строка.
--   **TicketBlanks.TicketBlank.Format** - Формат/кодировка маршрут квитанции. Тип данных - перечисление. Возможные значения аналогичны параметру BlankPrefferredType из [запроса на бронирование](/trains/trains_stages/booktrain).
+-   **TicketBlanks.TicketBlank.Format** - Формат/кодировка маршрут-квитанции. Тип данных - перечисление. Возможные значения аналогичны параметру BlankPrefferredType из [запроса на бронирование](/trains/trains_stages/booktrain).
 -   **TicketBlanks.TicketBlank.TBlank** - Маршрут квитaнция в формате, указанном в элементе Format. Содержимое закодировано в base64, кроме того случая, когда Format = JSON. Тип данных - строка.
 -   **TicketBlanks.TicketBlank.QRCodeFormat** - Формат QR-кода. Расширение файла(без точки). Тип данных - строка.
 -   **TicketBlanks.TicketBlank.QRCode** - QR-код с информацией о заказе в Base64. Тип данных - строка.
