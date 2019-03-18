@@ -274,30 +274,37 @@ title: 'Бронирование мест в поезде'
 -   **WasSuccessTicketing** - Признак того, что выписка билета была успешной. Тип данных - булев.
 -   **WasTicketingAttempt** - Признак того, что была попытка выписки, вне зависимости от ее результата. Тип данных - булев. 
 -   **BlankPreferredType** - Предпочитаемый тип бланка. Тип данных - перечисление. Возможные значения аналогичны параметру BlankPrefferredType из запроса на бронирование.
--   **Categories** - 
--   **Categories.TCategory** - 
--   **Categories.TCategory.AllowSeatsWithAnimals** - 
--   **Categories.TCategory.AvailableTariffs** - 
--   **Categories.TCategory.Bedclothes** - Признак наличия постельного белья. Тип данных - булев. 
--   **Categories.TCategory.Carrier** - Перевозчик. Тип данных - строка. 
--   **Categories.TCategory.Cars** - Вагоны поезда. Тип данных - массив элементов Car.
 -   **Car** - Вагон. Тип данных - сложный.
 -   **Car.IsCarERegister** - Признак наличия электронной регистрации / электронного билета в вагоне. Тип данных - булев (может быть null).
 -   **Car.IsThrough** - Признак беспересадочного вагона. Актуальная информация получается в ответе на запрос полной информации о поезде. Тип данных - булев.
 -   **Car.Number** - Номер вагона. Тип данных - строка.
 -   **Car.BethClothesSelectionInd** - 
 -   **Car.ERChangeAllowedDuringBooking** - 
--   **Car.PlacePrice** - Цена за место. Тип данных - строка. 
--   **Car.PlacePrice.Amount** - 
--   **Car.PlacePrice.Places** - 
--   **Car.PlacePrice.Type** - 
+-   **Car.PlacePrice** - контейнер для информации о цене мест определенного типа в вагоне. Тип данных - сложный.
+-   **Car.PlacePrice.Amount** - цена за место. Тип данных - дробное число.
+-   **Car.PlacePrice.Places** - список мест, относящихся к данному типу, через запятую. Тип данных - строка.
+-   **Car.Discount** - Скидка. Тип данных - целое 32-битное число.
+-   **Car.PlacePrice.Type** - тип мест. Тип данных - строка. Возможные значения:
+   - Up - верхнее
+   - Down - нижнее
+   - UpSide - верхнее боковое
+   - DownSide - нижнее боковое
+   - DownNearWCPlace - нижнее в последнем отсеке-купе
+   - UpNearWCPlace - верхнее в последнем отсеке-купе
+   - DownSideNearWCPlace - нижнее боковое в последнем отсеке-купе
+   - NearTheTable - у стола
+   - NearThePlayground - рядом с детской площадкой
+   - NearTheTableAndPlayground - у стола рядом с детской площадкой
+   - NearPassWithAnimal - рядом с местами для пассажиров с животными
+   - Normal - обычные (не у стола)
+   - InCompartment - в отсеке
+   - Folding - откидные
+   - PassWithAnimal - для пассажиров с животными
+   - MotherWithBaby - для матери и ребенка
+   - WithChildren - для пассажиров с детьми
 -   **Car.PossibleAnimals** - Признак возможности провоза животных в вагоне. Тип данных - булев. 
 -   **Car.Schema** - Схема вагона. Тип данных - 
--   **Category** -  
 -   **DelayedPaymentIsAvail** - 
--   **Description** - Описание. Тип данных - 
--   **Discount** - Скидка. Тип данных -
--   **GDSCode** - Код ГРС. Тип данных - строка.
 -   **GenderSeats** - 
 -   **IsCarDynamicPricing** - 
 -   **LoyaltyCards** - 
@@ -312,11 +319,7 @@ title: 'Бронирование мест в поезде'
 -   **Tariff.Code** - 
 -   **Tariff.Description** - 
 -   **Tariff.Name** - 
--   **Tariff.PassType** - 
--   **TrainLogicNumber** - 
--   **WithoutSeatNumeration** - 
--   **DepExtStation** - 
--   **DepStation** - 
+-   **Tariff.PassType** -  
 -   **DepStationFromSearch** - 
 -   **DepStationName** - 
 -   **DepTimezoneCode** - 
