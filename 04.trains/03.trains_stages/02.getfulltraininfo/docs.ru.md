@@ -45,6 +45,7 @@ title: 'Получение полной информации об определ
 -   **Car.PlacePrices.PlacePrice.Places** - список мест, относящихся к данному типу, через запятую. Тип данных - строка.
 -   **Car.PlacePrices.PlacePrice.Amount** - цена за место. Тип данных - дробное число.
 
+-	**Train.Categories.TCategory.LoyaltyCards.LoyaltyCard** - доступная карта лояльности в категории. DOSS - Дорожная карта, RZHDBonusDiscount - Скидка по карте «РЖД Бонус», RZHDBonusSavePoints - Начисление баллов «РЖД Бонус». Тип данных - строка.
 
 ##### Пример ответа от УИТ (XML)
 
