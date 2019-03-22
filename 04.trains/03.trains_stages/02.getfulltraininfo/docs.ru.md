@@ -253,6 +253,8 @@ title: 'Получение полной информации об определ
                <BeginDate>2014-07-30 23:05:00</BeginDate>
                <Categories>
                    <TCategory>
+                   	   <AllowSeatsWithAnimals>false</AllowSeatsWithAnimals>
+                	   <AvailableTariffs>1;2</AvailableTariffs>
                        <Bedclothes>false</Bedclothes>
                        <Carrier>ФПК</Carrier>
                        <Cars>
@@ -293,6 +295,11 @@ title: 'Получение полной информации об определ
                        <GenderType nil="true"/>
                        <ID>1</ID>
                        <MaxPrice nil="true"/>
+                       <LoyaltyCards>
+                  	   		<LoyaltyCard>RZHDBonusSavePoints</LoyaltyCard>
+                            <LoyaltyCard>DOSS</LoyaltyCard>
+                            <LoyaltyCard>RZHDBonusDiscount</LoyaltyCard>
+                	   </LoyaltyCards>
                        <PlacesCountInPrice>1</PlacesCountInPrice>
                        <Price>
                            <Amount>5235.6</Amount>
