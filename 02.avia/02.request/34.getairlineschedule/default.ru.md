@@ -71,6 +71,7 @@ title: 'GetAirlineSchedule '
  
 ##### Пример
 
+```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
    <s:Body>
       <GetAirlineScheduleResponse xmlns="http://nemo-ibe.com/Avia">
@@ -126,4 +127,4 @@ title: 'GetAirlineSchedule '
       </GetAirlineScheduleResponse>
    </s:Body>
 </s:Envelope>
-
+```
