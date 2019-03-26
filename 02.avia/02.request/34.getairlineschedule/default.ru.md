@@ -20,26 +20,14 @@ title: 'GetAirlineSchedule '
    <soapenv:Header/>
    <soapenv:Body>
       <avia:GetAirlineSchedule>
-         <!--Optional:-->
          <avia:Request>
             <stl:Requisites>
-               <!--Optional:-->
-<!--               <stl:Login>kozintravelanon</stl:Login>-->
                <stl:Login>test_mlsd_agency</stl:Login>
-               <!--Optional:-->
-<!--               <stl:Password>k34nvfann</stl:Password>-->
-               <stl:Password>test_mlsd_agency_pass</stl:Password>
-               <!--Optional:-->
-            
-       
+               <stl:Password>test_mlsd_agency_pass</stl:Password>            
             </stl:Requisites>
-<!--            <stl:UserID>35810</stl:UserID>-->
-<stl:UserID>30328</stl:UserID>
-      
+<stl:UserID>30328</stl:UserID>     
             <stl:RequestBody>
-               <!--Optional:-->
                <avia:SourceID>113232 </avia:SourceID>
-               <!--Optional:-->
                <avia:AirlineCode>LH</avia:AirlineCode>
             </stl:RequestBody>
          </avia:Request>
@@ -80,3 +68,65 @@ title: 'GetAirlineSchedule '
 -   **Segment.TripPoint** - 
    - Code - 
    - CityCode - 
+
+##### Пример
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <GetAirlineScheduleResponse xmlns="http://nemo-ibe.com/Avia">
+         <GetAirlineScheduleResult xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:RequestID>144522120</a:RequestID>
+            <a:ResponseBody>
+              <AirlineSchedule>
+                  <Flights>
+                     <Flight>
+                        <Company>LH</Company>
+                        <FlightNumber>0000</FlightNumber>
+                        <Periods>
+                           <Period>
+                              <StartDate>2019-03-26 12:11:57 +03:00</StartDate>
+                              <EndDate>2020-03-26 12:11:57 +03:00</EndDate>
+                              <DaysOfWeek>
+                                 <Day>Sunday</Day>
+                                 <Day>Monday</Day>
+                                 <Day>Tuesday</Day>
+                                 <Day>Wednesday</Day>
+                                 <Day>Thursday</Day>
+                                 <Day>Friday</Day>
+                                 <Day>Saturday</Day>
+                              </DaysOfWeek>
+                              <AircraftType i:nil="true"/>
+                              <Classes>
+                                 <Class>Economy</Class>
+                                 <Class>Business</Class>
+                                 <Class>First</Class>
+                                 <Class>PremiumEconomy</Class>
+                              </Classes>
+                              <Segments>
+                                 <Segment>
+                                    <TripPoint>
+                                       <a:Code>VIE</a:Code>
+                                       <a:CityCode>VIE</a:CityCode>
+                                    </TripPoint>
+                                 </Segment>
+                                 <Segment>
+                                    <TripPoint>
+                                       <a:Code>HHN</a:Code>
+                                       <a:CityCode>FRA</a:CityCode>
+                                    </TripPoint>
+                                 </Segment>
+                              </Segments>
+                           </Period>
+                        </Periods>
+                     </Flight>
+                  </Flights>
+               </AirlineSchedule>
+            </a:ResponseBody>
+         </GetAirlineScheduleResult>
+      </GetAirlineScheduleResponse>
+   </s:Body>
+</s:Envelope>
+
+
+
+
