@@ -40,35 +40,35 @@ title: 'GetAirlineSchedule '
 
 ##### Описание формата
 
--   **AirlineSchedule** - 
--   **AirlineSchedule.Flights** - 
--   **AirlineSchedule.Flights.Flight** - 
--   **AirlineSchedule.Flights.Flight.Company** - 
--   **AirlineSchedule.Flights.Flight.FlightNumber** - 
--   **AirlineSchedule.Flights.Flight.Periods** - 
--   **Periods.Period** - 
--   **Periods.Period.StartDate** - 
--   **Periods.Period.EndDate** - 
--   **Periods.Period.DaysOfWeek** - 
-   - Sunday - 
-   - Monday - 
-   - Tuesday - 
-   - Wednesday - 
-   - Thursday - 
-   - Friday - 
-   - Saturday - 
--   **Periods.Period.AircraftType** - 
--   **Periods.Period.Classes** - 
-   - Economy -
-   - Business -
-   - First -
-   - PremiumEconomy - 
--   **Periods.Period.Segments** -
--   **Periods.Period.Segments.Segment** - 
--   **Segment.TripPoint** - 
-   - Code - 
-   - CityCode - 
-
+-   **AirlineSchedule** - контейнер с информацией о маршрутной сети авиакомпании. Тип данных - сложный.
+-   **AirlineSchedule.Flights** - контейнер с перелетами. Тип данных - сложный. 
+-   **AirlineSchedule.Flights.Flight** - контейнер с информацией о перелете. Тип данных - сложный.   
+-   **AirlineSchedule.Flights.Flight.Company** - код авиакомпании, для которой будет производиться поиск расписания. Тип данных — строка.
+-   **AirlineSchedule.Flights.Flight.FlightNumber** - номер рейса. Тип данных - строка. 
+-   **AirlineSchedule.Flights.Flight.Periods** - контейнер с периодами времени, в течение которых осуществляется рейс. Тип данных - сложный. 
+-  **Periods.Period** - контейнер с информацией о периоде. Тип данных - сложный. 
+-  **Periods.Period.StartDate** - дата начала периода. Тип данных - строка.
+-  **Periods.Period.EndDate** - дата окончания периода. Тип данных - строка.
+-  **Periods.Period.DaysOfWeek** - дни недели. Тип данных - перечисление. Возможные значения:
+   - Sunday - Воскресенье
+   - Monday - Понедельник
+   - Tuesday - Вторник
+   - Wednesday - Среда
+   - Thursday - Четверг
+   - Friday - Пятница
+   - Saturday - Суббота
+-  **Periods.Period.AircraftType** - тип воздушного судна. Тип данных - строка. 
+-  **Periods.Period.Classes** - классы обслуживания. Тип данных - перечисление. Возможные значения:
+   - Economy - Эконом-класс
+   - Business - Бизнес-класс
+   - First - Первый класс
+   - PremiumEconomy - Премиум эконом-класс
+-  **Periods.Period.Segments** - контейнер с сегментами перелета. Тип данных - сложный. 
+-  **Periods.Period.Segments.Segment** - контейнер с информацией о сегменте. Тип данных - сложный. 
+-  **Segment.TripPoint** - контейнер с информацией об аэропорте/городе. Тип данных - сложный. Возможные значения:
+   - Code - код аэропорта
+   - CityCode - код города
+ 
 ##### Пример
 
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
