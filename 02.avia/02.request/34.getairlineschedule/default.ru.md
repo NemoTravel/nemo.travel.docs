@@ -127,6 +127,3 @@ title: 'GetAirlineSchedule '
    </s:Body>
 </s:Envelope>
 
-
-
-
