@@ -1,5 +1,8 @@
 ---
 title: AddToQueue
+taxonomy:
+    category:
+        - docs
 ---
 
 ### AddToQueue

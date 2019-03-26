@@ -1,5 +1,8 @@
 ---
 title: GetEDData
+taxonomy:
+    category:
+        - docs
 ---
 
 ### GetEDData
