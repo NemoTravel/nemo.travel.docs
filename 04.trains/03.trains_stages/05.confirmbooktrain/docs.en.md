@@ -46,6 +46,7 @@ Same as the response to [request for booking seats in a train](/trains/trains_st
                     <FirstName>Пупкин</FirstName>
                     <MiddleName>Акакиевич</MiddleName>
                     <LastName>Василий</LastName>
+                    <SupplierID>116271510</SupplierID>
                     <Document nil="true"/>
                     <Type>adult</Type>
                     <Price>

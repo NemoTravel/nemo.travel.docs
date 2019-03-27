@@ -46,6 +46,7 @@ title: 'Подтверждение брони'
                     <FirstName>Пупкин</FirstName>
                     <MiddleName>Акакиевич</MiddleName>
                     <LastName>Василий</LastName>
+                    <SupplierID>116271510</SupplierID>
                     <Document nil="true"/>
                     <Type>adult</Type>
                     <Price>
