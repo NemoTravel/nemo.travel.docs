@@ -230,6 +230,7 @@ title: 'Бронирование мест в поезде'
 -   **Passengers.BookedPerson.FirstName** - Имя. Тип данных - строка.
 -   **Passengers.BookedPerson.MiddleName** - Отчество. Тип данных - строка.
 -   **Passengers.BookedPerson.LastName** - Фамилия. Тип данных - строка.
+-   **Passengers.BookedPerson.SupplierID** - ID пассажира от поставщика(реализовано только у Сирены), Тип данных - строка.
 -   **Passengers.BookedPerson.Type** - Тип пассажира. Тип данных -
 -   **Passengers.BookedPerson.Document** - 
 -   **Passengers.BookedPerson.Document.DocType** - Тип документа. Тип данных - 
@@ -364,6 +365,7 @@ title: 'Бронирование мест в поезде'
                     <FirstName>Пупкин</FirstName>
                     <MiddleName>Акакиевич</MiddleName>
                     <LastName>Василий</LastName>
+                    <SupplierID>116271510</SupplierID>
                     <Document nil="true"/>
                     <Type>adult</Type>
                     <Price>
