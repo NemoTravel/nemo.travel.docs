@@ -190,6 +190,7 @@ title: 'Train Seats Booking'
 -   **ReturnTrainBookCode** - Return code for train back. Data type - string. Similar to RefundCode parameter.
 -   **ReturnTrainRefundCode** - Reservation code for return train in the supplier’s system. Data type - string. Similar to BookCode parameter.
 -   **Passengers.BookedPerson** - Description. Data type - custom (Contains all properties of the Person element from [common elements](/trains/elements) + additional attributes).
+-   **Passengers.BookedPerson.SupplierID** - Passenger's ID from the supplier (sold only in Sirena), Data type - string.
 -   **Passengers.BookedPerson.Price** - The cost of all passenger tickets. Data type - custom. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
 -   **Passengers.BookedPerson.Tickets** - Passenger tickets. Data type - array of TicketInformation elements.
 -   **Passengers.BookedPerson.Ticket** - Ticket information. Data type - custom.
@@ -251,6 +252,7 @@ title: 'Train Seats Booking'
                     <FirstName>Pupkin</FirstName>
                     <MiddleName>Akakievich</MiddleName>
                     <LastName>Vasiliy</LastName>
+                    <SupplierID>116271510</SupplierID>
                     <Document nil="true"/>
                     <Type>adult</Type>
                     <Price>
