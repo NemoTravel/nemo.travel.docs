@@ -7,15 +7,19 @@ taxonomy:
 
 ### GetBook
 
-Used to get the current state of the booking without synchronizing with the supplier.
+Used to get the current state of the booking without synchronizing with the supplier.Getting information is possible using BookID and using PNRParams, see examples.
 #### GetBook_2_2
 The latest request version, the differences are only in the response in the ancillary services block from [Book_2_2](/avia/request/bookflight) request.
 
 #### Request
 
 -  **BookID** - ID of the booking you want to receive. Data type - long.
+-   **PNRParams:**
+  -   **Locator** - Locator of order in GDS. Data type - string.
+  -   **PCC** - ID of the agency in GDS which allows to determine unambiguously which agency executes the request.
+  -   **Supplier**.
 
-##### Sample
+##### Sample with BookID
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -36,12 +40,37 @@ The latest request version, the differences are only in the response in the anci
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
-
+##### Sample with PNRParams
+Sample with PNRParams assums the use of BookID=0.
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
+  <SOAP-ENV:Body>
+    <ns2:GetBook>
+      <ns2:Request>
+        <ns1:Requisites>
+          <ns1:Login>LOGIN</ns1:Login>
+          <ns1:Password>PASSWORD</ns1:Password>
+        </ns1:Requisites>
+        <ns1:UserID>30328</ns1:UserID>
+        <ns1:RequestBody>
+          <ns2:BookID>0</ns2:BookID>
+          <ns1:PNRParams>
+           <ns1:Locator>NWV9M7</ns1:Locator>
+           <ns1:PCC>ALAKZ27AA</ns1:PCC>
+           <ns1:Supplier>Amadeus</ns1:Supplier>
+         </ns1:PNRParams>
+        </ns1:RequestBody>
+      </ns2:Request>
+    </ns2:GetBook>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+```
 #### Response
 
 [2.0 Version Booking](/avia/common/book).
 
-##### Sample
+##### Sample with BookID
 
 ```xml
 <?xml version="1.0"?>
