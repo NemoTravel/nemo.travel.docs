@@ -7,7 +7,7 @@ taxonomy:
 
 ### GetBook
 
-Используется для получения текущего состояния брони без синхронизации с поставщиком.
+Используется для получения текущего состояния брони без синхронизации с поставщиком.Получение информации возможно с помощью BookID и с помощью PNRParams, см.примеры использования.
 
 #### GetBook_2_2
 Самая последняя версия запроса, отличия только в ответе на запрос в блоке работы с допуслугами из запроса [Book_2_2](/avia/request/bookflight). 
@@ -15,9 +15,12 @@ taxonomy:
 #### Запрос
 
 -   **BookID** - ИД брони, которую требуется получить. Тип данных - long.
+-   **PNRParams:**
+  -   **Locator** - Локатор заказа в ГДС. Тип данных - строковый
+  -   **PCC** - Идентификатор агентства в ГДС, позволяющий однозначно определить какое именно агентство выполняет запрос.
+  -   **Supplier** - Поставщик.
 
-##### Пример
-
+##### Пример c BookID
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
@@ -37,12 +40,33 @@ taxonomy:
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
-
+##### Пример c PNRParams
+Пример с PNRParams предполагает использование параметра BookID=0.
+```xml
+<RequestWithGetBookRQBody xmlns="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <Requisites>
+    <Login>LOGIN</Login>
+    <Password>PASSWORD</Password>
+    <UserContextId>10824</UserContextId>
+    <SupplierSessionId>016RVNMEFV</SupplierSessionId>
+  </Requisites>
+  <UserID>30328</UserID>
+  <RequestType>P</RequestType>
+  <RequestBody>
+    <BookID>0</BookID>
+    <a:PNRParams>
+      <a:Locator>NWV9M7</a:Locator>
+      <a:PCC>ALAKZ27AA</a:PCC>
+      <a:Supplier>Amadeus</a:Supplier>
+    </a:PNRParams>
+  </RequestBody>
+</RequestWithGetBookRQBody>
+```
 #### Ответ
 
 [Бронь версии 2.0](/avia/common/book).
 
-##### Пример
+##### Пример с BookID
 
 ```xml
 <?xml version="1.0"?>
