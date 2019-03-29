@@ -43,24 +43,28 @@ taxonomy:
 ##### Пример c PNRParams
 Пример с PNRParams предполагает использование параметра BookID=0.
 ```xml
-<RequestWithGetBookRQBody xmlns="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-  <Requisites>
-    <Login>LOGIN</Login>
-    <Password>PASSWORD</Password>
-    <UserContextId>10824</UserContextId>
-    <SupplierSessionId>016RVNMEFV</SupplierSessionId>
-  </Requisites>
-  <UserID>30328</UserID>
-  <RequestType>P</RequestType>
-  <RequestBody>
-    <BookID>0</BookID>
-    <a:PNRParams>
-      <a:Locator>NWV9M7</a:Locator>
-      <a:PCC>ALAKZ27AA</a:PCC>
-      <a:Supplier>Amadeus</a:Supplier>
-    </a:PNRParams>
-  </RequestBody>
-</RequestWithGetBookRQBody>
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
+  <SOAP-ENV:Body>
+    <ns2:GetBook>
+      <ns2:Request>
+        <ns1:Requisites>
+          <ns1:Login>LOGIN</ns1:Login>
+          <ns1:Password>PASSWORD</ns1:Password>
+        </ns1:Requisites>
+        <ns1:UserID>30328</ns1:UserID>
+        <ns1:RequestBody>
+          <ns2:BookID>0</ns2:BookID>
+          <ns1:PNRParams>
+           <ns1:Locator>NWV9M7</ns1:Locator>
+           <ns1:PCC>ALAKZ27AA</ns1:PCC>
+           <ns1:Supplier>Amadeus</ns1:Supplier>
+         </ns1:PNRParams>
+        </ns1:RequestBody>
+      </ns2:Request>
+    </ns2:GetBook>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
 ```
 #### Ответ
 
