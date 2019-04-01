@@ -100,6 +100,17 @@ Contains the full information about the price and its formation for the booking 
     -   ValueOfMeasure
     -   Weight
 -   **Tariff.FreeBaggage.Size** - information on the size restrictions imposed on baggage. Data type - string.
+-   **Tariff.CarryOn** - information about carryon in this fare. Data type - Baggage.
+-   **Tariff.CarryOn.Value** - carryon value of the measure. Data type - string.
+-   **Tariff.CarryOn.Measure** - carryon unit of measure. Data type - enumeration, possible values:
+    -   Kilograms
+    -   Pounds
+    -   Pieces
+    -   SpecialCharge
+    -   Size
+    -   ValueOfMeasure
+    -   Weight
+-   **Tariff.CarryOn.Size** - information on the size restrictions imposed on carryon. Data type - string.
 -   **Tariff.FreeMeal** - free meals in this fare. Data type - MealType array.
 -   **MealType** - type of free meals according to the fare. Data type - enumeration, possible values:
     -   AlcoholBeverages
