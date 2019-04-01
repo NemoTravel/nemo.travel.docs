@@ -124,6 +124,15 @@ taxonomy:
 -   **PassengerFare.Tariffs.Tariff.FreeBaggage.Value** — количество бесплатного багажа по данному тарифу. Тип данных — строка.
 -   **PassengerFare.Tariffs.Tariff.FareFamilyDescID** — идентификатор описания семейства тарифов. Тип данных — целое число.
 -   **PassengerFare.Tariffs.Tariff.FareFamilyCode** — код авиакомпании семейства тарифов. Тип данных — строка.
+-   **PassengerFare.Tariffs.Tariff.CarryOn** — содержит информацию о ручной клади по данному тарифу. Тип данных — сложный.
+-   **PassengerFare.Tariffs.Tariff.CarryOn.Measure** — единица измерения ручной клади. Тип данных — перечисление, возможные значения:
+    -   **Kilograms** — килограммы;
+    -   **Pounds** — фунты;
+    -   **Pieces** — сумки/места багажа;
+    -   **SpecialCharge** — спецкладь;
+    -   **Size** — размер багажа;
+   -    **Weight** — вес.
+-   **PassengerFare.Tariffs.Tariff.CarryOn.Value** — количество ручной клади по данному тарифу. Тип данных — строка.
 -   **PassengerFare.Tariffs.Tariff.SubsidyInfoID** - номер подходящего пакета субсидий для этого тарифа. Тип данных - целое 32-битное число.
 -   **PassengerFare.Commission** — информация о комиссии для данной ценовой составляющей от GDS. Тип данных — сложный.
 -   **PassengerFare.Commission.Amount** — абсолютное значение комиссии. Тип данных — дробное число.
