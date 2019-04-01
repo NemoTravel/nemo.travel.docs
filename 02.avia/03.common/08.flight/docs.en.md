@@ -123,6 +123,15 @@ Flight representation format 1.1.
 -   **PassengerFare.Tariffs.Tariff.FreeBaggage.Value** - amount of free baggage for this fare. Data type - string.
 -   **PassengerFare.Tariffs.Tariff.FareFamilyDescID** - ID of the fare families description. Data type - int.
 -   **PassengerFare.Tariffs.Tariff.FareFamilyCode** - fare family airline code. Data type - string.
+-   **Flight.PriceInfo.Price.PassengerFares.PassengerFare.Tariffs.Tariff.CarryOn** - contains information about carryon for this fare. Data type - array.
+-   **Flight.PriceInfo.Price.PassengerFares.PassengerFare.Tariffs.Tariff.CarryOn.Measure** - carryon measure unit. Data type - enumeration, possible values:
+    - **Kilograms** - kilos;
+    - **Pounds** - pounds;
+    - **Pieces** - bags;
+    - **SpecialCharge** - special charge;
+    - **Size** - baggage size;
+    - **Weight** - baggage weight.
+-   **PassengerFare.Tariffs.Tariff.CarryOn.Value** - amount of carryon for this fare. Data type - string.
 -   **PassengerFare.Commission** - information about the commission for this price component from GDS. Data type - array.
 -   **PassengerFare.Commission.Amount** - absolute value of the commission. Data type - fractional number.
 -   **PassengerFare.Commission.Percent** - commission value in percents. Data type - fractional number.
