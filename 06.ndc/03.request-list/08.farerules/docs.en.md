@@ -87,24 +87,25 @@ This section describes the contents of the request based on the NDC version 17.2
    </soapenv:Body>
 </soapenv:Envelope>
 ```
-#### Ответ
-В случае успеха, ответ содержит сведения от тарифных правилах и информацию по первому сегменту перелёта.
--	**Rules** - массив тарифных правил. Тип данных - массив.
--	**Rules.Departure** - сведения о сегменте отправления (обязательный). Тип данных - сложный.
--	**Rules.Departure.AirportCode** - 3-х буквенный IATA-код аэропорта отправления (обязательный). Тип данных — строка.
--	**Rules.Departure.Date** - дата вылета в формате YYYY-MM-DD (обязательный).
--	**Rules.Departure.Time** - время вылета в формате HH:MM (обязательный).
--	**Rules.Arrival** - сведения о сегменте прибытия (обязательный). Тип данных - сложный.
--	**Rules.Arrival.AirportCode** - 3-х буквенный IATA код аэропорта прибытия (обязательный). Тип данных — строка.
--	**Rules.Arrival.Date** - дата прибытия в формате YYYY-MM-DD (обязательный).
--	**Rules.Arrival.Time** - время прибытия в формате HH:MM (обязательный).
--	**Rules.FareBasisCode** - сведения о тарифе (обязательный). Тип данных - сложный.
--	**Rules.FareBasisCode.Code** - код тарифа, взятый из перелёта (обязательный). Тип данных — строка.
--	**Rules.AirlineID** - IATA код маркетингового или оперирующего перевозчика (обязательный). Тип данных - строка. 
--	**Rules.Rule** - содержит правила тарифа (обязательный). Тип данных - сложный.
--	**Rules.Rule.FareRuleCategory** - код секции тарифного правила (обязательный). Тип данных - строка.
--	**Rules.Text** - содержит код тарифа, его заголовок и текст тарифного правила (обязательный). Тип данных - строка.
+#### Response 
+If successful, the response contains information from the fare rules and information on the first segment of the flight.
+-    **Rules** - array of fare rules. Data type - array. 
+-    **Rules.Departure** - information on the departure segment (required). Data type - custom.
+-    **Rules.Departure.AirportCode** - 3 letter IATA airport departure code (required). Data type - string.
+-    **Rules.Departure.Date** - departure date in the format YYYY-MM-DD (required).
+-    **Rules.Departure.Time** - departure time in HH:MM format (required).
+-    **Rules.Arrival** - information on the arrival segment (required). Data type - custom.
+-    **Rules.Arrival.AirportCode** - 3 letter IATA airport arrival code (required). Data type - string.
+-    **Rules.Arrival.Date** - arrival date in the YYYY-MM-DD format  (required).
+-    **Rules.Arrival.Time** - arrival time in HH:MM format (required).
+-    **Rules.FareBasisCode** - fare information (mandatory). Data type - custom.
+-    **Rules.FareBasisCode.Code** - fare code taken from the flight (required). Data type - string.
+-    **Rules.AirlineID** - IATA code of a marketing or operating carrier (required). Data type - string.
+-    **Rules.Rule** - contains fare rules (required). Data type - custom.
+-    **Rules.Rule.FareRuleCategory** - fare rule section code (required). Data type - string.
+-    **Rules.Text** - contains the fare code, its title and the fare rule text (required). Data type - string.
 
+##### Sample
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
    <s:Header>
