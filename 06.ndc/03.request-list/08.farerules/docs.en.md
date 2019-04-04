@@ -8,7 +8,7 @@ FareRules returns the information on the fare rules.
 ##### Description
 The FareRules request allows the user to get the rules that apply to the fares of a particular flight in text form, for the user to familiarize with them or for other purposes.
 
-The operation is successful iif the following conditions are met: 
+The operation is successful if the following conditions are met: 
 - The ID of the requisites package (source) in which the flight was found was set.
 - Agency ID is specified in the request.
 - Provided information on the first segment of the flight.
