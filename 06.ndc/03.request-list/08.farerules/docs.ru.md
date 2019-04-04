@@ -108,7 +108,7 @@ FareRules возвращает информацию о тарифных прав
       <h:ResponseID xmlns:h="http://nemo.travel/AviaNDC" xmlns="http://nemo.travel/AviaNDC">144564186</h:ResponseID>
    </s:Header>
    <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-      <FareRulesRS Target="Test" Version="17.2" xmlns="http://www.iata.org/IATA/EDIST/2017.2">
+      <FareRulesRS Target="Prod" Version="17.2" xmlns="http://www.iata.org/IATA/EDIST/2017.2">
          <Document>
             <Name>NEMO NDC GATEWAY</Name>
             <ReferenceVersion>1.0</ReferenceVersion>
