@@ -36,7 +36,7 @@ All NDC requests and responses have a specific set of common basic elements.
     - **Source** - ID of the Nemo Connect requisites package;
     - **Tag** - one of the labels of the request sender, describing it in accordance with a certain criterion;
     - **SubAgencyID** - external subagency ID.
--  **Party.Sender.TravelAgencySender.AgencyID** - unique agency ID in the air service (required). Data type - positive integer.
+-  **Party.Sender.TravelAgencySender.AgencyID** - unique agency ID in the Nemo.travel (required). Data type - positive integer.
 -  **Party.Sender.TravelAgencySender.AgentUser** - unique agency user ID in Nemo Connect (optional). Data type - custom.
 -  **Party.Sender.TravelAgencySender.AgentUser.AgentUserID** - unique ID of the agency user in avia server (required). Data type - positive integer.
 
