@@ -52,8 +52,8 @@ Used to obtain airline schedule data.
 -  **Periods.Period** - container with period information. Data type - custom. 
 -  **Periods.Period.StartDate** - period start date. Data type - string. 
 -  **Periods.Period.EndDate** - period end date. Data type - string.
--  **Periods.Period.DaysOfWeek** - array with information on days of week. Data type - array.
--  **Periods.Period.DaysOfWeek.Day** - day of week. Data type - string. Possible values:
+-  **Periods.Period.DaysOfWeek** - array with information on days of the week. Data type - array.
+-  **Periods.Period.DaysOfWeek.Day** - day of the week. Data type - string. Possible values:
    - Sunday 
    - Monday 
    - Tuesday 
