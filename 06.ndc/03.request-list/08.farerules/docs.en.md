@@ -91,14 +91,14 @@ This section describes the contents of the request based on the NDC version 17.2
 If successful, the response contains information from the fare rules and information on the first segment of the flight.
 -    **Rules** - array of fare rules. Data type - array. 
 -    **Rules.Departure** - information on the departure segment (required). Data type - custom.
--    **Rules.Departure.AirportCode** - 3 letter IATA airport departure code (required). Data type - string.
+-    **Rules.Departure.AirportCode** - 3-letter IATA departure airport  code (required). Data type - string.
 -    **Rules.Departure.Date** - departure date in the format YYYY-MM-DD (required).
 -    **Rules.Departure.Time** - departure time in HH:MM format (required).
 -    **Rules.Arrival** - information on the arrival segment (required). Data type - custom.
--    **Rules.Arrival.AirportCode** - 3 letter IATA airport arrival code (required). Data type - string.
--    **Rules.Arrival.Date** - arrival date in the YYYY-MM-DD format  (required).
+-    **Rules.Arrival.AirportCode** - 3-letter IATA arrival airport code (required). Data type - string.
+-    **Rules.Arrival.Date** - arrival date in the YYYY-MM-DD format (required).
 -    **Rules.Arrival.Time** - arrival time in HH:MM format (required).
--    **Rules.FareBasisCode** - fare information (mandatory). Data type - custom.
+-    **Rules.FareBasisCode** - fare information (required). Data type - custom.
 -    **Rules.FareBasisCode.Code** - fare code taken from the flight (required). Data type - string.
 -    **Rules.AirlineID** - IATA code of a marketing or operating carrier (required). Data type - string.
 -    **Rules.Rule** - contains fare rules (required). Data type - custom.
