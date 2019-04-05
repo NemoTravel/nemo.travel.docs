@@ -52,7 +52,8 @@ taxonomy:
 -  **Periods.Period** - контейнер с информацией о периоде. Тип данных - сложный.
 -  **Periods.Period.StartDate** - дата начала периода. Тип данных - строка.
 -  **Periods.Period.EndDate** - дата окончания периода. Тип данных - строка.
--  **Periods.Period.DaysOfWeek** - дни недели. Тип данных - перечисление. Возможные значения:
+-  **Periods.Period.DaysOfWeek** - массив с информацией о днях недели. Тип данных - массив. 
+-  **Periods.Period.DaysOfWeek.Day** - день недели. Тип данных - строка. Возможные значения:
    - Sunday - Воскресенье
    - Monday - Понедельник
    - Tuesday - Вторник
@@ -61,18 +62,22 @@ taxonomy:
    - Friday - Пятница
    - Saturday - Суббота
 -  **Periods.Period.AircraftType** - тип воздушного судна. Тип данных - строка.
--  **Periods.Period.Classes** - классы обслуживания. Тип данных - перечисление. Возможные значения:
+-  **Periods.Period.Classes** - массив с информацией о классах обслуживания. Тип данных - массив.
+-  **Periods.Period.Class** - название класса. Тип данных - строка. Возможные значения: 
    - Economy - Эконом-класс
    - Business - Бизнес-класс
    - First - Первый класс
    - PremiumEconomy - Премиум эконом-класс
 -  **Periods.Period.Segments** - контейнер с сегментами перелета. Тип данных - сложный.
 -  **Periods.Period.Segments.Segment** - контейнер с информацией о сегменте. Тип данных - сложный.
--  **Segment.TripPoint** - контейнер с информацией об аэропорте/городе. Тип данных - сложный. Возможные значения:
-   - Code - код аэропорта
-   - CityCode - код города
+-  **Segment.TripPoint** - контейнер с информацией об аэропорте/городе. Тип данных - сложный. 
+-  **Segment.TripPoint.Code** - код аэропорта. Тип данных - строка.
+-  **Segment.TripPoint.CityCode** - код города. Тип данных - строка.
+-  **Segment.DepartureTime** - время вылета в формате hh:mm.
+-  **Segment.DepartureDateOffset** - смещение по часовым поясам относительно даты вылета. 
+-  **Segment.RegistrationType** - форма регистрации. Тип данных - строка. 
 
-##### Пример
+#### Пример
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
