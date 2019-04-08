@@ -29,7 +29,7 @@ This section describes the contents of the request based on the NDC version 17.2
 -    **Query.Departure.AirportCode** - 3-letter IATA departure airport code (required). Data type - string.
 -    **Query.Departure.Date** - departure date in the YYYY-MM-DD format  (required).
 -    **Query.Departure.Time** - departure time in HH:MM format (required).
--    **Query.Arrival** - information about the segment of departure (mandatory). Data type - custom. 
+-    **Query.Arrival** - information about the segment of departure (required). Data type - custom. 
 -    **Query.Arrival.AirportCode** - 3-letter IATA arrival airport code (required). Data type - string.
 -    **Query.Arrival.Date** - arrival date in the YYYY-MM-DD format  (required).
 -    **Query.Arrival.Time** - departure time in HH:MM format (required).
