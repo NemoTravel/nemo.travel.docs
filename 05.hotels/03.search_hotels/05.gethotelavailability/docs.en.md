@@ -83,6 +83,7 @@ title: 'GetHotelAvailability Request'
 -   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.DeadLine** - deadline for canceling your reservation without penalty. The time zone is UTC. Data type - string.
 -   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.PercentValue** - penalty value in percent. Data type - unsigned 32-bit integer.
 -   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.AbsoluteValue** - the value of the penalty in the specified currency. Data type - unsigned 32-bit integer.
+-   **RoomRatesGroup.Rate.FreeCount** - shows the number of rooms available for sale (sold only at the Bronevik supplier, not mandatory). Data type - unsigned 32-bit integer.
 -   **RoomsGroup** - contains information on various room options. Data type - custom.
 -   **RoomsGroup.Room** - container with room parameters IDs. Data type - custom.
 -   **RoomsGroup.Room.ID** - room ID. Data type - unsigned 32-bit integer.
@@ -184,6 +185,7 @@ title: 'GetHotelAvailability Request'
                      <b:CancellationRules>
                         <b:RuleId>0</b:RuleId>
                      </b:CancellationRules>
+                     <b:FreeCount>2</b:FreeCount>
                   </b:Rate>
                </b:RoomRatesGroup>
                <b:RoomsGroup>
