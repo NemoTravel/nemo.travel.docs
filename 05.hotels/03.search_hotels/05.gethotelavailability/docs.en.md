@@ -70,6 +70,7 @@ title: 'GetHotelAvailability Request'
 -   **RoomRatesGroup** - contains information on the cost of rooms. Data type - custom.
 -   **RoomRatesGroup.Rate** - container with information on the cost and rate. Data type - custom.
 -   **RoomRatesGroup.Rate.ID** - rate identifier within this search result. Data type - unsigned integer 32-bit number.
+-   **RoomRatesGroup.Rate.DiscountID** - corporate hotel code. Data type - string.
 -   **RoomRatesGroup.Rate.Price** - container with currency information. Data type - custom.
 -   **RoomRatesGroup.Rate.Price.Amount** - the amount of the base price. Data type - fractional number.
 -   **RoomRatesGroup.Rate.Price.Currency** - currency code of the base price. Data type - string.
