@@ -73,10 +73,15 @@ Used to obtain airline schedule data.
 -  **Periods.Period.Segments.Segment** - container with segment information. Data type - custom.
 -  **Segment.TripPoint** - container with information about the airport/city. Data type - custom.
 -  **Segment.TripPoint.Code** - airport code. Data type - string.
+-  **Segment.TripPoint.SubPointCode** - terminal code. Data type - string.
 -  **Segment.TripPoint.CityCode** - city code. Data type - string.
--  **Segment.DepartureTime** - время вылета в формате hh:mm. departure time in hh:mm format. 
+-  **Segment.TripPoint.UTC** - timezone. Data type - fractioanl number.
+-  **Segment.ArrivalTime** - arrival time in hh:mm format.
+-  **Segment.ArrivalDateOffset** - timezone offset in relation to the arrival date.
+-  **Segment.DepartureTime** - departure time in hh:mm format. 
 -  **Segment.DepartureDateOffset** - timezone offset in relation to the departure date. 
 -  **Segment.RegistrationType** - registration type. Data type - string. 
+
 
 #### Sample
 
