@@ -68,6 +68,7 @@ Used to obtain airline schedule data.
    - Business
    - First
    - PremiumEconomy
+-  **Periods.Period.CodeSharing** - information on code share agreements. Data type - string.
 -  **Periods.Period.Segments** - container with flight segments. Data type - custom.
 -  **Periods.Period.Segments.Segment** - container with segment information. Data type - custom.
 -  **Segment.TripPoint** - container with information about the airport/city. Data type - custom.
