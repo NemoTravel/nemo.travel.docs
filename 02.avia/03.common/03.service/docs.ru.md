@@ -54,7 +54,7 @@ taxonomy:
     -   **DoubleOJ** — двойной Open Jaw;
     -   **hRT** — RT/2;
     -   **mOW** — перелёт является возможным плечом мультиOW перелёта.
--   **Segments** — сегменты перелёта. Тип данных — массив элементов [FlightSegment](/avia/grouping/flightsegment).
+-   **Segments** — сегменты перелёта. Тип данных — массив элементов FlightSegment.
 -   **FlightSegment** — сегмент перелёт. Тип данных — массив.
 -   **FlightSegment.ID** — идентификатор сегмента в рамках данного перелёта. Тип данных — целое 32-битное число.
 -   **FlightSegment.DepatureAirport** — информация об аэропорте отправления. Тип данных — TripPointInformation:
