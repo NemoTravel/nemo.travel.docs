@@ -68,6 +68,7 @@ taxonomy:
    - Business - Бизнес-класс
    - First - Первый класс
    - PremiumEconomy - Премиум эконом-класс
+-  **Periods.Period.CodeSharing** - информация о code share соглашениях. Тип данных - строка. 
 -  **Periods.Period.Segments** - контейнер с сегментами перелета. Тип данных - сложный.
 -  **Periods.Period.Segments.Segment** - контейнер с информацией о сегменте. Тип данных - сложный.
 -  **Segment.TripPoint** - контейнер с информацией об аэропорте/городе. Тип данных - сложный. 
