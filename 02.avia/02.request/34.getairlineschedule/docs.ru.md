@@ -73,10 +73,14 @@ taxonomy:
 -  **Periods.Period.Segments.Segment** - контейнер с информацией о сегменте. Тип данных - сложный.
 -  **Segment.TripPoint** - контейнер с информацией об аэропорте/городе. Тип данных - сложный. 
 -  **Segment.TripPoint.Code** - код аэропорта. Тип данных - строка.
+-  **Segment.TripPoint.SubPointCode** - код терминала. Тип данных - строка.  
 -  **Segment.TripPoint.CityCode** - код города. Тип данных - строка.
+-  **Segment.TripPoint.UTC** - часовой пояс. Тип данных — дробное число.
+-  **Segment.ArrivalTime** - время прибытия в формате hh:mm.
+-  **Segment.ArrivalDateOffset** - смещение по часовым поясам относительно даты прибытия.
 -  **Segment.DepartureTime** - время вылета в формате hh:mm.
 -  **Segment.DepartureDateOffset** - смещение по часовым поясам относительно даты вылета. 
--  **Segment.RegistrationType** - форма регистрации. Тип данных - строка. 
+-  **Segment.RegistrationType** - форма регистрации. Тип данных - строка.
 
 #### Пример
 
