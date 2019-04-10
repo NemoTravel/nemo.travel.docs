@@ -53,7 +53,7 @@ The description of the flight
     -   **DoubleOJ** - double open jaw
     -   **hRT** - RT/2
     -   **mOW** - flight is a possible leg of a multi-OW flight 
--   **Segments** - flight segments. Data type - array of [FlightSegment](/avia/grouping/flightsegment) elements.
+-   **Segments** - flight segments. Data type - array of FlightSegment elements.
 -   **FlightSegment** - flight segment. Data type - array.
 -   **FlightSegment.ID** - ID of the segment within this flight. Data type - int32.
 -   **FlightSegment.DepatureAirport** - information about the departure airport. Data type - TripPointInformation.
