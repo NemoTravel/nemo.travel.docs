@@ -258,10 +258,10 @@ taxonomy:
 * **data.documents.ID_TKT_N.info** — container with additional information on the given N-th e-ticket. Data type - custom.
 * **data.documents.ID_TKT_N.info.pricingInfos** — list of estimations associated with this N-th e-ticket. Data type - array of strings.
 * **data.documents.ID_TKT_N.info.endorsements** — endorsements linked to this N-th e-ticket. Data type - string.
-* **data.сurrencyRates** — list of exchange rates. Data type - custom.
-* **data.сurrencyRates.[N]** —  container with information on the N-th currency. Data type - custom.
-* **data.сurrencyRates.[N].currencyCode** — code of the N-th currency. Data type - string.
-* **data.сurrencyRates.[N].rate** — rate of the N-th currency towards the currency of the agency Nemo.Travel. Data type - fractional number.
+* **data.currencyRates** — list of exchange rates. Data type - custom.
+* **data.currencyRates.[N]** —  container with information on the N-th currency. Data type - custom.
+* **data.currencyRates.[N].currencyCode** — code of the N-th currency. Data type - string.
+* **data.currencyRates.[N].rate** — rate of the N-th currency towards the currency of the agency Nemo.Travel. Data type - fractional number.
 * **data.linkedOrders** — container with information on the related orders. Data type - custom.
 * **data.linkedOrders.splitted** — ID of the associated order in the Nemo.Travel system. Data type - 64-bit integer.
 * **data.multiOrderEnvelope** — multi-order ID in the Nemo.Travel system. Data type - 64-bit integer.
