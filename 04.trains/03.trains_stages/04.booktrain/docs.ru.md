@@ -281,6 +281,7 @@ title: 'Бронирование мест в поезде'
 -   **Car.Number** - Номер вагона. Тип данных - строка.
 -   **Car.BethClothesSelectionInd** - 
 -   **Car.ERChangeAllowedDuringBooking** - 
+-   **Car.HasNonRefundableTariffs** - признак не возвратного тарифа. Тип данных - булев.
 -   **Car.PlacePrice** - контейнер для информации о цене мест определенного типа в вагоне. Тип данных - сложный.
 -   **Car.PlacePrice.Amount** - цена за место. Тип данных - дробное число.
 -   **Car.PlacePrice.Places** - список мест, относящихся к данному типу, через запятую. Тип данных - строка.
