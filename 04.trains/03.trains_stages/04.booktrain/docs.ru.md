@@ -10,9 +10,6 @@ title: 'Бронирование мест в поезде'
 -   **CatID** - Идентификатор категории в поезде. Тип данных - целое 32-битное число.
 -   **CarNum** - Номер вагона. Тип данных - целое 32-битное число.
 -   **Language** - Язык. Тип данных - строка.
--   **Requisites** -
--   **Requisites.NemoOneAuthToken** - 
--   **Requisites.UserContextId** - 
 -   **DelayedPayment** - 
 -   **InternationalServiceClass** -
 -   **SeatsPref** - Условия предпочитаемых мест. Тип данных - сложный.
