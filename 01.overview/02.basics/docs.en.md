@@ -51,8 +51,8 @@ Main elements of any response.
 * **Errors.Error.AdditionalInfo** - contains various additional information about the error (optional). Data type - custom.
 * **Errors.Error.AdditionalInfo.InfoItem** - single additional error information (optional).  Data type - custom.
 * **Errors.Error.AdditionalInfo.InfoItem.InfoKey** - additional information type (optional). Data type - enumeration, possible values:
-  * **Errors.Error.AdditionalInfo.InfoItem.InfoValue** - additional information about the error (optional). Data type - string.
   * **SegmentsStatus** - information about the segment statuses with the invalid status of one of them when booking (optional). It is transferred in the <syntaxhighlight lang="text" enclose="none" style="font-size: 1.2em; padding: 0 3px; background: #F0F0F0; border: 1px dashed #2F6FAB;">segment_number:segment_status,segment_number:segment_status</syntaxhighlight> format, and so on by the number of segments where "," separates information about different segments, and ":" separates the number (numbered from 0) and the status of this segment.
+* **Errors.Error.AdditionalInfo.InfoItem.InfoValue** - additional information about the error (optional). Data type - string.
 
 ##### Warnings
 
