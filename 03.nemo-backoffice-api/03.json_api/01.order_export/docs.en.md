@@ -168,10 +168,12 @@ taxonomy:
 * **data.products.ID_TRN_N.segments.ID_SEG_N.choosenRange.end** - end of the seat range. Data type - string.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.departure** — container with information on the departure point. Data type - custom.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.departure.date** — departure time. Data type - string.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.departure.station** — departure station code. Data type - string.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.departure.station** — departure station name. Data type - string.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.departure.code** — departure station code. Data type - string.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.arrival**— container with information on the arrival point. Data type - custom.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.arrival.date** — arrival time. Data type - string.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.arrival.station** — arrival station code. Data type - string.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.arrival.station** — arrival station name. Data type - string.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.arrival.code** — arrival station code. Data type - string.
 * **data.products.ID_TRN_N.pricingInfo** — container with information on the itinerary estimation. Data type - custom.
 * **data.products.ID_TRN_N.pricingInfo.ID_PCG_N** — container with information on the N-th itinerary estimation. Data type - custom.
 * **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare** — container with fare information. Data type - custom.
@@ -255,6 +257,7 @@ taxonomy:
 * **data.documents.ID_TKT_N.status** — e-ticket status. Data type - string.
 * **data.documents.ID_TKT_N.passenger** — passenger ID (ID_PAS_N) to which the given N-th electronic ticket is associated. Data type - string.
 * **data.documents.ID_TKT_N.product** — ID of the service to which the given N-th e-ticket is attached. Data type - string.
+* **data.documents.ID_TKT_N.blankId** - unique order ID. Data type - string. 
 * **data.documents.ID_TKT_N.info** — container with additional information on the given N-th e-ticket. Data type - custom.
 * **data.documents.ID_TKT_N.info.pricingInfos** — list of estimations associated with this N-th e-ticket. Data type - array of strings.
 * **data.documents.ID_TKT_N.info.endorsements** — endorsements linked to this N-th e-ticket. Data type - string.
