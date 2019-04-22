@@ -175,10 +175,12 @@ taxonomy:
 * **data.products.ID_TRN_N.segments.ID_SEG_N.choosenRange.end** - конец диапазона мест. Тип данных — строка.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.departure** — контейнер с информацией о пункте отправления. Тип данных — сложный.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.departure.date** — время отправления. Тип данных — строка.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.departure.station** — код станции отправления. Тип данных — строка.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.departure.station** — название станции отправления. Тип данных — строка.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.departure.code** — код станции отправления. Тип данных — строка.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.arrival**— контейнер с информацией о пункте прибытия. Тип данных — сложный.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.arrival.date** — время прибытия. Тип данных — строка.
-* **data.products.ID_TRN_N.segments.ID_SEG_N.arrival.station** — код станции прибытия. Тип данных — строка.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.arrival.station** — название станции прибытия. Тип данных — строка.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.arrival.code** — код станции прибытия. Тип данных — строка.
 * **data.products.ID_TRN_N.pricingInfo** — контейнер с информацией об оценке маршрута. Тип данных — сложный.
 * **data.products.ID_TRN_N.pricingInfo.ID_PCG_N** — контейнер с информацией об N-й оценке маршрута. Тип данных — сложный.
 * **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare** — контейнер с информацией о тарифах.Тип данных — сложный.
@@ -262,6 +264,7 @@ taxonomy:
 * **data.documents.ID_TKT_N.status** — статус электронного билета. Тип данных — строка.
 * **data.documents.ID_TKT_N.passenger** — идентификатор пассажира (ID_PAS_N) к которому привязан данный N-й электронный билет. Тип данных — строка.
 * **data.documents.ID_TKT_N.product** — идентификатор услуги к которой привязан данный N-й электронный билет.  Тип данных — строка.
+* **data.documents.ID_TKT_N.blankId** — уникальный идентификатор заказа. Тип данных — строка.
 * **data.documents.ID_TKT_N.info** — контейнер с дополнительной информацией о данном N-м электронном билете. Тип данных — сложный.
 * **data.documents.ID_TKT_N.info.pricingInfos** — список оценок привязанных к данному N-му электронному билету. Тип данных — массив строк.
 * **data.documents.ID_TKT_N.info.endorsements** — эндорсменты привязанные к данному N-му электронному билету. Тип данных — строка.
