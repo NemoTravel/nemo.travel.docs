@@ -29,7 +29,7 @@ Contains the full information about the price and its formation for the booking 
     -   PenaltiesApplies
 -   **PricePart.PrivateFareInd** - attribute of the presence of private fares in the price formation. Data type - bool.
 -   **PricePart.PassengerTypePriceBreakdown** - validating carrier. Data type - PassengerTypePrice array.
--   **PricePart.AgencyMarkup** - amount of charge for the whole flight. Data type - [Money](/avia/common/money).
+-   **PricePart.AgencyMarkup** - amount of charge for the whole flight. Data type - [Money](/avia/common/money). For requests of version 2_2 and higher, all the paremeters beginning with AgencyMarkup are returned in the [AgencyPrice](/avia/common/agencyprice) element.
 -   **PricePart.ChargeBreakdown** -  breakdown of charge components according to pricing rules. Data type - [ChargeBreakdown](/avia/common/chargebreakdown).
 -   **PricePart.PricingDebug.RulesDebugInfo** - list of results of pricing rules checking. Data type - array.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData** - result of pricing rule checking. Data type - array.
