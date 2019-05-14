@@ -417,7 +417,7 @@ taxonomy:
                      "arrival":"2019-07-29T08:40:00.000Z"
                   },
                   "marketingAirline":"N7",
-                  "flightNumber":"264",
+                  "flightNumber":"123",
                   "operatingAirline":"HG",
                   "eticket":true,
                   "RBD":"D",
@@ -443,15 +443,15 @@ taxonomy:
                         "pricingType":"ADT",
                         "passCount":1,
                         "baseFare":{
-                           "amount":"34000.00",
+                           "amount":"22800.00",
                            "currency":"RUB"
                         },
                         "equiveFare":{
-                           "amount":"34000.00",
+                           "amount":"22800.00",
                            "currency":"RUB"
                         },
                         "totalFare":{
-                           "amount":"36554.00",
+                           "amount":"22800.00",
                            "currency":"RUB"
                         },
                         "passengers":[
@@ -474,7 +474,7 @@ taxonomy:
                            {
                               "code":"YR",
                               "tax":{
-                                 "amount":"2100.00",
+                                 "amount":"2280.00",
                                  "currency":"RUB"
                               },
                               "type":null
@@ -490,7 +490,7 @@ taxonomy:
                            {
                               "code":"RI",
                               "tax":{
-                                 "amount":"354.00",
+                                 "amount":"322.00",
                                  "currency":"RUB"
                               },
                               "type":null
@@ -511,13 +511,13 @@ taxonomy:
                "currency":"RUB",
                "components":{
                   "ID_FLT_1":{
-                     "amount":"36554.00",
+                     "amount":"22800.00",
                      "currency":"RUB"
                   }
                }
             },
             "charges":{
-               "amount":"1463.00",
+               "amount":"1488.00",
                "currency":"RUB",
                "components":{
                   "agencyProfit":{
@@ -551,7 +551,7 @@ taxonomy:
                      }
                   },
                   "subagencyProfit":{
-                     "amount":"1463.00",
+                     "amount":"1488.00",
                      "currency":"RUB"
                   },
                   "gatewayProfit":{
@@ -564,9 +564,9 @@ taxonomy:
       },
       "payments":{
          "ID_PAY_1":{
-            "id":"119744056",
+            "id":"123456789",
             "gatewayId":"5",
-            "methodId":2670,
+            "methodId":1234,
             "name":"\u0414\u0435\u043f\u043e\u0437\u0438\u0442 \u0441\u0443\u0431\u0430\u0433\u0435\u043d\u0442\u0430",
             "status":"refunded",
             "paymentDate":"2019-04-24T11:42:08.000Z",
@@ -575,7 +575,7 @@ taxonomy:
                "currency":"RUB"
             },
             "moneyFixed":{
-               "amount":"38017.00",
+               "amount":"22800.00",
                "currency":"RUB"
             }
          }
@@ -609,10 +609,10 @@ taxonomy:
          "exchangeClaims":[
             {
                "data":{
-                  "id":9674931,
-                  "expertUserId":336924,
+                  "id":1234567,
+                  "expertUserId":1234567,
                   "price":{
-                     "amount":"-38017.00",
+                     "amount":"-22800.00",
                      "currency":"RUB"
                   },
                   "selectedElements":[
@@ -630,10 +630,10 @@ taxonomy:
          "returnClaims":[
             {
                "data":{
-                  "id":9632194,
-                  "expertUserId":336924,
+                  "id":1234567,
+                  "expertUserId":1234567,
                   "price":{
-                     "amount":"-56508.00",
+                     "amount":"-22800.00",
                      "currency":"RUB"
                   },
                   "selectedElements":[
