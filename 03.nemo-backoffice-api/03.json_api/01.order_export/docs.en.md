@@ -591,8 +591,8 @@ taxonomy:
          "exchangeClaims":[
             {
                "data":{
-                  "id":9674931,
-                  "expertUserId":336924,
+                  "id":1234567,
+                  "expertUserId":1234567,
                   "price":{
                      "amount":"-22800.00",
                      "currency":"RUB"
@@ -612,8 +612,8 @@ taxonomy:
          "returnClaims":[
             {
                "data":{
-                  "id":9632194,
-                  "expertUserId":336924,
+                  "id":1234567,
+                  "expertUserId":1234567,
                   "price":{
                      "amount":"-22800.00",
                      "currency":"RUB"
