@@ -139,6 +139,35 @@ taxonomy:
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax.amount** — размер таксы. Тип данных — строка.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax.currency** — код валюты таксы. Тип данных — строка.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].type** — тип таксы. Тип данных — строка.
+* **data.products.ID_HTL_N** — контейнер с информацией об N-м отеле. Тип данных — сложный. 
+* **data.products.ID_HTL_N.info** — контейнер с информацией о данном отеле. Тип данных — сложный.
+* **data.products.ID_HTL_N.info.nemo** — контейнер с информацией об отеле из Nemo.Travel. Тип данных — сложный. 
+* **data.products.ID_HTL_N.info.nemo.flightId** — идентификатор перелёта. Тип данных — целое 64-битное число.
+* **data.products.ID_HTL_N.info.nemo.searchId** — идентификатор поиска. Тип данных — целое 64-битное число.
+* **data.products.ID_HTL_N.info.nemo.status** — статус отельной брони. Тип данных — строка.
+* **data.products.ID_HTL_N.info.nemoConnect.system** — инстанс, к которому принадлежит отель. Тип данных — строка.
+* **data.products.ID_HTL_N.info.nemoConnect.id** — идентификатор объекта выгрузки Nemo.Connect. Тип данных — целое 64-битное число.
+* **data.products.ID_HTL_N.info.nemoConnect.status** — статус отельной брони. Тип данных — строка.
+* **data.products.ID_HTL_N.info.supplier** — контейнер с информацией о поставщике. Тип данных — сложный.
+* **data.products.ID_HTL_N.info.supplier.system** — наименование поставщика. Тип данных — строка.
+* **data.products.ID_HTL_N.info.supplier.id** — идентификатор у поставщика. Тип данных — строка.
+* **data.products.ID_HTL_N.dates** — контейнер с информацией по датам. Тип данных — сложный.
+* **data.products.ID_HTL_N.dates.creation** — время создания заказа. Тип данных — строка.
+* **data.products.ID_HTL_N.dates.booking** — время бронирования заказа. Тип данных — строка.
+* **data.products.ID_HTL_N.dates.ticketing** — время выписки заказа. Тип данных — строка.
+* **data.products.ID_HTL_N.dates.void** — время войдирования заказа. Тип данных — строка.
+* **data.products.ID_HTL_N.dates.cancellation** — время аннулирования заказа. Тип данных — строка. 
+* **data.products.ID_HTL_N.rooms** — контейнер с информацией о комнатах. Тип данных — сложный. 
+* **data.products.ID_HTL_N.rooms.number** — тип (название) номера. Тип данных - строка.
+* **data.products.ID_HTL_N.rooms.meal** — информация о типе питания. Тип данных — строка. 
+* **data.products.ID_HTL_N.rooms.rates** — информация о тарифе. Тип данных — строка. 
+* **data.products.ID_HTL_N.rooms.canelRules** — контейнер с информацией о правилах отмены заказа. 
+* **data.products.ID_HTL_N.rooms.canelRules.id** — ID комнаты, для которой применяется правило отмены . Тип данных — строка. 
+* **data.products.ID_HTL_N.rooms.canelRules.dealine** — дата, с которой нацинаются штрафа за возврат. Тип данных - строка, в формате yyyy-mm-ddThh:mm:ss.
+* **data.products.ID_HTL_N.rooms.canelRules.percentValue** — значение штрафа за возврат в процентах. Тип данных - строка.
+* **data.products.ID_HTL_N.rooms.canelRules.absoluteValue** — контейнер с информацией о штрафах за возврат. Тип данных - сложный.
+* **data.products.ID_HTL_N.rooms.canelRules.absoluteValue.amount** — сумма штрафа. Тип данных - строка.
+* **data.products.ID_HTL_N.rooms.canelRules.absoluteValue.currency** — код валюты штрафа. Тип данных - строка.
 * **data.products.ID_EXT_N** — контейнер с информацией о дополнительных услугах. Тип данных — сложный.
 * **data.products.ID_EXT_N.type** — тип дополнительной услуги. Тип данных — строка.
 * **data.products.ID_EXT_N.insurances** — массив из страховых услуг, в которых содержится информация о пассажире и его номере страховки. Тип данных - Сложный.
