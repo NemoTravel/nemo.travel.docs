@@ -142,7 +142,7 @@ taxonomy:
 * **data.products.ID_HTL_N** — контейнер с информацией об N-м отеле. Тип данных — сложный. 
 * **data.products.ID_HTL_N.info** — контейнер с информацией о данном отеле. Тип данных — сложный.
 * **data.products.ID_HTL_N.info.nemo** — контейнер с информацией об отеле из Nemo.Travel. Тип данных — сложный. 
-* **data.products.ID_HTL_N.info.nemo.flightId** — идентификатор перелёта. Тип данных — целое 64-битное число.
+* **data.products.ID_HTL_N.info.nemo.hotelId** — идентификатор отеля. Тип данных — целое 64-битное число.
 * **data.products.ID_HTL_N.info.nemo.searchId** — идентификатор поиска. Тип данных — целое 64-битное число.
 * **data.products.ID_HTL_N.info.nemo.status** — статус отельной брони. Тип данных — строка.
 * **data.products.ID_HTL_N.info.nemoConnect.system** — инстанс, к которому принадлежит отель. Тип данных — строка.
