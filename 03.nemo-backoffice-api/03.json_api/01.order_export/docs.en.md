@@ -135,6 +135,35 @@ taxonomy:
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax.amount** — tax size. Data type - string.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax.currency** — tax currency code. Data type - string.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].type** — tax type. Data type - string.
+* **data.products.ID_HTL_N** — container with information on the Nth hotel. Data type - custom. 
+* **data.products.ID_HTL_N.info** — container with information on this hotel. Data type - custom. 
+* **data.products.ID_HTL_N.info.nemo** — container with information on the hotel from Nemo.Travel. Data type - custom. 
+* **data.products.ID_HTL_N.info.nemo.hotelId** — hotel ID. Data type - 64-bit integer.
+* **data.products.ID_HTL_N.info.nemo.searchId** — search ID. Data type - 64-bit integer.
+* **data.products.ID_HTL_N.info.nemo.status** — hotel booking status. Data type - string.
+* **data.products.ID_HTL_N.info.nemoConnect.system** — instance to which the hotel applies. Data type - string.
+* **data.products.ID_HTL_N.info.nemoConnect.id** — ID of the Nemo.Connect unload object. Data type - 64-bit integer.
+* **data.products.ID_HTL_N.info.nemoConnect.status** — hotel booking status. Data type - string.
+* **data.products.ID_HTL_N.info.supplier** — container with information on the supplier. Data type - custom.
+* **data.products.ID_HTL_N.info.supplier.system** — supplier name. Data type - string.
+* **data.products.ID_HTL_N.info.supplier.id** — supplier’s ID. Data type - string.
+* **data.products.ID_HTL_N.dates** — container wtih date information. Data type - custom.
+* **data.products.ID_HTL_N.dates.creation** — order creation time. Data type - string.
+* **data.products.ID_HTL_N.dates.booking** — order booking time. Data type - string.
+* **data.products.ID_HTL_N.dates.ticketing** — order ticketing time. Data type - string.
+* **data.products.ID_HTL_N.dates.void** — order void time. Data type - string.
+* **data.products.ID_HTL_N.dates.cancellation** — order cancellation time. Data type - string.
+* **data.products.ID_HTL_N.rooms** — container with room information. Data type - custom.
+* **data.products.ID_HTL_N.rooms.number** — room type (name). Data type - string.
+* **data.products.ID_HTL_N.rooms.meal** — information on the meal type. Data type - string.
+* **data.products.ID_HTL_N.rooms.rates** — rate information. Data type - string.
+* **data.products.ID_HTL_N.rooms.canelRules** — container with information on the order cancellation rules. Data type - custom.
+* **data.products.ID_HTL_N.rooms.canelRules.id** — ID of the room for which a cancellation rule applies. Data type - string.
+* **data.products.ID_HTL_N.rooms.canelRules.dealine** — date from which the cancellation penalty takes effect. Data type - string, the format is yyyy-mm-ddThh:mm:ss.
+* **data.products.ID_HTL_N.rooms.canelRules.percentValue** — cancellation penalty value in percent. Data type - string.
+* **data.products.ID_HTL_N.rooms.canelRules.absoluteValue** — container with information on cancellation penalties. Data type - custom.
+* **data.products.ID_HTL_N.rooms.canelRules.absoluteValue.amount** — penalty amount. Data type - string.
+* **data.products.ID_HTL_N.rooms.canelRules.absoluteValue.currency** — penalty currency code. Data type - string.
 * **data.products.ID_EXT_N** — container with information on the additional services. Data type - custom.
 * **data.products.ID_EXT_N.type** — additional service type. Data type - string.
 * **data.products.ID_TRN_N** — container with information on the N-th order. Data type - custom.
