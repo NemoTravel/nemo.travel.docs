@@ -163,7 +163,7 @@ taxonomy:
 * **data.products.ID_HTL_N.rooms.rates** — информация о тарифе. Тип данных — строка. 
 * **data.products.ID_HTL_N.rooms.canelRules** — контейнер с информацией о правилах отмены заказа. 
 * **data.products.ID_HTL_N.rooms.canelRules.id** — ID комнаты, для которой применяется правило отмены . Тип данных — строка. 
-* **data.products.ID_HTL_N.rooms.canelRules.dealine** — дата, с которой нацинаются штрафа за возврат. Тип данных - строка, в формате yyyy-mm-ddThh:mm:ss.
+* **data.products.ID_HTL_N.rooms.canelRules.dealine** — дата, с которой вступают в силу штрафы за возврат. Тип данных - строка, в формате yyyy-mm-ddThh:mm:ss.
 * **data.products.ID_HTL_N.rooms.canelRules.percentValue** — значение штрафа за возврат в процентах. Тип данных - строка.
 * **data.products.ID_HTL_N.rooms.canelRules.absoluteValue** — контейнер с информацией о штрафах за возврат. Тип данных - сложный.
 * **data.products.ID_HTL_N.rooms.canelRules.absoluteValue.amount** — сумма штрафа. Тип данных - строка.
