@@ -209,7 +209,7 @@ taxonomy:
           </ns2:DataItems>
         </ns1:RequestBody>
       </ns2:Request>
-    </ns2:BookFlight_2_1>
+    </ns2:BookFlight_2_2>
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
