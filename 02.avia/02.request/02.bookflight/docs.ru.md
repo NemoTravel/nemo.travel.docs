@@ -225,8 +225,8 @@ taxonomy:
 <?xml version="1.0"?>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
   <s:Body>
-    <BookFlight_2_1Response xmlns="http://nemo-ibe.com/Avia">
-      <BookFlight_2_1Result xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <BookFlight_2_2Response xmlns="http://nemo-ibe.com/Avia">
+      <BookFlight_2_2Result xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
         <a:RequestID>11057350042</a:RequestID>
         <a:ResponseBody>
           <a:ID>1438774</a:ID>
@@ -438,8 +438,8 @@ taxonomy:
             </a:DataItem>
           </a:DataItems>
         </a:ResponseBody>
-      </BookFlight_2_1Result>
-    </BookFlight_2_1Response>
+      </BookFlight_2_2Result>
+    </BookFlight_2_2Response>
   </s:Body>
 </s:Envelope>
 ```
