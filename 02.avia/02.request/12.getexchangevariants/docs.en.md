@@ -35,6 +35,7 @@ To exchange all segments for a completely new flight, you do not need to indicat
         <ns1:Requisites>
           <ns1:Login>LOGIN</ns1:Login>
           <ns1:Password>PASSWORD</ns1:Password>
+          <ns1:UserContextId>111111</ns1:UserContextId>
         </ns1:Requisites>
         <ns1:UserID>30328</ns1:UserID>
         <ns1:RequestBody>
