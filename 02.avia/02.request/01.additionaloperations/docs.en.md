@@ -155,8 +155,8 @@ Includes the set of elements caused by operstion in the request:
 <?xml version="1.0"?>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
   <s:Body>
-    <AdditionalOperations_1_1Response xmlns="http://nemo-ibe.com/Avia">
-      <AdditionalOperations_1_1Result xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <AdditionalOperations_1_2Response xmlns="http://nemo-ibe.com/Avia">
+      <AdditionalOperations_1_2Result xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
         <a:RequestID>11858526744</a:RequestID>
         <a:ResponseBody>
           <ObjectForOperations>
@@ -577,8 +577,8 @@ Includes the set of elements caused by operstion in the request:
             </FareFamiliesDescription>
           </ActualizedFlight>
         </a:ResponseBody>
-      </AdditionalOperations_1_1Result>
-    </AdditionalOperations_1_1Response>
+      </AdditionalOperations_1_2Result>
+    </AdditionalOperations_1_2Response>
   </s:Body>
 </s:Envelope>
 ```
