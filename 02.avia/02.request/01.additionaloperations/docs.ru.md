@@ -72,7 +72,7 @@ taxonomy:
           <ns2:OperationsRestrictions/>
         </ns1:RequestBody>
       </ns2:Request>
-    </ns2:AdditionalOperations_1_1>
+    </ns2:AdditionalOperations_1_2>
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
