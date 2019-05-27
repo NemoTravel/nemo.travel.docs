@@ -46,7 +46,7 @@ Sample with PNRParams assums the use of BookID=0.
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
   <SOAP-ENV:Body>
-    <ns2:GetBook>
+    <ns2:GetBook_2_2>
       <ns2:Request>
         <ns1:Requisites>
           <ns1:Login>LOGIN</ns1:Login>
@@ -62,7 +62,7 @@ Sample with PNRParams assums the use of BookID=0.
          </ns1:PNRParams>
         </ns1:RequestBody>
       </ns2:Request>
-    </ns2:GetBook>
+    </ns2:GetBook_2_2>
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
