@@ -38,7 +38,7 @@ OrderReshop предоставляет возможность получения
       <ns:Party>
         <ns:Sender>
           <ns:TravelAgencySender>
-            <ns:AgencyID>10185</ns:AgencyID>
+            <ns:AgencyID>***</ns:AgencyID>
           </ns:TravelAgencySender>
         </ns:Sender>
       </ns:Party>
