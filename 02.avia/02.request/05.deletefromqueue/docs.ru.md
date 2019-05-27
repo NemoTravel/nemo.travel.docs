@@ -41,5 +41,34 @@ title: DeleteFromQueue
 - **.BookQueueInfo.UnnamedQueues** - список номеров неименованных очередей, из которых требуется удалить бронь (необязательный). Тип данных - массив. 
 - **.BookQueueInfo.UnnamedQueues.Queue** - номер очереди, из которой требуется удалить бронь. Тип данных - строка.
 
+#### Пример запроса
+```<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
+  <SOAP-ENV:Body>
+    <ns2:DeleteFromQueue>
+      <ns2:Request>
+        <ns1:Requisites>
+          <ns1:Login>LOGIN</ns1:Login>
+          <ns1:Password>PASSWORD</ns1:Password>
+          <ns1:UserContextId>11111</ns1:UserContextId>
+        </ns1:Requisites>
+        <ns1:UserID>11111</ns1:UserID>
+        <ns1:RequestType>P</ns1:RequestType>
+        <ns1:RequestBody>
+          <ns2:BookQueueList>
+            <ns2:BookQueueInfo>
+              <ns2:BookID>484125</ns2:BookID>
+              <ns2:QueueNames>
+                <ns2:Queue>ScheduleChanged</ns2:Queue>
+              </ns2:QueueNames>
+            </ns2:BookQueueInfo>
+          </ns2:BookQueueList>
+        </ns1:RequestBody>
+      </ns2:Request>
+    </ns2:DeleteFromQueue>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+```
+
 ### Ответ
 Если не было возвращено ошибок, то операция выполнена успешно.
