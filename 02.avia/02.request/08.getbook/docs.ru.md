@@ -25,18 +25,19 @@ taxonomy:
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
   <SOAP-ENV:Body>
-    <ns2:GetBook>
+    <ns2:GetBook_2_2>
       <ns2:Request>
         <ns1:Requisites>
           <ns1:Login>LOGIN</ns1:Login>
           <ns1:Password>PASSWORD</ns1:Password>
+          <ns1:UserContextId>111111</ns1:UserContextId>
         </ns1:Requisites>
         <ns1:UserID>30328</ns1:UserID>
         <ns1:RequestBody>
           <ns2:BookID>467716</ns2:BookID>
         </ns1:RequestBody>
       </ns2:Request>
-    </ns2:GetBook>
+    </ns2:GetBook_2_2>
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
@@ -46,7 +47,7 @@ taxonomy:
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
   <SOAP-ENV:Body>
-    <ns2:GetBook>
+    <ns2:GetBook_2_2>
       <ns2:Request>
         <ns1:Requisites>
           <ns1:Login>LOGIN</ns1:Login>
@@ -62,7 +63,7 @@ taxonomy:
          </ns1:PNRParams>
         </ns1:RequestBody>
       </ns2:Request>
-    </ns2:GetBook>
+    </ns2:GetBook_2_2>
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
@@ -76,8 +77,8 @@ taxonomy:
 <?xml version="1.0"?>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
   <s:Body>
-    <GetBookResponse xmlns="http://nemo-ibe.com/Avia">
-      <GetBookResult xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <GetBook_2_2Response xmlns="http://nemo-ibe.com/Avia">
+      <GetBook_2_2Result xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
         <a:RequestID>137663509</a:RequestID>
         <a:ResponseBody>
           <a:ID>467716</a:ID>
@@ -225,8 +226,8 @@ taxonomy:
           </a:Price>
           <a:DataItems />
         </a:ResponseBody>
-      </GetBookResult>
-    </GetBookResponse>
+      </GetBook_2_2Result>
+    </GetBook_2_2Response>
   </s:Body>
 </s:Envelope>
 ```
