@@ -130,8 +130,9 @@ taxonomy:
         <ns1:Requisites>
           <ns1:Login>LOGIN</ns1:Login>
           <ns1:Password>PASSWORD</ns1:Password>
+          <ns1:UserContextId>111111</ns1:UserContextId>
          </ns1:Requisites>
-        <ns1:UserContextId>30712</ns1:UserContextId>
+        <ns1:UserID>111111</ns1:UserID>
         <ns1:RequestType>U</ns1:RequestType>
         <ns1:RequestBody>
           <ns2:FlightID>11858630151000000</ns2:FlightID>
