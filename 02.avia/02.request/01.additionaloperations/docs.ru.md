@@ -54,11 +54,12 @@ taxonomy:
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
   <SOAP-ENV:Body>
-    <ns2:AdditionalOperations_1_1>
+    <ns2:AdditionalOperations_1_2>
       <ns2:Request>
         <ns1:Requisites>
           <ns1:Login>LOGIN</ns1:Login>
           <ns1:Password>PASSWORD</ns1:Password>
+          <ns1:UserContextId>111111</ns1:UserContextId>
         </ns1:Requisites>
         <ns1:UserID>30338</ns1:UserID>
         <ns1:RequestBody>
