@@ -104,7 +104,7 @@ Flight leg prices are described in the current OfferItem.
                   <ns:Arrival>
                      <ns:AirportCode>TSE</ns:AirportCode>
                   </ns:Arrival>
-                 <ns:CalendarDates DaysBefore="1" DaysAfter="0"/>
+                 <ns:CalendarDates DaysBefore="1" DaysAfter="1"/>
                </ns:OriginDestination>
                <ns:OriginDestination>
                   <ns:Departure>
