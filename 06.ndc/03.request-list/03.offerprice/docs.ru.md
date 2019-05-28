@@ -121,7 +121,6 @@ title: OfferPrice
 				<ns:InstructionsList>
 					<ns:Instruction ListKey="INL1">
 						<ns:FreeFormTextInstruction>
-							<ns:Remark>UpdateCachedFareRules</ns:Remark>
 							<ns:Remark>IgnoreRepricingSettings</ns:Remark>
 						</ns:FreeFormTextInstruction>
 					</ns:Instruction>
