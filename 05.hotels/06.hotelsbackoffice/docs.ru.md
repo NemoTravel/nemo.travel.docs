@@ -6,7 +6,7 @@ title: 'Выгрузка Backoffice для отелей'
 
 #### Параметры 
 
-Descriptions for all the parameters can be found in [Order Export](/nemo-backoffice-api/json_api/order_export).
+Описания всех параметров можно найти в разделе [Экспорт заказа](/nemo-backoffice-api/json_api/order_export).
 
 #### Пример выгрузки
 ```json
