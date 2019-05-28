@@ -31,20 +31,23 @@ The latest request version, the differences are only in the response in the anci
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
   <SOAP-ENV:Body>
-    <ns2:ImportBook_2_0>
+    <ns2:ImportBook_2_2>
       <ns2:Request>
         <ns1:Requisites>
           <ns1:Login>LOGIN</ns1:Login>
           <ns1:Password>PASSWORD</ns1:Password>
+          <ns1:UserContextId>111111</ns1:UserContextId>
         </ns1:Requisites>
         <ns1:UserID>30329</ns1:UserID>
         <ns1:RequestBody>
           <ns2:Source>162494</ns2:Source>
           <ns2:PNRCode>ABVGD</ns2:PNRCode>
+          <ns2:MainPassengerLastName>LASTNAME</ns2:MainPassengerLastName>
           <ns2:WithReprice>false</ns2:WithReprice>
+          <ns2:ValidatingCompany>VC</ns2:ValidatingCompany>
         </ns1:RequestBody>
       </ns2:Request>
-    </ns2:ImportBook_2_0>
+    </ns2:ImportBook_2_2>
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
