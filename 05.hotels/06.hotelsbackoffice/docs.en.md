@@ -1,12 +1,12 @@
 ---
-title: 'Backoffice for hotels'
+title: 'Backoffice for Hotels'
 ---
 
-### Backoffice for hotels
+### Backoffice for Hotels
 
 #### Parameters 
 
-Descriptions for all the parameters can be found in the [Order Export](/nemo-backoffice-api/json_api/order_export) section.
+Descriptions for all the parameters can be found in [Order Export](/nemo-backoffice-api/json_api/order_export).
 
 #### Sample
 ```json
