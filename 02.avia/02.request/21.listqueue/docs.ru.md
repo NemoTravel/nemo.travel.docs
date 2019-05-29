@@ -44,6 +44,36 @@ taxonomy:
 -   **RemoveAfterRead** - Удалять заказы из очереди после прочтения. Тип данных - bool.
 -   **ListAgencyQueues** - Признак необходимости чтения очередей из настроек агентства. Тип данных - bool.
 
+#### Пример
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
+  <SOAP-ENV:Body>
+    <ns2:ListQueue>
+      <ns2:Request>
+        <ns1:Requisites>
+          <ns1:Login>LOGIN</ns1:Login>
+          <ns1:Password>PASSWORD</ns1:Password>
+          <ns1:UserContextId>1</ns1:UserContextId>
+        </ns1:Requisites>
+        <ns1:UserID>11111</ns1:UserID>
+        <ns1:RequestType>P</ns1:RequestType>
+        <ns1:RequestBody>
+          <ns2:QueueList>
+            <ns2:Queue>TicketsAdded</ns2:Queue>
+            <ns2:Queue>ScheduleChanged</ns2:Queue>
+            <ns2:Queue>SegmentsCancelled</ns2:Queue>
+            <ns2:Queue>TimeLimit</ns2:Queue>
+            <ns2:Queue>UnconfirmedSegments</ns2:Queue>
+            <ns2:Queue>ServiceInfoChanged</ns2:Queue>
+          </ns2:QueueList>
+          <ns2:RemoveAfterRead>false</ns2:RemoveAfterRead>
+        </ns1:RequestBody>
+      </ns2:Request>
+    </ns2:ListQueue>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+```
 #### Ответ
 
 ##### Описание формата
@@ -72,3 +102,46 @@ taxonomy:
 -   **QueueInfo** - информация об именованный очереди. Тип данных - массив.
 -   **Queue** - номер/название очереди (в зависимости от ГДС). Тип данных - строка.
 -   **BookInfoList** - Список заказов находящихся в очереди, формат аналогичен описанному выше.
+
+#### Пример
+```xml
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <ListQueueResponse xmlns="http://nemo-ibe.com/Avia">
+      <ListQueueResult xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <a:RequestID>12302964767</a:RequestID>
+        <a:ResponseBody>
+          <QueueInfoList>
+            <QueueInfo>
+              <Queue>TicketsAdded</Queue>
+              <BookInfoList/>
+            </QueueInfo>
+            <QueueInfo>
+              <Queue>ScheduleChanged</Queue>
+              <BookInfoList/>
+            </QueueInfo>
+            <QueueInfo>
+              <Queue>SegmentsCancelled</Queue>
+              <BookInfoList/>
+            </QueueInfo>
+            <QueueInfo>
+              <Queue>TimeLimit</Queue>
+              <BookInfoList/>
+            </QueueInfo>
+            <QueueInfo>
+              <Queue>ServiceInfoChanged</Queue>
+              <BookInfoList/>
+            </QueueInfo>
+            <QueueInfo>
+              <Queue>UnconfirmedSegments</Queue>
+              <BookInfoList/>
+            </QueueInfo>
+          </QueueInfoList>
+          <UnnamedQueueInfoList/>
+        </a:ResponseBody>
+      </ListQueueResult>
+    </ListQueueResponse>
+  </s:Body>
+</s:Envelope>
+```
