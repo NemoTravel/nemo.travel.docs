@@ -100,11 +100,12 @@ Used to make changes to the booking with [booking version 2.0](/avia/common/book
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SOAP-ENV:Body>
-    <ns2:ModifyBook_2_0>
+    <ns2:ModifyBook_2_2>
       <ns2:Request>
         <ns1:Requisites>
           <ns1:Login>LOGIN</ns1:Login>
           <ns1:Password>PASSWORD</ns1:Password>
+          <ns1:UserContextId>11111</ns1:UserContextId>
         </ns1:Requisites>
         <ns1:UserID>30328</ns1:UserID>
         <ns1:RequestBody>
@@ -129,7 +130,7 @@ Used to make changes to the booking with [booking version 2.0](/avia/common/book
           </ns2:DataItems>
         </ns1:RequestBody>
       </ns2:Request>
-    </ns2:ModifyBook_2_0>
+    </ns2:ModifyBook_2_2>
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
@@ -144,8 +145,8 @@ Used to make changes to the booking with [booking version 2.0](/avia/common/book
 <?xml version="1.0"?>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
   <s:Body>
-    <ModifyBook_2_0Response xmlns="http://nemo-ibe.com/Avia">
-      <ModifyBook_2_0Result xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <ModifyBook_2_2Response xmlns="http://nemo-ibe.com/Avia">
+      <ModifyBook_2_2Result xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
         <a:RequestID>138256628</a:RequestID>
         <a:ResponseBody>
           <a:ID>488480</a:ID>
@@ -414,8 +415,8 @@ Used to make changes to the booking with [booking version 2.0](/avia/common/book
             </a:DataItem>
           </a:DataItems>
         </a:ResponseBody>
-      </ModifyBook_2_0Result>
-    </ModifyBook_2_0Response>
+      </ModifyBook_2_2Result>
+    </ModifyBook_2_2Response>
   </s:Body>
 </s:Envelope>
 ```
