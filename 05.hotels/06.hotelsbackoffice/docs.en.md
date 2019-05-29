@@ -88,10 +88,10 @@ Descriptions for all the parameters can be found in [Order Export](/nemo-backoff
                   "number":"DBL",
                   "meal":"BED AND BREAKFAST (Bed & Breakfast)",
                   "rates":{
-                     "canelRules":[
+                     "cancelRules":[
                         {
                            "id":1122330000000,
-                           "dealine":"2018-12-27T21:59:59.000Z",
+                           "deadline":"2018-12-27T21:59:59.000Z",
                            "percentValue":0,
                            "absoluteValue":{
                               "amount":"4129.22",
@@ -100,7 +100,7 @@ Descriptions for all the parameters can be found in [Order Export](/nemo-backoff
                         },
                         {
                            "id":1122330000001,
-                           "dealine":"2018-12-30T22:00:00.000Z",
+                           "deadline":"2018-12-30T22:00:00.000Z",
                            "percentValue":0,
                            "absoluteValue":{
                               "amount":"1111.00",

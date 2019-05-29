@@ -91,7 +91,7 @@ title: 'Выгрузка Backoffice для отелей'
                      "cancelRules":[
                         {
                            "id":1122330000000,
-                           "dealine":"2018-12-27T21:59:59.000Z",
+                           "deadline":"2018-12-27T21:59:59.000Z",
                            "percentValue":0,
                            "absoluteValue":{
                               "amount":"4129.22",
@@ -100,7 +100,7 @@ title: 'Выгрузка Backoffice для отелей'
                         },
                         {
                            "id":1122330000001,
-                           "dealine":"2018-12-30T22:00:00.000Z",
+                           "deadline":"2018-12-30T22:00:00.000Z",
                            "percentValue":0,
                            "absoluteValue":{
                               "amount":"1111.00",
