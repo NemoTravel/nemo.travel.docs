@@ -91,7 +91,6 @@ title: 'Запрос CitySearch'
 -   **RoomRatesGroup.Rate.IsSpecialOffer** - признак того, является ли данный тариф специальным предложением. Тип данных - булевский.
 -   **RoomRatesGroup.Rate.VisaSupportProvided** - признак визовой поддержки отеля. Тип данных - булевский.
 -   **RoomRatesGroup.Rate.Availability** - доступность комнаты. Тип данных - строка.
--   **RoomRatesGroup.Rate.AgencyTimeLimit** - таймлимит от поставщика. Тип данных - дата, YYYY-MM-DDTHH:MM:SSZ
 -   **RoomsGroup** - контейнер с информацией о различных вариантов комнат. Тип данных - сложный.
 -   **RoomsGroup.Room** - контейнер с идентификаторами параметров комнаты. Тип данных - сложный.
 -   **RoomsGroup.Room.ID** - идентификатор комнаты. Тип данных - целое беззнаковое 32-битное число.
