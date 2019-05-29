@@ -194,6 +194,7 @@ title: 'Запрос CitySearch'
                      <b:BookingRemarks i:nil="true"/>
                      <b:CancellationRules/>
                      <b:Availability>OnRequest</b:Availability>
+                     <b:AgencyTimeLimit>2019-06-28T13:00:00Z</b:AgencyTimeLimit>
                   </b:Rate>
                   <b:Rate>
                      <b:Id>4491230000001</b:Id>
@@ -207,6 +208,7 @@ title: 'Запрос CitySearch'
                      <b:BookingRemarks i:nil="true"/>
                      <b:CancellationRules/>
                      <b:Availability>OnRequest</b:Availability>
+                     <b:AgencyTimeLimit>2019-06-28T13:00:00Z</b:AgencyTimeLimit>
                   </b:Rate>
                   .
                   .  
@@ -223,6 +225,7 @@ title: 'Запрос CitySearch'
                      <b:BookingRemarks i:nil="true"/>
                      <b:CancellationRules/>
                      <b:Availability>FreeSale</b:Availability>
+                     <b:AgencyTimeLimit>2019-06-28T13:00:00Z</b:AgencyTimeLimit>
                   </b:Rate>
                </b:RoomRatesGroup>
                <b:RoomsGroup>
