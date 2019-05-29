@@ -91,7 +91,6 @@ Same as the request of the following format: [RunCitySearch](/hotels/search_hote
 -   **RoomRatesGroup.Rate.IsSpecialOffer** - attribute of fare being a special offer. Data type - boolean.
 -   **RoomRatesGroup.Rate.VisaSupportProvided** - attribute of hotel visa support. Data type - boolean.
 -   **RoomRatesGroup.Rate.Availability** - room availability. Data type - string.
--   **RoomRatesGroup.Rate.AgencyTimeLimit** - time limit from the provider. Data type - date, YYYY-MM-DDTHH:MM:SSZ
 -   **RoomsGroup** - container with information on various room options. Data type - custom.
 -   **RoomsGroup.Room** - container with IDs of room parameters. Data type - custom.
 -   **RoomsGroup.Room.Id** - room ID. Data type - unsigned 32-bit integer.
@@ -194,7 +193,6 @@ Same as the request of the following format: [RunCitySearch](/hotels/search_hote
                      <b:BookingRemarks i:nil="true"/>
                      <b:CancellationRules/>
                      <b:Availability>OnRequest</b:Availability>
-                     <b:AgencyTimeLimit>2019-06-28T13:00:00Z</b:AgencyTimeLimit>
                   </b:Rate>
                   <b:Rate>
                      <b:Id>4491230000001</b:Id>
@@ -208,7 +206,6 @@ Same as the request of the following format: [RunCitySearch](/hotels/search_hote
                      <b:BookingRemarks i:nil="true"/>
                      <b:CancellationRules/>
                      <b:Availability>OnRequest</b:Availability>
-                     <b:AgencyTimeLimit>2019-06-28T13:00:00Z</b:AgencyTimeLimit>
                   </b:Rate>
                   .
                   .  
@@ -225,7 +222,6 @@ Same as the request of the following format: [RunCitySearch](/hotels/search_hote
                      <b:BookingRemarks i:nil="true"/>
                      <b:CancellationRules/>
                      <b:Availability>FreeSale</b:Availability>
-                     <b:AgencyTimeLimit>2019-06-28T13:00:00Z</b:AgencyTimeLimit>
                   </b:Rate>
                </b:RoomRatesGroup>
                <b:RoomsGroup>
