@@ -27,11 +27,12 @@ The latest version of the request, differences are only in the response to the r
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
   <SOAP-ENV:Body>
-    <ns2:SplitBook>
+    <ns2:SplitBook_2_2>
       <ns2:Request>
         <ns1:Requisites>
           <ns1:Login>LOGIN</ns1:Login>
           <ns1:Password>PASSWORD</ns1:Password>
+          <ns1:UserContextId>111111</ns1:UserContextId>
         </ns1:Requisites>
         <ns1:UserID>30328</ns1:UserID>
         <ns1:RequestBody>
@@ -41,7 +42,7 @@ The latest version of the request, differences are only in the response to the r
           </ns2:Passengers>
         </ns1:RequestBody>
       </ns2:Request>
-    </ns2:SplitBook>
+    </ns2:SplitBook_2_2>
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
@@ -63,8 +64,8 @@ with the splitted passengers. Information about the parent and child booking is 
 <?xml version="1.0"?>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
   <s:Body>
-    <SplitBookResponse xmlns="http://nemo-ibe.com/Avia">
-      <SplitBookResult xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <SplitBook_2_2Response xmlns="http://nemo-ibe.com/Avia">
+      <SplitBook_2_2Result xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
         <a:RequestID>137750205</a:RequestID>
         <a:ResponseBody>
           <a:ID>467834</a:ID>
@@ -402,8 +403,8 @@ D 98J РАЗНЫЕ ПЛАТЫ </a:Description>
             </a:DataItem>
           </a:DataItems>
         </a:ResponseBody>
-      </SplitBookResult>
-    </SplitBookResponse>
+      </SplitBook_2_2Result>
+    </SplitBook_2_2Response>
   </s:Body>
 </s:Envelope>
 ```
