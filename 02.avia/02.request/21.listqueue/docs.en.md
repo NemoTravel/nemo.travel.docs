@@ -45,7 +45,7 @@ If the request does not indicate the packages for which it is necessary to read 
 -  **RemoveAfterRead** - remove orders from the queue after reading. Data type - bool.
 -  **ListAgencyQueues** - attribute of the need to read queues from the agency settings. Data type - bool.
 
-#### Пример
+#### Sample
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
@@ -104,3 +104,46 @@ If the request does not indicate the packages for which it is necessary to read 
 -  **QueueInfo** - information about the named queue. Data type - array.
 -  **Queue** - number/name of the queue (depending on the GDS). Data type - string.
 -  **BookInfoList** - list of orders in the queue, the format is similar to the one described above.
+
+#### Sample
+```xml
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <ListQueueResponse xmlns="http://nemo-ibe.com/Avia">
+      <ListQueueResult xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <a:RequestID>12302964767</a:RequestID>
+        <a:ResponseBody>
+          <QueueInfoList>
+            <QueueInfo>
+              <Queue>TicketsAdded</Queue>
+              <BookInfoList/>
+            </QueueInfo>
+            <QueueInfo>
+              <Queue>ScheduleChanged</Queue>
+              <BookInfoList/>
+            </QueueInfo>
+            <QueueInfo>
+              <Queue>SegmentsCancelled</Queue>
+              <BookInfoList/>
+            </QueueInfo>
+            <QueueInfo>
+              <Queue>TimeLimit</Queue>
+              <BookInfoList/>
+            </QueueInfo>
+            <QueueInfo>
+              <Queue>ServiceInfoChanged</Queue>
+              <BookInfoList/>
+            </QueueInfo>
+            <QueueInfo>
+              <Queue>UnconfirmedSegments</Queue>
+              <BookInfoList/>
+            </QueueInfo>
+          </QueueInfoList>
+          <UnnamedQueueInfoList/>
+        </a:ResponseBody>
+      </ListQueueResult>
+    </ListQueueResponse>
+  </s:Body>
+</s:Envelope>
+```
