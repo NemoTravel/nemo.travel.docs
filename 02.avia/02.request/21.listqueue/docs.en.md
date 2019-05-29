@@ -45,6 +45,37 @@ If the request does not indicate the packages for which it is necessary to read 
 -  **RemoveAfterRead** - remove orders from the queue after reading. Data type - bool.
 -  **ListAgencyQueues** - attribute of the need to read queues from the agency settings. Data type - bool.
 
+#### Пример
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
+  <SOAP-ENV:Body>
+    <ns2:ListQueue>
+      <ns2:Request>
+        <ns1:Requisites>
+          <ns1:Login>LOGIN</ns1:Login>
+          <ns1:Password>PASSWORD</ns1:Password>
+          <ns1:UserContextId>1</ns1:UserContextId>
+        </ns1:Requisites>
+        <ns1:UserID>11111</ns1:UserID>
+        <ns1:RequestType>P</ns1:RequestType>
+        <ns1:RequestBody>
+          <ns2:QueueList>
+            <ns2:Queue>TicketsAdded</ns2:Queue>
+            <ns2:Queue>ScheduleChanged</ns2:Queue>
+            <ns2:Queue>SegmentsCancelled</ns2:Queue>
+            <ns2:Queue>TimeLimit</ns2:Queue>
+            <ns2:Queue>UnconfirmedSegments</ns2:Queue>
+            <ns2:Queue>ServiceInfoChanged</ns2:Queue>
+          </ns2:QueueList>
+          <ns2:RemoveAfterRead>false</ns2:RemoveAfterRead>
+        </ns1:RequestBody>
+      </ns2:Request>
+    </ns2:ListQueue>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+```
+
 #### Response
 
 ##### Format Description
