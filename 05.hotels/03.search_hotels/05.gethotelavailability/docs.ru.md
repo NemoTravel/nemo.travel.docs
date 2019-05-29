@@ -85,6 +85,7 @@ title: 'Запрос GetHotelAvailability'
 -   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.PercentValue** - значение штрафа в процентах. Тип данных - целое беззнаковое 32-битное число.
 -   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.AbsoluteValue** - значение штрафа в заданной валюте. Тип данных - целое беззнаковое 32-битное число.
 -   **RoomRatesGroup.Rate.FreeCount** - отражает количество доступных для продажи комнат (реализовано только у поставщика Bronevik, не является обязательным). Тип данных - целое беззнаковое 32-битное число.
+-   **RoomRatesGroup.Rate.AgencyTimeLimit** - таймлимит от поставщика. Тип данных - дата, YYYY-MM-DDTHH:MM:SSZ
 -   **RoomsGroup** - контейнер с информацией о различных вариантов комнат. Тип данных - сложный.
 -   **RoomsGroup.Room** - контейнер с идентификаторами параметров комнаты. Тип данных - сложный.
 -   **RoomsGroup.Room.ID** - идентификатор комнаты. Тип данных - целое беззнаковое 32-битное число.
@@ -186,6 +187,7 @@ title: 'Запрос GetHotelAvailability'
                         <b:RuleId>0</b:RuleId>
                      </b:CancellationRules>
                      <b:FreeCount>2</b:FreeCount>
+                     <b:AgencyTimeLimit>2019-06-28T13:00:00Z</b:AgencyTimeLimit>
                   </b:Rate>
                </b:RoomRatesGroup>
                <b:RoomsGroup>
