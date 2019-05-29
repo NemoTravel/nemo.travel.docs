@@ -88,7 +88,7 @@ title: 'Выгрузка Backoffice для отелей'
                   "number":"DBL",
                   "meal":"BED AND BREAKFAST (Bed & Breakfast)",
                   "rates":{
-                     "canelRules":[
+                     "cancelRules":[
                         {
                            "id":1122330000000,
                            "dealine":"2018-12-27T21:59:59.000Z",
