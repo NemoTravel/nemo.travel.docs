@@ -145,6 +145,7 @@ title: 'Book Request'
 -   **ServiceCharges.Amount** - the amount of service provider charges. Data type - fractional number.
 -   **ServiceCharges.Currency** - currency code of the service provider's charges. Data type - string.
 -   **Supplier** - supplier. Data type - string.
+-   **Timelimit** - the time limit that takes into account the Agency settings affects the start of the payment process. Data type - date, YYYY-MM-DD HH:MM:SS HH:MM.
 -   **SupplierAgencyID** - supplier's details ID. Data type - string. 
 
 
@@ -209,6 +210,7 @@ title: 'Book Request'
                   <a:Currency>RUB</a:Currency>
                </b:ServiceCharges>
                <b:Supplier>Hotelston</b:SupplierId>
+               <b:Timelimit>2019-06-28 13:00:00  00:00</b:Timelimit>
             </a:ResponseBody>
          </BookResult>
       </BookResponse>
