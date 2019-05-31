@@ -71,6 +71,7 @@ Contains the full information about the price and its formation for the booking 
 -   **PassengerTypePrice.Taxes** - taxes. Data type - Tax array.
 -   **Tax** - information about a specific tax. Data type - array, the inheritor of [Money](/avia/common/money).
 -   **Tax.TaxCode** - tax code. Data type - string.
+-   **Tax.AgencyAmount** - tax amount in agency currency. Data type - fractional number.
 -   **PassengerTypePrice.Tariffs** - fares. Data type - Tariff array.
 -   **Tariff** - fare description which takes part in the formation of this price. Data type - array, the description is given for AirTariff.
 -   **Tariff.Code** - fare code. Data type - string.
