@@ -79,6 +79,15 @@ Request for execution before version 1.2.
 
 Includes the set of elements caused by operstion in the request:
 
+- **Sources** - container for information about packages. Data type - custom.
+- **Sources.SourceInfo** - container with information about package. Data type - custom.
+- **Sources.SourceInfo.ID** - identifier of Nemo Connect package. Data type - 32-bit integer.
+- **Sources.SourceInfo.Supplier** - supplier name. Data type - string.
+- **Sources.SourceInfo.DefaultTicketingRequisiteID** - default ticketing requisite identifier. Data type - string.
+- **Sources.SourceInfo.CustomTicketingRequisites** - container for information about custom ticketing requisites. Data type - custom.
+- **Sources.SourceInfo.CustomTicketingRequisites.RequisiteConfig** - container with information about custom ticketing requisite configuration. Data type - custom.
+- **Sources.SourceInfo.CustomTicketingRequisites.RequisiteConfig.AppliesToCompanies** - list of airlines for which this requisite applies. Data type - string.
+- **Sources.SourceInfo.CustomTicketingRequisites.RequisiteConfig.RequisiteID** - vendor requisite identifier. Data type - string.
 -  **ActualizedFlight** - contains the updated flight. Data type - [Flight](/avia/common/flight).
 -  **ActualizedFlight.Segments.Segment.SupplierInfo** - information about the segment statuses if the flight is unavailable for booking and operation was executed via the seat taking request. Data type - string. Supported by GalileoUapi, Sabre, Amadeus, Galileo.
 -  **FlightsByFareFamily** - contains the result of the GetFareFamilies operation. Data type - [Flight](/avia/common/flight) array.
@@ -159,6 +168,19 @@ Includes the set of elements caused by operstion in the request:
       <AdditionalOperations_1_2Result xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
         <a:RequestID>11858526744</a:RequestID>
         <a:ResponseBody>
+        	 <a:Sources>
+                <a:SourceInfo>
+                 <a:ID>7796</a:ID>
+                 <a:Supplier>Sabre</a:Supplier>
+                 <a:DefaultTicketingRequisiteID>I37H</a:DefaultTicketingRequisiteID>
+                 <a:CustomTicketingRequisites xmlns:b="http://nemo.travel/Avia">
+                    <b:RequisiteConfig>
+                        <b:AppliesToCompanies>S7,A9,ET,NT,U6,Z6,5N</b:AppliesToCompanies>
+                        <b:RequisiteID>RM5G</b:RequisiteID>
+                    </b:RequisiteConfig>
+                 </a:CustomTicketingRequisites>
+                </a:SourceInfo>
+            </a:Sources>
           <ObjectForOperations>
             <FlightID>11858526597020006</FlightID>
           </ObjectForOperations>
