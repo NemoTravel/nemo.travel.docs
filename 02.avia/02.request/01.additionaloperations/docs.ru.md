@@ -85,8 +85,8 @@ taxonomy:
 -   **Sources.SourceInfo** - контейнер с информацией о пакете. Тип данных - сложный.
 -   **Sources.SourceInfo.ID** - идентификатор пакета Nemo Connect. Тип данных - целое 32 битное число.
 -   **Sources.SourceInfo.Supplier** - наименование поставщика. Тип данных - строка.
--   **Sources.SourceInfo.DefaultTicketingRequisiteID** - реквизит для выписки по умолчанию. Тип данных - строка.
--   **Sources.SourceInfo.CustomTicketingRequisites** - контейнер с информацией о переопределенных реквизитах выписки. Тип данных - сложный.
+-   **Sources.SourceInfo.DefaultTicketingRequisiteID** - реквизит для выписки по умолчанию, который может отсутствовать, в зависимости от конфигурации пакета.  Тип данных - строка.
+-   **Sources.SourceInfo.CustomTicketingRequisites** - контейнер с информацией о переопределенных реквизитах выписки, который может отсутствовать, в зависимости от конфигурации пакета. Тип данных - сложный.
 -   **Sources.SourceInfo.CustomTicketingRequisites.RequisiteConfig** - контейнер с информацией о конфигурации  реквизита выписки. Тип данных - сложный.
 -   **Sources.SourceInfo.CustomTicketingRequisites.RequisiteConfig.AppliesToCompanies** - список авиакомпаний, для которых применяется данный реквизит выписки. Тип данных - строка.
 -   **Sources.SourceInfo.CustomTicketingRequisites.RequisiteConfig.RequisiteID** -  идентификатор реквизита на стороне поставщика. Тип данных - строка.
