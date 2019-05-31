@@ -81,6 +81,15 @@ taxonomy:
 
 Включает в себя набор элементов в зависимости от вызванных операций в запросе:
 
+-   **Sources** - контейнер с информацией о пакетах. Тип данных - сложный.
+-   **SourceInfo** - контейнер с информацией о пакете. Тип данных - сложный.
+-   **ID** - идентификатор пакета Nemo Connect. Тип данных - целое 32 битное число.
+-   **Supplier** - наименование поставщика. Тип данных - строка.
+-   **DefaultTicketingRequisiteID** - реквизит для выписки по умолчанию. Тип данных - строка.
+-   **CustomTicketingRequisites** - контейнер с информацией о переопределенных реквизитах выписки. Тип данных - сложный.
+-   **RequisiteConfig** - контейнер с информацией о конфигурации  реквизита выписки. Тип данных - сложный.
+-   **AppliesToCompanies** - список авиакомпаний, для которых применяется данный реквизит выписки. Тип данных - строка.
+-   **RequisiteID** -  идентификатор реквизита на стороне поставщика. Тип данных - строка.
 -   **ObjectForOperations** - содержит идентификатор объекта, для которого требуется выполнить допоперации. Тип данных - массив. Аналогичен соответствующему элементу из запроса.
 -   **CheckAvailabilityResult** - результат проверки доступности перелёта для бронирования. Тип данных - массив.
 -   **CheckAvailabilityResult.IsAvail** - признак доступности перелёта для бронирования. Тип данных - булевский.
@@ -162,6 +171,19 @@ taxonomy:
       <AdditionalOperations_1_2Result xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
         <a:RequestID>11858526744</a:RequestID>
         <a:ResponseBody>
+        	<a:Sources>
+      			<a:SourceInfo>
+       			 <a:ID>7796</a:ID>
+        		 <a:Supplier>Sabre</a:Supplier>
+       			 <a:DefaultTicketingRequisiteID>I37H</a:DefaultTicketingRequisiteID>
+       			 <a:CustomTicketingRequisites xmlns:b="http://nemo.travel/Avia">
+         		 	<b:RequisiteConfig>
+            			<b:AppliesToCompanies>S7,A9,ET,NT,U6,Z6,5N</b:AppliesToCompanies>
+           				<b:RequisiteID>RM5G</b:RequisiteID>
+          			</b:RequisiteConfig>
+        		 </a:CustomTicketingRequisites>
+     		    </a:SourceInfo>
+    		</a:Sources>
           <ObjectForOperations>
             <FlightID>11858526597020006</FlightID>
           </ObjectForOperations>
