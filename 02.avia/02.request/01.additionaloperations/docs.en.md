@@ -83,8 +83,8 @@ Includes the set of elements caused by operstion in the request:
 - **Sources.SourceInfo** - container with information about package. Data type - custom.
 - **Sources.SourceInfo.ID** - identifier of Nemo Connect package. Data type - 32-bit integer.
 - **Sources.SourceInfo.Supplier** - supplier name. Data type - string.
-- **Sources.SourceInfo.DefaultTicketingRequisiteID** - default ticketing requisite identifier. Data type - string.
-- **Sources.SourceInfo.CustomTicketingRequisites** - container for information about custom ticketing requisites. Data type - custom.
+- **Sources.SourceInfo.DefaultTicketingRequisiteID** - default ticketing requisite identifier, which may be missing depending on the package configuration. Data type - string.
+- **Sources.SourceInfo.CustomTicketingRequisites** - container for information about custom ticketing requisites, which may be missing depending on the package configuration. Data type - custom.
 - **Sources.SourceInfo.CustomTicketingRequisites.RequisiteConfig** - container with information about custom ticketing requisite configuration. Data type - custom.
 - **Sources.SourceInfo.CustomTicketingRequisites.RequisiteConfig.AppliesToCompanies** - list of airlines for which this requisite applies. Data type - string.
 - **Sources.SourceInfo.CustomTicketingRequisites.RequisiteConfig.RequisiteID** - vendor requisite identifier. Data type - string.
