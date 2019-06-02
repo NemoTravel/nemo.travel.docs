@@ -253,7 +253,6 @@ title: 'Бронирование мест в поезде'
 -   **Passengers.BookedPerson.Ticket.RefundPenalty.Amount** - сумма сбора за возврат. Тип данных - строка.
 -   **Passengers.BookedPerson.Ticket.RefundPenalty.Currency** - название валюты в которой происходит сбор за возврат. Тип данных - строка.
 -   **Passengers.BookedPerson.Ticket.RefundPenalty.NDS** - НДС со сброра на возврат. Тип данных - строка.
-
 -   **Passengers.BookedPerson.Ticket.IsReturn** - Является ли билет обратным. Тип данных - булев.
 -   **Passengers.BookedPerson.Ticket.PaymentNumber** - 
 -   **Passengers.BookedPerson.Ticket.TransportDocs** - Транспортировочные документы. Тип данных - массив элементов TransportDoc.
