@@ -249,7 +249,11 @@ title: 'Бронирование мест в поезде'
 -   **Passengers.BookedPerson.Ticket.Service** - Стоимость сервиса по электронному билету. Доступно только при бронировании через UFS. Тип данных - сложный. Структура аналогична параметру   TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
 -   **Passengers.BookedPerson.Ticket.RefundPrice** - Сумма к возврату от стоимости билета. Доступно только при бронировании через UFS и после [получения дополнительной информации перед сдачей билетов](/trains/trains_stages/getrefundinfo). Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
 -   **Passengers.BookedPerson.Ticket.RefundService** - Сумма к возврату от стоимости сервиса по электронному билету. Доступно только при бронировании через UFS и после [получения дополнительной информации перед сдачей билетов](/trains/trains_stages/getrefundinfo). Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
--   **Passengers.BookedPerson.Ticket.RefundPenalty** - Сумма к возврату от суммы штрафов. Доступно только при бронировании через UFS и после [получения дополнительной информации перед сдачей билетов](/trains/trains_stages/getrefundinfo). Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
+-   **Passengers.BookedPerson.Ticket.RefundPenalty** - Контейнер с информацией о сборе за возврат. Доступно при бронировании через UFS и KTZ после [получения дополнительной информации перед сдачей билетов](/trains/trains_stages/getrefundinfo). Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
+-   **Passengers.BookedPerson.Ticket.RefundPenalty.Amount** - сумма сбора за возврат. Тип данных - строка.
+-   **Passengers.BookedPerson.Ticket.RefundPenalty.Currency** - название валюты в которой происходит сбор за возврат. Тип данных - строка.
+-   **Passengers.BookedPerson.Ticket.RefundPenalty.NDS** - НДС со сброра на возврат. Тип данных - строка.
+
 -   **Passengers.BookedPerson.Ticket.IsReturn** - Является ли билет обратным. Тип данных - булев.
 -   **Passengers.BookedPerson.Ticket.PaymentNumber** - 
 -   **Passengers.BookedPerson.Ticket.TransportDocs** - Транспортировочные документы. Тип данных - массив элементов TransportDoc.
@@ -389,7 +393,11 @@ title: 'Бронирование мест в поезде'
                             </Service>
                             <RefundPrice/>
                             <RefundService/>
-                            <RefundPenalty/>
+                            <RefundPenalty>
+             				    <Amount>55</Amount>
+             					<Currency>KZT</Currency>
+              					<NDS>0</NDS>
+           					</RefundPenalty>
                             <RefundCode>1282210341201407111100360</RefundCode>
                             <SeatNum>009</SeatNum>
                             <Services/>
