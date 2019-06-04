@@ -48,7 +48,7 @@ Search for v 1.2
 -  **Restrictions.CompanyFilter.Company** - information about airline filtering. Data type - array.
 - **Restrictions.CompanyFilter.Company.Code** - 2-letter airline code which triggers the filter criteria. Data type - string.
 -  **Restrictions.CompanyFilter.Company.Include** - filtering type. Data type - bool. If <code>false</code> is indicated, the specified airline will be excluded from the search results; if <code>true</code> is indicated - only this airline will be present in the search results, except the other airline specified in filter parameters with the <code>true</code> parameter.
--  **Restrictions.CompanyFilter.Company.SegmentNumber** - number of the requested flight segment (numbering from 1 in this case), for which this airline is required. Data type - 32-bit integer. Available only for Amadeus, Galileo uAPI, Sabre and Sirena.
+-  **Restrictions.CompanyFilter.Company.SegmentNumber** - number of the requested flight segment (numbering from 1 in this case), for which this airline is required. Data type - 32-bit integer. Available only for Amadeus, Travelport uAPI, Sabre and Sirena.
 -  **Restrictions.PrivateFaresOnly** - search only for private fares, by default both private and public fares will be searched for, where it is supported. Data type - bool.
 -  **Restrictions.ClassPreference** - contains a list of preferred flight classes. Data type - array.
 -  **Restrictions.ClassPreference.ClassOfService** - type of preferred flight class. Data type - enumeration, possible values:
