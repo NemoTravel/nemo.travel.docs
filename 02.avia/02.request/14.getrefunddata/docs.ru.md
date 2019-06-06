@@ -65,6 +65,7 @@ taxonomy:
 -   **TicketsRefundData** - Рассчёт возврата билетов. Тип данных - массив элементов [RefundData](/avia/common/refunddata).
 -   **EMDsRefundData** - Рассчёт возврата EMD. Тип данных - массив элементов [RefundData](/avia/common/refunddata).
 
+##### Пример
 ```xml
 <?xml version="1.0"?>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
