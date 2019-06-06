@@ -22,6 +22,7 @@ Used to return tickets received as a result of ticketing. This operation is poss
         <ns1:Requisites>
           <ns1:Login>LOGIN</ns1:Login>
           <ns1:Password>PASSWORD</ns1:Password>
+          <ns1:UserContextId>111111</ns1:UserContextId>
         </ns1:Requisites>
         <ns1:UserID>30328</ns1:UserID>
         <ns1:RequestBody>
