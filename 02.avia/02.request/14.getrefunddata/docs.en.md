@@ -67,3 +67,43 @@ Used to get the data on refund tickets and EMD if they are present in the bookin
 - ** TicketsRefundData ** - calculation of the ticket refund. Data type - array of [RefundData](/avia/common/refunddata) elements.
 - ** EMDsRefundData ** - calculation of the EMD refund. Data type - array of [RefundData](/avia/common/refunddata) elements.
 
+##### Sample
+```xml
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <GetRefundData_1_1Response xmlns="http://nemo-ibe.com/Avia">
+      <GetRefundData_1_1Result xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <a:RequestID>12302892708</a:RequestID>
+        <a:ResponseBody>
+          <TicketsRefundData xmlns="http://nemo.travel/Avia">
+            <a:RefundData>
+              <a:EDNumber i:nil="true"/>
+              <a:EDType>Ticket</a:EDType>
+              <a:TravellerRef>1</a:TravellerRef>
+              <a:Refundable>true</a:Refundable>
+              <a:RefundMoney>
+                <a:Amount>10000</a:Amount>
+                <a:Currency>RUB</a:Currency>
+              </a:RefundMoney>
+              <a:RefundBreakdown xmlns:b="http://nemo.travel/STL">
+                <b:RefundFares>
+                  <a:Amount>10000</a:Amount>
+                  <a:Currency>RUB</a:Currency>
+                </b:RefundFares>
+                <b:RefundTaxes>
+                  <a:Tax>
+                    <a:Amount>1100</a:Amount>
+                    <a:Currency>RUB</a:Currency>
+                    <a:TaxCode>XT</a:TaxCode>
+                  </a:Tax>
+                </b:RefundTaxes>
+              </a:RefundBreakdown>
+            </a:RefundData>
+          </TicketsRefundData>
+        </a:ResponseBody>
+      </GetRefundData_1_1Result>
+    </GetRefundData_1_1Response>
+  </s:Body>
+</s:Envelope>
+```
