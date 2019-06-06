@@ -28,18 +28,19 @@ The latest version of the request, differences are only in the response to the r
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
   <SOAP-ENV:Body>
-    <ns2:UpdateBook_2_0>
+    <ns2:UpdateBook_2_2>
       <ns2:Request>
         <ns1:Requisites>
           <ns1:Login>LOGIN</ns1:Login>
           <ns1:Password>PASSWORD</ns1:Password>
+          <ns1:UserContextId>11111</ns1:UserContextId>
         </ns1:Requisites>
         <ns1:UserID>30330</ns1:UserID>
         <ns1:RequestBody>
           <ns2:BookID>1047151</ns2:BookID>
         </ns1:RequestBody>
       </ns2:Request>
-    </ns2:UpdateBook_2_0>
+    </ns2:UpdateBook_2_2>
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
@@ -53,8 +54,8 @@ The latest version of the request, differences are only in the response to the r
 <?xml version="1.0"?>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
   <s:Body>
-    <UpdateBook_2_0Response xmlns="http://nemo-ibe.com/Avia">
-      <UpdateBook_2_0Result xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <UpdateBook_2_2Response xmlns="http://nemo-ibe.com/Avia">
+      <UpdateBook_2_2Result xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
         <a:RequestID>11858631286</a:RequestID>
         <a:ResponseBody>
           <a:ID>1047151</a:ID>
@@ -248,8 +249,8 @@ The latest version of the request, differences are only in the response to the r
             </a:DataItem>
           </a:DataItems>
         </a:ResponseBody>
-      </UpdateBook_2_0Result>
-    </UpdateBook_2_0Response>
+      </UpdateBook_2_2Result>
+    </UpdateBook_2_2Response>
   </s:Body>
 </s:Envelope>
 ```
