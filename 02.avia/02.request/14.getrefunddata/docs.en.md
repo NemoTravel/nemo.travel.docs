@@ -20,6 +20,32 @@ Used to get the data on refund tickets and EMD if they are present in the bookin
 - ** SegmentsToRefund ** - segments for the refund. Data type - array.
 - ** SegmentsToRefund.Ref ** - segment for the refund. Data type - 32-bit integer.
 
+#### Sample
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
+  <SOAP-ENV:Body>
+    <ns2:GetRefundData_1_1>
+      <ns2:Request>
+        <ns1:Requisites>
+          <ns1:NemoOneAuthToken>7473780e84e6687b9186efe4bb5c4120             </ns1:NemoOneAuthToken>
+          <ns1:UserContextId>111111</ns1:UserContextId>
+        </ns1:Requisites>
+        <ns1:UserID>346337</ns1:UserID>
+        <ns1:RequestType>P</ns1:RequestType>
+        <ns1:RequestBody>
+          <ns2:BookID>2180066</ns2:BookID>
+          <ns2:Passengers>
+            <ns1:Ref>1</ns1:Ref>
+          </ns2:Passengers>
+          <ns2:Involuntary>false</ns2:Involuntary>
+        </ns1:RequestBody>
+      </ns2:Request>
+    </ns2:GetRefundData_1_1>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+```
+
 #### Response
 
 -    **Refunds** - ticket refund information. Data type - array.
