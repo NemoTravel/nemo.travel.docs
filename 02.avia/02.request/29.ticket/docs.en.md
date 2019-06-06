@@ -23,7 +23,7 @@ The latest version of the request, differences are only in the response in the a
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
   <SOAP-ENV:Body>
-    <ns2:Ticket_2_0>
+    <ns2:Ticket_2_2>
       <ns2:Request>
         <ns1:Requisites>
           <ns1:Login>LOGIN</ns1:Login>
@@ -55,7 +55,7 @@ The latest version of the request, differences are only in the response in the a
           </ns2:DataItems>
         </ns1:RequestBody>
       </ns2:Request>
-    </ns2:Ticket_2_0>
+    </ns2:Ticket_2_2>
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
@@ -70,8 +70,8 @@ The latest version of the request, differences are only in the response in the a
 <?xml version="1.0"?>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
   <s:Body>
-    <Ticket_2_0Response xmlns="http://nemo-ibe.com/Avia">
-      <Ticket_2_0Result xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <Ticket_2_2Response xmlns="http://nemo-ibe.com/Avia">
+      <Ticket_2_2Result xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
         <a:RequestID>138256686</a:RequestID>
         <a:ResponseBody>
           <a:ID>488479</a:ID>
@@ -211,8 +211,8 @@ The latest version of the request, differences are only in the response in the a
           </a:Price>
           <a:DataItems />
         </a:ResponseBody>
-      </Ticket_2_0Result>
-    </Ticket_2_0Response>
+      </Ticket_2_2Result>
+    </Ticket_2_2Response>
   </s:Body>
 </s:Envelope>
 ```
