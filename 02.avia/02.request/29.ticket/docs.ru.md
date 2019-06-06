@@ -211,7 +211,34 @@ taxonomy:
             </a:PriceBreakdown>
             <a:FareFamiliesDescriptions />
           </a:Price>
-          <a:DataItems />
+          <a:DataItems>
+           <a:DataItem>
+              <a:ID>4</a:ID>
+              <a:TravellerRef>
+                <a:Ref>1</a:Ref>
+              </a:TravellerRef>
+              <a:Type>ED</a:Type>
+              <a:ElectronicDocument>
+                <a:Number>2502439242754</a:Number>
+                <a:Status>Active</a:Status>
+                <a:ServiceType>Flight</a:ServiceType>
+                <a:VATBreakdown>
+                  <a:Tariff>
+                    <a:Amount>0</a:Amount>
+                    <a:Currency>RUB</a:Currency>
+                  </a:Tariff>
+                  <a:Taxes>
+                    <a:Amount>0</a:Amount>
+                    <a:Currency>RUB</a:Currency>
+                  </a:Taxes>
+                  <a:Total>
+                    <a:Amount>0</a:Amount>
+                    <a:Currency>RUB</a:Currency>
+                  </a:Total>
+                </a:VATBreakdown>
+              </a:ElectronicDocument>
+            </a:DataItem>
+           </a:DataItems>
         </a:ResponseBody>
       </Ticket_2_2Result>
     </Ticket_2_2Response>
