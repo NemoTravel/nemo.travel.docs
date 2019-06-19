@@ -634,6 +634,7 @@ taxonomy:
          "splitted":[
 
          ],
+         "exchangedForOrder":null,
          "mainOrderId":null,
          "multiOrderEnvelope":null,
          "exchangeClaims":[
