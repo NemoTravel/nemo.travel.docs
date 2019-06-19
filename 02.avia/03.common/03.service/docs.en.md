@@ -21,17 +21,19 @@ Each of the base and ancillary services is inherited from the BaseService class 
     -   **Requested**;
     -   **Rejected**;
     -   **Problematic** - problematic booking/order/service; if this status is available in the sub-statuses, the exact problem is indicated
--   **SubStatus** - list of sub-statuses clarifying the current status of the service. Data type - enumeration, possible values:
-	-   **InvalidSegmentStatus**
-	-   **SegmentStatusForManualConfirmation** - appears in cases when for some reason it was not possible to automatically confirm segments (meaning TK/KK statuses)
-	-   **HaveNotStoredTickets** - active ticket issued is not in the PNR
-	-   **NotActualTicketStatus** - one of the tickets in the PNR has the irrelevant status - basically it is specific for glitches of the test environment of different GDS and Galileo after voiding
-	-   **NoValidFare** - PNR in the GDS has no active and valid price (GDS Galileo's specifics)
-	-   **UnremovedVoidedTicketElements** - specific for Amadeus
-	-   **PaidBook** - PNR is paid through the Sirena payment gateway but has not yet been ticketed
-	-   **FailedToActualizePrice** - failed to get the current price for the booking
-	-   **UnconfirmedInfant** - unconfirmed baby, manual processing is required.
-	-   **UnconfirmedLoyaltyCard** - unconfirmed loyalty card.
+-   **SubStatus** - contains information about sub-statuses.
+	- **SubStatus.Status** - list of sub-statuses clarifying the current status of the service. Data type - enumeration, possible values:
+        -   **InvalidSegmentStatus**
+        -   **SegmentStatusForManualConfirmation** - appears in cases when for some reason it was not possible to automatically confirm segments (meaning TK/KK statuses)
+        -   **HaveNotStoredTickets** - active ticket issued is not in the PNR
+        -   **NotActualTicketStatus** - one of the tickets in the PNR has the irrelevant status - basically it is specific for glitches of the test environment of different GDS and Galileo after voiding
+        -   **NoValidFare** - PNR in the GDS has no active and valid price (GDS Galileo's specifics)
+        -   **UnremovedVoidedTicketElements** - specific for Amadeus
+        -   **PaidBook** - PNR is paid through the Sirena payment gateway but has not yet been ticketed
+        -   **FailedToActualizePrice** - failed to get the current price for the booking
+        -   **UnconfirmedInfant** - unconfirmed baby, manual processing is required.
+        -   **UnconfirmedLoyaltyCard** - unconfirmed loyalty card.
+        -   **NoAirlineLocator** - there is no locator from the airline.
 -   **TravelerRef** - reference to the travelers to whom the service relates. If the service is applied to all travelers, then the element is not specified. Data type - [RefList](/avia/common/reflist) array.
 -   **TravelerRef.Ref** - reference to the particular traveler within the booking/order. Data type - int32.
 
@@ -114,7 +116,9 @@ The description of the flight
               <a:ID>0</a:ID>
               <a:SupplierID>Y1SW3B</a:SupplierID>
               <a:Status>Booked</a:Status>
-              <a:SubStatus/>
+              <a:SubStatus>
+                <a:Status>NoValidFare</a:Status>
+              </a:SubStatus>
               <a:Type>Regular</a:Type>
               <a:DirectionType>CT</a:DirectionType>
               <a:Segments>
