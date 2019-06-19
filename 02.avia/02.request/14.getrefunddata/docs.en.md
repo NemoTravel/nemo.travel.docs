@@ -28,7 +28,7 @@ Used to get the data on refund tickets and EMD if they are present in the bookin
     <ns2:GetRefundData_1_1>
       <ns2:Request>
         <ns1:Requisites>
-          <ns1:NemoOneAuthToken>7473780e84e6687b9186efe4bb5c4120             </ns1:NemoOneAuthToken>
+          <ns1:NemoOneAuthToken>7473780e84e6687b9186efe4bb5c4120</ns1:NemoOneAuthToken>
           <ns1:UserContextId>111111</ns1:UserContextId>
         </ns1:Requisites>
         <ns1:UserID>346337</ns1:UserID>
