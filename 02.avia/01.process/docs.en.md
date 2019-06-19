@@ -18,6 +18,6 @@ Each operation can be carried out using one or more requests to the web service.
 
 >>>> Please use the newest versions of the requests.
 
-![](Nemo2workflowEN_New.png)
+![](Nemo2workflowEN_New1.png)
 
 More details on the various processes and information for each request is described in the following articles.
