@@ -15,6 +15,29 @@ Getting the results of a certain search from the avia server.
 - ** FlightID ** - flight ID that is needed to get. Data type - string.
 - ** RawData ** - attribute of getting XML content of search requests to the supplier (optional). Data type - bool.
 
+#### Sample
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
+  <SOAP-ENV:Body>
+    <ns2:GetSearchResults>
+      <ns2:Request>
+        <ns1:Requisites>
+          <ns1:Login>LOGIN</ns1:Login>
+          <ns1:Password>PASSWORD</ns1:Password>
+          <ns1:UserContextId>111111</ns1:UserContextId>
+        </ns1:Requisites>
+        <ns1:UserID>30330</ns1:UserID>
+        <ns1:RequestType>P</ns1:RequestType>
+        <ns1:RequestBody>
+          <ns2:FlightID>1111110222000002</ns2:FlightID>
+        </ns1:RequestBody>
+      </ns2:Request>
+    </ns2:GetSearchResults>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+```
+
 #### Response
 
 Includes all fields from the [Search](/avia/request/search) response. Also additionally has the following fields:
