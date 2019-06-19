@@ -50,6 +50,7 @@ taxonomy:
 -   **LogData.Request** - XML-контент запроса к поставщику. Тип данных - строка.
 -   **LogData.Response** - XML-контент ответа поставщика. Тип данных - строка.
 
+#### Пример
 ```xml
 <?xml version="1.0"?>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
