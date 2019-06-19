@@ -21,17 +21,19 @@ taxonomy:
     -   **Requested**;
     -   **Rejected**;
     -   **Problematic** — проблемная бронь/заказ/услуга, при наличии данного статуса в подстатусах указывается, какая именно проблема.
--   **SubStatus** — подстатус, уточняющий текущее состояние услуги. Тип данных — перечисление, возможные значения:
-    -   **InvalidSegmentStatus**
-    -   **SegmentStatusForManualConfirmation** — если в силу каких-то причин не удалось автоматически подтвердить сегменты (имеются в виду TK/KK статусы);
-    -   **HaveNotStoredTickets** — выписанный активный билет не попал PNR;
-    -   **NotActualTicketStatus** — один из билетов в PNR'е имеет неактуальный статус — специфично для тестовой среды различных GDS и Galileo после войдирования;
-    -   **NoValidFare** — у PNR'а в GDS нет активной и валидной цены (специфика GDS Galileo);
-    -   **UnremovedVoidedTicketElements** — специфично в GDS Amadeus;
-    -   **PaidBook** — PNR оплачен через платежный шлюз GDS Sirena, но ещё не выписан;
-    -   **FailedToActualizePrice** — не удалось получить актуальную цены для брони;
-    -   **UnconfirmedInfant** — неподтвержденный младенец, требуется ручная обработка;
-    -   **UnconfirmedLoyaltyCard** — неподтвержденная карточка лояльности.
+-   **SubStatus** - содержит информацию о подстатусе.
+	-   **SubStatus.Status** — подстатус, уточняющий текущее состояние услуги. Тип данных — перечисление, возможные значения:
+        -   **InvalidSegmentStatus**
+        -   **SegmentStatusForManualConfirmation** — если в силу каких-то причин не удалось автоматически подтвердить сегменты (имеются в виду TK/KK статусы);
+        -   **HaveNotStoredTickets** — выписанный активный билет не попал PNR;
+        -   **NotActualTicketStatus** — один из билетов в PNR'е имеет неактуальный статус — специфично для тестовой среды различных GDS и Galileo после войдирования;
+        -   **NoValidFare** — у PNR'а в GDS нет активной и валидной цены (специфика GDS Galileo);
+        -   **UnremovedVoidedTicketElements** — специфично в GDS Amadeus;
+        -   **PaidBook** — PNR оплачен через платежный шлюз GDS Sirena, но ещё не выписан;
+        -   **FailedToActualizePrice** — не удалось получить актуальную цены для брони;
+        -   **UnconfirmedInfant** — неподтвержденный младенец, требуется ручная обработка;
+        -   **UnconfirmedLoyaltyCard** — неподтвержденная карточка лояльности.
+        -   **NoAirlineLocator** - отсутствует локатор от авиакомпании.
 -   **TravellerRef** — ссылка на пассажиров, к которым относится данная услуга. Если услуга применяется для всех путешественников, то элемент не указывается. Тип данных — массив [RefList](/avia/common/reflist).
 -   **TravellerRef.Ref** — ссылка на конкретного пассажира в рамках брони/заказа. Тип данных — целое 32-битное число.
 
@@ -115,7 +117,9 @@ taxonomy:
               <a:ID>0</a:ID>
               <a:SupplierID>Y1SW3B</a:SupplierID>
               <a:Status>Booked</a:Status>
-              <a:SubStatus/>
+              <a:SubStatus>
+                <a:Status>NoValidFare</a:Status>
+              </a:SubStatus>
               <a:Type>Regular</a:Type>
               <a:DirectionType>CT</a:DirectionType>
               <a:Segments>
