@@ -37,6 +37,10 @@ Request for execution before version 1.2.
 -  **OperationsRestrictions.PricingInfo.Passengers.Passenger** - contains information about one of the types of passengers for whom you want to find the flight price. Data type - custom.
 -  **OperationsRestrictions.PricingInfo.Passengers.Passenger.Type** - passenger type. Data type - enumeration.
 -  **OperationsRestrictions.PricingInfo.Passengers.Passenger.Count** - number of passengers of this type. Data type - 32-bit integer.
+-  -   **OperationsRestrictions.PricingInfo.Passengers.Passenger.Age** - passenger's age. Data type - string.
+-   **OperationsRestrictions.PricingInfo.Passengers.Passenger.PricedAs** - 
+-   **OperationsRestrictions.PricingInfo.Passengers.Passenger.DocType** - passenger's document type. Data type - string.
+-   **OperationsRestrictions.PricingInfo.Passengers.Passenger.Nationality** - passenger's nationality. Data type - string.
 -  **OperationsRestrictions.PricingInfo.CurrencyCode** - ISO Alpha3 code of the currency in which you want to find the price. Data type - string.
 -  **OperationsRestrictions.PricingInfo.PrivateFaresOnly** - attribute of searching only private fares. Data type - bool.
 -  **OperationsRestrictions.PricingInfo.ValidatingCompany** - IATA code of the VI, the prices of which are of interest. Data type - string.
