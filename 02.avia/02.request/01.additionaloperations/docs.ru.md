@@ -48,7 +48,7 @@ taxonomy:
 -   **OperationsRestrictions.PricingInfo.RequestorTags** - массив тегов, описывающих запрос. Тип данных - массив.
 -   **OperationsRestrictions.PricingInfo.RequestorTags.Tag** - тег, описывающий запрос. Тип данных - строка.
 -   **OperationsRestrictions.PricingInfo.PriceSpecifiedPassTypesOnly** — при репрайсинге использовать только конкретные коды типов пассажиров, по возможности. Тип данных — булевский.
--   **OperationsRestrictions.PricingInfo.RefererID** - Если указан, то переопределяет пользователя Nemo 1, для которого будет производится расчёт ЦО. Тип данных - int.
+-   **OperationsRestrictions.PricingInfo.RefererID** - если указан, переопределяет пользователя Nemo 1, для которого будет производится расчёт ЦО. Тип данных - int.
 -   **OperationsRestrictions.PricingInfo.ThreeDomainAgreementNumber** — код корпоративного клиента в трехстороннем договоре. Тип данных — строка.
 -   **OperationsRestrictions.PricingInfo.IsMixerDisabled** - отключает микширование вариантов оценки перелёта, полученных в процессе репрайсинга. Тип данных - булевский.
 -   **OperationsRestrictions.UpdateCachedFareRules** — обновление закэшированных в брони тарифных правил. Тип данных — булевский.
