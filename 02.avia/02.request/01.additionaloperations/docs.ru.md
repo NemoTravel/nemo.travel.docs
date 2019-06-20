@@ -41,6 +41,8 @@ taxonomy:
 -   **OperationsRestrictions.PricingInfo.PrivateFaresOnly** — признак поиска только приватных тарифов. Тип данных — булевский.
 -   **OperationsRestrictions.PricingInfo.ValidatingCompany** — IATA-код валидирующего перевозчика, цены которого интересуют. Тип данных — строка.
 -   **OperationsRestrictions.PricingInfo.IgnoreRepricingSettings** — позволяет игнорировать настройки репрайсинга. Тип данных — булевский.
+-   **OperationsRestrictions.PricingInfo.RequestorTags** - массив тегов, описывающих запрос. Тип данных - массив.
+-   **OperationsRestrictions.PricingInfo.RequestorTags.Tag** - тег, описывающий запрос. Тип данных - строка.
 -   **OperationsRestrictions.PricingInfo.PriceSpecifiedPassTypesOnly** — при репрайсинге использовать только конкретные коды типов пассажиров, по возможности. Тип данных — булевский.
 -   **OperationsRestrictions.PricingInfo.RefererID** - Если указан, то переопределяет пользователя Nemo 1, для которого будет производится расчёт ЦО. Тип данных - int.
 -   **OperationsRestrictions.PricingInfo.ThreeDomainAgreementNumber** — код корпоративного клиента в трехстороннем договоре. Тип данных — строка.
