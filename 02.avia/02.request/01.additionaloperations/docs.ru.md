@@ -37,6 +37,10 @@ taxonomy:
 -   **OperationsRestrictions.PricingInfo.Passengers.Passenger** — содержит информацию об одном из типов пассажиров, для которых требуется найти цену перелёта. Тип данных — массив.
 -   **OperationsRestrictions.PricingInfo.Passengers.Passenger.Type** — тип пассажира. Тип данных — перечисление.
 -   **OperationsRestrictions.PricingInfo.Passengers.Passenger.Count** — количество пассажиров данного типа. Тип данных — целое 32-битное число.
+-   **OperationsRestrictions.PricingInfo.Passengers.Passenger.Age** - возраст пассажира. Тип данных - строка.
+-   **OperationsRestrictions.PricingInfo.Passengers.Passenger.PricedAs** - 
+-   **OperationsRestrictions.PricingInfo.Passengers.Passenger.DocType** - тип документа пассажира. Тип данных - строка.
+-   **OperationsRestrictions.PricingInfo.Passengers.Passenger.Nationality** - гражданство пассажира. Тип данных - строка.
 -   **OperationsRestrictions.PricingInfo.CurrencyCode** — ISO Alpha3 код валюты, в которой требуется найти цену. Тип данных — строка.
 -   **OperationsRestrictions.PricingInfo.PrivateFaresOnly** — признак поиска только приватных тарифов. Тип данных — булевский.
 -   **OperationsRestrictions.PricingInfo.ValidatingCompany** — IATA-код валидирующего перевозчика, цены которого интересуют. Тип данных — строка.
