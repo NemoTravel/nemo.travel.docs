@@ -41,6 +41,8 @@ Request for execution before version 1.2.
 -  **OperationsRestrictions.PricingInfo.PrivateFaresOnly** - attribute of searching only private fares. Data type - bool.
 -  **OperationsRestrictions.PricingInfo.ValidatingCompany** - IATA code of the VI, the prices of which are of interest. Data type - string.
 -  **OperationsRestrictions.PricingInfo.IgnoreRepricingSettings** - allows you to ignore the repricing settings. Data type - bool.
+-   **OperationsRestrictions.PricingInfo.RequestorTags** - array of tags describing the request. Data type - array.
+-   **OperationsRestrictions.PricingInfo.RequestorTags.Tag** - a single tag describing the request. Data type - string.
 -  **OperationsRestrictions.PricingInfo.PriceSpecifiedPassTypesOnly** - if possible, use only specific passenger type codes while re-selling. Data type - bool.
 -  **OperationsRestrictions.PricingInfo.ThreeDomainAgreementNumber** — corporate client code in the three-party agreement. Data type - string.
 -  **OperationsRestrictions.UpdateCachedFareRules** - update cached in the reservation fare rules. The data type is bool.
