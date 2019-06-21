@@ -17,9 +17,9 @@ title: AirShopping
 #### Запрос
 -   **AirShoppingRQ** - запрос выполняет поиск предложений в соответсвии с указанными данными о сегментах, пассажирах и дополнительных ограничениях. Обязательный атрибут Version="17.2" содержит версию NDC протокола. Тип данных - сложный. 
 -   **AirShoppingRQ.CoreQuery** - содержит информацию о запрашиваемой покупке. Тип данных - сложный. 
--   **AirShoppingRQ.CoreQuery.ShoppingResponseID** - содержит информацию о поиске, по-которому необходимо получить результаты. **Обязательный элемент, при условии, что не задан элемент CoreQuery.FlightSpecific или CoreQuery.OriginDestinations**. Тип данных - сложный. 
+-   **AirShoppingRQ.CoreQuery.ShoppingResponseID** - содержит информацию о поиске, по которому необходимо получить результаты. **Обязательный элемент, при условии, что не задан элемент CoreQuery.FlightSpecific или CoreQuery.OriginDestinations**. Тип данных - сложный. 
 -   **AirShoppingRQ.CoreQuery.ShoppingResponseID.Owner** - код владельца (ГРС) предложения. Тип данных — строка. 
--   **AirShoppingRQ.CoreQuery.ShoppingResponseID.ResponseID** - уникальный идентификатор обработанного события. Тип данных — строка.
+-   **AirShoppingRQ.CoreQuery.ShoppingResponseID.ResponseID** - идентификатор AirShoppingRS.ShoppingResponseID по которому необходимо получить результаты поисковой выдачи. Тип данных — строка.
 -   **CoreQuery.OriginDestinations** - содержит информацию о сегментах перелёта, который требуется найти. **Обязательный элемент, при условии, что не задан элемент CoreQuery.FlightSpecific или CoreQuery.ShoppingResponseID**. Тип данных - сложный.  
 -   **CoreQuery.OriginDestinations.OriginDestination** - информация о назначении/прибытии рейса (обязательный). Тип данных - сложный. 
 -   **OriginDestinations.OriginDestination.Departure** - содержит информацию о точки отправления (обязательный). Тип данных - сложный.
