@@ -157,14 +157,14 @@ taxonomy:
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.SegmentRef.Ref** - ссылка на сегмент. Тип данных - целое 32 битное число.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes** - типы пассажиров к которым применима данная цена. Тип данных - массив.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes.PassTypes** - тип пассажира. Тип - данных перечисление.
--   **ActualizedFlight** — содержит актуализированный перелёт. Тип данных — [Flight](/avia/common/flight).
--   **ActualizedFlight.Segments.Segment.SupplierInfo** - информация о статусах сегментов в случае если перелёт не доступен для бронирования и операция выполнялась с помощью запроса взятия мест. Тип данных - строка. Поддерживается у GalileoUapi, Sabre, Amadeus, Galileo.
--   **FlightsByFareFamily** - содержит результат операции **GetFareFamilies**. Тип данных — массив [Flight](/avia/common/flight).
--   **SubsidizedTariffs** - содержит результат операции **GetSubsidizedTariffs**. Тип данных — массив [Flight](/avia/common/flight).
 -   **GetAllowedCCsResult** - результат получения списка кодов карт для оплаты ГДС процессингом. Тип данных - массив.
 -   **GetAllowedCCsResult.AllowedCCs** - список кодов допустимых карт для оплаты брони ГДС процессингом. Тип данных - массив.
 -   **GetAllowedCCsResult.AllowedCCs.Code** - код кредитной карты, которой можно оплатить указанную бронь с помощью ГДС процессинга. Тип данных - строка.
 -   **GetAllowedLoyaltyCardsResult** - массив тарифных правил, применяемых к данному перелёту. Тип данных - массив.
+-   **ActualizedFlight** — содержит актуализированный перелёт. Тип данных — [Flight](/avia/common/flight).
+-   **ActualizedFlight.Segments.Segment.SupplierInfo** - информация о статусах сегментов в случае если перелёт не доступен для бронирования и операция выполнялась с помощью запроса взятия мест. Тип данных - строка. Поддерживается у GalileoUapi, Sabre, Amadeus, Galileo.
+-   **FlightsByFareFamily** - содержит результат операции **GetFareFamilies**. Тип данных — массив [Flight](/avia/common/flight).
+-   **SubsidizedTariffs** - содержит результат операции **GetSubsidizedTariffs**. Тип данных — массив [Flight](/avia/common/flight).
 
 >>>> В результате выполнения запроса, будет получен перелен с новым ID, именно этот ID следует использовать в дальнейших операциях, например в бронировании.
 
