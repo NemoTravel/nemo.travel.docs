@@ -17,7 +17,10 @@ Flight leg prices are described in the current OfferItem.
 #### Request
 -  **AirShoppingRQ** - request searching for offers in accordance with the specified data about segments, passengers and additional restrictions. The required attribute Version = "17.2" contains the version of the NDC protocol. Data type - custom.
 -  **AirShoppingRQ.CoreQuery** - contains information about the requested purchase. Data type - custom.
--  **CoreQuery.OriginDestinations** - contains information about the segments of the flight you want to find. **Required element, provided that the CoreQuery.FlightSpecific element is not specified**. Data type - custom.
+-  **AirShoppingRQ.CoreQuery.ShoppingResponseID** - contains information about the search for which you want to get results. **Required element, provided that the CoreQuery.FlightSpecific or CoreQuery.OriginDestinations element is not specified**. Data type - custom.
+-  **AirShoppingRQ.CoreQuery.ShoppingResponseID.Owner** - owner code (GDS) of the offer. Data type - string.
+-  **AirShoppingRQ.CoreQuery.ShoppingResponseID.ResponseID** - AirShoppingRS.ShoppingResponseID for which you want to get the results of search results. Data type - string.
+-  **CoreQuery.OriginDestinations** - contains information about the segments of the flight you want to find. **Required element, provided that the CoreQuery.FlightSpecific or CoreQuery.ShoppingResponseID element is not specified**. Data type - custom.
 -  **CoreQuery.OriginDestinations.OriginDestination** - flight destination/arrival information (required). Data type - custom.
 -  **OriginDestinations.OriginDestination.Departure** - contains information about the departure point (required). Data type - custom.
 -  **OriginDestinations.OriginDestination.Departure.AirportCode** - 3-letter IATA airport code or city of departure (required). Data type - string.
@@ -27,7 +30,7 @@ Flight leg prices are described in the current OfferItem.
 -  **OriginDestinations.OriginDestination.Arrival.AirportCode** - 3-letter IATA airport code or city of arrival (required). Data type - string.
 -  **OriginDestinations.OriginDestination.Arrival.AirportName** - optional parameter. Possible to use when the airport code is the same as the city code.
 -  **OriginDestinations.OriginDestination.CalendarDates** - first element of CoreQuery.OriginDestinations.OriginDestination can be supplemented with the optional CalendarDates element. This element contains the DaysBefore and DaysAfter attributes, the number of days is determined from the addition of attributes. The value of the attributes must be identical and must not exceed the amount of 3.
--  **CoreQuery.FlightSpecific** - contains more detailed information about the requested segments. Data type - custom. **Required element if CoreQuery.OriginDestinations element is not specified.**
+-  **CoreQuery.FlightSpecific** - contains more detailed information about the requested segments. Data type - custom. **Required element if CoreQuery.OriginDestinations or CoreQuery.ShoppingResponseID element is not specified.**
 -  **FlightSpecific.FlightSegment** - contains information about the segments of the flight that you want to find. Data type - custom. Includes the required attribute SegmentKey = "SEG0", which contains the unique segment ID. SEG prefix required. Segment numbers start at zero.
 -  **FlightSpecific.FlightSegment.Departure** - point of departure (required). Data type - custom.
 -  **FlightSpecific.FlightSegment.Departure.AirportCode** - 3 letter airport IATA code or city of departure (required). Data type - string.
