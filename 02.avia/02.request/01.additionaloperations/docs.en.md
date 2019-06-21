@@ -94,10 +94,6 @@ Includes the set of elements caused by operstion in the request:
 - **Sources.SourceInfo.CustomTicketingRequisites.RequisiteConfig** - container with information about custom ticketing requisite configuration. Data type - custom.
 - **Sources.SourceInfo.CustomTicketingRequisites.RequisiteConfig.AppliesToCompanies** - list of airlines for which this requisite applies. Data type - string.
 - **Sources.SourceInfo.CustomTicketingRequisites.RequisiteConfig.RequisiteID** - vendor requisite identifier. Data type - string.
--  **ActualizedFlight** - contains the updated flight. Data type - [Flight](/avia/common/flight).
--  **ActualizedFlight.Segments.Segment.SupplierInfo** - information about the segment statuses if the flight is unavailable for booking and operation was executed via the seat taking request. Data type - string. Supported by GalileoUapi, Sabre, Amadeus, Galileo.
--  **FlightsByFareFamily** - contains the result of the GetFareFamilies operation. Data type - [Flight](/avia/common/flight) array.
--  **SubsidizedTariffs** - contains the result of GetSubsidizedTariffs operation. Data type - [Flight](/avia/common/flight) array.
 -   **ObjectForOperations** — contains the ID of the object for which you want to perform additional operations. Data type - custom. Similar to the corresponding element from the request.
 -   **CheckAvailabilityResult** — result of checking the booking availability of the flight. Data type - custom.
 -   **CheckAvailabilityResult.IsAvail** — attribute of booking availability of a flight. Data type - bool.
@@ -162,6 +158,10 @@ Includes the set of elements caused by operstion in the request:
 -   **GetAllowedCCsResult.AllowedCCs** - list of codes of acceptable cards for booking payment via the GDS processing. Data type - custom.
 -   **GetAllowedCCsResult.AllowedCCs.Code** - code of the credit card which you can use to pay for the specified reservation via the GDS processing. Data type - string.
 -   **GetAllowedLoyaltyCardsResult** - array of fare rules applied to the given flight. Data type - custom.
+-  **ActualizedFlight** - contains the updated flight. Data type - [Flight](/avia/common/flight).
+-  **ActualizedFlight.Segments.Segment.SupplierInfo** - information about the segment statuses if the flight is unavailable for booking and operation was executed via the seat taking request. Data type - string. Supported by GalileoUapi, Sabre, Amadeus, Galileo.
+-  **FlightsByFareFamily** - contains the result of the GetFareFamilies operation. Data type - [Flight](/avia/common/flight) array.
+-  **SubsidizedTariffs** - contains the result of GetSubsidizedTariffs operation. Data type - [Flight](/avia/common/flight) array.
 
 >>>> The flight with a new ID will be received as a result of the request, this ID should be used in further operations, for example, in the booking.
 
