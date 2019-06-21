@@ -36,6 +36,7 @@ All NDC requests and responses have a specific set of common basic elements.
     - **Source** - ID of the Nemo Connect requisites package;
     - **Tag** - one of the labels of the request sender, describing it in accordance with a certain criterion;
     - **SubAgencyID** - external subagency ID.
+    - **ReferID** - if specified, it overrides the Nemo 1 user, for which pricing will be performed. The data type is int32.
 -  **Party.Sender.TravelAgencySender.AgencyID** - unique agency ID in the Nemo.travel (required). Data type - positive integer.
 
 #### Response
