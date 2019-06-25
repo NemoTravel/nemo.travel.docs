@@ -180,9 +180,21 @@ taxonomy:
     -   **S** — standalone.
 -   **ElectronicDocument.EMDSpecificData.ParentTicket** — номер билета, в привязке к которому выписан данный EMD. В основном имеет смысл только для EMD-А. Тип данных — строка.
 -   **ElectronicDocument.EMDSpecificData.Description** — текстовое описание услуги данного электронного документа (специфично для некоторых видов EMD). Тип данных — строка.
--   **ElectronicDocument.VAT** — НДС по услуге данного электронного документа. Тип данных — [Money](/avia/common/money).
--   **ElectronicDocument.VATBreakdown** — структура НДС по услуге данного электронного документа. Тип данных — массив.
--   **PaperDocument** — бумажный документ (необязательный). Тип данных — массив.
+-   **ElectronicDocument.VAT** — НДС по услуге данного электронного документа. Тип данных — [Money](/avia/common/money). *Устаревший блок*
+-   **ElectronicDocument.VATBreakdown** — структура НДС по услуге данного электронного документа. Тип данных — сложный.
+-   **ElectronicDocument.VATBreakdown.Tariff** - контейнер с информацией по НДС от тарифа. Тип данных — сложный.
+-   **ElectronicDocument.VATBreakdown.Tariff.Amount** - сумма. Тип данных — decimal.
+-   **ElectronicDocument.VATBreakdown.Tariff.Currency** - ISO Alpha3 код валюты. Тип данных — string.
+-   **ElectronicDocument.VATBreakdown.Tariff.Percent** - налоговая ставка НДС в процентах. Тип данных - double.
+-   **ElectronicDocument.VATBreakdown.Taxes** - НДС от суммы такс. Тип данных - [Money](/avia/common/money).
+-   **ElectronicDocument.VATBreakdown.Taxes.Breakdown** - контейнер с информацией по НДС от такс. Тип данных — сложный.
+-   **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax** - контейнер с информацией по НДС от конкретной таксы.  Тип данных — сложный.
+-   **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Amount** - сумма. Тип данных — decimal.
+-   **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Currency** - ISO Alpha3 код валюты. Тип данных — string.
+-   **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Percent** - налоговая ставка НДС в процентах. Тип данных - double.
+-   **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Code** - код таксы. Тип данных — string.
+-   **ElectronicDocument.VATBreakdowns.Total** - НДС от суммы тарифа и такс. Тип данных - [Money](/avia/common/money).
+-   **PaperDocument** — бумажный документ (необязательный). Тип данных — массив. 
 -   **PaperDocument.Type** — тип документ. Тип данных — перечисление, возможные значения:
     -   **ItinReceipt** — маршрут-квитанция;
     -   **EMD** — электронный многоцелевой документ;
@@ -306,7 +318,7 @@ taxonomy:
 -   **TicketDesignator.Value** — значение тикет-десигнатора для прописывания в бронь. Тип данных — строка.
 -   **Markup** — информация о сборе агента (необязательный). Тип данных — массив.
 -   **Markup.MarkupValue** — значение сбора агента. Тип данных — [Money](/avia/common/money).
--   **Markup.VAT** — данные об НДС. Тип данных — массив.
+-   **Markup.VAT** — данные об НДС. Тип данных — массив. 
 -   **Markup.VAT.VATValue** — сумма НДС. Тип данных — [Money](/avia/common/money).
 -   **Markup.VAT.VATRate** — ставка НДС в процентах. Тип данных — double.
 -   **TicketingProxy** — данные для проксирования выписки через платежный шлюз (необязательный). Тип данных — массив.
