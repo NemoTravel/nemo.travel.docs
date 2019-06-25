@@ -172,8 +172,20 @@ To store different booking content.
 - **ElectronicDocument.IssueDateTime** - time of ED generation. Data type - date and time with the time zone specified.
 - **ElectronicDocument.NotStoredInPNR** - attribute of this ticket was not being saved in PNR. Data type - bool.
 - **ElectronicDocument.ExecutionTimeLimit** - TL to provide services for this ED. Data type - date and time with the time zone specified.
-- **ElectronicDocument.VAT** - VAT for this ED service. Data type - [Money](/avia/common/money).
-- **ElectronicDocument.VATBreakdown** - structure of VAT for the service of this ED. Data type - array.
+- **ElectronicDocument.VAT** - VAT for this ED service. Data type - [Money](/avia/common/money). *Оutdated.*
+- **ElectronicDocument.VATBreakdown** - structure of VAT for the service of this ED. Data type - complex.
+- **ElectronicDocument.VATBreakdown.Tariff** - container with information about VAT from the tariff. Data type - complex.
+- **ElectronicDocument.VATBreakdown.Tariff.Amount** - аmount. Data type — decimal.
+- **ElectronicDocument.VATBreakdown.Tariff.Currency** - ISO Alpha3 currency code. Data type — string.
+- **ElectronicDocument.VATBreakdown.Tariff.Percent** - VAT rate in percent. Data type - double.
+- **ElectronicDocument.VATBreakdown.Taxes** - VAT from the tax total amount. Data type - [Money](/avia/common/money).
+-   **ElectronicDocument.VATBreakdown.Taxes.Breakdown** - container with information about VAT from taxes. Data type - complex.
+-   **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax** - container with information about VAT from a particular tax.  Data type - complex.
+-   **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Amount** - amount. Тип данных — decimal.
+-   **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Currency** - ISO Alpha3 currency code. Data type — string.
+-   **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Percent** - VAT rate in percent. Data type - double.
+-   **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Code** - tax code. Data type — string.
+-   **ElectronicDocument.VATBreakdowns.Total** - VAT from the tax and fare total amount. Data type - [Money](/avia/common/money).
 - **ElectronicDocument.EMDSpecificData** - contains the data specific for EMD. Data type - array.
 - **ElectronicDocument.EMDSpecificData.EMDType** - EMD type. Data type - string, the possible values are A/S, A - associated, S - standalone.
 - **ElectronicDocument.EMDSpecificData.ParentTicket** - number of the the ticket to which an issued EMD is bind. Generally it makes sense only for EMD-A. Data type - string.
