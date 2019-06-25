@@ -7,19 +7,19 @@ taxonomy:
 
 ### GetEDData
 
-This request is used to get the electronic document mask from the GDS. At the moment acquiring the mask from GDS Sirena is supported. 
+Используется для получения маски электронного документа из ГРС. На текущий момент поддерживается получение маски из ГРС Sirena.
 
-#### Request
+#### Запрос
 
-##### Format description
+##### Описание формата
 
--   **BookID** - ID of the booking for which you want to perform an operation. Data type - 64-bit integer. 
--   **AllED** - getting the masks of all the active electronic documents. Data type - bool. If the value of the element is True, all the active electronic document masks are requested, if the value if False, the following elements are used: 
-  -   **EDNumbers** - list of electronic document numbers.
-  -   **EDNumbers.Number** - electronic document number. Data type - string.
+-   **BookID** - ID брони, для которой требуется выполнить операцию. Тип данных — целое 64-битное число.
+-   **AllED** - получить маски всех активных электронных документов. Тип данных булевый. Если указано значение элемента true, запрашиваем маски всех активных электронных документов, если значение элемента — false, используем следующие элементы:
+  -   **EDNumbers** - список номеров электронных документов.
+  -   **EDNumbers.Number** - номер электронного документа. Тип данных — строка.
 
 
-##### Sample
+##### Пример
 
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avia="http://nemo-ibe.com/Avia" xmlns:stl="http://nemo-ibe.com/STL" xmlns:avia1="http://nemo.travel/Avia" xmlns:stl1="http://nemo.travel/STL">
@@ -50,42 +50,42 @@ This request is used to get the electronic document mask from the GDS. At the mo
 </soapenv:Envelope>
 ```
 
-#### Response
+#### Ответ
 
-##### Format description
+##### Описание формата
 
--   **Number** - electronic document number. Data type - string.
--   **ExchangedTicketNumber** - number of the old ticket by which the exchange was preformed. Data type - string.
--   **ServiceType** - type of the service provided by this electronic document. Data type - enumeration, possible values: 
+-   **Number** - номер электронного документа. Тип данных — строка.
+-   **ExchangedTicketNumber** - номер старого билета, по которому был выполнен обмен. Тип данных — строка.
+-   **ServiceType** - тип услуги, предоставляемой по данному электронному документу. Тип данных — перечисление, возможные значения: 
     -   **Flight**;
     -   **Ancillary**;
     -   **Penalty**;
     -   **FinancialImpact**;
     -   **ResidualValue**.
--    **IssueDateTime** - date and time of electronic document's issue.
--    **Traveller** - passenger data to which the electronic document corresponds. Data type - [Traveller](/avia/common/traveller).
--    **Service** - contains the description of the service to which the electronic document applies. Data type - custom.
--    **Service.ProcessService** - contains the description of a processing service. Data type - [ProcessingService](/avia/common/processingservice).
--    **Service.FlightService** - contains the description of a flight service. Data type - [Flight](/avia/common/flight).
--    **Service.AncillaryService** - contains the description of the ancillary services on the flight. Data type - [FlightAncillaryService](/avia/common/flightancillaryservice).
--    **Price** - contains the complete information on the price of a service and its’ formation. Data type - [Price](/avia/common/price)
--    **DataItems** - data block for storing different content of the mask. Data type - [DataItem](/avia/common/dataitem). In the air ticket mask, this block contains the information about the passenger’s identity document and contact data. In the ancillary service EMD mask, the block contains information about the booked seats. In the processing service EMD mask, the block contains additional information on the EMD. 
-- 	 **VATBreakdown** - structure of VAT for the service of this ED. Data type - complex.
-- 	 **VATBreakdown.Tariff** - container with information about VAT from the tariff. Data type - complex.
-- 	 **VATBreakdown.Tariff.Amount** - аmount. Data type — decimal.
-- 	 **VATBreakdown.Tariff.Currency** - ISO Alpha3 currency code. Data type — string.
-- 	 **VATBreakdown.Tariff.Percent** - VAT rate in percent. Data type - double.
-- 	 **VATBreakdown.Taxes** - VAT from the tax total amount. Data type - [Money](/avia/common/money).
-- 	 **VATBreakdown.Taxes.Breakdown** - container with information about VAT from taxes. Data type - complex.
-- 	 **VATBreakdown.Taxes.Breakdown.Tax** - container with information about VAT from a particular tax.  Data type - complex.
-- 	 **VATBreakdown.Taxes.Breakdown.Tax.Amount** - amount. Тип данных — decimal.
-- 	 **VATBreakdown.Taxes.Breakdown.Tax.Currency** - ISO Alpha3 currency code. Data type — string.
-- 	 **VATBreakdown.Taxes.Breakdown.Tax.Percent** - VAT rate in percent. Data type - double.
-- 	 **VATBreakdown.Taxes.Breakdown.Tax.Code** - tax code. Data type — string.
-- 	 **VATBreakdown.Total** - VAT from the tax and fare total amount. Data type - [Money](/avia/common/money).
--    **IssuierSupplierID** - ticketing requisite ID. Data type - string. 
+-    **IssueDateTime** - дата и время выписки электронного документа.
+-    **Traveller** - - сведения о пассажире, которому соответствует электронный документ. Тип данных - [Traveller](/avia/common/traveller).
+-    **Service** - содержит описание услуги, на которую применяется электронный документ. Тип данных - сложный.
+-    **Service.ProcessService** - содержит описание услуги по обработке. Тип данных -  [ProcessingService](/avia/common/processingservice).
+-    **Service.FlightService** - содержит описание услуги авиаперелета. Тип данных - [Flight](/avia/common/flight).
+-    **Service.AncillaryService** - содержит описание дополнительных услуг авиаперелета. Тип данных - [FlightAncillaryService](/avia/common/flightancillaryservice).
+-    **Price** - содержит полную информацию о цене услуги и её формировании. Тип данных - [Price](/avia/common/price)
+-    **DataItems** - блок данных для хранения различного контента маски. Тип данных - DataItem. В маске авиабилета этот блок содержит информацию о документе, удостоверяющий личность пассажира и контактных данных пассажира. В маске EMD за дополнителую услугу блок содержит информацию о зарезервированных местах. В маске EMD за услуги по обработке блок содержит дополнительную информация по EMD.
+- 	 **VATBreakdown** — структура НДС по услуге данного электронного документа. Тип данных — сложный.
+- 	 **VATBreakdown.Tariff** - контейнер с информацией по НДС от тарифа. Тип данных — сложный.
+- 	 **VATBreakdown.Tariff.Amount** - сумма. Тип данных — decimal.
+- 	 **VATBreakdown.Tariff.Currency** - ISO Alpha3 код валюты. Тип данных — string.
+- 	 **VATBreakdown.Tariff.Percent** - налоговая ставка НДС в процентах. Тип данных - double.
+- 	 **VATBreakdown.Taxes** - НДС от суммы такс. Тип данных - [Money](/avia/common/money).
+- 	 **VATBreakdown.Taxes.Breakdown** - контейнер с информацией по НДС от такс. Тип данных — сложный.
+- 	 **VATBreakdown.Taxes.Breakdown.Tax** - контейнер с информацией по НДС от конкретной таксы.  Тип данных — сложный.
+- 	 **VATBreakdown.Taxes.Breakdown.Tax.Amount** - сумма. Тип данных — decimal.
+- 	 **VATBreakdown.Taxes.Breakdown.Tax.Currency** - ISO Alpha3 код валюты. Тип данных — string.
+- 	 **VATBreakdown.Taxes.Breakdown.Tax.Percent** - налоговая ставка НДС в процентах. Тип данных - double.
+- 	 **VATBreakdown.Taxes.Breakdown.Tax.Code** - код таксы. Тип данных — string.
+- 	 **VATBreakdown.Total** - НДС от суммы тарифа и такс. Тип данных - [Money](/avia/common/money).
+-    **IssuierSupplierID** - идентификатор реквизита выписки. Тип данных - строка. 
 
-##### Sample
+##### Пример
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
    <s:Body>
