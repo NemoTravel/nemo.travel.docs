@@ -70,10 +70,19 @@ This request is used to get the electronic document mask from the GDS. At the mo
 -    **Service.AncillaryService** - contains the description of the ancillary services on the flight. Data type - [FlightAncillaryService](/avia/common/flightancillaryservice).
 -    **Price** - contains the complete information on the price of a service and its’ formation. Data type - [Price](/avia/common/price)
 -    **DataItems** - data block for storing different content of the mask. Data type - [DataItem](/avia/common/dataitem). In the air ticket mask, this block contains the information about the passenger’s identity document and contact data. In the ancillary service EMD mask, the block contains information about the booked seats. In the processing service EMD mask, the block contains additional information on the EMD. 
--    **VATBreakdowns** - VAT for the given electronic document’s service. Data type - array.
--    **VATBreakdowns.Tariff** - VAT from the fare. Data type - [Money](/avia/common/money).
--    **VATBreakdowns.Taxes** - VAT from the tax total amount. Data type - [Money](/avia/common/money).
--    **VATBreakdowns.Total** -  VAT from the tax and fare total amount. Data type - [Money](/avia/common/money).
+- 	 **VATBreakdown** - structure of VAT for the service of this ED. Data type - complex.
+- 	 **VATBreakdown.Tariff** - container with information about VAT from the tariff. Data type - complex.
+- 	 **VATBreakdown.Tariff.Amount** - аmount. Data type — decimal.
+- 	 **VATBreakdown.Tariff.Currency** - ISO Alpha3 currency code. Data type — string.
+- 	 **VATBreakdown.Tariff.Percent** - VAT rate in percent. Data type - double.
+- 	 **VATBreakdown.Taxes** - VAT from the tax total amount. Data type - [Money](/avia/common/money).
+- 	 **VATBreakdown.Taxes.Breakdown** - container with information about VAT from taxes. Data type - complex.
+- 	 **VATBreakdown.Taxes.Breakdown.Tax** - container with information about VAT from a particular tax.  Data type - complex.
+- 	 **VATBreakdown.Taxes.Breakdown.Tax.Amount** - amount. Тип данных — decimal.
+- 	 **VATBreakdown.Taxes.Breakdown.Tax.Currency** - ISO Alpha3 currency code. Data type — string.
+- 	 **VATBreakdown.Taxes.Breakdown.Tax.Percent** - VAT rate in percent. Data type - double.
+- 	 **VATBreakdown.Taxes.Breakdown.Tax.Code** - tax code. Data type — string.
+- 	 **VATBreakdown.Total** - VAT from the tax and fare total amount. Data type - [Money](/avia/common/money).
 -    **IssuierSupplierID** - ticketing requisite ID. Data type - string. 
 
 ##### Sample
@@ -688,5 +697,3 @@ D 993 ПЛАТА ПРИ ИЗМЕНЕНИИ</a:Description>
    </s:Body>
 </s:Envelope>
 ```
-
-
