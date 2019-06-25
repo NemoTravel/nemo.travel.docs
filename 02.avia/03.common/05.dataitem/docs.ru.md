@@ -193,7 +193,7 @@ taxonomy:
 -   **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Currency** - ISO Alpha3 код валюты. Тип данных — string.
 -   **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Percent** - налоговая ставка НДС в процентах. Тип данных - double.
 -   **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Code** - код таксы. Тип данных — string.
--   **ElectronicDocument.VATBreakdowns.Total** - НДС от суммы тарифа и такс. Тип данных - [Money](/avia/common/money).
+-   **ElectronicDocument.VATBreakdown.Total** - НДС от суммы тарифа и такс. Тип данных - [Money](/avia/common/money).
 -   **PaperDocument** — бумажный документ (необязательный). Тип данных — массив. 
 -   **PaperDocument.Type** — тип документ. Тип данных — перечисление, возможные значения:
     -   **ItinReceipt** — маршрут-квитанция;
