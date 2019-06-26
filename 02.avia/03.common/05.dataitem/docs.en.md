@@ -179,11 +179,11 @@ To store different booking content.
 - **ElectronicDocument.VATBreakdown.Tariff.Currency** - ISO Alpha3 currency code. Data type — string.
 - **ElectronicDocument.VATBreakdown.Tariff.Percent** - VAT rate in percent. Data type - double.
 - **ElectronicDocument.VATBreakdown.Taxes** - VAT from the tax total amount. Data type - complex.
-- **ElectronicDocument.VATBreakdown.Taxes.Amount** - аmount. Тип данных — decimal.
+- **ElectronicDocument.VATBreakdown.Taxes.Amount** - аmount. Data type — decimal.
 - **ElectronicDocument.VATBreakdown.Taxes.Currency** - ISO Alpha3 currency code. Data type — string.
 - **ElectronicDocument.VATBreakdown.Taxes.Breakdown** - container with information about VAT from taxes. Data type - complex.
 - **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax** - container with information about VAT from a particular tax.  Data type - complex.
-- **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Amount** - amount. Тип данных — decimal.
+- **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Amount** - amount. Data type — decimal.
 - **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Currency** - ISO Alpha3 currency code. Data type — string.
 - **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Percent** - VAT rate in percent. Data type - double.
 - **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Code** - tax code. Data type — string.
