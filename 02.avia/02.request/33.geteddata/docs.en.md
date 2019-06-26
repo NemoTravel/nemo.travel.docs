@@ -75,10 +75,12 @@ This request is used to get the electronic document mask from the GDS. At the mo
 - 	 **VATBreakdown.Tariff.Amount** - аmount. Data type — decimal.
 - 	 **VATBreakdown.Tariff.Currency** - ISO Alpha3 currency code. Data type — string.
 - 	 **VATBreakdown.Tariff.Percent** - VAT rate in percent. Data type - double.
-- 	 **VATBreakdown.Taxes** - VAT from the tax total amount. Data type - [Money](/avia/common/money).
+- 	 **VATBreakdown.Taxes** - VAT from the tax total amount. Data type - complex.
+- 	 **VATBreakdown.Taxes.Amount** - аmount. Data type - decimal.
+- 	 **VATBreakdown.Taxes.Currency** - ISO Alpha3 currency code. Data type — string.
 - 	 **VATBreakdown.Taxes.Breakdown** - container with information about VAT from taxes. Data type - complex.
 - 	 **VATBreakdown.Taxes.Breakdown.Tax** - container with information about VAT from a particular tax.  Data type - complex.
-- 	 **VATBreakdown.Taxes.Breakdown.Tax.Amount** - amount. Тип данных — decimal.
+- 	 **VATBreakdown.Taxes.Breakdown.Tax.Amount** - amount. Data type — decimal.
 - 	 **VATBreakdown.Taxes.Breakdown.Tax.Currency** - ISO Alpha3 currency code. Data type — string.
 - 	 **VATBreakdown.Taxes.Breakdown.Tax.Percent** - VAT rate in percent. Data type - double.
 - 	 **VATBreakdown.Taxes.Breakdown.Tax.Code** - tax code. Data type — string.
