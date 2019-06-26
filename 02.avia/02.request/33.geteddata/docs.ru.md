@@ -75,7 +75,9 @@ taxonomy:
 - 	 **VATBreakdown.Tariff.Amount** - сумма. Тип данных — decimal.
 - 	 **VATBreakdown.Tariff.Currency** - ISO Alpha3 код валюты. Тип данных — string.
 - 	 **VATBreakdown.Tariff.Percent** - налоговая ставка НДС в процентах. Тип данных - double.
-- 	 **VATBreakdown.Taxes** - НДС от суммы такс. Тип данных - [Money](/avia/common/money).
+- 	 **VATBreakdown.Taxes** - НДС от суммы такс. Тип данных — сложный.
+- 	 **VATBreakdown.Taxes.Amount** - сумма. Тип данных — decimal.
+- 	 **VATBreakdown.Taxes.Currency** - ISO Alpha3 код валюты. Тип данных — string.
 - 	 **VATBreakdown.Taxes.Breakdown** - контейнер с информацией по НДС от такс. Тип данных — сложный.
 - 	 **VATBreakdown.Taxes.Breakdown.Tax** - контейнер с информацией по НДС от конкретной таксы.  Тип данных — сложный.
 - 	 **VATBreakdown.Taxes.Breakdown.Tax.Amount** - сумма. Тип данных — decimal.
