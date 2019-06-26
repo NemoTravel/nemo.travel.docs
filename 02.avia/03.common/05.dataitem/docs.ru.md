@@ -186,7 +186,9 @@ taxonomy:
 -   **ElectronicDocument.VATBreakdown.Tariff.Amount** - сумма. Тип данных — decimal.
 -   **ElectronicDocument.VATBreakdown.Tariff.Currency** - ISO Alpha3 код валюты. Тип данных — string.
 -   **ElectronicDocument.VATBreakdown.Tariff.Percent** - налоговая ставка НДС в процентах. Тип данных - double.
--   **ElectronicDocument.VATBreakdown.Taxes** - НДС от суммы такс. Тип данных - [Money](/avia/common/money).
+-   **ElectronicDocument.VATBreakdown.Taxes** - НДС от суммы такс. Тип данных — сложный.
+-   **ElectronicDocument.VATBreakdown.Taxes.Amount** - сумма. Тип данных — decimal.
+-   **ElectronicDocument.VATBreakdown.Taxes.Currency** - ISO Alpha3 код валюты. Тип данных — string.
 -   **ElectronicDocument.VATBreakdown.Taxes.Breakdown** - контейнер с информацией по НДС от такс. Тип данных — сложный.
 -   **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax** - контейнер с информацией по НДС от конкретной таксы.  Тип данных — сложный.
 -   **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Amount** - сумма. Тип данных — decimal.
