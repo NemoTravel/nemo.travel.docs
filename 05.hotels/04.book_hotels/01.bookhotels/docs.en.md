@@ -22,7 +22,7 @@ title: 'Book Request'
 -   **Guests.Guest.Age** - guest’s age. Data type - unsigned 32-bit integer.
 -   **Guests.Guest.Nationality** - guest’s nationality. Data type - string.
 -   **Guests.Guest.Gender** - guest’s gender. Data type - string.
--   **Guests.Guest.DateOfBirth** - guest’s date of birth. Data type - string, the format is dd-mm-yyyy.
+-   **Guests.Guest.DateOfBirth** - guest’s date of birth. Data type - string, the format is dd.mm.yyyy.
 -   **Guests.Guest.AdditionalInfo** - additional information on the guest. Data type - string.
 -   **Client** - container with information on the contact person. Data type - custom.
 -   **Client.LastName** - name of the contact person. Data type - string.
