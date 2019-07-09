@@ -12,30 +12,30 @@ title: 'Запрос Book'
 -   **Rooms.RoomData** - контейнер с информацией о комнате, которую требуется забронировать. Тип данных - сложный.
 -   **Rooms.RoomData.RoomSearchIndex** - идентификатор порядкового номера искомой комнаты. Тип данных - целое беззнаковое 32-битное число.
 -   **Rooms.RoomData.RoomVariantID** - идентификатор бронируемой комнаты. Тип данных - целое беззнаковое 32-битное число.
--   **Guests** - контейнер с информацией о постояльцах. Тип данных - сложный.
--   **Guests.Guest** - контейнер с информацией о постояльце. Тип данных - сложный.
--   **Guests.Guest.LastName** - фамилия постояльца. Тип данных - строка.
--   **Guests.Guest.FirstName** - имя постояльца. Тип данных - строка.
--   **Guests.Guest.Phone** - телефон постояльца. Тип данных - целое беззнаковое 32-битное число.
--   **Guests.Guest.Email** - электронная почта постояльца. Тип данных - строка.
--   **Guests.Guest.Type** - ADT - взрослый, если возраст постояльца больше 16, иначе CLD - ребенок. Тип данных - строка.
--   **Guests.Guest.Age** - возраст постояльца. Тип данных - целое беззнаковое 32-битное число.
--   **Guests.Guest.Nationality** - национальность постояльца. Тип данных - строка.
--   **Guests.Guest.Gender** - пол постояльца. Тип данных - строка.
--   **Guests.Guest.DateOfBirth** - дата рождения постояльца. Тип данных - строка, формат dd.mm.yyyy.
--   **Guests.Guest.AdditionalInfo** - дополнительная информация о постояльце. Тип данных - строка.
+-   **Rooms.RoomData.Guests** - контейнер с информацией о постояльцах. Тип данных - сложный.
+-   **Rooms.RoomData.Guests.Guest** - контейнер с информацией о постояльце. Тип данных - сложный.
+-   **Rooms.RoomData.Guests.Guest.LastName** - фамилия постояльца. Тип данных - строка.
+-   **Rooms.RoomData.Guests.Guest.FirstName** - имя постояльца. Тип данных - строка.
+-   **Rooms.RoomData.Guests.Guest.Phone** - телефон постояльца. Тип данных - целое беззнаковое 32-битное число.
+-   **Rooms.RoomData.Guests.Guest.Email** - электронная почта постояльца. Тип данных - строка.
+-   **Rooms.RoomData.Guests.Guest.Type** - ADT - взрослый, если возраст постояльца больше 16, иначе CLD - ребенок. Тип данных - строка.
+-   **Rooms.RoomData.Guests.Guest.Age** - возраст постояльца. Тип данных - целое беззнаковое 32-битное число.
+-   **Rooms.RoomData.Guests.Guest.Nationality** - национальность постояльца. Тип данных - строка.
+-   **Rooms.RoomData.Guests.Guest.Gender** - пол постояльца. Тип данных - строка.
+-   **Rooms.RoomData.Guests.Guest.DateOfBirth** - дата рождения постояльца. Тип данных - строка, формат dd.mm.yyyy.
+-   **Rooms.RoomData.Guests.Guest.AdditionalInfo** - дополнительная информация о постояльце. Тип данных - строка.
+-   **Rooms.RoomData.CheckInParams** - содержит информацию о выбранном варианте раннего заезда в отель для данного номера из предоставляемых в ответе **GetHotelAvailability**. Тип данных - сложный.
+-   **Rooms.RoomData.CheckInParams.Critical** - признак критичности. Тип данных - булевский.
+-   **Rooms.RoomData.CheckInParams.Time** - контейнер с информацией о выбранном времени. Тип данных - сложный формата hh:mm.
+-   **Rooms.RoomData.CheckOutParams** - контейнер с информацией о выбранном варианте позднего выезда из отеля  для данного номера из предоставляемых в ответе **GetHotelAvailability**. Тип данных - сложный. Идентичен CheckInParams
+-   **Rooms.RoomData.CheckOutParams.Critical** - признак критичности. Тип данных - булевский.
+-   **Rooms.RoomData.CheckOutParams.Time** - контейнер с информацией о выбранном времени. Тип данных - сложный формата hh:mm.
 -   **Client** - контейнер с информацией о контактном лице. Тип данных - сложный.
 -   **Client.LastName** - фамилия контактного лица. Тип данных - строка.
 -   **Client.FirstName** - имя контактного лица. Тип данных - строка.
 -   **Client.Phone** - телефон контактного лица. Тип данных - целое 32-битное число.
 -   **Client.Email** - электронная почта контактного лица. Тип данных - строка.
 -   **Client.Nationality** - национальность контактного лица. Тип данных - строка.
--   **CheckInParams** - содержит информацию о выбранном варианте раннего заезда в отель из предоставляемых в ответе **GetHotelAvailability**. Тип данных - сложный.
--   **CheckInParams.Critical** - признак критичности. Тип данных - булевский.
--   **CheckInParams.Time** - контейнер с информацией о выбранном времени. Тип данных - сложный формата hh:mm.
--   **CheckOutParams** - контейнер с информацией о выбранном варианте позднего выезда из отеля из предоставляемых в ответе **GetHotelAvailability**. Тип данных - сложный. Идентичен CheckInParams
--   **CheckOutParams.Critical** - признак критичности. Тип данных - булевский.
--   **CheckOutParams.Time** - контейнер с информацией о выбранном времени. Тип данных - сложный формата hh:mm.
 
 ##### Пример запроса (XML)
 ```xml
@@ -75,6 +75,16 @@ title: 'Запрос Book'
                            <hot:Age>20</hot:Age>
                         </hot:Guest>
                      </hot:Guests>
+                     <!--Optional:-->
+                     <hot:CheckInParams>
+                        <hot:Critical>true</hot:Critical>
+                        <hot:Time>08:00</hot:Time>
+                     </hot:CheckInParams>
+                     <!--Optional:-->
+                     <hot:CheckOutParams>
+                        <hot:Critical>false</hot:Critical>
+                        <hot:Time>16:00</hot:Time>
+                     </hot:CheckOutParams>
                   </hot:RoomData>
                </hot:Rooms>
                <hot:Client>
@@ -83,16 +93,6 @@ title: 'Запрос Book'
                   <!--Optional:-->
                   <hot:Phone>2535</hot:Phone>             
                </hot:Client>
-               <!--Optional:-->
-               <hot:CheckInParams>
-                  <hot:Critical>true</hot:Critical>
-                  <hot:Time>08:00</hot:Time>
-               </hot:CheckInParams>
-               <!--Optional:-->
-               <hot:CheckOutParams>
-                  <hot:Critical>false</hot:Critical>
-                  <hot:Time>16:00</hot:Time>
-               </hot:CheckOutParams>
             </stl:RequestBody>
          </tem:Request>
       </tem:Book>
@@ -130,6 +130,17 @@ title: 'Запрос Book'
 -   **Rooms.HotelRoom.Guests.Guest.Email** - электронная почта постояльца. Тип данных - строка.
 -   **Rooms.HotelRoom.Guests.Guest.Type** - ADT - взрослый, если возраст постояльца больше 16, иначе CLD - ребенок. Тип данных - строка.
 -   **Rooms.HotelRoom.Guests.Guest.Age** - возраст постояльца. Тип данных - целое беззнаковое 32-битное число.
+-   **Rooms.HotelRoom.EarlyCheckInService** - информация об услуге раннего заезда. Тип данных - сложный.
+-   **Rooms.HotelRoom.EarlyCheckInService.Time** - содержит информацию о предлагаемом времени. Тип данных - строка формата HH:mm.
+-   **Rooms.HotelRoom.EarlyCheckInService.Price** - контейнер с информацией о цене данного предложения. Цена указана за один номер. Тип данных - сложный.
+-   **Rooms.HotelRoom.EarlyCheckInService.Price.Amount** - сумма цены. Тип данных - дробное число.
+-   **Rooms.HotelRoom.EarlyCheckInService.Price.Currency** - код валюты. Тип данных - строка.
+-   **Rooms.HotelRoom.EarlyCheckInService.Description** - дополнительная информация. Тип данных - строка.
+-   **Rooms.HotelRoom.EarlyCheckInService.Guaranteed** - содержит информацию о признаке, является ли услуга гарантированной. Тип данных - булевский.
+-   **Rooms.HotelRoom.EarlyCheckInService.PriceRule** - правила, по которым предоставляется услуга. Тип данных - перечисление.
+-   **Rooms.HotelRoom.EarlyCheckInService.IsConfirmed** - признак подтверждения услуги отелем. Тип данных - булевский.
+-   **Rooms.HotelRoom.EarlyCheckInService.IsCritical** - критичность раннего заезда, указанная пользователем при бронировании. Тип данных - булевский.
+-   **Rooms.HotelRoom.LateCheckOutService** - информация об услуге позднего выезда. Тип данных - сложный, аналогичен EarlyCheckInService.
 -   **ContactPerson** - контейнер с информацией о контактном лице. Тип данных - сложный.
 -   **ContactPerson.LastName** - фамилия контактного лица. Тип данных - строка.
 -   **ContactPerson.FirstName** - имя контактного лица. Тип данных - строка.
@@ -177,7 +188,7 @@ title: 'Запрос Book'
                   <b:Type>Улучшенный двухместный номер (Двуспальная кровать) (двуспальная кровать full size)</b:Type>
                   <b:Meal>nomeal</b:Meal>
                   <b:Price>
-                    <a:Amount>38</a:Amount>
+                    <a:Amount>88.5</a:Amount>
                     <a:Currency>RUB</a:Currency>
                   </b:Price>
                   <b:VATInfo>
@@ -213,6 +224,18 @@ title: 'Запрос Book'
                   </b:Guests>
                   <b:SupplierReference i:nil="true"/>
                   <b:HoldTimeLimit>2019-05-07T16:25:05</b:HoldTimeLimit>
+                  <b:LateCheckOutService>
+                     <b:Time>15:00</b:Time>
+                     <b:Price>
+                        <a:Amount>50.5</a:Amount>
+                        <a:Currency>RUB</a:Currency>
+                     </b:Price>
+                     <b:Description/>
+                     <b:Guaranteed>false</b:Guaranteed>
+                     <b:PriceRule>AdditionalPrice</b:PriceRule>
+                     <b:IsConfirmed i:nil="true"/>
+                     <b:IsCritical>true</b:IsCritical>
+                  </b:LateCheckOutService>
                 </b:HotelRoom>
               </b:Rooms>
               <b:ContactPerson>

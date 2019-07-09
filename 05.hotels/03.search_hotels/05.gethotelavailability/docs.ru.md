@@ -125,7 +125,7 @@ title: 'Запрос GetHotelAvailability'
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum.Amount** - сумма сбора. Тип данных - дробное число.
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum.Currency** - код валюты сбора. Тип данных - строка.
 -   **Hotels.Hotel.EarlyCheckInGroup** - контейнер с информацией о предлагаемых вариантах раннего заселения. Тип данных - сложный.
--   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer** - контейнер с информацией о варианте. Тип данных - сложный.
+-   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer** - контейнер с информацией о варианте. Цена указана за один номер. Тип данных - сложный.
 -   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Time** - контейнер с информацией о предлагаемом времени. Тип данных - строка формата hh:mm.
 -   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Price** - контейнер с информацией о цене данного предложения. Тип данных - сложный.
 -   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Price.Amount** - сумма цены. Тип данных - дробное число.
