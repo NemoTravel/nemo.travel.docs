@@ -10,7 +10,7 @@ Price
 
 Contains the full information about the price and its formation for the booking or order.
 
--   **TotalPrice** - total price of this booking or order in the agency’s selling currency. Data type - [Money](/avia/common/money).
+-   **TotalPrice** - total price of the PNR in the GDS for the whole order. Does not include agency charges set outside the GDS. It is displayed in the currency of the agency or requisites (depending on the supplier and settings). Data type - [Money](/avia/common/money).
 -   **ExpectedTicketCount** - expected number of tickets to be issued for this booking. Data type - int32.
 -   **FOPPrices** - contains the price difference for specific FOPs relatively to the price of the booking without specifying the planned FOP. Data type - array.
 -   **FOPPrices.FOPPrice** - contains the price difference for a single specific FOP relatively to the price of the booking without specifying the planned FOP. Data type - array.
@@ -20,7 +20,7 @@ Contains the full information about the price and its formation for the booking 
 -   **PricePart** - part of the price of the object, usually for one of the services in this order. Data type - array.
 -   **PricePart.ServiceRef** - reference to the services in the booking/order for which this price applies. Not indicated if the price applies to all services in the booking/order. Data type - [Reflist](/avia/common/reflist).
 -   **PricePart.SegmentRef** - reference to the flight segments to which this price applies. Specific for issuing several tickets for one flight. Data type - [Reflist](/avia/common/reflist).
--   **PricePart.TotalPrice** - total cost of this part of the price. Data type - [Money](/avia/common/money).
+-   **PricePart.TotalPrice** - total cost of this part of the price. Does not include agency charges set outside the GDS. Data type - [Money](/avia/common/money).
 -   **PricePart.ValidatingCompany** - validating carrier. Data type - string.
 -   **PricePart.Refundable** - type of refundable money at this price of the service. Data type - enumeration, possible values:
     -   Unknown
