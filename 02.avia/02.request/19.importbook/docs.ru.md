@@ -18,7 +18,8 @@ taxonomy:
 
 - **Source** - ID источника, в которой находится ПНР, на основании которого требуется создать бронь. Тип данных - целое 32-битное число:
 - **PNRCode** - ID ПНРа в ГДС. Тип данных - строка.
-- **MainPassengerLastName** - Фамилия главного пассажира в ПНР, обязательный параметр в случае работы с ГДС Сирена. Тип данных - строка.
+- **TicketNumber** - номер билета в ГДС Sirena Travel. Тип данных - числовой. (Необязательный параметр, используется только при работе с Sirena Travel. Импорт возможен по одному PNRCode, по одному TicketNumber или по PNRCode и TicketNumber вместе.)
+- **MainPassengerLastName** - Фамилия главного пассажира в ПНР, обязательный параметр в случае работы с ГДС Sirena Travel. Тип данных - строка.
 - **WithReprice** - Признак необходимости актуализировать цену брони после создания. Тип данных - булево значение.
 - **ValidatingCompany** - ВП брони, необходим для корректного импорта брони в ситуациях когда в пакете для разных а/к используются разные реквизиты в ГДС. Тип данных - строка.
 - **UseFlexFares** - Признак использования флекс семейств при импорте брони (специфика SITA Gabriel) Тип данных - булево значение.
@@ -42,6 +43,7 @@ taxonomy:
         <ns1:RequestBody>
           <ns2:Source>162494</ns2:Source>
           <ns2:PNRCode>ABVGD</ns2:PNRCode>
+          <ns2:TicketNumber/>
           <ns2:MainPassengerLastName>LASTNAME</ns2:MainPassengerLastName>
           <ns2:WithReprice>false</ns2:WithReprice>
           <ns2:ValidatingCompany>VC</ns2:ValidatingCompany>
