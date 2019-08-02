@@ -18,7 +18,7 @@ The latest request version, the differences are only in the response in the anci
 
 - **Source** -  ID of the source in which the PNR is located, on the basis of which it is required to create the booking. Data type - 32-bit integer:
 - **PNRCode** - ID of the PNR in the GDS. Data type - string.
-- **TicketNumber** - the ticket number in the GDS. (Currently supported only in GDS Sirena Travel. Optional, used only when working with Sirena Travel. Import is possible by only PNRCode, only TicketNumber or by PNRCode and TicketNumber together.)
+- **TicketNumber** - the ticket number in the GDS. Data type - string. (Currently supported only in GDS Sirena Travel. Optional, used only when working with Sirena Travel. Import is possible by only PNRCode, only TicketNumber or by PNRCode and TicketNumber together.)
 - **MainPassengerLastName** - last name of the main passenger in the PNR, required parameter while of working with the GDS Sirena. Data type - string.
 - **WithReprice** - attribute of the need to actualize the booking price after its creation. Data type - bool.
 - **ValidatingCompany** - validating company of the booking, needed to the correct booking import in case of situations when different requisites are used in a package for the different airlines. Data type - string.
