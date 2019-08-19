@@ -47,7 +47,7 @@ Main elements of any response.
   * **Network** - unexpected network error.
 * **Errors.Error.Code** - code of the error that has occurred (required). Data type - ushort (unsigned  16-bit number).
 * **Errors.Error.Message** - server error message (required). Data type - string.
-* **Errors.Error.ServiceErrorMessage** - error message received from the supplier (optional). Data type - string.
+* **Errors.Error.ServiceMessage** - error message received from the supplier (optional). Data type - string.
 * **Errors.Error.AdditionalInfo** - contains various additional information about the error (optional). Data type - custom.
 * **Errors.Error.AdditionalInfo.InfoItem** - single additional error information (optional).  Data type - custom.
 * **Errors.Error.AdditionalInfo.InfoItem.InfoKey** - additional information type (optional). Data type - enumeration, possible values:
