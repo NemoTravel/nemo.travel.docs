@@ -50,7 +50,7 @@ taxonomy:
 * **data.products.ID_FLT_N.info.nemo.packageId** — идентификатор пакета. Тип данных — целое 64-битное число.
 * **data.products.ID_FLT_N.info.nemo.status** — статус перелёта. Тип данных — строка.
 * **data.products.ID_FLT_N.info.nemo.utmSource** — источник перехода. Тип данных — строка.
-* **data.products.ID_FLT_N.info.nemo.utmMarker** — 
+* **data.products.ID_FLT_N.info.nemo.utmMarker** — маркер метапоисковика. Тип данных - строка.
 * **data.products.ID_FLT_N.info.nemoConnect** — контейнер с информацией по перелёту из Nemo.Connect. Тип данных — сложный.
 * **data.products.ID_FLT_N.info.nemoConnect.system** — инстанс к которому принадлежит перелёт. Тип данных — строка.
 * **data.products.ID_FLT_N.info.nemoConnect.id** — идентификатор объекта выгрузки Nemo.Connect. Тип данных — целое 64-битное число.
@@ -172,7 +172,7 @@ taxonomy:
 * **data.products.ID_HTL_N.rooms.canelRules.absoluteValue.currency** — код валюты штрафа. Тип данных - строка.
 * **data.products.ID_EXT_N** — контейнер с информацией о дополнительных услугах. Тип данных — сложный.
 * **data.products.ID_EXT_N.type** — тип дополнительной услуги. Тип данных — строка.
-* **data.products.ID_EXT_N.products** — 
+* **data.products.ID_EXT_N.products** — продукты, выбранные в рамках данной доп. услуги. Тип данных - сложный.
 * **data.products.ID_EXT_N.products.price** — контейнер с информацией о стоимости доп. услуги. Тип данных - сложный.
 * **data.products.ID_EXT_N.products.price.amount** — сумма за дополнительную услугу. Тип данных - строка.
 * **data.products.ID_EXT_N.products.price.currency** — код валюты суммы за доп. услугу. Тип данных - строка.
