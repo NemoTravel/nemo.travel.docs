@@ -21,6 +21,7 @@ taxonomy:
 * **data.currentServerDate** — unload date by server time. Data type - string.
 * **data.customer** — container with customer data. Data type - custom.
 * **data.customer.userId** — user ID to which the unload object belongs. Data type - 64-bit integer.
+* **data.customer.agencyId** — ID of the head agency to which the unload object belongs. Data type - 64-bit integer.
 * **data.customer.сompanyId** — ID of the agency to which the unload object belongs. Data type - 64-bit integer.
 * **data.customer.backofficeCompanyId** — back office ID. Data type - string.
 * **data.customer.name** — customer's name. Data type - string.
@@ -47,6 +48,7 @@ taxonomy:
 * **data.products.ID_FLT_N.info.nemo.searchId** — search ID . Data type - 64-bit integer.
 * **data.products.ID_FLT_N.info.nemo.pacgageId** — package ID. Data type - 64-bit integer.
 * **data.products.ID_FLT_N.info.nemo.status** — flight status. Data type - string.
+* **data.products.ID_FLT_N.info.nemo.utmMarker** — metasearch marker. Data type - string.
 * **data.products.ID_FLT_N.info.nemo.utmSource** — transition source. Data type - string.
 * **data.products.ID_FLT_N.info.nemoConnect** — Nemo.Connect flight information container. Data type - custom.
 * **data.products.ID_FLT_N.info.nemoConnect.system** — instance to which the flight belongs. Data type - string.
@@ -166,6 +168,20 @@ taxonomy:
 * **data.products.ID_HTL_N.rooms.canelRules.absoluteValue.currency** — penalty currency code. Data type - string.
 * **data.products.ID_EXT_N** — container with information on the additional services. Data type - custom.
 * **data.products.ID_EXT_N.type** — additional service type. Data type - string.
+* **data.products.ID_EXT_N.products** — products selected within this ancilliary service. Data type - custom.
+* **data.products.ID_EXT_N.products.price** — container with information on ancilliary service price. Data type - custom.
+* **data.products.ID_EXT_N.products.price.amount** — amount paid for ancilliary service. Data type - string.
+* **data.products.ID_EXT_N.products.price.currency** — currency code of ancilliary service amount. Data type - string.
+* **data.products.ID_EXT_N.products.status** — ancilliary service status. Data type - string.
+* **data.products.ID_EXT_N.products.name** — ancilliary service name. Data type - string.
+* **data.products.ID_EXT_N.products.rfisc** — ancilliary service RFISC. Data type - string.
+* **data.products.ID_EXT_N.products.rfic** — ancilliary service RFIC. Data type - string.
+* **data.products.ID_EXT_N.products.type** — ancilliary service type. Data type - string.
+* **data.products.ID_EXT_N.products.passengers** — ID (ID_PAS_N) of the passenger to whom this service is related. Data type - string.
+* **data.products.ID_EXT_N.products.segments** — ID (ID_SEG_N) of the segment to which this service is related. Data type - string.
+* **data.products.ID_EXT_N.insurances** — array of insurance services containing onformation on a passenger and his insurance number. Data type - custom.
+* **data.products.ID_EXT_N.insurances.policyNumber** — electronic insurance document number. Data type - string.
+* **data.products.ID_EXT_N.insurances.passengerName** — first and last name of the passenger who holds the insurance number. Data type - string.
 * **data.products.ID_TRN_N** — container with information on the N-th order. Data type - custom.
 * **data.products.ID_TRN_N.info** — container with information on the given order. Data type - custom.
 * **data.products.ID_TRN_N.info.nemo** — container with order information from Nemo.Travel. Data type - custom.
