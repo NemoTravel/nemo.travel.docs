@@ -13,12 +13,16 @@ PossibleActions
 -   **Action** - Допустимое действие с объектом. Тип данных - перечисление, возможные значения:
     -   Get
     -   Update
-    -   PayFor
-    -   Cancel
-    -   Ticket
-    -   Void
-    -   Refund
-    -   Split (аналог ГРС-сплита, при котором одна бронь разбивается на две с разными пассажирами)
-    -   Modify
-    -   ProcessPayment
     -   GetHistory
+    -   Ticket
+    -   Modify
+    -   Cancel
+    -   GetPNRTerminalView
+    -   Split (аналог ГРС-сплита, при котором одна бронь разбивается на две с разными пассажирами)
+    -   Void
+    -   VoidEMD
+    -   IssueEMD
+    -   RefundEMD
+    -   Refund
+    -   Exchange
+    -   ReleaseSeat
