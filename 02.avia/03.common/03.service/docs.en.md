@@ -35,7 +35,7 @@ Each of the base and ancillary services is inherited from the BaseService class 
         -   **UnconfirmedLoyaltyCard** - unconfirmed loyalty card.
         -   **NoAirlineLocator** - there is no locator from the airline.
 
->>>> If there is the NoAirlineLocator status, ticketing is impossible. To perform ticketing successfully, you need to repeat [UpdateBook](/avia/request/updatebook) request several times until this status dissapears.
+>>>> If there is the NoAirlineLocator status, ticketing is impossible. To perform ticketing successfully, you need to repeat [UpdateBook](/avia/request/updatebook) request several times until this status dissapears. NoAirlineLocator status appears because the airline sends the locator some time after a booking is created.
 
 -   **TravelerRef** - reference to the travelers to whom the service relates. If the service is applied to all travelers, then the element is not specified. Data type - [RefList](/avia/common/reflist) array.
 -   **TravelerRef.Ref** - reference to the particular traveler within the booking/order. Data type - int32.
