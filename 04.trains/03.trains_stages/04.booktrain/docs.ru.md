@@ -38,6 +38,8 @@ title: 'Бронирование мест в поезде'
 -   **Passengers.BookRQPerson.FirstName** - Имя. Тип данных - строка.
 -   **Passengers.BookRQPerson.MiddleName** - Отчество. Тип данных - строка.
 -   **Passengers.BookRQPerson.LastName** - Фамилия. Тип данных - строка.
+-   **Passengers.BookRQPerson.Phone** - Номер телефона (UFS, Sirena). Тип данных - строка.
+-   **Passengers.BookRQPerson.Email** - Адрес электронной почты (UFS, Sirena). Тип данных - строка.
 -   **Passengers.BookRQPerson.Document** - Документ пассажира. Тип данных - сложный.
 -   **Passengers.BookRQPerson.Document.DocType** - Тип документа. Тип данных - строка.
 -   **Passengers.BookRQPerson.Document.DocNum** - Номер документа. Тип данных - строка.
