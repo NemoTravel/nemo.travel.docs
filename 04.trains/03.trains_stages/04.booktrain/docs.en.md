@@ -100,7 +100,11 @@ title: 'Train Seats Booking'
                     <!--Optional:-->
                     <MiddleName>Akakievich</MiddleName>
                     <LastName>Vasiliy</LastName>
-                    <Document>
+                    <!--Optional:-->
+                    <!--<Phone></Phone>-->
+                    <!--Optional:-->
+					<!--<Email></Email>-->
+					<Document>
                         <DocType>P</DocType>
                         <DocNum>1234567890</DocNum>
                         <!--Optional:-->
