@@ -117,6 +117,10 @@ title: 'Бронирование мест в поезде'
                     <!--Optional:-->
                     <MiddleName>Акакиевич</MiddleName>
                     <LastName>Василий</LastName>
+					<!--Optional:-->
+                    <!--<Phone></Phone>-->
+                    <!--Optional:-->
+					<!--<Email></Email>-->
                     <Document>
                         <DocType>Passport</DocType>
                         <DocNum>1234567890</DocNum>
