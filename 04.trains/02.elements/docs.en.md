@@ -16,6 +16,8 @@ title: 'Common Elements of the Railway Server'
     -   **adult** - from 10 years.
     -   **child** - UFS: from 5 to 10 years. UIT: in Ukraine from 6 to 14, in the CIS countries - from 5 to 10 years
     -   **infant** - UFS: up to 5 years.
+-   **Person.Phone** - Passenger's phone number (UFS, Sirena). Data Type - string.
+-   **Person.Email** - Passenger's email address (UFS, Sirena). Data Type - string.
 -   **Person.Document** - Information on the passenger's document (passport). Data type - custom.
 -   **Person.Document.DocType** - Document type. Data type - enumeration. Possible values are described in [Document Types](http://docs.nemo.travel/en/avia/process/booking)
 -   **Person.Document.DocNum** - Document number. Data type - string.
