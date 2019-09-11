@@ -3,8 +3,7 @@ title: 'Запрос RunCitySearch'
 ---
 
 ### RunCitySearch
-
-После отправки запроса результаты выдаются отдельно через запрос [GetCitySearchResult](/hotels/search_hotels/getcitysearchresult). 
+Зарос ответчает за запуск асинхронного поиска отелей. В результате запроса возвращается только идентификатор поиска, по которому через запрос [GetCitySearchResult](/hotels/search_hotels/getcitysearchresult) получаем результаты по мере их получения от поставщиков.
 
 #### Запрос
 
