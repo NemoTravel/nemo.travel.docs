@@ -3,6 +3,7 @@ title: 'Запрос GetCitySearchResult'
 ---
 
 ### GetCitySearchResult
+Запрос для получения результатов поиска.
 
 #### Запрос
 
