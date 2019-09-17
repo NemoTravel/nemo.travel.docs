@@ -11,7 +11,7 @@ PossibleActions
 Contains a list of possible actions with a booking or an order, which is centrally defined for each object. Through it, the possibility of perfoming an operation in a .net server is determined. It is an array of Action elements.
 
 -   **Action** - valid action with an object. Data type - enumeration, possible values:
-     -   Get
+    -   Get
     -   Update
     -   GetHistory
     -   Ticket
