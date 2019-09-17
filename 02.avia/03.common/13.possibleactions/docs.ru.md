@@ -26,3 +26,4 @@ PossibleActions
     -   Refund
     -   Exchange
     -   ReleaseSeat
+    -   AdditionalOperations
