@@ -27,3 +27,4 @@ Contains a list of possible actions with a booking or an order, which is central
     -   Exchange
     -   ReleaseSeat
     -   AdditionalOperations
+    -   GetEDData

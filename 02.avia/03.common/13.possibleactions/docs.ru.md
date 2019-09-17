@@ -27,3 +27,4 @@ PossibleActions
     -   Exchange
     -   ReleaseSeat
     -   AdditionalOperations
+    -   GetEDData
