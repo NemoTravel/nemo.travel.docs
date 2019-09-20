@@ -18,7 +18,7 @@ PossibleActions
 -  Ticket
 -  Void
 -  Refund
--  Split
+-  Split (аналог ГРС-сплита, при котором одна бронь разбивается на две с разными пассажирами)
 -  Modify
 -  ProcessPayment
 -  GetHistory
