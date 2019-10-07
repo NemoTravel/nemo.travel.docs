@@ -12,30 +12,31 @@ title: 'Book Request'
 -   **Rooms.RoomData** - container with information on the room you need to book. Data type - custom.
 -   **Rooms.RoomData.RoomSearchIndex** - ID for the sequence number of the desired room. Data type - unsigned 32-bit integer.
 -   **Rooms.RoomData.RoomVariantID** - ID of the room to be booked. Data type - unsigned 32-bit integer.
--   **Guests** - container with information on the guests. Data type - custom.
--   **Guests.Guest** - container with information on a guest. Data type - custom.
--   **Guests.Guest.LastName** - guest’s last name. Data type - string.
--   **Guests.Guest.FirstName** - guest’s name. Data type - string.
--   **Guests.Guest.Phone** - guest’s phone number. Data type - unsigned 32-bit integer.
--   **Guests.Guest.Email** - guest's email. Data type - string.
--   **Guests.Guest.Type** - ADT - adult if the guest’s age is over 16, otherwise CLD - child. Data type - string.
--   **Guests.Guest.Age** - guest’s age. Data type - unsigned 32-bit integer.
--   **Guests.Guest.Nationality** - guest’s nationality. Data type - string.
--   **Guests.Guest.Gender** - guest’s gender. Data type - string.
--   **Guests.Guest.DateOfBirth** - guest’s date of birth. Data type - string, the format is dd.mm.yyyy.
--   **Guests.Guest.AdditionalInfo** - additional information on the guest. Data type - string.
+-   **Rooms.RoomData.Guests** - container with information on the guests. Data type - custom.
+-   **Rooms.RoomData.Guests.Guest** - container with information on a guest. Data type - custom.
+-   **Rooms.RoomData.Guests.Guest.LastName** - guest’s last name. Data type - string.
+-   **Rooms.RoomData.Guests.Guest.FirstName** - guest’s name. Data type - string.
+-   **Rooms.RoomData.Guests.Guest.Phone** - guest’s phone number. Data type - unsigned 32-bit integer.
+-   **Rooms.RoomData.Guests.Guest.Email** - guest's email. Data type - string.
+-   **Rooms.RoomData.Guests.Guest.Type** - ADT - adult if the guest’s age is over 16, otherwise CLD - child. Data type - string.
+-   **Rooms.RoomData.Guests.Guest.Age** - guest’s age. Data type - unsigned 32-bit integer.
+-   **Rooms.RoomData.Guests.Guest.Nationality** - guest’s nationality. Data type - string.
+-   **Rooms.RoomData.Guests.Guest.Gender** - guest’s gender. Data type - string.
+-   **Rooms.RoomData.Guests.Guest.DateOfBirth** - guest’s date of birth. Data type - string, the format is dd.mm.yyyy.
+-   **Rooms.RoomData.Guests.Guest.AdditionalInfo** - additional information on the guest. Data type - string.
+-   **Rooms.RoomData.CheckInParams** - container with information on the selected early check-in option at the hotel from the ones provided in the **GetHotelAvailability** response. Data type - custom.
+-   **Rooms.RoomData.CheckInParams.Critical** - attribute of criticalness. Data type - boolean.
+-   **Rooms.RoomData.CheckInParams.Time** - container with information on the selected time. Data type - complex hh:mm format.
+-   **Rooms.RoomData.CheckOutParams** - container with information on the selected late check-out option at the hotel from the ones provided in the **GetHotelAvailability** response. Data type - custom. Identical to CheckInParams
+-   **Rooms.RoomData.CheckOutParams.Critical** - attribute of criticalness. Data type - boolean.
+-   **Rooms.RoomData.CheckOutParams.Time** - container with information on the selected time. Data type - complex hh:mm format.
 -   **Client** - container with information on the contact person. Data type - custom.
 -   **Client.LastName** - name of the contact person. Data type - string.
 -   **Client.FirstName** - name of the contact person. Data type - string.
 -   **Client.Phone** - phone number of the contact person. Data type - 32-bit integer.
 -   **Client.Email** - email of the contact person. Data type - string.
 -   **Client.Nationality** - nationality of the contact person. Data type - string.
--   **CheckInParams** - container with information on the selected early check-in option at the hotel from the ones provided in the **GetHotelAvailability** response. Data type - custom.
--   **CheckInParams.Critical** - attribute of criticalness. Data type - boolean.
--   **CheckInParams.Time** - container with information on the selected time. Data type - complex hh:mm format.
--   **CheckOutParams** - container with information on the selected late check-out option at the hotel from the ones provided in the **GetHotelAvailability** response. Data type - custom. Identical to CheckInParams
--   **CheckOutParams.Critical** - attribute of criticalness. Data type - boolean.
--   **CheckOutParams.Time** - container with information on the selected time. Data type - complex hh:mm format.
+
 
 ##### Sample Request (XML)
 ```xml
