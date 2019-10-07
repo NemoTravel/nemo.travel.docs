@@ -1,43 +1,44 @@
 ---
-title: 'Запрос Book'
+title: 'Book Request'
 ---
 
 ### Book
 
-#### Запрос
+#### Request
 
--   **SearchID** - идентификатор совершившегося поиска. Тип данных - целое 32-битное число.
--   **HotelID** - идентификатор отеля для проверки доступности. Тип данных - целое 32-битное число.
--   **Rooms** - контейнер с информацией о комнатах. Тип данных - сложный.
--   **Rooms.RoomData** - контейнер с информацией о комнате, которую требуется забронировать. Тип данных - сложный.
--   **Rooms.RoomData.RoomSearchIndex** - идентификатор порядкового номера искомой комнаты. Тип данных - целое беззнаковое 32-битное число.
--   **Rooms.RoomData.RoomVariantID** - идентификатор бронируемой комнаты. Тип данных - целое беззнаковое 32-битное число.
--   **Rooms.RoomData.Guests** - контейнер с информацией о постояльцах. Тип данных - сложный.
--   **Rooms.RoomData.Guests.Guest** - контейнер с информацией о постояльце. Тип данных - сложный.
--   **Rooms.RoomData.Guests.Guest.LastName** - фамилия постояльца. Тип данных - строка.
--   **Rooms.RoomData.Guests.Guest.FirstName** - имя постояльца. Тип данных - строка.
--   **Rooms.RoomData.Guests.Guest.Phone** - телефон постояльца. Тип данных - целое беззнаковое 32-битное число.
--   **Rooms.RoomData.Guests.Guest.Email** - электронная почта постояльца. Тип данных - строка.
--   **Rooms.RoomData.Guests.Guest.Type** - ADT - взрослый, если возраст постояльца больше 16, иначе CLD - ребенок. Тип данных - строка.
--   **Rooms.RoomData.Guests.Guest.Age** - возраст постояльца. Тип данных - целое беззнаковое 32-битное число.
--   **Rooms.RoomData.Guests.Guest.Nationality** - национальность постояльца. Тип данных - строка.
--   **Rooms.RoomData.Guests.Guest.Gender** - пол постояльца. Тип данных - строка.
--   **Rooms.RoomData.Guests.Guest.DateOfBirth** - дата рождения постояльца. Тип данных - строка, формат dd.mm.yyyy.
--   **Rooms.RoomData.Guests.Guest.AdditionalInfo** - дополнительная информация о постояльце. Тип данных - строка.
--   **Rooms.RoomData.CheckInParams** - содержит информацию о выбранном варианте раннего заезда в отель для данного номера из предоставляемых в ответе **GetHotelAvailability**. Тип данных - сложный.
--   **Rooms.RoomData.CheckInParams.Critical** - признак критичности. Тип данных - булевский.
--   **Rooms.RoomData.CheckInParams.Time** - контейнер с информацией о выбранном времени. Тип данных - сложный формата hh:mm.
--   **Rooms.RoomData.CheckOutParams** - контейнер с информацией о выбранном варианте позднего выезда из отеля  для данного номера из предоставляемых в ответе **GetHotelAvailability**. Тип данных - сложный. Идентичен CheckInParams
--   **Rooms.RoomData.CheckOutParams.Critical** - признак критичности. Тип данных - булевский.
--   **Rooms.RoomData.CheckOutParams.Time** - контейнер с информацией о выбранном времени. Тип данных - сложный формата hh:mm.
--   **Client** - контейнер с информацией о контактном лице. Тип данных - сложный.
--   **Client.LastName** - фамилия контактного лица. Тип данных - строка.
--   **Client.FirstName** - имя контактного лица. Тип данных - строка.
--   **Client.Phone** - телефон контактного лица. Тип данных - целое 32-битное число.
--   **Client.Email** - электронная почта контактного лица. Тип данных - строка.
--   **Client.Nationality** - национальность контактного лица. Тип данных - строка.
+-   **SearchID** - ID of a completed search. Data type - 32-bit integer.
+-   **HotelID** - hotel ID for availability check. Data type - 32-bit integer.
+-   **Rooms** - container with information on the rooms. Data type - custom.
+-   **Rooms.RoomData** - container with information on the room you need to book. Data type - custom.
+-   **Rooms.RoomData.RoomSearchIndex** - ID for the sequence number of the desired room. Data type - unsigned 32-bit integer.
+-   **Rooms.RoomData.RoomVariantID** - ID of the room to be booked. Data type - unsigned 32-bit integer.
+-   **Rooms.RoomData.Guests** - container with information on the guests. Data type - custom.
+-   **Rooms.RoomData.Guests.Guest** - container with information on a guest. Data type - custom.
+-   **Rooms.RoomData.Guests.Guest.LastName** - guest’s last name. Data type - string.
+-   **Rooms.RoomData.Guests.Guest.FirstName** - guest’s name. Data type - string.
+-   **Rooms.RoomData.Guests.Guest.Phone** - guest’s phone number. Data type - unsigned 32-bit integer.
+-   **Rooms.RoomData.Guests.Guest.Email** - guest's email. Data type - string.
+-   **Rooms.RoomData.Guests.Guest.Type** - ADT - adult if the guest’s age is over 16, otherwise CLD - child. Data type - string.
+-   **Rooms.RoomData.Guests.Guest.Age** - guest’s age. Data type - unsigned 32-bit integer.
+-   **Rooms.RoomData.Guests.Guest.Nationality** - guest’s nationality. Data type - string.
+-   **Rooms.RoomData.Guests.Guest.Gender** - guest’s gender. Data type - string.
+-   **Rooms.RoomData.Guests.Guest.DateOfBirth** - guest’s date of birth. Data type - string, the format is dd.mm.yyyy.
+-   **Rooms.RoomData.Guests.Guest.AdditionalInfo** - additional information on the guest. Data type - string.
+-   **Rooms.RoomData.CheckInParams** - container with information on the selected early check-in option at the hotel from the ones provided in the **GetHotelAvailability** response. Data type - custom.
+-   **Rooms.RoomData.CheckInParams.Critical** - attribute of criticalness. Data type - boolean.
+-   **Rooms.RoomData.CheckInParams.Time** - container with information on the selected time. Data type - complex hh:mm format.
+-   **Rooms.RoomData.CheckOutParams** - container with information on the selected late check-out option at the hotel from the ones provided in the **GetHotelAvailability** response. Data type - custom. Identical to CheckInParams
+-   **Rooms.RoomData.CheckOutParams.Critical** - attribute of criticalness. Data type - boolean.
+-   **Rooms.RoomData.CheckOutParams.Time** - container with information on the selected time. Data type - complex hh:mm format.
+-   **Client** - container with information on the contact person. Data type - custom.
+-   **Client.LastName** - name of the contact person. Data type - string.
+-   **Client.FirstName** - name of the contact person. Data type - string.
+-   **Client.Phone** - phone number of the contact person. Data type - 32-bit integer.
+-   **Client.Email** - email of the contact person. Data type - string.
+-   **Client.Nationality** - nationality of the contact person. Data type - string.
 
-##### Пример запроса (XML)
+
+##### Sample Request (XML)
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:stl="http://nemo-ibe.com/STL" xmlns:hot="http://nemo-ibe.com/Hotels">
    <soapenv:Header/>
@@ -75,16 +76,6 @@ title: 'Запрос Book'
                            <hot:Age>20</hot:Age>
                         </hot:Guest>
                      </hot:Guests>
-                     <!--Optional:-->
-                     <hot:CheckInParams>
-                        <hot:Critical>true</hot:Critical>
-                        <hot:Time>08:00</hot:Time>
-                     </hot:CheckInParams>
-                     <!--Optional:-->
-                     <hot:CheckOutParams>
-                        <hot:Critical>false</hot:Critical>
-                        <hot:Time>16:00</hot:Time>
-                     </hot:CheckOutParams>
                   </hot:RoomData>
                </hot:Rooms>
                <hot:Client>
@@ -93,6 +84,16 @@ title: 'Запрос Book'
                   <!--Optional:-->
                   <hot:Phone>2535</hot:Phone>             
                </hot:Client>
+               <!--Optional:-->
+               <hot:CheckInParams>
+                  <hot:Critical>true</hot:Critical>
+                  <hot:Time>08:00</hot:Time>
+               </hot:CheckInParams>
+               <!--Optional:-->
+               <hot:CheckOutParams>
+                  <hot:Critical>false</hot:Critical>
+                  <hot:Time>16:00</hot:Time>
+               </hot:CheckOutParams>
             </stl:RequestBody>
          </tem:Request>
       </tem:Book>
@@ -100,85 +101,62 @@ title: 'Запрос Book'
 </soapenv:Envelope>
 ```
 
-#### Ответ
+#### Response
 
--   **ID** - идентификатор совершившегося бронирования. Тип данных - целое 32-битное число.
--   **Status** - статус бронирования. Тип данных - строка. Возможные значения:
-    -   **Booked** - забронирован.
-    -   **PendingConfirmation** - ожидает подтверждения со стороны поставщика.
-    -   **Ticketed** - подтверждён.
-    -   **PendingCancellation** - ожидает отмены со стороны поставщика.
-    -   **Canceled** - отменён.
-    -   **Problematic** 
--   **HotelID** - идентификатор отеля в котором забронирован номер. Тип данных - целое 32-битное число.
--   **CityID** - идентификатор города в котором находится отель. Тип данных - целое 32-битное число.
--   **SearchID** - идентификатор совершившегося поиска. Тип данных - целое 32-битное число
--   **CheckInDate** - дата заезда в номер. Тип данных - строка, формат yyyy-mm-ddthh:mm:ss.
--   **CheckOutDate** - дата выезда из номера. Тип данных - строка, формат yyyy-mm-ddthh:mm:ss.
--   **CheckInTime** - время заезда в номер. Тип данных - строка, формат hh:mm.
--   **CheckOutTime** - время выезда из номера. Тип данных - строка, формат hh:mm.
--   **Rooms** - контейнер с информацией о комнатах, которую требуется найти. Тип данных - сложный.
--   **Rooms.HotelRoom** - контейнер с информацией о забронированной комнате. Тип данных - сложный.
--   **Rooms.HotelRoom.Type** - содержит информацию о типе забронированной комнаты. Тип данных - строка.
--   **Rooms.HotelRoom.Meal** - содержит информацию о типе питания. Тип данных - строка.
--   **Rooms.HotelRoom.Price** - содержит информацию об оплате. Тип данных - сложных.
--   **Rooms.HotelRoom.Price.Amount** - сумма оплаты. Тип данных - целое 32-битное число.
--   **Rooms.HotelRoom.Price.Currency** - ISO Alpha 3 код валюты. Тип данных - строка.   
--   **Rooms.HotelRoom.VATInfo** - контейнер с информацией о НДС. Тип данных - сложный.
--   **Rooms.HotelRoom.VATInfo.Amount** - контейнер с информацией о величине НДС. Тип данных - сложный.
--   **Rooms.HotelRoom.VATInfo.Amount.Amount** - сумма НДС.Тип данных - целое 32-битное число.
--   **Rooms.HotelRoom.VATInfo.Amount.Currency** - ISO Alpha 3 код валюты. Тип данных - строка.
--   **Rooms.HotelRoom.VATInfo.FromFullPrice**  - признак того, что НДС рассчитывается от полной цены.  Тип данных - булевый.
--   **Rooms.HotelRoom.VATInfo.IncludeInPrice** - признак того, что НДС включен в цену. Тип данных - булевый.
--   **Rooms.HotelRoom.VATInfo.VatPercent** - процентная ставка НДС. Тип данных - целое 32-битное число.   
--   **Rooms.HotelRoom.IsSpecialOffer** - признак наличия специальных предложений. Тип данных - булевый.
--   **Rooms.HotelRoom.VisaSupportProvided** - признак наличия поддержки визы. Тип данных - булевый.
--   **Rooms.HotelRoom.IsNonRefundable** - признак возможности возврата средств за забронированный номер. Тип данных - булевый.
--   **Rooms.HotelRoom.BookingRemarks** - ремарки к совершенному бронированию. Тип данных - строка.
--   **Rooms.HotelRoom.CancellationRuled** - правила отмены брони. Тип данных - строка.
--   **Rooms.HotelRoom.Guests** - контейнер с информацией о постояльцах. Тип данных - сложный.
--   **Rooms.HotelRoom.Guests.Guest.LastName** - фамилия постояльца. Тип данных - строка.
--   **Rooms.HotelRoom.Guests.Guest.FirstName** - имя постояльца. Тип данных - строка.
--   **Rooms.HotelRoom.Guests.Guest.Phone** - телефон постояльца. Тип данных - целое беззнаковое 32-битное число.
--   **Rooms.HotelRoom.Guests.Guest.Email** - электронная почта постояльца. Тип данных - строка.
--   **Rooms.HotelRoom.Guests.Guest.Type** - ADT - взрослый, если возраст постояльца больше 16, иначе CLD - ребенок. Тип данных - строка.
--   **Rooms.HotelRoom.Guests.Guest.Age** - возраст постояльца. Тип данных - целое беззнаковое 32-битное число.
--   **Rooms.HotelRoom.EarlyCheckInService** - информация об услуге раннего заезда. Тип данных - сложный.
--   **Rooms.HotelRoom.EarlyCheckInService.Time** - содержит информацию о предлагаемом времени. Тип данных - строка формата HH:mm.
--   **Rooms.HotelRoom.EarlyCheckInService.Price** - контейнер с информацией о цене данного предложения. Цена указана за один номер. Тип данных - сложный.
--   **Rooms.HotelRoom.EarlyCheckInService.Price.Amount** - сумма цены. Тип данных - дробное число.
--   **Rooms.HotelRoom.EarlyCheckInService.Price.Currency** - код валюты. Тип данных - строка.
--   **Rooms.HotelRoom.EarlyCheckInService.Description** - дополнительная информация. Тип данных - строка.
--   **Rooms.HotelRoom.EarlyCheckInService.Guaranteed** - содержит информацию о признаке, является ли услуга гарантированной. Тип данных - булевский.
--   **Rooms.HotelRoom.EarlyCheckInService.PriceRule** - правила, по которым предоставляется услуга. Тип данных - перечисление.
--   **Rooms.HotelRoom.EarlyCheckInService.IsConfirmed** - признак подтверждения услуги отелем. Тип данных - булевский.
--   **Rooms.HotelRoom.EarlyCheckInService.IsCritical** - критичность раннего заезда, указанная пользователем при бронировании. Тип данных - булевский.
--   **Rooms.HotelRoom.LateCheckOutService** - информация об услуге позднего выезда. Тип данных - сложный, аналогичен EarlyCheckInService.
--   **ContactPerson** - контейнер с информацией о контактном лице. Тип данных - сложный.
--   **ContactPerson.LastName** - фамилия контактного лица. Тип данных - строка.
--   **ContactPerson.FirstName** - имя контактного лица. Тип данных - строка.
--   **ContactPerson.Phone** - телефон контактного лица. Тип данных - целое 32-битное число.
--   **ContactPerson.Email** - электронная почта контактного лица. Тип данных - строка.
--   **Markup** - контейнер с информацией о сумме и валюте всех наценок. Тип данных - сложный.
--   **Markup.Amount** - сумма наценок. Тип данных - дробное число.
--   **Markup.Currency** - код валюты наценок. Тип данных - строка.
--   **AgencyCharges** - контейнер с информацией о сумме и валюте сборов агенства. Тип данных - сложный.
--   **AgencyCharges.Amount** - сумма сборов агенства. Тип данных - дробное число.
--   **AgencyCharges.Currency** - код валюты сборов агенства. Тип данных - строка.
--   **ServiceCharges** - контейнер с информацией о сумме и валюте сборов сервис провайдера. Тип данных - сложный.
--   **ServiceCharges.Amount** - сумма сборов сервис провайдера. Тип данных - дробное число.
--   **ServiceCharges.Currency** - код валюты сборов сервис провайдера. Тип данных - строка.
--   **Supplier** - наименоване поставщика. Тип данных - строка.
--   **BookingLocator** - идентификатор бронирования на стороне поставщика. Тип данных - строка
--   **VoucherWasSendedBySupplier** - признак наличия ваучера от постащика. Тип данных - булевый.
--   **SupplierHotelId** - идентификатор комнаты на стороне постащика. Тип данных - строка.
--   **PaymentType** - тип оплат. Тип данных - строка.
--   **Timelimit** - тайм лимит на отмену без штрафов. Таймлимит, учитывающий настройки агентства, влияет на запуск процесса оплаты.  Тип данных - дата, формат yyyy-mm-dd hh:mm:ss hh:mm.
--   **PriceTimelimit** - таймлимит на оплату (время до которого действует предложение и требуется оплата). Тип данных - дата, формат yyyy-mm-dd hh:mm:ss hh:mm.
--   **SupplierAgencyID** - идентификатор реквизитов поставщика. Тип данных - строка.
+-   **ID** - ID of the completed reservation. Data type - 32-bit integer.
+-   **Status** - reservation status. Data type - string. Possible values:
+    -   **Booked** - booked.
+    -   **PendingConfirmation** - awaiting supplier's confirmation.
+    -   **Ticketed** - confirmed.
+    -   **PendingCancellation** - awaiting supplier's cancellation.
+    -   **Canceled** - canceled.
+    -   **Problematic**    
+-   **HotelID** - ID of the hotel in which the room is booked. Data type - 32-bit integer.
+-   **CityID** - ID of the city in which the hotel is located. Data type - 32-bit integer.
+-   **SearchID** - ID of the completed search. Data type - 32-bit integer.
+-   **CheckInDate** - date of the arrival in the room. Data type - string, the format is yyyy-mm-ddthh:mm:ss.
+-   **CheckOutDate** - date of the departure from the room. Data type - string, the format is yyyy-mm-ddthh:mm:ss.
+-   **CheckInTime** - time of arrival in the room. Data type - string, format hh:mm.
+-   **CheckOutTime** - time of departure from the room. Data type - string, format hh:mm.
+-   **Rooms** - container with information on the rooms you need to find. Data type - custom.
+-   **Rooms.HotelRoom** - container with information on the reserved room. Data type - custom.
+-   **Rooms.HotelRoom.Type** - contains information on the type of room booked. Data type - string.
+-   **Rooms.HotelRoom.Meal** - contains information on the meal type. Data type - string.
+-   **Rooms.HotelRoom.Price** - container with payment information. Data type - custom.
+-   **Rooms.HotelRoom.Price.Amount** - payment amount. Data type - 32-bit integer.
+-   **Rooms.HotelRoom.Price.Currency** - 3-letter currency code. Data type - string.
+-   **Rooms.HotelRoom.IsSpecialOffer** - attribute of special offers availability. Data type - boolean.
+-   **Rooms.HotelRoom.VisaSupportProvided** - attribute of visa support availability. Data type - boolean.
+-   **Rooms.HotelRoom.IsNonRefundable** - attribute of the possibility of a refund for the booked room. Data type - boolean.
+-   **Rooms.HotelRoom.BookingRemarks** - remarks to the completed booking. Data type - string.
+-   **Rooms.HotelRoom.CancellationRuled** - booking cancellation policy. Data type - string.
+-   **Rooms.HotelRoom.Guests** - container with information on the guests. Data type - custom.
+-   **Rooms.HotelRoom.Guests.Guest.LastName** - guest’s last name. Data type - string.
+-   **Rooms.HotelRoom.Guests.Guest.FirstName** - guest’s first name. Data type - string.
+-   **Rooms.HotelRoom.Guests.Guest.Phone** - guest’s phone number. Data type - unsigned 32-bit integer.
+-   **Rooms.HotelRoom.Guests.Guest.Email** - guest's email. Data type - string.
+-   **Rooms.HotelRoom.Guests.Guest.Type** - ADT - adult if the guest’s age is over 16, otherwise CLD - child. Data type - string.
+-   **Rooms.HotelRoom.Guests.Guest.Age** - guest’s age. Data type - unsigned 32-bit integer.
+-   **ContactPerson** - container with information on the contact person. Data type is custom.
+-   **ContactPerson.LastName** - name of the contact person. Data type - string.
+-   **ContactPerson.FirstName** - name of the contact person. Data type - string.
+-   **ContactPerson.Phone** - phone number of the contact person. Data type is a 32-bit integer.
+-   **ContactPerson.Email** - e-mail of the contact person. Data type - string.
+-   **Markup** - container with information on the amount and currency of all markups. Data type - custom.
+-   **Markup.Amount** - markups amount. Data type - fractional number.
+-   **Markup.Currency** - currency code of markups. Data type - string.
+-   **AgencyCharges** - container with information on the amount and currency of agency charges. Data type - custom.
+-   **AgencyCharges.Amount** - amount of agency fees. Data type - fractional number.
+-   **AgencyCharges.Currency** - currency code of agency fees. Data type - string.
+-   **ServiceCharges** - container with information on the amount and currency of service provider charges. Data type - custom.
+-   **ServiceCharges.Amount** - the amount of service provider charges. Data type - fractional number.
+-   **ServiceCharges.Currency** - currency code of the service provider's charges. Data type - string.
+-   **Supplier** - supplier. Data type - string.
+-   **Timelimit** - the time limit that takes into account the Agency settings affects the start of the payment process. Data type - date, YYYY-MM-DD HH:MM:SS HH:MM.
+-   **SupplierAgencyID** - supplier's details ID. Data type - string. 
 
 
-##### Пример ответа (XML)
+##### Sample Response (XML)
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
    <s:Body>
@@ -187,95 +165,59 @@ title: 'Запрос Book'
             <a:RequestID>2896</a:RequestID>
             <a:Errors/>
             <a:ResponseBody xmlns:b="http://nemo-ibe.com/Hotels">
-              <b:Id>62195</b:Id>
-              <b:Status>Booked</b:Status>
-              <b:HotelId>test_hotel</b:HotelId>
-              <b:CityId>6308866</b:CityId>
-              <b:ActionId>709144</b:ActionId>
-              <b:CheckInDate>2019-05-07T00:00:00</b:CheckInDate>
-              <b:CheckOutDate>2019-05-11T00:00:00</b:CheckOutDate>
-              <b:CheckInTime>14:00:00</b:CheckInTime>
-              <b:CheckOutTime>12:00:00</b:CheckOutTime>
-              <b:Rooms>
-                <b:HotelRoom>
-                  <b:Type>Улучшенный двухместный номер (Двуспальная кровать) (двуспальная кровать full size)</b:Type>
-                  <b:Meal>nomeal</b:Meal>
-                  <b:Price>
-                    <a:Amount>88.5</a:Amount>
-                    <a:Currency>RUB</a:Currency>
-                  </b:Price>
-                  <b:VATInfo>
-                    <b:Amount>
-                      <a:Amount>1594.17004394531</a:Amount>
-                      <a:Currency>RUB</a:Currency>
-                    </b:Amount>
-                    <b:FromFullPrice>false</b:FromFullPrice>
-                    <b:IncludeInPrice>true</b:IncludeInPrice>
-                    <b:VatPercent i:nil="true"/>
-                  </b:VATInfo>
-                  <b:IsSpecialOffer>false</b:IsSpecialOffer>
-                  <b:VisaSupportProvided>false</b:VisaSupportProvided>
-                  <b:IsNonRefundable>true</b:IsNonRefundable>
-                  <b:BookingRemarks i:nil="true"/>
-                  <b:CancellationRules>
-                    <b:CancellationRulesGroupElement>
-                      <b:Id>1</b:Id>
-                      <b:DeadLine>2019-05-07 07:25:05  00:00</b:DeadLine>
-                      <b:PercentValue>100.0</b:PercentValue>
-                      <b:AbsoluteValue>38</b:AbsoluteValue>
-                    </b:CancellationRulesGroupElement>
-                  </b:CancellationRules>
-                  <b:Guests>
-                    <b:Guest>
-                      <b:LastName>OSTROVOK</b:LastName>
-                      <b:FirstName>VSEVOLOD</b:FirstName>
-                      <b:Nationality>RU</b:Nationality>
-                      <b:Type>ADT</b:Type>
-                      <b:Age>26</b:Age>
-                      <b:Gender>N</b:Gender>
-                      <b:DateOfBirth>07.05.1993</b:DateOfBirth>
-                    </b:Guest>
-                  </b:Guests>
-                  <b:SupplierReference i:nil="true"/>
-                  <b:HoldTimeLimit>2019-05-07T16:25:05</b:HoldTimeLimit>
-                  <b:LateCheckOutService>
-                     <b:Time>15:00</b:Time>
+               <b:Id>8</b:Id>
+               <b:Status>Booked</b:Status>
+               <b:HotelId>50229500</b:HotelId>
+               <b:CityId>1870586</b:CityId>
+               <b:SearchId>41350</b:SearchId>
+               <b:CheckInDate>2016-09-25T00:00:00</b:CheckInDate>
+               <b:CheckOutDate>2016-09-28T00:00:00</b:CheckOutDate>
+               <b:CheckInTime>08:00</b:CheckInTime>
+               <b:CheckOutTime>12:00</b:CheckOutTime>
+               <b:Rooms>
+                  <b:HotelRoom>
+                     <b:Type>Double Standard</b:Type>
+                     <b:Meal>Breakfast</b:Meal>
                      <b:Price>
-                        <a:Amount>50.5</a:Amount>
-                        <a:Currency>RUB</a:Currency>
+                        <a:Amount>128.52</a:Amount>
+                        <a:Currency>EUR</a:Currency>
                      </b:Price>
-                     <b:Description/>
-                     <b:Guaranteed>false</b:Guaranteed>
-                     <b:PriceRule>AdditionalPrice</b:PriceRule>
-                     <b:IsConfirmed i:nil="true"/>
-                     <b:IsCritical>true</b:IsCritical>
-                  </b:LateCheckOutService>
-                </b:HotelRoom>
-              </b:Rooms>
-              <b:ContactPerson>
-                <b:LastName>Vsevolod</b:LastName>
-                <b:FirstName/>
-              </b:ContactPerson>
-              <b:Markup>
-                <a:Amount>3.8</a:Amount>
-                <a:Currency>RUB</a:Currency>
-              </b:Markup>
-              <b:AgencyCharges>
-                <a:Amount>1.9</a:Amount>
-                <a:Currency>RUB</a:Currency>
-              </b:AgencyCharges>
-              <b:ServiceCharges>
-                <a:Amount>7.6</a:Amount>
-                <a:Currency>RUB</a:Currency>
-              </b:ServiceCharges>
-              <b:Supplier>Ostrovok</b:Supplier>
-              <b:BookingLocator i:nil="true"/>
-              <b:VoucherWasSendedBySupplier>true</b:VoucherWasSendedBySupplier>
-              <b:SupplierHotelId>test_hotel_128</b:SupplierHotelId>
-              <b:PaymentType>Deposit</b:PaymentType>
-              <b:Timelimit>2019-05-05 07:25:05  00:00</b:Timelimit>
-              <b:PriceTimelimit>2019-05-07 16:25:05  03:00</b:PriceTimelimit>
-              <b:SupplierAgencyID>1721</b:SupplierAgencyID>
+                     <b:IsSpecialOffer>false</b:IsSpecialOffer>
+                     <b:VisaSupportProvided>false</b:VisaSupportProvided>
+                     <b:IsNonRefundable>false</b:IsNonRefundable>
+                     <b:BookingRemarks i:nil="true"/>
+                     <b:CancellationRules/>
+                     <b:Guests>
+                        <b:Guest>
+                           <b:LastName>Ivanov</b:LastName>
+                           <b:FirstName>Ivan</b:FirstName>
+                           <b:Phone>89749977811</b:Phone>
+                           <b:Email>bab@gmail.com</b:Email>
+                           <b:Type>ADT</b:Type>
+                           <b:Age>20</b:Age>
+                        </b:Guest>
+                     </b:Guests>
+                  </b:HotelRoom>
+               </b:Rooms>
+               <b:ContactPerson>
+                  <b:LastName>Andrey</b:LastName>
+                  <b:FirstName>Ivanov</b:FirstName>
+                  <b:Phone>253565</b:Phone>
+               </b:ContactPerson>
+               <b:Markup>
+                  <a:Amount>-1831.02798461914</a:Amount>
+                  <a:Currency>RUB</a:Currency>
+               </b:Markup>
+               <b:AgencyCharges>
+                  <a:Amount>-85.2255001664162</a:Amount>
+                  <a:Currency>RUB</a:Currency>
+               </b:AgencyCharges>
+               <b:ServiceCharges>
+                  <a:Amount>-234.107990264893</a:Amount>
+                  <a:Currency>RUB</a:Currency>
+               </b:ServiceCharges>
+               <b:Supplier>Hotelston</b:SupplierId>
+               <b:Timelimit>2019-06-28 13:00:00  00:00</b:Timelimit>
             </a:ResponseBody>
          </BookResult>
       </BookResponse>
