@@ -164,6 +164,13 @@ title: 'Book Request'
 -   **ServiceCharges.Amount** - the amount of service provider charges. Data type - fractional number.
 -   **ServiceCharges.Currency** - currency code of the service provider's charges. Data type - string.
 -   **Supplier** - supplier. Data type - string.
+-   **BookingLocator** - booking ID on the supplier's side. Data type - string.
+-   **VoucherWasSendedBySupplier** - attribute of the presence of supplier's voucher. Data type - bool.
+-   **SupplierHotelId** - room ID on the supplier's side. Data type - string.
+-   **PaymentType** - payment type. Data type - string.
+-   **Timelimit** - the time limit that takes into account the Agency settings affects the start of the payment process. Data type - date, YYYY-MM-DD HH:MM:SS HH:MM.
+-   **PriceTimelimit** - payment time limit (time until which offer is in force and the payment is required). Data type - date in the yyyy-mm-dd hh:mm:ss hh:mm format.
+-   **SupplierAgencyID** - supplier requisites ID. Data type - string.
 -   **Timelimit** - the time limit that takes into account the Agency settings affects the start of the payment process. Data type - date, YYYY-MM-DD HH:MM:SS HH:MM.
 -   **SupplierAgencyID** - supplier's details ID. Data type - string. 
 
