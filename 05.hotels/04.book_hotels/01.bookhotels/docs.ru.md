@@ -6,7 +6,7 @@ title: 'Запрос Book'
 
 #### Запрос
 
--   -   **SearchID** - идентификатор совершившегося поиска. Тип данных - целое 32-битное число.
+-   **SearchID** - идентификатор совершившегося поиска. Тип данных - целое 32-битное число.
 -   **HotelID** - идентификатор отеля для проверки доступности. Тип данных - целое 32-битное число.
 -   **Rooms** - контейнер с информацией о комнатах. Тип данных - сложный.
 -   **Rooms.RoomData** - контейнер с информацией о комнате, которую требуется забронировать. Тип данных - сложный.
@@ -76,6 +76,16 @@ title: 'Запрос Book'
                            <hot:Age>20</hot:Age>
                         </hot:Guest>
                      </hot:Guests>
+                     <!--Optional:-->
+                     <hot:CheckInParams>
+                        <hot:Critical>true</hot:Critical>
+                        <hot:Time>08:00</hot:Time>
+                     </hot:CheckInParams>
+                     <!--Optional:-->
+                     <hot:CheckOutParams>
+                        <hot:Critical>false</hot:Critical>
+                        <hot:Time>16:00</hot:Time>
+                     </hot:CheckOutParams>
                   </hot:RoomData>
                </hot:Rooms>
                <hot:Client>
@@ -84,16 +94,6 @@ title: 'Запрос Book'
                   <!--Optional:-->
                   <hot:Phone>2535</hot:Phone>             
                </hot:Client>
-               <!--Optional:-->
-               <hot:CheckInParams>
-                  <hot:Critical>true</hot:Critical>
-                  <hot:Time>08:00</hot:Time>
-               </hot:CheckInParams>
-               <!--Optional:-->
-               <hot:CheckOutParams>
-                  <hot:Critical>false</hot:Critical>
-                  <hot:Time>16:00</hot:Time>
-               </hot:CheckOutParams>
             </stl:RequestBody>
          </tem:Request>
       </tem:Book>
@@ -179,7 +179,7 @@ title: 'Запрос Book'
 -   **SupplierAgencyID** - идентификатор реквизитов поставщика. Тип данных - строка.
 
 
-##### Sample Response (XML)
+##### Пример ответа (XML)
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
    <s:Body>
@@ -188,59 +188,95 @@ title: 'Запрос Book'
             <a:RequestID>2896</a:RequestID>
             <a:Errors/>
             <a:ResponseBody xmlns:b="http://nemo-ibe.com/Hotels">
-               <b:Id>8</b:Id>
-               <b:Status>Booked</b:Status>
-               <b:HotelId>50229500</b:HotelId>
-               <b:CityId>1870586</b:CityId>
-               <b:SearchId>41350</b:SearchId>
-               <b:CheckInDate>2016-09-25T00:00:00</b:CheckInDate>
-               <b:CheckOutDate>2016-09-28T00:00:00</b:CheckOutDate>
-               <b:CheckInTime>08:00</b:CheckInTime>
-               <b:CheckOutTime>12:00</b:CheckOutTime>
-               <b:Rooms>
-                  <b:HotelRoom>
-                     <b:Type>Double Standard</b:Type>
-                     <b:Meal>Breakfast</b:Meal>
+            <b:Id>62195</b:Id>
+              <b:Status>Booked</b:Status>
+              <b:HotelId>test_hotel</b:HotelId>
+              <b:CityId>6308866</b:CityId>
+              <b:ActionId>709144</b:ActionId>
+              <b:CheckInDate>2019-05-07T00:00:00</b:CheckInDate>
+              <b:CheckOutDate>2019-05-11T00:00:00</b:CheckOutDate>
+              <b:CheckInTime>14:00:00</b:CheckInTime>
+              <b:CheckOutTime>12:00:00</b:CheckOutTime>
+              <b:Rooms>
+                <b:HotelRoom>
+                  <b:Type>Улучшенный двухместный номер (Двуспальная кровать) (двуспальная кровать full size)</b:Type>
+                  <b:Meal>nomeal</b:Meal>
+                  <b:Price>
+                    <a:Amount>88.5</a:Amount>
+                    <a:Currency>RUB</a:Currency>
+                  </b:Price>
+                  <b:VATInfo>
+                    <b:Amount>
+                      <a:Amount>1594.17004394531</a:Amount>
+                      <a:Currency>RUB</a:Currency>
+                    </b:Amount>
+                    <b:FromFullPrice>false</b:FromFullPrice>
+                    <b:IncludeInPrice>true</b:IncludeInPrice>
+                    <b:VatPercent i:nil="true"/>
+                  </b:VATInfo>
+                  <b:IsSpecialOffer>false</b:IsSpecialOffer>
+                  <b:VisaSupportProvided>false</b:VisaSupportProvided>
+                  <b:IsNonRefundable>true</b:IsNonRefundable>
+                  <b:BookingRemarks i:nil="true"/>
+                  <b:CancellationRules>
+                    <b:CancellationRulesGroupElement>
+                      <b:Id>1</b:Id>
+                      <b:DeadLine>2019-05-07 07:25:05  00:00</b:DeadLine>
+                      <b:PercentValue>100.0</b:PercentValue>
+                      <b:AbsoluteValue>38</b:AbsoluteValue>
+                    </b:CancellationRulesGroupElement>
+                  </b:CancellationRules>
+                  <b:Guests>
+                    <b:Guest>
+                      <b:LastName>OSTROVOK</b:LastName>
+                      <b:FirstName>VSEVOLOD</b:FirstName>
+                      <b:Nationality>RU</b:Nationality>
+                      <b:Type>ADT</b:Type>
+                      <b:Age>26</b:Age>
+                      <b:Gender>N</b:Gender>
+                      <b:DateOfBirth>07.05.1993</b:DateOfBirth>
+                    </b:Guest>
+                  </b:Guests>
+                  <b:SupplierReference i:nil="true"/>
+                  <b:HoldTimeLimit>2019-05-07T16:25:05</b:HoldTimeLimit>
+                  <b:LateCheckOutService>
+                     <b:Time>15:00</b:Time>
                      <b:Price>
-                        <a:Amount>128.52</a:Amount>
-                        <a:Currency>EUR</a:Currency>
+                        <a:Amount>50.5</a:Amount>
+                        <a:Currency>RUB</a:Currency>
                      </b:Price>
-                     <b:IsSpecialOffer>false</b:IsSpecialOffer>
-                     <b:VisaSupportProvided>false</b:VisaSupportProvided>
-                     <b:IsNonRefundable>false</b:IsNonRefundable>
-                     <b:BookingRemarks i:nil="true"/>
-                     <b:CancellationRules/>
-                     <b:Guests>
-                        <b:Guest>
-                           <b:LastName>Ivanov</b:LastName>
-                           <b:FirstName>Ivan</b:FirstName>
-                           <b:Phone>89749977811</b:Phone>
-                           <b:Email>bab@gmail.com</b:Email>
-                           <b:Type>ADT</b:Type>
-                           <b:Age>20</b:Age>
-                        </b:Guest>
-                     </b:Guests>
-                  </b:HotelRoom>
-               </b:Rooms>
-               <b:ContactPerson>
-                  <b:LastName>Andrey</b:LastName>
-                  <b:FirstName>Ivanov</b:FirstName>
-                  <b:Phone>253565</b:Phone>
-               </b:ContactPerson>
-               <b:Markup>
-                  <a:Amount>-1831.02798461914</a:Amount>
-                  <a:Currency>RUB</a:Currency>
-               </b:Markup>
-               <b:AgencyCharges>
-                  <a:Amount>-85.2255001664162</a:Amount>
-                  <a:Currency>RUB</a:Currency>
-               </b:AgencyCharges>
-               <b:ServiceCharges>
-                  <a:Amount>-234.107990264893</a:Amount>
-                  <a:Currency>RUB</a:Currency>
-               </b:ServiceCharges>
-               <b:Supplier>Hotelston</b:SupplierId>
-               <b:Timelimit>2019-06-28 13:00:00  00:00</b:Timelimit>
+                     <b:Description/>
+                     <b:Guaranteed>false</b:Guaranteed>
+                     <b:PriceRule>AdditionalPrice</b:PriceRule>
+                     <b:IsConfirmed i:nil="true"/>
+                     <b:IsCritical>true</b:IsCritical>
+                  </b:LateCheckOutService>
+                </b:HotelRoom>
+              </b:Rooms>
+              <b:ContactPerson>
+                <b:LastName>Vsevolod</b:LastName>
+                <b:FirstName/>
+              </b:ContactPerson>
+              <b:Markup>
+                <a:Amount>3.8</a:Amount>
+                <a:Currency>RUB</a:Currency>
+              </b:Markup>
+              <b:AgencyCharges>
+                <a:Amount>1.9</a:Amount>
+                <a:Currency>RUB</a:Currency>
+              </b:AgencyCharges>
+              <b:ServiceCharges>
+                <a:Amount>7.6</a:Amount>
+                <a:Currency>RUB</a:Currency>
+              </b:ServiceCharges>
+              <b:Supplier>Ostrovok</b:Supplier>
+              <b:BookingLocator i:nil="true"/>
+              <b:VoucherWasSendedBySupplier>true</b:VoucherWasSendedBySupplier>
+              <b:SupplierHotelId>test_hotel_128</b:SupplierHotelId>
+              <b:PaymentType>Deposit</b:PaymentType>
+              <b:Timelimit>2019-05-05 07:25:05  00:00</b:Timelimit>
+              <b:PriceTimelimit>2019-05-07 16:25:05  03:00</b:PriceTimelimit>
+              <b:SupplierAgencyID>1721</b:SupplierAgencyID>
             </a:ResponseBody>
          </BookResult>
       </BookResponse>
