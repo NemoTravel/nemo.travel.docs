@@ -138,6 +138,17 @@ title: 'Book Request'
 -   **Rooms.HotelRoom.Guests.Guest.Email** - guest's email. Data type - string.
 -   **Rooms.HotelRoom.Guests.Guest.Type** - ADT - adult if the guest’s age is over 16, otherwise CLD - child. Data type - string.
 -   **Rooms.HotelRoom.Guests.Guest.Age** - guest’s age. Data type - unsigned 32-bit integer.
+-   **Rooms.HotelRoom.EarlyCheckInService** - information on the early check in service. Data type - custom.
+-   **Rooms.HotelRoom.EarlyCheckInService.Time** - contains the information on the offered time. Data type - HH:mm string.
+-   **Rooms.HotelRoom.EarlyCheckInService.Price** - container with information on the offer's price. The price is shown for a single room. Data type - custom.
+-   **Rooms.HotelRoom.EarlyCheckInService.Price.Amount** - price amount. Data type - fractional number.
+-   **Rooms.HotelRoom.EarlyCheckInService.Price.Currency** - currency code. Data type - string.
+-   **Rooms.HotelRoom.EarlyCheckInService.Description** - additional information. Data type - string.
+-   **Rooms.HotelRoom.EarlyCheckInService.Guaranteed** - contains the information on the attribute of the guaranteed price Data type - bool.
+-   **Rooms.HotelRoom.EarlyCheckInService.PriceRule** - rules by which the service is provided. Data type - enumeration.
+-   **Rooms.HotelRoom.EarlyCheckInService.IsConfirmed** - attribute of the price being confirmed by the hotel. Data type - bool.
+-   **Rooms.HotelRoom.EarlyCheckInService.IsCritical** - criticality of the early check in specified by the user during the booking. Data type - bool.
+-   **Rooms.HotelRoom.LateCheckOutService** - Information on the late check out service. Data type - custom, same as EarlyCheckInService.
 -   **ContactPerson** - container with information on the contact person. Data type is custom.
 -   **ContactPerson.LastName** - name of the contact person. Data type - string.
 -   **ContactPerson.FirstName** - name of the contact person. Data type - string.
