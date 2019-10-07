@@ -76,6 +76,16 @@ title: 'Book Request'
                            <hot:Age>20</hot:Age>
                         </hot:Guest>
                      </hot:Guests>
+                     <!--Optional:-->
+                     <hot:CheckInParams>
+                        <hot:Critical>true</hot:Critical>
+                        <hot:Time>08:00</hot:Time>
+                     </hot:CheckInParams>
+                     <!--Optional:-->
+                     <hot:CheckOutParams>
+                        <hot:Critical>false</hot:Critical>
+                        <hot:Time>16:00</hot:Time>
+                     </hot:CheckOutParams>
                   </hot:RoomData>
                </hot:Rooms>
                <hot:Client>
@@ -84,16 +94,6 @@ title: 'Book Request'
                   <!--Optional:-->
                   <hot:Phone>2535</hot:Phone>             
                </hot:Client>
-               <!--Optional:-->
-               <hot:CheckInParams>
-                  <hot:Critical>true</hot:Critical>
-                  <hot:Time>08:00</hot:Time>
-               </hot:CheckInParams>
-               <!--Optional:-->
-               <hot:CheckOutParams>
-                  <hot:Critical>false</hot:Critical>
-                  <hot:Time>16:00</hot:Time>
-               </hot:CheckOutParams>
             </stl:RequestBody>
          </tem:Request>
       </tem:Book>
