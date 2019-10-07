@@ -119,6 +119,13 @@ title: 'Book Request'
 -   **Rooms.HotelRoom.Price** - container with payment information. Data type - custom.
 -   **Rooms.HotelRoom.Price.Amount** - payment amount. Data type - 32-bit integer.
 -   **Rooms.HotelRoom.Price.Currency** - 3-letter currency code. Data type - string.
+-   **Rooms.HotelRoom.VATInfo** - container with information on VAT. Data type - custom.
+-   **Rooms.HotelRoom.VATInfo.Amount** - container with information on VAT amount. Data type - custom.
+-   **Rooms.HotelRoom.VATInfo.Amount.Amount** - VAT amount.Data type - 32-bit integer.
+-   **Rooms.HotelRoom.VATInfo.Amount.Currency** - ISO Alpha 3 currency code. Data type - string.
+-   **Rooms.HotelRoom.VATInfo.FromFullPrice**  - attribute of VAT being calculated based on the full price. Data type - bool.
+-   **Rooms.HotelRoom.VATInfo.IncludeInPrice** - attribute of VAT being included in the price. Data type - bool.
+-   **Rooms.HotelRoom.VATInfo.VatPercent** - VAT interest rate. Data type - 32-bit integer.
 -   **Rooms.HotelRoom.IsSpecialOffer** - attribute of special offers availability. Data type - boolean.
 -   **Rooms.HotelRoom.VisaSupportProvided** - attribute of visa support availability. Data type - boolean.
 -   **Rooms.HotelRoom.IsNonRefundable** - attribute of the possibility of a refund for the booked room. Data type - boolean.
