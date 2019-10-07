@@ -172,7 +172,7 @@ title: 'Book Request'
 -   **PriceTimelimit** - payment time limit (time until which offer is in force and the payment is required). Data type - date in the yyyy-mm-dd hh:mm:ss hh:mm format.
 -   **SupplierAgencyID** - supplier requisites ID. Data type - string.
 -   **Timelimit** - the time limit that takes into account the Agency settings affects the start of the payment process. Data type - date, YYYY-MM-DD HH:MM:SS HH:MM.
--   **SupplierAgencyID** - supplier's details ID. Data type - string. 
+-   **SupplierAgencyID** - supplier's requisites ID. Data type - string. 
 
 
 ##### Sample Response (XML)
