@@ -118,7 +118,7 @@ title: 'Book Request'
 -   **Rooms.HotelRoom.Meal** - contains information on the meal type. Data type - string.
 -   **Rooms.HotelRoom.Price** - container with payment information. Data type - custom.
 -   **Rooms.HotelRoom.Price.Amount** - payment amount. Data type - 32-bit integer.
--   **Rooms.HotelRoom.Price.Currency** - 3-letter currency code. Data type - string.
+-   **Rooms.HotelRoom.Price.Currency** - ISO Alpha 3 currency code. Data type - string.
 -   **Rooms.HotelRoom.VATInfo** - container with information on VAT. Data type - custom.
 -   **Rooms.HotelRoom.VATInfo.Amount** - container with information on VAT amount. Data type - custom.
 -   **Rooms.HotelRoom.VATInfo.Amount.Amount** - VAT amount.Data type - 32-bit integer.
@@ -235,7 +235,7 @@ title: 'Book Request'
                   <a:Amount>-234.107990264893</a:Amount>
                   <a:Currency>RUB</a:Currency>
                </b:ServiceCharges>
-               <b:Supplier>Hotelston</b:SupplierId>
+               <b:Supplier>Hotelston</b:Supplier>
                <b:Timelimit>2019-06-28 13:00:00  00:00</b:Timelimit>
             </a:ResponseBody>
          </BookResult>
