@@ -123,13 +123,13 @@ title: 'Запрос Book'
 -   **Rooms.HotelRoom.Meal** - содержит информацию о типе питания. Тип данных - строка.
 -   **Rooms.HotelRoom.Price** - содержит информацию об оплате. Тип данных - сложных.
 -   **Rooms.HotelRoom.Price.Amount** - сумма оплаты. Тип данных - целое 32-битное число.
--   **Rooms.HotelRoom.Price.Currency** - 3-х буквенный код валюты. Тип данных - строка.   
+-   **Rooms.HotelRoom.Price.Currency** - ISO Alpha 3 код валюты. Тип данных - строка.   
 -   **Rooms.HotelRoom.VATInfo** - контейнер с информацией о НДС. Тип данных - сложный.
 -   **Rooms.HotelRoom.VATInfo.Amount** - контейнер с информацией о величине НДС. Тип данных - сложный.
 -   **Rooms.HotelRoom.VATInfo.Amount.Amount** - сумма НДС.Тип данных - целое 32-битное число.
--   **Rooms.HotelRoom.VATInfo.Amount.Currency** - 3-х буквенный код валюты. Тип данных - строка.
--   **Rooms.HotelRoom.VATInfo.FromFullPrice**  - признак НДС от полной цены.  Тип данных - булевый.
--   **Rooms.HotelRoom.VATInfo.IncludeInPrice** - признак НДС включен в цену. Тип данных - булевый.
+-   **Rooms.HotelRoom.VATInfo.Amount.Currency** - ISO Alpha 3 код валюты. Тип данных - строка.
+-   **Rooms.HotelRoom.VATInfo.FromFullPrice**  - признак того, что НДС рассчитывается от полной цены.  Тип данных - булевый.
+-   **Rooms.HotelRoom.VATInfo.IncludeInPrice** - признак того, что НДС включен в цену. Тип данных - булевый.
 -   **Rooms.HotelRoom.VATInfo.VatPercent** - процентная ставка НДС. Тип данных - целое 32-битное число.   
 -   **Rooms.HotelRoom.IsSpecialOffer** - признак наличия специальных предложений. Тип данных - булевый.
 -   **Rooms.HotelRoom.VisaSupportProvided** - признак наличия поддержки визы. Тип данных - булевый.
