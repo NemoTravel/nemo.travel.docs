@@ -86,6 +86,7 @@ taxonomy:
 - 	 **VATBreakdown.Taxes.Breakdown.Tax.Code** - код таксы. Тип данных — string.
 - 	 **VATBreakdown.Total** - НДС от суммы тарифа и такс. Тип данных - [Money](/avia/common/money).
 -    **IssuierSupplierID** - идентификатор реквизита выписки. Тип данных - строка. 
+-    **AgencyIATACode** - IATA код агента. Тип данных - строка. 
 
 ##### Пример
 ```xml
@@ -319,6 +320,7 @@ D 993 ПЛАТА ПРИ ИЗМЕНЕНИИ</a:Description>
                                  <a:StatusCode>HK</a:StatusCode>
                                  <a:SupplierRef>029M4K/UT</a:SupplierRef>
                                  <a:RequestedSegment>0</a:RequestedSegment>
+                                 <a:CouponStatus>Open</a:CouponStatus>
                               </a:FlightSegment>
                               <a:FlightSegment>
                                  <a:ID>1</a:ID>
@@ -348,6 +350,7 @@ D 993 ПЛАТА ПРИ ИЗМЕНЕНИИ</a:Description>
                                  <a:StatusCode>HK</a:StatusCode>
                                  <a:SupplierRef>029M4K/UT</a:SupplierRef>
                                  <a:RequestedSegment>1</a:RequestedSegment>
+                                 <a:CouponStatus>Open</a:CouponStatus>
                               </a:FlightSegment>
                            </a:Segments>
                         </c:FlightService>
@@ -510,6 +513,7 @@ D 993 ПЛАТА ПРИ ИЗМЕНЕНИИ</a:Description>
                         </a:Total>
                      </c:VATBreakdown>
                      <c:IssuierSupplierID>***</c:IssuierSupplierID>
+                     <c:AgencyIATACode>***</c:AgencyIATACode>
                   </c:EDMask>
                   <c:EDMask>
                      <c:Number>2986160166387</c:Number>
