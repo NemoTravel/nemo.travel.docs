@@ -7,7 +7,7 @@ taxonomy:
 
 ### ModifyBook_2_2
 The latest version of the ModifyBook request. Similar to the ModifyBook_2_1 version, the difference is only in the ancillary services block from the [Book_2_2](/avia/request/bookflight) request.
- ### Sample container with ancillary services from the ModifyBook_2_2 request.
+ ### Sample container with ancilliary services from the ModifyBook_2_2 request.
  ```xml
               <ns2:ModifyAncillaryService>
               <ns1:Action>Add</ns1:Action>
