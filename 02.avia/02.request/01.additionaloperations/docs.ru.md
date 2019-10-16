@@ -20,7 +20,7 @@ taxonomy:
     -   **GetFareRules** — получение тарифных правил;
     -   **GetSeatMap** — получение карты мест;
     -   **GetPrice** — получение актуальной цены перелёта, выполняется только для перелёта;
-    -   **SearchAncillaryServices** — получение списка доступных дополнительных услуг для перелета или брони (реализован только для ГРС Sirena и Amadeus);
+    -   **SearchAncillaryServices** — получение списка доступных дополнительных услуг для перелета или брони (реализован только для GDS Sirena и Amadeus);
     -   **GetAllowedCCs** — получение списка кодов кредитных карт, которыми можно оплатить данную бронь через GDS-процессинг;
 <!--    -   **GetAllowedLoyaltyCards** — получение информации о карточках лояльности, которые можно использовать на данном перелёте. На данный момент поддержки данной операции нет; -->
     -   **ActualizeFlight** — актуализация перелёта;
@@ -141,7 +141,7 @@ taxonomy:
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SubGroup** - подгруппа услуги. Тип данных - строка. 
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.RFIC** - RFIC услуги. Тип данных - строка.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.RFISC** - RFISC услуги. Тип данных - строка.
--   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRCode** - код SSR, которую необходимо добавить в ПНР в случае бронирования данной допуслуги. Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRCode** - код SSR, которую необходимо добавить в PNR в случае бронирования данной допуслуги. Тип данных - строка.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Type** - тип допуслуги(На данный момент - специфика Сирены). Тип данных - строка.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.CompanyCode** - ИАТА код а/к, предоставляющей данную допуслугу. Тип данных - строка.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Refundability** - возвратность услуги. Тип данных - перечисление.
@@ -157,9 +157,9 @@ taxonomy:
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.SegmentRef.Ref** - ссылка на сегмент. Тип данных - целое 32 битное число.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes** - типы пассажиров к которым применима данная цена. Тип данных - массив.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes.PassTypes** - тип пассажира. Тип - данных перечисление.
--   **GetAllowedCCsResult** - результат получения списка кодов карт для оплаты ГДС процессингом. Тип данных - массив.
--   **GetAllowedCCsResult.AllowedCCs** - список кодов допустимых карт для оплаты брони ГДС процессингом. Тип данных - массив.
--   **GetAllowedCCsResult.AllowedCCs.Code** - код кредитной карты, которой можно оплатить указанную бронь с помощью ГДС процессинга. Тип данных - строка.
+-   **GetAllowedCCsResult** - результат получения списка кодов карт для оплаты GDS процессингом. Тип данных - массив.
+-   **GetAllowedCCsResult.AllowedCCs** - список кодов допустимых карт для оплаты брони GDS процессингом. Тип данных - массив.
+-   **GetAllowedCCsResult.AllowedCCs.Code** - код кредитной карты, которой можно оплатить указанную бронь с помощью GDS процессинга. Тип данных - строка.
 -   **GetAllowedLoyaltyCardsResult** - массив тарифных правил, применяемых к данному перелёту. Тип данных - массив.
 -   **ActualizedFlight** — содержит актуализированный перелёт. Тип данных — [Flight](/avia/common/flight).
 -   **ActualizedFlight.Segments.Segment.SupplierInfo** - информация о статусах сегментов в случае если перелёт не доступен для бронирования и операция выполнялась с помощью запроса взятия мест. Тип данных - строка. Поддерживается у GalileoUapi, Sabre, Amadeus, Galileo.
