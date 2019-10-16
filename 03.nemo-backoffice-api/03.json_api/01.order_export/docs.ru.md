@@ -114,7 +114,7 @@ taxonomy:
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.commissionForSubagency.currency** - код валюты. Тип данных — строка.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare** — контейнер с информацией о тарифах.Тип данных — сложный.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N** — контейнер с информацией об N-м тарифе. Тип данных — сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.pricingType** — код ценового типа пассажира полученного из ГРС. Тип данных — строка.
+* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.pricingType** — код ценового типа пассажира полученного из GDS. Тип данных — строка.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.passCount** — число пассажиров. Тип данных — целое 64-битное число.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare** — контейнер с информацией о базовой стоимости тарифа (без учета такс). Тип данных - сложный.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare.amount** — сумма базовой стоимости.Тип данных — строка.
@@ -227,7 +227,7 @@ taxonomy:
 * **data.products.ID_TRN_N.pricingInfo.ID_PCG_N** — контейнер с информацией об N-й оценке маршрута. Тип данных — сложный.
 * **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare** — контейнер с информацией о тарифах.Тип данных — сложный.
 * **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N** — контейнер с информацией об N-м тарифе. Тип данных — сложный.
-* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.pricingType** — код ценового типа пассажира полученного из ГРС. Тип данных — строка.
+* **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.pricingType** — код ценового типа пассажира полученного из GDS. Тип данных — строка.
 * **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.passCount** — число пассажиров. Тип данных — целое 64-битное число.
 * **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare** — контейнер с информацией о базовой стоимости тарифа. Тип данных - сложный.
 * **data.products.ID_TRN_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.baseFare.amount** — сумма базовой стоимости.Тип данных — строка.
