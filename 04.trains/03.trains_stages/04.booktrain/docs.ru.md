@@ -234,9 +234,9 @@ title: 'Бронирование мест в поезде'
 -   **Passengers.BookedPerson.LastName** - Фамилия. Тип данных - строка.
 -   **Passengers.BookedPerson.SupplierID** - ID пассажира от поставщика(реализовано только у Сирены), Тип данных - строка.
 -   **Passengers.BookedPerson.Type** - Тип пассажира. Тип данных -
--   **Passengers.BookedPerson.Document** - 
--   **Passengers.BookedPerson.Document.DocType** - Тип документа. Тип данных - 
--   **Passengers.BookedPerson.Document.DocNum** -  Номер документа. Тип данных - 
+-   <!--**Passengers.BookedPerson.Document**--> 
+-   **Passengers.BookedPerson.Document.DocType** - Тип документа. Тип данных - строка.
+-   **Passengers.BookedPerson.Document.DocNum** -  Номер документа. Тип данных - строка.
 -   **Passengers.BookedPerson.Price** - Стоимость всех билетов пассажира. Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
 -   **Passengers.BookedPerson.Tickets** - Билеты пассажира. Тип данных - массив элементов TicketInformation.
 -   **Passengers.BookedPerson.Ticket** - Информация о билете. Тип данных - сложный.
@@ -309,7 +309,7 @@ title: 'Бронирование мест в поезде'
    - MotherWithBaby - для матери и ребенка
    - WithChildren - для пассажиров с детьми
 -   **Car.PossibleAnimals** - Признак возможности провоза животных в вагоне. Тип данных - булев. 
--   **Car.Schema** - Схема вагона. Тип данных - 
+<!---   **Car.Schema** - Схема вагона. Тип данных - 
 -   **DelayedPaymentIsAvail** - 
 -   **GenderSeats** - 
 -   **IsCarDynamicPricing** - 
@@ -345,7 +345,7 @@ title: 'Бронирование мест в поезде'
 -   **WebService** - 
 -   **OwnerID** - 
 -   **PassTypes** - 
--   **PassTypes.PassType** - 
+-   **PassTypes.PassType** --->
 
 
 
