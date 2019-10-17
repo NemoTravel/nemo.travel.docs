@@ -310,28 +310,35 @@ title: 'Бронирование мест в поезде'
    - WithChildren - для пассажиров с детьми
 -   **Car.PossibleAnimals** - Признак возможности провоза животных в вагоне. Тип данных - булев. 
 <!---   **Car.Schema** - Схема вагона. Тип данных - 
--   **DelayedPaymentIsAvail** - 
+-   **DelayedPaymentIsAvail** - доступность отсроченого платежа. Булевый.
 -   **GenderSeats** - 
--   **IsCarDynamicPricing** - 
--   **LoyaltyCards** - 
--   **LoyaltyCards.RZHDBonusSavePoints** - 
--   **LoyaltyCards.RZHDBonusDiscount** - 
+-   **IsCarDynamicPricing** - динамическое ценообразование. будевый 
+-   **LoyaltyCards** -  контейнер с информацией о доступных картах лояльности. сложный
+-   **LoyaltyCards.LoyaltyCard** - доступные карты лояльности. Пример:
+	-	**RZHDBonusSavePoints** 
+	-	**RZHDBonusDiscount** 
 -   **PlacesCountInPrice** - 
 -   **RoadType** - 
--   **TariffRequired** - 
--   **Tariff** - 
--   **Tariff.AgeFrom** - 
--   **Tariff.AgeFromOffset** - 
--   **Tariff.Code** - 
--   **Tariff.Description** - 
--   **Tariff.Name** - 
--   **Tariff.PassType** -  
+-   **TariffRequired** - Булевый 
+-   **Tariffs** - контейнер с информацией о тарифах. сложный 
+-   **Tariffs.Tariff** - контейнер с информацией о тарифе. сложный 
+-   **Tariffs.Tariff.AgeFrom** - возраст от которого действует данный тариф. число
+-	**Tariffs.Tariff.AgeTo** - возраст до которого действует данный тариф. число
+-   **Tariffs.Tariff.AgeFromOffset**
+-   **Tariffs.Tariff.Code** -  код тарифа. число
+-   **Tariffs.Tariff.Description** - описание тарифа. текст
+-   **Tariffs.Tariff.Name** - название тарифа. текст
+-   **Tariffs.Tariff.PassTypes** -  контейнер с типами пассажиров подходящих под этот тариф. 
+-   **Tariffs.Tariff.PassTypes.PassType** - тип пассажира для тарифа. строка. примеры 
+	-	adult
+	-	child
+	-	infant
 -   **DepStationFromSearch** - 
--   **DepStationName** - 
--   **DepTimezoneCode** - 
--   **EndDate** - 
+-   **DepStationName** - полное название станции прибытия
+-   **DepTimezoneCode** - временная зона станции прибытия
+-   **EndDate** -  дата прибытия 
 -   **Environment** -  
--   **IsEticketPrintPoint** - 
+-   **IsEticketPrintPoint** -  наличие электроного билета. булевый
 -   **IsSuburbanTrain** - 
 -   **LocalBeginDate** - 
 -   **LocalEndDate** - 
@@ -339,13 +346,13 @@ title: 'Бронирование мест в поезде'
 -   **PrintPoint.Direction** - 
 -   **PrintPoint.Info** - 
 -   **RequisitesId** - 
--   **TrainEndPointName** - 
--   **TrainStartPointName** - 
--   **TripTime** - 
+-   **TrainEndPointName** - сокращённое название станции назначения
+-   **TrainStartPointName** -  сокращённое название станции отправления 
+-   **TripTime** - время в пути
 -   **WebService** - 
--   **OwnerID** - 
--   **PassTypes** - 
--   **PassTypes.PassType** --->
+-   **OwnerID** -  ИД брони
+-   
+-    --->
 
 
 
