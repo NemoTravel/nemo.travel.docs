@@ -18,7 +18,7 @@ title: AirShopping
 -   **AirShoppingRQ** - запрос выполняет поиск предложений в соответсвии с указанными данными о сегментах, пассажирах и дополнительных ограничениях. Обязательный атрибут Version="17.2" содержит версию NDC протокола. Тип данных - сложный. 
 -   **AirShoppingRQ.CoreQuery** - содержит информацию о запрашиваемой покупке. Тип данных - сложный. 
 -   **AirShoppingRQ.CoreQuery.ShoppingResponseID** - содержит информацию о поиске, по которому необходимо получить результаты. **Обязательный элемент, при условии, что не задан элемент CoreQuery.FlightSpecific или CoreQuery.OriginDestinations**. Тип данных - сложный. 
--   **AirShoppingRQ.CoreQuery.ShoppingResponseID.Owner** - код владельца (ГРС) предложения. Тип данных — строка. 
+-   **AirShoppingRQ.CoreQuery.ShoppingResponseID.Owner** - код владельца (GDS) предложения. Тип данных — строка. 
 -   **AirShoppingRQ.CoreQuery.ShoppingResponseID.ResponseID** - идентификатор AirShoppingRS.ShoppingResponseID по которому необходимо получить результаты поисковой выдачи. Тип данных — строка.
 -   **CoreQuery.OriginDestinations** - содержит информацию о сегментах перелёта, который требуется найти. **Обязательный элемент, при условии, что не задан элемент CoreQuery.FlightSpecific или CoreQuery.ShoppingResponseID**. Тип данных - сложный.  
 -   **CoreQuery.OriginDestinations.OriginDestination** - информация о назначении/прибытии рейса (обязательный). Тип данных - сложный. 
@@ -172,7 +172,7 @@ title: AirShopping
 -   **AirlineOfferSnapshot.MatchedOfferQuantity** - общее количество предложений, полученнное в результате поиска. 
 -   **AirShoppingRS.OffersGroup.AirlineOffers.Offer** - предложение представляет собой определенный набор услуг (перелеты и/или связанные с перелетом дополнительные услуги). Элемент Offer содержит информацию об услугах, ценовой составляющей, ограничениях (таймлимит). Offer включает два обязательных атрибута:
 -   -	**OfferID** - уникальный идентификатор предложения;
--   -	**Owner="1S"** - код владельца (ГРС) предложения. Тип данных — строка.
+-   -	**Owner="1S"** - код владельца (GDS) предложения. Тип данных — строка.
 -   **Offer.Parameters** - содержит количество наборов услуг (OfferItem) в рамках одного предложения. Тип данных — сложный.
 -   **Offer.Parameters.TotalItemQuantity** - количество наборов услуг в рамках одного предложения. Тип - целое положительное число.
 -   **Offer.TimeLimits** - срок действия предложения. Тип данных — сложный.
