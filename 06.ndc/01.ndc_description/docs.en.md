@@ -12,10 +12,7 @@ Making a ticket using the Flights NDC web service is performed in several steps:
 
 Each stage realizes a series of requests to the Flights NDC web service. The sequence of requests executed may vary depending on your needs, but there is an approximate order that is recommended to be followed - searching for offers, checking the relevance of the offer, booking the selected offer, transferring passenger data if it was not transferred during the booking, ticketing and receiving ticket numbers.
 
-Address for sending requests: 
-http://prod.backend.nemo.travel:11001/NDC/AviaNDC.svc,	
-Schema:	
-http://prod.backend.nemo.travel:11001/NDC/AviaNDC.svc?singleWsdl
+The address of the wsdl scheme is sent by the company staff after the NDA (Non-Disclosure Agreement) is signed with the agency.
 
 
 
