@@ -61,7 +61,7 @@ $request = [
 	]
 ];
 
-$client = new SoapClient("http://*****");  
+$client = new SoapClient("http://*******");  
 $result = $client->__soapCall('Search_1_2', $request);
 
 var_dump($result);
