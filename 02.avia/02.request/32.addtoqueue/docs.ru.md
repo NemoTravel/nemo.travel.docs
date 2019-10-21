@@ -7,6 +7,8 @@ taxonomy:
 
 ### AddToQueue
 
+Используется для добавления бронирования в очередь. 
+
 - **AddToQueueConfigList** - контейнер с информацией по перемещению PNR-ов. Тип данных - сложный.
 - **AddToQueueConfigList.AddToQueueConfig** - контейнер с информацией по перемещению PNR в конкретную очередь. Тип данных - сложный.
 - **AddToQueueConfigList.AddToQueueConfig.LocatorList** - список локаторов для перемещения. Тип данных - сложный.
