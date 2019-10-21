@@ -7,7 +7,7 @@ taxonomy:
 
 ### AddToQueue
 
-This request is used to add a booking to a queue.
+This request is used to add a booking to the GDS queue.
 
 - **AddToQueueConfigList** - container with information on PNRs relocation. Data type - custom.
 - **AddToQueueConfigList.AddToQueueConfig** - container with information on PNR’s relocation to a specific queue. Data type - custom.
