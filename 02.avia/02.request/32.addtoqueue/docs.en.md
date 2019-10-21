@@ -7,6 +7,8 @@ taxonomy:
 
 ### AddToQueue
 
+This request is used to add a booking to a queue.
+
 - **AddToQueueConfigList** - container with information on PNRs relocation. Data type - custom.
 - **AddToQueueConfigList.AddToQueueConfig** - container with information on PNR’s relocation to a specific queue. Data type - custom.
 - **AddToQueueConfigList.AddToQueueConfig.LocatorList** - list of locators to move. Data type - custom.
