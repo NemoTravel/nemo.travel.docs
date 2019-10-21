@@ -22,7 +22,7 @@ $request = [
 				'Login' => 'user_login',
 				'Password' => 'user_password'
 			],
-			'UserID' => '30328',
+			'UserID' => '123456',
 			'RequestBody' => [
 				'RequestedFlightInfo' => [
 					'Direct' => 0,
@@ -61,7 +61,7 @@ $request = [
 	]
 ];
 
-$client = new SoapClient("http://sandbox.nemo.travel:11001/Avia.svc?singleWsdl");  
+$client = new SoapClient("http://*****");  
 $result = $client->__soapCall('Search_1_2', $request);
 
 var_dump($result);
