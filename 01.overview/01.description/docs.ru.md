@@ -21,7 +21,7 @@ $request = [
 				'Login' => 'user_login',
 				'Password' => 'user_password'
 			],
-			'UserID' => '30328',
+			'UserID' => '123456',
 			'RequestBody' => [
 				'RequestedFlightInfo' => [
 					'Direct' => 0,
