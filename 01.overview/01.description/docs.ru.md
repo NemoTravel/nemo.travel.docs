@@ -9,10 +9,7 @@ taxonomy:
 
 В процессе интеграции для тестирования запросов рекомендуется использовать инструмент [SoapUI OpenSource](https://www.soapui.org/downloads/soapui.html).
 
-Адрес для отправки запросов:  
-https://avia.prod.backend.nemo.travel/Avia.svc, 
-схема:
-https://avia.prod.backend.nemo.travel/Avia.svc?singleWsdl
+Адрес схемы wsdl отправляется сотрудниками нашей компании после подписания с агентством NDA (Non-disclosure agreement).
 
 Пример реализации подключения к Nemo Connect с использованием SoapClient на языке программирования PHP5
 
@@ -63,7 +60,7 @@ $request = [
 	]
 ];
 
-$client = new SoapClient("http://sandbox.nemo.travel:11001/Avia.svc?singleWsdl");  
+$client = new SoapClient("http://*******");  
 $result = $client->__soapCall('Search_1_2', $request);
 
 var_dump($result);
