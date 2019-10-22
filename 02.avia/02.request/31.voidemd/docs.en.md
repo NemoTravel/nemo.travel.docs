@@ -7,7 +7,7 @@ taxonomy:
 
 ### VoidEMD
 
-Used to void the EMD for various ancillary services in the booking.
+EMD void for various ancillary services in the booking.
 
 #### VoidEMD_2_2
 The latest version of the request, differences are only in the response to the request in the additional services block from the [Book_2_2](/avia/request/bookflight) request.
