@@ -7,7 +7,7 @@ taxonomy:
 
 ### GetPNRTerminalView
 
-Used to get a terminal view of the PNR for the booking.
+Getting a terminal view of the PNR for the booking.
 
 #### Request
 
