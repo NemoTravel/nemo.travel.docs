@@ -5,7 +5,7 @@ visible: true
 
 ### List of documents receiving
 
-Request to receive a list of documents for the order.
+Reception of a list of documents for the order.
 
 #### Request parameters
 
