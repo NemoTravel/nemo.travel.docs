@@ -5,7 +5,9 @@ taxonomy:
         - docs
 ---
 
-### Schedule search
+### ScheduleSearch
+
+Search by the schedule.
 
 #### Request
 
