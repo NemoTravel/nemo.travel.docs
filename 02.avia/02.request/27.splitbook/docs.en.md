@@ -7,7 +7,7 @@ taxonomy:
 
 ### SplitBook
 
-Used to split a part of passengers into a separate new booking.
+Splitting of a part of passengers into a separate new booking.
 
 #### SplitBook_2_2
 
