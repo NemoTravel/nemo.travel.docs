@@ -7,7 +7,7 @@ taxonomy:
 
 ### RefundTicket_1_1
 
-Used for gatting information on the tickets refund and EMD, if they are present in the booking.
+Getting information on the tickets refund and EMD, if they are present in the booking.
 
 #### RefundTicket_2_2
 
