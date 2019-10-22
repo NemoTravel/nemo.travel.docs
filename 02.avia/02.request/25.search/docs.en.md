@@ -7,7 +7,7 @@ taxonomy:
 
 ### Search_1_2
 
-Search for v 1.2
+Version 1.2. flight search.
 
 >>>> The GDS restriction: while requesting alternative airports, alternative flight classes/fares will not be requested for the Sabre GDS.
 
