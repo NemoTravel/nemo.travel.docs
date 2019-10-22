@@ -5,7 +5,7 @@ visible: true
 
 ### Withdrawal of funds from the account
 
-Request to debit money from personal account. 
+Debiting money from personal account. 
 
 #### Request parameters
 
