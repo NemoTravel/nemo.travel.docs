@@ -7,7 +7,7 @@ taxonomy:
 
 ### GetAirlineSchedule
 
-Used to obtain airline schedule data. 
+Getting the airline schedule data. 
 
 #### Request
 
