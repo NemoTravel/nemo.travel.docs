@@ -7,7 +7,7 @@ taxonomy:
 
 ### RefundEMD
 
-Used to perform the return of the EMD.
+EMD refund.
 
 #### Request Format
 
