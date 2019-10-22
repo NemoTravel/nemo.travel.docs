@@ -7,7 +7,7 @@ taxonomy:
 
 ### GetSupplierStatic
 
-Used to get statics from suppliers systems.
+Getting statics from suppliers' systems.
 
 #### Request
 
