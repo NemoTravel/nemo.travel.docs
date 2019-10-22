@@ -7,7 +7,7 @@ taxonomy:
 
 ### Get Book History from GDS (GetBookHistory)
 
-Used to get the history of modifications in booking from GDS.
+Getting the history of booking modifications from GDS.
 
 #### Request
 
