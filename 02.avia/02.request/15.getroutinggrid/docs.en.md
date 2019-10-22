@@ -7,7 +7,7 @@ taxonomy:
 
 ### GetRoutingGrid
 
-Get airline's routing grid.
+Getting the airline's routing grid.
 
 #### Request
 
