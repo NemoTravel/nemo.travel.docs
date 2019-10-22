@@ -5,8 +5,6 @@ visible: true
 
 ### Receiving data on the counterparty
 
-Request for data on the counterparty.
-
 #### Request parameters
 
 -   **method** — information about the type of request. Data type - string.
