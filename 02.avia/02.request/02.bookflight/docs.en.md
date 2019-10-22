@@ -51,7 +51,7 @@ Similar to the previous version of BookFlight_2_0, the difference is only in the
 
 ### BookFlight_2_1
 
-Creating a flight booking. Works with a 2.1 booking structure.
+Creation of a flight booking. Works with a 2.1 booking structure.
 
 #### Request
 
@@ -96,7 +96,7 @@ Similar to the previous version of BookFlight_2_0, the difference is only in the
     
 ### BookFlight_2_0
 
-Creating a flight booking. Works with a 2.0 booking structure. Differences are only in the ancillary services block.
+Creation of a flight booking. Works with a 2.0 booking structure. Differences are only in the ancillary services block.
 
 #### Request
 
