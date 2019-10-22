@@ -3,7 +3,7 @@ title: DeleteFromQueue
 ---
 
 ### DeleteFromQueue 
-Used to delete one or more bookings from one or more queues.
+Deletion one or more bookings from one or more queues.
 
 #### DeleteFromQueue_2_0 Request
 - **BookQueueList.BookQueueInfo.QueuesByName** - container with queue names. Data type - array.
