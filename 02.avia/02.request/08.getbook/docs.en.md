@@ -7,7 +7,7 @@ taxonomy:
 
 ### GetBook
 
-Used to get the current state of the booking without synchronizing with the supplier.Getting information is possible using BookID and using PNRParams, see examples.
+Getting the current state of the booking without synchronizing with the supplier. Getting information is possible using BookID and using PNRParams, see examples.
 #### GetBook_2_2
 The latest request version, the differences are only in the response in the ancillary services block from [Book_2_2](/avia/request/bookflight) request.
 
