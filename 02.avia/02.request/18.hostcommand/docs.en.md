@@ -7,7 +7,7 @@ taxonomy:
 
 ### Running the Terminal Command (HostCommand)
 
-Used to execute a terminal command in the GDS.
+Execution of a terminal command in the GDS.
 
 #### Request
 
