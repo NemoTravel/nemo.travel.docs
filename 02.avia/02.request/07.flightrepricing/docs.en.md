@@ -7,7 +7,7 @@ taxonomy:
 
 ### FlightRepricing
 
-Performs the flight repricing, includes the availability check of the flight. Saves the user-selected fare families.
+Flight repricing. The request includes the availability check of the flight. Saves the user-selected fare families.
 
 #### Request
 
