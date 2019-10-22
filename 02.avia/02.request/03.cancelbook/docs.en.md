@@ -7,7 +7,7 @@ taxonomy:
 
 ### Booking cancel (CancelBook)
 
-Used to cancel flight booking.
+Cancellation of a flight booking.
 
 #### Request
 
