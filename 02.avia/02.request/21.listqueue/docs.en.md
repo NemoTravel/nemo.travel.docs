@@ -5,7 +5,9 @@ taxonomy:
         - docs
 ---
 
-### Reading Queues (ListQueue)
+### ListQueue
+
+Queues reading.
 
 #### ListQueue_2_0 Request
 - **ListQueueConfig** - container with queue configuration files. Data type - array.
