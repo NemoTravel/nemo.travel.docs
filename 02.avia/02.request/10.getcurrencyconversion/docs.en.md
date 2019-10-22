@@ -7,7 +7,7 @@ taxonomy:
 
 ### Get currency rate from the GDS (GetCurrencyConversion)
 
-Used to get currency rates from GDS.
+Getting currency rates from GDS.
 
 #### Request
 
