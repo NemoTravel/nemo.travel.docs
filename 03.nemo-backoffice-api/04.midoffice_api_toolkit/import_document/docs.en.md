@@ -5,7 +5,7 @@ visible: true
 
 ### Documents reception
 
-Request to receive document content for order.
+Reception of document content for order.
 
 #### Request parameters
 
