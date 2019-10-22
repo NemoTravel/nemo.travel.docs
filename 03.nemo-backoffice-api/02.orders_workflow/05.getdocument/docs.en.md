@@ -3,7 +3,7 @@ title: GetDocument
 ---
 
 ### GetDocument
-This request is designed to get the document from the order in Nemo.travel system.
+Getting the document from the order in Nemo.travel system.
 
 #### Request parameters
 * **OrderID** - order number from the Nemo.travel back office. To get the parameter value for an order, you should run a GetOrder request with the parameters FlightsBookingID (Booking ID from Nemo Connect).
