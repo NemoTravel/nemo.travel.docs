@@ -6,7 +6,7 @@ taxonomy:
 ---
 
 ### BookFlight_2_2
-An operation to create a flight booking working with a 2.2 booking structure. The latest version of the BookFlight request.
+Creating a flight booking. Works with a 2.2 booking structure. The latest version of the BookFlight request.
 
 #### Request
 
@@ -51,7 +51,7 @@ Similar to the previous version of BookFlight_2_0, the difference is only in the
 
 ### BookFlight_2_1
 
-An operation to create a flight booking working with a 2.1 booking structure.
+Creating a flight booking. Works with a 2.1 booking structure.
 
 #### Request
 
@@ -96,7 +96,7 @@ Similar to the previous version of BookFlight_2_0, the difference is only in the
     
 ### BookFlight_2_0
 
-An operation to create a flight booking working with a 2.0 booking structure. Differences are only in the ancillary services block.
+Creating a flight booking. Works with a 2.0 booking structure. Differences are only in the ancillary services block.
 
 #### Request
 
