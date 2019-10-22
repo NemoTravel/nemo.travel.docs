@@ -5,8 +5,6 @@ visible: true
 
 ### Receiving balance of the counterparty
 
-Request to receive a counterparty balance.
-
 #### Request parameters
 
 -   **method** — information about the type of request. Data type - string.
