@@ -7,7 +7,7 @@ taxonomy:
 
 ### Voiding (VoidTicket)
 
-Used to return tickets received as a result of ticketing. This operation is possible only during the same calendar day as when it was ticketed. The request and the response are completely identical to [CancelBook](/avia/request/cancelbook).
+Voiding of the tickets received as a result of ticketing. This operation is possible only during the same calendar day as when it was ticketed. The request and the response are completely identical to [CancelBook](/avia/request/cancelbook).
 
 #### Request
 
