@@ -7,7 +7,7 @@ taxonomy:
 
 ### ModifyOrder
 
-This request is designed to change the already created order in the back-office, for example, you can add a service package to the order.
+Modification of the already created order in the back-office. For example, you can add a service package to the order.
 
 #### Request  parameters
 * **OrderID** - number of the order from the Nemo.travel back office. To get the parameter value for an order, you should run a GetOrder request with the parameters FlightsBookingID (Booking ID from Nemo Connect).
