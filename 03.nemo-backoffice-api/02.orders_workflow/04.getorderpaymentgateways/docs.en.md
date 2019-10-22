@@ -5,7 +5,7 @@ visible: true
 
 ### GetOrderPaymentGateways
 
-This request is designed to get the information on the available payment methods.
+Getting the information on the available payment methods.
 In response to this request Nemo.travel will return the following parameters:
 * address for transferring card data to the payment system in the parameter UrlForCardDataSubmit; 
 * request content, in which you should replace the placeholder with the card data and send it to the address that will also be in the reply in the CardDataRequestContent parameter;
