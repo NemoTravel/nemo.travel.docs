@@ -7,7 +7,7 @@ taxonomy:
 
 ### AdditionalOperations_1_2
 
-Request for execution before version 1.2.
+Execution of the additional operations of 1.2. version.
 
 #### Request
 
