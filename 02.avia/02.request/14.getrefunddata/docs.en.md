@@ -7,7 +7,7 @@ taxonomy:
 
 ### GetRefundData_1_1
 
-Used to get the data on refund tickets and EMD if they are present in the booking.
+Getting the data on ticket and EMD refund if they are present in the booking.
 
 #### Request
 
