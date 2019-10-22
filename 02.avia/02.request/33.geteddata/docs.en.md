@@ -7,7 +7,7 @@ taxonomy:
 
 ### GetEDData
 
-This request is used to get the electronic document mask from the GDS. At the moment acquiring the mask from GDS Sirena is supported. 
+Getting the electronic document mask from the GDS. At the moment acquiring the mask from GDS Sirena is supported. 
 
 #### Request
 
