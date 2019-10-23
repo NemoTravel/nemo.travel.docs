@@ -1,8 +1,10 @@
 ---
-title: 'Getting Additional Information Before Handing Tickets Over'
+title: GetRefundInfo
 ---
 
 ### GetRefundInfo
+
+Getting additional information on the refund before tickets giveaway.
 
 #### Request
 
