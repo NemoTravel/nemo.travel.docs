@@ -1,8 +1,9 @@
 ---
-title: 'Запрос RunCitySearch'
+title: RunCitySearch
 ---
 
 ### RunCitySearch
+
 Запрос отвечает за запуск асинхронного поиска отелей, в результате возвращается только идентификатор. По которому через запросы [GetCitySearchResult](/hotels/search_hotels/getcitysearchresult) получаем результаты поиска по мере их обработки от поставщиков. Окончанием для выполнения запросов **GetCitySearchResult** является получение true в параметре isFinished.
 
 #### Запрос
