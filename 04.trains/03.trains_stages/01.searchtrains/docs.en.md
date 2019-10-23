@@ -4,7 +4,7 @@ title: SearchTrains
 
 ### SearchTrains
 
-While searching for trains, only basic information about the trains in the requested direction is returned in the response, so many of the response's described parameters may be empty. Complete information on a particular train can be obtained from the following request: [Getting the Complete Infomation on a Particular Train](/trains/trains_stages/getfulltraininfo).
+Train search. While searching, only basic information about the trains in the requested direction is returned in the response, so many of the response's described parameters may be empty. Complete information on a particular train can be obtained from the following request: [Getting the Complete Infomation on a Particular Train](/trains/trains_stages/getfulltraininfo).
 
 #### Request
 -   **Date** - Departure date. The format is dd.mm.yyyy, for example 12/30/2011 or 01/01/2012. Data type - string.
