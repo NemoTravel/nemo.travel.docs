@@ -1,5 +1,5 @@
 ---
-title: 'GetBook Request'
+title: GetBook
 ---
 
 ### GetBook
