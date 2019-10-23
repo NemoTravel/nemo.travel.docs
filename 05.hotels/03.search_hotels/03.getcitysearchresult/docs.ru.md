@@ -1,9 +1,10 @@
 ---
-title: 'Запрос GetCitySearchResult'
+title: GetCitySearchResult
 ---
 
 ### GetCitySearchResult
-Запрос для получения результатов поиска.
+
+Получение результатов поиска.
 
 #### Запрос
 
