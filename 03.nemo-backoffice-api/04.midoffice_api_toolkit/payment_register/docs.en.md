@@ -5,7 +5,7 @@ visible: true
 
 ### Order registration
 
-Payment registration, in the response, the names of the formed documents for the order are sent. Dispatched immediately after booking an order in Nemo.travel
+Payment registration. In the response, the names of the formed documents for the order are sent. Dispatched immediately after booking an order in Nemo.travel
 
 #### Request
 
