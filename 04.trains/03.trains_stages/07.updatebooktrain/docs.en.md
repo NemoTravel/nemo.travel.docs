@@ -1,8 +1,10 @@
 ---
-title: 'Receiving Current Reservation Info'
+title: UpdateBook
 ---
 
 ### UpdateBook
+
+Receiving current booking info.
 
 #### Request
 
