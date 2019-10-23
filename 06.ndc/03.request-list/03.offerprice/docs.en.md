@@ -3,7 +3,8 @@ title: OfferPrice
 ---
 
 ### OfferPrice
-Updating the offer received at the search stage.
+
+Update of the offer received at the search stage.
 
 #### Request
 
