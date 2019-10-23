@@ -1,8 +1,10 @@
 ---
-title: 'Booking Сonfirmation'
+title: ConfirmBook
 ---
 
 ### ConfirmBook
+
+Booking confirmation.
 
 #### Request
 
