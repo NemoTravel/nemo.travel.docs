@@ -1,8 +1,10 @@
 ---
-title: 'GetCitySearchResult Request'
+title: GetCitySearchResult
 ---
 
 ### GetCitySearchResult
+
+Getting the search results.
 
 #### Request
 
