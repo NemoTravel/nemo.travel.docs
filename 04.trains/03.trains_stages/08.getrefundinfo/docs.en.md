@@ -4,7 +4,7 @@ title: GetRefundInfo
 
 ### GetRefundInfo
 
-Getting additional information on the refund before tickets giveaway.
+Getting additional information on the refund before tickets handover.
 
 #### Request
 
