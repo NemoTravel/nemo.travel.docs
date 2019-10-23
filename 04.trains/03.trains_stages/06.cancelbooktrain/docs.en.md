@@ -1,8 +1,10 @@
 ---
-title: 'Cancelling Train Seats Booking'
+title: CancelBook
 ---
 
 ### CancelBook
+
+Cancelling train seats booking
 
 #### Request
 
