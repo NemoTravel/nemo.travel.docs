@@ -1,5 +1,5 @@
 ---
-title: 'Train Search'
+title: SearchTrains
 ---
 
 ### SearchTrains
