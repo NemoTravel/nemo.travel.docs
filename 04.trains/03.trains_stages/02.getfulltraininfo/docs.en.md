@@ -1,8 +1,10 @@
 ---
-title: 'Getting the Complete Information on a Particular Train'
+title: GetFullTrainInfo
 ---
 
 ### GetFullTrainInfo
+
+Getting the complete information on a particular train.
 
 #### Request
 -  **TID** - Train ID. Data type - 64-bit integer.
