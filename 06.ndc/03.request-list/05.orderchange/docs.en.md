@@ -4,7 +4,7 @@ title: OrderChange
 
 ### OrderChange
 
-Used to make changes in the order.
+Making changes in the order.
 
 #### Request
 -  **OrderChangeRQ** - request to make changes in the order. The required attribute Version = "17.2" contains the version of the NDC protocol. Data type - custom.
