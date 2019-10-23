@@ -1,5 +1,5 @@
 ---
-title: 'Запрос Book'
+title: Book
 ---
 
 ### Book
