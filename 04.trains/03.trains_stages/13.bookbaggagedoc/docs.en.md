@@ -1,10 +1,10 @@
 ---
-title: 'Baggage Booking'
+title: BookBaggageDoc
 ---
 
 ### BookBaggageDoc
 
-Supported only for UZD. 
+Baggage booking. Supported only for UZD. 
 
 #### Request
 
