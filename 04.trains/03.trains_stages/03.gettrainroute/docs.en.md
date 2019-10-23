@@ -1,8 +1,10 @@
 ---
-title: 'Getting Information on the Route of a Particular Train'
+title: GetTrainRoute
 ---
 
 ### GetTrainRoute
+
+Getting information on the route of a particular train.
 
 #### Request
 
