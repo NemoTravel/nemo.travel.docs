@@ -1,10 +1,10 @@
 ---
-title: 'ER (Electronic Registration) Status Change'
+title: ChangeERStatus
 ---
 
 ### ChangeERStatus
 
-The request is relevant only for UFS.
+ER (Electronic Registration) status change. The request is relevant only for UFS.
 
 #### Request
 
