@@ -1,8 +1,10 @@
 ---
-title: 'Train Seats Booking'
+title: BookTrain
 ---
 
 ### BookTrain
+
+Train seats booking.
 
 #### Request
 
