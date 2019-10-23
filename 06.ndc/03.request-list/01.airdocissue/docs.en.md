@@ -4,7 +4,7 @@ title: AirDocIssue
 
 ### AirDocIssue
 
-Ticketing.
+Ticket issuance.
 
 #### Request
 -  **AirDocIssueRQ** - ticketing request. Data type - custom.
