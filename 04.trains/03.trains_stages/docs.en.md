@@ -10,8 +10,8 @@ title: 'Stages of Interaction with the Railway Server'
 -   [Cancelling train seats booking](/trains/trains_stages/cancelbooktrain) - CancelBook;
 -   [Receiving current booking info](/trains/trains_stages/updatebooktrain) - UpdateBook;
 -   [Getting additional information on the refund before tickets handover](/trains/trains_stages/getrefundinfo) - GetRefundInfo;
--   [Ticket refund in a pecific Reservation](/trains/trains_stages/refundbook) - RefundBook;
--   [Getting Itinerary Receipt for a Specific Reservation](/trains/trains_stages/getticketblank) - GetTicketBlank;
--   [Changing the Status of the ER (Electronic Registration)](/trains/trains_stages/changeerstatus) - ChangeERStatus;
--   [Return Tickets Booking](/trains/trains_stages/bookreturntrain);
--   [Baggage Booking](/trains/trains_stages/bookbaggagedoc) - BookBaggageDoc.
+-   [Ticket refund in a specific booking](/trains/trains_stages/refundbook) - RefundBook;
+-   [Getting itinerary receipt for a specific booking](/trains/trains_stages/getticketblank) - GetTicketBlank;
+-   [ER (Electronic Registration) status change](/trains/trains_stages/changeerstatus) - ChangeERStatus;
+-   [Return tickets booking](/trains/trains_stages/bookreturntrain);
+-   [Baggage booking](/trains/trains_stages/bookbaggagedoc) - BookBaggageDoc.
