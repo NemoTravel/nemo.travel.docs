@@ -3,7 +3,8 @@ title: AirShopping
 ---
 
 ### AirShopping
-Performs offers search. The response to the request is a grouped distribution. In order to optimize your handler for grouped distribution, it is recommended to bypass its’ elements in 2 steps. First, you bypass the elements of the DataLists group and form a key-value dictionary, where:
+
+Offers search. The response to the request is a grouped distribution. In order to optimize your handler for grouped distribution, it is recommended to bypass its’ elements in 2 steps. First, you bypass the elements of the DataLists group and form a key-value dictionary, where:
 - key - PassengerID, element - PassengerList;
 - key - BaggageAllowanceID, element - BaggageAllowanceList;
 - key - SegmentKey, element - FlightSegmentList;
