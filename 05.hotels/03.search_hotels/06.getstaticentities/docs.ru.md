@@ -1,5 +1,5 @@
 ---
-title: 'Запрос GetStaticEntities'
+title: GetStaticEntities
 ---
 
 ### GetStaticEntities

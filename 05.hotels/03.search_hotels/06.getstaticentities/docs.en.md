@@ -1,5 +1,5 @@
 ---
-title: 'GetStaticEntities Request'
+title: GetStaticEntities
 ---
 
 ### GetStaticEntities
