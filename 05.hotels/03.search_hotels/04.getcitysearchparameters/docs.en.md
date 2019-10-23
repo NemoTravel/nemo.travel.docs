@@ -1,5 +1,5 @@
 ---
-title: 'GetCitySearchParameters Request'
+title: GetCitySearchParameters
 ---
 
 ### GetCitySearchParameters

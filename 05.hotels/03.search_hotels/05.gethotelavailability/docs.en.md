@@ -1,5 +1,5 @@
 ---
-title: 'GetHotelAvailability Request'
+title: GetHotelAvailability
 ---
 
 ### GetHotelAvailability

@@ -1,5 +1,5 @@
 ---
-title: 'Запрос GetCitySearchParameters'
+title: GetCitySearchParameters
 ---
 
 ### GetCitySearchParameters
