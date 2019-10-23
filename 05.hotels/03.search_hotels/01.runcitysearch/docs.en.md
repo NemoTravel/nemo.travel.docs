@@ -1,5 +1,5 @@
 ---
-title: 'RunCitySearch Request'
+title: RunCitySearch
 ---
 
 ### RunCitySearch

@@ -1,5 +1,5 @@
 ---
-title: 'Запрос CitySearch'
+title: CitySearch
 ---
 
 ### CitySearch
