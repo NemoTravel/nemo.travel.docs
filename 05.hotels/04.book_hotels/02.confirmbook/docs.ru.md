@@ -1,5 +1,5 @@
 ---
-title: 'Запрос ConfirmBook'
+title: ConfirmBook
 ---
 
 ### ConfirmBook

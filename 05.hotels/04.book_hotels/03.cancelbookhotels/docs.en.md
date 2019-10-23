@@ -1,5 +1,5 @@
 ---
-title: 'CancelBook Request'
+title: CancelBook
 ---
 
 ### CancelBook

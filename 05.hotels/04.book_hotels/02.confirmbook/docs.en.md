@@ -1,5 +1,5 @@
 ---
-title: 'ConfirmBook Request'
+title: ConfirmBook
 ---
 
 ### ConfirmBook
