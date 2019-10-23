@@ -1,5 +1,5 @@
 ---
-title: 'Запрос GetHotelAvailability'
+title: GetHotelAvailability
 ---
 
 ### GetHotelAvailability
