@@ -3,7 +3,8 @@ title: AirDocIssue
 ---
 
 ### AirDocIssue
-Performs the ticketing.
+
+Ticketing.
 
 #### Request
 -  **AirDocIssueRQ** - ticketing request. Data type - custom.
