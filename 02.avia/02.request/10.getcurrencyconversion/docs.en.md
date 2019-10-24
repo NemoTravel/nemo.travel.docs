@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-### Get currency rate from the GDS (GetCurrencyConversion)
+### GetCurrencyConversion
 
 Getting currency rates from GDS.
 

@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-### Получение курса валюты из GDS (GetCurrencyConversion)
+### GetCurrencyConversion
 
 Получение курсов валют из GDS.
 
