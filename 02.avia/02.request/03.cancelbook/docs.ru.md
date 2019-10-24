@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-### Отмена брони (CancelBook)
+### CancelBook
 
 Отмена брони перелёта.
 
