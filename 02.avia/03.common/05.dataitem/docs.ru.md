@@ -116,6 +116,7 @@ taxonomy:
     -   **Travelfusion**;
     -   **Mystifly**;
     -   **GalileoUAPI**.
+    -   **SolringNDC**.
 -   **SourceInfo.Environment** — тип среды в системе поставщика. Тип данных — перечисление, возможные значения:
     -   **TEST** — тестовая среда;
     -   **CERT** — среда сертификации;
