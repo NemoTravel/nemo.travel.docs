@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-### (GetBookHistory)
+### GetBookHistory
 
 Getting the history of booking modifications from GDS.
 
