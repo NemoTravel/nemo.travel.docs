@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-### Running the Terminal Command (HostCommand)
+### HostCommand
 
 Execution of a terminal command in the GDS.
 
