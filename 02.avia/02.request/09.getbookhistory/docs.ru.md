@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-### Получение истории брони из GDS (GetBookHistory)
+### GetBookHistory
 
 Получение истории изменений брони из GDS.
 
