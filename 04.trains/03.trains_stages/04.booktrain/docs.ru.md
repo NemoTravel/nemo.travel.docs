@@ -311,16 +311,16 @@ title: BookTrain
    - MotherWithBaby - для матери и ребенка
    - WithChildren - для пассажиров с детьми
 -   **Car.PossibleAnimals** - Признак возможности провоза животных в вагоне. Тип данных - булев. 
-<!---   **Car.Schema** - Схема вагона. Тип данных - 
+-   **Car.Schema** - Схема вагона. Тип данных - строка.
 -   **DelayedPaymentIsAvail** - Признак доступности отсроченного платежа. Тип данных - булев.
--   **GenderSeats** - 
+<!--- -   **GenderSeats** - --->
 -   **IsCarDynamicPricing** - Признак динамического ценообразования. Тип данных - булев. 
 -   **LoyaltyCards** -  Контейнер с информацией о доступных картах лояльности. Тип данных - сложный.
 -   **LoyaltyCards.LoyaltyCard** - доступные карты лояльности. Пример:
 	-	**RZHDBonusSavePoints** 
 	-	**RZHDBonusDiscount** 
--   **PlacesCountInPrice** - 
--   **RoadType** - 
+<!--- -   **PlacesCountInPrice** - --->
+<!--- -   **RoadType** - --->
 -   **TariffRequired** - Булевый 
 -   **Tariffs** - Контейнер с информацией о тарифах. Тип данных - сложный. 
 -   **Tariffs.Tariff** - Контейнер с информацией о тарифе. Тип данных - сложный.
@@ -335,28 +335,26 @@ title: BookTrain
 	-	adult
 	-	child
 	-	infant
--   **DepStationFromSearch** - 
+<!--- -   **DepStationFromSearch** - --->
 -   **DepStationName** - Полное название станции прибытия. Тип данных - строка.
 -   **DepTimezoneCode** - временная зона станции прибытия. Тип данных - строка.. ??
--   **EndDate** -  Дата прибытия. Тип данных - строка.. ??
--   **Environment** -  
+-   **EndDate** -  Дата прибытия. Тип данных - строка.
+<!--- -   **Environment** -  --->
 -   **IsEticketPrintPoint** - Признак наличия электронного билета. Тип данных - булев.
--   **IsSuburbanTrain** - 
+<!--- -   **IsSuburbanTrain** - 
 -   **LocalBeginDate** - 
 -   **LocalEndDate** - 
 -   **PrintPoint** - 
 -   **PrintPoint.Direction** - 
 -   **PrintPoint.Info** - 
--   **RequisitesId** - 
+-   **RequisitesId** - --->
 -   **TrainEndPointName** - Сокращённое название станции назначения. Тип данных - строка. 
 -   **TrainStartPointName** -  Сокращённое название станции отправления. Тип данных - строка. 
 -   **TripTime** - Время в пути. Тип данных - строка в формате.. 
 -   **WebService** - 
 -   **OwnerID** -  ID брони. Тип данных - строка.
--   **AvailableTariffs** - 
--   **AllowSeatsWithAnimals** - 
--    --->
-
+<!--- -   **AvailableTariffs** - 
+-   **AllowSeatsWithAnimals** - --->
 
 
 ##### Пример ответа (XML)
