@@ -285,8 +285,8 @@ title: BookTrain
 -   **Car.IsCarERegister** - Признак наличия электронной регистрации / электронного билета в вагоне. Тип данных - булев (может быть null).
 -   **Car.IsThrough** - Признак беспересадочного вагона. Актуальная информация получается в ответе на запрос полной информации о поезде. Тип данных - булев.
 -   **Car.Number** - Номер вагона. Тип данных - строка.
--   **Car.BethClothesSelectionInd** - 
--   **Car.ERChangeAllowedDuringBooking** - 
+<!--- -   **Car.BethClothesSelectionInd** - 
+-   **Car.ERChangeAllowedDuringBooking** - --->
 -   **Car.HasNonRefundableTariffs** - признак не возвратного тарифа. Тип данных - булев.
 -   **Car.PlacePrice** - контейнер для информации о цене мест определенного типа в вагоне. Тип данных - сложный.
 -   **Car.PlacePrice.Amount** - цена за место. Тип данных - дробное число.
@@ -326,7 +326,7 @@ title: BookTrain
 -   **Tariffs.Tariff** - Контейнер с информацией о тарифе. Тип данных - сложный.
 -   **Tariffs.Tariff.AgeFrom** - Возраст, от которого действует данный тариф. Тип данных - целое 32-х-битное число.
 -	**Tariffs.Tariff.AgeTo** - Возраст, до которого действует данный тариф. Тип данных - целое 32-х-битное число.
--   **Tariffs.Tariff.AgeFromOffset**
+<!--- -   **Tariffs.Tariff.AgeFromOffset**--->
 -   **Tariffs.Tariff.Code** -  Код тарифа. Тип данных - целое 32-х-битное число.
 -   **Tariffs.Tariff.Description** - Описание тарифа. Тип данных - строка.
 -   **Tariffs.Tariff.Name** - Название тарифа. Тип данных - строка.
@@ -351,7 +351,7 @@ title: BookTrain
 -   **TrainEndPointName** - Сокращённое название станции назначения. Тип данных - строка. 
 -   **TrainStartPointName** -  Сокращённое название станции отправления. Тип данных - строка. 
 -   **TripTime** - Время в пути. Тип данных - строка в формате.. 
--   **WebService** - 
+<!--- -   **WebService** - --->
 -   **OwnerID** -  ID брони. Тип данных - строка.
 <!--- -   **AvailableTariffs** - 
 -   **AllowSeatsWithAnimals** - --->
