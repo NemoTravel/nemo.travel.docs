@@ -219,17 +219,17 @@ title: AirShopping
     -   **ADT** - взрослый;
     -   **СHD** - ребёнок;
     -   **INF** - младенец.
--   **DataLists.BaggageAllowanceList** - информация о перевозке багажа. Тип данных - сложный.
--	**BaggageAllowanceList.BaggageAllowance** - атрибут BaggageAllowanceID="BAG1"(префикс BAG обязателен) содержит уникальный идентификатор багажа. Тип данных - сложный.
--	**BaggageAllowanceList.BaggageAllowance.BaggageCategory** - элемент всегда содержит значение "Checked".
--	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription** - возможны два типа зарегистрированного багажа: Piece и Weight. 
+-   **DataLists.BaggageAllowanceList** - информация о перевозке багажа, ручной клади. Тип данных - сложный.
+-	**BaggageAllowanceList.BaggageAllowance** - описывает детали зарегистрированного багажа или ручной клади. Атрибут BaggageAllowanceID="BAG1"(префикс BAG обязателен) содержит уникальный идентификатор. Тип данных элемента - сложный.
+-	**BaggageAllowanceList.BaggageAllowance.BaggageCategory** - возвращает одну из двух категорий: Checked - багаж, CarryOn - ручная кладь.
+-	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription** - возможны два типа: Piece и Weight. 
 -	**В случае Piece возвращаются следующие элементы:**
- -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance**
- -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.ApplicableParty** - элемент по умолчанию содержит значение Traveler. Означает, что багаж соответствует одному пассажиру.
- -  **BaggageAllowanceList.BaggageAllowance.PieceAllowance.TotalQuantity** - количество сумок. Тип данных - целое число.
+ -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance** - возвращает максимальное количество каждого типа багажа. Тип данных - сложный.
+ -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.ApplicableParty** - всегда содержит значение Traveler (соответствует одному пассажиру).
+ -  **BaggageAllowanceList.BaggageAllowance.PieceAllowance.TotalQuantity** - количество. Тип данных - целое число.
  -	**BaggageAllowanceList.BaggageAllowance.PieceAllowance.PieceMeasurements** - атрибут Quantity="1" элемента содержит информацию о количестве сумок, тип данных - целое число.
 -	**В случае Weight возвращаются элементы:**
- -	**BaggageAllowanceList.BaggageAllowance.WeightAllowance** - сведения о максимальном весе багажа. Тип данных - сложный.
+ -	**BaggageAllowanceList.BaggageAllowance.WeightAllowance** - норма веса багажа. Тип данных - сложный.
  -	**BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.Value** - максимальный вес багажа. Тип данных - целое положительное число.
  -	**BaggageAllowanceList.BaggageAllowance.WeightAllowance.MaximumWeight.UOM** - единица измерения для приведенного выше значения. Тип данных - строка.
 -	**Атрибут Concept элемента AllowanceDescription определяет меру багажа, возможные значения:**
@@ -239,10 +239,10 @@ title: AirShopping
 	-   **N** - Number of pieces;
 	-   **S** - Size;
 	-   **W** - Weight.
--	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.ApplicableParty** - элемент по умолчанию содержит значение Traveler. Означает, что багаж соответствует одному пассажиру.
--	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions** - описание багажа. Тип данных - сложный.
+-	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.ApplicableParty** - всегда содержит значение Traveler (соответствует одному пассажиру).
+-	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions** - описание. Тип данных - сложный.
 -	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions.Description**
--	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions.Description.Text** - по умолчанию содержит значение "Free baggage". Тип данных - строка.
+-	**BaggageAllowanceList.BaggageAllowance.AllowanceDescription.Descriptions.Description.Text** - содержит "Free baggage" для багажа, либо "Carry-on baggage". Тип данных - строка.
 -	**DataLists.FlightSegmentList** - содержит сведения о сегментах перелета. Тип данных - сложный.
 -	**FlightSegmentList.FlightSegment** - детали сегмента перелёта. Тип данных - сложный. Включает два атрибута:
 -	-	**SegmentKey** - уникальный идентификатор сегмента, обязательный префикс SEG.
@@ -283,10 +283,10 @@ title: AirShopping
 -	**PriceClass.PriceClass.ClassOfService** - сведения о классе бронирования. Тип данных - сложный.
 -	**PriceClass.PriceClass.ClassOfService.Code** - литера класса бронирования. Содержит атрибут SeatsLeft="9", информирующий о количестве свободных мест.
 -	**PriceClass.PriceClass.ClassOfService.MarketingName** - название класса обслуживания. Атрибут CabinDesignator="Y" описывает код класса обслуживания. Тип данных - строка.
--	**DataLists.ServiceDefinitionList** - содержит описание и характеристики услуг не являющихся перелётом. Тип данных - сложный
+-	**DataLists.ServiceDefinitionList** - содержит описание и характеристики услуг, не являющихся перелётом. Тип данных - сложный
 -	**ServiceDefinitionList.ServiceDefinition** - атрибут ServiceDefinitionID="SVD1" (префикс SVD обязателен) уникальный идентификатор описания услуги.
--	**ServiceDefinitionList.ServiceDefinition.Name** - наименование услуги. Например: Free baggage. Тип данных - строка.
--	**ServiceDefinitionList.ServiceDefinition.BaggageAllowanceRef** - ссылка на описание более детальной информации о багаже. 
+-	**ServiceDefinitionList.ServiceDefinition.Name** - наименование услуги. Например: Free baggage, Carry-on baggage. Тип данных - строка.
+-	**ServiceDefinitionList.ServiceDefinition.BaggageAllowanceRef** - ссылка на описание более детальной информации. 
 -	**ServiceDefinitionList.ServiceDefinition.Descriptions** - сведения об услуге. Тип данных - сложный.
 -	**ServiceDefinitionList.ServiceDefinition.Descriptions.Description** - сведения об услуге. Тип данных - сложный.
 -	**ServiceDefinitionList.ServiceDefinition.Descriptions.Description.Text** - описание услуги. Тип данных — строка.
