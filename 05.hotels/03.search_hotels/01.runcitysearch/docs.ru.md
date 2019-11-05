@@ -25,7 +25,7 @@ title: RunCitySearch
 -   **Rooms.DiscountID** - ID скидки. Тип данных - строка. 
 -   **GetHotelsOnRequest** - Признак включения отелей по запросу в результаты поиска. Тип данных - булев. 
 -   **CityInnerId** - код города в системе Nemo. Тип данных - строка.
--   **MaxKmDistanceFromCityCenter** - расстояние до центра города в километрах. Тип данных - double. 
+-   **MaxKmDistanceFromCityCenter** - расстояние от центра города в километрах. Тип данных - double. 
 -   **LoyaltyCard** - конетейнер с данными карты лояльности. Тип данных - сложный. 
 -   **LoyaltyCard.CompanyCode** - код компании. Тип данных - строка. 
 -   **LoyaltyCard.Number** - номер карты лояльности. Тип данных - строка.
@@ -59,6 +59,9 @@ title: RunCitySearch
                   </hot:Room>
                </hot:Rooms>
                <hot:CurrencyCode>EUR</hot:CurrencyCode>
+               <hot:ClientNationality>RU</hot:ClientNationality>
+               <hot:CityInnerId>13492</hot:CityInnerId>
+               <hot:MaxKmDistanceFromCityCenter>10</hot:MaxKmDistanceFromCityCenter>
             </stl:RequestBody>
          </tem:Request>
       </tem:RunCitySearch>
