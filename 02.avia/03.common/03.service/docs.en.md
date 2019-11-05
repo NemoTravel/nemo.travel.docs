@@ -31,9 +31,19 @@ Each of the base and ancillary services is inherited from the BaseService class 
         -   **UnremovedVoidedTicketElements** - specific for Amadeus
         -   **PaidBook** - PNR is paid through the Sirena payment gateway but has not yet been ticketed
         -   **FailedToActualizePrice** - failed to get the current price for the booking
-        -   **UnconfirmedInfant** - unconfirmed baby, manual processing is required.
+        -   **TicketingFailed**
+        -   **UnconfirmedInfant** - unconfirmed baby, manual processing is required
+        -   **DuplicateBooking**
+        -   **UnconfirmedBooking**
         -   **UnconfirmedLoyaltyCard** - unconfirmed loyalty card.
-        -   **NoAirlineLocator** - there is no locator from the airline.
+        -   **NeedRefundRSVR**
+        -   **FailedRefundRSVR**
+        -   **FailedExchange**
+        -   **AncillariesWithoutPrice**
+        -   **NoAirlineLocator** - there is no locator from the airline
+        -   **TicketMaskDataMismatch**
+        -   **ExchangedTicketWithoutNew**
+        -   **SupplierDoNotKnowEdState**
 
 >>>> If there is the NoAirlineLocator status, ticketing is impossible. To perform ticketing successfully, you need to repeat [UpdateBook](/avia/request/updatebook) request several times until this status dissapears. NoAirlineLocator status appears because the airline sends the locator some time after a booking is created.
 
