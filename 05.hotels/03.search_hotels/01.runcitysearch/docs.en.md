@@ -25,7 +25,7 @@ After sending the request the results are given separately through the [GetCityS
 -   **Rooms.DiscountID** - ID of the discount. Data type - string.
 -   **GetHotelsOnRequest** - attribute of requested hotels being included in the search results. Data type - boolean.
 -   **CityInnerId** - city ID in the Nemo system. Data type - string.
--   **MaxKmDistanceFromCityCenter** - distance to the city centre in kilometers. Data type - double. 
+-   **MaxKmDistanceFromCityCenter** - distance from the city centre in kilometers. Data type - double. 
 -   **LoyaltyCard** - container with the loyalty card data. Data type - custom. 
 -   **LoyaltyCard.CompanyCode** - company code. Data type - string.
 -   **LoyaltyCard.Number** - loyalty card number. Data type - string.
@@ -60,6 +60,9 @@ After sending the request the results are given separately through the [GetCityS
                   </hot:Room>
                </hot:Rooms>
                <hot:CurrencyCode>EUR</hot:CurrencyCode>
+               <hot:ClientNationality>RU</hot:ClientNationality>
+               <hot:CityInnerId>13492</hot:CityInnerId>
+               <hot:MaxKmDistanceFromCityCenter>10</hot:MaxKmDistanceFromCityCenter>
             </stl:RequestBody>
          </tem:Request>
       </tem:RunCitySearch>
