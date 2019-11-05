@@ -161,8 +161,7 @@ To store different booking content.
     - **Voided**
     - **Refuned**
     - **Exchanged**
-    - **SupplierDoNotKnowEdState**
-
+    - **SupplierDoNotKnowEdState** - Z ticket status returned from the supplier, currently only relevant for the Travelport airline content provider.
 - **ElectronicDocument.ServiceType** - type of service provided by this ED. Data type - enumeration, possible values:
     -   **Flight**;
     -   **Ancillary**;
