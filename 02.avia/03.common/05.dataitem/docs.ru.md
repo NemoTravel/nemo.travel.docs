@@ -163,7 +163,8 @@ taxonomy:
     -   **Used**;
     -   **Voided**;
     -   **Refuned**;
-    -   **Exchanged**.
+    -   **Exchanged**;
+    -   **SupplierDoNotKnowEdState**.
 -   **ElectronicDocument.ServiceType** — тип услуги, предоставляемой по данному электронному документу. Тип данных — перечисление, возможные значения:
     -   **Flight**;
     -   **Ancillary**;
