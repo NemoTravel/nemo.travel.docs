@@ -161,6 +161,8 @@ To store different booking content.
     - **Voided**
     - **Refuned**
     - **Exchanged**
+    - **SupplierDoNotKnowEdState**
+
 - **ElectronicDocument.ServiceType** - type of service provided by this ED. Data type - enumeration, possible values:
     -   **Flight**;
     -   **Ancillary**;
