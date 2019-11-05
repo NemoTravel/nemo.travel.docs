@@ -25,25 +25,25 @@ Each of the base and ancillary services is inherited from the BaseService class 
 	- **SubStatus.Status** - list of sub-statuses clarifying the current status of the service. Data type - enumeration, possible values:
         -   **InvalidSegmentStatus**
         -   **SegmentStatusForManualConfirmation** - appears in cases when for some reason it was not possible to automatically confirm segments (meaning TK/KK statuses)
-        -   **HaveNotStoredTickets** - active ticket issued is not in the PNR
-        -   **NotActualTicketStatus** - one of the tickets in the PNR has the irrelevant status - basically it is specific for glitches of the test environment of different GDS and Galileo after voiding
-        -   **NoValidFare** - PNR in the GDS has no active and valid price (GDS Galileo's specifics)
-        -   **UnremovedVoidedTicketElements** - specific for Amadeus
-        -   **PaidBook** - PNR is paid through the Sirena payment gateway but has not yet been ticketed
+        -   **HaveNotStoredTickets** — active ticket issued is not in the PNR
+        -   **NotActualTicketStatus** — one of the tickets in the PNR has the irrelevant status - basically it is specific for glitches of the test environment of different GDS and Galileo after voiding
+        -   **NoValidFare** — PNR in the GDS has no active and valid price (GDS Galileo's specifics)
+        -   **UnremovedVoidedTicketElements** — specific for Amadeus
+        -   **PaidBook** — PNR is paid through the Sirena payment gateway but has not yet been ticketed
         -   **FailedToActualizePrice** - failed to get the current price for the booking
-        -   **TicketingFailed**
-        -   **UnconfirmedInfant** - unconfirmed baby, manual processing is required
-        -   **DuplicateBooking**
-        -   **UnconfirmedBooking**
+        -   **TicketingFailed** — error executing Ticket request for Travelfusion air content provider;
+        -   **UnconfirmedInfant** — unconfirmed infant, manual processing is required
+        -   **DuplicateBooking** — there is booking duplicate in the supplier's system. Relevant only for Travelfusion air content provider;
+        -   **UnconfirmedBooking** — failed to get confirmed booking status. Relevant only for Travelfusion air content provider;
         -   **UnconfirmedLoyaltyCard** - unconfirmed loyalty card.
-        -   **NeedRefundRSVR**
-        -   **FailedRefundRSVR**
-        -   **FailedExchange**
-        -   **AncillariesWithoutPrice**
+        -   **NeedRefundRSVR** — it is required to refund RSVR EMD;
+        -   **FailedRefundRSVR** — error refunding RSVR EMD;
+        -   **FailedExchange** — error while exchanging tickets;
+        -   **AncillariesWithoutPrice** — there are ancillary services in the booking for which there are no prices;
         -   **NoAirlineLocator** - there is no locator from the airline
-        -   **TicketMaskDataMismatch**
-        -   **ExchangedTicketWithoutNew**
-        -   **SupplierDoNotKnowEdState**
+        -   **TicketMaskDataMismatch** — there are mismatches between data in PNR and ticket masks;
+        -   **ExchangedTicketWithoutNew** — ticket exchange was executed, but the information on the new ticket wasn't received;
+        -   **SupplierDoNotKnowEdState** — Z ticket status returned from the supplier, currently only relevant for the Travelport airline content provider.
 
 >>>> If there is the NoAirlineLocator status, ticketing is impossible. To perform ticketing successfully, you need to repeat [UpdateBook](/avia/request/updatebook) request several times until this status dissapears. NoAirlineLocator status appears because the airline sends the locator some time after a booking is created.
 
