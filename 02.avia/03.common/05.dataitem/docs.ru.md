@@ -164,7 +164,7 @@ taxonomy:
     -   **Voided**;
     -   **Refuned**;
     -   **Exchanged**;
-    -   **SupplierDoNotKnowEdState**.
+    -   **SupplierDoNotKnowEdState** - от поставщика вернулся статус Z для билета, в данный момент актуально только для поставщика авиа контента Travelport.
 -   **ElectronicDocument.ServiceType** — тип услуги, предоставляемой по данному электронному документу. Тип данных — перечисление, возможные значения:
     -   **Flight**;
     -   **Ancillary**;
