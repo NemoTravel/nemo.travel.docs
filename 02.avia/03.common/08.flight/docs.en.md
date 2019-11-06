@@ -64,6 +64,22 @@ Flight representation format 1.1.
 -   **Segment.BookingClass.BookingClassCode** - flight class code. Data type - string.
 -   **Segment.BookingClass.FreeSeatCount** - number of available seats for this flight class. Data type - 32-bit integer.
 -   **Segment.BookingClass.MealType** - available type of meal for this flight class. Data type - string.
+-   **Segment.CouponStatus** — status of the coupon. Returned when the [GetEDData](/avia/request/geteddata) request is executed. Data type - enumeration, possible values:
+    -  **Open** — open for use;
+<!--    -  **Used** - --> 
+    -  **Void** — cancelled;
+    -  **CheckIn** — premium economy;
+    -  **Printed** — printed;
+    -  **Refunded** — refunded;
+    -  **Exchanged** — exchanged or reissued;
+<!--    -  **Registered** — --> 
+    -  **Landed** — landed;
+    -  **Stoped** — stopped;
+<!--    -  **PaperDocument** — -->
+    -  **Unavailable** — unavailable for use;
+<!--    -  **ExchangedToPaper** — -->
+    -  **Closed** — closed;
+    -  **AirportControl** — control.
 -   **Flight.PriceInfo** - information about the prices for this flight. Data type - array.
 -   **Flight.PriceInfo.Price** - information about the specific price for a given flight. Data type - array.
 -   **Flight.PriceInfo.Price.ID** - sequence number of the price within the flight. Data type - 32-bit integer.
