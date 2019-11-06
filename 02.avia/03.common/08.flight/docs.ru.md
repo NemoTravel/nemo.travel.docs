@@ -74,7 +74,7 @@ taxonomy:
 <!--    -  **Registered** — --> 
     -  **Landed** — посадка произведена;
     -  **Stoped** — приостановлен;
-    -  **PaperDocument** —
+<!--    -  **PaperDocument** — -->
     -  **Unavailable** — недоступен для использования;
 <!--    -  **ExchangedToPaper** — -->
     -  **Closed** — закрыт;
