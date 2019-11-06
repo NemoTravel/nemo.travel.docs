@@ -65,18 +65,18 @@ taxonomy:
 -   **Segment.BookingClass.MealType** — доступный тип питания на данном классе перелёта. Тип данных — строка.
 -   **Segment.CouponStatus** — статус купона. Вовзращается при запросе [GetEDData](/avia/request/geteddata). Тип данных — перечисление. Возможные значения:
     -  **Open** — открыт для использования;
-    -  **Used** - 
+<!--    -  **Used** - --> 
     -  **Void** — аннулирован;
     -  **CheckIn** — премиум эконом;
     -  **Printed** — распечатан;
     -  **Refunded** — произведен возврат;
     -  **Exchanged** — обменен/переоформлен;
-    -  **Registered** — 
+<!--    -  **Registered** — --> 
     -  **Landed** — посадка произведена;
     -  **Stoped** — приостановлен;
     -  **PaperDocument** —
     -  **Unavailable** — недоступен для использования;
-    -  **ExchangedToPaper** —
+<!--    -  **ExchangedToPaper** — -->
     -  **Closed** — закрыт;
     -  **AirportControl** — контроль.
 -   **Flight.PriceInfo** — информация о ценах для данного перелёта. Тип данных — сложный.
