@@ -66,18 +66,18 @@ Flight representation format 1.1.
 -   **Segment.BookingClass.MealType** - available type of meal for this flight class. Data type - string.
 -   **Segment.CouponStatus** — status of the coupon. Returned when the [GetEDData](/avia/request/geteddata) request is executed. Data type - enumeration, possible values:
     -  **Open** — open for use;
-<!--    -  **Used** - --> 
+    -  **Used** — used; 
     -  **Void** — cancelled;
-    -  **CheckIn** — premium economy;
+    -  **CheckIn** — registration complete;
     -  **Printed** — printed;
     -  **Refunded** — refunded;
     -  **Exchanged** — exchanged or reissued;
 <!--    -  **Registered** — --> 
     -  **Landed** — landed;
     -  **Stoped** — stopped;
-<!--    -  **PaperDocument** — -->
+    -  **PaperDocument** — paper ticket;
     -  **Unavailable** — unavailable for use;
-<!--    -  **ExchangedToPaper** — -->
+    -  **ExchangedToPaper** — replaced for paper document;
     -  **Closed** — closed;
     -  **AirportControl** — control.
 -   **Flight.PriceInfo** - information about the prices for this flight. Data type - array.
