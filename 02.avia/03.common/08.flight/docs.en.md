@@ -72,7 +72,7 @@ Flight representation format 1.1.
     -  **Printed** — printed;
     -  **Refunded** — refunded;
     -  **Exchanged** — exchanged or reissued;
-<!--    -  **Registered** — --> 
+    -  **Registered** — registered, not yet confirmed; 
     -  **Landed** — landed;
     -  **Stoped** — stopped;
     -  **PaperDocument** — paper ticket;
