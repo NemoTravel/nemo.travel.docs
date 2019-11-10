@@ -246,9 +246,15 @@ title: BookTrain
 -   **Passengers.BookedPerson.Ticket.TicketNumber** - Номер билета. Тип данных - строка.
 -   **Passengers.BookedPerson.Ticket.IsERegistered** - Статус электронной регистрации (ЭР) билета. true - включена ЭР, false - ЭР выключена. Тип данных - булев.
 -   **Passengers.BookedPerson.Ticket.BlankID** - Идентификатор бланка в системе поставщика. Тип данных - строка.
+-   **Passengers.BookedPerson.Ticket.Charge** - контейнер с информацией о сборе агенства. Тип данных - сложный.
+-   **Passengers.BookedPerson.Ticket.Charge.Amount** - величина агентского сбора. 
+-   **Passengers.BookedPerson.Ticket.Charge.Currency** - валюта агентского сбора. Тип данных - строка.
 -   **Passengers.BookedPerson.Ticket.Status** - Статус билета. Может отличаться от общего статуса заказа. Тип данных - перечисление. Возможные значения аналогичны параметру Status.
 -   **Passengers.BookedPerson.Ticket.IsPrinted** - Признак распечатки билета. Тип данных - булев.
 -   **Passengers.BookedPerson.Ticket.TariffType** - Тип тарифа, ПОЛНЫЙ и тп. - описание из GDS. Тип данных - строка.
+-   **Passengers.BookedPerson.Ticket.RefundCharge** - контейнер с информацией о размере сбора за возвра билета. Тип данных - сложный.
+-   **Passengers.BookedPerson.Ticket.RefundCharge.Amount** - размер сбора за созврат билета.
+-   **Passengers.BookedPerson.Ticket.RefundCharge.Currency** - информация о валюте сбора за возврат. Тип данных - строка.
 -   **Passengers.BookedPerson.Ticket.RefundCode** - ID транзакции возврата. Тип данных - строка.
 -   **Passengers.BookedPerson.Ticket.ReturnTrainRefundCode** -Для поезда обратно, ID транзакции возврата. Аналогичен параметру BookedPerson.Ticket.RefundCode.
 -   **Passengers.BookedPerson.Ticket.SeatNum** - Номер места в вагоне. Тип данных - строка.
