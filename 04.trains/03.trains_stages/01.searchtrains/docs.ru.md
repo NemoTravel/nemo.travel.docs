@@ -18,6 +18,7 @@ title: SearchTrains
     -   **KTZ** Казахстанские железные дороги
     -   **UZHD** ж/д Украины (Другая версия подключения)
 -   **Environment** - Тип среды. Возможные значения: TEST, CERT, PROD. Необязательный, если не указан, то при выборе пакетов реквизитов для поиска не учитывается.
+-   **ForwardTrainID** - используется для поиска поезда "обратно", когда поезд "туда" уже найден. Поиск поезда "обратно" будет осуществляться по тем же реквизитам, по которым был найден поезд "туда" (ID реквизитов, поставщик, среда). Тип данных - целое 64-битное число.
 -   **TimePeriod** - Временной диапазон отправления/прибытия поезда. Тип данных - сложный.
 -   **TimePeriod.Type** - Тип временного диапазона. Тип данных - перечисление. Возможные значения:
     -   **Departure** - На отправление
@@ -268,4 +269,27 @@ title: SearchTrains
         </Train>
     </Trains>
 </ResponseBody>
-    ```
+```
+##### Пример запроса поиска "обратно" (XML)
+Когда поезд "туда" уже найден.
+```xml
+      <SearchTrains>
+    <Request>
+        <RequestBody>
+            <ArrPoint>2200002</ArrPoint>
+            <Date>03.07.2019</Date>
+            <DepPoint>2214000</DepPoint>
+            <ForwardTrainID>565118</ForwardTrainID>
+            <Services>
+                <!--Zero or more repetitions:-->
+                <Service>UFS</Service>
+            </Services>
+            <!--Optional:-->
+            <TimePeriod>
+                <From>00:00</From>
+                <To>24:00</To>
+                <Type>Departure</Type>
+            </TimePeriod>
+        </RequestBody>
+    </Request>
+</SearchTrains>    ```
