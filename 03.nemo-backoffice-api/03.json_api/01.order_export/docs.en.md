@@ -137,6 +137,9 @@ taxonomy:
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax.amount** — tax size. Data type - string.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax.currency** — tax currency code. Data type - string.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].type** — tax type. Data type - string.
+* **data.products.ID_FLT_N.remarks** — array of text remarks. Data type — array.
+* **data.products.ID_FLT_N.remarks.type** — type of remark. Data type - string.
+* **data.products.ID_FLT_N.remarks.text** — text of remark. Data type - string.
 * **data.products.ID_HTL_N** — container with information on the Nth hotel. Data type - custom. 
 * **data.products.ID_HTL_N.info** — container with information on this hotel. Data type - custom. 
 * **data.products.ID_HTL_N.info.nemo** — container with information on the hotel from Nemo.Travel. Data type - custom. 
