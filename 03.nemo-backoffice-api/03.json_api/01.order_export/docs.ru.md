@@ -142,7 +142,7 @@ taxonomy:
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax.currency** — код валюты таксы. Тип данных — строка.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].type** — тип таксы. Тип данных — строка.
 * **data.products.ID_FLT_N.remarks** — массив текстовых ремарок. Тип данных — массив.
-* **data.products.ID_FLT_N.remarks.type** — тип ремарки. Тип данных - строка.
+* **data.products.ID_FLT_N.remarks.type** — тип ремарки. Тип данных — строка.
 * **data.products.ID_FLT_N.remarks.text** — текст ремарки. Тип данных — строка.
 * **data.products.ID_HTL_N** — контейнер с информацией об N-м отеле. Тип данных — сложный. 
 * **data.products.ID_HTL_N.info** — контейнер с информацией о данном отеле. Тип данных — сложный.
