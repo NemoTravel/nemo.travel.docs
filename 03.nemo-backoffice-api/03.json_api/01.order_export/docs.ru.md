@@ -179,6 +179,12 @@ taxonomy:
 * **data.products.ID_EXT_N.products.price** — контейнер с информацией о стоимости доп. услуги. Тип данных - сложный.
 * **data.products.ID_EXT_N.products.price.amount** — сумма за дополнительную услугу. Тип данных - строка.
 * **data.products.ID_EXT_N.products.price.currency** — код валюты суммы за доп. услугу. Тип данных - строка.
+* **data.products.ID_EXT_N.products.basePrice** — контейнер с информацией о стоимости доп. услуги, без учета сбора агенства. Тип данных - сложный.
+* **data.products.ID_EXT_N.products.basePrice.amount** — стоимость доп. услуги, без учета сбора агенства. Тип данных - строка.
+* **data.products.ID_EXT_N.products.basePrice.currency** — код валюты суммы за доп. услугу, без учета сбора агенства. Тип данных - строка.
+* **data.products.ID_EXT_N.products.charge** — контейнер с информацией о стоимости сбора агенства на доп. услугу. Тип данных - сложный.
+* **data.products.ID_EXT_N.products.charge.amount** — стоимость сбора агенства за доп. услугу. Тип данных - строка.
+* **data.products.ID_EXT_N.products.charge.currency** — код валюты суммы сбора агенства за доп. услугу. Тип данных - строка.
 * **data.products.ID_EXT_N.products.status** — статус дополнительной услуги. Тип данных - строка.
 * **data.products.ID_EXT_N.products.name** — название дополнительной услуги. Тип данных - строка.
 * **data.products.ID_EXT_N.products.rfisc** — RFISC дополнительной услуги. Тип данных - строка.
