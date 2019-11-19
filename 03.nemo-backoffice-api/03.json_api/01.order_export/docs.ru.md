@@ -364,955 +364,498 @@ taxonomy:
 #### Пример
 ```json
 {
-    "method": "export",
-    "apiVersion": "1.0",
-    "params": {
-        "type": "order",
-        "id": 123456
-    },
-    "data": {
-        "system": "MLSD",
-        "orderType": "flights",
-        "id": 123456,
-        "lastModifiedDate": "2019-08-12T14:14:22.000Z",
-        "currentServerDate": "2019-08-12T14:14:26.000Z",
-        "customer": {
-            "userId": 234567,
-            "agencyId": 345678,
-            "companyId": 456789,
-            "backofficeCompanyId": null,
-            "name": "",
-            "phone": "+77777777777",
-            "email": "aspushkin@mail.ru"
-        },
-        "passengers": {
-            "ID_PAS_1": {
-                "lastName": "PUSHKIN",
-                "firstName": "ALEKSANDR",
-                "middleName": "SERGEYEVICH",
-                "gender": "M",
-                "birthDate": "1799-05-26",
-                "nationality": "RU",
-                "docType": "C",
-                "docNumber": "4555665551",
-                "docExpiryDate": "2024-08-12T00:00:00",
-                "phone": "",
-                "email": null
-            },
-            "ID_PAS_2": {
-                "lastName": "PUSHKIN",
-                "firstName": "ALEKSANDR",
-                "middleName": "ALEKSANDROVICH",
-                "gender": "M",
-                "birthDate": "1833-07-18",
-                "nationality": "RU",
-                "docType": "B",
-                "docNumber": "IVШТ012345",
-                "docExpiryDate": "2024-08-12T00:00:00",
-                "phone": "",
-                "email": null
-            }
-        },
-        "products": {
-            "ID_FLT_1": {
-                "info": {
-                    "nemo": {
-                        "flightId": 3165940003,
-                        "searchId": 321729,
-                        "packageId": 2511,
-                        "status": "ticket",
-                        "utmSource": "100099965",
-                        "utmMarker": null
-                    },
-                    "nemoConnect": {
-                        "system": "MLSD",
-                        "id": 652124,
-                        "packageId": 28888,
-                        "status": "ticket",
-                        "subStatus": null,
-                        "possibleActions": [
-                            "Get",
-                            "Update",
-                            "GetHistory",
-                            "Void",
-                            "Modify",
-                            "VoidEMD",
-                            "RefundEMD",
-                            "Refund",
-                            "Exchange",
-                            "GetEDData",
-                            "ReleaseSeat",
-                            "GetPNRTerminalView"
-                        ]
-                    },
-                    "supplier": {
-                        "system": "GDS SIRENA (1H)",
-                        "id": "1SZXG4",
-                        "environment": "CERT",
-                        "bookingAgencyId": "922",
-                        "ticketingAgencyId": "922",
-                        "ticketingIATAValidator": null
-                    }
-                },
-                "dates": {
-                    "creation": "2019-08-12T13:10:23.000Z",
-                    "booking": "2019-08-12T13:21:37.000Z",
-                    "ticketing": "2019-08-12T13:39:28.000Z",
-                    "void": null,
-                    "cancellation": null,
-                    "timelimit": {
-                        "price": "2019-08-25T11:45:00.000Z",
-                        "ticketing": "2019-08-25T11:35:00.000Z",
-                        "advancedPurchase": null,
-                        "effective": "2019-08-12T13:51:37.000Z"
-                    }
-                },
-                "segments": {
-                    "ID_SEG_1": {
-                        "index": 0,
-                        "leg": 0,
-                        "departure": {
-                            "date": "2019-08-25T14:45:00",
-                            "airport": "VKO",
-                            "terminal": "A",
-                            "country": "RU"
-                        },
-                        "arrival": {
-                            "date": "2019-08-25T18:00:00",
-                            "airport": "TJM",
-                            "terminal": "",
-                            "country": "RU"
-                        },
-                        "UTC": {
-                            "warning": "do not use as information for the passenger",
-                            "departure": "2019-08-25T11:45:00.000Z",
-                            "arrival": "2019-08-25T13:00:00.000Z"
-                        },
-                        "marketingAirline": "UT",
-                        "flightNumber": "153",
-                        "operatingAirline": "UT",
-                        "eticket": true,
-                        "RBD": "L",
-                        "service": "economy",
-                        "status": "HK",
-                        "supplierRef": "UT*03FL2B"
-                    },
-                    "ID_SEG_2": {
-                        "index": 1,
-                        "leg": 1,
-                        "departure": {
-                            "date": "2019-09-01T07:15:00",
-                            "airport": "TJM",
-                            "terminal": "",
-                            "country": "RU"
-                        },
-                        "arrival": {
-                            "date": "2019-09-01T08:00:00",
-                            "airport": "VKO",
-                            "terminal": "A",
-                            "country": "RU"
-                        },
-                        "UTC": {
-                            "warning": "do not use as information for the passenger",
-                            "departure": "2019-09-01T02:15:00.000Z",
-                            "arrival": "2019-09-01T05:00:00.000Z"
-                        },
-                        "marketingAirline": "UT",
-                        "flightNumber": "454",
-                        "operatingAirline": "UT",
-                        "eticket": true,
-                        "RBD": "L",
-                        "service": "economy",
-                        "status": "HK",
-                        "supplierRef": "UT*03FL2B"
-                    }
-                },
-                "pricingInfo": {
-                    "ID_PCG_1": {
-                        "validatingCarrier": "UT",
-                        "commissionForSubagency": {
-                            "amount": "0.00",
-                            "currency": "RUB"
-                        },
-                        "passengerFare": {
-                            "ID_PSF_1": {
-                                "pricingType": "AAT",
-                                "passCount": 1,
-                                "baseFare": {
-                                    "amount": "5590.00",
-                                    "currency": "RUB"
-                                },
-                                "equiveFare": {
-                                    "amount": "5590.00",
-                                    "currency": "RUB"
-                                },
-                                "totalFare": {
-                                    "amount": "5956.00",
-                                    "currency": "RUB"
-                                },
-                                "passengers": [
-                                    "ID_PAS_1"
-                                ],
-                                "fareBasis": [
-                                    {
-                                        "code": "LFLEXOW",
-                                        "type": "public",
-                                        "segments": [
-                                            "ID_SEG_1"
-                                        ],
-                                        "baggage": {
-                                            "value": 1,
-                                            "measurement": "pc"
-                                        }
-                                    }
-                                ],
-                                "taxes": [
-                                    {
-                                        "code": "UH",
-                                        "tax": {
-                                            "amount": "366.00",
-                                            "currency": "RUB"
-                                        },
-                                        "type": "aircompany"
-                                    }
-                                ]
-                            },
-                            "ID_PSF_2": {
-                                "pricingType": "CNN",
-                                "passCount": 1,
-                                "baseFare": {
-                                    "amount": "4195.00",
-                                    "currency": "RUB"
-                                },
-                                "equiveFare": {
-                                    "amount": "4195.00",
-                                    "currency": "RUB"
-                                },
-                                "totalFare": {
-                                    "amount": "4561.00",
-                                    "currency": "RUB"
-                                },
-                                "passengers": [
-                                    "ID_PAS_2"
-                                ],
-                                "fareBasis": [
-                                    {
-                                        "code": "LFLEXOW/CN25",
-                                        "type": "public",
-                                        "segments": [
-                                            "ID_SEG_1"
-                                        ],
-                                        "baggage": {
-                                            "value": 1,
-                                            "measurement": "pc"
-                                        }
-                                    }
-                                ],
-                                "taxes": [
-                                    {
-                                        "code": "UH",
-                                        "tax": {
-                                            "amount": "366.00",
-                                            "currency": "RUB"
-                                        },
-                                        "type": "aircompany"
-                                    }
-                                ]
-                            }
-                        }
-                    },
-                    "ID_PCG_2": {
-                        "validatingCarrier": "UT",
-                        "commissionForSubagency": {
-                            "amount": "0.00",
-                            "currency": "RUB"
-                        },
-                        "passengerFare": {
-                            "ID_PSF_1": {
-                                "pricingType": "AAT",
-                                "passCount": 1,
-                                "baseFare": {
-                                    "amount": "5590.00",
-                                    "currency": "RUB"
-                                },
-                                "equiveFare": {
-                                    "amount": "5590.00",
-                                    "currency": "RUB"
-                                },
-                                "totalFare": {
-                                    "amount": "5604.40",
-                                    "currency": "RUB"
-                                },
-                                "passengers": [
-                                    "ID_PAS_1"
-                                ],
-                                "fareBasis": [
-                                    {
-                                        "code": "LFLEXOW",
-                                        "type": "public",
-                                        "segments": [
-                                            "ID_SEG_2"
-                                        ],
-                                        "baggage": {
-                                            "value": 1,
-                                            "measurement": "pc"
-                                        }
-                                    }
-                                ],
-                                "taxes": [
-                                    {
-                                        "code": "RI",
-                                        "tax": {
-                                            "amount": "14.40",
-                                            "currency": "RUB"
-                                        },
-                                        "type": "aircompany"
-                                    }
-                                ]
-                            },
-                            "ID_PSF_2": {
-                                "pricingType": "CNN",
-                                "passCount": 1,
-                                "baseFare": {
-                                    "amount": "4195.00",
-                                    "currency": "RUB"
-                                },
-                                "equiveFare": {
-                                    "amount": "4195.00",
-                                    "currency": "RUB"
-                                },
-                                "totalFare": {
-                                    "amount": "4209.40",
-                                    "currency": "RUB"
-                                },
-                                "passengers": [
-                                    "ID_PAS_2"
-                                ],
-                                "fareBasis": [
-                                    {
-                                        "code": "LFLEXOW/CN25",
-                                        "type": "public",
-                                        "segments": [
-                                            "ID_SEG_2"
-                                        ],
-                                        "baggage": {
-                                            "value": 1,
-                                            "measurement": "pc"
-                                        }
-                                    }
-                                ],
-                                "taxes": [
-                                    {
-                                        "code": "RI",
-                                        "tax": {
-                                            "amount": "14.40",
-                                            "currency": "RUB"
-                                        },
-                                        "type": "aircompany"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                }
-            },
-            "ID_EXT_1": {
-                "type": "ServicePack"
-            },
-            "ID_EXT_2": {
-                "type": "AeroExpress"
-            },
-            "ID_EXT_3": {
-                "type": "AlphaInsurance"
-            },
-            "ID_EXT_4": {
-                "type": "SogazInsurance"
-            },
-            "ID_EXT_5": {
-                "type": "ErvInsurance"
-            },
-            "ID_EXT_6": {
-                "type": "GDS service",
-                "products": [
-                    {
-                        "price": {
-                            "amount": "1720.00",
-                            "currency": "RUB"
-                        },
-                        "status": "Ticketed",
-                        "name": "PIECE OF BAG UPTO23KG 203LCM",
-                        "rfisc": "0GP",
-                        "rfic": "C",
-                        "type": "P",
-                        "passengers": [
-                            "ID_PAS_1"
-                        ],
-                        "segments": [
-                            "ID_SEG_1"
-                        ]
-                    },
-                    {
-                        "price": {
-                            "amount": "1720.00",
-                            "currency": "RUB"
-                        },
-                        "status": "Ticketed",
-                        "name": "PIECE OF BAG UPTO23KG 203LCM",
-                        "rfisc": "0GP",
-                        "rfic": "C",
-                        "type": "P",
-                        "passengers": [
-                            "ID_PAS_1",
-                            "ID_PAS_1"
-                        ],
-                        "segments": [
-                            "ID_SEG_1",
-                            "ID_SEG_2"
-                        ]
-                    },
-                    {
-                        "price": {
-                            "amount": "1520.00",
-                            "currency": "RUB"
-                        },
-                        "status": "Ticketed",
-                        "name": "PRE RESERVED SEAT ASSIGNMENT",
-                        "rfisc": "0B5",
-                        "rfic": "A",
-                        "type": "F",
-                        "passengers": [
-                            "ID_PAS_1",
-                            "ID_PAS_1",
-                            "ID_PAS_1"
-                        ],
-                        "segments": [
-                            "ID_SEG_1",
-                            "ID_SEG_2",
-                            "ID_SEG_2"
-                        ]
-                    },
-                    {
-                        "price": {
-                            "amount": "1520.00",
-                            "currency": "RUB"
-                        },
-                        "status": "Ticketed",
-                        "name": "PRE RESERVED SEAT ASSIGNMENT",
-                        "rfisc": "0B5",
-                        "rfic": "A",
-                        "type": "F",
-                        "passengers": [
-                            "ID_PAS_1",
-                            "ID_PAS_1",
-                            "ID_PAS_1",
-                            "ID_PAS_2"
-                        ],
-                        "segments": [
-                            "ID_SEG_1",
-                            "ID_SEG_2",
-                            "ID_SEG_2",
-                            "ID_SEG_2"
-                        ]
-                    }
-                ]
-            },
-            "ID_EXT_7": {
-                "type": "SkyGuru"
-            },
-            "ID_EXT_8": {
-                "type": "Custom service"
-            }
-        },
-        "price": {
-            "amount": "38764.00",
-            "currency": "RUB",
-            "components": {
-                "products": {
-                    "amount": "20330.80",
-                    "currency": "RUB",
-                    "components": {
-                        "ID_FLT_1": {
-                            "amount": "20330.80",
-                            "currency": "RUB"
-                        },
-                        "ID_EXT_1": {
-                            "amount": "2400.00",
-                            "currency": "RUB"
-                        },
-                        "ID_EXT_2": {
-                            "amount": "1260.00",
-                            "currency": "RUB"
-                        },
-                        "ID_EXT_3": {
-                            "amount": "1500.00",
-                            "currency": "RUB"
-                        },
-                        "ID_EXT_4": {
-                            "amount": "780.00",
-                            "currency": "RUB"
-                        },
-                        "ID_EXT_5": {
-                            "amount": "962.40",
-                            "currency": "RUB"
-                        },
-                        "ID_EXT_6": {
-                            "amount": "6480.00",
-                            "currency": "RUB"
-                        },
-                        "ID_EXT_7": {
-                            "amount": "50.00",
-                            "currency": "RUB"
-                        },
-                        "ID_EXT_8": {
-                            "amount": "5000.00",
-                            "currency": "RUB"
-                        }
-                    }
-                },
-                "charges": {
-                    "amount": "0.80",
-                    "currency": "RUB",
-                    "components": {
-                        "agencyProfit": {
-                            "amount": "0.80",
-                            "currency": "RUB",
-                            "components": {
-                                "pricingMarkup": {
-                                    "amount": "0.00",
-                                    "currency": "RUB"
-                                },
-                                "fixingPriceMarkup": {
-                                    "amount": "0.00",
-                                    "currency": "RUB"
-                                },
-                                "problemDiscount": {
-                                    "amount": "0.00",
-                                    "currency": "RUB"
-                                },
-                                "subagentDiscount": {
-                                    "amount": "0.00",
-                                    "currency": "RUB"
-                                },
-                                "promoDiscount": {
-                                    "amount": "0.00",
-                                    "currency": "RUB"
-                                },
-                                "roundingMarkup": {
-                                    "amount": "0.80",
-                                    "currency": "RUB"
-                                }
-                            }
-                        },
-                        "subagencyProfit": {
-                            "amount": "0.00",
-                            "currency": "RUB"
-                        },
-                        "gatewayProfit": {
-                            "amount": "0.00",
-                            "currency": "RUB"
-                        }
-                    }
-                }
-            }
-        },
-        "payments": {
-            "ID_PAY_1": {
-                "id": "123456789",
-                "gatewayId": "5",
-                "methodId": 1234,
-                "name": "Депозит субагента",
-                "status": "partialRefunded",
-                "paymentDate": "2019-08-12T13:23:57.000Z",
-                "moneyPaid": {
-                    "amount": "38764.00",
-                    "currency": "RUB"
-                },
-                "moneyFixed": {
-                    "amount": "38764.00",
-                    "currency": "RUB"
-                }
-            }
-        },
-        "documents": {
-            "ID_TKT_1": {
-                "number": "2986130027440",
-                "type": "airticket",
-                "status": "active",
-                "passenger": "ID_PAS_1",
-                "product": "ID_FLT_1",
-                "info": {
-                    "pricingInfos": [
-                        "ID_PCG_1",
-                        "ID_PCG_1"
-                    ],
-                    "endorsements": [
-                        "НДСА/К508.18 НДСZZ0.00",
-                        "НДСА/К508.18 НДСZZ0.00"
-                    ]
-                }
-            },
-            "ID_TKT_2": {
-                "number": "2986130027441",
-                "type": "airticket",
-                "status": "active",
-                "passenger": "ID_PAS_1",
-                "product": "ID_FLT_1",
-                "info": {
-                    "pricingInfos": [
-                        "ID_PCG_2",
-                        "ID_PCG_2"
-                    ],
-                    "endorsements": [
-                        "НДСА/К508.18 НДСZZ0.00",
-                        "НДСА/К508.18 НДСZZ0.00"
-                    ]
-                }
-            },
-            "ID_EMD_1": {
-                "number": "2986160178462",
-                "type": "ancillary",
-                "status": "active",
-                "passenger": "ID_PAS_1"
-            },
-            "ID_EMD_2": {
-                "number": "2986160178419",
-                "type": "ancillary",
-                "status": "active",
-                "passenger": "ID_PAS_1"
-            },
-            "ID_EMD_3": {
-                "number": "2986160178420",
-                "type": "ancillary",
-                "status": "active",
-                "passenger": "ID_PAS_1"
-            },
-            "ID_TKT_3": {
-                "number": "2986130027442",
-                "type": "airticket",
-                "status": "active",
-                "passenger": "ID_PAS_2",
-                "product": "ID_FLT_1",
-                "info": {
-                    "pricingInfos": [
-                        "ID_PCG_1",
-                        "ID_PCG_1"
-                    ],
-                    "endorsements": [
-                        "НДСА/К381.36 НДСZZ0.00",
-                        "НДСА/К381.36 НДСZZ0.00"
-                    ]
-                }
-            },
-            "ID_TKT_4": {
-                "number": "2986130027443",
-                "type": "airticket",
-                "status": "active",
-                "passenger": "ID_PAS_2",
-                "product": "ID_FLT_1",
-                "info": {
-                    "pricingInfos": [
-                        "ID_PCG_2",
-                        "ID_PCG_2"
-                    ],
-                    "endorsements": [
-                        "НДСА/К381.36 НДСZZ0.00",
-                        "НДСА/К381.36 НДСZZ0.00"
-                    ]
-                }
-            },
-            "ID_EMD_4": {
-                "number": "2986160178463",
-                "type": "ancillary",
-                "status": "active",
-                "passenger": "ID_PAS_2"
-            },
-            "ID_TKT_5": {
-                "number": "541900",
-                "type": "aeroexpressticket",
-                "passenger": "ID_PAS_1",
-                "product": "ID_EXT_2"
-            },
-            "ID_EMD_5": {
-                "number": "23K6160176678",
-                "type": "aeroexpressemd",
-                "passenger": "ID_PAS_1",
-                "product": "ID_EXT_2"
-            },
-            "ID_TKT_6": {
-                "number": "541901",
-                "type": "aeroexpressticket",
-                "passenger": "ID_PAS_2",
-                "product": "ID_EXT_2"
-            },
-            "ID_EMD_6": {
-                "number": "23K6160176679",
-                "type": "aeroexpressemd",
-                "passenger": "ID_PAS_2",
-                "product": "ID_EXT_2"
-            },
-            "ID_TKT_7": {
-                "number": "541902",
-                "type": "aeroexpressticket",
-                "passenger": "ID_PAS_1",
-                "product": "ID_EXT_2"
-            },
-            "ID_EMD_7": {
-                "number": "23K6160176680",
-                "type": "aeroexpressemd",
-                "passenger": "ID_PAS_1",
-                "product": "ID_EXT_2"
-            },
-            "ID_TKT_8": {
-                "number": "541903",
-                "type": "aeroexpressticket",
-                "passenger": "ID_PAS_2",
-                "product": "ID_EXT_2"
-            },
-            "ID_EMD_8": {
-                "number": "23K6160176681",
-                "type": "aeroexpressemd",
-                "passenger": "ID_PAS_2",
-                "product": "ID_EXT_2"
-            },
-            "ID_PLC_1": {
-                "number": "247.V.F27462428",
-                "type": "alphapolicy",
-                "passenger": "ID_PAS_1",
-                "product": "ID_EXT_3"
-            },
-            "ID_PLC_2": {
-                "number": "247.V.F27462429",
-                "type": "alphapolicy",
-                "passenger": "ID_PAS_2",
-                "product": "ID_EXT_3"
-            },
-            "ID_PLC_3": {
-                "number": "247.V.F27462430",
-                "type": "alphapolicy",
-                "passenger": "ID_PAS_1",
-                "product": "ID_EXT_3"
-            },
-            "ID_PLC_4": {
-                "number": "247.V.F27462431",
-                "type": "alphapolicy",
-                "passenger": "ID_PAS_2",
-                "product": "ID_EXT_3"
-            },
-            "ID_PLC_5": {
-                "number": "19CPI000100028632628",
-                "type": "sogazpolicy",
-                "passenger": "ID_PAS_1",
-                "product": "ID_EXT_4"
-            },
-            "ID_PLC_6": {
-                "number": "19CPI000100028632629",
-                "type": "sogazpolicy",
-                "passenger": "ID_PAS_2",
-                "product": "ID_EXT_4"
-            },
-            "ID_PLC_7": {
-                "number": 987654321,
-                "type": "ervpolicy",
-                "passenger": "ID_PAS_1",
-                "product": "ID_EXT_5"
-            },
-            "ID_PLC_8": {
-                "number": 123456789,
-                "type": "ervpolicy",
-                "passenger": "ID_PAS_2",
-                "product": "ID_EXT_5"
-            }
-        },
-        "currencyRates": [
-            {
-                "currencyCode": "AMD",
-                "rate": 7.27468482428
-            },
-            {
-                "currencyCode": "AUD",
-                "rate": 0.021125927428214
-            },
-            {
-                "currencyCode": "AZN",
-                "rate": 0.025449048460078
-            },
-            {
-                "currencyCode": "BGN",
-                "rate": 0.025366675291336
-            },
-            {
-                "currencyCode": "BRL",
-                "rate": 0.056254992630596
-            },
-            {
-                "currencyCode": "BYN",
-                "rate": 0.032083468351263
-            },
-            {
-                "currencyCode": "CAD",
-                "rate": 0.019533424619538
-            },
-            {
-                "currencyCode": "CHF",
-                "rate": 0.014808452664781
-            },
-            {
-                "currencyCode": "CNY",
-                "rate": 0.10373702249849
-            },
-            {
-                "currencyCode": "CZK",
-                "rate": 0.33522736796232
-            },
-            {
-                "currencyCode": "DKK",
-                "rate": 0.096752034211519
-            },
-            {
-                "currencyCode": "EUR",
-                "rate": 0.012973130053034
-            },
-            {
-                "currencyCode": "GBP",
-                "rate": 0.01135332805782
-            },
-            {
-                "currencyCode": "HKD",
-                "rate": 0.11736978995502
-            },
-            {
-                "currencyCode": "HUF",
-                "rate": 4.21864387474
-            },
-            {
-                "currencyCode": "INR",
-                "rate": 1.1108951037298
-            },
-            {
-                "currencyCode": "JPY",
-                "rate": 1.6824989820881
-            },
-            {
-                "currencyCode": "KGS",
-                "rate": 1.0393465420421
-            },
-            {
-                "currencyCode": "KRW",
-                "rate": 17.115609093181
-            },
-            {
-                "currencyCode": "KZT",
-                "rate": 5.558118465737
-            },
-            {
-                "currencyCode": "MDL",
-                "rate": 0.25467001133282
-            },
-            {
-                "currencyCode": "NOK",
-                "rate": 0.1231625684322
-            },
-            {
-                "currencyCode": "PLN",
-                "rate": 0.055975057514372
-            },
-            {
-                "currencyCode": "RON",
-                "rate": 0.060523162214179
-            },
-            {
-                "currencyCode": "SEK",
-                "rate": 0.13509570179515
-            },
-            {
-                "currencyCode": "SGD",
-                "rate": 0.020691082143596
-            },
-            {
-                "currencyCode": "TJS",
-                "rate": 0.1409647912241
-            },
-            {
-                "currencyCode": "TMT",
-                "rate": 0.052341770826791
-            },
-            {
-                "currencyCode": "TRY",
-                "rate": 0.089840802098681
-            },
-            {
-                "currencyCode": "UAH",
-                "rate": 0.41918351435075
-            },
-            {
-                "currencyCode": "USD",
-                "rate": 0.014976180385098
-            },
-            {
-                "currencyCode": "UZS",
-                "rate": 122.52094189199
-            },
-            {
-                "currencyCode": "XDR",
-                "rate": 0.010755510047797
-            },
-            {
-                "currencyCode": "ZAR",
-                "rate": 0.21949078138718
-            },
-            {
-                "currencyCode": "RUB",
-                "rate": 1
-            }
-        ],
-        "linkedOrders": {
-            "splitted": [],
-            "exchangedForOrder": null,
-            "mainOrderId": null,
-            "multiOrderEnvelope": null,
-            "exchangeClaims": [
-                {
-                    "data": {
-                        "id": 1234567,
-                        "expertUserId": 1234567,
-                        "price": {
-                            "amount": "-5956.00",
-                            "currency": "RUB"
-                        },
-                        "selectedElements": [
-                            {
-                                "passenger": "ID_PAS_1",
-                                "segments": [
-                                    "ID_SEG_1"
-                                ]
-                            }
-                        ]
-                    },
-                    "claimText": ""
-                }
-            ],
-            "returnClaims": [
-                {
-                    "data": {
-                        "id": 1234567,
-                        "expertUserId": 1234567,
-                        "price": {
-                            "amount": "-5956.00",
-                            "currency": "RUB"
-                        },
-                        "selectedElements": [
-                            {
-                                "passenger": "ID_PAS_1",
-                                "segments": [
-                                    "ID_SEG_1"
-                                ]
-                            }
-                        ]
-                    },
-                    "isCompelled": false
-                }
-            ]
-        }
-    }
+	"method": "export",
+	"apiVersion": "1.0",
+	"params": {
+		"type": "order",
+		"id": 570548
+	},
+	"data": {
+		"system": "XXX",
+		"orderType": "flights",
+		"id": 570548,
+		"lastModifiedDate": "2019-11-19T08:37:11.000Z",
+		"currentServerDate": "2019-11-19T08:37:59.000Z",
+		"customer": {
+			"userId": 11111,
+			"agencyId": 11110,
+			"companyId": 11110,
+			"backofficeCompanyId": null,
+			"name": "",
+			"phone": " 79876543212",
+			"email": "test@test.ru"
+		},
+		"passengers": {
+			"ID_PAS_1": {
+				"lastName": "ZIGMATULINA",
+				"firstName": "ELIZAVETA",
+				"middleName": null,
+				"gender": "F",
+				"birthDate": "1963-04-13",
+				"nationality": "RU",
+				"docType": "P",
+				"docNumber": "636367877",
+				"docExpiryDate": "2030-11-11T00:00:00",
+				"phone": "",
+				"email": "test@test.ru"
+			}
+		},
+		"products": {
+			"ID_FLT_1": {
+				"info": {
+					"nemo": {
+						"flightId": 3391680011,
+						"searchId": 338256,
+						"packageId": 3462,
+						"status": "booked",
+						"utmSource": "100100012",
+						"utmMarker": null
+					},
+					"nemoConnect": {
+						"system": "XXX",
+						"id": 676083,
+						"packageId": 28888,
+						"status": "booked",
+						"subStatus": null,
+						"possibleActions": [
+							"Get",
+							"Update",
+							"GetHistory",
+							"Ticket",
+							"Modify",
+							"Cancel",
+							"GetPNRTerminalView",
+							"AdditionalOperations"
+						]
+					},
+					"supplier": {
+						"system": "GDS SIRENA (1H)",
+						"id": "1T46WX",
+						"environment": "CERT",
+						"bookingAgencyId": "922",
+						"ticketingAgencyId": "922",
+						"ticketingIATAValidator": null
+					}
+				},
+				"dates": {
+					"creation": "2019-11-19T08:29:53.000Z",
+					"booking": "2019-11-19T08:37:57.000Z",
+					"ticketing": null,
+					"void": null,
+					"cancellation": null,
+					"timelimit": {
+						"price": "2019-11-27T08:30:00.000Z",
+						"ticketing": "2019-11-24T08:28:00.000Z",
+						"advancedPurchase": null,
+						"effective": "2019-11-20T08:37:57.000Z"
+					}
+				},
+				"segments": {
+					"ID_SEG_1": {
+						"index": 0,
+						"leg": 0,
+						"departure": {
+							"date": "2019-11-27T11:30:00",
+							"airport": "VKO",
+							"terminal": "A",
+							"country": "RU"
+						},
+						"arrival": {
+							"date": "2019-11-27T16:00:00",
+							"airport": "TJM",
+							"terminal": "",
+							"country": "RU"
+						},
+						"UTC": {
+							"warning": "do not use as information for the passenger",
+							"departure": "2019-11-27T08:30:00.000Z",
+							"arrival": "2019-11-27T11:00:00.000Z"
+						},
+						"marketingAirline": "UT",
+						"flightNumber": "461",
+						"operatingAirline": "UT",
+						"eticket": true,
+						"RBD": "K",
+						"service": "economy",
+						"status": "HK",
+						"supplierRef": null
+					},
+					"ID_SEG_2": {
+						"index": 1,
+						"leg": 1,
+						"departure": {
+							"date": "2019-11-30T00:30:00",
+							"airport": "TJM",
+							"terminal": "",
+							"country": "RU"
+						},
+						"arrival": {
+							"date": "2019-11-30T01:30:00",
+							"airport": "VKO",
+							"terminal": "A",
+							"country": "RU"
+						},
+						"UTC": {
+							"warning": "do not use as information for the passenger",
+							"departure": "2019-11-29T19:30:00.000Z",
+							"arrival": "2019-11-29T22:30:00.000Z"
+						},
+						"marketingAirline": "UT",
+						"flightNumber": "462",
+						"operatingAirline": "UT",
+						"eticket": true,
+						"RBD": "L",
+						"service": "economy",
+						"status": "HK",
+						"supplierRef": null
+					}
+				},
+				"pricingInfo": {
+					"ID_PCG_1": {
+						"validatingCarrier": "UT",
+						"tourCode": null,
+						"commission": {
+							"amount": "1000.00",
+							"currency": "KZT"
+						},
+						"commissionForSubagency": {
+							"amount": "147.67",
+							"currency": "RUB"
+						},
+						"passengerFare": {
+							"ID_PSF_1": {
+								"pricingType": "AAT",
+								"passCount": 1,
+								"baseFare": {
+									"amount": "10.00",
+									"currency": "RUB"
+								},
+								"equiveFare": {
+									"amount": "10.00",
+									"currency": "RUB"
+								},
+								"totalFare": {
+									"amount": "10.00",
+									"currency": "RUB"
+								},
+								"passengers": [
+									"ID_PAS_1"
+								],
+								"fareBasis": [
+									{
+										"code": "KLTOW",
+										"type": "public",
+										"segments": [
+											"ID_SEG_1"
+										],
+										"baggage": {
+											"value": 0,
+											"measurement": "kg"
+										}
+									}
+								]
+							}
+						}
+					},
+					"ID_PCG_2": {
+						"validatingCarrier": "UT",
+						"tourCode": null,
+						"commission": {
+							"amount": "1000.00",
+							"currency": "KZT"
+						},
+						"commissionForSubagency": {
+							"amount": "147.67",
+							"currency": "RUB"
+						},
+						"passengerFare": {
+							"ID_PSF_1": {
+								"pricingType": "AAT",
+								"passCount": 1,
+								"baseFare": {
+									"amount": "2490.00",
+									"currency": "RUB"
+								},
+								"equiveFare": {
+									"amount": "2490.00",
+									"currency": "RUB"
+								},
+								"totalFare": {
+									"amount": "2504.40",
+									"currency": "RUB"
+								},
+								"passengers": [
+									"ID_PAS_1"
+								],
+								"fareBasis": [
+									{
+										"code": "LLTOW",
+										"type": "public",
+										"segments": [
+											"ID_SEG_2"
+										],
+										"baggage": {
+											"value": 0,
+											"measurement": "kg"
+										}
+									}
+								],
+								"taxes": [
+									{
+										"code": "RI",
+										"tax": {
+											"amount": "14.40",
+											"currency": "RUB"
+										},
+										"type": "aircompany"
+									}
+								]
+							}
+						}
+					}
+				}
+			},
+			"ID_EXT_1": {
+				"type": "GDS service",
+				"products": [
+					{
+						"price": {
+							"amount": "1800.00",
+							"currency": "RUB"
+						},
+						"basePrice": {
+							"amount": "1700.00",
+							"currency": "RUB"
+						},
+						"charge": {
+							"amount": "100.00",
+							"currency": "RUB"
+						},
+						"status": "Booked",
+						"name": "PIECE OF BAG UPTO23KG 203LCM",
+						"rfisc": "0GP",
+						"rfic": "C",
+						"type": "P",
+						"passengers": [
+							"ID_PAS_1"
+						],
+						"segments": [
+							"ID_SEG_1"
+						]
+					},
+					{
+						"price": {
+							"amount": "1800.00",
+							"currency": "RUB"
+						},
+						"basePrice": {
+							"amount": "1700.00",
+							"currency": "RUB"
+						},
+						"charge": {
+							"amount": "100.00",
+							"currency": "RUB"
+						},
+						"status": "Booked",
+						"name": "PIECE OF BAG UPTO23KG 203LCM",
+						"rfisc": "0GP",
+						"rfic": "C",
+						"type": "P",
+						"passengers": [
+							"ID_PAS_1"
+						],
+						"segments": [
+							"ID_SEG_2"
+						]
+					},
+					{
+						"price": {
+							"amount": "105.00",
+							"currency": "RUB"
+						},
+						"basePrice": {
+							"amount": "5.00",
+							"currency": "RUB"
+						},
+						"charge": {
+							"amount": "100.00",
+							"currency": "RUB"
+						},
+						"status": "Booked",
+						"name": "BREAKFAST",
+						"rfisc": "0AI",
+						"rfic": "G",
+						"type": "F",
+						"passengers": [
+							"ID_PAS_1"
+						],
+						"segments": [
+							"ID_SEG_1"
+						]
+					},
+					{
+						"price": {
+							"amount": "450.00",
+							"currency": "RUB"
+						},
+						"basePrice": {
+							"amount": "350.00",
+							"currency": "RUB"
+						},
+						"charge": {
+							"amount": "100.00",
+							"currency": "RUB"
+						},
+						"status": "Booked",
+						"name": "PANCAKES",
+						"rfisc": "BF1",
+						"rfic": "G",
+						"type": "F",
+						"passengers": [
+							"ID_PAS_1"
+						],
+						"segments": [
+							"ID_SEG_2"
+						]
+					},
+					{
+						"price": {
+							"amount": "600.00",
+							"currency": "RUB"
+						},
+						"basePrice": {
+							"amount": "500.00",
+							"currency": "RUB"
+						},
+						"charge": {
+							"amount": "100.00",
+							"currency": "RUB"
+						},
+						"status": "Booked",
+						"name": "PRE RESERVED SEAT ASSIGNMENT",
+						"rfisc": "CMF",
+						"rfic": "A",
+						"type": "F",
+						"passengers": [
+							"ID_PAS_1"
+						],
+						"segments": [
+							"ID_SEG_1"
+						]
+					},
+					{
+						"price": {
+							"amount": "1600.00",
+							"currency": "RUB"
+						},
+						"basePrice": {
+							"amount": "1500.00",
+							"currency": "RUB"
+						},
+						"charge": {
+							"amount": "100.00",
+							"currency": "RUB"
+						},
+						"status": "Booked",
+						"name": "PRE RESERVED SEAT ASSIGNMENT",
+						"rfisc": "CMF",
+						"rfic": "A",
+						"type": "F",
+						"passengers": [
+							"ID_PAS_1"
+						],
+						"segments": [
+							"ID_SEG_2"
+						]
+					}
+				]
+			}
+		},
+		"price": {
+			"amount": "10870.00",
+			"currency": "RUB",
+			"components": {
+				"products": {
+					"amount": "2514.40",
+					"currency": "RUB",
+					"components": {
+						"ID_FLT_1": {
+							"amount": "2514.40",
+							"currency": "RUB"
+						},
+						"ID_EXT_1": {
+							"amount": "6355.00",
+							"currency": "RUB"
+						}
+					}
+				},
+				"charges": {
+					"amount": "2000.60",
+					"currency": "RUB",
+					"components": {
+						"agencyProfit": {
+							"amount": "2000.60",
+							"currency": "RUB",
+							"components": {
+								"pricingMarkup": {
+									"amount": "2000.60",
+									"currency": "RUB",
+									"components": {
+										"ID_PCG_1": {
+											"amount": "1000.00",
+											"currency": "RUB"
+										},
+										"ID_PCG_2": {
+											"amount": "1000.60",
+											"currency": "RUB"
+										}
+									}
+								},
+								"fixingPriceMarkup": {
+									"amount": "0.00",
+									"currency": "RUB"
+								},
+								"problemDiscount": {
+									"amount": "0.00",
+									"currency": "RUB"
+								},
+								"subagentDiscount": {
+									"amount": "0.00",
+									"currency": "RUB"
+								},
+								"promoDiscount": {
+									"amount": "0.00",
+									"currency": "RUB"
+								},
+								"roundingMarkup": {
+									"amount": "0.00",
+									"currency": "RUB"
+								}
+							}
+						},
+						"subagencyProfit": {
+							"amount": "0.00",
+							"currency": "RUB"
+						},
+						"gatewayProfit": {
+							"amount": "0.00",
+							"currency": "RUB"
+						}
+					}
+				}
+			}
+		},
+		"payments": [],
+		"documents": [],
+		"currencyRates": [],
+		"linkedOrders": {
+			"splitted": [],
+			"exchangedForOrder": null,
+			"mainOrderId": null,
+			"multiOrderEnvelope": null,
+			"exchangeClaims": [],
+			"returnClaims": []
+		}
+	}
 }
 ```
