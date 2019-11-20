@@ -214,6 +214,9 @@ taxonomy:
 * **data.products.ID_TRN_N.segments.ID_SEG_N.choosenRange** — container with information on the seat range. Data type - custom.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.choosenRange.start** - beginning of the seat range. Data type - string.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.choosenRange.end** - end of the seat range. Data type - string.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.chosenSeats** - selected places. Data type - array of strings.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.serviceClass** -  description of class of service. Data type - string.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.serviceClassCode** - class of service code. Data type - string.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.departure** — container with information on the departure point. Data type - custom.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.departure.date** — departure time. Data type - string.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.departure.station** — departure station name. Data type - string.
