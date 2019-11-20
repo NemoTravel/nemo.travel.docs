@@ -557,7 +557,6 @@ taxonomy:
 										}
 									}
 								]
-							}
 						}
 					},
 					"ID_PCG_2": {
@@ -616,7 +615,12 @@ taxonomy:
 							}
 						}
 					}
-				}
+                    
+				"remarks": [{
+						"type": "General",
+						"text": "TEST REMARK"
+					}
+				]
 			},
 			"ID_EXT_1": {
 				"type": "GDS service",
