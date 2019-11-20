@@ -224,6 +224,9 @@ taxonomy:
 * **data.products.ID_TRN_N.segments.ID_SEG_N.choosenRange** — контейнер с информацией о диапазоне мест. Тип данных — сложный.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.choosenRange.start** - начало диапазона мест. Тип данных — строка.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.choosenRange.end** - конец диапазона мест. Тип данных — строка.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.chosenSeats** - выбранные места. Тип данных - массив строк.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.serviceClass** - описание класса обслуживания. Тип данных - строка.
+* **data.products.ID_TRN_N.segments.ID_SEG_N.serviceClassCode** - код класса обслуживания. Тип данных - строка.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.departure** — контейнер с информацией о пункте отправления. Тип данных — сложный.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.departure.date** — время отправления. Тип данных — строка.
 * **data.products.ID_TRN_N.segments.ID_SEG_N.departure.station** — название станции отправления. Тип данных — строка.
