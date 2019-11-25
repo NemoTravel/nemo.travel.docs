@@ -191,7 +191,7 @@ taxonomy:
 -   **Flight.Price.ChargeBreakdown** — разбивка составляющих сбора по правилам (расчитан по правилам ценообразования). Тип данных — [ChargeBreakdown](/avia/common/chargebreakdown).
 -   **Flight.Price.SubAgentMarkup** - сбор субагента за весь перелёт. Тип данных — [Money](/avia/common/money).
 -   **Flight.Price.SubAgentChargeBreakdown** — разбивка составляющих сбора субагента по правилам (расчитан по правилам ценообразования). Тип данных — [ChargeBreakdown](/avia/common/chargebreakdown).
--   **Flight.Price.TimeLimit** — таймлимит данной цены в зоне UTC+0 (цена действительная до) в формате yyyy-mm-ddthh:mm:ssZ. Тип данных — строка.
+-   **Flight.Price.TimeLimit** — таймлимит данной цены в зоне UTC+0 (цена действительная до) в формате ISO 8601: <code>yyyy-mm-ddthh:mm:ssZ</code>. Тип данных — ZonedDateTime.
 -   **Flight.FareFamiliesDescription** — содержит описания семейств тарифов, присутствующих в перелёте. Тип данных — [Description](/avia/common/ff-description).
 -   **Flight.CanHaveSubsidizedTariffs** - признак возможности применения субсидий к данному тарифу. Тип данных - булев.
 -   **Flight.BookingURL** - URL, на который будет перенаправлен пользователь для последующего оформления перелета. Тип данных - строка.
