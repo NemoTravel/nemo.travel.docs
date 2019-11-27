@@ -53,6 +53,21 @@ taxonomy:
 -   **OperationsRestrictions.PricingInfo.IsMixerDisabled** - отключает микширование вариантов оценки перелёта, полученных в процессе репрайсинга. Тип данных - булевский.
 -   **OperationsRestrictions.UpdateCachedFareRules** — обновление закэшированных в брони тарифных правил. Тип данных — булевский.
 -   **OperationsRestrictions.ListFaresIfNoFamiliesDifined** — включает возврат списка тарифов от GDS в случае если у них нет отсылки к семейству. Тип данных — булевский.
+-   **OperationsRestrictions.SelectedAncillaryServices** - контейнер с информацией для динамической оценки  стоимости доп. услуг в зависимости от выбранного типа пассажира и  количества услуг. (Поддерживается только для Сирены). Тип данных - сложный.
+-   **SelectedAncillaryServices.Service** - Дополнительная услуга. Тип данных - массив.
+-   **SelectedAncillaryServices.Service.RFIC** - RFIC дополнительной услуги. Тип данных - строка.
+-   **SelectedAncillaryServices.Service.RFISC** - RFISC дополнительной услуги. Тип данных - строка.
+-   **SelectedAncillaryServices.Service.Group** - Группа дополнительной услуги. Тип данных - строка.
+-   **SelectedAncillaryServices.Service.Subgroup** - Подруппа дополнительной услуги. Тип данных - строка.
+-   **SelectedAncillaryServices.Service.SSRCode** - SSR код дополнительной услуги (Необязательный) Тип данных - строка.
+-   **SelectedAncillaryServices.Service.SSRDescription** - Описание для SSR (Необязательный) Тип данных - строка.
+-   **SelectedAncillaryServices.Service.Type** - Тип дополнительной услуги (Обязателен только для Сирены). Тип данных - строка.
+-   **SelectedAncillaryServices.Service.TravellerRef** - Идентификатор пассажира, для которого добавляется дополнительная услуга. Тип данных - int.
+-   **SelectedAncillaryServices.Service.SegmentRef** - Контейнер с ссылками на сегменты, на которые добавляется дополнительная услуга. Тип данных - массив.
+-   **SelectedAncillaryServices.Service.SegmentRef.Ref** - Ссылка на сегмент. Тип данных - int.
+-   **SelectedAncillaryServices.Service.Quantity** - Количество повторений данной дополнительной услуги. Тип данных - int.
+-   **SelectedAncillaryServices.Service.PassengerType** - тип пассажира для оценки стоимости. Тип данных - строка.
+-   **SelectedAncillaryServices.Service.EMDType** - Тип EMD. Тип данных - строка. 
 
 
 ##### Пример
