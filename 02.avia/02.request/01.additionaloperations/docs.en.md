@@ -51,7 +51,21 @@ Execution of the additional operations of 1.2. version.
 -  **OperationsRestrictions.PricingInfo.ThreeDomainAgreementNumber** — corporate client code in the three-party agreement. Data type - string.
 -  **OperationsRestrictions.UpdateCachedFareRules** - update cached in the reservation fare rules. The data type is bool.
 -  **OperationsRestrictions.ListFaresIfNoFamiliesDifined** - enables fare list return from GDS in case they do not have a reference to the fare family. Data type - bool.
-
+-  **OperationsRestrictions.SelectedAncillaryServices** - container with information of dynamic cost for additional services depending on the type of passenger chosen and the number of services. (Supported only for Sirena). Data type - complex.
+-   **OperationsRestrictions.SelectedAncillaryServices.Service** -  ancillary service. Data type - array.
+-   **OperationsRestrictions.SelectedAncillaryServices.Service.RFIC** - RFIC of the ancillary service. Data type - string.
+-   **OperationsRestrictions.SelectedAncillaryServices.Service.RFISC** - RFISC of the ancillary service. Data type - string.
+-   **OperationsRestrictions.SelectedAncillaryServices.Service.Group** - ancillary service group. Data type - string.
+-   **OperationsRestrictions.SelectedAncillaryServices.Service.Subgroup** - ancillary service subgroup. Data type - string.
+-   **OperationsRestrictions.SelectedAncillaryServices.Service.SSRCode** -  ancillary service SSR code (Optional). Data type - string.
+-   **OperationsRestrictions.SelectedAncillaryServices.Service.SSRDescription** - ancillary service SSR description (Optional). Data type - string.
+-   **OperationsRestrictions.SelectedAncillaryServices.Service.Type** - type of ancillary service (required only for Sirena). Data type - string.
+-   **OperationsRestrictions.SelectedAncillaryServices.Service.TravellerRef** - passenger ID for which the ancillary service is added. Data type - int.
+-   **OperationsRestrictions.SelectedAncillaryServices.Service.SegmentRef** - container with references to segments to which the ancillary service is added. Data type - array.
+-   **OperationsRestrictions.SelectedAncillaryServices.Service.SegmentRef.Ref** - segment reference. Data type - int.
+-   **OperationsRestrictions.SelectedAncillaryServices.Service.Quantity** - Number of additional services already booked. Data type - int.
+-   **OperationsRestrictions.SelectedAncillaryServices.Service.PassengerType** - type of passenger for pricing. Data type - string.
+-   **OperationsRestrictions.SelectedAncillaryServices.Service.EMDType** - EMD type. Data type - string.
 
 ##### Sample
 ```xml
