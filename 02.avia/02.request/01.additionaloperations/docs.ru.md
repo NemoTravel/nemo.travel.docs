@@ -65,7 +65,7 @@ taxonomy:
 -   **SelectedAncillaryServices.Service.TravellerRef** - Идентификатор пассажира, для которого добавляется дополнительная услуга. Тип данных - int.
 -   **SelectedAncillaryServices.Service.SegmentRef** - Контейнер с ссылками на сегменты, на которые добавляется дополнительная услуга. Тип данных - массив.
 -   **SelectedAncillaryServices.Service.SegmentRef.Ref** - Ссылка на сегмент. Тип данных - int.
--   **SelectedAncillaryServices.Service.Quantity** - Количество повторений данной дополнительной услуги. Тип данных - int.
+-   **SelectedAncillaryServices.Service.Quantity** - Количество уже забронированных дополнительных услуг. Тип данных - int.
 -   **SelectedAncillaryServices.Service.PassengerType** - тип пассажира для оценки стоимости. Тип данных - строка.
 -   **SelectedAncillaryServices.Service.EMDType** - Тип EMD. Тип данных - строка. 
 
