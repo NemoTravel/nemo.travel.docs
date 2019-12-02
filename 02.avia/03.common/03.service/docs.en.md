@@ -41,7 +41,6 @@ Each of the base and ancillary services is inherited from the BaseService class 
         -   **FailedExchange** — error while exchanging tickets;
         -   **AncillariesWithoutPrice** — there are ancillary services in the booking for which there are no prices;
         -   **NoAirlineLocator** - there is no locator from the airline
-        -   **TicketMaskDataMismatch** — there are mismatches between data in PNR and ticket masks;
         -   **ExchangedTicketWithoutNew** — ticket exchange was executed, but the information on the new ticket wasn't received;
         -   **SupplierDoNotKnowEdState** — Z ticket status returned from the supplier, currently only relevant for the Travelport airline content provider.
 
