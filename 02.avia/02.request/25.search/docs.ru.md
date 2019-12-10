@@ -19,7 +19,7 @@ taxonomy:
 -   **RequestedFlightInfo.ODPairs** — содержит информацию о сегментах перелёта, который требуется найти. Тип данных — массив.
 -   **RequestedFlightInfo.ODPair** — сегмент перелёта, который требуется найти. Тип данных — массив.
 -   **RequestedFlightInfo.ODPair.DepatureDateTime** — дата и время, с которого начинается желаемое время вылета. Тип данных — строка, формат — <code>yyyy-mm-ddthh:mm:ss</code>.
--   **RequestedFlightInfo.ODPair.MaxDepatureTime** — максимально допустимое время вылета (необязательный). Тип данных — строка, формат — <code>hh:mm</code>.
+-   **RequestedFlightInfo.ODPair.MaxDepartureTime** — максимально допустимое время вылета (необязательный). Тип данных — строка, формат — <code>hh:mm</code>.
 -   **RequestedFlightInfo.ODPair.DepaturePoint** — содержит информацию о точке отправления. Тип данных — массив.
 -   **RequestedFlightInfo.ODPair.DepaturePoint.Code** — 3-х буквенный код аэропорта или города отправления. Тип данных — строка.
 -   **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** — признак того, что в качестве точки отправления указан код города (агрегатора аэропортов) (необязательный). Тип данных — булевский.
