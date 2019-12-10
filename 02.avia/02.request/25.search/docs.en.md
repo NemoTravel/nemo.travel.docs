@@ -19,7 +19,7 @@ Version 1.2. flight search.
 -  **RequestedFlightInfo.ODPairs** - contains information about the segments of the flight that you want to find. Data type - array.
 -  **RequestedFlightInfo.ODPair** - segment of the flight you want to find. Data type - array.
 -  **RequestedFlightInfo.ODPair.DepatureDateTime** - date and time from which the desired departure time begins. Data type - string, the format is <code>yyyy-mm-ddthh:mm:ss</code>.
--  **RequestedFlightInfo.ODPair.MaxDepatureTime** - maximum-allowed departure time (optional). Data type - string, the format is <code>hh:mm</code>.
+-  **RequestedFlightInfo.ODPair.MaxDepartureTime** - maximum-allowed departure time (optional). Data type - string, the format is <code>hh:mm</code>.
 -  **RequestedFlightInfo.ODPair.DepaturePoint** - contains information about the departure point. Data type - array.
 -  **RequestedFlightInfo.ODPair.DepaturePoint.Code** - 3-letter code of the airport/city of departure. Data type - string.
 -  **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** - attribute showing that the city code is used as the departure point (optional). Data type - bool.
