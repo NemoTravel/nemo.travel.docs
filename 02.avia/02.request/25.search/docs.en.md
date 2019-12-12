@@ -9,6 +9,7 @@ taxonomy:
 
 Version 1.2. flight search.
 
+>>>> Alternative airports only supported for GDS Sabre, Amadeus and CRS Navitaire. <br>
 >>>> The GDS restriction: while requesting alternative airports, alternative flight classes/fares will not be requested for the Sabre GDS.
 
 #### Request
