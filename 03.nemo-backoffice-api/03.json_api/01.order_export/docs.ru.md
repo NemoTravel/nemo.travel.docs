@@ -289,10 +289,10 @@ taxonomy:
 * **data.price.components.charges.components.agencyProfit.components.promoDiscount.amount** — сумма скидки по промокоду. Тип данных — строка.
 * **data.price.components.charges.components.agencyProfit.components.promoDiscount.currency** — код валюты суммы скидки по промокоду. Тип данных — строка.
 * **data.price.components.charges.components.agencyProfit.components.promoDiscount.promocode** — контейнер с информацией о введённом промокоде. Тип данных — сложный.
-* **data.price.components.charges.components.agencyProfit.components.promoDiscount.promocode.id** - индентификатор промокода. Тип данных - строка.
-* **data.price.components.charges.components.agencyProfit.components.promoDiscount.promocode.code** - введённый промокод. Тип данных - строка.
-* **data.price.components.charges.components.agencyProfit.components.promoDiscount.promocode.actionId** - индетификатор кода акции. Тип данных строка.
-* **data.price.components.charges.components.agencyProfit.components.promoDiscount.promocode.actionCode** - уникальный код акции. Тип данных - строка.
+* **data.price.components.charges.components.agencyProfit.components.promoDiscount.promocode.id** — индентификатор промокода. Тип данных - строка.
+* **data.price.components.charges.components.agencyProfit.components.promoDiscount.promocode.code** — введённый промокод. Тип данных - строка.
+* **data.price.components.charges.components.agencyProfit.components.promoDiscount.promocode.actionId** — индетификатор кода акции. Тип данных строка.
+* **data.price.components.charges.components.agencyProfit.components.promoDiscount.promocode.actionCode** — уникальный код акции. Тип данных - строка.
 * **data.price.components.charges.components.agencyProfit.components.roundingMarkup** — контейнер с информацией о округляющем сборе Тип данных — сложный
 * **data.price.components.charges.components.agencyProfit.components.roundingMarkup.amount** — размер округляющего сбора. Тип данных — строка.
 * **data.price.components.charges.components.agencyProfit.components.roundingMarkup.currency** — код валюты округлящего сбора. Тип данных — строка.
