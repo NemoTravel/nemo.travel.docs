@@ -161,7 +161,7 @@ Train search. While searching, only basic information about the trains in the re
                 <GenderType nil="true"/>
                 <ID>0</ID>
                 <MaxPrice nil="true"/>
-                <PlacesCountInPrice>1</PlacesCountInPrice>
+                <PlacesCountInPrice>0</PlacesCountInPrice>
                 <Price nil="true"/>
                 <RoadType nil="true"/>
                 <SeatsNum>14</SeatsNum>
@@ -233,7 +233,7 @@ Train search. While searching, only basic information about the trains in the re
                         <Currency>RUB</Currency>
                         <NDS>0</NDS>
                     </MaxPrice>
-                    <PlacesCountInPrice>1</PlacesCountInPrice>
+                    <PlacesCountInPrice>0</PlacesCountInPrice>
                     <Price>
                         <Amount>0</Amount>
                         <Currency>RUB</Currency>
