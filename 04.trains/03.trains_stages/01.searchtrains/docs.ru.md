@@ -89,7 +89,10 @@ title: SearchTrains
     -   **UNKNOWN** - не определён
 -   **Train.Categories.TCategory.Price** - Стоимость билетов в категории. Тип данных - сложный(Содержит все свойства элемента Money из общих элементов + дополнительное свойство).
 -   **Train.Categories.TCategory.Price.NDS** - НДС. Тип данных - дробное число.
--   **Train.Categories.TCategory.PlacesCountInPrice** - Признак стоимости за 2 места. Тип данных - целое 32-битное число.
+-   **Train.Categories.TCategory.PlacesCountInPrice** - Обязательное число одновременно выкупаемых мест. Тип данных - целое 32-битное число. Возможные значения:
+  - **0** - От поставщика не была получена информация об одновременной продаже мест;
+  - **2** - Обязателен выкуп 2 мест;  
+  - **4** - Обязателен выкуп купе целиком.
 -   **Train.Categories.TCategory.MaxPrice** - Максимальная стоимость билетов. Тип данных - сложный. Структура соответствует параметру TCategory.Price.
 -   **Train.Categories.TCategory.TimelimitToConfirm** - Отведённое время (в минутах) на оплату билета, после его бронирования. Тип данных - целое 32-битное число.
 -   **Train.Categories.TCategory.SeatsNum** - Количество мест. Тип данных - целое 32-битное число (может быть null).
@@ -166,7 +169,7 @@ title: SearchTrains
                 <GenderType nil="true"/>
                 <ID>0</ID>
                 <MaxPrice nil="true"/>
-                <PlacesCountInPrice>1</PlacesCountInPrice>
+                <PlacesCountInPrice>0</PlacesCountInPrice>
                 <Price nil="true"/>
                 <RoadType nil="true"/>
                 <SeatsNum>14</SeatsNum>
@@ -238,7 +241,7 @@ title: SearchTrains
                         <Currency>RUB</Currency>
                         <NDS>0</NDS>
                     </MaxPrice>
-                    <PlacesCountInPrice>1</PlacesCountInPrice>
+                    <PlacesCountInPrice>0</PlacesCountInPrice>
                     <Price>
                         <Amount>0</Amount>
                         <Currency>RUB</Currency>
