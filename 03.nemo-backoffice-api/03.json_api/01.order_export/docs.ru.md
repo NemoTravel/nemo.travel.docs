@@ -288,6 +288,11 @@ taxonomy:
 * **data.price.components.charges.components.agencyProfit.components.promoDiscount** — контейнер с информацией о скидке по промокоду. Тип данных — сложный
 * **data.price.components.charges.components.agencyProfit.components.promoDiscount.amount** — сумма скидки по промокоду. Тип данных — строка.
 * **data.price.components.charges.components.agencyProfit.components.promoDiscount.currency** — код валюты суммы скидки по промокоду. Тип данных — строка.
+* **data.price.components.charges.components.agencyProfit.components.promoDiscount.promocode** — контейнер с информацией о введённом промокоде. Тип данных — сложный.
+* **data.price.components.charges.components.agencyProfit.components.promoDiscount.promocode.id** - индентификатор промокода. Тип данных - строка.
+* **data.price.components.charges.components.agencyProfit.components.promoDiscount.promocode.code** - введённый промокод. Тип данных - строка.
+* **data.price.components.charges.components.agencyProfit.components.promoDiscount.promocode.actionId** - индетификатор кода акции. Тип данных строка.
+* **data.price.components.charges.components.agencyProfit.components.promoDiscount.promocode.actionCode** - уникальный код акции. Тип данных - строка.
 * **data.price.components.charges.components.agencyProfit.components.roundingMarkup** — контейнер с информацией о округляющем сборе Тип данных — сложный
 * **data.price.components.charges.components.agencyProfit.components.roundingMarkup.amount** — размер округляющего сбора. Тип данных — строка.
 * **data.price.components.charges.components.agencyProfit.components.roundingMarkup.currency** — код валюты округлящего сбора. Тип данных — строка.
@@ -832,7 +837,13 @@ taxonomy:
 								},
 								"promoDiscount": {
 									"amount": "0.00",
-									"currency": "RUB"
+									"currency": "RUB",
+                                    "promocode": {
+										"id": "33107",
+										"code": "93V6L4Z3U",
+										"actionId": "256",
+										"actionCode": "ed5293d0b4f3789dffad4ebffc2eddba"
+									},
 								},
 								"roundingMarkup": {
 									"amount": "0.00",
