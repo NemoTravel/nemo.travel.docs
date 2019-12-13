@@ -83,7 +83,10 @@ Train search. While searching, only basic information about the trains in the re
   -   **UNKNOWN** - not defined
 -   **Train.Categories.TCategory.Price** - Tickets price in the category. Data type - custom (Contains all the properties of the Money element from common elements + an additional attribute).
 -   **Train.Categories.TCategory.Price.NDS** - VAT. Data type - fractional number.
--   **Train.Categories.TCategory.PlacesCountInPrice** - Attribute of price for 2 seats. Data type - 32-bit integer.
+-   **Train.Categories.TCategory.PlacesCountInPrice** - Required number of seats bought at the same time. Data type - 32-bit integer. Possible values:
+  - **0** - No information was received from the supplier;
+  - **2** - 2 seats required;  
+  - **4** - It is required to buy the whole coupe.
 -   **Train.Categories.TCategory.MaxPrice** - Maximum tickets price. Data type - custom. The response structure is similar to the response to TCategory.Price.
 -   **Train.Categories.TCategory.TimelimitToConfirm** - Allotted time (in minutes) to pay for the ticket, after its' booking. Data type - 32-bit integer.
 -   **Train.Categories.TCategory.SeatsNum** - Number of seats. Data type - 32-bit integer (may be null).
