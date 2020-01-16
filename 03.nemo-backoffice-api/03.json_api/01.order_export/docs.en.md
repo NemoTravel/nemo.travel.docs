@@ -21,6 +21,7 @@ taxonomy:
 * **data.currentServerDate** — unload date by server time. Data type - string.
 * **data.customer** — container with customer data. Data type - custom.
 * **data.customer.userId** — user ID to which the unload object belongs. Data type - 64-bit integer.
+* **data.customer.userLogin** — user ID for authorization via json (authorisation through external systems). Data type - 64-bit integer.
 * **data.customer.agencyId** — ID of the head agency to which the unload object belongs. Data type - 64-bit integer.
 * **data.customer.сompanyId** — ID of the agency to which the unload object belongs. Data type - 64-bit integer.
 * **data.customer.backofficeCompanyId** — back office ID. Data type - string.
