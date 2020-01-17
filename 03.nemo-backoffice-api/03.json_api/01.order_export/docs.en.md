@@ -9,21 +9,21 @@ taxonomy:
 
 #### Options 
 
-* **method** — contains information on the type of an unload. Data type - string.
+* **method** — contains information on the type of an upload. Data type - string.
 * **apiVersion** — contains information on the API version. Data type - string.
-* **params** — parameters of the unloading object. Data type - custom.
-* **params.type** — type of unload object. Data type - string.
-* **params.id** — ID of the Nemo.Travel unload object. Data type - 64-bit integer.
-* **data** — container with data on the unload object. Data type - custom.
-* **data.system** — instance to which the unload object belongs. Data type - string.
-* **data.id** — ID of the unload object Nemo.Travel. Data type - 64-bit integer.
-* **data.lastModifiedDate** — date of the last modification of the unload object. Data type - string.
-* **data.currentServerDate** — unload date by server time. Data type - string.
+* **params** — parameters of the uploading object. Data type - custom.
+* **params.type** — type of upload object. Data type - string.
+* **params.id** — ID of the Nemo.Travel upload object. Data type - 64-bit integer.
+* **data** — container with data on the upload object. Data type - custom.
+* **data.system** — instance to which the upload object belongs. Data type - string.
+* **data.id** — ID of the upload object Nemo.Travel. Data type - 64-bit integer.
+* **data.lastModifiedDate** — date of the last modification of the upload object. Data type - string.
+* **data.currentServerDate** — upload date by server time. Data type - string.
 * **data.customer** — container with customer data. Data type - custom.
-* **data.customer.userId** — user ID to which the unload object belongs. Data type - 64-bit integer.
+* **data.customer.userId** — user ID to which the upload object belongs. Data type - 64-bit integer.
 * **data.customer.userLogin** — user login. Data type - 64-bit integer.
-* **data.customer.agencyId** — ID of the head agency to which the unload object belongs. Data type - 64-bit integer.
-* **data.customer.сompanyId** — ID of the agency to which the unload object belongs. Data type - 64-bit integer.
+* **data.customer.agencyId** — ID of the head agency to which the upload object belongs. Data type - 64-bit integer.
+* **data.customer.сompanyId** — ID of the agency to which the upload object belongs. Data type - 64-bit integer.
 * **data.customer.backofficeCompanyId** — back office ID. Data type - string.
 * **data.customer.name** — customer's name. Data type - string.
 * **data.customer.phone** — customer's phone number. Data type - string.
@@ -53,7 +53,7 @@ taxonomy:
 * **data.products.ID_FLT_N.info.nemo.utmSource** — transition source. Data type - string.
 * **data.products.ID_FLT_N.info.nemoConnect** — Nemo.Connect flight information container. Data type - custom.
 * **data.products.ID_FLT_N.info.nemoConnect.system** — instance to which the flight belongs. Data type - string.
-* **data.products.ID_FLT_N.info.nemoConnect.id** — ID of the Nemo.Connect. unload object. Data type - 64-bit integer.
+* **data.products.ID_FLT_N.info.nemoConnect.id** — ID of the Nemo.Connect upload object. Data type - 64-bit integer.
 * **data.products.ID_FLT_N.info.nemoConnect.packageID** — package ID. Data type - 64-bit integer.
 * **data.products.ID_FLT_N.info.nemoConnect.status** — flight status. Data type - string.
 * **data.products.ID_FLT_N.info.nemoConnect.subStatus** — flight sub-status. Data type - string.
@@ -148,7 +148,7 @@ taxonomy:
 * **data.products.ID_HTL_N.info.nemo.searchId** — search ID. Data type - 64-bit integer.
 * **data.products.ID_HTL_N.info.nemo.status** — hotel booking status. Data type - string.
 * **data.products.ID_HTL_N.info.nemoConnect.system** — instance to which the hotel applies. Data type - string.
-* **data.products.ID_HTL_N.info.nemoConnect.id** — ID of the Nemo.Connect unload object. Data type - 64-bit integer.
+* **data.products.ID_HTL_N.info.nemoConnect.id** — ID of the Nemo.Connect upload object. Data type - 64-bit integer.
 * **data.products.ID_HTL_N.info.nemoConnect.status** — hotel booking status. Data type - string.
 * **data.products.ID_HTL_N.info.supplier** — container with information on the supplier. Data type - custom.
 * **data.products.ID_HTL_N.info.supplier.system** — supplier name. Data type - string.
@@ -195,7 +195,7 @@ taxonomy:
 * **data.products.ID_TRN_N.info.nemo.utmSource** — transition source. Data type - string.
 * **data.products.ID_TRN_N.info.nemoConnect** — container with order information from Nemo.Connect. Data type - custom.
 * **data.products.ID_TRN_N.info.nemoConnect.system** — instance to which the order belongs. Data type - string.
-* **data.products.ID_TRN_N.info.nemoConnect.id** — Nemo.Connect unload object ID. Data type - 64-bit integer.
+* **data.products.ID_TRN_N.info.nemoConnect.id** — Nemo.Connect upload object ID. Data type - 64-bit integer.
 * **data.products.ID_TRN_N.info.nemoConnect.status** — order status. Data type - string.
 * **data.products.ID_TRN_N.info.nemoConnect.subStatus** — order sub-status. Data type - string.
 * **data.products.ID_TRN_N.dates** — container with date information. Data type - custom.
