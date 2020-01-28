@@ -343,14 +343,16 @@ title: BookTrain
 	-	infant
 <!--- -   **DepStationFromSearch** - --->
 -   **DepStationName** - Полное название станции прибытия. Тип данных - строка.
--   **DepTimezoneCode** - временная зона станции прибытия. Тип данных - строка.
--   **EndDate** -  Дата прибытия. Тип данных - строка.
+-   **DepTimezoneCode** - Временная зона станции прибытия. Тип данных - строка.
+-   **ArrTimezoneCode** - Временная зона станции отбытия. Тип данных - строка.
+-   **EndDate** - Дата прибытия. Тип данных - строка.
+-   **BeginDate** - Дата отбытия. Тип данных - строка.
+-   **LocalBeginDate** - Дата прибытия с указанием локального времени. Тип данных - строка.
+-   **LocalEndDate** - Дата отбытия с указанием локального времени. Тип данных - строка.
 <!--- -   **Environment** -  --->
 -   **IsEticketPrintPoint** - Признак наличия электронного билета. Тип данных - булев.
-<!--- -   **IsSuburbanTrain** - 
--   **LocalBeginDate** - 
--   **LocalEndDate** - 
--   **PrintPoint** - 
+<!--- -   **IsSuburbanTrain** - --->
+<!--- -   **PrintPoint** - 
 -   **PrintPoint.Direction** - 
 -   **PrintPoint.Info** - 
 -   **RequisitesId** - --->
