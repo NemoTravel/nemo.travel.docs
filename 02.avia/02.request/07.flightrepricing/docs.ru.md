@@ -56,9 +56,9 @@ taxonomy:
               <ns1:Tag>agt</ns1:Tag>
               <ns1:Tag>api</ns1:Tag>
               <ns1:Tag>UTMSource:111</ns1:Tag>
-              <ns1:Tag>46431</ns1:Tag>
-              <ns1:Tag>210882</ns1:Tag>
-              <ns1:Tag>210883</ns1:Tag>
+              <ns1:Tag>11111</ns1:Tag>
+              <ns1:Tag>222222</ns1:Tag>
+              <ns1:Tag>333333</ns1:Tag>
             </ns2:RequestorTags>
           </ns2:PricingInfo>
         </ns1:RequestBody>
