@@ -42,10 +42,25 @@ Flight repricing. The request includes the availability check of the flight. Sav
         <ns1:Requisites>
           <ns1:Login>LOGIN</ns1:Login>
           <ns1:Password>PASSWORD</ns1:Password>
+          <ns1:UserContextId>111111</ns1:UserContextId>
         </ns1:Requisites>
-        <ns1:UserID>30330</ns1:UserID>
+        <ns1:UserID>22222</ns1:UserID>
+        <ns1:RequestType>P</ns1:RequestType>
         <ns1:RequestBody>
-          <ns2:FlightID>280310163000000</ns2:FlightID>
+          <ns2:FlightID>10001001011100011</ns2:FlightID>
+          <ns2:PricingInfo>
+            <ns2:ValidatingCompany>ZZ</ns2:ValidatingCompany>
+            <ns2:RequestorTags>
+              <ns1:Tag>b2c</ns1:Tag>
+              <ns1:Tag>usr</ns1:Tag>
+              <ns1:Tag>agt</ns1:Tag>
+              <ns1:Tag>api</ns1:Tag>
+              <ns1:Tag>UTMSource:111</ns1:Tag>
+              <ns1:Tag>11111</ns1:Tag>
+              <ns1:Tag>222222</ns1:Tag>
+              <ns1:Tag>333333</ns1:Tag>
+            </ns2:RequestorTags>
+          </ns2:PricingInfo>
         </ns1:RequestBody>
       </ns2:Request>
     </ns2:FlightRepricing>
