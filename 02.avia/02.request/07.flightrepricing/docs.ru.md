@@ -47,13 +47,13 @@ taxonomy:
                 <ns1:RequestBody>
                     <ns2:FlightID>31501584974050012</ns2:FlightID>
                     <ns2:PricingInfo>
-                        <ns2:IsMixerDisabled>false</ns2:IsMixerDisabled>
                         <ns2:RequestorTags>
                             <ns1:Tag>UTMSource:1089</ns1:Tag>
                             <ns1:Tag>46431</ns1:Tag>
                             <ns1:Tag>210882</ns1:Tag>
                             <ns1:Tag>210883</ns1:Tag>
                         </ns2:RequestorTags>
+                        <ns2:IsMixerDisabled>false</ns2:IsMixerDisabled>
                     </ns2:PricingInfo>
                 </ns1:RequestBody>
             </ns2:Request>
