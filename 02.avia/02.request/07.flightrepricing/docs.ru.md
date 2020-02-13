@@ -40,18 +40,18 @@ taxonomy:
      <ns2:FlightRepricing>
             <ns2:Request>
                 <ns1:Requisites>
-                    <ns1:NemoOneAuthToken>69D55FC1D8505861FDF5A89D825AAD5E</ns1:NemoOneAuthToken>
+                    <ns1:NemoOneAuthToken>01A10BC1D1010101EFG1H00I001JKL0M</ns1:NemoOneAuthToken>
                 </ns1:Requisites>
-                <ns1:UserID>210883</ns1:UserID>
+                <ns1:UserID>111000</ns1:UserID>
                 <ns1:RequestType>U</ns1:RequestType>
                 <ns1:RequestBody>
-                    <ns2:FlightID>31501584974050012</ns2:FlightID>
+                    <ns2:FlightID>11100011100011100</ns2:FlightID>
                     <ns2:PricingInfo>
                         <ns2:RequestorTags>
                             <ns1:Tag>UTMSource:1089</ns1:Tag>
-                            <ns1:Tag>46431</ns1:Tag>
-                            <ns1:Tag>210882</ns1:Tag>
-                            <ns1:Tag>210883</ns1:Tag>
+                            <ns1:Tag>00011</ns1:Tag>
+                            <ns1:Tag>111000</ns1:Tag>
+                            <ns1:Tag>000111</ns1:Tag>
                         </ns2:RequestorTags>
                         <ns2:IsMixerDisabled>false</ns2:IsMixerDisabled>
                     </ns2:PricingInfo>
