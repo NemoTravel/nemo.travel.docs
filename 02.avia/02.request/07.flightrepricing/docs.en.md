@@ -37,36 +37,31 @@ Flight repricing. The request includes the availability check of the flight. Sav
 <?xml version="1.0" encoding="UTF-8"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
   <SOAP-ENV:Body>
-    <ns2:FlightRepricing>
-      <ns2:Request>
-        <ns1:Requisites>
-          <ns1:Login>LOGIN</ns1:Login>
-          <ns1:Password>PASSWORD</ns1:Password>
-          <ns1:UserContextId>111111</ns1:UserContextId>
-        </ns1:Requisites>
-        <ns1:UserID>22222</ns1:UserID>
-        <ns1:RequestType>P</ns1:RequestType>
-        <ns1:RequestBody>
-          <ns2:FlightID>10001001011100011</ns2:FlightID>
-          <ns2:PricingInfo>
-            <ns2:ValidatingCompany>ZZ</ns2:ValidatingCompany>
-            <ns2:RequestorTags>
-              <ns1:Tag>b2c</ns1:Tag>
-              <ns1:Tag>usr</ns1:Tag>
-              <ns1:Tag>agt</ns1:Tag>
-              <ns1:Tag>api</ns1:Tag>
-              <ns1:Tag>UTMSource:111</ns1:Tag>
-              <ns1:Tag>11111</ns1:Tag>
-              <ns1:Tag>222222</ns1:Tag>
-              <ns1:Tag>333333</ns1:Tag>
-            </ns2:RequestorTags>
-          </ns2:PricingInfo>
-        </ns1:RequestBody>
-      </ns2:Request>
-    </ns2:FlightRepricing>
+     <ns2:FlightRepricing>
+            <ns2:Request>
+                <ns1:Requisites>
+                    <ns1:NemoOneAuthToken>01A10BC1D1010101EFG1H00I001JKL0M</ns1:NemoOneAuthToken>
+                </ns1:Requisites>
+                <ns1:UserID>111000</ns1:UserID>
+                <ns1:RequestType>U</ns1:RequestType>
+                <ns1:RequestBody>
+                    <ns2:FlightID>11100011100011100</ns2:FlightID>
+                    <ns2:PricingInfo>
+                        <ns2:RequestorTags>
+                            <ns1:Tag>UTMSource:1089</ns1:Tag>
+                            <ns1:Tag>00011</ns1:Tag>
+                            <ns1:Tag>111000</ns1:Tag>
+                            <ns1:Tag>000111</ns1:Tag>
+                        </ns2:RequestorTags>
+                        <ns2:IsMixerDisabled>false</ns2:IsMixerDisabled>
+                    </ns2:PricingInfo>
+                </ns1:RequestBody>
+            </ns2:Request>
+        </ns2:FlightRepricing>
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
+
 
 #### Response
 
