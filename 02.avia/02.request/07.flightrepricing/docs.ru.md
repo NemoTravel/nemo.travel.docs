@@ -48,7 +48,7 @@ taxonomy:
                     <ns2:FlightID>11100011100011100</ns2:FlightID>
                     <ns2:PricingInfo>
                         <ns2:RequestorTags>
-                            <ns1:Tag>UTMSource:1089</ns1:Tag>
+                            <ns1:Tag>UTMSource:1010</ns1:Tag>
                             <ns1:Tag>00011</ns1:Tag>
                             <ns1:Tag>111000</ns1:Tag>
                             <ns1:Tag>000111</ns1:Tag>
