@@ -175,7 +175,7 @@ Flight representation format 1.1.
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty** - airline penalty for the exchange. Data type - array.
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty.Currency** - penalty currency code. Data type - string.
 -   **PassengerFare.ExchangePriceInfo.AirlinePenalty.Amount** - penalty amount. Data type - fractional number.
--   **Flight.Price.TimeLimit** — time-limit for this price in the UTC +0 zone (the price is valid till) in the format ISO 8601: <code>yyyy-mm-ddthh:mm:ssZ</code>. Data type - ZonedDateTime.
+-   **Flight.PriceInfo.Price.TimeLimit** — time-limit for this price in the UTC +0 zone (the price is valid till) in the format ISO 8601: <code>yyyy-mm-ddthh:mm:ssZ</code>. Data type - ZonedDateTime.
 -   **Flight.FareFamiliesDescription** - contains descriptions of the fare families in the flight. Data type - [Description](/avia/common/ff-description).
 -   **Flight.CanHaveSubsidizedTariffs** - attribute of the possibility to apply subsidies to this fare. Data type - bool.
 -   **Flight.BookingURL** - URL to which the user will be redirected for the following flight registration. Data type - string.
