@@ -53,6 +53,16 @@ The latest version of the request, differences are only in the response in the a
               </ns1:EndUserData>
             </ns1:DataItem>
           </ns2:DataItems>
+            <ns2:RequestorTags>
+            <ns1:Tag>b2c</ns1:Tag>
+            <ns1:Tag>usr</ns1:Tag>
+            <ns1:Tag>agt</ns1:Tag>
+            <ns1:Tag>api</ns1:Tag>
+            <ns1:Tag>UTMSource:101</ns1:Tag>
+            <ns1:Tag>11000</ns1:Tag>
+            <ns1:Tag>111000</ns1:Tag>
+            <ns1:Tag>000111</ns1:Tag>
+          </ns2:RequestorTags>
         </ns1:RequestBody>
       </ns2:Request>
     </ns2:Ticket_2_2>
