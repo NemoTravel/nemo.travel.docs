@@ -194,9 +194,9 @@ title: BookTrain
 -   **BookCode** - код брони в системе поставщика. Тип данных - строка.
 -   **BookID** - идентификатор брони. Тип данных - целое 32-битное число.
 -   **Date** - дата и время создания бронирования. Формат: yyyy-mm-dd hh:mm:ss. Тип данных - строка.
-<!-- -   **EMDs** - 
+-   **EMDs** - 
 -   **ERTimelimit** - 
--   **Fops** - -->
+-   **Fops** -
 -   **OwnerID** - ID брони. Тип данных - строка.
 -   **Passengers** - пассажиры брони.  Тип данных - сложный.
 -   **Passengers.BookedPerson** - описание. Тип данных - сложный (Содержит все свойства элемента Person из [общих элементов](/trains/elements) + дополнительные свойства).
@@ -242,14 +242,14 @@ title: BookTrain
 -   **Passengers.BookedPerson.Ticket.Charge.Amount** - величина агентского сбора. 
 -   **Passengers.BookedPerson.Ticket.Charge.Currency** - валюта агентского сбора. Тип данных - строка.
 -   **Passengers.BookedPerson.Ticket.Description** - описание места. Тип данных - строка.
-<!-- -   **Passengers.BookedPerson.Ticket.ExtBlankID** - -->
+-   **Passengers.BookedPerson.Ticket.ExtBlankID** -
 -   **Passengers.BookedPerson.Ticket.IsERegistered** - cтатус электронной регистрации (ЭР) билета. true - ЭР включена, false - ЭР выключена. Тип данных - булев.
 -   **Passengers.BookedPerson.Ticket.TicketNumber** - номер билета. Тип данных - строка.
 -   **Passengers.BookedPerson.Ticket.IsERegistered** - статус электронной регистрации (ЭР) билета. true - включена ЭР, false - ЭР выключена. Тип данных - булев.
 -   **Passengers.BookedPerson.Ticket.IsNonRefundable** - признак невозможности возврата билета. Тип данных - булев. 
 -   **Passengers.BookedPerson.Ticket.IsPrinted** - признак того, что билет распечатан. Тип данных - булев.
--   **Passengers.BookedPerson.Ticket.IsReturn** - Является ли билет обратным. Тип данных - булев.
-<!-- -   **Passengers.BookedPerson.Ticket.PaymentNumber** - -->
+-   **Passengers.BookedPerson.Ticket.IsReturn** - является ли билет обратным. Тип данных - булев.
+-   **Passengers.BookedPerson.Ticket.PaymentNumber** - 
 -   **Passengers.BookedPerson.Ticket.Price** - стоимость одного билета. аналогично Passengers.BookedPerson.Price.
 -   **Passengers.BookedPerson.Ticket.RefundCharge** - контейнер с информацией о размере сбора за возврат билета. Тип данных - сложный.
 -   **Passengers.BookedPerson.Ticket.RefundCharge.Amount** - размер сбора за возврат билета.
@@ -274,12 +274,12 @@ title: BookTrain
     -   **book (0)** - Забронирован
     -   **cancel (1)** - Отменён
     -   **ticket (2)** - Выписан 
-<!-- -   **StatusChanging** - Тип данных - булев.
- -   **SupplierStatus** - 
--   **TimelimitToConfirm** --->
+-   **StatusChanging** - Тип данных - булев.
+-   **SupplierStatus** - 
+-   **TimelimitToConfirm** -
 -   **Train** - поезд, в котором бронируются билеты. Тип данных - сложный. Структура аналогична параметру Train из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
-<!-- -   **AllowedDocTypes** - 
--   **TransactionId** - -->
+-   **AllowedDocTypes** - 
+-   **TransactionId** -
 -   **WasSuccessTicketing** - признак того, что выписка билета была успешной. Тип данных - булев.
 -   **WasTicketingAttempt** - признак того, что была попытка выписки, вне зависимости от ее результата. Тип данных - булев.
 
