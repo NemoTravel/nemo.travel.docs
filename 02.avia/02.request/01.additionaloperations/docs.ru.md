@@ -90,6 +90,19 @@ taxonomy:
           <ns2:Operations>
             <ns2:Operation>ActualizeFlight</ns2:Operation>
           </ns2:Operations>
+            <ns2:PricingInfo>
+              <ns2:RequestorTags>
+                <ns1:Tag>b2c</ns1:Tag>
+                <ns1:Tag>usr</ns1:Tag>
+                <ns1:Tag>agt</ns1:Tag>
+                <ns1:Tag>api</ns1:Tag>
+                <ns1:Tag>UTMSource:00</ns1:Tag>
+                <ns1:Tag>00111</ns1:Tag>
+                <ns1:Tag>000111</ns1:Tag>
+                <ns1:Tag>111000</ns1:Tag>
+              </ns2:RequestorTags>
+            </ns2:PricingInfo>
+            <ns2:Language>ru</ns2:Language>
           <ns2:OperationsRestrictions/>
         </ns1:RequestBody>
       </ns2:Request>
