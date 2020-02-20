@@ -128,6 +128,16 @@ Making changes to the booking with the response identical to [booking version 2.
               </ns1:DataItem>
             </ns1:ModifyDataItem>
           </ns2:DataItems>
+           <ns3:RequestorTags>
+            <ns1:Tag>b2c</ns1:Tag>
+            <ns1:Tag>usr</ns1:Tag>
+            <ns1:Tag>agt</ns1:Tag>
+            <ns1:Tag>api</ns1:Tag>
+            <ns1:Tag>UTMSource:101</ns1:Tag>
+            <ns1:Tag>11222</ns1:Tag>
+            <ns1:Tag>111222</ns1:Tag>
+            <ns1:Tag>222111</ns1:Tag>
+          </ns3:RequestorTags>
         </ns1:RequestBody>
       </ns2:Request>
     </ns2:ModifyBook_2_2>
