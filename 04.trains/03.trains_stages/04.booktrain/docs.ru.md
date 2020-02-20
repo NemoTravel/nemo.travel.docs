@@ -274,9 +274,9 @@ title: BookTrain
     -   **book (0)** - Забронирован
     -   **cancel (1)** - Отменён
     -   **ticket (2)** - Выписан 
--   **StatusChanging** - Тип данных - булев.
-<!-- -   **SupplierStatus** - 
--   **TimelimitToConfirm** - -->
+<!-- -   **StatusChanging** - Тип данных - булев.
+ -   **SupplierStatus** - 
+-   **TimelimitToConfirm** --->
 -   **Train** - поезд, в котором бронируются билеты. Тип данных - сложный. Структура аналогична параметру Train из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
 <!-- -   **AllowedDocTypes** - 
 -   **TransactionId** - -->
