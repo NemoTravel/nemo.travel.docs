@@ -41,12 +41,12 @@ The latest version of the request, differences are only in the response to the r
           <ns2:PricingOptions>
           <ns2:NoReprice>true</ns2:NoReprice>
           </ns2:PricingOptions>
-           <ns3:RequestorTags>
+           <ns2:RequestorTags>
             <ns1:Tag>UTMSource:375</ns1:Tag>
             <ns1:Tag>11100</ns1:Tag>
             <ns1:Tag>000111</ns1:Tag>
             <ns1:Tag>111000</ns1:Tag>
-           </ns3:RequestorTags>
+           </ns2:RequestorTags>
         </ns1:RequestBody>
       </ns2:Request>
     </ns2:UpdateBook_2_2>
