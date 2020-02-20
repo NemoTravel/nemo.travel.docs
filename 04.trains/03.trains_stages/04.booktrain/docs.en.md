@@ -175,187 +175,95 @@ Train seats booking.
 
 #### Ответ
 
--   **Status** - Статус заказа. Тип данных - перечисление. Возможные значения:
-    -   **book (0)** - Забронирован
-    -   **cancel (1)** - Отменён
-    -   **ticket (2)** - Выписан 
--   **Balance** - блок баланса агента. Тип данных - сложный.
--   **Balance.Amount** - баланс агента. Тип данных - целое 32-битное число.
--   **Balance.Currency** - валюта баланса агента. Тип данных - строка.
--   **BlankPreferredType** - Предпочитаемый тип бланка. Тип данных - перечисление. Возможные значения аналогичны параметру BlankPrefferredType из запроса на бронирование.
--   **BookCode** - Код брони в системе поставщика. Тип данных - строка.
--   **Date** - Дата и время создания бронирования. Формат: yyyy-mm-dd hh:mm:ss. Тип данных - строка.
--   **Timelimit** - Таймлимит. Формат: yyyy-mm-dd hh:mm:ss. Тип данных - строка.
--   **BookCode** - Код брони в системе поставщика. Тип данных - строка.
--   **RefundCode** - Код возврата. Тип данных - строка.
--   **BookID** - Идентификатор брони. Тип данных - целое 32-битное число.
--   **Passengers** - Пассажиры брони.
--   **ReturnTrainTariffCode** -  Для поезда обратно, код выбраного тарифа поезда.Тип данных - перечисление, возможные значения такие же как у TariffCode:
-    - 1 - **Полный** 
-    - 2 - **Детский(до 10 лет)** 
-    - 3 - **Детский без места(до 5 лет)**
-    - 4 - **SENIOR(60+) в Сапсан** 
-    - 5 - **SENIOR(от 60 лет)** 
-    - 6 - **JUNIOR(от 12 до 26 лет)** 
-    - 7 - **Детский(до 12 лет)** 
-    - 8 - **Детский без места(до 4 лет)** 
-    - 9 - **Детский(до 17 лет)**
-    - 10 - **Детский без места(до 6 лет)** 
-    - 11 - **Детский(до 7 лет)** 
-    - 12 - **Детский без места(до 10 лет)** 
-    - 13 - **Детский(от 10 до 17 лет)**
-    - 14 - **Школьник (для учащихся от 10 лет)**
-    - 15 - **Детский без места (для детей до 12 лет)** 
-    - 16 - **Детский без места (для детей до 6 лет)** 
-    - 17 - **Молодежный ЮНИОР (для лиц от 10 до 21 года)**
-    - 18 - **Праздничный** 
-    - 19 - **Свадебный** 
-    - 20 - **Семейный** 
--   **TariffCode** - Код выбраного тарифа поезда.Тип данных - перечисление, возможные значения:
--   **ReturnTrainBookCode** - Для поезда обратно, код возврата. Тип данных - строка. Аналогичен параметру RefundCode.
--   **ReturnTrainRefundCode** - Для поезда обратно, код брони в системе поставщика. Тип данных - строка. Аналогичен параметру BookCode.
--   **Passengers.BookedPerson** - описание. Тип данных - сложный (Содержит все свойства элемента Person из [общих элементов](/trains/elements) + дополнительные свойства).
--   **Passengers.BookedPerson.DateOfBirth** - Дата рождения. Тип данных - строка.
--   **Passengers.BookedPerson.Nationality** - Национальность. Тип данных - строка.
--   **Passengers.BookedPerson.Gender** - Пол. Тип данных - строка.
--   **Passengers.BookedPerson.FirstName** - Имя. Тип данных - строка.
--   **Passengers.BookedPerson.MiddleName** - Отчество. Тип данных - строка.
--   **Passengers.BookedPerson.LastName** - Фамилия. Тип данных - строка.
--   **Passengers.BookedPerson.SupplierID** - ID пассажира от поставщика(реализовано только у Сирены), Тип данных - строка.
--   **Passengers.BookedPerson.Type** - Тип пассажира. Тип данных -
--   <!--**Passengers.BookedPerson.Document**--> 
--   **Passengers.BookedPerson.Document.DocType** - Тип документа. Тип данных - строка.
--   **Passengers.BookedPerson.Document.DocNum** -  Номер документа. Тип данных - строка.
--   **Passengers.BookedPerson.Price** - Стоимость всех билетов пассажира. Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
--   **Passengers.BookedPerson.Tickets** - Билеты пассажира. Тип данных - массив элементов TicketInformation.
--   **Passengers.BookedPerson.Ticket** - Информация о билете. Тип данных - сложный.
--   **Passengers.BookedPerson.Ticket.TicketNumber** - Номер билета. Тип данных - строка.
--   **Passengers.BookedPerson.Ticket.IsERegistered** - Статус электронной регистрации (ЭР) билета. true - включена ЭР, false - ЭР выключена. Тип данных - булев.
--   **Passengers.BookedPerson.Ticket.BlankID** - Идентификатор бланка в системе поставщика. Тип данных - строка.
--   **Passengers.BookedPerson.Ticket.Charge** - контейнер с информацией о сборе агенства. Тип данных - сложный.
--   **Passengers.BookedPerson.Ticket.Charge.Amount** - величина агентского сбора. 
--   **Passengers.BookedPerson.Ticket.Charge.Currency** - валюта агентского сбора. Тип данных - строка.
--   **Passengers.BookedPerson.Ticket.Status** - Статус билета. Может отличаться от общего статуса заказа. Тип данных - перечисление. Возможные значения аналогичны параметру Status.
--   **Passengers.BookedPerson.Ticket.IsPrinted** - Признак распечатки билета. Тип данных - булев.
--   **Passengers.BookedPerson.Ticket.TariffType** - Тип тарифа, ПОЛНЫЙ и тп. - описание из GDS. Тип данных - строка.
--   **Passengers.BookedPerson.Ticket.RefundCharge** - контейнер с информацией о размере сбора за возвра билета. Тип данных - сложный.
--   **Passengers.BookedPerson.Ticket.RefundCharge.Amount** - размер сбора за созврат билета.
--   **Passengers.BookedPerson.Ticket.RefundCharge.Currency** - информация о валюте сбора за возврат. Тип данных - строка.
--   **Passengers.BookedPerson.Ticket.RefundCode** - ID транзакции возврата. Тип данных - строка.
--   **Passengers.BookedPerson.Ticket.ReturnTrainRefundCode** -Для поезда обратно, ID транзакции возврата. Аналогичен параметру BookedPerson.Ticket.RefundCode.
--   **Passengers.BookedPerson.Ticket.SeatNum** - Номер места в вагоне. Тип данных - строка.
--   **Passengers.BookedPerson.Ticket.Services** - Дополнительные услуги. Тип данных - перечисление. Возможные значения аналогичны параметру Car.Services из ответа на запрос [поиска](/trains/trains_stages/searchtrains) (может быть несколько через пробел, может быть пустым).
--   **Passengers.BookedPerson.Ticket.Price** - Стоимость билета. Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
--   **Passengers.BookedPerson.Ticket.Service** - Стоимость сервиса по электронному билету. Доступно только при бронировании через UFS. Тип данных - сложный. Структура аналогична параметру   TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
--   **Passengers.BookedPerson.Ticket.RefundPrice** - Сумма к возврату от стоимости билета. Доступно только при бронировании через UFS и после [получения дополнительной информации перед сдачей билетов](/trains/trains_stages/getrefundinfo). Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
--   **Passengers.BookedPerson.Ticket.RefundService** - Сумма к возврату от стоимости сервиса по электронному билету. Доступно только при бронировании через UFS и после [получения дополнительной информации перед сдачей билетов](/trains/trains_stages/getrefundinfo). Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
--   **Passengers.BookedPerson.Ticket.RefundPenalty** - Контейнер с информацией о сборе за возврат. Доступно при бронировании через UFS и KTZ после [получения дополнительной информации перед сдачей билетов](/trains/trains_stages/getrefundinfo). Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
--   **Passengers.BookedPerson.Ticket.RefundPenalty.Amount** - сумма сбора за возврат. Тип данных - строка.
--   **Passengers.BookedPerson.Ticket.RefundPenalty.Currency** - название валюты, в которой происходит сбор за возврат. Тип данных - строка.
--   **Passengers.BookedPerson.Ticket.RefundPenalty.NDS** - НДС со сбора на возврат. Тип данных - строка.
--   **Passengers.BookedPerson.Ticket.IsReturn** - Является ли билет обратным. Тип данных - булев.
--   **Passengers.BookedPerson.Ticket.TransportDocs** - Транспортировочные документы. Тип данных - массив элементов TransportDoc.
--   **TransportDoc** - Транспортировочный документ. Тип данных - сложный.
--   **TransportDoc.IsERegistered** - Электронность документа. Тип данных - булев.
--   **TransportDoc.Status** - Статус документа. Тип данных - перечисление. Возможные значения аналогичны параметру Status.
--   **TransportDoc.BlankID** - Идентификатор документа в системе поставщика. Тип данных - строка.
--   **TransportDoc.Kind** - Вид багажа. Тип данных - перечисление. Возможные значения:
-    -   **Unknown (0)** - Неизвестный
-    -   **Apparatus (1)** - Аппаратура
-    -   **Animal (2)** - Животные
-    -   **Carryon (3)** - Ручная кладь
--   **TransportDoc.Weight** - Вес багажа. Тип данных - целое 32-битное число (может быть null).
--   **TransportDoc.Price** - Стоимость документа на багаж. Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
--   **TransportDoc.RefundCode** - Код возврата. Тип данных - строка.
--   **TransportDoc.OrderNumber** - Номер заказа. Тип данных - строка.
--   **Train** - Поезд, в котором бронируются билеты. Тип данных - сложный. Структура аналогична параметру Train из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
--   **ReturnTrain** - Поезд, в котором бронируются обратные билеты. Тип данных - сложный. Структура аналогична параметру Train из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
--   **Price** - Полная стоимость брони. Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
--   **WasSuccessTicketing** - Признак того, что выписка билета была успешной. Тип данных - булев.
--   **WasTicketingAttempt** - Признак того, что была попытка выписки, вне зависимости от ее результата. Тип данных - булев. 
--   **Car** - Вагон. Тип данных - сложный.
--   **Car.IsCarERegister** - Признак наличия электронной регистрации / электронного билета в вагоне. Тип данных - булев (может быть null).
--   **Car.IsThrough** - Признак беспересадочного вагона. Актуальная информация получается в ответе на запрос полной информации о поезде. Тип данных - булев.
--   **Car.Number** - Номер вагона. Тип данных - строка.
-<!--- -   **Car.BethClothesSelectionInd** - 
--   **Car.ERChangeAllowedDuringBooking** - --->
--   **Car.HasNonRefundableTariffs** - признак не возвратного тарифа. Тип данных - булев.
--   **Car.PlacePrice** - контейнер для информации о цене мест определенного типа в вагоне. Тип данных - сложный.
--   **Car.PlacePrice.Amount** - цена за место. Тип данных - дробное число.
--   **Car.PlacePrice.Places** - список мест, относящихся к данному типу, через запятую. Тип данных - строка.
--   **Car.Discount** - Скидка. Тип данных - целое 32-битное число.
--   **Car.PlacePrice.Type** - тип мест. Тип данных - строка. Возможные значения:
-   - Up - верхнее
-   - Down - нижнее
-   - UpSide - верхнее боковое
-   - DownSide - нижнее боковое
-   - DownNearWCPlace - нижнее в последнем отсеке-купе
-   - UpNearWCPlace - верхнее в последнем отсеке-купе
-   - DownSideNearWCPlace - нижнее боковое в последнем отсеке-купе
-   - NearTheTable - у стола
-   - NearThePlayground - рядом с детской площадкой
-   - NearTheTableAndPlayground - у стола рядом с детской площадкой
-   - NearPassWithAnimal - рядом с местами для пассажиров с животными
-   - Normal - обычные (не у стола)
-   - InCompartment - в отсеке
-   - Folding - откидные
-   - PassWithAnimal - для пассажиров с животными
-   - MotherWithBaby - для матери и ребенка
-   - WithChildren - для пассажиров с детьми
--   **Car.PossibleAnimals** - Признак возможности провоза животных в вагоне. Тип данных - булев. 
--   **Car.Schema** - Схема вагона. Тип данных - строка.
--   **DelayedPaymentIsAvail** - Признак доступности отсроченного платежа. Тип данных - булев.
-<!--- -   **GenderSeats** - --->
--   **IsCarDynamicPricing** - Признак динамического ценообразования. Тип данных - булев. 
--   **LoyaltyCards** -  Контейнер с информацией о доступных картах лояльности. Тип данных - сложный.
--   **LoyaltyCards.LoyaltyCard** - доступные карты лояльности. Пример:
-	-	**RZHDBonusSavePoints** 
-	-	**RZHDBonusDiscount** 
-<!--- -   **PlacesCountInPrice** - --->
-<!--- -   **RoadType** - --->
-<!--- -   **TariffRequired** - Булевый --->
--   **Tariffs** - Контейнер с информацией о тарифах. Тип данных - сложный. 
--   **Tariffs.Tariff** - Контейнер с информацией о тарифе. Тип данных - сложный.
--   **Tariffs.Tariff.AgeFrom** - Возраст, от которого действует данный тариф. Тип данных - целое 32-х-битное число.
--	**Tariffs.Tariff.AgeTo** - Возраст, до которого действует данный тариф. Тип данных - целое 32-х-битное число.
-<!--- -   **Tariffs.Tariff.AgeFromOffset**--->
--   **Tariffs.Tariff.Code** -  Код тарифа. Тип данных - целое 32-х-битное число.
--   **Tariffs.Tariff.Description** - Описание тарифа. Тип данных - строка.
--   **Tariffs.Tariff.Name** - Название тарифа. Тип данных - строка.
--   **Tariffs.Tariff.PassTypes** -  Контейнер с типами пассажиров, подходящих под этот тариф. Тип данных - сложный.
--   **Tariffs.Tariff.PassTypes.PassType** - Тип пассажира для тарифа. Тип данных - строка. Возможные значения: 
-	-	adult
-	-	child
-	-	infant
-<!--- -   **DepStationFromSearch** - --->
--   **DepStationName** - Полное название станции прибытия. Тип данных - строка.
--   **DepTimezoneCode** - Временная зона станции прибытия. Параметр передается только в ответах поставщика КТЖ. Тип данных - строка.
--   **ArrTimezoneCode** - Временная зона станции отправления.  Параметр передается только в ответах поставщика КТЖ. Тип данных - строка.
--   **EndDate** - Дата прибытия. Тип данных - строка.
--   **BeginDate** - Дата отправления. Тип данных - строка.  
--   **LocalBeginDate** - Дата прибытия с указанием местного времени. Параметр передается только в ответах поставщика УФС. Тип данных - строка.
--   **LocalEndDate** - Дата отправления с указанием местного времени. Параметр передается только в ответах поставщика УФС. Тип данных - строка.
+-   **Status** - Order status. Data type - enumeration. Possible values:
+    -   **book (0)** - Reserved
+    -   **cancel (1)** - Canceled
+    -   **ticket (2)** - Issued
+-   **Balance** - agent’s balance block. Data type - custom.
+-   **Balance.Amount** - agent’s balance. Data type - 32-bit integer.
+-   **Balance.Currency** - agent’s balance currency. Data type - string.
+-   **Date** - Date and time the reservation was made. Format: yyyy-mm-dd hh:mm:ss. Data type - string.
+-   **Timelimit** - Time Limit. Format: yyyy-mm-dd hh:mm:ss. Data type - string.
+-   **BookCode** - Reservation code in the supplier’s system. Data type - string.
+-   **RefundCode** - Return code. Data type - string.
+-   **BookID** - Reservation ID. Data type - 32-bit integer.
+-   **Passengers** - Reservation Passengers.
+-   **ReturnTrainTariffCode** -  For the train back, the code of the selected train rate. Data type - transfer, possible values are the same as for TariffCode:
+    - 1 - **Full** 
+    - 2 - **Child (up to 10 years)** 
+    - 3 - **Child without a seat (up to 5 years)**
+    - 4 - **SENIOR(60+) to Sapsan** 
+    - 5 - **SENIOR(from 60 years old)** 
+    - 6 - **JUNIOR(12 to 26 years old)** 
+    - 7 - **Child (under 12)** 
+    - 8 - **Child without a seat (up to 4 years)** 
+    - 9 - **Child (under 17)**
+    - 10 - **Child without a seat (up to 6 years)** 
+    - 11 - **Child (up to 7 years)** 
+    - 12 - **Child without a seat (up to 10 years)** 
+    - 13 - **Child (10 to 17 years old)**
+    - 14 - **Schoolchild (for students from 10 years old)**
+    - 15 - **Child without a seat (for children under 12)** 
+    - 16 - **Child without a seat (for children under 6 years old)** 
+    - 17 - **Youth Junior (for persons from 10 to 21 years old)**
+    - 18 - **Holiday** 
+    - 19 - **Wedding** 
+    - 20 - **Family** 
+-   **TariffCode** - Code of the selected train rate. Data type - transfer, possible values:
+-   **ReturnTrainBookCode** - Return code for train back. Data type - string. Similar to RefundCode parameter.
+-   **ReturnTrainRefundCode** - Reservation code for return train in the supplier’s system. Data type - string. Similar to BookCode parameter.
+-   **Passengers.BookedPerson** - Description. Data type - custom (Contains all properties of the Person element from [common elements](/trains/elements) + additional attributes).
+-   **Passengers.BookedPerson.SupplierID** - Passenger's ID from the supplier (sold only in Sirena), Data type - string.
+-   **Passengers.BookedPerson.Price** - The cost of all passenger tickets. Data type - custom. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **Passengers.BookedPerson.Tickets** - Passenger tickets. Data type - array of TicketInformation elements.
+-   **Passengers.BookedPerson.Ticket** - Ticket information. Data type - custom.
+-   **Passengers.BookedPerson.Ticket.TicketNumber** - Ticket number. Data type - string.
+-   **Passengers.BookedPerson.Ticket.IsERegistered** - Status of the electronic registration (ER) of the ticket. true - ER is on, false - ER is off. Data type - boolean.
+-   **Passengers.BookedPerson.Ticket.BlankID** - Blank ID in the supplier’s system. Data type - string.
+-   **Passengers.BookedPerson.Ticket.Status** - Ticket status. May differ from the general order status. Data type - enumeration. Possible values are similar to the Status parameter.
+-   **Passengers.BookedPerson.Ticket.IsPrinted** - Ticket printout feature. Data type - boolean.
+-   **Passengers.BookedPerson.Ticket.TariffType** - Rate type, FULL etc. - description from the GDS. Data type - string.
+-   **Passengers.BookedPerson.Ticket.RefundCode** - ID of the return transaction. Data type - string.
+-   **Passengers.BookedPerson.Ticket.ReturnTrainRefundCode** - Return transaction ID for the train back. Similar to BookedPerson.Ticket.RefundCode.
+-   **Passengers.BookedPerson.Ticket.SeatNum** - Seat number in the car. Data type - string.
+-   **Passengers.BookedPerson.Ticket.Services** - Additional services. Data type - enumeration. The possible values are similar to the Car.Services parameter from the response to the following request: [search](/trains/trains_stages/searchtrains) (can be several items separated by a space, can be empty).
+-   **Passengers.BookedPerson.Ticket.Price** - Ticket price. Data type - custom. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **Passengers.BookedPerson.Ticket.Service** - Price of service by an e-ticket. Available only for booking via UFS. Data type - custom. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **Passengers.BookedPerson.Ticket.RefundPrice** - Amount to be returned from the ticket price. Available only when booking via UFS and after [getting more information before handing over tickets](/trains/trains_stages/getrefundinfo). Data type - custom. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **Passengers.BookedPerson.Ticket.RefundService** - Amount to be refunded from the price of service by the e-ticket. Available only when booking via UFS and after [getting more information before handing over tickets](/trains/trains_stages/getrefundinfo). Data type - custom. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **Passengers.BookedPerson.Ticket.RefundPenalty** - Container with information on refund penalty. Available only for booking via UFS and KTZ after [getting more information before handing over tickets](/trains/trains_stages/getrefundinfo). Data type - custom. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **Passengers.BookedPerson.Ticket.RefundPenalty.Amount** - Amount of refund penalty. Data type - string.
+-   **Passengers.BookedPerson.Ticket.RefundPenalty.Currency** - Name of the currency in which the refund penalty is carried out. Data type - string.
+-   **Passengers.BookedPerson.Ticket.RefundPenalty.NDS** - VAT from the refund penalty. Data type - string.
+-   **Passengers.BookedPerson.Ticket.IsReturn** - Whether the ticket is a return ticket. Data type - boolean.
+-   **Passengers.BookedPerson.Ticket.TransportDocs** - Shipping documents. Data type - array of TransportDoc elements.
+-   **TransportDoc** - A shipping document. Data type - custom.
+-   **TransportDoc.IsERegistered** - Whether the document is electronic. Data type - boolean.
+-   **TransportDoc.Status** - Document Status. Data type - enumeration. Possible values are similar to the Status parameter.
+-   **TransportDoc.BlankID** - Document ID in the supplier system. Data type - string.
+-   **TransportDoc.Kind** - Baggage type. Data type - enumeration. Possible values:
+    -   **Unknown (0)** - Unknown
+    -   **Apparatus (1)** - Equipment
+    -   **Animal (2)** - Animals
+    -   **Carryon (3)** - Hand Luggage
+-   **TransportDoc.Weight** -  Baggage weight. Data type - 32-bit integer (may be null).
+-   **TransportDoc.Price** - Cost of the baggage document. Data type - custom. The structure is similar to the TCategory. Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **TransportDoc.RefundCode** - Return code. Data type - string.
+-   **TransportDoc.OrderNumber** - Order number. Data type - string.
+-   **Train** - Train in which tickets are booked. Data type - custom. The structure is similar to the Train parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **ReturnTrain** - Train in which return tickets are booked. Data type - custom. The structure is similar to the Train parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **Price** - Full cost of the reservaton. Data type - custom. The structure is similar to the TCategory.Price parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **WasSuccessTicketing** - Description. Data type - boolean.
+-   **BlankPreferredType** - Preferred blank type. Data type - enumeration. Possible values are similar to the BlankPrefferredType parameter from the booking request. 
+-   **StatusChanging** - attribute showing that booking status is defined clearly and could change due to the error in the operation. With the "true" value, it is required to update the booking. Data type - boolean.
+-   **SupplierStatus** - booking status on the supplier's side. Only for GDS Sirena. Data type - string.
+-   **TimelimitToConfirm** - time limit to confirm the booking. Relevant for suppliers UZHD, Sirena, UFS. Data type - string.
+-   **Train** - train in which tickets are booked. Data type - custom. The structure is similar to the Train parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **TransactionId** - transaction ID for the supplier Sirena Travel. Data type - string.
+-   **WasSuccessTicketing** - attribute of successful tciketing. Data type - boolean.
+-   **WasTicketingAttempt** - attribute showing that there was a ticketing attempt, no matter the result. Data type - boolean.
 
->>>> Временные зоны, в которых указывается BeginDate и EndDate, могут быть разными. В ответе на запрос значение временной зоны может не передаваться, но в этом случае BeginDate и EndDate все равно могут находиться в разных временных зонах.
->>>> На стороне Немо информация о временной зоне с привязкой к пунктам отправления/прибытия отсутствует.
-
-<!--- -   **Environment** -  --->
--   **IsEticketPrintPoint** - Признак наличия электронного билета. Тип данных - булев.
-<!--- -   **IsSuburbanTrain** - --->
-<!--- -   **PrintPoint** - 
--   **PrintPoint.Direction** - 
--   **PrintPoint.Info** - 
--   **RequisitesId** - --->
--   **TrainEndPointName** - Сокращённое название станции назначения. Тип данных - строка. 
--   **TrainStartPointName** -  Сокращённое название станции отправления. Тип данных - строка. 
--   **TripTime** - Время в пути. Тип данных - строка в формате.. 
-<!--- -   **WebService** - --->
--   **OwnerID** -  ID брони. Тип данных - строка.
-<!--- -   **AvailableTariffs** - 
--   **AllowSeatsWithAnimals** - --->
-
-
-##### Пример ответа (XML)
+##### Sample response (XML)
 
 ```xml
  <BookTrainResponse>
