@@ -4,55 +4,41 @@ title: BookTrain
 
 ### BookTrain
 
-Бронирование мест в поезде.
+Train seats booking.
 
-#### Запрос
+#### Request
 
--   **TrainID** - Идентификатор поезда. Тип данных - целое 64-битное число.
--   **CatID** - Идентификатор категории в поезде. Тип данных - целое 32-битное число.
--   **CarNum** - Номер вагона. Тип данных - целое 32-битное число.
--   **Language** - Язык. Тип данных - строка.
-<!---   **DelayedPayment** ---> 
--   **SeatsPref** - Условия предпочитаемых мест. Тип данных - сложный.
--   **SeatsPref.Range** - Диапазон мест. Тип данных - сложный.
--   **SeatsPref.Range.From** - Начало диапазона. Тип данных - целое 32-битное число.
--   **SeatsPref.Range.To** - Окончание диапазона. Тип данных - целое 32-битное число.
--   **SeatsPref.UpperCount** - Количество верхних мест. Тип данных - целое 32-битное число.
--   **SeatsPref.LowerCount** - Количество нижних мест. Тип данных - целое 32-битное число.
--   **SeatsPref.LocPref** - Предпочитаемое расположение мест. Тип данных - перечисление. Возможные значения (может быть null):
-    -   **ONECOUPE** - В одном купе.
-    -   **ONESECTION** - В одной секции. Означает в купе + 2 прилегающих боковых места. Имеет смысл только в плацкартном вагоне. Если указан для купейного, то автоматически применяется вместо него значение ONECOUPE.
-    -   **NOTSIDE** - Не боковые места.
--   **SeatsPref.StoreyNumber** - Номер этажа. Тип данных - целое 32-битное число.
--   **SeatsPref.GenderPref** - Гендерный тип бронирования. Тип данных - перечисление. Возможные значения аналогичны параметру TCategory.GenderType из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
--   **SeatsPref.Bedclothes** - Требуется ли постельное бельё. По умолчанию false - не требуется. Тип данных - булев.
--   **SeatsPref.FullCoupe** - Признак того, что все забронированные места находятся в одном купе. Тип данных - булев. 
--   **SeatsPref.NoSide** - Не сбоку. Тип данных - булев.
--   **ERegister** - Электронная регистрация/электронный билет. Тип данных - булев.
--   **ERTimelimit** - Формат: yyyy-mm-dd hh:mm:ss. Тип данных - строка. Только для УФС. Значения:
-    -   Для поездов внутригосударственного сообщения, а также международное сообщение со странами-участниками СНГ, Литовской, Латвийской, Эстонской республиками, Республикой Абхазия (Train.Direction = 0): дату и время, до которого можно пройти электронную регистрацию и вернуть билет с ЭР в системе «УФС». Позднее этого времени возврат возможен только в кассах в претензионном порядке.
-    -   Для поездов международного сообщения в дальнем зарубежье по глобальным ценам. Направления Россия-Финляндия и Восток-Запад (Train.Direction = 1,2): дату и время, до которого можно пройти электронную регистрацию в системе «УФС».
--   **Passengers.** - Пассажиры, для которых бронируются места. Тип данных - массив элементов BookRQPerson.
--   **Passengers.BookRQPerson** - Пассажир бронирования. Тип данных - сложный (Содержит все свойства элемента Person из [общих элементов](/trains/elements) + дополнительное свойство).
--   **Passengers.BookRQPerson.DateOfBirth** - Дата рождения. Тип данных - строка.
--   **Passengers.BookRQPerson.Nationality** - Национальность. Тип данных - строка.
--   **Passengers.BookRQPerson.Gender** - Пол. Тип данных - строка.
--   **Passengers.BookRQPerson.FirstName** - Имя. Тип данных - строка.
--   **Passengers.BookRQPerson.MiddleName** - Отчество. Тип данных - строка.
--   **Passengers.BookRQPerson.LastName** - Фамилия. Тип данных - строка.
--   **Passengers.BookRQPerson.Phone** - Номер телефона (UFS, Sirena). Тип данных - строка.
--   **Passengers.BookRQPerson.Email** - Адрес электронной почты (UFS, Sirena). Тип данных - строка.
--   **Passengers.BookRQPerson.Document** - Документ пассажира. Тип данных - сложный.
--   **Passengers.BookRQPerson.Document.DocType** - Тип документа. Тип данных - строка.
--   **Passengers.BookRQPerson.Document.DocNum** - Номер документа. Тип данных - строка.
--   **Passengers.BookRQPerson.NeedServices** - Доп. Тип данных - перечисление. Возможные значения аналогичны параметру Car.Services из ответа на запрос [поиска](/trains/trains_stages/searchtrains) поездов.
--   **Passengers.BookRQPerson.ReturnTrainNeedServices** - Доп для поезда обратно, если оформляется ЖД перевозка типа "туда-обратно". Аналогичен параметру BookRQPerson.NeedServices.
--   **Passengers.BookRQPerson.ReturnTrainRzhdBDiscountCard** - Для поезда обратно, карта "РЖД Бонус" (UFS) для получения скидки. Тип данных - строка. Аналогичен параметру BookRQPerson.RzhdBDiscountCard.
--   **Passengers.BookRQPerson.ReturnTrainRzhdBBonusCard**- Для поезда обратно, карта "РЖД Бонус" (UFS) для получения скидки. Тип данных - строка. Аналогичен параметру BookRQPerson.RzhdBBonusCard.
--   **Passengers.BookRQPerson.RzhdBBonusCard** - Номер карты "РЖД Бонус" (UFS, Sirena) для начисления баллов за поездку. Тип данных - строка.
--   **Passengers.BookRQPerson.RzhdBDiscountCard** - Номер карты "РЖД Бонус" (UFS, Sirena) для получения скидки на поездку. Тип данных - строка. 
--   **Passengers.BookRQPerson.DiscountCard** - Номер "Дорожная карта РЖД" (UFS, Sirena) для получения скидки на поездку. А так же, Дисконтная карта (KTZ) - бронирование оформляется на номер карты вместо документа пассажира. Тип данных - строка.
--   **BlankPrefferredType** - Предпочитаемый формат бланков маршрутных квитанций. Тип данных - перечисление. Возможные значения (может быть null):
+-   **TrainID** - Train ID. Data type - 64-bit integer.
+-   **CatID** - Category ID of the train. Data type - 32-bit integer.
+-   **CarNum** - Car number. Data type - 32-bit integer.
+-   **SeatsPref** - Conditions of preferred seats. Data type - custom.
+-   **SeatsPref.Range** - Range of seats. Data type - custom.
+-   **SeatsPref.Range.From** - Beginning of the range. Data type - 32-bit integer.
+-   **SeatsPref.Range.To** -  End of the range. Data type - 32-bit integer.
+-   **SeatsPref.UpperCount** - Number of upper seats. Data type - 32-bit integer.
+-   **SeatsPref.LowerCount** - Number of lower seats. Data type - 32-bit integer.
+-   **SeatsPref.LocPref** - Preferable seat location. Data type - enumeration. Possible values (may be null):
+    -   **ONECOUPE** - In one coupe.
+    -   **ONESECTION** - In one section. It means in the compartment + 2 adjoining side seats. Only reasonable in the second-class car. If specified for a compartment, the value ONECOUPE is automatically applied instead.
+    -   **NOTSIDE** - Not side seats.
+-   **SeatsPref.StoreyNumber** - Storey number. Data type - 32-bit integer.
+-   **SeatsPref.GenderPref** - Gender booking type. Data type - enumeration. The possible values are similar to the TCategory. GenderType parameter from the response to the following request: [search](/trains/trains_stages/searchtrains).
+-   **SeatsPref.Bedclothes** - Whether bedclothes are required. Default value is  false - not required. Data type - boolean. 
+-   **SeatsPref.NoSide** - Not from the side. Data type - boolean.
+-   **ERegister** - Electronic registration/e-ticket. Data type - boolean.
+-   **ERTimelimit** - Format: yyyy-mm-dd hh:mm:ss. Data type - string. Only for UFS. Values:
+    -   For domestic trains, as well as international communications with CIS countries, the Lithuanian, Latvian, Estonian Republics, the Republic of Abkhazia (Train.Direction = 0): the date and time to which you can pass the electronic registration and return the ticket with the Republic of Estonia in "UFS". After this time, a refund is possible only at the cash desks through a complaint procedure.
+    -    For international trains in foreign countries at global prices. Destinations Russia-Finland and East-West (Train.Direction = 1.2): the date and time to which you can pass the electronic registration in the UFS system.
+-   **Passengers.** - Passengers for whom seats are reserved. Data type - array of BookRQPerson elements.
+-   **Passengers.BookRQPerson** - Reservation passenger. Data type - custom (Contains all the properties of the Person element from [common elements](/trains/elements) + additional property).
+-   **Passengers.BookRQPerson.NeedServices** - Extras. Data type - enumeration. Possible values are similar to the Car.Services parameter from the response to the following request: [search](/trains/trains_stages/searchtrains) of trains.
+-   **Passengers.BookRQPerson.ReturnTrainNeedServices** - Extras for the train back, if a round-trip transportation was reserved. Similar BookRQPerson.NeedServices.
+-   **Passengers.BookRQPerson.ReturnTrainRzhdBDiscountCard** - For the train back, Russian Railways Bonus card for discounts. Data type - string. Similar to the BookRQPerson.RzhdBDiscountCard parameter.
+-   **Passengers.BookRQPerson.ReturnTrainRzhdBBonusCard**- For the train back, Russian Railways Bonus card for discounts. Data type - string. Same as BookRQPerson.RzhdBBonusCard. 
+-   **Passengers.BookRQPerson.RzhdBBonusCard** - Russian Railways Bonus Card for scoring. Data type - string.
+-   **Passengers.BookRQPerson.RzhdBDiscountCard** - Russian Railways Bonus Card for discounts. Data type - string.
+-   **Passengers.BookRQPerson.DiscountCard** - Discount (universal) card for discounts. Data type - string.
+-   **BlankPrefferredType** - Preferred format of itinerary receipt blanks. Data type - enumeration. Possible values (may be null):
     -   **pdf**
     -   **rtf**
     -   **html**
@@ -60,14 +46,14 @@ title: BookTrain
     -   **bmp**
     -   **emf**
     -   **json**
--   **ReturnTrain** - Информация о поезде "обратно" для оформления поездок типа "туда-обратно". Тип данных - сложный.
--   **ReturnTrain.TrainID** - Идентификатор поезда. Тип данных - целое 64-битное число.
--   **ReturnTrain.CatID** - Идентификатор категории в поезде. Тип данных - целое 32-битное число.
--   **ReturnTrain.CarNum** - Номер вагона. Тип данных - целое 32-битное число.
--   **ReturnTrain.SeatsPref** - Условия предпочитаемых мест. Тип данных - сложный. Структура аналогична параметру SeatsPref из запроса на бронирование.
--   **ReturnTrain.ERegister** - Электронная регистрация/электронный билет. Тип данных - булев.
-
-##### Пример запроса (XML)
+-   **ReturnTrain** - Information on the train "back" for registration of "round trip" type trips. Data type - custom.
+-   **ReturnTrain.TrainID** - Train ID. Data type - 64-bit integer.
+-   **ReturnTrain.CatID** - Category ID in the train. Data type - 32-bit integer.
+-   **ReturnTrain.CarNum** - Car number. Data type - 32-bit integer.
+-   **ReturnTrain.SeatsPref** - Conditions of preferred places. Data type - custom. The structure is similar to the SeatsPref parameter from the booking request.
+-   **ReturnTrain.ERegister** - Electronic registration/e-ticket. Data type - boolean.
+-   
+##### Sample request (XML)
 
 ```xml
  <BookTrain>
@@ -115,10 +101,10 @@ title: BookTrain
                     <Nationality>RUS</Nationality>
                     <!--Optional:-->
                     <Gender>M</Gender>
-                    <FirstName>Пупкин</FirstName>
+                    <FirstName>Pupkin</FirstName>
                     <!--Optional:-->
-                    <MiddleName>Акакиевич</MiddleName>
-                    <LastName>Василий</LastName>
+                    <MiddleName>Akakievich</MiddleName>
+                    <LastName>Vasiliy</LastName>
 					<!--Optional:-->
                     <!--<Phone>?</Phone>-->
                     <!--Optional:-->
