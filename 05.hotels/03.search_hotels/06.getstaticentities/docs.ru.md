@@ -111,6 +111,8 @@ title: GetStaticEntities
 -   **StaticDataInfo.Hotels.HotelStaticInfo.CustomerRating.CheckIn** - рейтинг регистрационного процесса. Тип данных - дробное число.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.CustomerRating.ValueForMoney** - ценовой рейтинг. Тип данных - дробное число.
 -   **StaticDataInfo.Hotels.HotelStaticInfo.CustomerRating.AverageCustomerRating** - средняя оценка рейтинга. Тип данных - дробное число.
+-   **StaticDataInfo.Hotels.HotelStaticInfo.Phones** - контейнер с номером телефона. Тип данных - сложный.
+-   **StaticDataInfo.Hotels.HotelStaticInfo.Phones.Phone** - номер телефона отеля. Тип данных - строка.
 
 ##### Пример ответа (XML)
 ```xml
@@ -399,6 +401,9 @@ potsdamer platz/ brandenbuerger tor (10000 mts)</p>]]></b:Description>
                            <b:ValueForMoney>9.4</b:ValueForMoney>
                            <b:AverageCustomerRating>8.1</b:AverageCustomerRating>
                         </b:CustomerRating>
+                        <b:Phones>
+                  			<c:Phone> 390********92</c:Phone>
+                        </b:Phones>
                      </b:HotelStaticInfo>
                   </b:Hotels>
                </b:StaticDataInfo>
