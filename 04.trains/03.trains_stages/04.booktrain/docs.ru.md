@@ -257,6 +257,7 @@ title: BookTrain
 -   **Passengers.BookedPerson.Ticket.RefundCode** - ID транзакции возврата. Тип данных - строка.
 -   **Passengers.BookedPerson.Ticket.RefundPenalty** - Контейнер с информацией о сборе за возврат. Доступно при бронировании через UFS и KTZ после [получения дополнительной информации перед сдачей билетов](/trains/trains_stages/getrefundinfo). Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
 -   **Passengers.BookedPerson.Ticket.RefundPrice** - Сумма к возврату от стоимости билета. Доступно только при бронировании через UFS и после [получения дополнительной информации перед сдачей билетов](/trains/trains_stages/getrefundinfo). Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
+-   **Passengers.BookedPerson.Ticket.RefundSum** - Сумма к возврату от стоимости билета.  Тип данных - сложный. (Данный параметр является устаревшим и скоро будет удалён, в замен ему будет использоваться парметр RefundPrice).
 -   **Passengers.BookedPerson.Ticket.RefundService** - Сумма к возврату от стоимости сервиса по электронному билету. Доступно только при бронировании через UFS и после [получения дополнительной информации перед сдачей билетов](/trains/trains_stages/getrefundinfo). Тип данных - сложный. Структура аналогична параметру TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains). 
 -   **Passengers.BookedPerson.Ticket.SeatNum** - номер места в вагоне. Тип данных - строка.
 -   **Passengers.BookedPerson.Ticket.Service** - cтоимость сервиса по электронному билету. Доступно только при бронировании через UFS. Тип данных - сложный. Структура аналогична параметру   TCategory.Price из ответа на запрос [поиска](/trains/trains_stages/searchtrains).
@@ -336,7 +337,15 @@ title: BookTrain
                                 <Currency>UAH</Currency>
                                 <NDS>28.5</NDS>
                             </Service>
-                            <RefundPrice/>
+                           <RefundPrice>
+                                <Amount>1134.8</Amount>
+                                <Currency>RUB</Currency>
+                                <a:NDS>0</a:NDS>
+                            <RefundPrice>                            
+                            <a:RefundSum>
+                                <Amount>1134.8</Amount>
+                                <Currency>RUB</Currency>
+                            </a:RefundSum>
                             <RefundService/>
                             <RefundPenalty>
              				    <Amount>55</Amount>
