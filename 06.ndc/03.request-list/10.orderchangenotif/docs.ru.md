@@ -3,9 +3,12 @@ title: OrderChangeNotif
 ---
 
 ### OrderChangeNotif
-Запрос нотификации.
+OrderChangeNotif - нотификация при изменениях в заказе.
 #### Описание
-Запрос OrderChangeNotif отправляется автоматически совместно с OrderRetrieve, если в заказе произошли изменения, на адрес, указанный в настройке ".../settings__iata_ndc".
+Нотификация OrderChangeNotif отправляется автоматически совместно с OrderRetrieve, если в заказе произошли изменения, на адрес, указанный в настройке ".../settings__iata_ndc".
+
+#### Запрос
+Формат аналогичен ответу OrderRetrieve.
 
 #### Пример
 ```xml
