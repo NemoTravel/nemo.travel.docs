@@ -5,7 +5,7 @@ title: OrderChangeNotif
 ### OrderChangeNotif
 OrderChangeNotif - notification of changes in order.
 #### Description
-Notification OrderChangeNotif sent automatically together with OrderRetrieve, if there are changes in the order, to the address specified in the setting ".../settings__iata_ndc".
+Notification OrderChangeNotif sent automatically together with OrderRetrieve, if there are changes in the order, to the URL specified in the setting ".../settings__iata_ndc".
 
 #### Request
 The format is similar to the answer OrderRetrieve.
