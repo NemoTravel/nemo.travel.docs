@@ -198,17 +198,17 @@ title: CitySearch
                      <b:BookingRemarks i:nil="true"/>
                      <b:CancellationRules/>
                      <b:Availability>OnRequest</b:Availability>
-                     <b:AdditionalInfo xmlns:c="http://schemas.datacontract.org/2004/07/HotelsEntities.Common.Groups">
+                     <b:AdditionalInfo xmlns:c="">
                        <c:SupplierInformation>
                          <c:Name>Rate info</c:Name>
-                         <c:Value xmlns:d="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                         <c:Value xmlns:d="">
                            <d:string>Marriott Senior Discount - Available to guests 62 years of age or older. - Proof of age eligibility required at check-in.</d:string>
                            <d:string>Marriott Senior Discount, includes 62 years and older valid ID required</d:string>
                          </c:Value>
                        </c:SupplierInformation>
                        <c:SupplierInformation>
                          <c:Name>Cancellation rules</c:Name>
-                         <c:Value xmlns:d="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                         <c:Value xmlns:d="">
                            <d:string>2020-04-27T23:59:00</d:string>
                            <d:string>Cancel Penalty Amount: 1130.64 </d:string>
                          </c:Value>

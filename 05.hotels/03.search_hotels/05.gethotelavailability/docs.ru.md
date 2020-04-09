@@ -86,6 +86,11 @@ title: GetHotelAvailability
 -   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.AbsoluteValue** - значение штрафа в заданной валюте. Тип данных - целое беззнаковое 32-битное число.
 -   **RoomRatesGroup.Rate.FreeCount** - отражает количество доступных для продажи комнат (реализовано только у поставщика Bronevik, не является обязательным). Тип данных - целое беззнаковое 32-битное число.
 -   **RoomRatesGroup.Rate.AgencyTimeLimit** - таймлимит от поставщика. Тип данных - дата, YYYY-MM-DDTHH:MM:SSZ
+-   **RoomRatesGroup.Rate.AdditionalInfo** - контейнер с дополнительной информацией о номере. Тип данных - сложный.
+-   **RoomRatesGroup.Rate.AdditionalInfo SupplierInformation** - контейнер с дополнительной информацией от поставщика о номере. Тип данных - сложный.
+-   **RoomRatesGroup.Rate.AdditionalInfo SupplierInformation.Name** - название информации. Тип данных - строка.
+-   **RoomRatesGroup.Rate.AdditionalInfo SupplierInformation.Value** -  контейнер с описанием дополнительной информации. Тип данных - сложный.
+-   **RoomRatesGroup.Rate.AdditionalInfo SupplierInformation.Value.string** - описанием дополнительной информации. Тип данных - строка.
 -   **RoomsGroup** - контейнер с информацией о различных вариантов комнат. Тип данных - сложный.
 -   **RoomsGroup.Room** - контейнер с идентификаторами параметров комнаты. Тип данных - сложный.
 -   **RoomsGroup.Room.ID** - идентификатор комнаты. Тип данных - целое беззнаковое 32-битное число.
