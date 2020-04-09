@@ -91,6 +91,11 @@ title: CitySearch
 -   **RoomRatesGroup.Rate.IsSpecialOffer** - признак того, является ли данный тариф специальным предложением. Тип данных - булевский.
 -   **RoomRatesGroup.Rate.VisaSupportProvided** - признак визовой поддержки отеля. Тип данных - булевский.
 -   **RoomRatesGroup.Rate.Availability** - доступность комнаты. Тип данных - строка.
+-   **RoomRatesGroup.Rate.AdditionalInfo** - контейнер с дополнительной информацией о номере. Тип данных - сложный.
+-   **RoomRatesGroup.Rate.AdditionalInfo SupplierInformation** - контейнер с дополнительной информацией от поставщика о номере. Тип данных - сложный.
+-   **RoomRatesGroup.Rate.AdditionalInfo SupplierInformation.Name** - название информации. Тип данных - строка.
+-   **RoomRatesGroup.Rate.AdditionalInfo SupplierInformation.Value** -  контейнер с описанием дополнительной информации. Тип данных - сложный.
+-   **RoomRatesGroup.Rate.AdditionalInfo SupplierInformation.Value.string** - описанием дополнительной информации. Тип данных - строка.
 -   **RoomsGroup** - контейнер с информацией о различных вариантов комнат. Тип данных - сложный.
 -   **RoomsGroup.Room** - контейнер с идентификаторами параметров комнаты. Тип данных - сложный.
 -   **RoomsGroup.Room.ID** - идентификатор комнаты. Тип данных - целое беззнаковое 32-битное число.
@@ -193,6 +198,22 @@ title: CitySearch
                      <b:BookingRemarks i:nil="true"/>
                      <b:CancellationRules/>
                      <b:Availability>OnRequest</b:Availability>
+                     <b:AdditionalInfo xmlns:c="http://schemas.datacontract.org/2004/07/HotelsEntities.Common.Groups">
+                       <c:SupplierInformation>
+                         <c:Name>Rate info</c:Name>
+                         <c:Value xmlns:d="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                           <d:string>Marriott Senior Discount - Available to guests 62 years of age or older. - Proof of age eligibility required at check-in.</d:string>
+                           <d:string>Marriott Senior Discount, includes 62 years and older valid ID required</d:string>
+                         </c:Value>
+                       </c:SupplierInformation>
+                       <c:SupplierInformation>
+                         <c:Name>Cancellation rules</c:Name>
+                         <c:Value xmlns:d="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                           <d:string>2020-04-27T23:59:00</d:string>
+                           <d:string>Cancel Penalty Amount: 1130.64 </d:string>
+                         </c:Value>
+                       </c:SupplierInformation>
+                     </b:AdditionalInfo>
                   </b:Rate>
                   <b:Rate>
                      <b:Id>4491230000001</b:Id>
