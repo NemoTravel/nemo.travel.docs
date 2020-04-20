@@ -310,8 +310,8 @@ title: AirShopping
 -   -	**V** - Continental breakfast.
 -   **Metadata.Other**
 -   **Metadata.Other.OtherMetadata**
--   **Metadata.Other.OtherMetadata.RuleMetadatas** - информация о бизнес-правилах для данного перелёта. Тип данных — массив элементов **RuleMetadata**.
--   **Metadata.Other.OtherMetadata.RuleMetadatas.RuleMetadata** - информация о бизнес-правиле, сработавшего для перелёта.Атрибут **refs** показывает идентификаторы предложений-перелётов, к которым применяется бизнес-правило, идентификаторы разделены пробелом. Атрибут **MetadataKey** показывает ключ-идентификатор бизнес-правила.
+-   **Metadata.Other.OtherMetadata.RuleMetadatas** - информация о бизнес-правилах для перелётов. Тип данных — массив элементов **RuleMetadata**.
+-   **Metadata.Other.OtherMetadata.RuleMetadatas.RuleMetadata** - информация о бизнес-правиле, сработавшего для перелётов. Атрибут **refs** показывает идентификаторы предложений-перелётов, к которым применяется бизнес-правило, идентификаторы разделены пробелом. Атрибут **MetadataKey** показывает ключ-идентификатор бизнес-правила.
 -   **Metadata.Other.OtherMetadata.RuleMetadatas.RuleMetadata.RuleID** - идентификатор сработавшего для данных перелётов бизнес-правила. Тип данных - строка.
 -   **Metadata.Other.OtherMetadata.RuleMetadatas.RuleMetadata.Name** - название сработавшего для данных перелётов правила. Тип данных - перечисление, доступные значения: **Business rule**
 
