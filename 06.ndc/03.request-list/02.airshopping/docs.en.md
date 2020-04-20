@@ -307,7 +307,13 @@ Flight leg prices are described in the current OfferItem.
   - **M** - Meal;
   - **R** - Refreshment;
   - **S** - Snack or light meal;
-  - **V** - Continental breakfast. 
+  - **V** - Continental breakfast.
+-   **Metadata.Other**
+-   **Metadata.Other.OtherMetadata**
+-   **Metadata.Other.OtherMetadata.RuleMetadatas** - information about business rules for flights. The data type of the array elements **RuleMetadata**.
+-   **Metadata.Other.OtherMetadata.RuleMetadatas.RuleMetadata** - information about the business rule that worked for flights. Attribute **refs** shows the IDs of proposals travel to apply the business rule IDs separated by a space. Attribute **MetadataKey** shows the key-ID of the business rule.
+-   **Metadata.Other.OtherMetadata.RuleMetadatas.RuleMetadata.RuleID** - ID of the business rule that was triggered for these flights. The data type is string.
+-   **Metadata.Other.OtherMetadata.RuleMetadatas.RuleMetadata.Name** - name of the rule that worked for these flights. The data type is an enumeration of available values: **Business rule** .
 
 ##### Sample
 
@@ -3349,7 +3355,22 @@ Flight leg prices are described in the current OfferItem.
 						</Flight>
 					</ShopMetadataGroup>
 				</Shopping>
-			</Metadata>
+			<Metadata>
+             <Other>
+               <OtherMetadata>
+                  <RuleMetadatas>
+                     <RuleMetadata refs="OFR1138972912000000 OFR1138972912000001" MetadataKey="BRMMQZUG2">
+                        <RuleID>MQZUG2</RuleID>
+                        <Name>Business rule</Name>
+                     </RuleMetadata>
+                     <RuleMetadata refs="OFR1138972912000000" MetadataKey="BRMVPUZ6S">
+                        <RuleID>VPUZ6S</RuleID>
+                        <Name>Business rule</Name>
+                     </RuleMetadata>
+                  </RuleMetadatas>
+               </OtherMetadata>
+            </Other>
+          </Metadata>
 		</AirShoppingRS>
 	</s:Body>
 </s:Envelope>
