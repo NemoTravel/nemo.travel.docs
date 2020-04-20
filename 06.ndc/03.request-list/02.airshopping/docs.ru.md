@@ -308,6 +308,12 @@ title: AirShopping
 -   -	**R** - Refreshment;
 -	-	**S** - Snack or light meal;
 -   -	**V** - Continental breakfast.
+-   **Metadata.Other**
+-   **Metadata.Other.OtherMetadata**
+-   **Metadata.Other.OtherMetadata.RuleMetadatas** - информация о бизнес-правилах для данного перелёта. Тип данных — массив элементов **RuleMetadata**.
+-   **Metadata.Other.OtherMetadata.RuleMetadatas.RuleMetadata** - информация о бизнес-правиле, сработавшего для перелёта.Атрибут **refs** показывает идентификаторы предложений-перелётов, к которым применяется бизнес-правило, идентификаторы разделены пробелом. Атрибут **MetadataKey** показывает ключ-идентификатор бизнес-правила.
+-   **Metadata.Other.OtherMetadata.RuleMetadatas.RuleMetadata.RuleID** - идентификатор сработавшего для данных перелётов бизнес-правила. Тип данных - строка.
+-   **Metadata.Other.OtherMetadata.RuleMetadatas.RuleMetadata.Name** - название сработавшего для данных перелётов правила. Тип данных - перечисление, доступные значения: **Business rule**
 
 ##### Пример
 
@@ -3924,7 +3930,26 @@ title: AirShopping
                </ServiceDefinition>
             </ServiceDefinitionList>
          </DataLists>
-         <Metadata/>
+         <Metadata>
+            <Other>
+               <OtherMetadata>
+                  <RuleMetadatas>
+                     <RuleMetadata refs="OFR144197161030000 OFR1138972889030230 OFR1138972889030231 OFR1138972889030232 OFR1138972889030233 OFR1138972889030234" MetadataKey="BRMMQZUG2">
+                        <RuleID>MQZUG2</RuleID>
+                        <Name>Business rule</Name>
+                     </RuleMetadata>
+                     <RuleMetadata refs="OFR144197161030000 OFR1138972889030230 OFR1138972889030231 OFR1138972889030232 OFR1138972889030233 OFR1138972889030234" MetadataKey="BRMVPUZ6S">
+                        <RuleID>VPUZ6S</RuleID>
+                        <Name>Business rule</Name>
+                     </RuleMetadata>
+                     <RuleMetadata refs="OFR1138972889030245" MetadataKey="BRMQTVNBE">
+                        <RuleID>QTVNBE</RuleID>
+                        <Name>Business rule</Name>
+                     </RuleMetadata>
+                  </RuleMetadatas>
+               </OtherMetadata>
+            </Other>
+         </Metadata>
       </AirShoppingRS>
    </s:Body>
 </s:Envelope>
