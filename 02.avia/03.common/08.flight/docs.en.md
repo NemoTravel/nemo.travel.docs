@@ -179,3 +179,7 @@ Flight representation format 1.1.
 -   **Flight.FareFamiliesDescription** - contains descriptions of the fare families in the flight. Data type - [Description](/avia/common/ff-description).
 -   **Flight.CanHaveSubsidizedTariffs** - attribute of the possibility to apply subsidies to this fare. Data type - bool.
 -   **Flight.BookingURL** - URL to which the user will be redirected for the following flight registration. Data type - string.
+-   **Flight.BusinessRules** - information about the business rules for this flight. Data type - array.
+-   **Flight.BusinessRules.Rule** - information about the business rule that worked for this flight. Data type - array.
+-   **Flight.BusinessRules.Rule.Id** - ID of the business rule that worked for this flight. Data type - string.
+-   **Flight.BusinessRules.Rule.AdditionalParameters** - additional information about the parameters of the business rule that worked for this flight. Data type - array.
