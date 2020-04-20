@@ -69,45 +69,49 @@ The description of the flight
     -   **hRT** - RT/2
     -   **mOW** - flight is a possible leg of a multi-OW flight 
 -   **Segments** - flight segments. Data type - array of FlightSegment elements.
--   **FlightSegment** - flight segment. Data type - array.
--   **FlightSegment.ID** - ID of the segment within this flight. Data type - int32.
--   **FlightSegment.DepatureAirport** - information about the departure airport. Data type - TripPointInformation.
--   **FlightSegment.DepatureAirport.Code** - airport code. Data type - string.
--   **FlightSegment.DepatureAirport.SubPointCode** - terminal code. Data type - string.
--   **FlightSegment.DepatureAirport.CityCode** - city code, if airports have an aggregation. Data type - string.
--   **FlightSegment.DepatureAirport.UTC** - time zone. Data type - fractional number.
--   **FlightSegment.ArrivalAirport** - arrival airport information. Data type - TripPointInformation. The format is the same as FlightSegment.DepatureAirport.
--   **FlightSegment.StopPoints** - stop points on this segment. Data type - array of StopPoint elements.
--   **FlightSegment.StopPoints.StopPoint** - stop point on this segment. Data type - array, the successor of TripPointInformation.
--   **FlightSegment.StopPoints.StopPoint.Code** - airport code. Data type - string.
--   **FlightSegment.StopPoints.StopPoint.CityCode** - city code, if airports have an aggregation. Data type - string.
--   **FlightSegment.StopPoints.StopPoint.UTC** - time zone. Data type - fractional number.
--   **FlightSegment.StopPoints.StopPoint.ArrDateTime** - date and time of the arrival to the stop point. Data type - <code>yyyy-mm-ddthh:mm:ss</code>.
--   **FlightSegment.StopPoints.StopPoint.DepDateTime** - date and time of the departure from the stop point. Data type - <code>yyyy-mm-ddthh:mm:ss</code>.
--   **FlightSegment.StopPoints.StopPoint.PassengerLanding** - A sign of disembarking passengers from an airplane. Data type - bool.
--   **FlightSegment.DepatureDateTime** - date and time of segment departure, local for the departure airport. Data type - <code>yyyy-mm-ddthh:mm:ss</code>.
--   **FlightSegment.ArrivalDateTime** - date and time of segment arrival, local for the arrival airport. Data type - <code>yyyy-mm-ddthh:mm:ss</code>.
--   **FlightSegment.FlightTime** - total travel time on this segment. Data type - int32.
--   **FlightSegment.FlightNumber** - flight number. Data type - string.
--   **FlightSegment.AircraftType** - aircraft type code. Data type - string.
--   **FlightSegment.OperatingAirline** - code of the airline whose airplane is carrying the passengers. Data type - string.
--   **FlightSegment.MarketingAirline** - code of the airline that performs the sale of seats on this flight. Data type - string.
--   **FlightSegment.Charterer** - charterer of seats being sold. Data type - string.
--   **FlightSegment.ETicket** - flight segments. Data type - bool.
--   **FlightSegment.BookingClassCode** - booking class's letters for this segment. Data type - string.
--   **FlightSegment.Status** - segment status. Data type - enumeration, possible values:
-    -   **Confirmed**
-    -   **NeedConfirmation**
-    -   **NotConfirmed**
-    -   **Canceled**
-    -   **Flew**
-    -   **OnRequest**
-    -   **Rejected**
--   **FlightSegment.StatusCode** - industrial segment status code. Data type - string.
--   **FlightSegment.SupplierRef** - segment booking ID in the airline's inventory system. Data type - string.
--   **FlightSegment.RequestedSegment** - segment reference from the user's request. Data type - int32.
--   **FlightSegment.FlightDistance** - numerical value of flight distance in miles (relevant fo GDS Amadeus). Data type - int32.
--   **FlightSegment.CO2Emission** - CO2 exhaust in kg/m (relevant for GDS Amadeus). Data type - int32.
+	-   **FlightSegment** - flight segment. Data type - array.
+	-   **FlightSegment.ID** - ID of the segment within this flight. Data type - int32.
+	-   **FlightSegment.DepatureAirport** - information about the departure airport. Data type - TripPointInformation.
+	-   **FlightSegment.DepatureAirport.Code** - airport code. Data type - string.
+	-   **FlightSegment.DepatureAirport.SubPointCode** - terminal code. Data type - string.
+	-   **FlightSegment.DepatureAirport.CityCode** - city code, if airports have an aggregation. Data type - string.
+	-   **FlightSegment.DepatureAirport.UTC** - time zone. Data type - fractional number.
+	-   **FlightSegment.ArrivalAirport** - arrival airport information. Data type - TripPointInformation. The format is the same as FlightSegment.DepatureAirport.
+	-   **FlightSegment.StopPoints** - stop points on this segment. Data type - array of StopPoint elements.
+	-   **FlightSegment.StopPoints.StopPoint** - stop point on this segment. Data type - array, the successor of TripPointInformation.
+	-   **FlightSegment.StopPoints.StopPoint.Code** - airport code. Data type - string.
+	-   **FlightSegment.StopPoints.StopPoint.CityCode** - city code, if airports have an aggregation. Data type - string.
+	-   **FlightSegment.StopPoints.StopPoint.UTC** - time zone. Data type - fractional number.
+	-   **FlightSegment.StopPoints.StopPoint.ArrDateTime** - date and time of the arrival to the stop point. Data type - <code>yyyy-mm-ddthh:mm:ss</code>.
+	-   **FlightSegment.StopPoints.StopPoint.DepDateTime** - date and time of the departure from the stop point. Data type - <code>yyyy-mm-ddthh:mm:ss</code>.
+	-   **FlightSegment.StopPoints.StopPoint.PassengerLanding** - A sign of disembarking passengers from an airplane. Data type - bool.
+	-   **FlightSegment.DepatureDateTime** - date and time of segment departure, local for the departure airport. Data type - <code>yyyy-mm-ddthh:mm:ss</code>.
+	-   **FlightSegment.ArrivalDateTime** - date and time of segment arrival, local for the arrival airport. Data type - <code>yyyy-mm-ddthh:mm:ss</code>.
+	-   **FlightSegment.FlightTime** - total travel time on this segment. Data type - int32.
+	-   **FlightSegment.FlightNumber** - flight number. Data type - string.
+	-   **FlightSegment.AircraftType** - aircraft type code. Data type - string.
+	-   **FlightSegment.OperatingAirline** - code of the airline whose airplane is carrying the passengers. Data type - string.
+	-   **FlightSegment.MarketingAirline** - code of the airline that performs the sale of seats on this flight. Data type - string.
+	-   **FlightSegment.Charterer** - charterer of seats being sold. Data type - string.
+	-   **FlightSegment.ETicket** - flight segments. Data type - bool.
+	-   **FlightSegment.BookingClassCode** - booking class's letters for this segment. Data type - string.
+	-   **FlightSegment.Status** - segment status. Data type - enumeration, possible values:
+    	-   **Confirmed**
+    	-   **NeedConfirmation**
+    	-   **NotConfirmed**
+    	-   **Canceled**
+    	-   **Flew**
+    	-   **OnRequest**
+    	-   **Rejected**
+	-   **FlightSegment.StatusCode** - industrial segment status code. Data type - string.
+	-   **FlightSegment.SupplierRef** - segment booking ID in the airline's inventory system. Data type - string.
+	-   **FlightSegment.RequestedSegment** - segment reference from the user's request. Data type - int32.
+	-   **FlightSegment.FlightDistance** - numerical value of flight distance in miles (relevant fo GDS Amadeus). Data type - int32.
+	-   **FlightSegment.CO2Emission** - CO2 exhaust in kg/m (relevant for GDS Amadeus). Data type - int32.
+-   **BusinessRules** - information about the business rules for this flight. Data type - array of **Rule** elements.
+-   **BusinessRules.Rule** - information about the business rule that worked for this flight. Data type — **BusinessRule**.
+-   **BusinessRules.Rule.Id** - ID of the business rule that worked for this flight. Data type - string.
+-   **BusinessRules.Rule.AdditionalParameters** - additional information about the parameters of the business rule that worked for this flight. Data type - array.
 
 #### Sample
 
