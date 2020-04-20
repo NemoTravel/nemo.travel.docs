@@ -70,45 +70,49 @@ taxonomy:
     -   **hRT** — RT/2;
     -   **mOW** — перелёт является возможным плечом мультиOW перелёта.
 -   **Segments** — сегменты перелёта. Тип данных — массив элементов FlightSegment.
--   **FlightSegment** — сегмент перелёт. Тип данных — массив.
--   **FlightSegment.ID** — идентификатор сегмента в рамках данного перелёта. Тип данных — целое 32-битное число.
--   **FlightSegment.DepatureAirport** — информация об аэропорте отправления. Тип данных — TripPointInformation:
--   **FlightSegment.DepatureAirport.Code** — код аэропорта. Тип данных — строка.
--   **FlightSegment.DepatureAirport.SubPointCode** — код терминала. Тип данных — строка.
--   **FlightSegment.DepatureAirport.CityCode** — код города, при наличии агрегации аэропортов. Тип данных — строка.
--   **FlightSegment.DepatureAirport.UTC** — часовой пояс. Тип данных — дробное число.
--   **FlightSegment.ArrivalAirport** — информация об аэропорте прибытия. Тип данных — TripPointInformation. Формат аналогичен FlightSegment.DepatureAirport.
--   **FlightSegment.StopPoints** — точки остановки на данном сегменте. Тип данных — массив элементов StopPoint:
--   **FlightSegment.StopPoints.StopPoint** — точка остановки на данном сегменте. Тип данных — массив, наследник TripPointInformation.
--   **FlightSegment.StopPoints.StopPoint.Code** - код аэропорта. Тип данных — строка.
--   **FlightSegment.StopPoints.StopPoint.CityCode** - код города, при наличии агрегации аэропортов. Тип данных — строка.
--   **FlightSegment.StopPoints.StopPoint.UTC** - часовой пояс. Тип данных — дробное число.
--   **FlightSegment.StopPoints.StopPoint.ArrDateTime** — дата и время прилёта в точку остановки. Тип данных — строка, формат <code>yyyy-mm-ddthh:mm:ss</code>.
--   **FlightSegment.StopPoints.StopPoint.DepDateTime** — дата и время вылета из точки остановки. Тип данных — строка, формат <code>yyyy-mm-ddthh:mm:ss</code>.
--   **FlightSegment.StopPoints.StopPoint.PassengerLanding** — признак высадки пассажиров из самолёта. Тип данных — булевский.
--   **FlightSegment.DepatureDateTime** — дата и время вылета сегмента, местное для аэропорта вылета. Тип данных — <code>yyyy-mm-ddthh:mm:ss</code>.
--   **FlightSegment.ArrivalDateTime** — дата и время прилёта сегмента, местное для аэропорта прибытия. Тип данных — <code>yyyy-mm-ddthh:mm:ss</code>.
--   **FlightSegment.FlightTime** — суммарное время в пути на данном сегменте. Тип данных — целое 32-битное число.
--   **FlightSegment.FlightNumber** — номер рейса. Тип данных — строка.
--   **FlightSegment.AircraftType** — код типа воздушного судна. Тип данных — строка.
--   **FlightSegment.OperatingAirline** — код авиакомпании, чей самолёт выполняет перевозку пассажиров. Тип данных — строка.
--   **FlightSegment.MarketingAirline** — код авиакомпании, которая выполняет продажу мест на данный рейс. Тип данных — строка.
--   **FlightSegment.Charterer** — фрахтователь продаваемых мест. Тип данных — строка.
--   **FlightSegment.ETicket** — сегменты перелёта. Тип данных — булевский.
--   **FlightSegment.BookingClassCode** — литера класса бронирования да данном сегменте. Тип данных — строка.
--   **FlightSegment.Status** — статус сегмента. Тип данных — перечисление, возможные значения:
-    -   **Confirmed**;
-    -   **NeedConfirmation**;
-    -   **NotConfirmed**;
-    -   **Canceled**;
-    -   **Flew**;
-    -   **OnRequest**;
-    -   **Rejected**.
--   **FlightSegment.StatusCode** — индустриальный код статуса сегмента. Тип данных — строка.
--   **FlightSegment.SupplierRef** — идентификатор брони сегмента в инвенторной системе авиакомпании. Тип данных — строка.
--   **FlightSegment.RequestedSegment** — ссылка на сегмента из запроса пользователя. Тип данных — целое 32-битное число.
--   **FlightSegment.FlightDistance** — численное значение дальности полёта в милях (актуально для GDS Amadeus). Тип данных — целое 32-битное число.
--   **FlightSegment.CO2Emission** — выброс CO2 в кг/м (актуально для GDS Amadeus). Тип данных — целое 32-битное число.
+	-   **FlightSegment** — сегмент перелёт. Тип данных — массив.
+	-   **FlightSegment.ID** — идентификатор сегмента в рамках данного перелёта. Тип данных — целое 32-битное число.
+	-   **FlightSegment.DepatureAirport** — информация об аэропорте отправления. Тип данных — TripPointInformation:
+	-   **FlightSegment.DepatureAirport.Code** — код аэропорта. Тип данных — строка.
+	-   **FlightSegment.DepatureAirport.SubPointCode** — код терминала. Тип данных — строка.
+	-   **FlightSegment.DepatureAirport.CityCode** — код города, при наличии агрегации аэропортов. Тип данных — строка.
+	-   **FlightSegment.DepatureAirport.UTC** — часовой пояс. Тип данных — дробное число.
+	-   **FlightSegment.ArrivalAirport** — информация об аэропорте прибытия. Тип данных — TripPointInformation. Формат аналогичен FlightSegment.DepatureAirport.
+	-   **FlightSegment.StopPoints** — точки остановки на данном сегменте. Тип данных — массив элементов StopPoint:
+	-   **FlightSegment.StopPoints.StopPoint** — точка остановки на данном сегменте. Тип данных — массив, наследник TripPointInformation.
+	-   **FlightSegment.StopPoints.StopPoint.Code** - код аэропорта. Тип данных — строка.
+	-   **FlightSegment.StopPoints.StopPoint.CityCode** - код города, при наличии агрегации аэропортов. Тип данных — строка.
+	-   **FlightSegment.StopPoints.StopPoint.UTC** - часовой пояс. Тип данных — дробное число.
+	-   **FlightSegment.StopPoints.StopPoint.ArrDateTime** — дата и время прилёта в точку остановки. Тип данных — строка, формат <code>yyyy-mm-ddthh:mm:ss</code>.
+	-   **FlightSegment.StopPoints.StopPoint.DepDateTime** — дата и время вылета из точки остановки. Тип данных — строка, формат <code>yyyy-mm-ddthh:mm:ss</code>.
+	-   **FlightSegment.StopPoints.StopPoint.PassengerLanding** — признак высадки пассажиров из самолёта. Тип данных — булевский.
+	-   **FlightSegment.DepatureDateTime** — дата и время вылета сегмента, местное для аэропорта вылета. Тип данных — <code>yyyy-mm-ddthh:mm:ss</code>.
+	-   **FlightSegment.ArrivalDateTime** — дата и время прилёта сегмента, местное для аэропорта прибытия. Тип данных — <code>yyyy-mm-ddthh:mm:ss</code>.
+	-   **FlightSegment.FlightTime** — суммарное время в пути на данном сегменте. Тип данных — целое 32-битное число.
+	-   **FlightSegment.FlightNumber** — номер рейса. Тип данных — строка.
+	-   **FlightSegment.AircraftType** — код типа воздушного судна. Тип данных — строка.
+	-   **FlightSegment.OperatingAirline** — код авиакомпании, чей самолёт выполняет перевозку пассажиров. Тип данных — строка.
+	-   **FlightSegment.MarketingAirline** — код авиакомпании, которая выполняет продажу мест на данный рейс. Тип данных — строка.
+	-   **FlightSegment.Charterer** — фрахтователь продаваемых мест. Тип данных — строка.
+	-   **FlightSegment.ETicket** — сегменты перелёта. Тип данных — булевский.
+	-   **FlightSegment.BookingClassCode** — литера класса бронирования да данном сегменте. Тип данных — строка.
+	-   **FlightSegment.Status** — статус сегмента. Тип данных — перечисление, возможные значения:
+    	-   **Confirmed**;
+    	-   **NeedConfirmation**;
+    	-   **NotConfirmed**;
+    	-   **Canceled**;
+    	-   **Flew**;
+    	-   **OnRequest**;
+    	-   **Rejected**.
+	-   **FlightSegment.StatusCode** — индустриальный код статуса сегмента. Тип данных — строка.
+	-   **FlightSegment.SupplierRef** — идентификатор брони сегмента в инвенторной системе авиакомпании. Тип данных — строка.
+	-   **FlightSegment.RequestedSegment** — ссылка на сегмента из запроса пользователя. Тип данных — целое 32-битное число.
+	-   **FlightSegment.FlightDistance** — численное значение дальности полёта в милях (актуально для GDS Amadeus). Тип данных — целое 32-битное число.
+	-   **FlightSegment.CO2Emission** — выброс CO2 в кг/м (актуально для GDS Amadeus). Тип данных — целое 32-битное число.
+-   **BusinessRules** - информация о бизнес-правилах для данного перелёта. Тип данных — сложный.
+	-   **BusinessRules.Rule** - информация о бизнес-правиле, сработавшего для данного перелёта. Тип данных — сложный.
+	-   **BusinessRules.Rule.Id** - идентификатор сработавшего для данного перелёта бизнес-правила. Тип данных - строка.
+	-   **BusinessRules.Rule.AdditionalParameters** - дополнительная информация о параметрах бизнес-правила, сработавшего для данного перелёта. Тип данных — сложный.
 
 #### Пример
 
