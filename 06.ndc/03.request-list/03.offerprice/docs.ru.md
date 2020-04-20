@@ -274,6 +274,12 @@ title: OfferPrice
 -   -	**R** — Refreshment;
 -	-	**S** — Snack or light meal;
 -   -	**V** — Continental breakfast.
+-   **Metadata.Other**
+-   **Metadata.Other.OtherMetadata**
+-   **Metadata.Other.OtherMetadata.RuleMetadatas** - информация о бизнес-правилах для перелёта. Тип данных — массив элементов **RuleMetadata**.
+-   **Metadata.Other.OtherMetadata.RuleMetadatas.RuleMetadata** - информация о бизнес-правиле, сработавшего для перелёта. Атрибут **refs** показывает идентификатор предложения-перелёта, к которому применяется бизнес-правило. Атрибут **MetadataKey** показывает ключ-идентификатор бизнес-правила.
+-   **Metadata.Other.OtherMetadata.RuleMetadatas.RuleMetadata.RuleID** - идентификатор сработавшего для данного перелёта бизнес-правила. Тип данных - строка.
+-   **Metadata.Other.OtherMetadata.RuleMetadatas.RuleMetadata.Name** - название сработавшего для данного перелёта правила. Тип данных - перечисление, доступные значения: **Business rule** .
 
 ##### Пример
 
@@ -710,6 +716,21 @@ title: OfferPrice
                   </Flight>
                </ShopMetadataGroup>
             </Shopping>
+         <Metadata>
+            <Other>
+               <OtherMetadata>
+                  <RuleMetadatas>
+                     <RuleMetadata refs="OFR1138972912000000" MetadataKey="BRMMQZUG2">
+                        <RuleID>MQZUG2</RuleID>
+                        <Name>Business rule</Name>
+                     </RuleMetadata>
+                     <RuleMetadata refs="OFR1138972912000000" MetadataKey="BRMVPUZ6S">
+                        <RuleID>VPUZ6S</RuleID>
+                        <Name>Business rule</Name>
+                     </RuleMetadata>
+                  </RuleMetadatas>
+               </OtherMetadata>
+            </Other>
          </Metadata>
       </OfferPriceRS>
    </s:Body>
