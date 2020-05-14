@@ -131,7 +131,8 @@ title: GetHotelAvailability
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum** - контейнер с информацией о сумме и валюте сбора. Тип данных - сложный.
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum.Amount** - сумма сбора. Тип данных - дробное число.
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum.Currency** - код валюты сбора. Тип данных - строка.
-######Устаревшие и неподдерживаемые:
+
+######**Устаревшие и неподдерживаемые:**
 -   **Hotels.Hotel.EarlyCheckInGroup** - контейнер с информацией о предлагаемых вариантах раннего заселения. Тип данных - сложный.
 -   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer** - контейнер с информацией о варианте. Цена указана за один номер. Тип данных - сложный.
 -   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Time** - контейнер с информацией о предлагаемом времени. Тип данных - строка формата hh:mm.
