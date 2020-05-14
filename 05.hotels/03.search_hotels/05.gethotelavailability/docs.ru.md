@@ -4,16 +4,16 @@ title: GetHotelAvailability
 
 ### GetHotelAvailability
 
-#### Request
+#### Запрос
 
--   **SearchID** - ID of a completed search. Data type - 32-bit integer.
--   **HotelID** - hotel ID for the availability check. Data type - 32-bit integer.
--   **Rooms** - contains information on the rooms. Data type - custom.
--   **Rooms.RoomData** - contains information on the room you need to book. Data type - custom.
--   **Rooms.RoomData.RoomSearchIndex** - ID of the sequence number of the desired room. Data type - unsigned 32-bit integer.
--   **Rooms.RoomData.RoomVariantID** - ID of the room to be booked. Data type - unsigned 32-bit integer.
+-   **SearchID** - идентификатор совершившегося поиска. Тип данных - целое 32-битное число.
+-   **HotelID** - идентификатор отеля для проверки доступности. Тип данных - целое 32-битное число.
+-   **Rooms** - контейнер с информацией о комнатах. Тип данных - сложный.
+-   **Rooms.RoomData** - контейнер с информацией о комнате, которую требуется забронировать. Тип данных - сложный.
+-   **Rooms.RoomData.RoomSearchIndex** - идентификатор порядкового номера искомой комнаты. Тип данных - целое беззнаковое 32-битное число.
+-   **Rooms.RoomData.RoomVariantID** - идентификатор бронируемой комнаты. Тип данных - целое беззнаковое 32-битное число.
 
-##### Sample Request (XML)
+##### Пример запроса (XML)
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:stl="http://nemo-ibe.com/STL" xmlns:hot="http://nemo-ibe.com/Hotels">
    <soapenv:Header/>
@@ -48,104 +48,107 @@ title: GetHotelAvailability
 </soapenv:Envelope>
 ```
 
-#### Response
+#### Ответ
 
--   **SearchID** - ID of a completed search. Data type - 32-bit integer.
--   **RoomsRequestData** - contains information on the search request. Data type - custom.
--   **RoomsRequestData.Room** - container with information on the number of guests. Data type - custom.
--   **RoomsRequestData.Room.AdultsCount** - number of adult guests. Data type - unsigned 32-bit integer.
--   **RoomsRequestData.Room.ChidrenCount** - number of children. Data type - unsigned 32-bit integer.
--   **RoomsRequestData.Room.ChildrenAges** - container with information the age of children. Data type - unsigned 32-bit integer.
--   **RoomsRequestData.Room.ChildrenAges.Age** - age of children in the request. Data type - unsigned 32-bit integer.
--   **RoomTypesGroup** - contains information on the room types found. Data type - custom.
--   **RoomTypesGroup.Type** - container with information on the room. Data type - custom.
--   **RoomTypesGroup.Type.ID** - ID of the room type within this search result. Data type - unsigned 32-bit integer.
--   **RoomTypesGroup.Type.Name** - room type name. Data type - string.
--   **RoomTypesGroup.Type.CommonName** - common name of the room. Data type - string.
--   **RoomMealsGroup** - contains information on the possible meal types. Data type - custom.
--   **RoomMealsGroup.Meal** - container with information on the meal type. Data type - custom.
--   **RoomMealsGroup.Meal.ID** - identifies the meal type for this search result. Data type - unsigned 32-bit integer.
--   **RoomMealsGroup.Meal.MealCode** - meal type code. Data type - string.
--   **RoomMealsGroup.Meal.Name** - name of the meal type. Data type - string.
--   **RoomRatesGroup** - contains information on the cost of rooms. Data type - custom.
--   **RoomRatesGroup.Rate** - container with information on the cost and rate. Data type - custom.
--   **RoomRatesGroup.Rate.ID** - rate identifier within this search result. Data type - unsigned integer 32-bit number.
--   **RoomRatesGroup.Rate.DiscountID** - corporate hotel code. Data type - string.
--   **RoomRatesGroup.Rate.Price** - container with currency information. Data type - custom.
--   **RoomRatesGroup.Rate.Price.Amount** - the amount of the base price. Data type - fractional number.
--   **RoomRatesGroup.Rate.Price.Currency** - currency code of the base price. Data type - string.
--   **RoomRatesGroup.Rate.IsSpecialOffer** - attribute of this fare being a special offer. Data type - boolean.
--   **RoomRatesGroup.Rate.VisaSupportProvided** - attribute of hotel visa support. Data type - boolean.
--   **RoomRatesGroup.Rate.IsNonRefundable** - attribute of returnability. Data type - boolean.
--   **RoomRatesGroup.Rate.BookingRemarks** - remarks. Data type - custom.
--   **RoomRatesGroup.Rate.CancellationRules** - cancellation rules. Data type - custom.
--   **RoomRatesGroup.Rate.CancellationRules.CancellationRule** - container with cancellation rules. Data type - custom.
--   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.ID** - cancellation rule ID. Data type - unsigned 32-bit integer.
--   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.DeadLine** - deadline for canceling your reservation without penalty. The time zone is UTC. Data type - string.
--   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.PercentValue** - penalty value in percent. Data type - unsigned 32-bit integer.
--   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.AbsoluteValue** - the value of the penalty in the specified currency. Data type - unsigned 32-bit integer.
--   **RoomRatesGroup.Rate.FreeCount** - shows the number of rooms available for sale (sold only at the Bronevik supplier, not mandatory). Data type - unsigned 32-bit integer.
--   **RoomRatesGroup.Rate.AgencyTimeLimit** - time limit from the provider. Data type - date, YYYY-MM-DDTHH:MM:SSZ
--   **RoomRatesGroup.Rate.EarlyCheckInInd** - contains information about the availability of early arrival. The data type is boolean.
--   **RoomRatesGroup.Rate.LateCheckOutInd** - contains information about the availability of late arrival. The data type is boolean.
--   **RoomsGroup** - contains information on various room options. Data type - custom.
--   **RoomsGroup.Room** - container with room parameters IDs. Data type - custom.
--   **RoomsGroup.Room.ID** - room ID. Data type - unsigned 32-bit integer.
--   **RoomsGroup.Room.TypeID** - room type ID. Data type - unsigned 32-bit integer.
--   **RoomsGroup.Room.MealID** - meal type ID. Data type - unsigned 32-bit integer.
--   **RoomsGroup.Room.RateID** - fare ID. Data type - unsigned 32-bit integer.
--   **Hotels** - contains information on the hotels in search results. Data type - custom.
--   **Hotels.Hotel** - container with information on the hotel. Data type - custom.
--   **Hotels.Hotel.HotelID** - hotel ID. Data type - unsigned 32-bit integer.
--   **Hotels.Hotel.Name** - hotel name. Data type - string.
--   **Hotels.Hotel.RoomCombinations** - container with a list of all available combinations of certain rooms. Data type - custom.
--   **Hotels.Hotel.RoomCombinations.RoomCombination** - container with information on a particular combination that can be used in a booking request. Data type - custom.
--   **Hotels.Hotel.RoomCombinations.RoomCombination.Room** - container with information on the room. Data type - custom.
--   **Hotels.Hotel.RoomCombinations.RoomCombination.Room.SearchRoomID** - ID of the sequence number of the room being searched for, this value is used in RoomData.RoomSearchIndex when booking. Data type - unsigned 32-bit integer.
--   **Hotels.Hotel.RoomCombinations.RoomCombination.Room.RoomVariantID** - room ID, this value is used in RoomData.RoomVariantId when booking. Data type - unsigned 32-bit integer.
--   **Hotels.Hotel.RoomGroups** - information on available rooms. Data type - string.
--   **Hotels.Hotel.RoomGroups.Room** - container with information on the room. Data type - custom.
--   **Hotels.Hotel.RoomGroups.Room.SearchRoomID** - ID of the requested room from the request RunCitySearch Rooms.Room. Data type - unsigned 32-bit integer.
--   **Hotels.Hotel.RoomGroups.Room.RoomVariants** - container with rooms numbers suitable for a request. Data type - custom.
--   **Hotels.Hotel.RoomGroups.Room.RoomVariants.RoomID** - ID of suitable rooms. Data type - unsigned 32-bit integer.
--   **Hotels.Hotel.RoomGroups.Room.Markups** - container with information on markups calculated in accordance with the settings. Data type - custom.
--   **Hotels.Hotel.RoomGroups.Room.Markups.Markup** - container with information on the markup. Data type is custom.
--   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.RoomVariantID** - room ID. Data type - unsigned 32-bit integer.
--   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.Sum** - container with information on the amount and currency of the markup. Data type - custom.
--   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.Sum.Amount** - markup amount. Data type - fractional number.
--   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.Sum.Currency** - currency code of the markup. Data type - string.
--   **Hotels.Hotel.RoomGroups.Room.AgencyCharges** - contains information on agency charges, calculated in accordance with the settings. Data type - custom.
--   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge** - container with information on the agency charge. Data type - custom.
--   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.RoomVariantID** - room ID. Data type - unsigned 32-bit integer.
--   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.Sum** - container with information on the amount and currency of the charge. Data type - custom.
--   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.Sum.Amount** - amount of the charge. Data type - fractional number.
--   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.Sum.Currency** - charge currency code. Data type - string.
--   **Hotels.Hotel.RoomGroups.Room.ServiceCharges** - contains information on service provider charges, calculated in accordance with the settings. Data type - custom.
--   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge** - container with information on the service provider’s charge. Data type - custom.
--   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.RoomVariantID** - room ID. Data type - unsigned 32-bit integer.
--   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum** - container with information on the amount and currency of the charge. Data type - custom.
--   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum.Amount** - amount of the charge. Data type - fractional number.
--   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum.Currency** - charge currency code. Data type - string.
+-   **SearchID** - идентификатор совершившегося поиска. Тип данных - целое 32-битное число.
+-   **RoomsRequestData**** - контейнер с информацией о поисковом запросе. Тип данных - сложный.
+-   **RoomsRequestData.Room** - контейнер с информацией о количестве постояльцев. Тип данных - сложный.
+-   **RoomsRequestData.Room.AdultsCount** - количество взрослых постояльцев. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomsRequestData.Room.ChidrenCount** - количество детей. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomsRequestData.Room.ChildrenAges** - контейнер с информацией о возрасте детей. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomsRequestData.Room.ChildrenAges.Age** - возраст детей в запросе. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomTypesGroup** - контейнер с информацией о найденных типах комнат. Тип данных - сложный.
+-   **RoomTypesGroup.Type** - контейнер с информацией о комнате. Тип данных - сложный.
+-   **RoomTypesGroup.Type.ID** - идентификатор типа комнаты в рамках этого результата поиска. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomTypesGroup.Type.Name** - название типа комнаты. Тип данных - строка.
+-   **RoomTypesGroup.Type.CommonName** - распространенное название комнаты. Тип данных - строка.
+-   **RoomMealsGroup** - контейнер с информацией о возможных типах питания. Тип данных - сложный.
+-   **RoomMealsGroup.Meal** - контейнер с информацией о типе питания. Тип данных - сложный.
+-   **RoomMealsGroup.Meal.ID** - идентификатор типа питания в рамках этого результата поиска. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomMealsGroup.Meal.MealCode** - код типа питания. Тип данных - строка.
+-   **RoomMealsGroup.Meal.Name** - название типа питания. Тип данных - строка.
+-   **RoomRatesGroup** - контейнер с информацией о стоимости комнат. Тип данных - сложный.
+-   **RoomRatesGroup.Rate** - контейнер с информацией о стоимости, тариф. Тип данных - сложный.
+-   **RoomRatesGroup.Rate.DiscountID** - код корпоративных отелей. Тип данных - строка.
+-   **RoomRatesGroup.Rate.ID** - идентификатор тарифа в рамках этого результата поиска. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomRatesGroup.Rate.Price** - контейнер с информацией о валюте. Тип данных - сложный.
+-   **RoomRatesGroup.Rate.Price.Amount** - сумма базовый цены. Тип данных - дробное число.
+-   **RoomRatesGroup.Rate.Price.Currency** - код валюты базовой цены. Тип данных - строка.
+-   **RoomRatesGroup.Rate.IsSpecialOffer** - признак данного тарифа как специального предложения. Тип данных - булевский.
+-   **RoomRatesGroup.Rate.VisaSupportProvided** - признак наличия визовой поддержки отеля. Тип данных - булевский.
+-   **RoomRatesGroup.Rate.IsNonRefundable** - признак возвратности. Тип данных - булевский.
+-   **RoomRatesGroup.Rate.BookingRemarks** -  контейнер с ремарками. Тип данных - сложный.
+-   **RoomRatesGroup.Rate.CancellationRules** - контейнер с правилами отмены. Тип данных - сложный.
+-   **RoomRatesGroup.Rate.CancellationRules.CancellationRule** - контейнер с правилами отмены. Тип данных - сложный.
+-   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.ID** - идентификатор правила отмены. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.DeadLine** - крайний срок отмены брони без штрафа. Часовой пояс - UTC. Тип данных - строка.
+-   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.PercentValue** - значение штрафа в процентах. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.AbsoluteValue** - значение штрафа в заданной валюте. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomRatesGroup.Rate.FreeCount** - отражает количество доступных для продажи комнат (реализовано только у поставщика Bronevik, не является обязательным). Тип данных - целое беззнаковое 32-битное число.
+-   **RoomRatesGroup.Rate.AgencyTimeLimit** - таймлимит от поставщика. Тип данных - дата, YYYY-MM-DDTHH:MM:SSZ
+-   **RoomRatesGroup.Rate.AdditionalInfo** - контейнер с дополнительной информацией о номере. Тип данных - сложный.
+-   **RoomRatesGroup.Rate.AdditionalInfo SupplierInformation** - контейнер с дополнительной информацией от поставщика о номере. Тип данных - сложный.
+-   **RoomRatesGroup.Rate.AdditionalInfo SupplierInformation.Name** - название информации. Тип данных - строка.
+-   **RoomRatesGroup.Rate.AdditionalInfo SupplierInformation.Value** -  контейнер с описанием дополнительной информации. Тип данных - сложный.
+-   **RoomRatesGroup.Rate.AdditionalInfo SupplierInformation.Value.string** - описанием дополнительной информации. Тип данных - строка.
+-   **RoomRatesGroup.Rate.EarlyCheckInInd** - отражает информацию о доступности раннего заезда. Тип данных - булевский.
+-   **RoomRatesGroup.Rate.LateCheckOutInd** - отражает информацию о доступности позднего выезда. Тип данных - булевский.
+-   **RoomsGroup** - контейнер с информацией о различных вариантов комнат. Тип данных - сложный.
+-   **RoomsGroup.Room** - контейнер с идентификаторами параметров комнаты. Тип данных - сложный.
+-   **RoomsGroup.Room.ID** - идентификатор комнаты. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomsGroup.Room.TypeID** - идентификатор типа комнаты. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomsGroup.Room.MealID** - идентификатор типа питания. Тип данных - целое беззнаковое 32-битное число.
+-   **RoomsGroup.Room.RateID** - идентификатор тарифа. Тип данных - целое беззнаковое 32-битное число.
+-   **Hotels** - контейнер с информацией об отелях в поисковой выдаче. Тип данных - сложный.
+-   **Hotels.Hotel** - контейнер с информацией об отеле. Тип данных - сложный.
+-   **Hotels.Hotel.HotelID** - идентификатор отеля. Тип данных - целое беззнаковое 32-битное число.
+-   **Hotels.Hotel.Name** - название отеля. Тип данных - строка.
+-   **Hotels.Hotel.RoomCombinationsм** - контейнер со списком всех доступных комбинациях определенных номеров и комнат . Тип данных - сложный.
+-   **Hotels.Hotel.RoomCombinations.RoomCombination** - контейнер с информацией о конкретной комбинации, которую можно использовать в запросе бронирования. Тип данных - сложный.
+-   **Hotels.Hotel.RoomCombinations.RoomCombination.Room** - контейнер с информацией о комнате. Тип данных - сложный.
+-   **Hotels.Hotel.RoomCombinations.RoomCombination.Room.SearchRoomID** - идентификатор порядкового номера искомой комнаты, данное значение используется в RoomData.RoomSearchIndex при бронировании. Тип данных - целое беззнаковое 32-битное число.
+-   **Hotels.Hotel.RoomCombinations.RoomCombination.Room.RoomVariantID** - идентификатор комнаты, данное значение используется в RoomData.RoomVariantId при бронировании. Тип данных - целое беззнаковое 32-битное число.
+-   **Hotels.Hotel.RoomGroups** - контейнер с информацией о доступных комнатах. Тип данных - сложный.
+-   **Hotels.Hotel.RoomGroups.Room** - контейнер с информацией о комнате. Тип данных - сложный.
+-   **Hotels.Hotel.RoomGroups.Room.SearchRoomID** - идентификатор запрашиваемой комнаты из запроса RunCitySearch Rooms.Room. Тип данных - целое беззнаковое 32-битное число.
+-   **Hotels.Hotel.RoomGroups.Room.RoomVariants** - контейнер с номерами комнат, подходящих под запрос. Тип данных - сложный.
+-   **Hotels.Hotel.RoomGroups.Room.RoomVariants.RoomID** - идентификатор подходящих комнат. Тип данных - целое беззнаковое 32-битное число.
+-   **Hotels.Hotel.RoomGroups.Room.Markups** - контейнер с информацией о наценках, рассчитываемых в соответствии с настройками. Тип данных - сложный.
+-   **Hotels.Hotel.RoomGroups.Room.Markups.Markup** - контейнер с информацией о наценке. Тип данных - сложный.
+-   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.RoomVariantID** - идентификатор комнаты. Тип данных - целое беззнаковое 32-битное число.
+-   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.Sum** - контейнер с информацией о сумме и валюте наценки. Тип данных - сложный.
+-   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.Sum.Amount** - сумма наценки. Тип данных - дробное число.
+-   **Hotels.Hotel.RoomGroups.Room.Markups.Markup.Sum.Currency** - код валюты наценки. Тип данных - строка.
+-   **Hotels.Hotel.RoomGroups.Room.AgencyCharges** - контейнер с информацией о сборах агенства, рассчитываемых в соответствии с настройками. Тип данных - сложный.
+-   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge** - контейнер с информацией о сборе агенства. Тип данных - сложный.
+-   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.RoomVariantID** - идентификатор комнаты. Тип данных - целое беззнаковое 32-битное число.
+-   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.Sum** - контейнер с информацией о сумме и валюте сбора. Тип данных - сложный.
+-   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.Sum.Amount** - сумма сбора. Тип данных - дробное число.
+-   **Hotels.Hotel.RoomGroups.Room.AgencyCharges.AgencyCharge.Sum.Currency** - код валюты сбора. Тип данных - строка.
+-   **Hotels.Hotel.RoomGroups.Room.ServiceCharges** - контейнер с информацией о сборах сервис провайдера, рассчитываемых в соответствии с настройками. Тип данных - сложный.
+-   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge** - контейнер с информацией о сборе сервис провайдера. Тип данных - сложный.
+-   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.RoomVariantID** - идентификатор комнаты. Тип данных - целое беззнаковое 32-битное число.
+-   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum** - контейнер с информацией о сумме и валюте сбора. Тип данных - сложный.
+-   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum.Amount** - сумма сбора. Тип данных - дробное число.
+-   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum.Currency** - код валюты сбора. Тип данных - строка.
 
-######**Outdated and unsupported:**
+######**Устаревшие и неподдерживаемые:**
+-   **Hotels.Hotel.EarlyCheckInGroup** - контейнер с информацией о предлагаемых вариантах раннего заселения. Тип данных - сложный.
+-   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer** - контейнер с информацией о варианте. Цена указана за один номер. Тип данных - сложный.
+-   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Time** - контейнер с информацией о предлагаемом времени. Тип данных - строка формата hh:mm.
+-   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Price** - контейнер с информацией о цене данного предложения. Тип данных - сложный.
+-   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Price.Amount** - сумма цены. Тип данных - дробное число.
+-   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Price.Currency** - код валюты. Тип данных - строка.
+-   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Description** - дополнительная информация. Тип данных - строка.
+-   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Guaranteed** - признак гарантированности услуги. Тип данных - булевский.
+-   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.PriceRule** - правила, по которым предоставляется услуга. Тип данных - перечисление, возможные значения:
+    -   **Unknown** - Неизвестно
+    -   **Free** - Бесплатно
+    -   **AdditionalPrice** - Доплата
+-   **Hotels.Hotel.LateCheckOutGroup** - информация о предлагаемых вариантах позднего выезда из отеля. Тип данных - сложный.
+-   **Hotels.Hotel.LateCheckOutGroup.CheckInOutOffer** - контейнер с информацией о варианте. Тип данных - сложный. Идентичен **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer**
 
--   **Hotels.Hotel.EarlyCheckInGroup** - information on the suggested options for early check-in. Data type - custom.
--   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer** - contains information on the option. Data type - custom.
--   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Time** - contains information on the suggested time. Data type - hh:mm format string.
--   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Price** - container with information on the price of this offer. Data type - custom.
--   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Price.Amount** - price amount. Data type - fractional number.
--   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Price.Currency** - currency code. Data type - string.
--   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Description** - additional information. Data type - string.
--   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Guaranteed** - attribute of a guaranteed service. Data type - boolean.
--   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.PriceRule** - rules by which the service is provided. Data type - enumeration, possible values:
-    -   **Unknown** - Unknown
-    -   **Free** - Free
-    -   **AdditionalPrice** - Additional payment
--   **Hotels.Hotel.LateCheckOutGroup** - information on the suggested options for late check out. Data type - custom.
--   **Hotels.Hotel.LateCheckOutGroup.CheckInOutOffer** - contains information on the option. Data type - custom. Identical to **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer**
-
-
-##### Sample Response (XML)
+##### Пример ответа (XML)
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
    <s:Body>
