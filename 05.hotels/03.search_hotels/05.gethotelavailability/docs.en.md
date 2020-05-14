@@ -86,6 +86,8 @@ title: GetHotelAvailability
 -   **RoomRatesGroup.Rate.CancellationRules.CancellationRule.AbsoluteValue** - the value of the penalty in the specified currency. Data type - unsigned 32-bit integer.
 -   **RoomRatesGroup.Rate.FreeCount** - shows the number of rooms available for sale (sold only at the Bronevik supplier, not mandatory). Data type - unsigned 32-bit integer.
 -   **RoomRatesGroup.Rate.AgencyTimeLimit** - time limit from the provider. Data type - date, YYYY-MM-DDTHH:MM:SSZ
+-   **RoomRatesGroup.Rate.EarlyCheckInInd** - contains information for early check-in availability. Data type - boolean.
+-   **RoomRatesGroup.Rate.LateCheckOutInd** - contains information for late check-out availability. Data type - boolean.
 -   **RoomsGroup** - contains information on various room options. Data type - custom.
 -   **RoomsGroup.Room** - container with room parameters IDs. Data type - custom.
 -   **RoomsGroup.Room.ID** - room ID. Data type - unsigned 32-bit integer.
@@ -124,6 +126,9 @@ title: GetHotelAvailability
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum** - container with information on the amount and currency of the charge. Data type - custom.
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum.Amount** - amount of the charge. Data type - fractional number.
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum.Currency** - charge currency code. Data type - string.
+
+######**Outdated and unsupported:**
+
 -   **Hotels.Hotel.EarlyCheckInGroup** - information on the suggested options for early check-in. Data type - custom.
 -   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer** - contains information on the option. Data type - custom.
 -   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Time** - contains information on the suggested time. Data type - hh:mm format string.
