@@ -143,7 +143,7 @@ title: GetHotelAvailability
     -   **Unknown** - Неизвестно
     -   **Free** - Бесплатно
     -   **AdditionalPrice** - Доплата
--   **Hotels.Hotel.LateCheckOutGroup** - информация о предлагаемых вариантах позднего выезда из отеля(используется на этапе проверки комнаты). Тип данных - сложный.
+-   **Hotels.Hotel.LateCheckOutGroup** - информация о предлагаемых вариантах позднего выезда из отеля (используется на этапе проверки комнаты). Тип данных - сложный.
 -   **Hotels.Hotel.LateCheckOutGroup.CheckInOutOffer** - контейнер с информацией о варианте. Тип данных - сложный. Идентичен **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer**
 
 ##### Пример ответа (XML)
