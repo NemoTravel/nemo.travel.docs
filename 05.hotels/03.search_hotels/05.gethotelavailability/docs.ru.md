@@ -91,8 +91,8 @@ title: GetHotelAvailability
 -   **RoomRatesGroup.Rate.AdditionalInfo SupplierInformation.Name** - название информации. Тип данных - строка.
 -   **RoomRatesGroup.Rate.AdditionalInfo SupplierInformation.Value** -  контейнер с описанием дополнительной информации. Тип данных - сложный.
 -   **RoomRatesGroup.Rate.AdditionalInfo SupplierInformation.Value.string** - описанием дополнительной информации. Тип данных - строка.
--   **RoomRatesGroup.Rate.EarlyCheckInInd** - отражает информацию о доступности раннего заезда. Тип данных - булевский.
--   **RoomRatesGroup.Rate.LateCheckOutInd** - отражает информацию о доступности позднего выезда. Тип данных - булевский.
+-   **RoomRatesGroup.Rate.EarlyCheckInInd** - отражает информацию о доступности раннего заезда (используется на этапе проверки отеля). Тип данных - булевский.
+-   **RoomRatesGroup.Rate.LateCheckOutInd** - отражает информацию о доступности позднего выезда (используется на этапе проверки отеля). Тип данных - булевский.
 -   **RoomsGroup** - контейнер с информацией о различных вариантов комнат. Тип данных - сложный.
 -   **RoomsGroup.Room** - контейнер с идентификаторами параметров комнаты. Тип данных - сложный.
 -   **RoomsGroup.Room.ID** - идентификатор комнаты. Тип данных - целое беззнаковое 32-битное число.
@@ -131,9 +131,7 @@ title: GetHotelAvailability
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum** - контейнер с информацией о сумме и валюте сбора. Тип данных - сложный.
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum.Amount** - сумма сбора. Тип данных - дробное число.
 -   **Hotels.Hotel.RoomGroups.Room.ServiceCharges.ServiceCharge.Sum.Currency** - код валюты сбора. Тип данных - строка.
-
-######**Устаревшие и неподдерживаемые:**
--   **Hotels.Hotel.EarlyCheckInGroup** - контейнер с информацией о предлагаемых вариантах раннего заселения. Тип данных - сложный.
+-   **Hotels.Hotel.EarlyCheckInGroup** - контейнер с информацией о предлагаемых вариантах раннего заселения (используется на этапе проверки комнаты). Тип данных - сложный.
 -   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer** - контейнер с информацией о варианте. Цена указана за один номер. Тип данных - сложный.
 -   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Time** - контейнер с информацией о предлагаемом времени. Тип данных - строка формата hh:mm.
 -   **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer.Price** - контейнер с информацией о цене данного предложения. Тип данных - сложный.
@@ -145,7 +143,7 @@ title: GetHotelAvailability
     -   **Unknown** - Неизвестно
     -   **Free** - Бесплатно
     -   **AdditionalPrice** - Доплата
--   **Hotels.Hotel.LateCheckOutGroup** - информация о предлагаемых вариантах позднего выезда из отеля. Тип данных - сложный.
+-   **Hotels.Hotel.LateCheckOutGroup** - информация о предлагаемых вариантах позднего выезда из отеля(используется на этапе проверки комнаты). Тип данных - сложный.
 -   **Hotels.Hotel.LateCheckOutGroup.CheckInOutOffer** - контейнер с информацией о варианте. Тип данных - сложный. Идентичен **Hotels.Hotel.EarlyCheckInGroup.CheckInOutOffer**
 
 ##### Пример ответа (XML)
