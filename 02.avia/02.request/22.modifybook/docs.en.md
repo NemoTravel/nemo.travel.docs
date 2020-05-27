@@ -5,6 +5,107 @@ taxonomy:
         - docs
 ---
 
+### ModifyAncillaryServicesInformative
+A request to verify the possibility of modifying additional services in an order by using the ModifyAncillaryServices request. Works only for GDS Sirena Travel.
+-   When adding services empty Services / Seats blocks are considered as a valid answer.
+-   Block **PossibleFailure** in the response to the request has 2 possible values:
+     -  **Loss** means a possible loss of service, because any change in Quantity in GDS Sirena Travel involves removal of an old additional service and addition of a new additional service.
+     -  **EmdLoss**  means a possible loss of the EMD service for an already issued additional service.
+
+### Sample container with additional services for the ModifyAncillaryServicesInformative request
+ ```xml
+      <avia1:Services>
+       <avia1:AncillaryService>
+        <avia1:Action>Modify</avia1:Action>
+        <avia1:Status>Ticketed</avia1:Status>
+        <avia1:Rfic>C</avia1:Rfic>
+        <avia1:Rfisc>0GP</avia1:Rfisc>
+        <avia1:Name>PIECE OF XBAG UPTO23KG 203LCM</avia1:Name>
+        <avia1:Group>BG</avia1:Group>
+        <avia1:SubGroup xsi:nil="true"/>
+        <avia1:Quantity>0</avia1:Quantity>
+        <avia1:SsrCode xsi:nil="true"/>
+        <avia1:SsrDescription xsi:nil="true"/>
+        <avia1:Type>P</avia1:Type>
+        <avia1:EmdType>A</avia1:EmdType>
+        <avia1:TravellerRef>1</avia1:TravellerRef>
+        <avia1:SegmentRefs>
+           <stl1:Ref>0</stl1:Ref>
+        </avia1:SegmentRefs>
+       </avia1:AncillaryService>
+     </avia1:Services>
+     <avia1:Seats>
+      <avia1:AncillarySeat>
+       <avia1:Action>Add</avia1:Action>
+       <avia1:Rfic>A</avia1:Rfic>
+       <avia1:Rfisc>CMF</avia1:Rfisc>
+       <avia1:Number>4A</avia1:Number>
+       <avia1:TravellerRef>1</avia1:TravellerRef>
+       <avia1:SegmentRefs>
+         <stl1:Ref>0</stl1:Ref>
+       </avia1:SegmentRefs>
+      </avia1:AncillarySeat>
+     </avia1:Seats>
+ ```    
+ ### Sample responses for ModifyAncillaryServicesInformative
+  **Checking the availability of adding additional services**
+ ```xml
+ <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <ModifyAncillaryServicesInformativeResponse xmlns="http://nemo-ibe.com/Avia">
+         <ModifyAncillaryServicesInformativeResult xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:RequestID>...</a:RequestID>
+            <a:ResponseBody xmlns:b="http://nemo.travel/Avia">
+               <b:Services/>
+               <b:Seats/>
+            </a:ResponseBody>
+         </ModifyAncillaryServicesInformativeResult>
+      </ModifyAncillaryServicesInformativeResponse>
+   </s:Body>
+</s:Envelope>
+ ```
+ **Checking the availability of changes to the issued additional baggage service**
+ ```xml
+ <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <ModifyAncillaryServicesInformativeResponse xmlns="http://nemo-ibe.com/Avia">
+         <ModifyAncillaryServicesInformativeResult xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:RequestID>...</a:RequestID>
+            <a:ResponseBody xmlns:b="http://nemo.travel/Avia">
+               <b:Services>
+                  <b:ServiceInformation>
+                     <b:Service>
+                        <b:Action>Modify</b:Action>
+                        <b:Status>Ticketed</b:Status>
+                        <b:Rfic>C</b:Rfic>
+                        <b:Rfisc>0GP</b:Rfisc>
+                        <b:Name>PIECE OF XBAG UPTO23KG 203LCM</b:Name>
+                        <b:Group>BG</b:Group>
+                        <b:Quantity>2</b:Quantity>
+                        <b:Type>P</b:Type>
+                        <b:EmdType>A</b:EmdType>
+                        <b:TravellerRef>1</b:TravellerRef>
+                        <b:SegmentRefs xmlns:c="http://nemo.travel/STL">
+                           <c:Ref>0</c:Ref>
+                        </b:SegmentRefs>
+                     </b:Service>
+                     <b:PossibleFailures>
+                        <b:PossibleFailure>Loss</b:PossibleFailure>
+                        <b:PossibleFailure>EmdLoss</b:PossibleFailure>
+                     </b:PossibleFailures>
+                  </b:ServiceInformation>
+               </b:Services>
+               <b:Seats/>
+            </a:ResponseBody>
+         </ModifyAncillaryServicesInformativeResult>
+      </ModifyAncillaryServicesInformativeResponse>
+   </s:Body>
+</s:Envelope>
+ ```
+
+### ModifyAncillaryServices
+Changes to the reservation related to additional services, works only for GDS Sirena Travel. The request is similar to the ModifyAncillaryServicesInformative. Response is similar to the  [Book_2_2](/avia/request/bookflight).
+
 ### ModifyBook_2_2
 The latest version of the ModifyBook request. Similar to the ModifyBook_2_1 version, the difference is only in the ancillary services block from the [Book_2_2](/avia/request/bookflight) request.
  ### Sample container with ancilliary services from the ModifyBook_2_2 request.
