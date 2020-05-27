@@ -5,6 +5,107 @@ taxonomy:
         - docs
 ---
 
+### ModifyAncillaryServicesInformative
+Запрос для проверки возможности модификации дополнительных услуг в заказе с помощью запроса ModifyAncillaryServices только для GDS Sirena Travel.
+-   При добавлении услгуг, валидным ответом считаеются пустые блоки Services / Seats.
+-   Блок **PossibleFailure** в ответе на запрос имеет 2 возможных значения:
+     -  **Loss** - означает возможную утерю услуги, т.к. любое изменение Quantity в GDS Sirena Travel предполагает удаление старой и добавление новой дополнительной услуги.
+     -  **EmdLoss** - означает возможную утерю услуги EMD на уже выписанную дополнительную услугу.
+
+### Пример контейнера с допуслугами из запроса ModifyAncillaryServicesInformative
+ ```xml
+      <avia1:Services>
+       <avia1:AncillaryService>
+        <avia1:Action>Modify</avia1:Action>
+        <avia1:Status>Ticketed</avia1:Status>
+        <avia1:Rfic>C</avia1:Rfic>
+        <avia1:Rfisc>0GP</avia1:Rfisc>
+        <avia1:Name>PIECE OF XBAG UPTO23KG 203LCM</avia1:Name>
+        <avia1:Group>BG</avia1:Group>
+        <avia1:SubGroup xsi:nil="true"/>
+        <avia1:Quantity>0</avia1:Quantity>
+        <avia1:SsrCode xsi:nil="true"/>
+        <avia1:SsrDescription xsi:nil="true"/>
+        <avia1:Type>P</avia1:Type>
+        <avia1:EmdType>A</avia1:EmdType>
+        <avia1:TravellerRef>1</avia1:TravellerRef>
+        <avia1:SegmentRefs>
+           <stl1:Ref>0</stl1:Ref>
+        </avia1:SegmentRefs>
+       </avia1:AncillaryService>
+     </avia1:Services>
+     <avia1:Seats>
+      <avia1:AncillarySeat>
+       <avia1:Action>Add</avia1:Action>
+       <avia1:Rfic>A</avia1:Rfic>
+       <avia1:Rfisc>CMF</avia1:Rfisc>
+       <avia1:Number>4A</avia1:Number>
+       <avia1:TravellerRef>1</avia1:TravellerRef>
+       <avia1:SegmentRefs>
+         <stl1:Ref>0</stl1:Ref>
+       </avia1:SegmentRefs>
+      </avia1:AncillarySeat>
+     </avia1:Seats>
+ ```    
+ ### Примеры ответов ModifyAncillaryServicesInformative
+  **Проверка доступности добавления дополнительных услуг**
+ ```xml
+ <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <ModifyAncillaryServicesInformativeResponse xmlns="http://nemo-ibe.com/Avia">
+         <ModifyAncillaryServicesInformativeResult xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:RequestID>...</a:RequestID>
+            <a:ResponseBody xmlns:b="http://nemo.travel/Avia">
+               <b:Services/>
+               <b:Seats/>
+            </a:ResponseBody>
+         </ModifyAncillaryServicesInformativeResult>
+      </ModifyAncillaryServicesInformativeResponse>
+   </s:Body>
+</s:Envelope>
+ ```
+ **Проверка доступности изменения выписанной дополнительной услуги багажа**
+ ```xml
+ <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <ModifyAncillaryServicesInformativeResponse xmlns="http://nemo-ibe.com/Avia">
+         <ModifyAncillaryServicesInformativeResult xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:RequestID>...</a:RequestID>
+            <a:ResponseBody xmlns:b="http://nemo.travel/Avia">
+               <b:Services>
+                  <b:ServiceInformation>
+                     <b:Service>
+                        <b:Action>Modify</b:Action>
+                        <b:Status>Ticketed</b:Status>
+                        <b:Rfic>C</b:Rfic>
+                        <b:Rfisc>0GP</b:Rfisc>
+                        <b:Name>PIECE OF XBAG UPTO23KG 203LCM</b:Name>
+                        <b:Group>BG</b:Group>
+                        <b:Quantity>2</b:Quantity>
+                        <b:Type>P</b:Type>
+                        <b:EmdType>A</b:EmdType>
+                        <b:TravellerRef>1</b:TravellerRef>
+                        <b:SegmentRefs xmlns:c="http://nemo.travel/STL">
+                           <c:Ref>0</c:Ref>
+                        </b:SegmentRefs>
+                     </b:Service>
+                     <b:PossibleFailures>
+                        <b:PossibleFailure>Loss</b:PossibleFailure>
+                        <b:PossibleFailure>EmdLoss</b:PossibleFailure>
+                     </b:PossibleFailures>
+                  </b:ServiceInformation>
+               </b:Services>
+               <b:Seats/>
+            </a:ResponseBody>
+         </ModifyAncillaryServicesInformativeResult>
+      </ModifyAncillaryServicesInformativeResponse>
+   </s:Body>
+</s:Envelope>
+ ```
+
+### ModifyAncillaryServices
+Внесение изменений в бронь связанных  с дополнительными услугами только для GDS Sirena Travel. Запрос аналогичен запросу из ModifyAncillaryServicesInformative. Ответ аналогичен ответу из [Book_2_2](/avia/request/bookflight).
+ 
 ### ModifyBook_2_2
 Самая последняя версия запроса ModifyBook.
 Аналогичен версии ModifyBook_2_1, отличия только в блоке работы с допуслугами из запроса [Book_2_2](/avia/request/bookflight). 
