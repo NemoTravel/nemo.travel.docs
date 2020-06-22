@@ -331,6 +331,7 @@ taxonomy:
 * **data.documents.ID_EMD_N** — контейнер с информацией о EMD (Electronic Miscellaneous Document) по N-ой дополнительной услуге. Тип данных — сложный.
 * **data.documents.ID_EMD_N.number** — номер EMD. Тип данных — строка.
 * **data.documents.ID_EMD_N.type** — тип EMD. Тип данных — строка.
+* **data.documents.ID_EMD_N.status** — статус EMD. Тип данных — строка. Возможные значения: active - EMD активен; cancelled - все остальные варианты.
 * **data.documents.ID_EMD_N.passenger** — идентификатор пассажира (ID_PAS_N) к которому привязан данный N-й EMD. Тип данных — строка.
 * **data.documents.ID_PLC_N** — контейнер с информацией о электронном страховом полисе. Тип данных — сложный.
 * **data.documents.ID_PLC_N.number** — номер страхового полиса. Тип данных — строка.
