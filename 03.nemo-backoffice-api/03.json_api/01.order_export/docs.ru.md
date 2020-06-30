@@ -354,6 +354,12 @@ taxonomy:
 * **data.exchangeClaims.data.price** — контейнер с информацией о стоимости обмена. Тип данных — сложный.
 * **data.exchangeClaims.data.price.amount** — cумма за обмен. Тип данных — строка.
 * **data.exchangeClaims.data.price.currency** — код валюты за обмен. Тип данных — строка.
+* **data.exchangeClaims.data.totalPrice** — контейнер с информацией об итоговой стоимости обмена со всеми сборами. Тип данных — сложный.
+* **data.exchangeClaims.data.totalPrice.amount** — итоговая cумма за обмен. Тип данных — строка.
+* **data.exchangeClaims.data.totalPrice.currency** — код валюты за обмен. Тип данных — строка.
+* **data.exchangeClaims.data.paymentCharge** — контейнер с информацией о платёжном сборе. Тип данных — сложный.
+* **data.exchangeClaims.data.paymentCharge.amount** — cумма за платёжный сбор. Тип данных — строка.
+* **data.exchangeClaims.data.paymentCharge.currency** — код валюты за платёжный сбор. Тип данных — строка.
 * **data.exchangeClaims.data.selectedElements** — контейнер с информацией об N-й валюте. Тип данных — сложный.
 * **data.exchangeClaims.data.selectedElements.passenger** — идентификатор пассажира (ID_PAS_N) для которого производится обмен. Тип данных — строка.
 * **data.exchangeClaims.data.selectedElements.segments** — идентификатор сегмента (ID_SEG_N) для которого производится обмен. Тип данных — строка.
