@@ -179,7 +179,13 @@ taxonomy:
 * **data.products.ID_EXT_N.products.price** — container with information on ancilliary service price. Data type - custom.
 * **data.products.ID_EXT_N.products.price.amount** — amount paid for ancilliary service. Data type - string.
 * **data.products.ID_EXT_N.products.price.currency** — currency code of ancilliary service amount. Data type - string.
-* **data.products.ID_EXT_N.products.status** — ancilliary service status. Data type - string.
+* **data.products.ID_EXT_N.products.status** — ancilliary service status. Data type - string. Possible values:
+	* **Booked** - service is booked;
+	* **Canceled** - service is canceled;
+	* **Ticketed** - service is ticketed;
+	* **Rejected** - airline did not confirm the service;
+	* **Requested** - requested, but not yet confirmed;
+	* **Problematic** - there are problems with the service, there is no price, it is impossible to work with it via web services, you need to correct data in PNR via the terminal.
 * **data.products.ID_EXT_N.products.name** — ancilliary service name. Data type - string.
 * **data.products.ID_EXT_N.products.rfisc** — ancilliary service RFISC. Data type - string.
 * **data.products.ID_EXT_N.products.rfic** — ancilliary service RFIC. Data type - string.
