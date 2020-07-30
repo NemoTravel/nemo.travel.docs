@@ -48,7 +48,10 @@ taxonomy:
 * **data.products.ID_FLT_N.info.nemo.flightId** — flight ID . Data type - 64-bit integer.
 * **data.products.ID_FLT_N.info.nemo.searchId** — search ID . Data type - 64-bit integer.
 * **data.products.ID_FLT_N.info.nemo.pacgageId** — package ID. Data type - 64-bit integer.
-* **data.products.ID_FLT_N.info.nemo.status** — flight status. Data type - string.
+* **data.products.ID_FLT_N.info.nemo.status** — flight status. Data type - string. Possible values:
+	* **booked** - booked;
+	* **cancelled** - cancelled;
+	* **ticket** - ticketed.
 * **data.products.ID_FLT_N.info.nemo.utmMarker** — metasearch marker. Data type - string.
 * **data.products.ID_FLT_N.info.nemo.utmSource** — transition source. Data type - string.
 * **data.products.ID_FLT_N.info.nemoConnect** — Nemo.Connect flight information container. Data type - custom.
