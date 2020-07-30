@@ -329,6 +329,11 @@ taxonomy:
 * **data.documents.ID_TKT_N.info** — container with additional information on the given N-th e-ticket. Data type - custom.
 * **data.documents.ID_TKT_N.info.pricingInfos** — list of estimations associated with this N-th e-ticket. Data type - array of strings.
 * **data.documents.ID_TKT_N.info.endorsements** — endorsements linked to this N-th e-ticket. Data type - string.
+* **data.documents.ID_EMD_N** — container with EMD (Electronic Miscellaneous Document) information for N-th additional service. Data type - custom.
+* **data.documents.ID_EMD_N.number** — EMD number. Data type - string.
+* **data.documents.ID_EMD_N.type** — EMD type. Data type - string.
+* **data.documents.ID_EMD_N.status** — EMD status. Data type - string. Possible values: active - EMD active; cancelled - all other options.
+* **data.documents.ID_EMD_N.passenger** — passenger ID (ID_PAS_N) to which this N-th EMD is linked. Data type - string.
 * **data.currencyRates** — list of exchange rates. Data type - custom.
 * **data.currencyRates.[N]** —  container with information on the N-th currency. Data type - custom.
 * **data.currencyRates.[N].currencyCode** — code of the N-th currency. Data type - string.
