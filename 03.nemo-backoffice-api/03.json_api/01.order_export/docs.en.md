@@ -315,7 +315,14 @@ taxonomy:
 * **data.documents.ID_TKT_N** — container with information on the N-th e-ticket. Data type - complex.
 * **data.documents.ID_TKT_N.number** — e-ticket number. Data type - string.
 * **data.documents.ID_TKT_N.type** — e-ticket type. Data type - string.
-* **data.documents.ID_TKT_N.status** — e-ticket status. Data type - string.
+* **data.documents.ID_TKT_N.status** — e-ticket status. Data type - string. Possible values:
+	* **For Air tickets component:**
+	* **active** - ticket is active;
+	* **cancelled** - all the other variants.
+	* **For Rail component:**
+	* **booked** - the booking is created, the ticket hasn't been issued yet;
+	* **ticket** - the ticket is issued;
+	* **cancelled** - the ticket was refunded/ticket was not issued.
 * **data.documents.ID_TKT_N.passenger** — passenger ID (ID_PAS_N) to which the given N-th electronic ticket is associated. Data type - string.
 * **data.documents.ID_TKT_N.product** — ID of the service to which the given N-th e-ticket is attached. Data type - string.
 * **data.documents.ID_TKT_N.blankId** - unique order ID. Data type - string. 
