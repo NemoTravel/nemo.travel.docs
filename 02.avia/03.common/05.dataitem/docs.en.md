@@ -305,6 +305,7 @@ To store different booking content.
     - **CK** - bank check
     - **IN** - invoice
     - **VZ** - clearing
+    - **Other** - all other types
 - **PNRFOP.FOPs.FOP.CreditCardNumber** - masked credit card number, if the payment formats are a credit card. Data type - string.
 - **PNRFOP.FOPs.FOP.Number** - FOP number in the PNR.
 - **SubagentCommission** - subagent commission (optional). The data type is CommissionDataItem:
