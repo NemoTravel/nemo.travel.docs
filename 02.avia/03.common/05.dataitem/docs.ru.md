@@ -318,6 +318,7 @@ taxonomy:
 	-   **CK** — банковский чек (check);
 	-   **IN** — счет (invoice).
 	-   **VZ** — взаимозачет;
+	-   **Other** — все остальные возможные типы;
 -   **PNRFOP.FOPs.FOP.CreditCardNumber** — маскированный номер кредитной карты, в случае если форматы оплаты — кредитка. Тип данных — строка.
 -   **PNRFOP.FOPs.FOP.Number** — номер FOP в PNR.
 -   **PNRFOP.FOPs.FOP.VendorCode** - код типа карты. Тип данных - строка. Например: CA - MASTERCARD/EUROCARD; VI - VISA.
