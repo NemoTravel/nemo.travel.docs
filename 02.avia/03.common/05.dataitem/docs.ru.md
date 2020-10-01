@@ -173,7 +173,7 @@ taxonomy:
     -   **ResidualValue**;
     -   **FinancialImpact**
     -   **RefundDocument**.
--   **ElectronicDocument.IssueDateTime** — время генерации электронного документа. Тип данных — дата и время с указанием часового пояса.
+-   **ElectronicDocument.IssueDateTime** — время генерации электронного документа. Тип данных — дата и время с указанием часового пояса: YYYY-MM-DD hh:mm:ss ±hh:mm.
 -   **ElectronicDocument.NotStoredInPNR** - признак того, что данный билет не сохранён в PNR. Тип данных — булевский.
 -   **ElectronicDocument.ExecutionTimeLimit** — таймлимит на предоставление услуги по данному электронному документу. Тип данных — дата и время с указанием часового пояса.
 -   **ElectronicDocument.EMDSpecificData** — содержит специфичные для EMD данные. Тип данных — массив.
