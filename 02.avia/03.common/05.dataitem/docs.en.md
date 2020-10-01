@@ -170,7 +170,7 @@ To store different booking content.
     -   **ResidualValue**;
     -   **FinancialImpact**
     -   **RefundDocument**.
-- **ElectronicDocument.IssueDateTime** - time of ED generation. Data type - date and time with the time zone specified.
+- **ElectronicDocument.IssueDateTime** - time of ED generation. Data type - date and time with the time zone specified: YYYY-MM-DD hh:mm:ss ±hh:mm
 - **ElectronicDocument.NotStoredInPNR** - attribute of this ticket was not being saved in PNR. Data type - bool.
 - **ElectronicDocument.ExecutionTimeLimit** - TL to provide services for this ED. Data type - date and time with the time zone specified.
 - **ElectronicDocument.VAT** - VAT for this ED service. Data type - [Money](/avia/common/money). *Оutdated.*
