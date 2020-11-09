@@ -152,6 +152,7 @@ taxonomy:
     -   **NonCat35** — тарифы, не подходящие для выписки в категории 35; 
 <!--  Не особо понятно что это, но такой тип есть в GDS Sabre (дословно из документации «Ticketing ineligible Category 35 fares»); -->
    -   **Private** — все прочие приватные тарифы.
+-   **PassengerFare.Tariffs.Tariff.IsSystemTransfer** - Признак системного трансфера. Тип данных - булевский.
 -   **PassengerFare.Tariffs.Tariff.SegNum** — номер сегмента, для которого применяется данный тариф. Тип данных — целое 32-битное число.
 -   **PassengerFare.Tariffs.Tariff.FreeBaggage** — содержит информацию о бесплатном багаже по данному тарифу. Тип данных — сложный.
 -   **PassengerFare.Tariffs.Tariff.FreeBaggage.Measure** — единица измерения багажа. Тип данных — перечисление, возможные значения:
