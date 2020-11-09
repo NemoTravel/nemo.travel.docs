@@ -140,6 +140,7 @@ taxonomy:
 -   **PassengerFare.Taxes.Tax.Currency** — код валюты таксы. Тип данных — строка.
 -   **PassengerFare.Taxes.Tax.Amount** — сумма таксы. Тип данных — дробное число.
 -   **PassengerFare.Taxes.Tax.TaxCode** — код таксы. Тип данных — строка.
+-   **PassengerFare.Taxes.Tax.Type** - Тип таксы. Тип данных - строка.
 -   **PassengerFare.Taxes.Tax.AgencyAmount** - сумма таксы в валюте агентства. Тип данных — дробное число.
 -   **PassengerFare.Tariffs** — контейнер для тарифов данной ценовой составляющей. Тип данных — сложный.
 -   **PassengerFare.Tariffs.Tariff** — информация об одном из тарифов данной ценовой составляющей. Тип данных — сложный.
