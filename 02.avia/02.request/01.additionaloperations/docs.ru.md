@@ -125,6 +125,7 @@ taxonomy:
 -   **Sources.SourceInfo.CustomTicketingRequisites.RequisiteConfig.AppliesToCompanies** - список авиакомпаний, для которых применяется данный реквизит выписки. Тип данных - строка.
 -   **Sources.SourceInfo.CustomTicketingRequisites.RequisiteConfig.RequisiteID** -  идентификатор реквизита на стороне поставщика. Тип данных - строка.
 -   **ObjectForOperations** - содержит идентификатор объекта, для которого требуется выполнить допоперации. Тип данных - массив. Аналогичен соответствующему элементу из запроса.
+-   **ObjectForOperations.FlightID** - ИД перелёта, для которого требуется выполнить допоперации. Тип данных - целое 128 битное число.
 -   **CheckAvailabilityResult** - результат проверки доступности перелёта для бронирования. Тип данных - массив.
 -   **CheckAvailabilityResult.IsAvail** - признак доступности перелёта для бронирования. Тип данных - булевский.
 -   **GetFareRulesResult** - результат получения тарифных правил. Тип данных - массив.
@@ -156,6 +157,8 @@ taxonomy:
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.IsFree** - признак что место свободно. Тип данных - bool.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.NotExists** - признак того, что место не существует. Тип данных - bool.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Price** - цена места в случае если оно платное. Тип данных - [Money](/avia/common/money).
+-   **SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Price.Amount** - Сумма. Тип данных - плавающее c двойной точностью.
+-   **SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Price.Currency** - Валюта. Тип данных - строка.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.RFISC** - RFISC места. Тип данных - строка.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Characteristics** - характеристика ряда. Тип данных - строка.
 -   **GetPriceResult** - результат получения актуальной цены перелёта. Тип данных - массив.
@@ -193,6 +196,7 @@ taxonomy:
 -   **ActualizedFlight.Segments.Segment.SupplierInfo** - информация о статусах сегментов в случае если перелёт не доступен для бронирования и операция выполнялась с помощью запроса взятия мест. Тип данных - строка. Поддерживается у GalileoUapi, Sabre, Amadeus, Galileo.
 -   **FlightsByFareFamily** - содержит результат операции **GetFareFamilies**. Тип данных — массив [Flight](/avia/common/flight).
 -   **SubsidizedTariffs** - содержит результат операции **GetSubsidizedTariffs**. Тип данных — массив [Flight](/avia/common/flight).
+-   **ResultsFiltersApplied** - применение фильтров результата. Тип данных - bool.
 
 >>>> В результате выполнения запроса, будет получен перелен с новым ID, именно этот ID следует использовать в дальнейших операциях, например в бронировании.
 
