@@ -62,6 +62,18 @@ taxonomy:
     -   **Other** — все прочие классы, не относящиеся ни к одному из выше приведённых. 
 -   **Segment.BookingClass.BookingClassCode** — код класса перелёта. Тип данных — строка.
 -   **Segment.BookingClass.FreeSeatCount** — количество свободных мест для данного класса перелёта. Тип данных — целое 32-битное число.
+-   **Segments.Segment.ETicket** - Признак возможности выписки электронного билета на данном сегменте. Тип данных - bool.
+-   **Segments.Segment.SupplierInfo** - Информация о статусе сегмента от поставщика. Тип данных - сложный.
+-   **Segments.Segment.SupplierInfo.Status** - Индустриальный код статуса сегмента. Тип данных - строка.
+-   **Segments.Segment.SupplierInfo.GeneralizedStatus** - Статус сегмента. Тип данных - перечисление, возможные значения:
+    -   **Confirmed**
+    -   **NeedConfirmation**
+    -   **NotConfirmed**
+    -   **Canceled**
+    -   **Flew**
+    -   **OnRequest**
+    -   **Rejected**
+-   **Segments.Segment.RequestedSegment** - Ссылка на сегмента из запроса пользователя. Тип данных - Int32.
 -   **Segment.BookingClass.MealType** — доступный тип питания на данном классе перелёта. Тип данных — строка.
 -   **Segment.CouponStatus** — статус купона. Вовзращается при запросе [GetEDData](/avia/request/geteddata). Тип данных — перечисление. Возможные значения:
     -  **Open** — открыт для использования;
