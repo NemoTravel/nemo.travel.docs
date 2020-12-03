@@ -134,7 +134,7 @@ To store different booking content.
 	- **B** - Working
 	- **M** - Mobile
 	- **H** - Home
-- **ContactInfo.Telephone.PhoneNumber** - phone number. Data type - string.
+- **ContactInfo.Telephone.PhoneNumber** - phone number. Data type - string (international format with "+" at the beginning).
 - **LoyaltyCard** - loyalty card (optional). Data type - array.
 - **LoyaltyCard.OwnerType** - type of the issuer of the loyalty card. Data type - enumeration, possible values:
 	- **Airline**
