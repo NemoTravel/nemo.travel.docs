@@ -32,6 +32,7 @@ process:
 -   **[ModifyBook](/avia/request/modifybook)** - Используется для внесения изменений в бронь.
 -   **[RefundEMD](/avia/request/refundemd)** - Используется для выполнения возврата EMD.
 -   **[RefundTicket](/avia/request/refundticket)** - Используется для получения информации по возврату билетов и EMD, при их наличии в брони.
+-   **[RestoreBook](/avia/request/restorebook)** - Используется для восстановления аннулированной брони.
 -   **[Search](/avia/request/search)** - Выполняет поиск перелётов.
 -   **[Schedule search](/avia/request/schedulesearch)** - Поиск по расписанию.
 -   **[SplitBook](/avia/request/splitbook)** - Используется для отделения (сплита) части пассажиров в отдельную новую бронь.
