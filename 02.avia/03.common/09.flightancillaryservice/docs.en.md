@@ -10,7 +10,13 @@ taxonomy:
 Ancillary services, consist of the following elements:
 
 * **ID** - service ID in the supplier system. Data type - int.
-* **Status** - current status of the ancillary service. Data type - string.
+* **Status** - current status of the ancillary service. Data type - string. Possible values:
+	* **Booked** - service is booked;
+	* **Canceled** - service is canceled;
+	* **Ticketed** - service is ticketed;
+	* **Rejected** - airline did not confirm the service;
+	* **Requested** - requested, but not yet confirmed;
+	* **Problematic** - there are problems with the service, there is no price, it is impossible to work with it via web services, you need to correct data in PNR via the terminal.
 * **TravellerRef** -  reference to passengers in the book, to which the ancillary service applies. Data type - array.
 * **TravellerRef.Ref** - number of passenger in the book to whom this item belongs. Data type - int.
 * **Name** - ancillary service description. Data type - string.
