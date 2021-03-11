@@ -139,15 +139,26 @@ taxonomy:
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.[N].baggage.value** — численное значение для допустимого количества багажа Тип данных — целое 64-битное число.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.[N].baggage.measurement** — мера количества багажа. Тип данных — строка.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes** — список такс привязанных к данному N-му тарифу.. Тип данных  — сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N]** — контейнер с информацией об N-й таксе. Тип данных — сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].code** — код таксы. Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax** — контейнер с информацией о стоимости таксы. Тип данных — сложный.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax.amount** — размер таксы. Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax.currency** — код валюты таксы. Тип данных — строка.
-* **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].type** — тип таксы. Тип данных — строка.
+* отсюда
+* **taxes** - контейнер с данными по таксам. Тип данных - сложный.
+* **taxes.code** - код таксы. Тип данных- сложный.
+* **taxes.tax** - контейнер с данными по конкретной таксе. Тип данных - сложный.
+* **taxes.tax.amount** - стоимость таксы.  Тип данных - интеджер.
+* **taxes.tax.currency** - валюта таксы. Тип данных - строка.
+* **taxes.type** - список доступных типов такс.
+* Доступные типы:
 * **alreadyRefundedMoney** -  детализация возвращаемой стоимости. Тип данных — строка.
 * **agentChargeForExare** - детализация удерживаемой стоимости.  Тип данных — строка.
 * **paid** - детализация оплаченной стоимости. Тип данных — строка.
+* **taxes.price** - контейнер данных цены. Тип данных- 
+* **taxes.price.amount** - контейнер данных цены.
+* **taxes.price.currency** - контейнер данных цены.
+* **taxes.paid** - контейнер с данными о оплаченном
+* **taxes.paid.type** - перечисление типов, если типы не только sum
+* **taxes.paid.price** - контейнер данных с ценой
+* **taxes.paid.price.amount** - контейнер с данными цен оплаченных 
+* **taxes.paid.price.currency** - контейнер с данными цен оплаченных в валюте
+* **taxes.type** - тип таксы. пример (taxes.type.aircompany - авиакомпанейская) 
 * **data.products.ID_FLT_N.remarks** — массив текстовых ремарок. Тип данных — массив.
 * **data.products.ID_FLT_N.remarks.type** — тип ремарки. Тип данных — строка.
 * **data.products.ID_FLT_N.remarks.text** — текст ремарки. Тип данных — строка.
