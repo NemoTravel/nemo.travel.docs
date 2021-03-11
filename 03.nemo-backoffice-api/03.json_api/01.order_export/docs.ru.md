@@ -47,7 +47,7 @@ taxonomy:
 * **data.products.ID_FLT_N.info** — контейнер с информацией о данном перелёте. Тип данных — сложный.
 * **data.products.ID_FLT_N.info.nemo** — контейнер с информацией по перелёту из Nemo.Travel. Тип данных — сложный.
 * **data.products.ID_FLT_N.info.nemo.flightId** — идентификатор перелёта. Тип данных — целое 64-битное число.
-* **data.products.ID_FLT_N.info.nemo.searchId** — идентификатор поиска. Тип данных — целое 64-битное число.
+* **data.products.ID_FLT_N.info.nemo.searchId** — идентификатор поиска. Типтаксы данных — целое 64-битное число.
 * **data.products.ID_FLT_N.info.nemo.packageId** — идентификатор пакета. Тип данных — целое 64-битное число.
 * **data.products.ID_FLT_N.info.nemo.status** — статус перелёта. Тип данных — строка. Возможные значения:
 	* **booked** - забронирован;
@@ -145,6 +145,9 @@ taxonomy:
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax.amount** — размер таксы. Тип данных — строка.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].tax.currency** — код валюты таксы. Тип данных — строка.
 * **data.products.ID_FLT_N.pricingInfo.ID_PCG_N.passengerFare.ID_PSF_N.fareBasis.taxes.[N].type** — тип таксы. Тип данных — строка.
+* **alreadyRefundedMoney** -  детализация возвращаемой стоимости. Тип данных — строка.
+* **agentChargeForExare** - детализация удерживаемой стоимости.  Тип данных — строка.
+* **paid** - детализация оплаченной стоимости. Тип данных — строка.
 * **data.products.ID_FLT_N.remarks** — массив текстовых ремарок. Тип данных — массив.
 * **data.products.ID_FLT_N.remarks.type** — тип ремарки. Тип данных — строка.
 * **data.products.ID_FLT_N.remarks.text** — текст ремарки. Тип данных — строка.
@@ -638,6 +641,14 @@ taxonomy:
 											"amount": "14.40",
 											"currency": "RUB"
 										},
+                                         {"type":"alreadyRefundedMoney","price":{"amount":"5.00","currency":"RUB"
+                                         },
+                                          {"type":"agentChargeForExare","price":{"amount":"55.00","currency":"RUB"
+                                          },
+                                          {"paid":[{"type":"sum","price":{"amount":"16972.00","currency":"RUB"}}]}
+
+                                           },
+                                           
 										"type": "aircompany"
 									}
 								]
@@ -907,8 +918,8 @@ taxonomy:
 {"type":"alreadyRefundedMoney","price":{"amount":"5.00","currency":"RUB"}},
 ```
 ```
-]}],"priceDetail":{"retention":[{"type":"agentChargeForExare","price":{"amount":"55.00","currency":"RUB"}}
+{,"priceDetail":{"retention":[{"type":"agentChargeForExare","price":{"amount":"55.00","currency":"RUB"}}
 ```
 ```
-,"paid":[{"type":"sum","price":{"amount":"16972.00","currency":"RUB"}}]}}
+{,"paid":[{"type":"sum","price":{"amount":"16972.00","currency":"RUB"}}]}}
 ```
