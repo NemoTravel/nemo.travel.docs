@@ -922,14 +922,3 @@ taxonomy:
 	}
 }
 ```
-#### Разбивка по таксам в выгрузке "Export Nemo Backoffice content"
-### Пример
-```
-{"type":"alreadyRefundedMoney","price":{"amount":"5.00","currency":"RUB"}},
-```
-```
-{,"priceDetail":{"retention":[{"type":"agentChargeForExare","price":{"amount":"55.00","currency":"RUB"}}
-```
-```
-{,"paid":[{"type":"sum","price":{"amount":"16972.00","currency":"RUB"}}]}}
-```
