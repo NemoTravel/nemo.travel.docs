@@ -46,7 +46,7 @@ taxonomy:
 -   **AncillaryServices.AncillaryService.SegmentRef.Ref** - Ссылка на сегмент.Тип данных - int.
 -   **AncillaryServices.AncillaryService.Quantity** - Количество повторений данной дополнительной услуги. Тип данных - int.
 -   **AncillaryServices.AncillaryService.EMDType** - Тип EMD. Тип данных - строка.
--   **AncillaryServices.AncillaryService.IsFree** - Признак бесплатности дополнительной услуги. Тип данных - строка.
+-   **AncillaryServices.AncillaryService.IsFree** - Признак бесплатности дополнительной услуги. Тип данных - bool.
 
 ### BookFlight_2_1
 
