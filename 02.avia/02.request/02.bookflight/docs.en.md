@@ -46,6 +46,7 @@ Similar to the previous version of BookFlight_2_0, the difference is only in the
 - **AncillaryServices.AncillaryService.SegmentRef.Ref** - segment reference. Data type - int.
 - **AncillaryServices.AncillaryService.Quantity** - number of repetitions for that ancillary service. Data type - int.
 - **AncillaryServices.AncillaryService.EMDType** - EMD type. Data type - string.
+- **AncillaryServices.AncillaryService.IsFree** - Sign that ancillary service is free. Data type - bool.
 
 
 
