@@ -60,13 +60,13 @@ To store different booking content.
     -   **MiniItinerary**
 -  **Remark.Text** - remark text. Data type - string.
 -  **TimeLimits** - time limits (optional). Data type - array.
--  **TimeLimits.EffectiveTimeLimit** - effective TL, defined as the minimal of all TLs except TL for voiding. Data type - date and time with the time zone specified.
--  **TimeLimits.PriceTimeLimit** - TL from the GDS price. Data type - date and time with the time zone specified.
+-  **TimeLimits.EffectiveTimeLimit** - effective TL, defined as the minimal of all TLs except TL for voiding. Data type - date and time with the time zone specified: YYYY-MM-DD hh:mm:ss ±hh:mm
+-  **TimeLimits.PriceTimeLimit** - TL from the GDS price. Data type - date and time with the time zone specified: YYYY-MM-DD hh:mm:ss ±hh:mm
 <!--  **TimeLimits.SegmentsTimeLimit** - TL segments, currently not used. Data type - date and time with the time zone specified.-->
--  **TimeLimits.TicketingTimeLimit** - ticketing TL. Data type - date and time with the time zone specified.
--  **TimeLimits.AgencyTimeLimit** - agency TL. Data type - date and time with the time zone specified.
--  **TimeLimits.VoidTimeLimit** - voiding TL from the GDS. Data type - date and time with the time zone specified.
--  **TimeLimits.AdvancedPurchaseTimeLimit** - time limit from the Advanced Purchase section of terms of tariff application (if the setting is enabled, then we will parse time limit, which comes in the text of the tariff rules). Data type - date and time with the time zone specified.
+-  **TimeLimits.TicketingTimeLimit** - ticketing TL. Data type - date and time with the time zone specified: YYYY-MM-DD hh:mm:ss ±hh:mm
+-  **TimeLimits.AgencyTimeLimit** - agency TL. Data type - date and time with the time zone specified: YYYY-MM-DD hh:mm:ss ±hh:mm
+-  **TimeLimits.VoidTimeLimit** - voiding TL from the GDS. Data type - date and time with the time zone specified: YYYY-MM-DD hh:mm:ss ±hh:mm
+-  **TimeLimits.AdvancedPurchaseTimeLimit** - time limit from the Advanced Purchase section of terms of tariff application (if the setting is enabled, then we will parse time limit, which comes in the text of the tariff rules). Data type - date and time with the time zone specified: YYYY-MM-DD hh:mm:ss ±hh:mm
 -  **SSR** - SSR item (optional). Data type - SSRDataItem.
 -  **SSR.Code** - SSR code. Data type - string.
 -  **SSR.Text** - SSR text. Data type - string.
