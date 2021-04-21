@@ -192,6 +192,8 @@ taxonomy:
 * **data.products.ID_HTL_N.rooms.canelRules.absoluteValue.currency** — код валюты штрафа. Тип данных - строка.
 * **data.products.ID_EXT_N** — контейнер с информацией о дополнительных услугах. Тип данных — сложный.
 * **data.products.ID_EXT_N.type** — тип дополнительной услуги. Тип данных — строка.
+* **data.products.ID_EXT_N.id** — ID дополнительной услуги (для data.products.ID_EXT_N.type == ServicePack). Тип данных — строка.
+* **data.products.ID_EXT_N.name** — название дополнительной услуги (для data.products.ID_EXT_N.type == ServicePack). Тип данных — строка.
 * **data.products.ID_EXT_N.products** — продукты, выбранные в рамках данной доп. услуги. Тип данных - сложный.
 * **data.products.ID_EXT_N.products.price** — контейнер с информацией о стоимости доп. услуги. Тип данных - сложный.
 * **data.products.ID_EXT_N.products.price.amount** — сумма за дополнительную услугу. Тип данных - строка.
