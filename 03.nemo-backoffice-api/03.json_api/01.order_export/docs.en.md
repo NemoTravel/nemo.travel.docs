@@ -175,6 +175,8 @@ taxonomy:
 * **data.products.ID_HTL_N.rooms.canelRules.absoluteValue.currency** — penalty currency code. Data type - string.
 * **data.products.ID_EXT_N** — container with information on the additional services. Data type - custom.
 * **data.products.ID_EXT_N.type** — additional service type. Data type - string.
+* **data.products.ID_EXT_N.id** — additional service ID (for data.products.ID_EXT_N.type == ServicePack). Data type - string.
+* **data.products.ID_EXT_N.name** — additional service name (for data.products.ID_EXT_N.type == ServicePack). Data type - string.
 * **data.products.ID_EXT_N.products** — products selected within this ancilliary service. Data type - custom.
 * **data.products.ID_EXT_N.products.price** — container with information on ancilliary service price. Data type - custom.
 * **data.products.ID_EXT_N.products.price.amount** — amount paid for ancilliary service. Data type - string.
