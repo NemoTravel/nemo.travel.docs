@@ -126,7 +126,7 @@ To store different booking content.
 - **Document.ElapsedTime** - document expiration date. The data type is the date in <code>mm.yyyy</code> format.
 - **Document.AddedAsDOCS** - attribute of adding to the PNR as SSR DOCS. Data type - bool.
 - **Document.AddedAsFOID** - attribute of adiing to the PNR as SSR FOID. Data type - bool.
-- **ContactInfo** - contact information (in the case of booking in Farelogix and using SirenaAviaPlus, the contact information is necessarily). Data type - array.
+- **ContactInfo** - contact information (in the case of booking in Farelogix and using SirenaAviaPlus, the contact information is necessarily; for PSS SITA passenger contact data should be entered for the first passenger: value DataItem.TravellerRef.Ref == 1). Data type - array.
 - **ContactInfo.EmailID** - E-mail. Data type - string.
 - **ContactInfo.Telephone** - contact phone. Data type - array.
 - **ContactInfo.Telephone.Type** - phone type. Data type - enumeration, possible values:
