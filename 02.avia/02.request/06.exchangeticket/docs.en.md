@@ -21,7 +21,7 @@ The latest request version, the differences are only in the response in the anci
 -  **FlightID** - ID of the flight on which the exchange will take place. Data type - string.
 -  **Passengers** - numbers of passengers in the booking whose tickets are required to be exchanged. Data type - array.
 -  **Passengers.Ref** - passenger number in the booking. Data type - 32-bit integer.
--  **AutoRefundForEmdA** - flag for automatic return of additional services. Data type - boolean.
+-  **AutoRefundForEmdA** - flag for automatic return of additional services. Works only for Amadeus and Sirena. Data type - boolean.
 
 ##### Sample
 
