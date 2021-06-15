@@ -45,6 +45,7 @@ Each of the base and ancillary services is inherited from the BaseService class 
         -   **SupplierDoNotKnowEdState** — Z ticket status returned from the supplier, currently only relevant for the Travelport airline content provider.
         -   **SupplierDidNotFoundOrder** -  "Order not found" error was returned from the supplier. It is related to the temporary problems on the supplier’s side, currently only relevant for the S7NDC airline content provider.
         -   **NoTotalFareForTicket** - Failed to get the total cost of the order/book. Relevant only for SITAGabriel air content provider.
+        -   **TicketExchangeStarted** - two-factor exchange was started and have to be  completed or canceled.
 
 >>>> If there is the NoAirlineLocator status, ticketing is impossible. To perform ticketing successfully, you need to repeat [UpdateBook](/avia/request/updatebook) request several times until this status dissapears. NoAirlineLocator status appears because the airline sends the locator some time after a booking is created.
 
