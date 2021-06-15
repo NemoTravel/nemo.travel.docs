@@ -31,3 +31,5 @@ PossibleActions
 -  GetPNRTerminalView
 -  GetEDData
 -  AdditionalOperations
+-  CancelTwoStageExchange
+-  CompleteTwoStageExchange
