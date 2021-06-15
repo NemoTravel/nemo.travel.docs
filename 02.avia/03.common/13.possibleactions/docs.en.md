@@ -31,5 +31,6 @@ Contains a list of possible actions with a booking or an order, which is central
 -  GetPNRTerminalView
 -  GetEDData
 -  AdditionalOperations
--  CancelTwoStageExchange
+-  Restore
 -  CompleteTwoStageExchange
+-  CancelTwoStageExchange
