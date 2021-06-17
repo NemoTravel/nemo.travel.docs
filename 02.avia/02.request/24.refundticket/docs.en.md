@@ -7,7 +7,7 @@ taxonomy:
 
 ### RefundTicket_1_1
 
-Getting information on the ticket and EMD refund, if they are present in the booking.
+Refund tickets and EMDs, if they are present in the booking.
 
 #### RefundTicket_2_2
 
