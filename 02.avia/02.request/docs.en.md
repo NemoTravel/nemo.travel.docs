@@ -39,3 +39,6 @@ process:
 -   **[Ticket](/avia/request/ticket)** - Ticketing for the booking.
 -   **[VoidTicket](/avia/request/voidticket)** - Used for tickets refund received as a result of ticketing. 
 -   **[VoidEMD](/avia/request/voidemd)** - Used to void the EMD for various ancillary services in the booking.
+-   **[StartTicketExchange](/avia/request/startticketexchange)** - Used to start a two-factor exchange.
+-   **[CancelTicketExchange](/avia/request/cancelticketexchange)** - Used to cancel after the start of a two-factor exchange operation.
+-   **[CompleteTicketExchange](/avia/request/completeticketexchange)** - Used to complete a two-factor exchange operation.
