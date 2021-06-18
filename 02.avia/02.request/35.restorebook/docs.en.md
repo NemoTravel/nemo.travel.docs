@@ -4,18 +4,18 @@ title: RestoreBook
 
 ### RestoreBook
 
-Восстановление аннулированной брони.
+Restoration of the canceled book.
 
 ### Особенности
 
-- Данная операция возможна только для аннулированных броней
-- RestoreBook реализован только для Сирены
+- This operation is possible only for canceled books.
+- RestoreBook works only for GDS Sirena (1H).
 
 #### Запрос
 
 ##### Описание формата
 
-- **BookID** - ИД брони, которую требуется восстановить. Тип данных - long.
+- **BookID** - ID of the book, which is demanded to restore. Data's type - long.
 
 ##### Пример
 
@@ -51,7 +51,7 @@ title: RestoreBook
 
 ##### Ответ
 
-Аналогично формату бронирования [Book](/avia/common/book).
+Similar to the BookFlight [Book](/avia/common/book).
 
 ##### Пример
 
