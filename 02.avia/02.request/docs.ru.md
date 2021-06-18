@@ -40,3 +40,6 @@ process:
 -   **[Ticket](/avia/request/ticket)** - Выписка билетов для брони.
 -   **[VoidTicket](/avia/request/voidticket)** - Используется для сдачи билетов, полученных в результате выписки.
 -   **[VoidEMD](/avia/request/voidemd)** - Используется для войдирования EMD для различных допуслуг в брони.
+-   **[StartTicketExchange](/avia/request/startticketexchange)** - Используется для старта двухфакторного обмена.
+-   **[CancelTicketExchange](/avia/request/cancelticketexchange)** - Используется для отмены после старта операции двухфакторного обмена.
+-   **[CompleteTicketExchange](/avia/request/completeticketexchange)** - Используется для завершения операции двухфакторного обмена.
