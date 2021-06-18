@@ -51,7 +51,7 @@ Restoration of the canceled book.
 
 ##### Ответ
 
-Similar to the BookFlight [Book](/avia/common/book).
+Similar to the [BookFlight](/avia/common/book).
 
 ##### Пример
 
