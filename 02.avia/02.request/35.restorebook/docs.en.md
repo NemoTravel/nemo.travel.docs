@@ -15,7 +15,7 @@ Restoration of the canceled book.
 
 ##### Описание формата
 
-- **BookID** - ID of the book, which is demanded to restore. Data's type - long.
+- **BookID** - book's ID, which is demanded to restore. Data's type - long.
 
 ##### Пример
 
