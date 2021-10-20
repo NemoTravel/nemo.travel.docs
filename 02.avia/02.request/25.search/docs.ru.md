@@ -73,6 +73,7 @@ taxonomy:
     -   **Both** — совокупность поисковых выдач поиска для максимальных и минимальных возвратных цен.
 -   **Restrictions.AsyncSearch** — режим запроса: <code>false</code> (по умолчанию) — синхронный поиск как и раньше, <code>true</code> — асинхронный поиск с возможностью пуллинга порций ответов поставщиков. Тип данных — булевский.
 -   **Restrictions.ThreeDomainAgreementNumber** — код корпоративного клиента в трехстороннем договоре. Тип данных — строка.
+-   **Restrictions.PromotionCode** — Промокод. Тип данных — строка.
 -   **EndUserData** — данные конечного пользователя (необязательный). Тип данных - массив, формат аналогичен элементу **EndUserData** из [DataItem](/avia/common/dataitem).
 -   **SellingPointDescription** — описание точки продажи (необязательный). Тип данных - массив, формат аналогичен элементу **SellingPointDescription** из [DataItem](/avia/common/dataitem).
 
