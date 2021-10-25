@@ -53,7 +53,7 @@ title: AirShopping
 -   **Preference.TransferPreferences.Connection.MaxNumber** - максимальное количество остановок. Значение элемента должено быть целым положительным числом. Тип данных — целое число.
 -   **Preference.TransferPreferences.Connection.MaxTime** - время максимально допустимой остановки в минутах. Пример формата - PT180M, т.о. будет выполнен запрос на поиск рейсов с максимально допустимой остановкой в 180 минут.
 -   **Qualifier.PromotionQualifiers** - содержит информацию о промокоде. Тип данных — сложный.
--   **Qualifier.PromotionQualifiers** - содержит информацию о промокоде. Тип данных — сложный.
+-   **Qualifier.PromotionQualifiers.Code** - промокод. Тип данных — строка.
 -   **Preference.CabinPreferences.Code** - строковое значение промокода. Тип данных — строка.
 -   **Preference.CabinPreferences.CabinType** - класс перелета (обязательный). Тип данных — сложный.
 -   **Preference.CabinPreferences.CabinType.Code** - тип предпочитаемого класса перелёта. Возможные значения:
