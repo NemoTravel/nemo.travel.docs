@@ -52,6 +52,8 @@ Flight leg prices are described in the current OfferItem.
 -  **Preference.TransferPreferences.Connection**
 -  **Preference.TransferPreferences.Connection.MaxNumber** - maximum number of stops. The element value must be a positive integer. Data type - integer.
 -  **Preference.TransferPreferences.Connection.MaxTime** - maximum allowed stop time in minutes. The format example is PT180M, thus request will be made to search for flights with a maximum allowed stop of 180 minutes.
+-  **Qualifier.PromotionQualifiers** - contains information about promocode. Data type - custom.
+-  **Qualifier.PromotionQualifiers.Code** - promocode. Data type - string.
 -  **Preference.CabinPreferences** - contains a list of preferred flight classes. Data type - custom.
 -  **Preference.CabinPreferences.CabinType** - flight class (required). Data type - custom.
 -  **Preference.CabinPreferences.CabinType.Code** - type of preferred flight class. Possible values:
@@ -67,6 +69,10 @@ Flight leg prices are described in the current OfferItem.
     - **ADT** - adult;
     - **CHD** - child;
     - **INF** - infant.
+-   **DataLists.PassengerList.Passenger.LoyaltyProgramAccount** - contains information about the loyalty card for search in miles. Data type - custom.
+-   **DataLists.PassengerList.Passenger.LoyaltyProgramAccount.Airline** - contains information about the airline that owns the loyalty card. Data type - custom.
+-   **DataLists.PassengerList.Passenger.LoyaltyProgramAccount.AirlineDesignator** - airline IATA code. Data type - string.
+-   **DataLists.PassengerList.Passenger.LoyaltyProgramAccount.AccountNumber** - loyalty card number. Data type - string.
 
 
 ##### Sample
@@ -212,6 +218,7 @@ Flight leg prices are described in the current OfferItem.
 -  **Offer.OfferItem.FareDetail.FareComponent.SegmentRefs** - reference to one or more flight segments which corresponds to the price.
 -  **Offer.OfferItem.FareDetail.Remarks** - contains the data on the validating carrier for the current OfferItem.
 -  **Offer.OfferItem.FareDetail.Remarks.Remark** - takes the value "Validating carrier: XX", where XX is the validating carrier's IATA code.
+-  -  **Offer.OfferItem.FareDetail.Remarks.Remark** - takes the value "Miles fare: XXXXX.XX", where XXXXX.XX is the cost of the flight in miles..
 -  **AirShoppingRS.DataLists** - container with information about the elements of the offer which are: information about passengers, baggage, route and segments. Data type - custom.
 -  **DataLists.PassengerList** - information about the passengers. Data type - custom.
 -  **PassengerList.Passenger** - passengers for whom the search was performed. Attribute PassengerID = "PAX1" (PAX prefix required) - unique passenger ID.
