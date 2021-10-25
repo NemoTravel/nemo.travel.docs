@@ -52,7 +52,9 @@ title: AirShopping
 -   **Preference.TransferPreferences.Connection**
 -   **Preference.TransferPreferences.Connection.MaxNumber** - максимальное количество остановок. Значение элемента должено быть целым положительным числом. Тип данных — целое число.
 -   **Preference.TransferPreferences.Connection.MaxTime** - время максимально допустимой остановки в минутах. Пример формата - PT180M, т.о. будет выполнен запрос на поиск рейсов с максимально допустимой остановкой в 180 минут.
--   **Preference.CabinPreferences** - содержит список предпочитаемых классов перелёта. Тип данных — сложный.
+-   **Qualifier.PromotionQualifiers** - содержит информацию о промокоде. Тип данных — сложный.
+-   **Qualifier.PromotionQualifiers** - содержит информацию о промокоде. Тип данных — сложный.
+-   **Preference.CabinPreferences.Code** - строковое значение промокода. Тип данных — строка.
 -   **Preference.CabinPreferences.CabinType** - класс перелета (обязательный). Тип данных — сложный.
 -   **Preference.CabinPreferences.CabinType.Code** - тип предпочитаемого класса перелёта. Возможные значения:
     -   **1** - First; 
@@ -67,6 +69,11 @@ title: AirShopping
     -   **ADT** - взрослый;
     -   **СHD** - ребенок;
     -   **INF** - младенец.
+-   **DataLists.PassengerList.Passenger.LoyaltyProgramAccount** - содержит информацию о карте лояльности для поиска в милях. Тип данных — сложный.
+-   **DataLists.PassengerList.Passenger.LoyaltyProgramAccount.Airline** - содержит информацию об а/к владеющей картой лояльности. Тип данных — сложный.
+-   **DataLists.PassengerList.Passenger.LoyaltyProgramAccount.AirlineDesignator** - код а/к владеющей картой лояльности. Тип данных — строка.
+-   **DataLists.PassengerList.Passenger.LoyaltyProgramAccount.AccountNumber** - номер карты лояльности. Тип данных — строка.
+
 
 
 ##### Пример
@@ -3954,5 +3961,3 @@ title: AirShopping
    </s:Body>
 </s:Envelope>
 ```
-
-
