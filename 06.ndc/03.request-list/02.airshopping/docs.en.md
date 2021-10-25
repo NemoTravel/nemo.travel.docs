@@ -218,7 +218,7 @@ Flight leg prices are described in the current OfferItem.
 -  **Offer.OfferItem.FareDetail.FareComponent.SegmentRefs** - reference to one or more flight segments which corresponds to the price.
 -  **Offer.OfferItem.FareDetail.Remarks** - contains the data on the validating carrier for the current OfferItem.
 -  **Offer.OfferItem.FareDetail.Remarks.Remark** - takes the value "Validating carrier: XX", where XX is the validating carrier's IATA code.
--  -  **Offer.OfferItem.FareDetail.Remarks.Remark** - takes the value "Miles fare: XXXXX.XX", where XXXXX.XX is the cost of the flight in miles..
+-  **Offer.OfferItem.FareDetail.Remarks.Remark** - takes the value "Miles fare: XXXXX.XX", where XXXXX.XX is the cost of the flight in miles..
 -  **AirShoppingRS.DataLists** - container with information about the elements of the offer which are: information about passengers, baggage, route and segments. Data type - custom.
 -  **DataLists.PassengerList** - information about the passengers. Data type - custom.
 -  **PassengerList.Passenger** - passengers for whom the search was performed. Attribute PassengerID = "PAX1" (PAX prefix required) - unique passenger ID.
