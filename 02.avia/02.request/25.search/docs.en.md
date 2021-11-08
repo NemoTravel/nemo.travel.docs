@@ -74,6 +74,7 @@ Version 1.2. flight search.
 -  **Restrictions.AsyncSearch** - requestmode: false (default) - synchronous search as before, true - asynchronous search with the ability to pull out the portions of supplier responses. Data type - bool.
 -  **Restrictions.ThreeDomainAgreementNumber** - corporate client number in a three-party agreement. Data type - string.
 -  **Restrictions.PromotionCode** — Promotion Code. Data type - string.
+-  **DataItems** - to search with prices in miles, you must fill the DataItem = LoyaltyCard. The data type is complex. The format is described in [DataItem] (/ avia / common / dataitem).
 -  **EndUserData** - end user data (optional). Data type - array, the format is similar to the *EndUserData* element  from the [DataItem](/avia/common/dataitem).
 -  **SellingPointDescription** - description of the selling point (optional). Data type - array, the format is similar to the **SellingPointDescription** element from [DataItem](/avia/common/dataitem).
 
