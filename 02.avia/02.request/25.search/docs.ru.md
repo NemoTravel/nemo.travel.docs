@@ -74,6 +74,7 @@ taxonomy:
 -   **Restrictions.AsyncSearch** — режим запроса: <code>false</code> (по умолчанию) — синхронный поиск как и раньше, <code>true</code> — асинхронный поиск с возможностью пуллинга порций ответов поставщиков. Тип данных — булевский.
 -   **Restrictions.ThreeDomainAgreementNumber** — код корпоративного клиента в трехстороннем договоре. Тип данных — строка.
 -   **Restrictions.PromotionCode** — Промокод. Тип данных — строка.
+-   **DataItems** - для поиска цен в милях необходимо заполнить DataItem = LoyaltyCard. Тип данных - сложный. Формат описан в [DataItem](/avia/common/dataitem).
 -   **EndUserData** — данные конечного пользователя (необязательный). Тип данных - массив, формат аналогичен элементу **EndUserData** из [DataItem](/avia/common/dataitem).
 -   **SellingPointDescription** — описание точки продажи (необязательный). Тип данных - массив, формат аналогичен элементу **SellingPointDescription** из [DataItem](/avia/common/dataitem).
 
