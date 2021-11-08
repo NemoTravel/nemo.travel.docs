@@ -111,6 +111,7 @@ Flight representation format 1.1.
 -   **PassengerFare.BaseFare.Currency** - code of the base price currency. Data type - string.
 -   **PassengerFare.BaseFare.Amount** - amount of the base price. Data type - fractional number. 
 -   **PassengerFare.EquiveFare** - base price in equivalent currency for 1 passenger of this type. Data type -  [Money](/avia/common/money).
+-   **PassengerFare.MilesFare** — flight price in miles. Data type - integer.
 -   **PassengerFare.TotalFare** - full price (fares + taxes) for 1 passenger of this type in an equivalent currency. Data type - [Money](/avia/common/money).
 -   **PassengerFare.Taxes** - container for the taxes of this price component. Data type - array.
 -   **PassengerFare.Taxes.Tax** - information about a specific tax. Data type - array.
