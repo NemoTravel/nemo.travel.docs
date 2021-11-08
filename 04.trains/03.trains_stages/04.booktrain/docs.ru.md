@@ -52,6 +52,13 @@ title: BookTrain
 -   **Passengers.BookRQPerson.RzhdBBonusCard** - Номер карты "РЖД Бонус" (UFS, Sirena) для начисления баллов за поездку. Тип данных - строка.
 -   **Passengers.BookRQPerson.RzhdBDiscountCard** - Номер карты "РЖД Бонус" (UFS, Sirena) для получения скидки на поездку. Тип данных - строка. 
 -   **Passengers.BookRQPerson.DiscountCard** - Номер "Дорожная карта РЖД" (UFS, Sirena) для получения скидки на поездку. А так же, Дисконтная карта (KTZ) - бронирование оформляется на номер карты вместо документа пассажира. Тип данных - строка.
+-   **Passengers.BookRQPerson.SpecialDocuments** - Универсальное поле-массив специальных документов. Тип данных - сложный.
+-   **Passengers.BookRQPerson.SpecialDocuments.DocumentInformation** - Информация о специальном документе. Тип данных - сложный.
+-   **Passengers.BookRQPerson.SpecialDocuments.DocumentInformation.DocType** - Тип документа. Тип данных - перечисление. Возможные значения:
+    -   **IndividualIdentificationNumber**
+-   **Passengers.BookRQPerson.SpecialDocuments.DocumentInformation.DocNum** - Номер документа. Тип данных - строка.
+-   **Passengers.BookRQPerson.SpecialDocuments.DocumentInformation.CountryCode** - ISO Alpha2 или ISO Alpha3-код страны выдачи документа. Тип данных - строка.
+-   **Passengers.BookRQPerson.SpecialDocuments.DocumentInformation.DocElapsedTime** - Дата окончания срока действия документа. Тип данных — дата в формате <code>dd.mm.yyyy</code>.
 -   **BlankPrefferredType** - Предпочитаемый формат бланков маршрутных квитанций. Тип данных - перечисление. Возможные значения (может быть null):
     -   **pdf**
     -   **rtf**
@@ -150,6 +157,18 @@ title: BookTrain
                     <!--<ReturnTrainRzhdBBonusCard>?</ReturnTrainRzhdBBonusCard>-->
                     <!--Optional:-->
                     <!--<ReturnTrainRzhdBDiscountCard>?</ReturnTrainRzhdBDiscountCard>-->
+                    <!--Optional:-->
+                    <!--<SpecialDocuments>-->
+                		<!--Zero or more repetitions:-->
+						<!--<DocumentInformation>-->
+							<!--<DocType>?</DocType>-->
+							<!--<DocNum>?</DocNum>-->
+                    		<!--Optional:-->
+							<!--<CountryCode>?</CountryCode>-->
+                    		<!--Optional:-->
+							<!--<DocElapsedTime>?</DocElapsedTime>-->
+						<!--</DocumentInformation>
+                    <!--</SpecialDocuments>-->
                 </BookRQPerson>
             </Passengers>
             <ReturnTrain>
