@@ -134,6 +134,7 @@ taxonomy:
 -   **PassengerFare.BaseFare.Currency** — код валюты базовой цены. Тип данных — строка.
 -   **PassengerFare.BaseFare.Amount** — сумма базовой цены. Тип данных — дробное число.
 -   **PassengerFare.EquiveFare** — базовая цена в эквивалентной валюте для 1 пассажира данного типа. Тип данных — [Money](/avia/common/money).
+-   **PassengerFare.MilesFare** — цена перелёта в милях. Тип данных - число.
 -   **PassengerFare.TotalFare** — полная цена (тарифы + таксы) для 1 пассажира данного типа в эквивалентной валюте. Тип данных — [Money](/avia/common/money).
 -   **PassengerFare.Taxes** — контейнер для такс данной ценовой составляющей. Тип данных — сложный.
 -   **PassengerFare.Taxes.Tax** — информация о конкретной таксе. Тип данных — сложный.
