@@ -125,7 +125,7 @@ taxonomy:
 -   **Document** — документ, удостоверяющий личность путешественника (необязательный). Тип данных — массив.
 -   **Document.Type** — тип документа. Тип данных — перечисление, возможные значения описаны в [Типы документов](http://docs.nemo.travel/ru/avia/process/booking).
 -   **Document.Number** — номер документа, удостоверяющий личность путешественника. Тип данных — строка.
--   **Document.IssueCountryCode** — ISO Alpha2 или ISO Alpha3-код страны выдачи документа. Тип данных — строка.
+-   **Document.IssueCountryCode** — ISO Alpha2-код страны выдачи документа. Тип данных — строка.
 -   **Document.ElapsedTime** — дата окончания срока действия документа. Тип данных — дата в формате <code>dd.mm.yyyy</code>.
 -   **Document.AddedAsDOCS** — признак внесения документа как SSR DOCS в PNR. Тип данных — булевский.
 -   **Document.AddedAsFOID** — признак внесения документа как SSR FOID в PNR. Тип данных — булевский.

@@ -122,7 +122,7 @@ To store different booking content.
 - **Document** - document proving the identity of the traveler (optional). Data type - array.
 - **Document.Type** - document type. Data type - enumeration, possible values are described in [Document types](http://docs.nemo.travel/en/avia/process/booking).
 - **Document.Number** - number of the document proving the identity of the traveler. Data type - string.
-- **Document.IssueCountryCode** - ISO Alpha2 or ISO Alpha3 country code of the document. Data type - string.
+- **Document.IssueCountryCode** - ISO Alpha2 country code of the document. Data type - string.
 - **Document.ElapsedTime** - document expiration date. The data type is the date in <code>mm.yyyy</code> format.
 - **Document.AddedAsDOCS** - attribute of adding to the PNR as SSR DOCS. Data type - bool.
 - **Document.AddedAsFOID** - attribute of adiing to the PNR as SSR FOID. Data type - bool.
