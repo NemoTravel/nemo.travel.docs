@@ -26,7 +26,7 @@ Describes personal information about the traveler. It consists of the following 
 -  **LastName** - passenger's last name. Data type - string.
 -  **MiddleName** - passenger's middle name (optional). Data type - string.
 -  **DateOfBirth** - passenger's date of birth. Data type - date in the <code>dd.mm.yyyy</code>
--  **Nationality** - passenger's nationality. Data type - string, ISO Alpha2 or ISO Alpha3 country code
+-  **Nationality** - passenger's nationality. Data type - string, ISO Alpha2 country code
 -  **Gender** - passenger's sex. Data type - enumeration, possible values:
 	- M   - male
 	- F   - female
