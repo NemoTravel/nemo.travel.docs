@@ -103,7 +103,7 @@ Creation of a flight booking. Works with a 2.0 booking structure. Differences ar
 
 -  **FlightID** - ID of the flight which will be booked. Supports the format of two flight IDs separated by a «+». This format will allow to book compound flights from different searches and GDSs. Data type - string.
 -  **Travelers** - travelers for whom a flight booking is created. Data type - [Traveller](/avia/common/traveller) array.
-- **DataItems** - content for booking creation (optional). Data type - [DataItem](/avia/common/dataitem) array.
+- **DataItems** - content for booking creation (mandatory element with Type == ContactInfo). Data type - [DataItem](/avia/common/dataitem) array.
 - **AdditionalActions** - additional actions to be performed with the flight booking (optional). Data type - array.
 - **AdditionalActions.QueueNum** - number of the queue to which the booking must be placed after its creation. Data type - string.
 - **AdditionalActions.CalculatePrice** - attribute of the need to calculate pricing. Data type - bool.
