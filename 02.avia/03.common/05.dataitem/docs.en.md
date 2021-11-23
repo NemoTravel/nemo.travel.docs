@@ -17,7 +17,7 @@ To store different booking content.
 -  **SegmentRef** - reference to segments (optional). Data type - [RefList](/avia/common/reflist).
 -  **Type** - type of content in this dataitem. Data type - enumeration, possible values:
 	-   **SSR** - service remark (Special Service Request)
-	-   **ContactInfo** - contact information
+	-   **ContactInfo** - contact information (mandatory for BookFlight request)
 	-   **FOP** - Form Of Payment, credit card - one of the options
 	-   **LoyaltyCard** - loyalty card
 	-   **TL** - time limits, looks like this:
