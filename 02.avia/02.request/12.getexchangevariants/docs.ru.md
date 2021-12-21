@@ -83,6 +83,7 @@ taxonomy:
               <ns2:Source>29782</ns2:Source>
             </ns2:SourcePreference>
           </ns2:Restrictions>
+          <ns2:Involuntary>false</ns2:Involuntary>
         </ns1:RequestBody>
       </ns2:Request>
     </ns2:GetExchangeVariants>

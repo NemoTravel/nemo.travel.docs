@@ -17,6 +17,7 @@ Getting flights (exchange variants) with information about the return penalty an
 -  **Passengers** - numbers of passengers whose tickets are needed to be exchanged in the booking. Data type - array.
 -  **Passengers.Ref** - passenger number in the booking. Data type - 32-bit integer.
 -  **RequestedFlightInfo** - similar to the * RequestedFlightInfo * parameter from the [Search](/avia/request/search) request.
+-  **Involuntary** - attribute of the involuntary exchange (optional). Data type - bool.
 
 To exchange a part of the segments, for required flight legs you need to indicate the IDs (**RequestedFlightInfo.ODPair.ID**) of flight legs from the booking which are needed to be exchanged.
 
@@ -82,6 +83,7 @@ To exchange all segments for a completely new flight, you do not need to indicat
               <ns2:Source>29782</ns2:Source>
             </ns2:SourcePreference>
           </ns2:Restrictions>
+          <ns2:Involuntary>false</ns2:Involuntary>
         </ns1:RequestBody>
       </ns2:Request>
     </ns2:GetExchangeVariants>
