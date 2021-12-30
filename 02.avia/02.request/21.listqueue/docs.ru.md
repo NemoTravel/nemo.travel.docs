@@ -22,7 +22,35 @@ taxonomy:
 - **ListQueueConfig.QueueConfig.DisplayExternalPNRs** - включает отображение PNR, которые были созданы вне системы Nemo. Тип данных - bool. 
 
 #### Ответ ListQueue_2_0
-Соответствует предыдущей версии.  
+-   **QueueInfoList** - контейнер с информацией по именованным очередям. Тип данных - массив.
+-   **UnnamedQueueInfoList** - контейнер с информацией по неименованным очередям. Тип данных - массив.
+-   **QueueInfo** - информация об очереди. Тип данных - массив.
+-   **QueueInfo.Queue** - номер/название очереди (в зависимости от GDS). Тип данных - строка.
+-   **QueueInfo.BookInfoList** - список заказов, находящихся в очереди.
+-   **BookInfoList.BookInfo** - информация о заказе.
+-   **BookInfo.BookID** - идентификатор заказа. Тип данных - long.
+-   **BookInfo.Locator** - локатор заказа в GDS. Тип данных - строка.
+-   **BookInfo.Supplier** - поставщик. Тип данных - перечисление. Возможные значения:
+ -   Sabre
+ -   Sirena
+ -   Galileo
+ -   Amadeus
+ -   SITAGabriel
+ -   SpecialFares
+ -   SIG
+ -   NemoInventory
+ -   Pegasys
+ -   Travelfusion
+ -   Mystifly
+ -   GalileoUAPI
+ -   SolringNDC
+-   **BookInfo.RecordInfoList** - контейнер с информацией об уведомлениях по заказам, находящихся в очереди. Тип данных - сложный. 
+-   **RecordInfoList.RecordInfo** - контейнер с информация об уведомлениях. Тип данных - сложный.
+-   **RecordInfo.ID** - идентификатор уведомления. Тип данных - строка.
+-   **RecordInfo.CategoryNumber** - номер категории. Тип данных - строка.
+-   **RecordInfo.PlacedIn** - дата и время постановки в очередь. Формат: yyyy-mm-ddThh:mm:sstzd. Тип данных - строка.
+-   **RecordInfo.Deadline** - срок обработки. Формат: yyyy-mm-ddThh:mm:sstzd. Тип данных - строка.
+-   **RecordInfo.Text** - текст уведомления. Тип данных - строка.  
 
 #### Запрос
 
