@@ -27,12 +27,12 @@ Adding a booking to the GDS queue.
 - **AddToQueueConfig.QueuesByNumber.QueueNumber** - sequence number of the queue. Data type - int.
 - **AddToQueueConfig.SupplierRequisiteIds** - list of agency IDs in the GDS. Data type - array.
 - **AddToQueueConfig.SupplierRequisiteIds.SupplierRequisiteId** - GDS ID of the agency that owns the PNR. Data type - string.
-- **AddToQueueConfig.RecordInfo** - (optional).
+- **AddToQueueConfig.RecordInfo** - container with a description of the notification (optional).
 - **RecordInfo.CategoryNumber** - number of category. Data type - string.
 - **RecordInfo.Deadline** - last active date and time in timestamp format (yyyy-mm-yyThh:mm:sstzd). Example: 2021-12-21T13:21:38+01:00. Data type - string.
 - **RecordInfo.Text** - user's comment. Data type - string.
 
-#### Пример
+#### Example
 
 ``` xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avia="http://nemo-ibe.com/Avia" xmlns:stl="http://nemo-ibe.com/STL" xmlns:avia1="http://nemo.travel/Avia">
