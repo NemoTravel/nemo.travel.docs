@@ -56,11 +56,6 @@ Adding a booking to the GDS queue.
                      <avia1:QueuesByNumber>
                         <avia1:QueueNumber>5</avia1:QueueNumber>
                      </avia1:QueuesByNumber>
-                   <avia1:RecordInfo>
-                        <avia1:CategoryNumber>2</avia1:CategoryNumber>
-                        <avia1:Deadline>2021-12-21T21:21:00+00:00</avia1:Deadline>
-                        <avia1:Text>test text</avia1:Text>
-                     </avia1:RecordInfo>
                   </avia1:AddToQueueConfig>
                </avia1:AddToQueueConfigList>
             </stl:RequestBody>
