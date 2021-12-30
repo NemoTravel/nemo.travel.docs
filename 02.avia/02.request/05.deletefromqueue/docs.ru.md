@@ -5,8 +5,8 @@ title: DeleteFromQueue
 ### DeleteFromQueue 
 Удаление одной или нескольких броней из одной или нескольких очередей.
 
-### Запрос DeleteFromQueue_2_0
-### Описание формата
+#### Запрос DeleteFromQueue_2_0
+#### Описание формата
 - **BookQueueList** - контейнер с информацией об удаляемых броней из очередей. Тип данных - сложный. 
 - **BookQueueList.BookQueueInfo** -  информация об удаляемой из очередей брони. Тип данных - сложный. 
 - **BookQueueInfo.QueuesByName** - список именованых очередей, из которых требуется удалить бронь (необязательный).  Тип данных - массив.
@@ -56,11 +56,11 @@ title: DeleteFromQueue
    </soapenv:Body>
 </soapenv:Envelope>
 ```
-### Ответ DeleteFromQueue_2_0
+#### Ответ DeleteFromQueue_2_0
 Если не было возвращено ошибок, то операция выполнена успешно.  
 
-### Запрос DeleteFromQueue
-### Описание формата
+#### Запрос DeleteFromQueue
+#### Описание формата
 - **BookQueueList** - набор данных для удаления броней из очередей. Тип данных - массив. 
 - **BookQueueList.BookQueueInfo** - информация об удаляемой из очередей брони. Тип данных - массив. 
 - **.BookQueueInfo.BookID** - ID удаляемой из очередей брони. Тип данных - int64. 
@@ -107,5 +107,5 @@ title: DeleteFromQueue
 </SOAP-ENV:Envelope>
 ```
 
-### Ответ DeleteFromQueue
+#### Ответ DeleteFromQueue
 Если не было возвращено ошибок, то операция выполнена успешно.
