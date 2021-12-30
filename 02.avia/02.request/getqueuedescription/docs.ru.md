@@ -1,6 +1,5 @@
 ---
 title: GetQueueDescription
-visible: true
 ---
 
 ### GetQueueDescription
