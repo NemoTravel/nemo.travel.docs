@@ -9,6 +9,8 @@ taxonomy:
 
 Добавление бронирования в очередь GDS. 
 
+#### Запрос AddToQueue
+
 - **AddToQueueConfigList** - контейнер с информацией по перемещению PNR-ов. Тип данных - сложный.
 - **AddToQueueConfigList.AddToQueueConfig** - контейнер с информацией по перемещению PNR в конкретную очередь. Тип данных - сложный.
 - **AddToQueueConfig.LocatorList** - список локаторов для перемещения. Тип данных - сложный.
@@ -64,3 +66,6 @@ taxonomy:
    </soapenv:Body>
 </soapenv:Envelope>
 ```
+
+#### Ответ AddToQueue
+Если не было возвращено ошибок, то операция выполнена успешно.
