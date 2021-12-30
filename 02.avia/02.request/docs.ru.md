@@ -43,3 +43,4 @@ process:
 -   **[StartTicketExchange](/avia/request/startticketexchange)** - Используется для старта двухфакторного обмена.
 -   **[CancelTicketExchange](/avia/request/cancelticketexchange)** - Используется для отмены после старта операции двухфакторного обмена.
 -   **[CompleteTicketExchange](/avia/request/completeticketexchange)** - Используется для завершения операции двухфакторного обмена.
+-   **[GetQueueDescription](/avia/request/getqueuedescription)** - Получение списка очередей.
