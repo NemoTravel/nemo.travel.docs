@@ -54,7 +54,7 @@ Deletion of one or more bookings from one or more queues.
 
 
 #### DeleteFromQueue_2_0 Response
-Corresponds to the previous version.
+If no errors were returned, the operation had been successful.
 
 
 ### Request 
