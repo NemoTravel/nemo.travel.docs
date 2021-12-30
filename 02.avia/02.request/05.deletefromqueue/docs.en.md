@@ -42,7 +42,6 @@ Deletion of one or more bookings from one or more queues.
                      <avia1:QueuesByNumber>
                         <avia:Queue>20</avia:Queue>
                      </avia1:QueuesByNumber>
-                     <avia1:RecordID>pnr0000000tfHcz</avia1:RecordID>
                      <avia1:BookID>903452</avia1:BookID>
                   </avia1:BookQueueInfo>
                </avia1:BookQueueList>
