@@ -1,5 +1,8 @@
 ---
 title: GetQueueDescription
+taxonomy:
+    category:
+        - docs
 ---
 
 ### GetQueueDescription
