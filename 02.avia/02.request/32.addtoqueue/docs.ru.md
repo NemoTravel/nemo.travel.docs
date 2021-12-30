@@ -30,7 +30,7 @@ taxonomy:
 - **AddToQueueConfig.RecordInfo** - контейнер с информацией об уведомлении. Тип данных - сложный.
 - **RecordInfo.CategoryNumber** - номер категории. Тип данных - строка.
 - **RecordInfo.Deadline** - срок обработки. Формат: yyyy-mm-ddThh:mm:sstzd. Тип данных - строка.
-- **RecordInfo.Text** - текст уведомления. Тип данных - строка.
+- **RecordInfo.Text** - комментарий пользователя. Тип данных - строка.
 
 #### Пример
 
