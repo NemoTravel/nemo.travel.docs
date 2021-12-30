@@ -9,16 +9,50 @@ Deletion of one or more bookings from one or more queues.
 - **BookQueueList.BookQueueInfo.QueuesByName** - container with queue names. Data type - array.
 - **BookQueueList.BookQueueInfo.QueuesByName.Queue** - queue name. Data type - array of the QueueName enumeration. Corresponds to the _**.BookQueueInfo.QueueNames.Queue**_  parameter from the previous version request.
 - **BookQueueList.BookQueueInfo.QueuesByNumber** - container with queue sequence numbers. Data type - int array.
-- **ListQueueConfig.QueueConfig.QueuesByNumber.QueueNumber** - sequence number of the queue. Data type - int.
+- **BookQueueList.BookQueueInfo.QueuesByNumber.QueueNumber** - sequence number of the queue. Data type - int.
+- **BookQueueList.BookQueueInfo.RecordID** - notification ID (optional). Data type - string.
+- **BookQueueList.BookQueueInfo.BookID** - order ID in nemo connect. Data type - int.
 - **ExternalBookQueueList** - container with PNRs that were created outside the Nemo system. Data type - custom.
 - **ExternalBookQueueList.ExternalBookQueueInfo** - container with information about PNRs created outside the system. Data type - custom.
 - **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByName** - corresponds to the _**BookQueueList.BookQueueInfo.QueuesByName**_ parameter
 - **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByName.Queue** - corresponds to the _**BookQueueList.BookQueueInfo.QueuesByName.Queue**_ parameter.
 - **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByNumber** - corresponds to the _**BookQueueList.BookQueueInfo.QueuesByNumber**_ parameter.
 - **ExternalBookQueueList.ExternalBookQueueInfo.QueuesByNumber.QueueNumber** - corresponds to the _**BookQueueList.BookQueueInfo.QueuesByNumber**_ parameter.
+- **ExternalBookQueueList.ExternalBookQueueInfo.RecordID** - notification ID (optional). Data type - string.
 - **ExternalBookQueueList.ExternalBookQueueInfo.Locator** - booking ID in the GDS system. Data type - string.
 - **ExternalBookQueueList.ExternalBookQueueInfo.SourceID** - ID of the queue data source. Data type - int.
 - **ExternalBookQueueList.ExternalBookQueueInfo.SupplierRequisiteID** - GDS ID of the agency that owns the PNR. Data type - string.
+
+#### Example
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avia="http://nemo-ibe.com/Avia" xmlns:stl="http://nemo-ibe.com/STL" xmlns:avia1="http://nemo.travel/Avia">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <avia:DeleteFromQueue_2_0>
+         <avia:Request>
+            <stl:Requisites>
+               <stl:Login>LOGIN</stl:Login>
+               <stl:Password>PASSWORD</stl:Password>
+               <stl:UserContextId>10001</stl:UserContextId>
+            </stl:Requisites>
+            <stl:UserID>10000</stl:UserID>
+            <stl:RequestBody>
+               <avia1:BookQueueList>
+                  <avia1:BookQueueInfo>
+                     <avia1:QueuesByNumber>
+                        <avia:Queue>20</avia:Queue>
+                     </avia1:QueuesByNumber>
+                     <avia1:RecordID>pnr0000000tfHcz</avia1:RecordID>
+                     <avia1:BookID>903452</avia1:BookID>
+                  </avia1:BookQueueInfo>
+               </avia1:BookQueueList>
+            </stl:RequestBody>
+         </avia:Request>
+      </avia:DeleteFromQueue_2_0>
+   </soapenv:Body>
+</soapenv:Envelope>
+```
+
 
 #### DeleteFromQueue_2_0 Response
 Corresponds to the previous version.
