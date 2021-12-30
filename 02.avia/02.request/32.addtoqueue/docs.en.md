@@ -9,6 +9,9 @@ taxonomy:
 
 Adding a booking to the GDS queue.
 
+
+### Request
+
 - **AddToQueueConfigList** - container with information on PNRs relocation. Data type - custom.
 - **AddToQueueConfigList.AddToQueueConfig** - container with information on PNR’s relocation to a specific queue. Data type - custom.
 - **AddToQueueConfig.LocatorList** - list of locators to move. Data type - custom.
@@ -64,3 +67,5 @@ Adding a booking to the GDS queue.
    </soapenv:Body>
 </soapenv:Envelope>
 ```
+### Response
+If no errors were returned, the operation had been successful.
