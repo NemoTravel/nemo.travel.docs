@@ -27,7 +27,7 @@ taxonomy:
 - **AddToQueueConfig.QueuesByNumber.QueueNumber** - порядковый номер очереди. Тип данных - int.
 - **AddToQueueConfig.SupplierRequisiteIds** - список идентификаторов агентства в GDS. Тип данных - массив.
 - **AddToQueueConfig.SupplierRequisiteIds.SupplierRequisiteId** - идентификатор агентства, которому принадлежит PNR, в GDS. Тип данных - строка.
-- **AddToQueueConfig.RecordInfo** - контейнер с информацией об уведомлении. Тип данных - сложный.
+- **AddToQueueConfig.RecordInfo** - контейнер с информацией об уведомлении (необязательный). Тип данных - сложный.
 - **RecordInfo.CategoryNumber** - номер категории. Тип данных - строка.
 - **RecordInfo.Deadline** - срок обработки в формате yyyy-mm-yyThh:mm:sstzd. Пример: 2021-12-21T13:21:38+01:00. Тип данных - строка.
 - **RecordInfo.Text** - комментарий пользователя. Тип данных - строка.
