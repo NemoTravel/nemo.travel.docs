@@ -7,7 +7,7 @@ taxonomy:
 
 ### MoveToQueue
 
-Moving the notification to another queue.
+Move notification to another queue.
 
 #### Request
 
