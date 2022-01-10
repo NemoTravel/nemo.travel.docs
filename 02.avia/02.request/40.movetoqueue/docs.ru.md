@@ -13,7 +13,7 @@ taxonomy:
 
 - **MoveToQueueConfigsList** -  контейнер с информацией о перемещаемых уведомлениях. Тип данных - сложный.
 - **MoveToQueueConfigsList.MoveToQueueConfig** - информация о перемещаемых уведомлениях. Тип данных - сложный. 
-- **MoveToQueueConfig.SourceID** - идентификатор источник (обязательный).  Тип данных — целое 32-битное число.
+- **MoveToQueueConfig.SourceID** - идентификатор источника (обязательный).  Тип данных — целое 32-битное число.
 - **MoveToQueueConfig.OriginalQueueNumber** - номер старой очереди (обязательный). Тип данных - строка
 - **MoveToQueueConfig.TargetQueueNumber** - номер новой очереди (обязательный). Тип данных - строка
 - **MoveToQueueConfig.CategoryNumber** - категория уведомления в новой очереди (необязательный). Тип данных - строка
