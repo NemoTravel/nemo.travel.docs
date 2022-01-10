@@ -9,17 +9,17 @@ taxonomy:
 
 Moving the notification to another queue.
 
-#### Запрос
+#### Request
 
-- **MoveToQueueConfigsList** -  контейнер с информацией о перемещаемых уведомлениях. Тип данных - сложный.
-- **MoveToQueueConfigsList.MoveToQueueConfig** - информация о перемещаемых уведомлениях. Тип данных - сложный. 
-- **MoveToQueueConfig.SourceID** - идентификатор источник (обязательный).  Тип данных — целое 32-битное число.
-- **MoveToQueueConfig.OriginalQueueNumber** - номер старой очереди (обязательный). Тип данных - строка
-- **MoveToQueueConfig.TargetQueueNumber** - номер новой очереди (обязательный). Тип данных - строка
-- **MoveToQueueConfig.CategoryNumber** - категория уведомления в новой очереди (необязательный). Тип данных - строка
-- **MoveToQueueConfig.RecordID** - идентификатор уведомления (необязательный). Тип данных - строка
+- **MoveToQueueConfigsList** - container with information about moving of notifications. Data type - array.
+- **MoveToQueueConfigsList.MoveToQueueConfig** - information about moving of notifications. Data type - array. 
+- **MoveToQueueConfig.SourceID** - ID of the queue data source (required).  Data type - int.
+- **MoveToQueueConfig.OriginalQueueNumber** - old queue number (required). Data type - string.
+- **MoveToQueueConfig.TargetQueueNumber** - new queue number (required). Data type - string.
+- **MoveToQueueConfig.CategoryNumber** - queue category (optional). Data type - string.
+- **MoveToQueueConfig.RecordID** - record id (optional). Data type - string.
 
-#### Пример
+#### Example
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avia="http://nemo-ibe.com/Avia" xmlns:stl="http://nemo-ibe.com/STL" xmlns:avia1="http://nemo.travel/Avia">
    <soapenv:Header/>
@@ -48,5 +48,5 @@ Moving the notification to another queue.
    </soapenv:Body>
 </soapenv:Envelope>
 ```
-#### Ответ
-Если не было возвращено ошибок, то операция выполнена успешно.
+#### Response
+If no errors were returned, the operation had been successful.
