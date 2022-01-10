@@ -22,7 +22,35 @@ Queues reading.
 - **ListQueueConfig.QueueConfig.DisplayExternalPNRs** - includes mapping of PNRs that were created outside the Nemo system. Data type - bool.
 
 #### ListQueue_2_0 Response
-Corresponds to the previous version.
+- **QueueInfoList** - container with information on named queues. Data type - array.
+- **UnnamedQueueInfoList** - container with information on unnamed queues. Data type - array.
+- **QueueInfo** - information about queue. Data type - array.
+- **QueueInfo.Queue** - queue number/name (that depends on GDS). Data type - string.
+- **QueueInfo.BookInfoList** - list of orders in the queue.
+- **BookInfoList.BookInfo** - information about order.
+- **BookInfo.BookID** - ID of the booking with passengers. Data type - long.
+- **BookInfo.Locator** - PNR record locator. Data type - string.
+- **BookInfo.Supplier** - supplier. Data type - enumeration. Enumeration avia suppliers:
+Sabre
+Sirena
+Galileo
+Amadeus
+SITAGabriel
+SpecialFares
+SIG
+NemoInventory
+Pegasys
+Travelfusion
+Mystifly
+GalileoUAPI
+SolringNDC
+- **BookInfo.RecordInfoList** - сontainer with information about notifications for orders in queue. Data type - array.
+- **RecordInfoList.RecordInfo** - container with information about notification. Data type - array.
+- **RecordInfo.ID** - record id. Data type - string.
+- **RecordInfo.CategoryNumber** - category number. Data type - string.
+- **RecordInfo.PlacedIn** - date and time placed in queue in timestamp format: yyyy-mm-ddThh:mm:sstzd.
+- **RecordInfo.Deadline** - last active date and time in timestamp format: yyyy-mm-ddThh:mm:sstzd.
+- **RecordInfo.Text** - text. Data type - string.
 
 
 #### Request
