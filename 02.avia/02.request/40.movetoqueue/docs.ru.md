@@ -1,10 +1,13 @@
 ---
 title: MoveToQueue
+taxonomy:
+    category:
+        - docs
 ---
 
 ### MoveToQueue
 
-Перемещение уведомления в другую очередь.
+Moving the notification to another queue.
 
 #### Запрос
 
