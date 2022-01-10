@@ -11,8 +11,8 @@ Get queue list.
 
 #### Запрос
 
-- **SourceIDs** - список идентификаторов источника (пакета). Тип данных - массив.
-- **SourceIDs.SourceID** - идентификатор источника (пакета), для которого будет производиться получение списка очередей. Тип данных — целое 32-битное число.
+- **SourceIDs** - source ids list (package). Data type - array.
+- **SourceIDs.SourceID** - source ID (package) for which the queues list will be retrieved. Data type - int.
 
 #### Пример
 ```xml
@@ -40,17 +40,17 @@ Get queue list.
 
 #### Ответ
 
-- **QueueDescriptionList** - контейнер со списком очередей. Тип данных - сложный.
-- **QueueDescriptionList.QueueDescription** - описание очереди. Тип данных - сложный.
-- **QueueDescription.Number** - номер очереди. Тип данных - строка.
-- **QueueDescription.Name** - название очереди. Тип данных - строка.
-- **QueueDescription.RecordsCount** - количество уведомлений в очереди. Тип данных — целое 32-битное число.
-- **QueueDescription.SourceID** - идентификатор источника (пакета). Тип данных — целое 32-битное число.
-- **QueueDescription.CategoryDescriptionList** - контейнер со списком категорий очереди. Тип данных - сложный.
-- **CategoryDescriptionList.CategoryDescription** - описание категории. Тип данных - сложный.
-- **CategoryDescription.Number** - номер категории. Тип данных - строка.
-- **CategoryDescription.Name** - название категории. Тип данных - строка.
-- **CategoryDescription.RecordsCount** - количество уведомлений в этой категории. Тип данных — целое 32-битное число.
+- **QueueDescriptionList** - container with a list of queues. Data type - array.
+- **QueueDescriptionList.QueueDescription** - queue description. Data type - array.
+- **QueueDescription.Number** - queue number. Data type - string.
+- **QueueDescription.Name** - queue name. Data type - string.
+- **QueueDescription.RecordsCount** - count of notifications in queue. Data type - int.
+- **QueueDescription.SourceID** - source ID (package). Data type - int.
+- **QueueDescription.CategoryDescriptionList** - container with a list of category queue. Data type - array.
+- **CategoryDescriptionList.CategoryDescription** - description of category. Data type - array.
+- **CategoryDescription.Number** - category number. Data type - string.
+- **CategoryDescription.Name** - category name. Data type - string.
+- **CategoryDescription.RecordsCount** - count of notifications in category. Data type - int.
 
 #### Пример
 ```xml
