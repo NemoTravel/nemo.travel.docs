@@ -8,22 +8,22 @@ title: AirAvailabilitySearch
 
 #### Request
 - **RequestedFlightInfo** - contains information about the requested itinerary.
-- **RequestedFlightInfo.Direct** - поиск прямых или стыковочных рейсов. Data type - bool.
-- **RequestedFlightInfo.ODPairs** - контейнер содержит описание рейсов.
-- **ODPair.DepartureDateTime** - дата и время отправления. Data type - string, формат yyyy-mm-ddthh:mm:ss.
-- **ODPair.DeparturePoint** - пункт отправления. Data type - string.
-- **DeparturePoint.Code** - трехбуквенный код аэропорта или города отправления. Data type - string.
-- **DeparturePoint.IsCity** -  true, если в качестве пункта отправления указан код города (агрегатор аэропортов), false - код аэропорта. Data type - bool.
-- **ODPair.ArrivalPoint** - пункт прибытия.
-- **ArrivalPoint.Code** - трехбуквенный код аэропорта или города отправления. Data type - string
-- **ArrivalPoint.IsCity** - признак города/аэропорта. Data type - bool.
-- **ODPair.FlightNumber** - номер рейса. Data type - string.
-- **ODPair.BookingClassCode** - литера класса бронирования на данном сегменте. Data type - string.
-- **Restrictions** - дополнительные критерии поиска (необязательный).
-- **Restrictions.CompanyFilter** - фильтр по авиакомпании (обязательный).
-- **CompanyFilter.Company** - фильтр по авиакомпании. 
-- **Company.Code** - двухбуквенный код авиакомпании (обязательный). Data type - string.
-- **Company.Include** - тип фильтрации (обязательный). false - авиакомпания исключается из результатов; true - только данная авиакомпания должна присутствовать в выдаче. Data type - bool.
+- **RequestedFlightInfo.Direct** - direct or connecting flights. Data type - bool.
+- **RequestedFlightInfo.ODPairs** - container contains flight descriptions.
+- **ODPair.DepartureDateTime** - date and time of the departure. Data type - string, формат yyyy-mm-ddthh:mm:ss.
+- **ODPair.DeparturePoint** - point of departure. Data type - string.
+- **DeparturePoint.Code** - 3-letter code of the airport/city of departure. Data type - string.
+- **DeparturePoint.IsCity** - attribute showing that the city code is used as the departure point. Data type - bool.
+- **ODPair.ArrivalPoint** - point of arrival.
+- **ArrivalPoint.Code** - 3-letter code of the airport/city of arrival. Data type - string
+- **ArrivalPoint.IsCity** - attribute showing that the city code is used as the arrival point. Data type - bool.
+- **ODPair.FlightNumber** - flight number. Data type - string.
+- **ODPair.BookingClassCode** - flight class letter for this segment. Data type - string.
+- **Restrictions** - additional search criteria (optional).
+- **Restrictions.CompanyFilter** - filter by airline (mandatory).
+- **CompanyFilter.Company** - filter by airline. 
+- **Company.Code** - 2-letter code of the airline (mandatory). Data type - string.
+- **Company.Include** - filtration type (mandatory). false - авиакомпания исключается из результатов; true - только данная авиакомпания должна присутствовать в выдаче. Data type - bool.
 - **Company.SegmentNumber** - номер сегмента, на котором сработает фильтр по авиакомпаниям. Data type - int.
 - **Restrictions.SourcePreference** - список идентификаторов источника (пакета).
 - **SourcePreference.Source** - идентификатор источника (пакета), для которого будет производиться запрос наличия мест. Data type - int.
