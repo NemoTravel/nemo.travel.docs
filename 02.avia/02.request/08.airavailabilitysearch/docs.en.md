@@ -42,7 +42,7 @@ Availability seats request.
          <avia:Request>
             <stl:Requisites>
                <stl:Login>LOGIN</stl:Login>
-               <stl:Password>PASWORD</stl:Password>
+               <stl:Password>PASSWORD</stl:Password>
             </stl:Requisites>
             <stl:UserID>10001</stl:UserID>
             <stl:RequestBody>
