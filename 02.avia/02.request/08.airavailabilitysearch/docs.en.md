@@ -4,13 +4,13 @@ title: AirAvailabilitySearch
 
 ### AirAvailabilitySearch
 
-Запрос наличия мест.
+Availability seats request.
 
 #### Request
 - **RequestedFlightInfo** - contains information about the requested itinerary.
 - **RequestedFlightInfo.Direct** - direct or connecting flights. Data type - bool.
 - **RequestedFlightInfo.ODPairs** - container contains flight descriptions.
-- **ODPair.DepartureDateTime** - date and time of the departure. Data type - string, формат yyyy-mm-ddthh:mm:ss.
+- **ODPair.DepartureDateTime** - date and time of the departure. Data type - string, format yyyy-mm-ddthh:mm:ss.
 - **ODPair.DeparturePoint** - point of departure. Data type - string.
 - **DeparturePoint.Code** - 3-letter code of the airport/city of departure. Data type - string.
 - **DeparturePoint.IsCity** - attribute showing that the city code is used as the departure point. Data type - bool.
@@ -23,18 +23,18 @@ title: AirAvailabilitySearch
 - **Restrictions.CompanyFilter** - filter by airline (mandatory).
 - **CompanyFilter.Company** - filter by airline. 
 - **Company.Code** - 2-letter code of the airline (mandatory). Data type - string.
-- **Company.Include** - filtration type (mandatory). false - авиакомпания исключается из результатов; true - только данная авиакомпания должна присутствовать в выдаче. Data type - bool.
-- **Company.SegmentNumber** - номер сегмента, на котором сработает фильтр по авиакомпаниям. Data type - int.
-- **Restrictions.SourcePreference** - список идентификаторов источника (пакета).
-- **SourcePreference.Source** - идентификатор источника (пакета), для которого будет производиться запрос наличия мест. Data type - int.
-- **Restrictions.ClassPreference** - класс обслуживания.
-- **ClassPreference.ClassOfService** - тип предпочитаемого класса перелёта. Data type - перечисление, возможные значения:
-    -   **Economy** - только эконом класс (по умолчанию);
-    -   **Business** - только бизнес класс;
-    -   **First** - только первый класс;
-    -   **PremiumEconomy** - премиум эконом;
-    -   **All** - все классы.
-- **Restrictions.SeatsCount** - число мест. Data type - int.
+- **Company.Include** - filtration type (mandatory). Data type - bool.
+- **Company.SegmentNumber** - number of the requested flight segment (numbering from 1 in this case), for which this airline is required. Data type - int.
+- **Restrictions.SourcePreference** - list of preferred source (package).
+- **SourcePreference.Source** - source identifier (package),for which a seat availability request will be sent. Data type - int.
+- **Restrictions.ClassPreference** - contains a list of preferred service classes.
+- **ClassPreference.ClassOfService** - type of preferred flight class. Data type - enumeration, possible values:
+    -   **Economy** - economy class only (default);
+    -   **Business** - business class only;
+    -   **First** - first class only;
+    -   **PremiumEconomy** - premium economy;
+    -   **All** - all classes.
+- **Restrictions.SeatsCount** - seats number. Data type - int.
 
 #### Example
 ```xml
@@ -91,39 +91,39 @@ title: AirAvailabilitySearch
 ```
 #### Response
 
-Сообщение с ответом о наличии свободных мест содержит доступные места на рейсах по классам бронирования для пары городов.
+The availability response message contains flight available seats by RBD for a city pair.
 
-- **OriginDestinationList** - содержит наборы рейсов для каждой пары городов.
-- **OriginDestinationList.OriginDestination** -  содержит один или несколько (стыковочных) рейсов, обслуживающих пару городов.
-- **OriginDestination.DepartureCode** - пункт отправления. Data type - string.
-- **OriginDestination.ArrivalCode** - пункт прибытия. Data type - string.
-- **Flights.Flight** - описание рейса.
-- **Flight.Segments** - описание сегмента.
-- **Segment.ID** - идентификатор сегмента. Data type - int.
-- **Segment.DepAirp** - точка отправления.
-- **DepAirp.AirportCode** - трехбуквенный код аэропорта отправления. Data type - string. 
-- **DepAirp.CityCode** -  трехбуквенный код города-агрегатора отправления. Data type - string.
-- **DepAirp.UTC** - часовой пояс. Data type - string. 
-- **DepAirp.Terminal** - терминал. Data type - string. 
-- **Segment.ArrAirp** - точка прибытия. Data type - сложный.
-- **ArrAirp.AirportCode** - трехбуквенный код аэропорта прибытия. Data type - string. 
-- **ArrAirp.CityCode** - трехбуквенный код города-агрегатора прибытия. Data type - string.
-- **ArrAirp.UTC** - часовой пояс. Data type - string. 
-- **ArrAirp.Terminal** - терминал. Data type - string.  
-- **Segment.FlightTime** -  время в пути в минутах. Data type - int. 
-- **Segment.MarketingCarrierInfo** - авиакомпания, выполняющая продажу мест на данный рейс.
-- **MarketingCarrierInfo.Code** - код авиакомпании. Data type - string.
-- **MarketingCarrierInfo.FlightNumber** - номер рейса. Data type - string.
-- **Segment.OperatingCarrierInfo** - авиакомпания, выполняющая перевозку пассажиров.
-- **OperatingCarrierInfo.Code** - код авиакомпании. Data type - string.
-- **OperatingCarrierInfo.FlightNumber** - номер рейса. Data type - string.
-- **Segment.AircraftType** - тип воздушного судна. Data type - string.
-- **Segment.DepartureDateTime** - дата и время отправления. Data type - string, формат yyyy-mm-ddthh:mm:ss.
-- **Segment.ArrivalDateTime** - дата и время прибытия. Data type - string, формат yyyy-mm-ddthh:mm:ss.
-- **Segment.Avails** - наличие доступным мест на рейсе.
-- **Avails.RBD** - информация о доступности для каждого rbd.
-- **RBD.FreeSeatsCount** - число свободных мест. Data type - int.
-- **RBD.Value** - литера класса бронирования. Data type - string.
+- **OriginDestinationList** - contains sets of flights for each cities pair.
+- **OriginDestinationList.OriginDestination** -  contains one or more (connecting) flights serving the cities pair.
+- **OriginDestination.DepartureCode** - 3-letter airport/city code of departure. Data type - string.
+- **OriginDestination.ArrivalCode** - 3-letter airport/city code of arrival. Data type - string.
+- **Flights.Flight** - flight description.
+- **Flight.Segments** - segment description.
+- **Segment.ID** - segment identifier. Data type - int.
+- **Segment.DepAirp** - description of departure point.
+- **DepAirp.AirportCode** - 3-letter airport code of departure. Data type - string. 
+- **DepAirp.CityCode** -  3-letter city code of departure. Data type - string.
+- **DepAirp.UTC** - time zone. Data type - string. 
+- **DepAirp.Terminal** - terminal. Data type - string. 
+- **Segment.ArrAirp** - description of arrival point.
+- **ArrAirp.AirportCode** - 3-letter airport code of arrival. Data type - string. 
+- **ArrAirp.CityCode** - 3-letter city code of arrival. Data type - string.
+- **ArrAirp.UTC** - time zone. Data type - string. 
+- **ArrAirp.Terminal** - terminal. Data type - string.  
+- **Segment.FlightTime** -  flight time in minutes. Data type - string, format hh:mm. 
+- **Segment.MarketingCarrierInfo** - code of the airline that performs the sale of seats on this flight.
+- **MarketingCarrierInfo.Code** - airline code. Data type - string.
+- **MarketingCarrierInfo.FlightNumber** - flight number. Data type - string.
+- **Segment.OperatingCarrierInfo** - airline code that carries passengers.
+- **OperatingCarrierInfo.Code** - airline code. Data type - string.
+- **OperatingCarrierInfo.FlightNumber** - flight number. Data type - string.
+- **Segment.AircraftType** - type of aircraft. Data type - string.
+- **Segment.DepartureDateTime** - date and time of departure. Data type - string, format yyyy-mm-ddthh:mm:ss.
+- **Segment.ArrivalDateTime** - date and time of arrival. Data type - string, format yyyy-mm-ddthh:mm:ss.
+- **Segment.Avails** - available seats on flight.
+- **Avails.RBD** - information about availability seats per rbd.
+- **RBD.FreeSeatsCount** - count of free seats. Data type - int.
+- **RBD.Value** - booking class letter. Data type - string.
 
 ```xml
       <AirAvailabilitySearchResponse xmlns="http://nemo-ibe.com/Avia">
