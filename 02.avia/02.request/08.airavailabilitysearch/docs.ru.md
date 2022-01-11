@@ -95,8 +95,8 @@ title: AirAvailabilitySearch
 
 - **OriginDestinationList** - содержит наборы рейсов для каждой пары городов.
 - **OriginDestinationList.OriginDestination** -  содержит один или несколько (стыковочных) рейсов, обслуживающих пару городов.
-- **OriginDestination.DepartureCode** - пункт отправления. Тип данных - строка.
-- **OriginDestination.ArrivalCode** - пункт прибытия. Тип данных - строка.
+- **OriginDestination.DepartureCode** - трехбуквенный код аэропорта/города отправления. Тип данных - строка.
+- **OriginDestination.ArrivalCode** - трехбуквенный код аэропорта/города прибытия. Тип данных - строка.
 - **Flights.Flight** - описание рейса.
 - **Flight.Segments** - описание сегмента.
 - **Segment.ID** - идентификатор сегмента. Тип данных - целое 64-битное число.
