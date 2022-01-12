@@ -27,13 +27,6 @@ Availability seats request.
 - **Company.SegmentNumber** - number of the requested flight segment (numbering from 1 in this case), for which this airline is required. Data type - int.
 - **Restrictions.SourcePreference** - list of preferred source (package).
 - **SourcePreference.Source** - source identifier (package),for which a seat availability request will be sent. Data type - int.
-- **Restrictions.ClassPreference** - contains a list of preferred service classes.
-- **ClassPreference.ClassOfService** - type of preferred flight class. Data type - enumeration, possible values:
-    -   **Economy** - economy class only (default);
-    -   **Business** - business class only;
-    -   **First** - first class only;
-    -   **PremiumEconomy** - premium economy;
-    -   **All** - all classes.
 - **Restrictions.SeatsCount** - seats number. Data type - int.
 
 #### Example
