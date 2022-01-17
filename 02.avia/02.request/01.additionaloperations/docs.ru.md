@@ -188,6 +188,10 @@ taxonomy:
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.SegmentRef.Ref** - ссылка на сегмент. Тип данных - целое 32 битное число.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes** - типы пассажиров к которым применима данная цена. Тип данных - массив.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes.PassTypes** - тип пассажира. Тип - данных перечисление.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellerRef** - ссылка на пассажирам к которым примениа данная цена. Тип данных - массив.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellerRef.Ref** - ссылка на пассажира. Тип данных - целое 32 битное число.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.OfferToken** - токен услуги с динамической ценой, только для поставщика Sirena. Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.OfferTtl** - срок действия услуги с динамической ценой, только для поставщика Sirena. Тип данных - datetime.
 -   **GetAllowedCCsResult** - результат получения списка кодов карт для оплаты GDS процессингом. Тип данных - массив.
 -   **GetAllowedCCsResult.AllowedCCs** - список кодов допустимых карт для оплаты брони GDS процессингом. Тип данных - массив.
 -   **GetAllowedCCsResult.AllowedCCs.Code** - код кредитной карты, которой можно оплатить указанную бронь с помощью GDS процессинга. Тип данных - строка.
