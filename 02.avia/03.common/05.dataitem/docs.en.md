@@ -231,6 +231,9 @@ To store different booking content.
     - **OnRequest**
     - **Rejected**
 - **BookedSeat.StatusCode** - industrial code of the status. Data type - string.
+- **BookedSeat.RFISC** - RFISC of the ancillary service. Data type - string.
+- **BookedSeat.OfferToken** - token for service with dynamic price, only for Sirena. Data type - string.
+- **BookedSeat.OfferTtl** - timelimit for service with dynamic price, only for Sirena. Data type - datetime.
 - **ValidatingCompany** - information about the validating carrier (optional). Data type - array.
 - **ValidatingCompany.Code** - company code. Data type - string.
 - **ValidatingCompany.IsForced** - attribute of the redefined validating company. Data type - bool.
