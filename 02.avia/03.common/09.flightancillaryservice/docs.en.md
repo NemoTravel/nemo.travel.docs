@@ -42,6 +42,9 @@ Ancillary services, consist of the following elements:
 * **SSRDescription** -  description for the SSR of ancillary service booked (optional). Data type - string.
 * **SSRDescriptionRequired** - attribute of the need to transfer ancillary services description from the user in order to book this service. Data type - bool.
 * **Quantity** - number of repetitions of the service. Data type - int.
+*  **EMDType** - EMD type. Data type - string.
+*  **OfferToken** - token for service with dynamic price, only for Sirena. Data type - string.
+*  **OfferTtl** - timelimit for service with dynamic price, only for Sirena. Data type - datetime.
 
 The list of available ancillary services is triggered by the SearchAncillaryServices parameter in the  [AdditionalOperations](/avia/request/additionaloperations) request. In response to this request you will receive a list of ancillary services available on the current flight.
 
