@@ -443,9 +443,11 @@ taxonomy:
               <a:ID>6</a:ID>
               <a:Type>ContactInfo</a:Type>
               <a:ContactInfo>
+                <a:EmailID>email@email.com</a:EmailID>
                 <a:Telephone>
                   <a:Type>A</a:Type>
                   <a:PhoneNumber>78123330334</a:PhoneNumber>
+                  <a:Comment>Agency</a:Comment>
                 </a:Telephone>
               </a:ContactInfo>
             </a:DataItem>
