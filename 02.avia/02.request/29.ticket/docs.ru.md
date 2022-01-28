@@ -246,6 +246,21 @@ taxonomy:
                 </a:VATBreakdown>
               </a:ElectronicDocument>
             </a:DataItem>
+            <a:DataItem>
+              <a:ID>2</a:ID>
+              <a:TravellerRef>
+                <a:Ref>1</a:Ref>
+              </a:TravellerRef>
+              <a:Type>ContactInfo</a:Type>
+              <a:ContactInfo>
+                <a:EmailID>email@email.com</a:EmailID>
+                <a:Telephone>
+                  <a:Type>M</a:Type>
+                  <a:PhoneNumber>73334444333</a:PhoneNumber>
+                </a:Telephone>
+                <a:Comment>Agency</a:Comment>
+              </a:ContactInfo>
+            </a:DataItem>
            </a:DataItems>
         </a:ResponseBody>
       </Ticket_2_2Result>
