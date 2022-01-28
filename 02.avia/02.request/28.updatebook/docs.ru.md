@@ -254,6 +254,7 @@ taxonomy:
                   <a:Type>M</a:Type>
                   <a:PhoneNumber>73334444333</a:PhoneNumber>
                 </a:Telephone>
+                <Comment>Agency</Comment>
               </a:ContactInfo>
             </a:DataItem>
           </a:DataItems>
