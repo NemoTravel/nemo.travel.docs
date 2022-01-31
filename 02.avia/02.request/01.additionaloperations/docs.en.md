@@ -66,6 +66,7 @@ Execution of the additional operations of 1.2. version.
 -   **OperationsRestrictions.SelectedAncillaryServices.Service.Quantity** - Number of additional services already booked. Data type - int.
 -   **OperationsRestrictions.SelectedAncillaryServices.Service.PassengerType** - type of passenger for pricing. Data type - string.
 -   **OperationsRestrictions.SelectedAncillaryServices.Service.EMDType** - EMD type. Data type - string.
+-   **OperationsRestrictions.Language** - response language. Data type - string.
 
 ##### Sample
 ```xml
