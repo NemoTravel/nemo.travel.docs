@@ -68,6 +68,7 @@ taxonomy:
 -   **OperationsRestrictions.SelectedAncillaryServices.Service.Quantity** - Количество уже забронированных дополнительных услуг. Тип данных - int.
 -   **OperationsRestrictions.SelectedAncillaryServices.Service.PassengerType** - тип пассажира для оценки стоимости. Тип данных - строка.
 -   **OperationsRestrictions.SelectedAncillaryServices.Service.EMDType** - Тип EMD. Тип данных - строка. 
+-   **OperationsRestrictions.Language** - язык ответа. Тип данных - строка. 
 
 
 ##### Пример
