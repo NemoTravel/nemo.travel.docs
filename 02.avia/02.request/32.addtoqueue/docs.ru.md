@@ -33,6 +33,9 @@ taxonomy:
 - **RecordInfo.CategoryNumber** - номер категории. Тип данных - строка.
 - **RecordInfo.Deadline** - срок обработки в формате yyyy-mm-yyThh:mm:sstzd. Пример: 2021-12-21T13:21:38+01:00. Тип данных - строка.
 - **RecordInfo.Text** - комментарий пользователя. Тип данных - строка.
+- **AddToQueueConfig.SupplierOwner** - параметры точки продажи.
+- **SupplierOwner.Agency** - ID Агентства. Тип данных - строка.
+- **SupplierOwner.User** - ID ППР (пункт продажи). Тип данных - строка.
 
 #### Пример
 
