@@ -20,6 +20,9 @@ Queues reading.
 - **ListQueueConfig.QueueConfig.QueuesByNumber.QueueNumber** - sequence number of the queue. Data type - int.
 - **ListQueueConfig.QueueConfig.ListAgencyQueues** - attribute of the need to read the queues from the agency settings. Data type - bool.
 - **ListQueueConfig.QueueConfig.DisplayExternalPNRs** - includes mapping of PNRs that were created outside the Nemo system. Data type - bool.
+- **QueueConfig.SupplierOwner** - point of sale parameters.
+- **SupplierOwner.Agency** - agency ID. Data type - string.
+- **SupplierOwner.User** - point of sales. Data type - string.
 
 #### ListQueue_2_0 Response
 - **QueueInfoList** - container with information on named queues. Data type - array.
