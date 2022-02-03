@@ -34,6 +34,9 @@ Adding a booking to the GDS queue.
 - **RecordInfo.CategoryNumber** - number of category. Data type - string.
 - **RecordInfo.Deadline** - last active date and time in timestamp format (yyyy-mm-yyThh:mm:sstzd). Example: 2021-12-21T13:21:38+01:00. Data type - string.
 - **RecordInfo.Text** - user's comment. Data type - string.
+- **AddToQueueConfig.SupplierOwner** - point of sale parameters.
+- **SupplierOwner.Agency** - agency ID. Data type - string.
+- **SupplierOwner.User** - point of sales. Data type - string.
 
 #### Example
 
