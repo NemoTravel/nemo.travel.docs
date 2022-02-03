@@ -19,7 +19,10 @@ taxonomy:
 - **ListQueueConfig.QueueConfig.QueuesByNumber** - контейнер, в котором указаны порядковые номера очередей.  Тип данных  - массив int.
 - **ListQueueConfig.QueueConfig.QueuesByNumber.QueueNumber** - порядковый номер очереди. Тип данных - int. 
 - **ListQueueConfig.QueueConfig.ListAgencyQueues** - признак необходимости чтения очередей из настроек агентства. Тип данных - bool. 
-- **ListQueueConfig.QueueConfig.DisplayExternalPNRs** - включает отображение PNR, которые были созданы вне системы Nemo. Тип данных - bool. 
+- **ListQueueConfig.QueueConfig.DisplayExternalPNRs** - включает отображение PNR, которые были созданы вне системы Nemo. Тип данных - bool.
+- **QueueConfig.SupplierOwner** - параметры точки продажи.
+- **SupplierOwner.Agency** - ID Агентства. Тип данных - строка.
+- **SupplierOwner.User** - ID ППР (пункт продажи). Тип данных - строка. 
 
 #### Ответ ListQueue_2_0
 -   **QueueInfoList** - контейнер с информацией по именованным очередям. Тип данных - массив.
