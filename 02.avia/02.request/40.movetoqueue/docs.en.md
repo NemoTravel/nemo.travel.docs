@@ -18,6 +18,9 @@ Move notification to another queue.
 - **MoveToQueueConfig.TargetQueueNumber** - new queue number (required). Data type - string.
 - **MoveToQueueConfig.CategoryNumber** - queue category (optional). Data type - string.
 - **MoveToQueueConfig.RecordID** - record id (optional). Data type - string.
+- **MoveToQueueConfig.SupplierOwner** - point of sale parameters.
+- **SupplierOwner.Agency** - agency ID. Data type - string.
+- **SupplierOwner.User** - point of sales. Data type - string
 
 #### Example
 ```xml
