@@ -13,6 +13,9 @@ Get queue list.
 
 - **SourceIDs** - source ids list (package). Data type - array.
 - **SourceIDs.SourceID** - source ID (package) for which the queues list will be retrieved. Data type - int.
+- **SupplierOwner** - point of sale parameters.
+- **SupplierOwner.Agency** - agency ID. Data type - string.
+- **SupplierOwner.User** - point of sales. Data type - string.
 
 #### Пример
 ```xml
