@@ -244,6 +244,14 @@ taxonomy:
                     <a:Currency>RUB</a:Currency>
                   </a:Total>
                 </a:VATBreakdown>
+                <CouponInfoList>
+                  <b:CouponInfo>
+                    <b:CouponNumber>1</b:CouponNumber>
+                    <b:SegmentRef>0</b:SegmentRef>
+                    <b:CouponStatusCode>O</b:CouponStatusCode>
+                    <b:CouponStatus>Open</b:CouponStatus>
+                 </b:CouponInfo>
+                </CouponInfoList>
               </a:ElectronicDocument>
             </a:DataItem>
             <a:DataItem>
