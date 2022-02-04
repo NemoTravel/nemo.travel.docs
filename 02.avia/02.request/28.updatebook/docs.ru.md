@@ -257,6 +257,18 @@ taxonomy:
                 <a:Comment>Agency</a:Comment>
               </a:ContactInfo>
             </a:DataItem>
+            <a:DataItem>
+              <ElectronicDocument>
+                <CouponInfoList>
+                  <b:CouponInfo>
+                    <b:CouponNumber>1</b:CouponNumber>
+                    <b:SegmentRef>0</b:SegmentRef>
+                    <b:CouponStatusCode>O</b:CouponStatusCode>
+                    <b:CouponStatus>Open</b:CouponStatus>
+                 </b:CouponInfo>
+                </CouponInfoList>
+              </ElectronicDocument>
+            </a:DataItem>
           </a:DataItems>
         </a:ResponseBody>
       </UpdateBook_2_2Result>
