@@ -206,6 +206,27 @@ taxonomy:
 -   **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Code** - код таксы. Тип данных — string.
 -   **ElectronicDocument.VATBreakdown.Total** - НДС от суммы тарифа и такс. Тип данных - [Money](/avia/common/money).
 -   **ElectronicDocument.IssuedBy** - реквизит фактической выписки для Amadeus, Sabre, Travelport uAPI. Тип данных — string.
+-   **ElectronicDocument.CouponInfoList** - структура с информацией о купонах. Тип данных — сложный.
+-   **ElectronicDocument.CouponInfoList.CouponInfo** - секция с информацией о купонах. Тип данных — сложный.
+-   **ElectronicDocument.CouponInfoList.CouponInfo.CouponNumber** - номер купона. Тип данных — строка.
+-   **ElectronicDocument.CouponInfoList.CouponInfo.SegmentRef** - ссылка на сегмент, к которому относится данный купон. Тип данных — целое 32-битное число.
+-   **ElectronicDocument.CouponInfoList.CouponInfo.CouponStatusCode** - статус купона, получаемый от поставщика.  Тип данных — строка.
+-   **ElectronicDocument.CouponInfoList.CouponInfo.CouponStatus** - статус купона.  Тип данных — перечисление. Возможные значения:
+    -  **Open** — открыт для использования;
+    -  **Used** — использован;
+    -  **Void** — аннулирован;
+    -  **CheckIn** — прошел регистрацию;
+    -  **Printed** — распечатан;
+    -  **Refunded** — произведен возврат;
+    -  **Exchanged** — обменен/переоформлен;
+    -  **Registered** —  зарегистрирован, еще не подтвержден;
+    -  **Landed** — посадка произведена;
+    -  **Stoped** — приостановлен;
+    -  **PaperDocument** — бумажный билет;
+    -  **Unavailable** — недоступен для использования;
+    -  **ExchangedToPaper** — заменен на бумажный документ; 
+    -  **Closed** — закрыт;
+    -  **AirportControl** — контроль.
 -   **PaperDocument** — бумажный документ (необязательный). Тип данных — массив. 
 -   **PaperDocument.Type** — тип документ. Тип данных — перечисление, возможные значения:
     -   **ItinReceipt** — маршрут-квитанция;
