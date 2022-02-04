@@ -514,6 +514,13 @@ D 993 ПЛАТА ПРИ ИЗМЕНЕНИИ</a:Description>
                      </c:VATBreakdown>
                      <c:IssuierSupplierID>***</c:IssuierSupplierID>
                      <c:AgencyIATACode>***</c:AgencyIATACode>
+                     <CouponInfoList>
+                        <b:CouponInfo>
+                           <b:CouponNumber>1</b:CouponNumber>
+                           <b:SegmentRef>0</b:SegmentRef>
+                           <b:CouponStatusCode>O</b:CouponStatusCode>
+                        </b:CouponInfo>
+                     </CouponInfoList>
                   </c:EDMask>
                   <c:EDMask>
                      <c:Number>2986160166387</c:Number>
