@@ -97,6 +97,7 @@ title: ConfirmBook
                   <RefundPenalty i:nil="true"/>
                   <RefundPrice i:nil="true"/>
                   <RefundService i:nil="true"/>
+				  <RefundTimeLimit>2022-03-05 09:56:00 +03:00</RefundTimeLimit>
                   <SeatNum>033</SeatNum>
                   <Service>
                     <a:Amount>145.92</a:Amount>
