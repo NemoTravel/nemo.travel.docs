@@ -20,7 +20,7 @@ The latest version of the request, differences are only in the response to the r
 -  **PricingOptions.FOPsForAlternativePrices** - FOPs for which you need to get an additional estimation of the booking. Data type - array.
 -  **PricingOptions.FOPsForAlternativePrices.Type** - FOP, for which you need to get an additional estimation of the booking. Data type - string.
 -  **PricingOptions.NoReprice** - turns off the re-pricing (actualization of the price) of the booking, supported for Galileo, Sabre, Amadeus, SITAGabriel, uAPI. Data type - bool.
--  **FillEdDocContent** - request electronic documents in PDF (optional). If the parameter in the request is not specified or set to true - the itinerary receipt is requested from the supplier, EMD in PDF format, false - electronic documents are not requested from the supplier. Supported for Sirena, Sirena NDC. Data type - bool.
+-  **FillEdDocContent** - request electronic documents in PDF (optional). If the parameter in the query is not specified or set to true - itinerary receipt and EMD in PDF format are requested from the supplier, false - electronic documents are not requested from the supplier. Supported for Sirena, Sirena NDC. Data type - bool.
 
 ##### Sample
 
