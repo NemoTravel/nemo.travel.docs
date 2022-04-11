@@ -138,6 +138,7 @@ taxonomy:
         <RFIC>G</RFIC>
         <RFISC>BF1</RFISC>
         <Quantity>1</Quantity>
+        <StatusCode>HD</StatusCode>
       </Service>
       <Service i:type="FlightAncillaryService">
         <ID>2</ID>
@@ -152,6 +153,7 @@ taxonomy:
         <RFIC>G</RFIC>
         <RFISC>BF1</RFISC>
         <Quantity>1</Quantity>
+        <StatusCode>HD</StatusCode>
       </Service>
     </AncillaryServices>
    ```         
@@ -187,6 +189,7 @@ taxonomy:
               <RFIC>G</RFIC>
               <RFISC>0AI</RFISC>
               <Quantity>1</Quantity>
+              <StatusCode>HD</StatusCode>
             </Service>
    ```
    
