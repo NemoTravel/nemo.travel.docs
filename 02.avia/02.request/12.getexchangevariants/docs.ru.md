@@ -98,8 +98,8 @@ taxonomy:
 
 -   **PlaneFlights** - Аналогичен параметру *PlaneFlights* из ответа [Search](/avia/request/search).
 -   **SimpleGroupedFlights** - Аналогичен параметру *SimpleGroupedFlights* из ответа [Search](/avia/request/search).
--   **ServicesToRefund** - контейнер с информацией по доп. услугам, которые будут возвращены.
--   **ServicesToRefund.ID** - идентификатор доп. услуги, которая будет возвращена.
+-   **ServicesToRefund** - контейнер с информацией по доп. услугам, которые будут возвращены. Тип данных - сложный.
+-   **ServicesToRefund.ID** - идентификатор доп. услуги, которая будет возвращена. Тип данный - int.
 
 ##### Примеры
 

@@ -97,6 +97,8 @@ To exchange all segments for a completely new flight, you do not need to indicat
 
 -  **PlaneFlights** - similar to the *PlaneFlights* parameter from the [Search](/avia/request/search) response.
 -  **SimpleGroupedFlights** - similar to the *SimpleGroupedFlights* parameter from the [Search](/avia/request/search) response.
+-  **ServicesToRefund** - container with infromation about ancillaries. Data type - complex.
+-  **ServicesToRefund.ID** - additional service identifier. Data type - integer.
 
 ##### Sample
 
