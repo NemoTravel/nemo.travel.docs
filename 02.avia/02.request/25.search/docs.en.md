@@ -23,7 +23,7 @@ Version 1.2. flight search.
 -  **RequestedFlightInfo.ODPair.MaxDepartureTime** - maximum-allowed departure time (optional). Data type - string, the format is <code>hh:mm</code>.
 -  **RequestedFlightInfo.ODPair.DepaturePoint** - contains information about the departure point. Data type - array.
 -  **RequestedFlightInfo.ODPair.DepaturePoint.Code** - 3-letter code of the airport/city of departure. Data type - string.
--  **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** - attribute showing that the city code is used as the departure point (optional). In case if the city code and the airport code are the same, the airport takes priority. Data type - bool.
+-  **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** - indication that the transmitted code is the city code (airport aggregator) (optional). If not passed to the request then the internal logic of determining this feature based on the directory is triggered. Data type - bool.
 -  **RequestedFlightInfo.ODPair.DepatureAltPoints** - contains a list of alternative departure airports/cities. Data type - array. (optional).
 -  **RequestedFlightInfo.ODPair.DepatureAltPoints.AltPoint** - alternative flight point. Contains information about the flight point. Data type - array. The format is similar to the **DepaturePoint** element. 
 -  **RequestedFlightInfo.ODPair.ArrivalPoint** - contains information about the arrival point. Data type - array. Format is similar to the **DepaturePoint** element.
