@@ -353,6 +353,8 @@ taxonomy:
                           <a:Measure>Kilograms</a:Measure>
                         </a:FreeBaggage>
                         <a:FareFamilyDescID>0</a:FareFamilyDescID>
+                        <a:FareFamilyCode>WZ.WZ.Y.7.СУБСИДИИ</a:FareFamilyCode>
+                        <a:SubsidyInfoID>0</a:SubsidyInfoID>
                       </a:Tariff>
                     </a:Tariffs>
                   </a:PassengerTypePrice>
@@ -367,6 +369,12 @@ taxonomy:
                 <a:UniversalParameters/>
               </a:Description>
             </a:FareFamiliesDescriptions>
+            <a:SubsidiesInformation xmlns:b="http://nemo-ibe.com/Avia">
+              <a:SubsidyInformation>
+               <a:ID>0</a:ID>
+               <a:InfoSource>DefinedByGds</a:InfoSource>
+              </a:SubsidyInformation>
+            </a:SubsidiesInformation>
           </a:Price>
           <a:DataItems>
             <a:DataItem>
