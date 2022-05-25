@@ -25,6 +25,9 @@ The latest request version, the differences are only in the response in the anci
 - **UseFlexFares** - attribute of using flex fare families while importing the booking (specific feature of SITA Gabriel). Data type - bool.
 - **SourceDescription.Supplier** - supplier. Data type - enumeration with air suppliers.
 - **SourceDescription.SupplierRequisiteID** - booking package ID for the specified supplier, for example, PCC. Data type - non-negative 32-bit integer.
+- - **AdditionalInformation** - a container with additional information. Data type - complex.
+- **AdditionalInformation.TripPointInfoList** - a container with a list of pairs of airports. Optional parameter used for performance optimization. Data type - complex
+- **AdditionalInformation.TripPointInfoList.AirportsPair** - pair of airports (3-letter code), for example, BCN-CDG. Data type - string.
 
 ##### Sample
 
