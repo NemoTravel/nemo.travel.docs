@@ -394,7 +394,34 @@ taxonomy:
 * **data.exchangeClaims.data.selectedElements** — контейнер с информацией об N-й валюте. Тип данных — сложный.
 * **data.exchangeClaims.data.selectedElements.passenger** — идентификатор пассажира (ID_PAS_N) для которого производится обмен. Тип данных — строка.
 * **data.exchangeClaims.data.selectedElements.segments** — идентификатор сегмента (ID_SEG_N) для которого производится обмен. Тип данных — строка.
-* **data.exchangeClaims.claimText** — текст заявки на обмен. Тип данных — строка. 
+* **data.exchangeClaims.claimText** — текст заявки на обмен. Тип данных — строка.
+* **data.exchangeClaims.data.priceDetail** — детализация расчета стоимости за обмен. Тип данных — сложный.
+* **data.exchangeClaims.data.priceDetail.retention** — разбивка удерживаемых сумм за обмен. Тип данных — сложный.
+* **data.exchangeClaims.data.priceDetail.retention.type** — типы удерживаемых величин. Тип данных — строка. Возможные значения: 
+	* **agentChargeForExare** — сбор за обмен.
+	* **chargeForUsedPart** — сбор за использованный участок маршрута.
+	* **chargeForTariffConditions** — тариф, не подлежащий возврату по УПТ.	
+	* **airlineChargeForReturn** — сбор авиакомпании за обмен.
+	* **airlineChargeForCancellation** — невозвратный сбор при оформлении билета.
+	* **agencyCharge** — сбор агентства за обмен.
+	* **subagencyCharge** — сбор субагентства за обмен.
+	* **paymentCharge** — сбор платежной системы.
+	* **taxesRetention** — удерживаемые таксы.
+	* **additionalTaxesCharge** — дополнительное удержание по таксам.
+	* **alreadyRefundedMoney** — уже возвращено клиенту.
+* **data.exchangeClaims.data.priceDetail.retention.price.amount** — величина сбора за обмен. Тип данных — строка.
+* **data.exchangeClaims.data.priceDetail.retention.price.currency** — код валюты. Тип данных — строка.
+* **data.exchangeClaims.data.priceDetail.retention.price.taxCode** — код таксы (если удерживается такса). Тип данных — строка.
+* **data.exchangeClaims.data.priceDetail.retention.price.passenger** — идентификатор пассажира (если удерживается такса). Тип данных — строка.
+* **data.exchangeClaims.data.priceDetail.refunded** — сумма к возврату обмена. Тип данных — сложный.
+* **data.exchangeClaims.data.priceDetail.refunded.type** — тип возвращаемого сбора. Возможные значения:
+	* **fare** — сумма к возврату для всех тарифов.
+* **data.exchangeClaims.data.priceDetail.refunded.price.amount** — сумма к возврату. Тип данных — строка.
+* **data.exchangeClaims.data.priceDetail.refunded.price.currency** — код валюты. Тип данных — строка.
+* **data.exchangeClaims.data.priceDetail.paid** — оплаченная сумма заказа. Тип данных — сложный.
+* **data.exchangeClaims.data.priceDetail.paid.type** — оплаченная сумма имеет тип sum.
+* **data.exchangeClaims.data.priceDetail.paid.price.amount** — оплаченная сумма. Тип данных — строка.
+* **data.exchangeClaims.data.priceDetail.paid.price.currency** — код валюты. Тип данных — строка. 
 * **data.returnClaims** — контейнер с информацией о возврате. Тип данных — сложный.
 * **data.returnClaims.data** — контейнер с данными об объекте возврата. Тип данных — сложный.
 * **data.returnClaims.data.id** — идентификатор связанного заказа в системе Nemo.Travel. Тип данных — целое 64-битное число.
