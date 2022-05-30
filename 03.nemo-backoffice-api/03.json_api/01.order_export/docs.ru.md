@@ -406,8 +406,8 @@ taxonomy:
 * **data.returnClaims.data.selectedElements.passenger** — идентификатор пассажира (ID_PAS_N) для которого производится обмен. Тип данных — строка.
 * **data.returnClaims.data.selectedElements.segments** — идентификатор сегмента (ID_SEG_N) для которого производится возврат. Тип данных — строка.
 * **data.returnClaims.data.priceDetail** — детализация расчета стоимости за возврат. Тип данных — сложный.
-* **data.returnClaims.data.priceDetail.retention** — разбивка удерживаемых суммы за возврат. Тип данных — сложный.
-* **data.returnClaims.data.priceDetail.retention.type** — тип удерживаемого сбора. Тип данных — строка. Возможные значения: 
+* **data.returnClaims.data.priceDetail.retention** — разбивка удерживаемых сумм за возврат. Тип данных — сложный.
+* **data.returnClaims.data.priceDetail.retention.type** — типы удерживаемых величин. Тип данных — строка. Возможные значения: 
 	* **chargeForUsedPart** — сбор за использованный участок маршрута.
 	* **chargeForTariffConditions** — тариф, не подлежащий возврату по УПТ.	
 	* **airlineChargeForReturn** — сбор авиакомпании за возврат.
@@ -425,14 +425,13 @@ taxonomy:
 	* **chargeServiceServicePack** — сбор за возврат дополнительной услуги сервисные пакеты.
 	* **chargeServiceSirenaInsurance** — сбор за возврат дополнительной услуги Сирена Страхование.
 * **data.returnClaims.data.priceDetail.retention.price** — контейнер с информацией о стоимости сбора за возврат.
-* **data.returnClaims.data.priceDetail.retention.price.amount** — сумма сбора за возврат. Тип данных — строка.
+* **data.returnClaims.data.priceDetail.retention.price.amount** — величина сбора за возврат. Тип данных — строка.
 * **data.returnClaims.data.priceDetail.retention.price.currency** — код валюты. Тип данных — строка.
-* **data.returnClaims.data.priceDetail.retention.price.taxCode** — код таксы к возврату. Тип данных — строка.
-* **data.returnClaims.data.priceDetail.retention.price.passenger** — идентификатор пассажира. Тип данных — строка.
-* **data.returnClaims.data.priceDetail.refunded** — контейнер содержит разбивку сумм к возврату. Тип данных — сложный.
+* **data.returnClaims.data.priceDetail.retention.price.taxCode** — код таксы (если удерживается такса). Тип данных — строка.
+* **data.returnClaims.data.priceDetail.retention.price.passenger** — идентификатор пассажира (если удерживается такса). Тип данных — строка.
+* **data.returnClaims.data.priceDetail.refunded** — сумма возврата. Тип данных — сложный.
 * **data.returnClaims.data.priceDetail.refunded.type** — тип возвращаемого сбора. Возможные значения:
 	* **fare** — сумма к возврату для всех тарифов.
-* **data.returnClaims.data.priceDetail.refunded.price** — сумма к возврату.
 * **data.returnClaims.data.priceDetail.refunded.price.amount** — сумма к возврату. Тип данных — строка.
 * **data.returnClaims.data.priceDetail.refunded.price.currency** — код валюты. Тип данных — строка.
 * **data.returnClaims.data.priceDetail.paid** — оплаченная сумма заказа. Тип данных — сложный.
