@@ -424,7 +424,6 @@ taxonomy:
 	* **chargeServiceAeroexpress** — сбор за возврат дополнительной услуги Аэроэкспресс.
 	* **chargeServiceServicePack** — сбор за возврат дополнительной услуги сервисные пакеты.
 	* **chargeServiceSirenaInsurance** — сбор за возврат дополнительной услуги Сирена Страхование.
-* **data.returnClaims.data.priceDetail.retention.price** — контейнер с информацией о стоимости сбора за возврат.
 * **data.returnClaims.data.priceDetail.retention.price.amount** — величина сбора за возврат. Тип данных — строка.
 * **data.returnClaims.data.priceDetail.retention.price.currency** — код валюты. Тип данных — строка.
 * **data.returnClaims.data.priceDetail.retention.price.taxCode** — код таксы (если удерживается такса). Тип данных — строка.
