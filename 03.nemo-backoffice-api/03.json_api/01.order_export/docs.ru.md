@@ -413,7 +413,7 @@ taxonomy:
 * **data.exchangeClaims.data.priceDetail.retention.price.currency** — код валюты. Тип данных — строка.
 * **data.exchangeClaims.data.priceDetail.retention.price.taxCode** — код таксы (если удерживается такса). Тип данных — строка.
 * **data.exchangeClaims.data.priceDetail.retention.price.passenger** — идентификатор пассажира (если удерживается такса). Тип данных — строка.
-* **data.exchangeClaims.data.priceDetail.refunded** — сумма к возврату обмена. Тип данных — сложный.
+* **data.exchangeClaims.data.priceDetail.refunded** — сумма к возврату. Тип данных — сложный.
 * **data.exchangeClaims.data.priceDetail.refunded.type** — тип возвращаемого сбора. Возможные значения:
 	* **fare** — сумма к возврату для всех тарифов.
 * **data.exchangeClaims.data.priceDetail.refunded.price.amount** — сумма к возврату. Тип данных — строка.
