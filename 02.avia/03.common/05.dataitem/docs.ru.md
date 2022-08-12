@@ -381,6 +381,11 @@ taxonomy:
 -   **EndUserData.RequestOrigin** — исходный источник перехода. Тип данных — строка.
 -   **SellingPointDescription** — описание точки продажи (необязательный). Тип данных — массив.
 -   **SellingPointDescription.SubAgencyID** — идентификатор внешнего субагентства. Тип данных — целое 32-битное число.
+-   **BookingContextParameters** - используется в SU NDC для определения доступности обменов/возвратов. Тип данных - массив.
+-   **BookingContextParameters.VoluntaryRefundInd** - доступность добровольного возврата. Тип данных - булевский.
+-   **BookingContextParameters.InvoluntaryRefundInd** - доступность вынужденного возврата. Тип данных - булевский.
+-   **BookingContextParameters.VoluntaryExchangeInd** - доступность добровольного обмена. Тип данных - булевский.
+-   **BookingContextParameters.InvoluntaryExchangeInd** - доступность вынужденного обмена. Тип данных - булевский.
 <!--   **LinkedBooks** - информациях о связанных заказах, используется в mOW заказе для хранения и отображения данных по реальным заказам. Тип данных - массив.
 -   **LinkedBooks.BooksData** - содержит список данных по подзаказам. Тип данных - массив.
 -   **LinkedBooks.BooksData.Book** - данные по подзаказу. Тип данных - массив.
