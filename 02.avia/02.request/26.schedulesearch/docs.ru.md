@@ -24,7 +24,6 @@ taxonomy:
 -   **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** — признак что в качестве точки отправления указан код города-агрегатора аэропортов. Тип данных — булевский.
 -   **RequestedFlightInfo.ODPair.ArrivalPoint** — содержит информацию о точки прибытия. Тип данных — массив. Формат аналогичен элементу **DepaturePoint**.
 -   **Restrictions** — аналогичен параметру **Restrictions** из запроса [Search\_1\_2](/avia/request/search) (необязательный).
--   **Restrictions.CurrencyCode** — 3-х-буквенный код валюты выдачи результатов поиска. Тип данных — строка. Параметр не поддерживается.
 -   **Restrictions.CompanyFilter** — массив фильтров по авиакомпаниям. Тип данных — массив.
 -   **Restrictions.CompanyFilter.Company** — информация о фильтрации по авиакомпаниям. Тип данных — массив.
 -   **Restrictions.CompanyFilter.Company.Code** — 2-х-буквенный код авиакомпании, по которой будет срабатывать критерий фильтрации. Тип данных — строка.
