@@ -24,7 +24,12 @@ Search by the schedule.
 - ** RequestedFlightInfo.ODPair.DepaturePoint.IsCity ** - attribute showing that code of the city, which is the airport aggregator, is indicated as the departure point. Data type - bool.
 - ** RequestedFlightInfo.ODPair.ArrivalPoint ** - contains information about the arrival point. Data type - array. The format is similar to the * DepaturePoint * element.
 - ** Restrictions ** - similar to the * Restrictions * parameter from the  [Search\_1\_2](/avia/request/search) (optional).
-- ** EndUserData ** - end user data. Data type - array, the format is similar to the * EndUserData * element from the [DataItem](/avia/common/dataitem) (optional).
+-  Restrictions.CompanyFilter - array of airline filters. Data type - array.
+-  Restrictions.CompanyFilter.Company - information about airline filtering. Data type - array.
+- Restrictions.CompanyFilter.Company.Code - 2-letter airline code which triggers the filter criteria. Data type - string.
+-  Restrictions.CompanyFilter.Company.Include - filtering type. Data type - bool. If <code>false</code> is indicated, the specified airline will be excluded from the search results; if <code>true</code> is indicated - only this airline will be present in the search results, except the other airline specified in filter parameters with the <code>true</code> parameter.
+-  Restrictions.CompanyFilter.Company.SegmentNumber - number of the requested flight segment (numbering from 1 in this case), for which this airline is required. Data type - 32-bit integer. Available only for Amadeus, Travelport uAPI, Sabre and Sirena.
+-  EndUserData  - end user data. Data type - array, the format is similar to the * EndUserData * element from the [DataItem](/avia/common/dataitem) (optional).
 
 ##### Sample
 
