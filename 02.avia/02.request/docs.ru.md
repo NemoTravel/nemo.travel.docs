@@ -47,3 +47,4 @@ process:
 -   **[GetQueueDescription](/avia/request/getqueuedescription)** - Получение списка очередей.
 -   **[MoveToQueue](/avia/request/movetoqueue)** - Перемещение уведомления в другую очередь.
 -   **[OpenSession](/avia/request/opensession)** - Запрос открытия сессии.
+-   **[ReleaseSeat](/avia/request/releaseseat)** - Запрос снятия мест.
