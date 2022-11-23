@@ -46,4 +46,4 @@ process:
 -   **[AirAvailabilitySearch](/avia/request/airavailabilitysearch)** - Запрос наличия мест.
 -   **[GetQueueDescription](/avia/request/getqueuedescription)** - Получение списка очередей.
 -   **[MoveToQueue](/avia/request/movetoqueue)** - Перемещение уведомления в другую очередь.
--   **[OpenSession](/avia/request/OpenSession)** - Запрос открытия сессии.
+-   **[OpenSession](/avia/request/opensession)** - Запрос открытия сессии.
