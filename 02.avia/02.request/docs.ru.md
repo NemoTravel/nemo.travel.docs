@@ -48,4 +48,3 @@ process:
 -   **[MoveToQueue](/avia/request/movetoqueue)** - Перемещение уведомления в другую очередь.
 -   **[OpenSession](/avia/request/opensession)** - Запрос открытия сессии.
 -   **[ReleaseSeat](/avia/request/releaseseat)** - Запрос снятия мест.
--   **[CheckFlightAvailability](/avia/request/checkflightavailability)** - Используется для получения актуальной информации о доступности определённого перелёта для бронирования.
