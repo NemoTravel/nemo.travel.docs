@@ -59,3 +59,4 @@ process:
 -   **[GetFareFamilies](/avia/request/getfarefamilies)** - Используется для получение варианта оценки перелёта тарифами из разных семейств.
 -   **[GetFareRules](/avia/request/getfarerules)** - Запрос получение тарифных правил.
 -   **[DateRangeSearch](/avia/request/daterangesearch)** - Запрос поиска по диапазону дат.
+-   **[GroupSearch](/avia/request/groupsearch)** - Запрос поиска перелётов с сгруппированной выдачей.
