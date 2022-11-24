@@ -35,7 +35,7 @@ title: GetFareFamilies
 
 ##### Описание формата
 
-[Flight](/avia/common/flight)
+Cодержит результат [Flight](/avia/common/flight)
 
 
 
