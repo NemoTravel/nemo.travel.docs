@@ -52,3 +52,4 @@ process:
 -   **[AddInformation](/avia/request/addinformation)** - Запрос используется для добавления новой информации в бронь.
 -   **[GetBansInfo](/avia/request/getbansinfo)** - Запрос получения информации по банам.
 -   **[GetRequestCountInfo](/avia/request/getrequestcountinfo)** - Запрос получение информации о количестве запросов.
+-   **[GetSupplierFareFamilyDescription](/avia/request/getsupplierfarefamilydescription)** - Запрос используется для получения описаний услуг семейства.
