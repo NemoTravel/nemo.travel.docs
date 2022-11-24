@@ -13,13 +13,11 @@ title: AddInformation
 -   **InformationToAdd** - Контейнер для добавляемой информации. Тип данных - сложный.
 -   **InformationToAdd.Information** - Добавляемая информация для определённого пассажира. Тип данных - сложный.
 -   **InformationToAdd.Information.PassNumber** - Номер пассажира, для которого добавляются данные. Тип данных - целое 32 битное число.
-
-
--   **InformationToAdd.Information.DocumentInfo** - Информация о документе пассажира (паспорт или иное). Тип данных - сложный.
-* '''InformationToAdd.Information.DocumentInfo.DocType''' - Тип документа. Тип данных - перечисление, возможные значения описаны в [[Типы документов]]
-* '''InformationToAdd.Information.DocumentInfo.DocNum''' - Номер документа. Тип данных - строка.
-* '''InformationToAdd.Information.DocumentInfo.CountryCode''' - Двухбуквенный код страны выдачи документа (RU, UA и т.д.). Тип данных - строка.
-* '''InformationToAdd.Information.DocumentInfo.DocElapsedTime''' - Дата истечения срока действия документа в формате dd.mm.yyyy. Тип данных - строка.
+- **InformationToAdd.Information.DocumentInfo** - Информация о документе пассажира (паспорт или иное). Тип данных - сложный.
+- **InformationToAdd.Information.DocumentInfo.DocType** - Тип документа. Тип данных - перечисление, возможные значения описаны в [[Типы документов]]
+- **InformationToAdd.Information.DocumentInfo.DocNum** - Номер документа. Тип данных - строка.
+- **InformationToAdd.Information.DocumentInfo.CountryCode** - Двухбуквенный код страны выдачи документа (RU, UA и т.д.). Тип данных - строка.
+- **InformationToAdd.Information.DocumentInfo.DocElapsedTime** - Дата истечения срока действия документа в формате dd.mm.yyyy. Тип данных - строка.
 
 
 -   **InformationToAdd.Information.VisaInfo** - Информация о визе пассажира. Тип данных - сложный.
