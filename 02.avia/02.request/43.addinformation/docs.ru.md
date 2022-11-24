@@ -8,8 +8,8 @@ title: AddInformation
 
 -   **BookID** - ИД брони, в которую требуется добавить информацию. Тип данных - целое 64 битное число. (обязательное поле)
 -   **ConflictResolvingType** - Тип разрешения конфликтов добавления данных (т.е. добавляемая информация уже есть в брони). Тип данных - еречисление, возможные значения:
-** 0 (ReturnWarning) - Продолжить добавление данных, вернуть ворнинг о невозможности добавить данные.
-** 1 (ReturnError) - Прервать добавление данных, вернуть ошибку о невозможности добавить данные.
+    -   **0 (ReturnWarning)** - Продолжить добавление данных, вернуть ворнинг о невозможности добавить данные.
+    -   **1 (ReturnError)** - Прервать добавление данных, вернуть ошибку о невозможности добавить данные.
 -   **InformationToAdd** - Контейнер для добавляемой информации. Тип данных - сложный.
 -   **InformationToAdd.Information** - Добавляемая информация для определённого пассажира. Тип данных - сложный.
 -   **InformationToAdd.Information.PassNumber** - Номер пассажира, для которого добавляются данные. Тип данных - целое 32 битное число.
@@ -19,42 +19,42 @@ title: AddInformation
 - **InformationToAdd.Information.DocumentInfo.CountryCode** - Двухбуквенный код страны выдачи документа (RU, UA и т.д.). Тип данных - строка.
 - **InformationToAdd.Information.DocumentInfo.DocElapsedTime** - Дата истечения срока действия документа в формате dd.mm.yyyy. Тип данных - строка.
 -   **InformationToAdd.Information.VisaInfo** - Информация о визе пассажира. Тип данных - сложный.
-* '''InformationToAdd.Information.VisaInfo.Number''' - Номер визы. Тип данных - строка.
-* '''InformationToAdd.Information.VisaInfo.IssueCountry''' - Двухбуквенный код страны выдачи визы (RU, UA и т.д.). Тип данных - строка.
-* '''InformationToAdd.Information.VisaInfo.IssuePlace''' - Место выдачи визы. Тип данных - строка.
-* '''InformationToAdd.Information.VisaInfo.BirthCountry''' - Двухбуквенный код страны рождения пассажира (RU, UA и т.д.). Тип данных - строка.
-* '''InformationToAdd.Information.VisaInfo.BirthCity''' - Место рождения пассажира. Тип данных - строка.
-* '''InformationToAdd.Information.VisaInfo.IssueDate''' - Дата выдачи визы в формате dd.mm.yyyy. Тип данных - строка.
+-   **InformationToAdd.Information.VisaInfo.Number** - Номер визы. Тип данных - строка.
+-   **InformationToAdd.Information.VisaInfo.IssueCountry** - Двухбуквенный код страны выдачи визы (RU, UA и т.д.). Тип данных - строка.
+-   **InformationToAdd.Information.VisaInfo.IssuePlace** - Место выдачи визы. Тип данных - строка.
+-   **InformationToAdd.Information.VisaInfo.BirthCountry** - Двухбуквенный код страны рождения пассажира (RU, UA и т.д.). Тип данных - строка.
+-   **InformationToAdd.Information.VisaInfo.BirthCity** - Место рождения пассажира. Тип данных - строка.
+-   **InformationToAdd.Information.VisaInfo.IssueDate** - Дата выдачи визы в формате dd.mm.yyyy. Тип данных - строка.
 -   **InformationToAdd.Information.ArrAddress** - Информация о адресе пребытия пассажира. Тип данных - сложный. 
-* '''InformationToAdd.Information.ArrAddress.City''' - Город. Тип данных - строка.
-* '''InformationToAdd.Information.ArrAddress.State''' - Штата/область/край и т.д. Тип данных - строка.
-* '''InformationToAdd.Information.ArrAddress.StreetAddress''' - Адрес в городе. Тип данных - строка.
-* '''InformationToAdd.Information.ArrAddress.PostalCode''' - Почтовый индекс. Тип данных - строка.
-* '''InformationToAdd.Information.ArrAddress.CountryCode''' - Двухбуквенный код страны прибытия (RU, UA и т.д.). Тип данных - строка.
+-   **InformationToAdd.Information.ArrAddress.City** - Город. Тип данных - строка.
+-   **InformationToAdd.Information.ArrAddress.State** - Штата/область/край и т.д. Тип данных - строка.
+-   **InformationToAdd.Information.ArrAddress.StreetAddress** - Адрес в городе. Тип данных - строка.
+-   **InformationToAdd.Information.ArrAddress.PostalCode** - Почтовый индекс. Тип данных - строка.
+-   **InformationToAdd.Information.ArrAddress.CountryCode** - Двухбуквенный код страны прибытия (RU, UA и т.д.). Тип данных - строка.
 -   **InformationToAdd.Information.LoyaltyCards** - Информация о карточках лояльности пассажира. Тип данных - сложный.
-* '''InformationToAdd.Information.LoyaltyCards.LoyaltyCard''' - Информация о конкретной карточке. Тип данных - сложный. Встречается 1 и более раз.
-* '''InformationToAdd.Information.LoyaltyCards.LoyaltyCard.CompanyCode''' - Двухбуквенный код авиакомпании - владельца данной карточки. Тип данных - строка.
-* '''InformationToAdd.Information.LoyaltyCards.LoyaltyCard.Number''' - номер карточки. Тип данных - строка.
+-   **InformationToAdd.Information.LoyaltyCards.LoyaltyCard** - Информация о конкретной карточке. Тип данных - сложный. Встречается 1 и более раз.
+-   **InformationToAdd.Information.LoyaltyCards.LoyaltyCard.CompanyCode** - Двухбуквенный код авиакомпании - владельца данной карточки. Тип данных - строка.
+-   **InformationToAdd.Information.LoyaltyCards.LoyaltyCard.Number** - номер карточки. Тип данных - строка.
 -   **InformationToAdd.Information.ContactInfo** - Контактная информация пассажира. Тип данных - сложный.
-* '''InformationToAdd.Information.ContactInfo.EmailID''' - Адрес электронной почты пассажира. Тип данных - строка.
-* '''InformationToAdd.Information.ContactInfo.Telephone''' - Информация о контактном телефоне пассажира. Тип данных - сложный.
-* '''InformationToAdd.Information.ContactInfo.Telephone.Type''' - Тип контактного телефона. Тип данных - перечисление, возможные значения:
-** 0 (A) - Агентство
-** 1 (B) - Рабочий
-** 2 (M) - Мобильный
-** 3 (H) - Домашний
-* '''InformationToAdd.Information.ContactInfo.Telephone.PhoneNumber''' - Номер телефона. Тип данных - строка.
+-   **InformationToAdd.Information.ContactInfo.EmailID** - Адрес электронной почты пассажира. Тип данных - строка.
+-   **InformationToAdd.Information.ContactInfo.Telephone** - Информация о контактном телефоне пассажира. Тип данных - сложный.
+-   **InformationToAdd.Information.ContactInfo.Telephone.Type** - Тип контактного телефона. Тип данных - перечисление, возможные значения:
+    -   **0 (A)** - Агентство
+    -   **1 (B)** - Рабочий
+    -   **2 (M)** - Мобильный
+    -   **3 (H)** - Домашний
+-   **InformationToAdd.Information.ContactInfo.Telephone.PhoneNumber** - Номер телефона. Тип данных - строка.
 -   **InformationToAdd.Information.PreferedPlaces** - Информация о предпочитаемых местах пассажира. Тип данных - сложный.
-* '''InformationToAdd.Information.PreferedPlaces.PreferedPlace''' - Информация о предпочитаемом месте для определённого сегмента перелёта. Тип данных - сложный.
-* '''InformationToAdd.Information.PreferedPlaces.PreferedPlace.SmokingAllowed''' - Признак места для курящих. Тип данных - булевский.
-* '''InformationToAdd.Information.PreferedPlaces.PreferedPlace.Location''' - Предпочитаемое положение места. Тип данных - перечисление, возможные значения:
-** 0 (W) - У окна
-** 1 (M) - Не у окна и не у прохода
-** 2 (NPW) - У прохода
-** 3 (NS) - Любое
-* '''InformationToAdd.Information.PreferedPlaces.PreferedPlace.RowNumber''' - Номер ряда. Тип данных - строка.
-* '''InformationToAdd.Information.PreferedPlaces.PreferedPlace.PlaceNumber''' - Номер места в ряду. Тип данных - строка.
-* '''InformationToAdd.Information.PreferedPlaces.PreferedPlace.SegNumber''' - Номер сегмента перелёта, для которого добавляется предпочитаемое место. Тип данных - целое 32 битное число.
+-   **InformationToAdd.Information.PreferedPlaces.PreferedPlace** - Информация о предпочитаемом месте для определённого сегмента перелёта. Тип данных - сложный.
+-   **InformationToAdd.Information.PreferedPlaces.PreferedPlace.SmokingAllowed** - Признак места для курящих. Тип данных - булевский.
+-   **InformationToAdd.Information.PreferedPlaces.PreferedPlace.Location** - Предпочитаемое положение места. Тип данных - перечисление, возможные значения:
+    -   **0 (W)** - У окна
+    -   **1 (M)** - Не у окна и не у прохода
+    -   **2 (NPW)** - У прохода
+    -   **3 (NS)** - Любое
+-   **InformationToAdd.Information.PreferedPlaces.PreferedPlace.RowNumber** - Номер ряда. Тип данных - строка.
+-   **InformationToAdd.Information.PreferedPlaces.PreferedPlace.PlaceNumber** - Номер места в ряду. Тип данных - строка.
+-   **InformationToAdd.Information.PreferedPlaces.PreferedPlace.SegNumber** - Номер сегмента перелёта, для которого добавляется предпочитаемое место. Тип данных - целое 32 битное число.
 -   **InformationToAdd.Information.Meal** - Информация о предпочитаемом спец питании пассажира. Тип данных - перечисление. 
     -   **1 (AVML)** - Азиатская вегетарианская кухня
     -   **3 (BLML)** - Блюда щадящей диеты
@@ -107,7 +107,6 @@ title: AddInformation
             <stl:RequestType>P</stl:RequestType>
             <stl:RequestBody>
                <avia:BookID>100000</avia:BookID>
-			   <avia:ConflictResolvingType>1</avia:ConflictResolvingType>
                <avia:InformationToAdd>
                   <avia:Information>
                      <avia:PassNumber>1</avia:PassNumber>
