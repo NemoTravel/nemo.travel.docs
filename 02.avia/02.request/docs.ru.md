@@ -58,3 +58,4 @@ process:
 -   **[GetSeatMap](/avia/request/getseatmap)** - Используется для получения карты мест для каждого из сегментов перелёта.
 -   **[GetFareFamilies](/avia/request/getfarefamilies)** - Используется для получение варианта оценки перелёта тарифами из разных семейств.
 -   **[GetFareRules](/avia/request/getfarerules)** - Запрос получение тарифных правил.
+-   **[DateRangeSearch](/avia/request/daterangesearch)** - Запрос поиска по диапазону дат.
