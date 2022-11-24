@@ -53,3 +53,4 @@ process:
 -   **[GetBansInfo](/avia/request/getbansinfo)** - Запрос получения информации по банам.
 -   **[GetRequestCountInfo](/avia/request/getrequestcountinfo)** - Запрос получение информации о количестве запросов.
 -   **[GetSupplierFareFamilyDescription](/avia/request/getsupplierfarefamilydescription)** - Запрос используется для получения описаний услуг семейства.
+-   **[GetAllowedCC](/avia/request/getallowedcc)** - Используется для получения списка кодов карт для ГДС процессинга брони..
