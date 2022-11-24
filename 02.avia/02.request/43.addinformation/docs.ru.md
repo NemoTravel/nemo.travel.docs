@@ -18,8 +18,6 @@ title: AddInformation
 - **InformationToAdd.Information.DocumentInfo.DocNum** - Номер документа. Тип данных - строка.
 - **InformationToAdd.Information.DocumentInfo.CountryCode** - Двухбуквенный код страны выдачи документа (RU, UA и т.д.). Тип данных - строка.
 - **InformationToAdd.Information.DocumentInfo.DocElapsedTime** - Дата истечения срока действия документа в формате dd.mm.yyyy. Тип данных - строка.
-
-
 -   **InformationToAdd.Information.VisaInfo** - Информация о визе пассажира. Тип данных - сложный.
 * '''InformationToAdd.Information.VisaInfo.Number''' - Номер визы. Тип данных - строка.
 * '''InformationToAdd.Information.VisaInfo.IssueCountry''' - Двухбуквенный код страны выдачи визы (RU, UA и т.д.). Тип данных - строка.
@@ -58,7 +56,7 @@ title: AddInformation
 * '''InformationToAdd.Information.PreferedPlaces.PreferedPlace.PlaceNumber''' - Номер места в ряду. Тип данных - строка.
 * '''InformationToAdd.Information.PreferedPlaces.PreferedPlace.SegNumber''' - Номер сегмента перелёта, для которого добавляется предпочитаемое место. Тип данных - целое 32 битное число.
 -   **InformationToAdd.Information.Meal** - Информация о предпочитаемом спец питании пассажира. Тип данных - перечисление. 
-** 1 (AVML) - Азиатская вегетарианская кухня
+    -   ** 1 (AVML) - Азиатская вегетарианская кухня
 ** 3 (BLML) - Блюда щадящей диеты
 ** 4 (CHML) - Детское питание
 ** 5 (CHPC) - Детский холодный завтрак
