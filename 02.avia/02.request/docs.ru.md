@@ -60,3 +60,4 @@ process:
 -   **[GetFareRules](/avia/request/getfarerules)** - Запрос получение тарифных правил.
 -   **[DateRangeSearch](/avia/request/daterangesearch)** - Запрос поиска по диапазону дат.
 -   **[GroupSearch](/avia/request/groupsearch)** - Запрос поиска перелётов с сгруппированной выдачей.
+-   **[ImportPnrFromHost](/avia/request/importpnrfromhost)** - Запрос используется для получение ГРС локатора, если есть данные по локатору а/к..
