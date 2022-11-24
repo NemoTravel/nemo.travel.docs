@@ -50,3 +50,4 @@ process:
 -   **[CloseSession](/avia/request/closesession)** - Запрос закрытия сессии.
 -   **[ReleaseSeat](/avia/request/releaseseat)** - Запрос снятия мест.
 -   **[AddInformation](/avia/request/addinformation)** - Запрос используется для добавления новой информации в бронь.
+-   **[GetBansInfo](/avia/request/getbansinfo)** - Запрос получения информации по банам..
