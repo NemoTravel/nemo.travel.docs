@@ -48,3 +48,4 @@ process:
 -   **[MoveToQueue](/avia/request/movetoqueue)** - Перемещение уведомления в другую очередь.
 -   **[OpenSession](/avia/request/opensession)** - Запрос открытия сессии.
 -   **[ReleaseSeat](/avia/request/releaseseat)** - Запрос снятия мест.
+-   **[AddInformation](/avia/request/addInformation)** - Запрос используется для добавления новой информации в бронь.
