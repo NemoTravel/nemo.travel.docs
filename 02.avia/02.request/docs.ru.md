@@ -56,3 +56,4 @@ process:
 -   **[GetAllowedCC](/avia/request/getallowedcc)** - Используется для получения списка кодов карт для ГДС процессинга брони.
 -   **[CheckFlightAvailability](/avia/request/checkflightavailability)** - Используется для получения актуальной информации о доступности определённого перелёта для бронирования.
 -   **[GetSeatMap](/avia/request/getseatmap)** - Используется для получения карты мест для каждого из сегментов перелёта.
+-   **[GetFareFamilies](/avia/request/getfarefamilies)** - Используется для получение варианта оценки перелёта тарифами из разных семейств.
