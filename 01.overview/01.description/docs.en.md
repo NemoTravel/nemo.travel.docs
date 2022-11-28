@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-The Nemo Connect web service is developed using .NET Framework technologies and located on the IIS servers. To interact with the service, a [SOAP](https://en.wikipedia.org/wiki/SOAP) interaction protocol is used; to work with the service, you need to implement the work on your side with the required methods; it is not necessary to establish the support of all the available methods.
+Nemo Connect web service is developed using .NET Framework technologies and located on the IIS servers. To interact with the service, a [SOAP](https://en.wikipedia.org/wiki/SOAP) interaction protocol is used; to work with the service, you need to implement the work on your side with the required methods; it is not necessary to establish the support of all the available methods.
 
 During the integration it is recommended to use the [SoapUI OpenSource](https://www.soapui.org/downloads/soapui.html) tool to test requests.
 
