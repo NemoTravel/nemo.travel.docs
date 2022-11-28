@@ -5,18 +5,18 @@ taxonomy:
         - docs
 ---
 
-### The list of Methods
+### List of Methods
 
 - [BookFlight](/avia/request/bookflight) - main booking method. 
-- [ModifyBook_2_0](/avia/request/modifybook) - modification of the order allows to add some passenger data that was not included in the booking, for example, information about passenger documents.
-- [UpdateBook_2_0](/avia/request/updatebook) - synchronization allows to get the current status of the booking from the  supplier (GDS, Global Distribution System).
+- [ModifyBook_2_0](/avia/request/modifybook) - order modification allows adding passenger data that were not included in the booking (for example, information about passenger documents).
+- [UpdateBook_2_0](/avia/request/updatebook) - synchronization allows getting the current booking status from the  supplier (GDS, Global Distribution System).
 - [CancelBook](/avia/request/cancelbook) - cancellation of the booked order and the booking.
 
-### The list of document types supported during the booking
+### List of document types supported in the booking process
 
-| XML value                     | Definition                                                                        | The SSR value of DOCS | The value in Sirena                                                                                                                               |
+| XML value                     | Definition                                                                        | DOCS SSR value | Sirena value                                                                                                                               |
 |----------------------------------|------------------------------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| AutosetByNumber                  | The type auto-detection by the document number                                           | P                 | Depends on the document number and country of issue. If the number fails to determine the type, then there will be an error asking to enter the document type or correct the document number. |
+| AutosetByNumber                  | Autodetection of type by document number                                           | P                 | Depends on the document number and country of issue. If the type cannot be determined by number, an error displays prompting to enter the document type or correct the document number. |
 ||
 | P                                | Passport,  SSR DOCS standard                                                       | P                 | PS                                                                                                                                              |
 ||
@@ -42,11 +42,11 @@ taxonomy:
 ||
 | MilitaryIDCard                   | Military card                              | M                 | VB                                                                                                                                              |
 ||
-| DocOfPassportLusing              | The temporary identity card if the passport is lost or replaced                    | F                 | SPU                                                                                                                                             |
+| DocOfPassportLusing              | The temporary identity card, if the passport is lost or reissued                    | F                 | SPU                                                                                                                                             |
 ||
 | DiplomaticPassport               | Diplomatic passport                                                            | P                 | DP                                                                                                                                              |
 ||
-| InternationalPassportNotRU       | The International passport of a citizen of any country except Russia                               | A                 | ZA                                                                                                                                              |
+| InternationalPassportNotRU       | The International passport of a citizen of any country, except RF                               | A                 | ZA                                                                                                                                              |
 ||
 | InternationalPassportTJ          | The International passport of a Tajikistan citizen                                        | A                 | ZB                                                                                                                                              |
 ||
@@ -72,7 +72,7 @@ taxonomy:
 ||
 | LocalParliamentDeputy            | The Local Parliament Deputy document                             | F                 | DM                                                                                                                                              |
 ||
-| FederalParliamentDeputy          | The Federal Parliament Deputy document (The State Duma the Federation Council)                               | F                 | GD                                                                                                                                              |
+| FederalParliamentDeputy          | The Federal Parliament Deputy document (The State Duma or Federation Council)                               | F                 | GD                                                                                                                                              |
 ||
 | ConstitutionalCourtJudgeDocument | The Constitutional Court Judge Document                                         | F                 | KS                                                                                                                                              |
 ||
