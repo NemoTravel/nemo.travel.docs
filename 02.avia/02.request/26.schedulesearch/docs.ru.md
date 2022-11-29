@@ -16,11 +16,11 @@ taxonomy:
 -   **RequestedFlightInfo** — содержит информацию о сегментах перелёта, который требуется найти. Тип данных — массив.
 -   **RequestedFlightInfo.Direct** — индикатор поиска только прямых перелётов. Тип данных — булевский.
 -   **RequestedFlightInfo.ODPair** — сегмент перелёта, который требуется найти. Тип данных — массив.
--   **RequestedFlightInfo.ODPair.DepatureDateTime** — дата вылета или дата начала периода и время (необязательно), с которого начинается желаемое время вылета. Тип данных — строка, формат — <code>yyyy-mm-dd\[thh:mm:ss\]</code>.
--   **RequestedFlightInfo.ODPair.DepatureDateTime2** — дата окончания периода. Тип данных — строка, формат — <code>yyyy-mm-dd</code>.
+-   **RequestedFlightInfo.ODPair.DepatureDateTime** — дата вылета или дата начала периода и время (необязательно), с которого начинается желаемое время вылета. Тип данных — строка, формат — <code>yyyy-mm-dd\[thh:mm:ss\]</code>. (обязательное поле)
+-   **RequestedFlightInfo.ODPair.DepatureDateTime2** — дата окончания периода. Тип данных — строка, формат — <code>yyyy-mm-dd</code>. (обязательное поле)
 -   **RequestedFlightInfo.ODPair.MaxDepatureTime** — максимально-допустимое время вылета. Тип данных — строка, формат — <code>hh:mm</code>.
 -   **RequestedFlightInfo.ODPair.DepaturePoint** — содержит информацию о точки отправления. Тип данных — массив.
--   **RequestedFlightInfo.ODPair.DepaturePoint.Code** — трехбуквенный код аэропорта/города отправления. Тип данных — строка.
+-   **RequestedFlightInfo.ODPair.DepaturePoint.Code** — трехбуквенный код аэропорта/города отправления. Тип данных — строка. (обязательное поле)
 -   **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** — признак что в качестве точки отправления указан код города-агрегатора аэропортов. Тип данных — булевский.
 -   **RequestedFlightInfo.ODPair.ArrivalPoint** — содержит информацию о точки прибытия. Тип данных — массив. Формат аналогичен элементу **DepaturePoint**.
 -   **Restrictions** — аналогичен параметру **Restrictions** из запроса [Search\_1\_2](/avia/request/search) (необязательный).
