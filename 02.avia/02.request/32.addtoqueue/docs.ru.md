@@ -27,7 +27,7 @@ taxonomy:
     *  **ServiceInfoChanged** - Очередь с изменениями в SSR
     *  **TimeLimit** - Очередь с истекающими ТЛ
 - **AddToQueueConfig.QueuesByNumber** - контейнер, в котором указаны порядковые номера очередей. Тип данных  - массив. 
-- **AddToQueueConfig.QueuesByNumber.QueueNumber** - порядковый номер очереди. Тип данных - int.
+- **AddToQueueConfig.QueuesByNumber.QueueNumber** - порядковый номер очереди. Тип данных - int. (обязательное поле)
 - **AddToQueueConfig.SupplierRequisiteIds** - список идентификаторов агентства в GDS. Тип данных - массив.
 - **AddToQueueConfig.SupplierRequisiteIds.SupplierRequisiteId** - идентификатор агентства, которому принадлежит PNR, в GDS. Тип данных - строка.
 - **AddToQueueConfig.RecordInfo** - контейнер с информацией об уведомлении (необязательный). Тип данных - сложный.
