@@ -12,9 +12,9 @@ title: DeleteFromQueue
 - **BookQueueInfo.QueuesByName** - список именованых очередей, из которых требуется удалить бронь (необязательный).  Тип данных - массив.
 - **QueuesByName.Queue** - название очереди. Тип данных - массив перечисления QueueName.
 - **BookQueueInfo.QueuesByNumber** - список номеров неименованных очередей, из которых требуется удалить бронь (необязательный). Тип данных  - массив int.
-- **QueuesByNumber.Queue** - порядковый номер очереди. Тип данных - int.
+- **QueuesByNumber.Queue** - порядковый номер очереди. Тип данных - int. (обязательное поле)
 - **BookQueueInfo.RecordID** - идентификатор уведомления (необязательный). Тип данных - строка.
-- **BookQueueInfo.BookID** - идентификатор заказа в nemo connet. Тип данных - int. 
+- **BookQueueInfo.BookID** - идентификатор заказа в nemo connet. Тип данных - int. (обязательное поле)
 - **ExternalBookQueueList** - контейнер с информацией об удаляемых внешних PNR из очередей. Тип данных - сложный. 
 - **ExternalBookQueueList.ExternalBookQueueInfo** - информация об удаляемом внешнем PNR из очереди. Тип данных - сложный. 
 - **ExternalBookQueueInfo.QueuesByName** - соответствует параметру _**BookQueueList.BookQueueInfo.QueuesByName**_
