@@ -14,7 +14,8 @@ taxonomy:
 - **AddToQueueConfigList** - контейнер с информацией по перемещению PNR-ов. Тип данных - сложный.
 - **AddToQueueConfigList.AddToQueueConfig** - контейнер с информацией по перемещению PNR в конкретную очередь. Тип данных - сложный.
 - **AddToQueueConfig.LocatorList** - список локаторов для перемещения. Тип данных - сложный.
-- **AddToQueueConfig.LocatorList.Locator** - данные о локаторе. Тип данных - строка.
+- **AddToQueueConfig.LocatorList.Locator** - данные о локаторе. Тип данных - строка. (обязательное поле)
+- **AddToQueueConfig.SourceID** -  ID пакета реквизитов, в рамках которого будут выполнять запросы к ГДС. Тип данных - int  (обязательное поле)
 - **AddToQueueConfig.QueuesByName** - контейнер, в котором указаны названия очередей. Тип данных  - сложный.
 - **AddToQueueConfig.QueuesByName.Queue** - название очереди. Тип данных - массив перечисления QueueName. возможные значения:
     * **GeneralQueue** - Общая очередь 
