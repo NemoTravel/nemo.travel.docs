@@ -359,6 +359,20 @@ taxonomy:
 * **data.documents.ID_TKT_N.info** — контейнер с дополнительной информацией о данном N-м электронном билете. Тип данных — сложный.
 * **data.documents.ID_TKT_N.info.pricingInfos** — список оценок привязанных к данному N-му электронному билету. Тип данных — массив строк.
 * **data.documents.ID_TKT_N.info.endorsements** — эндорсменты привязанные к данному N-му электронному билету. Тип данных — строка.
+* **data.documents.ID_TKT_N.vatInfo** – информация об НДС. Тип данных — сложный.
+* **data.documents.ID_TKT_N.vatInfo.vatFare** – информация об НДС от тарифа. Тип данных – сложный
+* **data.documents.ID_TKT_N.vatInfo.vatFare.amount** – сумма НДС от тарифа. Тип данных – строка.
+* **data.documents.ID_TKT_N.vatInfo.vatFare.currency** – валюта НДС от тарифа. Тип данных – строка.
+* **data.documents.ID_TKT_N.vatInfo.vatTaxes** – информация об НДС от такс. Тип данных – сложный.
+* **data.documents.ID_TKT_N.vatInfo.vatTaxes.amount** – сумма НДС от такс. Тип данных – строка.
+* **data.documents.ID_TKT_N.vatInfo.vatTaxes.currency** – валюта НДС от такс. Тип данных – строка.
+* **data.documents.ID_TKT_N.vatInfo.vatPercent** – НДС от тарифа в процентах. Тип данных – целое 64-битное число.
+* **data.documents.ID_TKT_N.vatInfo.vatTaxesBreakdown** – контейнер с информацией об НДС от такс. Тип данных – сложный.
+* **data.documents.ID_TKT_N.vatInfo.vatTaxesBreakdown.vatTaxCode** – код таксы. Тип данных – строка.
+* **data.documents.ID_TKT_N.vatInfo.vatTaxesBreakdown.vatTaxPercent** – налоговая ставка НДС от таксы в процентах. Тип данных – целое 64-битное число.
+* **data.documents.ID_TKT_N.vatInfo.vatTariffBreakdown** – контейнер с информацией об НДС от тарифа. Тип данных – сложный.
+* **data.documents.ID_TKT_N.vatInfo.vatTariffBreakdown.segmentRef** – номер сегмента. Тип данных — целое 64-битное число.
+* **data.documents.ID_TKT_N.vatInfo.vatTariffBreakdown.vatTariffPercent** – налоговая ставка НДС от тарифа на данном сегменте в процентах. Тип данных – целое 64-битное число.
 * **data.documents.ID_EMD_N** — контейнер с информацией о EMD (Electronic Miscellaneous Document) по N-ой дополнительной услуге. Тип данных — сложный.
 * **data.documents.ID_EMD_N.number** — номер EMD. Тип данных — строка.
 * **data.documents.ID_EMD_N.type** — тип EMD. Тип данных — строка.
