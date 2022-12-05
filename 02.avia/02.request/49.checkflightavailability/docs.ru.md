@@ -2,6 +2,6 @@
 title: CheckFlightAvailability
 ---
 
-##### Описание формата
+##### Описание 
 
 -   Устаревший метод,  вместо CheckFlightAvailability следует использовать соответствующий ему из [AdditionalOperations](/avia/request/additionaloperations).
