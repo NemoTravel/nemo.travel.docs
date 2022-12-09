@@ -49,6 +49,7 @@ taxonomy:
 * **StatusCode** - Код статуса допуслуги. Тип данных - строка.
 * **OfferToken** - токен услуги с динамической ценой, только для поставщика Sirena. Тип данных - строка.
 * **OfferTtl** - срок действия услуги с динамической ценой, только для поставщика Sirena. Тип данных - datetime.
+* **ManualPrice** - Признак ручной цены. Тип данных - bool.
 
 Вызов списка доступных допуслуг инициируется параметром SearchAncillaryServices в запросе [AdditionalOperations](/avia/request/additionaloperations). В ответе на этот запрос вы получите список допуслуг доступных на данный рейс.
 
@@ -63,6 +64,7 @@ taxonomy:
           <RFISC>0AI</RFISC>
           <Type>F</Type>
           <CompanyCode>UT</CompanyCode>
+          <ManualPrice>true</ManualPrice>
         </AncillaryServiceRS>
  ```
 ### Пример Amadeus
