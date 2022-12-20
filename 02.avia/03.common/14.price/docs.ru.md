@@ -29,6 +29,7 @@ Price
     -   PenaltiesApplies
 -   **PricePart.PrivateFareInd** - Признак наличия приватных тарифов при формировании цены. Тип данных - bool.
 -   **PricePart.PassengerTypePriceBreakdown** - Валидирующий перевозчик. Тип данных - массив PassengerTypePrice.
+-   **PricePart.IsManual** - Признак ручной цены. Тип данных - bool.
 -   **PricePart.AgencyMarkup** - Сбор агентства на весь перелет. Тип данных -[Money](/avia/common/money). Для запросов версии 2_2 и выше все параметры, начиная с этого, возвращаются в элементе [AgencyPrice](/avia/common/agencyprice). 
 -   **PricePart.ChargeBreakdown** - Разбивка составляющих сбора по правилам ценообразования. Тип данных — [ChargeBreakdown](/avia/common/chargebreakdown).
 -   **PricePart.PricingDebug.RulesDebugInfo** - Список результатов проверки правил ценообразования. Тип данных - массив.
