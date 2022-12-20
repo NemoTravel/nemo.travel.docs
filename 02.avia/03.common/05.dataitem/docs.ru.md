@@ -206,7 +206,7 @@ taxonomy:
 -   **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Percent** - налоговая ставка НДС в процентах. Тип данных - double.
 -   **ElectronicDocument.VATBreakdown.Taxes.Breakdown.Tax.Code** - код таксы. Тип данных — string.
 -   **ElectronicDocument.VATBreakdown.Total** - НДС от суммы тарифа и такс. Тип данных - [Money](/avia/common/money).
--   **ElectronicDocument.IssuedExternally** - 
+-   **ElectronicDocument.IssuedExternally** - Признак услуги оформленной вне NC. Тип данных - bool.
 -   **ElectronicDocument.IssuedBy** - реквизит фактической выписки для Amadeus, Sabre, Travelport uAPI. Тип данных — string.
 -   **ElectronicDocument.CouponInfoList** - структура с информацией о купонах. Тип данных — сложный.
 -   **ElectronicDocument.CouponInfoList.CouponInfo** - секция с информацией о купонах. Тип данных — сложный.
