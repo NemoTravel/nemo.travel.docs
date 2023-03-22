@@ -177,6 +177,8 @@ taxonomy:
    -    **Weight** — вес.
 -   **PassengerFare.Tariffs.Tariff.CarryOn.Value** — количество ручной клади по данному тарифу. Тип данных — строка.
 -   **PassengerFare.Tariffs.Tariff.SubsidyInfoID** - номер подходящего пакета субсидий для этого тарифа. Тип данных - целое 32-битное число.
+-   **PassengerFare.Tariffs.Tariff.SubType** - информации о тарифе означающая оценку по М2 условиям.Тип данных — строка.
+   -    **M2** — М2 оценка.
 -   **PassengerFare.Commission** — информация о комиссии для данной ценовой составляющей от GDS. Тип данных — сложный.
 -   **PassengerFare.Commission.Amount** — абсолютное значение комиссии. Тип данных — дробное число.
 -   **PassengerFare.Commission.Percent** — значение комиссии в процентах. Тип данных — дробное число.
