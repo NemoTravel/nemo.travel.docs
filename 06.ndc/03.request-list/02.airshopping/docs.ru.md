@@ -288,6 +288,8 @@ title: AirShopping
 -	**PriceClass.PriceClass.Name** - имя принимает нескольких значений, разделенных символом подчеркивания. Пример: NVU5_N_Y_ECONOMY, где на первом месте код семейства или код тарифа (при отсутствии первого), на втором литера класса бронирования, на третьем код класса обслуживания и далее название класса обслуживания. Тип данных - строка.
 -	**PriceClass.PriceClass.FareBasisCode** - содержит код тарифа. Тип данных - сложный.
 -	**PriceClass.PriceClass.FareBasisCode.Code** - код тарифа. Тип данных - строка.
+-	**PriceClass.PriceClass.FareBasisCode.Application** - информации о тарифе означающая оценку по М2 условиям.Тип данных — строка.
+   -    **M2** — М2 оценка.
 -	**PriceClass.PriceClass.ClassOfService** - сведения о классе бронирования. Тип данных - сложный.
 -	**PriceClass.PriceClass.ClassOfService.Code** - литера класса бронирования. Содержит атрибут SeatsLeft="9", информирующий о количестве свободных мест.
 -	**PriceClass.PriceClass.ClassOfService.MarketingName** - название класса обслуживания. Атрибут CabinDesignator="Y" описывает код класса обслуживания. Тип данных - строка.
