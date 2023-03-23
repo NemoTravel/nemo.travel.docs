@@ -140,6 +140,8 @@ Flight representation format 1.1.
 -   **PassengerFare.Tariffs.Tariff.FreeBaggage.Value** - amount of free baggage for this fare. Data type - string.
 -   **PassengerFare.Tariffs.Tariff.FareFamilyDescID** - ID of the fare families description. Data type - int.
 -   **PassengerFare.Tariffs.Tariff.FareFamilyCode** - fare family airline code. Data type - string.
+-   **PassengerFare.Tariffs.Tariff.MandatorySeatSelection** — attribute for mandatory seat selection before booking. Data type - boolean.
+<!--     Only for AccelAero -->
 -   **Flight.PriceInfo.Price.PassengerFares.PassengerFare.Tariffs.Tariff.CarryOn** - contains information about carryon for this fare. Data type - array.
 -   **Flight.PriceInfo.Price.PassengerFares.PassengerFare.Tariffs.Tariff.CarryOn.Measure** - carryon measure unit. Data type - enumeration, possible values:
     - **Kilograms** - kilos;
