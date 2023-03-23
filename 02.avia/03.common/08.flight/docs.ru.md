@@ -167,6 +167,8 @@ taxonomy:
 -   **PassengerFare.Tariffs.Tariff.FreeBaggage.Value** — количество бесплатного багажа по данному тарифу. Тип данных — строка.
 -   **PassengerFare.Tariffs.Tariff.FareFamilyDescID** — идентификатор описания семейства тарифов. Тип данных — целое число.
 -   **PassengerFare.Tariffs.Tariff.FareFamilyCode** — код авиакомпании семейства тарифов. Тип данных — строка.
+-   **PassengerFare.Tariffs.Tariff.MandatorySeatSelection** — признак обязательности выбора места перед бронированием. Тип данных — булевый.
+<!--     На данный момент используется только у AccelAero -->
 -   **PassengerFare.Tariffs.Tariff.CarryOn** — содержит информацию о ручной клади по данному тарифу. Тип данных — сложный.
 -   **PassengerFare.Tariffs.Tariff.CarryOn.Measure** — единица измерения ручной клади. Тип данных — перечисление, возможные значения:
     -   **Kilograms** — килограммы;
