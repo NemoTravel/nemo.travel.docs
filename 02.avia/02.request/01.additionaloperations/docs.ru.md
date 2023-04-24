@@ -161,8 +161,8 @@ taxonomy:
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Price.Amount** - Сумма. Тип данных - плавающее c двойной точностью.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Price.Currency** - Валюта. Тип данных - строка.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.RFISC** - RFISC места. Тип данных - строка.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.CabinCode** - класс к которому принадлежит место. Только для MixvelPlatform. Тип данных - строка. 
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Characteristics** - характеристика ряда. Тип данных - строка.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.CabinCode** - класс к которому принадлежит место. Только для MixvelPlatform. Тип данных - строка. 
 -   **GetPriceResult** - результат получения актуальной цены перелёта. Тип данных - массив.
 -   **GetPriceResult.Flight** - плоский перелёт v1.1. Тип данных - массив.
 -   **FindAdditionalServicesResult** - результат получения списка доступных допуслуг. Тип данных - массив. 
