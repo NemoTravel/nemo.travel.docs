@@ -22,7 +22,7 @@ Execution of the additional operations of 1.2. version.
 	- **GetPrice** - get the current flight price. Performed only for the flight.
 	- **SearchAncillaryServices** - obtaining a list of available services for a flight or booking (only for GDS Sirena and Amadeus).
 	- **GetAllowedCCs** - get the list of credit card codes that can be used to pay this reservation through GDS processing.
-	- **GetAllowedLoyaltyCards** - get information about loyalty cards that can be used on this flight. At the moment there is no support for this operation.
+<!-- **GetAllowedLoyaltyCards** - get information about loyalty cards that can be used on this flight. At the moment there is no support for this operation. -->
 	- **ActualizeFlight** - actualize the flight
 	- **GetFareFamilies** - getting the variant of the flight cost estimation from different families
 	- **GetSubsidizedTariffs** - getting a list of subsidized fares for a flight
@@ -48,6 +48,7 @@ Execution of the additional operations of 1.2. version.
 -   **OperationsRestrictions.PricingInfo.RequestorTags** - array of tags describing the request. Data type - array.
 -   **OperationsRestrictions.PricingInfo.RequestorTags.Tag** - a single tag describing the request. Data type - string.
 -  **OperationsRestrictions.PricingInfo.PriceSpecifiedPassTypesOnly** - if possible, use only specific passenger type codes while re-selling. Data type - bool.
+-  **OperationsRestrictions.PricingInfo.RefererID** - if specified, overrides Nemo 1 user for whom the calculation will be performed. Data type - integer.
 -  **OperationsRestrictions.PricingInfo.ThreeDomainAgreementNumber** — corporate client code in the three-party agreement. Data type - string.
 -  **OperationsRestrictions.UpdateCachedFareRules** - update cached in the reservation fare rules. The data type is bool.
 -  **OperationsRestrictions.ListFaresIfNoFamiliesDifined** - enables fare list return from GDS in case they do not have a reference to the fare family. Data type - bool.
@@ -123,6 +124,7 @@ Includes the set of elements caused by operstion in the request:
 - **Sources.SourceInfo.CustomTicketingRequisites.RequisiteConfig.AppliesToCompanies** - list of airlines for which this requisite applies. Data type - string.
 - **Sources.SourceInfo.CustomTicketingRequisites.RequisiteConfig.RequisiteID** - vendor requisite identifier. Data type - string.
 -   **ObjectForOperations** — contains the ID of the object for which you want to perform additional operations. Data type - custom. Similar to the corresponding element from the request.
+-   **ObjectForOperations.FlightID** - flight ID for which additional operations need to be performed. Data type - 128-bit integer.
 -   **CheckAvailabilityResult** — result of checking the booking availability of the flight. Data type - custom.
 -   **CheckAvailabilityResult.IsAvail** — attribute of booking availability of a flight. Data type - bool.
 -   **GetFareRulesResult** — result of receiving fare rules. Data type - custom.
@@ -139,22 +141,26 @@ Includes the set of elements caused by operstion in the request:
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors** — container for floors in an aircraft. Data type - custom.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor** — seat map for a particular floor in an aircraft. Data type - custom. Occurs 1 or more times.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.IsUpper** — flag of the top floor in an aircraft. Data type - bool.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow** — default information for the seat rows on the floor of the aircraft. Data type - custom.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Num** — number of the rows of seats in the aircraft. Data type - 32-bit integer.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats** — container for seat information. Data type - custom.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat** — information about a specific seat in the aircraft. Data type - custom. Occurs 1 or more times.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Number** — seat number. Data type - string.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Type** — seat position. Data type - string. Possible values:
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows** — container for information about rows of seats on a floor. Data type - array.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow** - information about a specific row of seats on a floor in the airplane. Data type - array.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Num** — number of the rows of seats in the aircraft. Data type - 32-bit integer.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats** — container for seat information. Data type - custom.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat** — information about a specific seat in the aircraft. Data type - custom. Occurs 1 or more times.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Number** — seat number. Data type - string.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Type** — seat position. Data type - string. Possible values:
     -   **W** — near the window;
     -   **NPW** — Near Passenger Way;
     -   **M** —  between W and NPW;
-    -   **any type + postfix "NE"** — seat does not exist.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Characteristics** — default seat characteristics. Data type - string.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.IsFree** — attribute showing that the place is free. Data type - bool.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Seats.Seat.Price** — seat price in case it is paid. Data type - [Money](/avia/common/money).
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.DefaultRow.Characteristics** - seat row characteristics. Data type - string.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows** - container for information on seat rows on the floor. Data type - custom.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow** - information about a specific number of seats on the floor in an aircraft. Data type - custom. Element format is the same as the DefaultRow element.
+<!-- **any type + postfix "NE"** — seat does not exist. -->
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Characteristics** — default seat characteristics. Data type - string.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.IsFree** — attribute showing that the place is free. Data type - bool.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.NotExists** - attribute showing that the seat does not exist. Data type - bool.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Price** — seat price in case it is paid. Data type - [Money](/avia/common/money).
+-   - **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Price.Amount** - amount. Data type - floating double precision.
+- **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Price.Currency** - currency. Data type - string.
+- **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.RFISC** - RFISC of the seat. Data type - string.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Characteristics** - seat row characteristics. Data type - string.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.CabinCode** - the class to which the seat belongs. Only for MixvelPlatform. Data type - string.
 -   **GetPriceResult** - result of getting the actual price of the flight. Data type - custom.
 -   **GetPriceResult.Flight** - flat flight v1.1. Data type - custom.
 -   **FindAdditionalServicesResult** - result of obtaining a list of available ancillary services. Data type - custom.
@@ -195,7 +201,7 @@ Includes the set of elements caused by operstion in the request:
 -  **FlightsByFareFamily** - contains the result of the GetFareFamilies operation. Data type - [Flight](/avia/common/flight) array.
 -  **SubsidizedTariffs** - contains the result of GetSubsidizedTariffs operation. Data type - [Flight](/avia/common/flight) array.
 
->>>> The flight with a new ID will be received as a result of the request, this ID should be used in further operations, for example, in the booking.
+>>>> The flight with a new ID will be received as a result of the request. This ID should be used in further operations (for example, in the booking).
 
 ##### Sample
 ```xml
