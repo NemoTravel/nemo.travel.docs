@@ -23,7 +23,7 @@ taxonomy:
     -   **SearchAncillaryServices** — получение списка доступных дополнительных услуг для перелета или брони (реализован только для GDS Sirena и Amadeus);
     -   **GetAllowedCCs** — получение списка кодов кредитных карт, которыми можно оплатить данную бронь через GDS-процессинг;
 <!--    -   **GetAllowedLoyaltyCards** — получение информации о карточках лояльности, которые можно использовать на данном перелёте. На данный момент поддержки данной операции нет; -->
-    -   **ActualizeFlight** — актуализация перелёта;
+	-   **ActualizeFlight** — актуализация перелёта;
     -   **GetFareFamilies** — получение варианта оценки перелёта тарифами из разных семейств;
     -   **GetSubsidizedTariffs** — получение списка субсидированных тарифов для перелёта.
 -   **OperationsRestrictions** — дополнительная информация для выполнения указанных операций (необязательный). Тип данных — массив.
@@ -48,7 +48,7 @@ taxonomy:
 -   **OperationsRestrictions.PricingInfo.RequestorTags** - массив тегов, описывающих запрос. Тип данных - массив.
 -   **OperationsRestrictions.PricingInfo.RequestorTags.Tag** - тег, описывающий запрос. Тип данных - строка.
 -   **OperationsRestrictions.PricingInfo.PriceSpecifiedPassTypesOnly** — при репрайсинге использовать только конкретные коды типов пассажиров, по возможности. Тип данных — булевский.
--   **OperationsRestrictions.PricingInfo.RefererID** - если указан, переопределяет пользователя Nemo 1, для которого будет производится расчёт ЦО. Тип данных - int.
+-   **OperationsRestrictions.PricingInfo.RefererID** - если указан, переопределяет пользователя Nemo 1, для которого будет производиться расчёт ЦО. Тип данных - int.
 -   **OperationsRestrictions.PricingInfo.ThreeDomainAgreementNumber** — код корпоративного клиента в трехстороннем договоре. Тип данных — строка.
 -   **OperationsRestrictions.PricingInfo.IsMixerDisabled** - отключает микширование вариантов оценки перелёта, полученных в процессе репрайсинга. Тип данных - булевский.
 -   **OperationsRestrictions.UpdateCachedFareRules** — обновление закэшированных в брони тарифных правил. Тип данных — булевский.
@@ -126,7 +126,7 @@ taxonomy:
 -   **Sources.SourceInfo.CustomTicketingRequisites.RequisiteConfig.AppliesToCompanies** - список авиакомпаний, для которых применяется данный реквизит выписки. Тип данных - строка.
 -   **Sources.SourceInfo.CustomTicketingRequisites.RequisiteConfig.RequisiteID** -  идентификатор реквизита на стороне поставщика. Тип данных - строка.
 -   **ObjectForOperations** - содержит идентификатор объекта, для которого требуется выполнить допоперации. Тип данных - массив. Аналогичен соответствующему элементу из запроса.
--   **ObjectForOperations.FlightID** - ИД перелёта, для которого требуется выполнить допоперации. Тип данных - целое 128 битное число.
+-   **ObjectForOperations.FlightID** - ИД перелёта, для которого требуется выполнить допоперации. Тип данных - целое 128-битное число.
 -   **CheckAvailabilityResult** - результат проверки доступности перелёта для бронирования. Тип данных - массив.
 -   **CheckAvailabilityResult.IsAvail** - признак доступности перелёта для бронирования. Тип данных - булевский.
 -   **GetFareRulesResult** - результат получения тарифных правил. Тип данных - массив.
@@ -162,7 +162,7 @@ taxonomy:
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Price.Currency** - Валюта. Тип данных - строка.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.RFISC** - RFISC места. Тип данных - строка.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Characteristics** - характеристика ряда. Тип данных - строка.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.CabinCode** - класс к которому принадлежит место. Только для MixvelPlatform. Тип данных - строка. 
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.CabinCode** - класс, которому принадлежит место. Только для MixvelPlatform. Тип данных - строка. 
 -   **GetPriceResult** - результат получения актуальной цены перелёта. Тип данных - массив.
 -   **GetPriceResult.Flight** - плоский перелёт v1.1. Тип данных - массив.
 -   **FindAdditionalServicesResult** - результат получения списка доступных допуслуг. Тип данных - массив. 
@@ -204,7 +204,7 @@ taxonomy:
 -   **SubsidizedTariffs** - содержит результат операции **GetSubsidizedTariffs**. Тип данных — массив [Flight](/avia/common/flight).
 -   **ResultsFiltersApplied** - применение фильтров результата. Тип данных - bool.
 
->>>> В результате выполнения запроса, будет получен перелен с новым ID, именно этот ID следует использовать в дальнейших операциях, например в бронировании.
+>>>> В результате выполнения запроса будет получен перелен с новым ID, именно этот ID следует использовать в дальнейших операциях, например в бронировании.
 
 ##### Пример
 ```xml
