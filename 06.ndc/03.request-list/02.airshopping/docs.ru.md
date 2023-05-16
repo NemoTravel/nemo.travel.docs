@@ -54,6 +54,8 @@ title: AirShopping
 -   **Preference.TransferPreferences.Connection.MaxTime** - время максимально допустимой остановки в минутах. Пример формата - PT180M, т.о. будет выполнен запрос на поиск рейсов с максимально допустимой остановкой в 180 минут.
 -   **Qualifier.PromotionQualifiers** - содержит информацию о промокоде. Тип данных — сложный.
 -   **Qualifier.PromotionQualifiers.Code** - промокод. Тип данных — строка.
+-   **Qualifier.ProgramStatusQualifier** - содержит информацию о подписке. Тип данных — сложный.
+-   **Qualifier.ProgramStatusQualifier.ProgramStatus** - ремарка `subscription`. Тип данных — строка.
 -   **Preference.CabinPreferences.Code** - строковое значение промокода. Тип данных — строка.
 -   **Preference.CabinPreferences.CabinType** - класс перелета (обязательный). Тип данных — сложный.
 -   **Preference.CabinPreferences.CabinType.Code** - тип предпочитаемого класса перелёта. Возможные значения:
@@ -220,6 +222,9 @@ title: AirShopping
 -   **Offer.OfferItem.FareDetail.Remarks** - содержит сведения о валидирующем перевозчике для текущего OfferItem.
 -   **Offer.OfferItem.FareDetail.Remarks.Remark** - принимает значение "Validating carrier: XX", где XX - IATA код валидирующего перевозчика.
 -   **Offer.OfferItem.FareDetail.Remarks.Remark** - принимает значение "Miles fare: XXXXX.XX", где XXXXX.XX - стоимость перелёта в милях.
+-   **Promotions** - блок с промо-перелетами и информацией о подписке \ промокоде. Тип данных - сложный.
+-   **Promotions.Promotion** - содержит офферы "с дисконтом" и причину "дисконта" - промокод. Тип данных - строка.
+-   **Promotions.Promotion.Remarks** - ремарка `subscription` (в случае, если причина "дисконта" - подписка). Тип данных - строка.
 -   **AirShoppingRS.DataLists** - представляет собой контейнер, в котором содержится информация о элементах предложения, а именно, информация о пассажирах, багаже, маршруте и сегментах. Тип данных — сложный.
 -   **DataLists.PassengerList** - сведения о пассажирах. Тип данных - сложный.
 -   **PassengerList.Passenger** -  пассажир, для которого выполнен поиск. Атрибут PassengerID="PAX1"(префикс PAX обязателен) - уникальный идентификатор пассажира.
