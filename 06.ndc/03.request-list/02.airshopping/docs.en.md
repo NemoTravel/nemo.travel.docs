@@ -55,7 +55,7 @@ Flight leg prices are described in the current OfferItem.
 -  **Qualifier.PromotionQualifiers** - contains information about promocode. Data type - custom.
 -  **Qualifier.PromotionQualifiers.Code** - promocode. Data type - string.
 -  **Qualifier.ProgramStatusQualifier** - contains information about the subscription. Data type - custom.
--  **Qualifier.ProgramStatusQualifier.ProgramStatus** - subscription remark. Data type - string.
+-  **Qualifier.ProgramStatusQualifier.ProgramStatus** - `subscription` remark. Data type - string.
 -  **Preference.CabinPreferences** - contains a list of preferred flight classes. Data type - custom.
 -  **Preference.CabinPreferences.CabinType** - flight class (required). Data type - custom.
 -  **Preference.CabinPreferences.CabinType.Code** - type of preferred flight class. Possible values:
@@ -223,7 +223,7 @@ Flight leg prices are described in the current OfferItem.
 -  **Offer.OfferItem.FareDetail.Remarks.Remark** - takes the value "Miles fare: XXXXX.XX", where XXXXX.XX is the cost of the flight in miles..
 -  **Promotions** - block with promotional flights and subscription/promocode information. Data type - custom.
 -  **Promotions.Promotion** - contains offers "with discount" and the reason for the "discount" - promocode. Data type - string.
--  **Promotions.Promotion.Remarks** - subscription remark (in case the reason for the "discount" is a subscription). Data type - string.
+-  **Promotions.Promotion.Remarks** - `subscription` remark (in case the reason for the "discount" is a subscription). Data type - string.
 -  **AirShoppingRS.DataLists** - container with information about the elements of the offer which are: information about passengers, baggage, route and segments. Data type - custom.
 -  **DataLists.PassengerList** - information about the passengers. Data type - custom.
 -  **PassengerList.Passenger** - passengers for whom the search was performed. Attribute PassengerID = "PAX1" (PAX prefix required) - unique passenger ID.
