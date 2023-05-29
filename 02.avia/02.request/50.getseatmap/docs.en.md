@@ -1,5 +1,5 @@
 ---
-title: CheckFlightAvailability
+title: GetSeatMap
 ---
 
 ##### Description 
