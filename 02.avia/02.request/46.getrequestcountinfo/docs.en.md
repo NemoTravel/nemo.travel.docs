@@ -4,18 +4,18 @@ title: GetRequestCountInfo
 
 #### GetRequestCountInfo
 
-Запрос получение информации о количестве запросов.
+Getting information on amount of requests.
 
-#### Запрос
+#### Request
 
-##### Описание формата
+##### Format Description
 
--   **StartDate** - Дата начала периода по которому требуется информация. Формат - yyyy-MM-dd. Тип данных - строка.  (обязательное поле)
--   **EndDate** - Дата конца периода, по которому требуется информация. Формат - yyyy-MM-dd. Тип данных - строка. (обязательное поле)
--   **EndDate** Список внешних субагентств, информацию о количестве запросов которых необходимо получить (Необязательный). Тип данных - массив.
--   **EndDate** ID внешнего субагенства. Тип данных - целое 32 битное число. (обязательное поле)
+-   **StartDate** — Start date of the period on which information is required (mandatory field). Format is yyyy-MM-dd. Data type — string.
+-   **EndDate** — End date of the period on which information is required (mandatory field). Format is yyyy-MM-dd. Data type — string.
+-   **SubAgenciesIDs** — list of external subagencies on which information is required (optional field). Data type — array.
+-   **SubAgencyID** — ID of external subagency. Data type — 32-bit integer.
 
-##### Примеры
+##### Examples
 
 ```
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avia="http://nemo-ibe.com/Avia" xmlns:stl="http://nemo-ibe.com/STL">
@@ -43,20 +43,20 @@ title: GetRequestCountInfo
 </soapenv:Envelope>
 ```
 
-#### Ответ
+#### Response
 
-##### Описание формата
+##### Format Description
 
--   **RequestCountInfo** - Информация о количестве запросов разбитая по датам. Тип данных - сложный.
--   **RequestCountInfo.Date** - Дата выполнения запросов. Формат - yyyy-MM-dd. Тип данных - строка.
--   **RequestCountInfo.RequestCountBySubAgencies** - Информация о количестве запросов разбитая по внешним субагентствам. тип данных - массив.
--   **RequestCountInfo.RequestCountBySubAgencies.RequestCountBySubAgency** - Элемент с информацией о количестве запросов для определенного субагентства. Тип данных - сложный.
--   **RequestCountInfo.RequestCountBySubAgencies.RequestCountBySubAgency.SubAgencyID** - ИД внешнего субагенства. Тип данных - целое 32 битное число.
--   **RequestCountInfo.RequestCountBySubAgencies.RequestCountBySubAgency.RequestCountInfo** - Собственно информация о количестве запросов. Тип данных - сложный.
--   **RequestCountInfo.RequestCountBySubAgencies.RequestCountBySubAgency.RequestCountInfo.Searches** - Количество поисковых запросов. Тип данных - целое 32 битное число.
--   **RequestCountInfo.RequestCountBySubAgencies.RequestCountBySubAgency.RequestCountInfo.Tickets** -	Количество запросов выписки. Тип данных - целое 32 битное число.
+-   **RequestCountInfo** — Information on amount of requests by date. Data type — complex.
+-   **RequestCountInfo.Date** — Date of requests. Format is yyyy-MM-dd. Data type — string.
+-   **RequestCountInfo.RequestCountBySubAgencies** — Information on amount of requests  by external subagencies. Data type — array.
+-   **RequestCountInfo.RequestCountBySubAgencies.RequestCountBySubAgency** — Information on amount of requests for specific subagency. Data type — complex.
+-   **RequestCountInfo.RequestCountBySubAgencies.RequestCountBySubAgency.SubAgencyID** — ID of external subagency. Data type — 32-bit integer.
+-   **RequestCountInfo.RequestCountBySubAgencies.RequestCountBySubAgency.RequestCountInfo** — Information on amount of requests. Data type — complex.
+-   **RequestCountInfo.RequestCountBySubAgencies.RequestCountBySubAgency.RequestCountInfo.Searches** — Amount of searches. Data type — 32-bit integer.
+-   **RequestCountInfo.RequestCountBySubAgencies.RequestCountBySubAgency.RequestCountInfo.Tickets** — Amount of requests for tickets. Data type — 32-bit integer.
 
-##### Примеры
+##### Examples
 
 ```
 <?xml version="1.0"?>
