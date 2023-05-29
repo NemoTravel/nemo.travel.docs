@@ -4,16 +4,17 @@ title: GetBansInfo
 
 #### GetBansInfo
 
-Запрос получения информации по банам.
+Request for getting information on bans.
 
-#### Запрос
+#### Request
 
-##### Описание формата
+##### Format Description
 
--   **SubAgenciesIDs** - Список внешних субагентств, информацию по банам которых необходимо получить (Необязательный). Тип данных - массив.
--   **SubAgenciesIDs** - ID внешнего субагенства. Тип данных - целое 32 битное число. (обязательное поле)
+-   **SubAgenciesIDs** — list of external subagents, on which you want to get bans information (optional field). Data type — array.
 
-##### Примеры
+-   **SubAgenciesIDs** — ID of external subagent (mandatory field). Data type — 32-bit integer.
+
+##### Examples
 
 ```
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avia="http://nemo-ibe.com/Avia" xmlns:stl="http://nemo-ibe.com/STL">
@@ -39,22 +40,22 @@ title: GetBansInfo
 </soapenv:Envelope>
 ```
 
-#### Ответ
+#### Response
 
-##### Описание формата
+##### Format Description
 
--   **Bans** - Признак успешности отмены. Тип данных - булевский.
--   **Ban** - Информация по бану. Тип данных - сложный.
--   **Ban.SubAgencyID** - ИД внешнего субагентства. Тип данных - целое 32-битное число.
--   **Ban.BanType** - Тип бана. Тип данных - перечисление, возможные значения:
-    -   **SearchesLimit** - Превышено ограничение на количество поисков
-	-   **SearchesPerTicketsLimit** - Превышено ограничение на количества поисков к одной выписке
--   **Ban.AdditionalBanInfo** - Дополнительная информация о бане. Тип данных - сложный.
--   **Ban.AdditionalBanInfo.Searches** - Количество запросов поисков. Тип данных - целое 32-битное число.
--   **Ban.AdditionalBanInfo.SearchesPerTicket** - Количество поисков на одну выписку. Тип данных - целое 32-битное число.
+-   **Bans** — Attribute of successful cancellation. Data type — boolean.
+-   **Ban** — Information on ban. Data type — complex.
+-   **Ban.SubAgencyID** — ID of external subagent. Data type — 32-bit integer.
+-   **Ban.BanType** — Ban type. Data type — enumeration. Possible values are:
+    -   **SearchesLimit** — The limit on amount of searches is exceeded.
+	-   **SearchesPerTicketsLimit** — The limit on amount of searches per ticket is exceeded.
+-   **Ban.AdditionalBanInfo** — Additional information on ban. Data type — complex.
+-   **Ban.AdditionalBanInfo.Searches** — Amount of searches. Data type — 32-bit integer.
+-   **Ban.AdditionalBanInfo.SearchesPerTicket** — Amount of searches per ticket. Data type — 32-bit integer.
 	
 
-##### Примеры
+##### Examples
 
 ```
 <Bans>
