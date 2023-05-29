@@ -4,16 +4,16 @@ title: CloseSession
 
 #### CloseSession
 
-Запрос закрытия сессии.
+Request for session opening.
 
-#### Запрос
+#### Request
 
-##### Описание формата
+##### Format Description
 
--   **Source** - ID пакета реквизитов (источника), под которыми требуется выполнить команду. Тип данных - целое 32-битное число. (обязательное поле)
--   **SessionID** - ID открытой сессии, которую требуется закрыть. Тип данных - строка. (обязательное поле)
+-   **Source** - ID of the requisites package under which you want to close session (mandatory field). Data type — 32-bit integer.
+-   **SessionID** - ID of the open session which you want to close (mandatory field). Data type — string.
 
-##### Примеры
+##### Examples
 
 ```
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avia="http://nemo-ibe.com/Avia" xmlns:stl="http://nemo-ibe.com/STL">
@@ -37,11 +37,11 @@ title: CloseSession
 </soapenv:Envelope>
 ```
 
-#### Ответ
+#### Response
 
-##### Описание формата
+##### Format Description
 
--   **Success** - Признак успешности отмены. Тип данных - булевский.
+-   **Success** — attribute of successful session closing. Data type — boolean.
 
 ##### Примеры
 
