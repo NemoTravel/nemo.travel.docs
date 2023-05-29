@@ -4,14 +4,14 @@ title: OpenSession
 
 #### OpenSession
 
-Запрос открытия сессии.
+Request for session opening.
 
-#### Запрос
+#### Request
 
-##### Описание формата
+##### Format Description
 
--   **Source** - ID пакета реквизитов (источника), под которыми требуется выполнить команду. Тип данных - целое 32-битное число. (обязательное поле)
-##### Примеры
+-   **Source** - ID of the requisites package under which you want to open session (mandatory field). Data type — 32-bit integer.
+##### Examples
 
 ```
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avia="http://nemo-ibe.com/Avia" xmlns:stl="http://nemo-ibe.com/STL">
@@ -35,13 +35,13 @@ title: OpenSession
 </soapenv:Envelope>
 ```
 
-#### Ответ
+#### Response
 
-##### Описание формата
+##### Format Description
 
--   **SessionID** - ID сессии. Тип данных - строка.
+-   **SessionID** — session ID. Data type — string.
 
-##### Примеры
+##### Examples
 
 ```
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
