@@ -4,19 +4,19 @@ title: ImportPnrFromHost
 
 #### ImportPnrFromHost
 
-Запрос используется для получение ГРС локатора, если есть данные по локатору а/к.
+Getting GDS locator, if airline locator provided.
 
-#### Запрос
+#### Request
 
-##### Описание формата
+##### Format description
 
--   **HostLocator** - Идентификатор бронирования в хосте авиакомпании.Тип данных — строка.
--   **AirlineCode** - Код авиакомпании. Тип данных — строка.
--   **FlightNumber** - Номер рейса. Тип данных - строка.
--   **Source** -  ID источника, в которой находится PNR. Тип данных - целое 32-битное число:
--   **LastName** - Фамилия пассажира в PNR. Тип данных - строка. (обязательное поле)
+-   **HostLocator** — Booking ID in airline host. Data type — string.
+-   **AirlineCode** — Airline code. Data type — string.
+-   **FlightNumber** — Flight number. Data type — string.
+-   **Source** —  ID of the source in which PNR is stored. Data type — 32-bit integer.
+-   **LastName** — Passenger's last name in PNR (mandatory). Data type — string.
 
-##### Примеры
+##### Examples
 
 ```
 <RequestWithImportPnrFromHostRQBody xmlns="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
@@ -37,13 +37,13 @@ title: ImportPnrFromHost
 
 ```
 
-#### Ответ
+#### Response
 
-##### Описание формата
+##### Format Description
 
--   **GdsPnrLocator** - Локатор бронирования в GDS. Тип данных — строка. 
+-   **GdsPnrLocator** — Booking locator in GDS. Data type — string.
 
-##### Примеры
+##### Examples
 
 ```
 <?xml version="1.0"?>
