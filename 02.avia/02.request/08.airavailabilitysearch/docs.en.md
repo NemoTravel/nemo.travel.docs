@@ -10,7 +10,7 @@ Availability seats request.
 - **RequestedFlightInfo** - contains information about the requested itinerary.
 - **RequestedFlightInfo.Direct** - direct or connecting flights. Data type - bool.
 - **RequestedFlightInfo.ODPairs** - container contains flight descriptions.
-- **ODPair.DepartureDateTime** - date and time of the departure. Data type - string, format yyyy-mm-ddthh:mm:ss.
+- **ODPair.DepartureDateTime** - date and time of the departure. Data type - string, format <code>yyyy-mm-ddthh:mm:ss</code>.
 - **ODPair.DeparturePoint** - point of departure. Data type - string.
 - **DeparturePoint.Code** - 3-letter code of the airport/city of departure. Data type - string.
 - **DeparturePoint.IsCity** - attribute showing that the city code is used as the departure point. Data type - bool.
