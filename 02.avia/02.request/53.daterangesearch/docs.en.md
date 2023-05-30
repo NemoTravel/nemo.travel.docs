@@ -4,60 +4,60 @@ title: DateRangeSearch
 
 #### DateRangeSearch
 
-Запрос поиска по диапазону дат.
+Request for date range search.
 
-#### Запрос
+#### Request
 
-##### Описание формата
+##### Format Description
 
--   **RequestedFlightInfo** - Содержит информацию о сегментах перелёта, который требуется найти. Тип данных - сложный.
--   **RequestedFlightInfo.ODPairs** - Содержит информацию о сегментах перелёта, который требуется найти. Тип данных - сложный.
--   **RequestedFlightInfo.ODPair** - Сегмент перелёта, который требуется найти. Тип данных - сложный.
--   **RequestedFlightInfo.ODPair.StartDate** - Дата и время с которого начинается желаемое время вылета. Тип данных - строка, формат - yyyy-MM-ddTHH:mm:ss. (обязательное поле)
--   **RequestedFlightInfo.ODPair.EndDate** - Дата и время которым заканчивается желаемое время вылета. Тип данных - строка, формат - yyyy-MM-ddTHH:mm:ss. (обязательное поле)
--   **RequestedFlightInfo.ODPair.DepaturePoint** - Содержит информацию о точки отправления. Тип данных - сложный.
--   **RequestedFlightInfo.ODPair.DepaturePoint.Code** - 3-х буквенный код аэропорта/города отправления. Тип данных - строка. (обязательное поле)
--   **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** - Признак что в качестве точки отправления указан код города-агрегатора аэропортов. Тип данных - булевский.
--   **RequestedFlightInfo.ODPair.ArrivalPoint** - Содержит информацию о точки прибытия. Тип данных - сложный. Формат аналогичен элементу DepaturePoint
--   **RequestedFlightInfo.ODPair.ArrivalPoint.Code** - 3-х буквенный код аэропорта/города прибытия. Тип данных - строка. (обязательное поле)
--   **RequestedFlightInfo.ODPair.ArrivalPoint.IsCity** - Признак что в качестве точки отправления указан код города-агрегатора аэропортов. Тип данных - булевский.
--   **Restrictions** - Содержит различные ограничения, применяемые к результатам поиска. Тип данных - сложный.
--   **Restrictions.CurrencyCode** - 3-х буквенный код валюты выдачи результатов поиска. Тип данных - строка
--   **Restrictions.CompanyFilter** - Массив фильтров по а/к. Тип данных - массив.
--   **Restrictions.CompanyFilter.Company** - Информация о фильтрации по а/к. Тип данных - массив.
--   **Restrictions.CompanyFilter.Company.Code** - 2-х буквенный код а/к, по которой будет срабатывать критерий фильтрации. Тип данных - строка.
--   **Restrictions.CompanyFilter.Company.Include** - Тип фильтрации. Тип данных - булевский. 
-	-   **false** - указанная а/к будет исключена из результатов поиска
-	-   **true** - только данная а/к будет присутствовать в выдаче, за исключением других а/к указанных в параметрах фильтрации с параметром true
--   **Restrictions.CompanyFilter.Company.SegmentNumber** - номер запрошенного сегмент перелёта (нумерация в данном случае с 1), для которого требуется данная а/к. Тип данных - целое 32 битное число.
--   **Restrictions.PrivateFaresOnly** - Искать только приватные тарифы. Тип данных - булевский.
--   **Restrictions.ClassPreference** - Содержит список предпочитаемых классов перелёта. Тип данных - сложный.
--   **Restrictions.ClassPreference.ClassOfService** - тип предпочитаемого класса перелёта. Тип данных - перечисление, возможные значения: (обязательное поле)
-	-   **Economy** - только эконом класс
-	-   **Business** - только бизнес класс
-	-   **First** - только первый класс
-	-   **PremiumEconomy** - премиум эконом
-	-   **All** - все классы
--   **Restrictions.MaxConnectionTime** - Максимальное время пересадки в минутах. Тип данных - целое 32битное число.
--   **Restrictions.PriceRefundType** - Искомый тип цен в поисков запросе. Тип данных - перечисление, возможные значения:
-	-   **AnyLowest** - наименьшие цены 
-	-   **Refundable** - наименьшие цены с возможностью безвозмездного возврата
-	-   **Both** - совокупность поисковых выдач поиска для минимальных и минимальных возвратных цен
--   **Restrictions.ResultsGrouping** - Тип группировки выдачи. Тип данных - перечисление:
-	-   **Simple** - простая группировка
-	-   **Advanced** - продвинутая группировка
-	-   **None** - без группировки
--   **Restrictions.SourcePreference** - список предпочитаемых источников перелётов. Тип данных - сложный.
--   **Restrictions.SourcePreference.Source** - ID предпочитаемого источника перелётов. Тип данных - целое 32 битное число. (обязательное поле)
--   **Restrictions.RequestorTags** - Метки отправителя запроса. Тип данных - массив.
--   **Restrictions.RequestorTags.Tag** - Одна из меток отправителя запроса, описывающая его по некоему критерию. Тип данных - строка.
--   **Restrictions.MaxResultCount** - Максимальное количество перелётов в ответе ГДС. Тип данных - целое 32битное число.
--   **Restrictions.AsyncSearch** - Тип данных - bool.
-	-   **false** - синхронный поиск
-	-   **true** - асинхронный поиск с возможностью пуллинга порций ответов поставщиков
--   **EndUserData** - Данные конечного пользователя. Тип данных - сложный, формат аналогичен элементу EndUserData из DataItem
+-   **RequestedFlightInfo** — contains information about the flight segments you want to find. Data type — complex.
+-   **RequestedFlightInfo.ODPairs** — contains information about the flight segments you want to find. Data type — complex.
+-   **RequestedFlightInfo.ODPair** — the flight segment you want to find. Data type — complex.
+-   **RequestedFlightInfo.ODPair.StartDate** — date and time from which the desired departure begins (mandatory). Data type — string, the format is yyy-MM-ddTHH:mm:ss.
+-   **RequestedFlightInfo.ODPair.EndDate** — date and time of the desired departure end (mandatory). Data type — string, the format is yyyy-MM-ddTHH:mm:ss.
+-   **RequestedFlightInfo.ODPair.DepaturePoint** — contains information about the departure point. Data type — complex.
+-   **RequestedFlightInfo.ODPair.DepaturePoint.Code** — 3-letter code of the airport/city of departure (mandatory). Data type — string.
+-   **RequestedFlightInfo.ODPair.DepaturePoint.IsCity** — indication that the transmitted code is the city code (airport aggregator). Data type — boolean.
+-   **RequestedFlightInfo.ODPair.ArrivalPoint** — contains information about the arrival point. Data type — complex. The format is similar to the **DepaturePoint** element.
+-   **RequestedFlightInfo.ODPair.ArrivalPoint.Code** — 3-letter code of the airport/city of arrival (mandatory). Data type — string.
+-   **RequestedFlightInfo.ODPair.ArrivalPoint.IsCity** — indication that the transmitted code is the city code (airport aggregator). Data type — boolean.
+-   **Restrictions** — contains restrictions applied to search results. Data type — complex.
+-   **Restrictions.CurrencyCode** — 3-letter code for the currency of the search results output. Data type — string.
+-   **Restrictions.CompanyFilter** — array of airline filters. Data type — array.
+-   **Restrictions.CompanyFilter.Company** — information about airline filtering. Data type — array.
+-   **Restrictions.CompanyFilter.Company.Code** — 2-letter airline code which triggers the filter criteria. Data type — string.
+-   **Restrictions.CompanyFilter.Company.Include** — filtering type. Data type — boolean:
+	-   **false** — the airline will be excluded from search results output;
+	-   **true** — the airline will be included to search results output.
+-   **Restrictions.CompanyFilter.Company.SegmentNumber** — number of the requested flight segment (numbering from 1 in this case), for which this airline is required. Data type — 32-bit integer.
+-   **Restrictions.PrivateFaresOnly** — search only for private fares. Data type — boolean.
+-   **Restrictions.ClassPreference** — list of preferred flight classes. Data type — complex.
+-   **Restrictions.ClassPreference.ClassOfService** — type of preferred flight class (mandatory). Data type — enumeration. Possible values are:
+	-   **Economy** — economy class only;
+	-   **Business** — business class only;
+	-   **First** — first class only;
+	-   **PremiumEconomy** — premium economy class only;
+	-   **All** — all classes.
+-   **Restrictions.MaxConnectionTime** — maximum connection time in minutes. Data type — 32-bit integer.
+-   **Restrictions.PriceRefundType** — required price type in the search request. Data type — enumeration. Possible values are:
+	-   **AnyLowest** — the lowest prices;
+	-   **Refundable** — the lowest prices with the possibility of a free refund;
+	-   **Both** — set of search retrieval searches for maximum and minimum return prices.
+-   **Restrictions.ResultsGrouping** — type of search results output grouping. Data type — enumeration. Possible values are:
+	-   **Simple** — simple grouping;
+	-   **Advanced** — advanced grouping;
+	-   **None** — no grouping.
+-   **Restrictions.SourcePreference** — list of preferred flights sources. Data type — complex.
+-   **Restrictions.SourcePreference.Source** — ID of preferred flights source (mandatory). Data type — 32-bit integer.
+-   **Restrictions.RequestorTags** — tags of request sender. Data type — array.
+-   **Restrictions.RequestorTags.Tag** — one of tags of request sender definig them by some criterion. Data type — string.
+-   **Restrictions.MaxResultCount** — maximum number of flights in GDS response. Data type — 32-bit integer.
+-   **Restrictions.AsyncSearch** search type. Data type — boolean:
+	-   **false** — synchronous search;
+	-   **true** — asynchronous search with ability pulling of supliers' response portions.
+-   **EndUserData** — data of end user. Data type — complex, The format is similar to the **EndUserData** element from **DataItem**.
 
-##### Примеры
+##### Examples
 
 ```
 <RequestWithDateRangeSearchRQBody xmlns="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
@@ -94,13 +94,13 @@ title: DateRangeSearch
 </RequestWithDateRangeSearchRQBody>
 ```
 
-#### Ответ
+#### Response
 
-##### Описание формата
+##### Format Description
 
--   **PlaneFlights** - Содержит поисковую выдачу (элементы Flight) [Search](/avia/request/search)  Тип данных - сложный.  
+-   **PlaneFlights** — contains search results output (Flight elements) [Search](/avia/request/search)  Data type — complex. 
 
-##### Примеры
+##### Examples
 
 ```
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
