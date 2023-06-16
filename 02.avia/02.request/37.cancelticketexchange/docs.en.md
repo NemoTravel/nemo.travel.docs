@@ -20,8 +20,8 @@ Request to cancel the exchange operation, if such an action is available. (see P
       <avia:CancelTicketExchange>
          <avia:Request>
             <stl:Requisites>
-               <stl:NemoOneAuthToken>Token</stl:NemoOneAuthToken>
-               <stl:UserContextId>User</stl:UserContextId>
+               <stl:AuthToken>token010203D</stl:AuthToken>
+               <stl:UserID>100</stl:UserID>
             </stl:Requisites>
             <stl:UserID>User</stl:UserID>
             <stl:RequestType>P</stl:RequestType>
