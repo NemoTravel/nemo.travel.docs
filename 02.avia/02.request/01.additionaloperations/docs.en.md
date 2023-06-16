@@ -77,8 +77,8 @@ Execution of the additional operations of 1.2. version.
     <ns2:AdditionalOperations_1_2>
       <ns2:Request>
         <ns1:Requisites>
-          <ns1:Login>LOGIN</ns1:Login>
-          <ns1:Password>PASSWORD</ns1:Password>
+          <stl:AuthToken>token010203D</stl:AuthToken>
+          <stl:UserID>100</stl:UserID>
           <ns1:UserContextId>111111</ns1:UserContextId>
         </ns1:Requisites>
         <ns1:UserID>30338</ns1:UserID>
