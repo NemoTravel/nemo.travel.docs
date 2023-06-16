@@ -35,8 +35,8 @@ title: DeleteFromQueue
       <avia:DeleteFromQueue_2_0>
          <avia:Request>
             <stl:Requisites>
-               <stl:Login>LOGIN</stl:Login>
-               <stl:Password>PASSWORD</stl:Password>
+               <stl:AuthToken>token010203D</stl:AuthToken>
+               <stl:UserID>100</stl:UserID>
                <stl:UserContextId>10001</stl:UserContextId>
             </stl:Requisites>
             <stl:UserID>10000</stl:UserID>
