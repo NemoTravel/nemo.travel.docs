@@ -27,9 +27,9 @@ taxonomy:
 			<avia:Request>
 				<stl:Requisites>
 					<!--Optional:-->
-					<stl:Login>LOGIN</stl:Login>
+					<stl:AuthToken>token010203D</stl:AuthToken>
 					<!--Optional:-->
-					<stl:Password>PASSWORD</stl:Password>
+					<stl:UserID>100</stl:UserID>
 				</stl:Requisites>
 				<stl:UserID>30328</stl:UserID>
 				<stl:RequestBody>

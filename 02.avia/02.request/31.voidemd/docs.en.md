@@ -28,9 +28,9 @@ The latest version of the request, differences are only in the response to the r
 			<avia:Request>
 				<stl:Requisites>
 					<!--Optional:-->
-					<stl:Login>LOGIN</stl:Login>
+					<stl:AuthToken>token010203D</stl:AuthToken>
 					<!--Optional:-->
-					<stl:Password>PASSWORD</stl:Password>
+					<stl:UserID>100</stl:UserID>
 				</stl:Requisites>
 				<stl:UserID>30328</stl:UserID>
 				<stl:RequestBody>
