@@ -25,8 +25,8 @@ taxonomy:
       <avia:GetAirlineSchedule>
          <avia:Request>
             <stl:Requisites>
-               <stl:Login>test_mlsd_agency</stl:Login>
-               <stl:Password>test_mlsd_agency_pass</stl:Password>
+               <stl:AuthToken>token010203D</stl:AuthToken>
+               <stl:UserID>100</stl:UserID>
             </stl:Requisites>
 <stl:UserID>30328</stl:UserID>
             <stl:RequestBody>
