@@ -26,8 +26,8 @@ admin:
     <ns2:StartTicketExchange>
       <ns2:Request>
         <ns1:Requisites>
-          <ns1:NemoOneAuthToken>Token</ns1:NemoOneAuthToken>
-          <ns1:UserContextId>User</ns1:UserContextId>
+          <stl:AuthToken>token010203D</stl:AuthToken>
+          <stl:UserID>100</stl:UserID>
         </ns1:Requisites>
         <ns1:UserID>User</ns1:UserID>
         <ns1:RequestType>P</ns1:RequestType>
