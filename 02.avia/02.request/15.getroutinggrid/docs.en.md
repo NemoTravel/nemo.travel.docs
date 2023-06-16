@@ -27,8 +27,8 @@ Getting the airline's routing grid.
     <ns2:GetRoutingGrid>
       <ns2:Request>
         <ns1:Requisites>
-          <ns1:Login>LOGIN</ns1:Login>
-          <ns1:Password>PASSWORD</ns1:Password>
+          <stl:AuthToken>token010203D</stl:AuthToken>
+          <stl:UserID>100</stl:UserID>
         </ns1:Requisites>
         <ns1:UserID>11111</ns1:UserID>
         <ns1:RequestBody>
