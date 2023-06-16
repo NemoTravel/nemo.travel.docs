@@ -38,8 +38,8 @@ The latest request version, the differences are only in the response in the anci
     <ns2:ImportBook_2_2>
       <ns2:Request>
         <ns1:Requisites>
-          <ns1:Login>LOGIN</ns1:Login>
-          <ns1:Password>PASSWORD</ns1:Password>
+          <stl:AuthToken>token010203D</stl:AuthToken>
+          <stl:UserID>100</stl:UserID>
           <ns1:UserContextId>111111</ns1:UserContextId>
         </ns1:Requisites>
         <ns1:UserID>30329</ns1:UserID>
