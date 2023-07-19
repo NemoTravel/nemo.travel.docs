@@ -47,6 +47,7 @@ taxonomy:
  -   Mystifly
  -   GalileoUAPI
  -   SolringNDC
+ -   Farelogix
 -   **BookInfo.RecordInfoList** - контейнер с информацией об уведомлениях по заказам, находящихся в очереди. Тип данных - сложный. 
 -   **RecordInfoList.RecordInfo** - контейнер с информация об уведомлениях. Тип данных - сложный.
 -   **RecordInfo.ID** - идентификатор уведомления. Тип данных - строка.
