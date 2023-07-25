@@ -9,7 +9,7 @@ taxonomy:
 
 Get queue list.
 
-#### Запрос
+#### Request
 
 - **SourceIDs** - source ids list (package). Data type - array.
 - **SourceIDs.SourceID** - source ID (package) for which the queues list will be retrieved. Data type - int.
@@ -17,7 +17,7 @@ Get queue list.
 - **SupplierOwner.Agency** - agency ID. Data type - string.
 - **SupplierOwner.User** - point of sales. Data type - string.
 
-#### Пример
+#### Example
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avia="http://nemo-ibe.com/Avia" xmlns:stl="http://nemo-ibe.com/STL" xmlns:avia1="http://nemo.travel/Avia">
    <soapenv:Header/>
@@ -25,11 +25,9 @@ Get queue list.
       <avia:GetQueueDescription>
          <avia:Request>
             <stl:Requisites>
-               <stl:Login>LOGIN</stl:Login>
-               <stl:Password>PASSWORD</stl:Password>
-               <stl:UserContextId>11111</stl:UserContextId>
+               <stl:AuthToken>token010203D</stl:AuthToken>
             </stl:Requisites>
-            <stl:UserID>11110</stl:UserID>
+            <stl:UserID>100</stl:UserID>
             <stl:RequestBody>
                <avia1:SourceIDs>
                   <avia1:SourceID>12345</avia1:SourceID>
