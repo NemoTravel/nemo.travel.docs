@@ -22,11 +22,9 @@ title: GetBansInfo
       <avia:GetBansInfo>
          <avia:Request>
             <stl:Requisites>
-               <stl:Login>logintest</stl:Login>
-               <stl:Password>passtest</stl:Password>
-               <stl:UserContextId>1122</stl:UserContextId>
+               <stl:AuthToken>token010203D</stl:AuthToken>
             </stl:Requisites>
-            <stl:UserID>12345</stl:UserID>
+            <stl:UserID>100</stl:UserID>
             <stl:RequestType>P</stl:RequestType>
             <stl:RequestBody>
                <avia:SubAgenciesIDs>
