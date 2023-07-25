@@ -26,11 +26,10 @@ taxonomy:
          <avia:Request>
             <stl:Requisites>
                <stl:AuthToken>token010203D</stl:AuthToken>
-               <stl:UserID>100</stl:UserID>
             </stl:Requisites>
-<stl:UserID>30328</stl:UserID>
+            <stl:UserID>100</stl:UserID>
             <stl:RequestBody>
-               <avia:SourceID>113232 </avia:SourceID>
+               <avia:SourceID>113232</avia:SourceID>
                <avia:AirlineCode>LH</avia:AirlineCode>
             </stl:RequestBody>
          </avia:Request>
