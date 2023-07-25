@@ -28,10 +28,9 @@ Getting the data on ticket and EMD refund if they are present in the booking.
     <ns2:GetRefundData_1_1>
       <ns2:Request>
         <ns1:Requisites>
-          <ns1:NemoOneAuthToken>7473780e84e6687b9186efe4bb5c4120</ns1:NemoOneAuthToken>
-          <ns1:UserContextId>111111</ns1:UserContextId>
+          <stl:AuthToken>token010203D</stl:AuthToken>
         </ns1:Requisites>
-        <ns1:UserID>346337</ns1:UserID>
+        <ns1:UserID>100</ns1:UserID>
         <ns1:RequestType>P</ns1:RequestType>
         <ns1:RequestBody>
           <ns2:BookID>2180066</ns2:BookID>
