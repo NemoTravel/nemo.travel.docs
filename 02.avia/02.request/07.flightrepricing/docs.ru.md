@@ -40,9 +40,9 @@ taxonomy:
      <ns2:FlightRepricing>
             <ns2:Request>
                 <ns1:Requisites>
-                    <ns1:NemoOneAuthToken>01A10BC1D1010101EFG1H00I001JKL0M</ns1:NemoOneAuthToken>
+                    <stl:AuthToken>token010203D</stl:AuthToken>
                 </ns1:Requisites>
-                <ns1:UserID>111000</ns1:UserID>
+                <ns1:UserID>100</ns1:UserID>
                 <ns1:RequestType>U</ns1:RequestType>
                 <ns1:RequestBody>
                     <ns2:FlightID>11100011100011100</ns2:FlightID>

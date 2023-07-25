@@ -34,9 +34,8 @@ title: AirAvailabilitySearch
          <avia:Request>
             <stl:Requisites>
                <stl:AuthToken>token010203D</stl:AuthToken>
-               <stl:UserID>100</stl:UserID>
             </stl:Requisites>
-            <stl:UserID>10001</stl:UserID>
+            <stl:UserID>100</stl:UserID>
             <stl:RequestBody>
                <avia1:RequestedFlightInfo>
                   <avia1:Direct>true</avia1:Direct>
