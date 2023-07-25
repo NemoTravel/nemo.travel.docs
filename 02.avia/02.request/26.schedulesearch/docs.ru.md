@@ -41,9 +41,8 @@ taxonomy:
       <ns2:Request>
         <ns1:Requisites>
           <stl:AuthToken>token010203D</stl:AuthToken>
-          <stl:UserID>100</stl:UserID>
         </ns1:Requisites>
-        <ns1:UserID>30626</ns1:UserID>
+        <ns1:UserID>100</ns1:UserID>
         <ns1:RequestBody>
           <ns2:RequestedFlightInfo>
             <ns2:Direct>false</ns2:Direct>
