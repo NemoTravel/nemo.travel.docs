@@ -87,10 +87,9 @@ Version 1.2. flight search.
       <avia:Search_1_2>
          <avia:Request>
             <stl:Requisites>
-               <stl:AuthToken>*****</stl:AuthToken>
-               <stl:UserContextId>11111</stl:UserContextId>
+               <stl:AuthToken>token010203D</stl:AuthToken>
             </stl:Requisites>
-            <stl:UserID>11111</stl:UserID>
+            <stl:UserID>100</stl:UserID>
             <stl:RequestType>U</stl:RequestType>
             <stl:RequestBody>
                <avia:RequestedFlightInfo>
