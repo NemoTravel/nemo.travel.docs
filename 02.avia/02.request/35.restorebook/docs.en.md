@@ -26,11 +26,9 @@ Restoration of the canceled book.
       <avia:RestoreBook>
          <avia:Request>
             <stl:Requisites>
-               <stl:Login>11111</stl:Login>
-               <stl:Password>00000</stl:Password>
-               <stl:UserContextId>12345</stl:UserContextId>
+               <stl:AuthToken>token010203D</stl:AuthToken>
             </stl:Requisites>
-            <stl:UserID>22222</stl:UserID>
+            <stl:UserID>100</stl:UserID>
             <stl:RequestType>P</stl:RequestType>
             <stl:RequestBody>
                <avia:BookID>555555</avia:BookID>
