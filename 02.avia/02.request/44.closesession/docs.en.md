@@ -22,11 +22,9 @@ Request for session opening.
       <avia:CloseSession>
          <avia:Request>
             <stl:Requisites>
-               <stl:Login>LoginTEST</stl:Login>
-               <stl:Password>PaswordTEST</stl:Password>
-               <stl:UserContextId>1234</stl:UserContextId>      
+               <stl:AuthToken>token010203D</stl:AuthToken>
             </stl:Requisites>
-            <stl:UserID>55555</stl:UserID>
+            <stl:UserID>100</stl:UserID>
             <stl:RequestBody>
                <avia:Source>-12345</avia:Source>
                <avia:SessionID>QW1hZGV1c19MRURIWTM4QUFfVEVTVF8x</avia:SessionID>
