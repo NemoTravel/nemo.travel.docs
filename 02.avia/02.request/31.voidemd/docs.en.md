@@ -24,15 +24,11 @@ The latest version of the request, differences are only in the response to the r
 	<soapenv:Header/>
 	<soapenv:Body>
 		<avia:VoidEMD_1_1>
-			<!--Optional:-->
 			<avia:Request>
 				<stl:Requisites>
-					<!--Optional:-->
 					<stl:AuthToken>token010203D</stl:AuthToken>
-					<!--Optional:-->
-					<stl:UserID>100</stl:UserID>
 				</stl:Requisites>
-				<stl:UserID>30328</stl:UserID>
+				<stl:UserID>100</stl:UserID>
 				<stl:RequestBody>
 					<avia:BookID>522160</avia:BookID>
 					<avia:ServiceRefs>
