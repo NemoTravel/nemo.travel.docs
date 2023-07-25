@@ -24,11 +24,9 @@ taxonomy:
     <ns2:GetPNRTerminalView>
       <ns2:Request>
         <ns1:Requisites>
-          <ns1:Login>LOGIN</ns1:Login>
-          <ns1:Password>PASSWORD</ns1:Password>
-          <ns1:UserContextId>111111</ns1:UserContextId>
+          <stl:AuthToken>token010203D</stl:AuthToken>
         </ns1:Requisites>
-        <ns1:UserID>30328</ns1:UserID>
+        <ns1:UserID>100</ns1:UserID>
         <ns1:RequestBody>
           <ns2:BookID>467949</ns2:BookID>
         </ns1:RequestBody>
