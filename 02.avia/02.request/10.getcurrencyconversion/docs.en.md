@@ -23,14 +23,11 @@ Getting currency rates from GDS.
    <soapenv:Header/>
    <soapenv:Body>
       <avia:GetCurrencyConversion>
-         <!--Optional:-->
          <avia:Request>
             <stl:Requisites>
                <stl:AuthToken>token010203D</stl:AuthToken>
-               <stl:UserID>100</stl:UserID>
             </stl:Requisites>
-            <stl:UserID>12345</stl:UserID>
-            <!--Optional:-->
+            <stl:UserID>100</stl:UserID>
             <stl:RequestBody>
                <avia:Source>123</avia:Source>
                <avia:CurrencyCode>EUR</avia:CurrencyCode>
