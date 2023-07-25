@@ -32,9 +32,8 @@ taxonomy:
       <ns2:Request>
         <ns1:Requisites>
           <stl:AuthToken>token010203D</stl:AuthToken>
-          <stl:UserID>100</stl:UserID>
         </ns1:Requisites>
-        <ns1:UserID>30328</ns1:UserID>
+        <ns1:UserID>100</ns1:UserID>
         <ns1:RequestBody>
           <ns2:BookID>468070</ns2:BookID>
           <ns2:AncillaryServices>
