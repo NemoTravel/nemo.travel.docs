@@ -20,11 +20,9 @@ Request for session opening.
       <avia:OpenSession>
          <avia:Request>
             <stl:Requisites>
-               <stl:Login>LoginTEST</stl:Login>
-               <stl:Password>PaswordTEST</stl:Password>
-               <stl:UserContextId>1234</stl:UserContextId>
+               <stl:AuthToken>token010203D</stl:AuthToken>
             </stl:Requisites>
-            <stl:UserID>55555</stl:UserID>
+            <stl:UserID>100</stl:UserID>
             <stl:RequestType>Р</stl:RequestType>
             <stl:RequestBody>
                <avia:Source>-12345</avia:Source>
