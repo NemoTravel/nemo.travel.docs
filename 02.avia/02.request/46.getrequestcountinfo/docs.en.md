@@ -24,11 +24,9 @@ Getting information on amount of requests.
       <avia:GetRequestCountInfo>
          <avia:Request>
             <stl:Requisites>
-               <stl:Login>logtest</stl:Login>
-               <stl:Password>passtest</stl:Password>
-               <stl:UserContextId>1234</stl:UserContextId>
+               <stl:AuthToken>token010203D</stl:AuthToken>
             </stl:Requisites>
-            <stl:UserID>12345</stl:UserID>
+            <stl:UserID>100</stl:UserID>
             <stl:RequestType>P</stl:RequestType>
             <stl:RequestBody>
                <avia:StartDate>2021-02-26T00:00:00</avia:StartDate>
