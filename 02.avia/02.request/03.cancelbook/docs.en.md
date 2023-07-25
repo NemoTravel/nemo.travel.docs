@@ -25,10 +25,8 @@ Cancellation of a flight booking.
       <ns2:Request>
         <ns1:Requisites>
           <stl:AuthToken>token010203D</stl:AuthToken>
-          <stl:UserID>100</stl:UserID>
-          <ns1:UserContextId>111111</ns1:UserContextId>
         </ns1:Requisites>
-        <ns1:UserID>30372</ns1:UserID>
+        <ns1:UserID>100</ns1:UserID>
         <ns1:RequestBody>
           <ns2:BookID>1047197</ns2:BookID>
         </ns1:RequestBody>
