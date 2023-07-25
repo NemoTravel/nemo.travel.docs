@@ -27,10 +27,8 @@ taxonomy:
 <RequestWithExchangeTicketRQBody xmlns="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
   <Requisites>
     <stl:AuthToken>token010203D</stl:AuthToken>
-    <stl:UserID>100</stl:UserID>
-    <UserContextId>User</UserContextId>
   </Requisites>
-  <UserID>User</UserID>
+  <UserID>100</UserID>
   <RequestType>P</RequestType>
   <RequestBody xmlns:a="http://nemo-ibe.com/Avia">
     <a:BookID>790550</a:BookID>
