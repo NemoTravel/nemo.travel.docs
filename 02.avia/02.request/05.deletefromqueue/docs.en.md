@@ -32,10 +32,8 @@ Deletion of one or more bookings from one or more queues.
          <avia:Request>
             <stl:Requisites>
                <stl:AuthToken>token010203D</stl:AuthToken>
-               <stl:UserID>100</stl:UserID>
-               <stl:UserContextId>10001</stl:UserContextId>
             </stl:Requisites>
-            <stl:UserID>10000</stl:UserID>
+            <stl:UserID>100</stl:UserID>
             <stl:RequestBody>
                <avia1:BookQueueList>
                   <avia1:BookQueueInfo>
