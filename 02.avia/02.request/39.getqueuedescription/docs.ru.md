@@ -26,11 +26,9 @@ taxonomy:
       <avia:GetQueueDescription>
          <avia:Request>
             <stl:Requisites>
-               <stl:Login>LOGIN</stl:Login>
-               <stl:Password>PASSWORD</stl:Password>
-               <stl:UserContextId>11111</stl:UserContextId>
+               <stl:AuthToken>token010203D</stl:AuthToken>
             </stl:Requisites>
-            <stl:UserID>11110</stl:UserID>
+            <stl:UserID>100</stl:UserID>
             <stl:RequestBody>
                <avia1:SourceIDs>
                   <avia1:SourceID>12345</avia1:SourceID>

@@ -31,11 +31,9 @@ taxonomy:
       <avia:MoveToQueue>
          <avia:Request>
             <stl:Requisites>
-               <stl:Login>LOGIN</stl:Login>
-               <stl:Password>PASSWORD</stl:Password>
-               <stl:UserContextId>10001</stl:UserContextId>
+               <stl:AuthToken>token010203D</stl:AuthToken>
             </stl:Requisites>
-            <stl:UserID>10000</stl:UserID>
+            <stl:UserID>100</stl:UserID>
             <stl:RequestBody>
                <avia1:MoveToQueueConfigsList>
                   <avia1:MoveToQueueConfig>
