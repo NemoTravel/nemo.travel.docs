@@ -18,15 +18,11 @@ title: CompleteTicketExchange
    <soapenv:Header/>
    <soapenv:Body>
       <avia:CompleteTicketExchange>
-         <!--Optional:-->
          <avia:Request>
             <stl:Requisites>
-               <stl:NemoOneAuthToken>Token</stl:NemoOneAuthToken>
-               <!--Optional:-->
-               <stl:UserContextId>User</stl:UserContextId>
+               <stl:AuthToken>token010203D</stl:AuthToken>
             </stl:Requisites>
-            <stl:UserID>User</stl:UserID>
-            <!--Optional:-->
+            <stl:UserID>100</stl:UserID>
             <stl:RequestType>P</stl:RequestType>
             <stl:RequestBody>
                <avia:BookID>790555</avia:BookID>
