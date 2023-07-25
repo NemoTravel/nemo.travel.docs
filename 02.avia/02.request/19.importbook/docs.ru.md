@@ -39,10 +39,8 @@ taxonomy:
       <ns2:Request>
         <ns1:Requisites>
           <stl:AuthToken>token010203D</stl:AuthToken>
-          <stl:UserID>100</stl:UserID>
-          <ns1:UserContextId>111111</ns1:UserContextId>
         </ns1:Requisites>
-        <ns1:UserID>30329</ns1:UserID>
+        <ns1:UserID>100</ns1:UserID>
         <ns1:RequestBody>
           <ns2:Source>162494</ns2:Source>
           <ns2:PNRCode>ABVGD</ns2:PNRCode>
