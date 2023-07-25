@@ -28,11 +28,9 @@ Getting the electronic document mask from the GDS. At the moment acquiring the m
       <avia:GetEDData>
          <avia:Request>
             <stl:Requisites>
-               <stl:Login>LOGIN</stl:Login>
-               <stl:Password>PASSWORD</stl:Password>
-               <stl:UserContextId>***</stl:UserContextId>
+               <stl:AuthToken>token010203D</stl:AuthToken>
             </stl:Requisites>
-            <stl:UserID>30328</stl:UserID>
+            <stl:UserID>100</stl:UserID>
             <stl:RequestBody>
                <avia:BookID>624984</avia:BookID>
                <avia1:AllED>false</avia1:AllED>
