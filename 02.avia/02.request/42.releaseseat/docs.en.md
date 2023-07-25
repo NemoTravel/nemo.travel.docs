@@ -22,11 +22,9 @@ Request for seat release.
       <avia:ReleaseSeat>
          <avia:Request>
             <stl:Requisites>
-               <stl:Login>LoginTEST</stl:Login>
-               <stl:Password>PaswordTEST</stl:Password>
-               <stl:UserContextId>1234</stl:UserContextId>
+               <stl:AuthToken>token010203D</stl:AuthToken>
             </stl:Requisites>
-            <stl:UserID>55555</stl:UserID>
+            <stl:UserID>100</stl:UserID>
             <stl:RequestBody>
                <avia:BookID>1063907</avia:BookID>
                <avia:Travellers>
