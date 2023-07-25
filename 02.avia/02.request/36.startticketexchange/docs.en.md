@@ -28,9 +28,8 @@ An experimental version of a two-factor flow exchange request. The response form
       <ns2:Request>
         <ns1:Requisites>
           <stl:AuthToken>token010203D</stl:AuthToken>
-          <stl:UserID>100</stl:UserID>
         </ns1:Requisites>
-        <ns1:UserID>User</ns1:UserID>
+        <ns1:UserID>100</ns1:UserID>
         <ns1:RequestType>P</ns1:RequestType>
         <ns1:RequestBody>
           <ns2:BookID>790415</ns2:BookID>
