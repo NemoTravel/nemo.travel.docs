@@ -28,9 +28,8 @@ Getting the airline's routing grid.
       <ns2:Request>
         <ns1:Requisites>
           <stl:AuthToken>token010203D</stl:AuthToken>
-          <stl:UserID>100</stl:UserID>
         </ns1:Requisites>
-        <ns1:UserID>11111</ns1:UserID>
+        <ns1:UserID>100</ns1:UserID>
         <ns1:RequestBody>
           <ns2:SourceID>22222</ns2:SourceID>
           <ns2:AirlineCode>SU</ns2:AirlineCode>
