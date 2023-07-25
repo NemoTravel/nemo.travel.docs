@@ -63,9 +63,8 @@ title: DateRangeSearch
 <RequestWithDateRangeSearchRQBody xmlns="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
   <Requisites>
     <stl:AuthToken>token010203D</stl:AuthToken>
-    <stl:UserID>100</stl:UserID>
   </Requisites>
-  <UserID>12345</UserID>
+  <UserID>100</UserID>
   <RequestType>P</RequestType>
   <RequestBody>
     <a:RequestedFlightInfo>
