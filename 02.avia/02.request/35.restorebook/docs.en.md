@@ -6,18 +6,18 @@ title: RestoreBook
 
 Restoration of the canceled book.
 
-### Особенности
+### Features
 
 - This operation is possible only for canceled books.
 - RestoreBook works only for GDS Sirena (1H).
 
-#### Запрос
+#### Request
 
-##### Описание формата
+##### Format Description
 
 - **BookID** - book's ID, which is demanded to restore. Data's type - long.
 
-##### Пример
+##### Example
 
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avia="http://nemo-ibe.com/Avia" xmlns:stl="http://nemo-ibe.com/STL" xmlns:avia1="http://nemo.travel/Avia">
@@ -47,11 +47,11 @@ Restoration of the canceled book.
 </soapenv:Envelope>
 ```
 
-##### Ответ
+##### Response
 
 Similar to the [BookFlight](/avia/common/book).
 
-##### Пример
+##### Example
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
