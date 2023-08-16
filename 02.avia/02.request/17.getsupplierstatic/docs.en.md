@@ -115,6 +115,7 @@ Getting statics from suppliers' systems.
                            <Code>D</Code>
                            <BaseClass>Business</BaseClass>
                         </ClassByCode>
+					  </ClassesByCodes>
 				  </AirlineClasses>
                 </AirlneClassCodes>
             </a:ResponseBody>
