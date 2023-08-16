@@ -20,6 +20,44 @@ Getting statics from suppliers' systems.
 -  **CreditCardSupport.Airline** - airline code for which you want to get the information about supported credit cards. Data type - string.
 -  **CreditCardSupport.Country** - ISO Alpha2 country code for which the support of the specified airline cards is of interest. Data type - string.
 
+#### Example
+```xml
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:avia="http://nemo-ibe.com/Avia" xmlns:stl="http://nemo-ibe.com/STL">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <avia:GetSupplierStatic>
+         <!--Optional:-->
+         <avia:Request>
+            <stl:Requisites>
+               <stl:AuthToken>71D685584105397D2DC761C93F93E405</stl:AuthToken>
+               <!--Optional:-->
+               <stl:NemoOneAuthToken>71D685584105397D2DC761C93F93E405</stl:NemoOneAuthToken>
+               <!--Optional:-->
+               <stl:UserContextId>3599</stl:UserContextId>
+
+            </stl:Requisites>
+            <stl:UserID>3599</stl:UserID>
+            <!--Optional:-->
+            <stl:RequestType>P</stl:RequestType>
+            <stl:RequestBody>
+               <avia:Source>-10179</avia:Source>
+               <avia:StaticType>ClassOfService</avia:StaticType>
+               <!--Optional:-->
+<!--               <avia:CreditCardSupport>-->
+<!--                  <avia:Airline>?</avia:Airline>-->
+<!--                  <avia:Country>?</avia:Country>-->
+<!--               </avia:CreditCardSupport>-->
+               <!--Optional:-->
+<!--               <avia:AncillaryServiceCatalogue>-->
+<!--                  <avia:Airline>?</avia:Airline>-->
+<!--               </avia:AncillaryServiceCatalogue>-->
+            </stl:RequestBody>
+         </avia:Request>
+      </avia:GetSupplierStatic>
+   </soapenv:Body>
+</soapenv:Envelope>
+```
+
 #### Response
 -  **CreditCardSupport** - information about credit card support for the specified airline in the specified country. Data type - array.
 -  **CreditCardSupport.Code** - code of the supported credit card type. Data type - string.
