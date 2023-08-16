@@ -10,6 +10,8 @@ Price
 
 Contains the full information about the price and its formation for the booking or order.
 
+Formula for calculating the final ticket cost: TotalAgencyFare * number of PAX (for each PAX type) + AgencyMarkup (if applicable) + SubAgentMarkup (if applicable) + DiscountByPromoAction (if applicable).
+
 -   **TotalPrice** - total price of the PNR in the GDS for the whole order. Does not include agency charges set outside the GDS. It is displayed in the currency of the agency or requisites (depending on the supplier and settings). Data type - [Money](/avia/common/money).
 -   **ExpectedTicketCount** - expected number of tickets to be issued for this booking. Data type - int32.
 -   **FOPPrices** - contains the price difference for specific FOPs relatively to the price of the booking without specifying the planned FOP. Data type - array.
