@@ -74,3 +74,52 @@ Getting statics from suppliers' systems.
 -  **AirlneClassCodes.AirlineClasses.ClassByCode** - information about the relation of base class codes in the format of a particular airline to the server format. Data type - array.
 -  **AirlneClassCodes.AirlineClasses.ClassByCode.Code** - base class code in a particular airline format. Data type - string.
 -  **AirlneClassCodes.AirlineClasses.ClassByCode.BaseClass** - base class in server format. Data type - enumeration.
+
+#### Example
+```xml
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <GetSupplierStaticResponse xmlns="http://nemo-ibe.com/Avia">
+         <GetSupplierStaticResult xmlns:a="http://nemo-ibe.com/STL" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:RequestID>1191569912</a:RequestID>
+            <a:ResponseBody>
+               <AirlneClassCodes>
+                  <AirlineClasses>
+                     <AirlineCode>IATADefaults</AirlineCode>
+                     <ClassesByCodes>
+                        <ClassByCode>
+                           <Code>A</Code>
+                           <BaseClass>First</BaseClass>
+                        </ClassByCode>
+                        <ClassByCode>
+                           <Code>AN</Code>
+                           <BaseClass>First</BaseClass>
+                        </ClassByCode>
+                        <ClassByCode>
+                           <Code>B</Code>
+                           <BaseClass>Economy</BaseClass>
+                        </ClassByCode>
+                        <ClassByCode>
+                           <Code>BN</Code>
+                           <BaseClass>Economy</BaseClass>
+                        </ClassByCode>
+                        <ClassByCode>
+                           <Code>C</Code>
+                           <BaseClass>Business</BaseClass>
+                        </ClassByCode>
+                        <ClassByCode>
+                           <Code>CN</Code>
+                           <BaseClass>Business</BaseClass>
+                        </ClassByCode>
+                        <ClassByCode>
+                           <Code>D</Code>
+                           <BaseClass>Business</BaseClass>
+                        </ClassByCode>
+				  </AirlineClasses>
+                </AirlneClassCodes>
+            </a:ResponseBody>
+         </GetSupplierStaticResult>
+      </GetSupplierStaticResponse>
+   </s:Body>
+</s:Envelope>
+```
