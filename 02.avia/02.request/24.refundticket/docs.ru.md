@@ -21,6 +21,33 @@ taxonomy:
 - **Passengers.Ref** - Номер пассажира в брони. Тип данных - целое 32-битное число. (обязательное поле)
 - **Involuntary** - Признак вынужденного возврата (необязательный) Тип данных - булевский.
 
+#### Пример
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://nemo-ibe.com/STL" xmlns:ns2="http://nemo-ibe.com/Avia">
+  <SOAP-ENV:Body>
+    <ns2:RefundTicket_2_2>
+      <ns2:Request>
+        <ns1:Requisites>
+          <ns1:NemoOneAuthToken>bb09454fe24f54c6d0eb4c6ccc178a23</ns1:NemoOneAuthToken>
+          <ns1:UserContextId>12796</ns1:UserContextId>
+        </ns1:Requisites>
+        <ns1:UserID>12796</ns1:UserID>
+        <ns1:RequestType>P</ns1:RequestType>
+        <ns1:RequestBody>
+          <ns2:BookID>1410815</ns2:BookID>
+          <ns2:Passengers>
+            <ns1:Ref>1</ns1:Ref>
+          </ns2:Passengers>
+          <ns2:Involuntary>false</ns2:Involuntary>
+          <ns2:Reason>Voluntary</ns2:Reason>
+        </ns1:RequestBody>
+      </ns2:Request>
+    </ns2:RefundTicket_2_2>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+```
+
 #### Ответ
 
 ##### Описание формата
