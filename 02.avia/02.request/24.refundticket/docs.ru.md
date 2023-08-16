@@ -38,6 +38,7 @@ taxonomy:
 
 #### Пример
 
+```xml
 <?xml version="1.0"?>
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
   <s:Body>
@@ -102,3 +103,4 @@ taxonomy:
     </RefundTicket_2_2Response>
   </s:Body>
 </s:Envelope>
+```
