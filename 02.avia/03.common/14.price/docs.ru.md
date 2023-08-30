@@ -64,6 +64,62 @@ Price
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CheckResults.Check.Info.Result** - Результат проверки параметра. Тип данных - булевский.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.CorpRule** - Признак правила для предоставления скидки по тур. коду конкретным клиентам. Тип данных — булевский.
 -   **PricePart.PricingDebug.RulesDebugInfo.RuleData.BestCorpRule** - Признак наиболее подходящего правила для предоставления скидки по тур. коду. Тип данных — булевский.
+-   **PricePart.PricingDebug.Object** -  Список результатов проверки правил ценообразования. Тип данных - массив.
+-   **PricePart.PricingDebug.Object.ValidatingCompany** - код а/к, непосредственно выполняющая данный рейс. Тип данных — строка.
+-   **PricePart.PricingDebug.Object.PaymentDate** - Дата оплаты создании брони.
+-   **PricePart.PricingDebug.Object.FirstVendor** - Поставщик услуги страхования. Тип данных - строка.
+-   **PricePart.PricingDebug.Object.FlightType** - тип перелета. Тип данных - строка.
+-   **PricePart.PricingDebug.Object.MarketingVendor** - Код а/к, предоставляющей данный рейс. Тип данных - строка.
+-   **PricePart.PricingDebug.Object.BookingClass** - класса бронирования. Тип данных - строка.
+-   **PricePart.PricingDebug.Object.ServiceClass** - описание класса обслуживания. Тип данных - строка.
+-   **PricePart.PricingDebug.Object.FlightNumber** - 	номер рейса. Тип данных - строка.
+-   **PricePart.PricingDebug.Object.Aircraft** - код типа самолёта. Тип данных — строка.
+-   **PricePart.PricingDebug.Object.Passengers** - тип пассажиров, для которого перелёт. Тип данных — перечисление, возможные значения: (обязательное поле)
+* ADT — взрослый — пассажир старше 12-ти лет (по умолчанию);
+* UNN — ребёнок — пассажир старше 2-х и младше 12-ти лет без сопровождения взрослых;
+* CNN — ребёнок — пассажир старше 2-х и младше 12-ти лет;
+* INF — младенец — пассажир младше 2-х лет, не занимающий места в самолёте;
+* INS — младенец — пассажир младше 2-х лет, занимающий места в самолёте;
+* MIL — военнослужащий;
+* SEA — моряк;
+* SRC — пожилой пассажир;
+* STU — студент;
+* YTH — молодёжь.
+-   **PricePart.PricingDebug.Object.OperatingVendor** - Код а/к, предоставляющей данный рейс. Тип данных - строка.
+-   **PricePart.PricingDebug.Object.GDS** - Реквизиты подключения к GDS Тип данных - строка.
+-   **PricePart.PricingDebug.Object.UTMSource** -  источник перехода. Тип данных — строка.
+-   **PricePart.PricingDebug.Object.CodeSharing** - информация о code share соглашениях. Тип данных - строка.
+-   **PricePart.PricingDebug.Object.ContractType** - Тип контракта реквизитов выписки . Тип данных - строка.
+-   **PricePart.PricingDebug.Object.PrivateFare** - Признак наличия приватного тарифа в цене. Тип данных - строка.
+-   **PricePart.PricingDebug.Object.FlightDate** - дата вылета?   Тип данных - строка.
+-   **PricePart.PricingDebug.Object.DepartureAndArrival** - точка отправления и прибытия. Тип данных - строка.
+-   **PricePart.PricingDebug.Object.Zone** - зона аэропортов.  Тип данных - строка.
+-   **PricePart.PricingDebug.Object.DaysOfWeek** - Дни недели по которым совершается перелет.  (0-воскресенье) Тип данных — массив.
+-   **PricePart.PricingDebug.Object.Routes** - список маршрутов. Тип данных — массив.
+-   **PricePart.PricingDebug.Object.RouteType** - тип маршрута перелёта. Тип данных — перечисление, возможные значения:
+* OW — перелёт в одну сторону — простой перелёт, состоящий из одного плеча;
+* RT — перелет туда и обратно — перелёт из 2-х плечей, у которого точка вылета первого плеча совпадает с точкой прилёта второго плеча И точка прилёта первого плеча совпадает с точкой вылета второго плеча;
+* CT — сложный маршрут — некий произвольный набор плечей;
+* SingleOJ — одинарный Open Jaw — перелёт из 2-х плечей, у которого точка вылета первого плеча совпадает с точкой прилёта второго плеча ИЛИ точка прилёта первого плеча совпадает с точкой вылета второго плеча;
+* DoubleOJ — двойной Open Jaw — перелёт из 2-х плечей, у которого точка вылета первого плеча НЕ совпадает с точкой прилёта второго плеча И точка прилёта первого НЕ совпадает с точкой вылета второго плеча;
+* hRT — RT/2 — запрашивался простой OW перелёт, но на основании настроек определённого пакета реквизитов был запущен RT/2 поиск;
+* mOW — multipleOW — OW+OW+ — запрошенный перелёт из нескольких сегментов был найден как совокупность отдельных поисковых результатов.
+-   **PricePart.PricingDebug.Object.Price** - нформация о конкретной цене для данного перелёта. Тип данных — сложный.
+-   **PricePart.PricingDebug.Object.PriceActual** - Актауальная цена тарифа. Тип данных — строка
+-   **PricePart.PricingDebug.Object.Commission** - информация о комиссии Тип данных — строка
+-   **PricePart.PricingDebug.Object.AgencyCommission** - комиссия агенства. Тип данных — строка
+-   **PricePart.PricingDebug.Object.Bonus** - бонус авиакомпании. Тип данных — строка
+-   **PricePart.PricingDebug.Object.Charge** - компонент сбора. Тип данных — сложный.
+-   **PricePart.PricingDebug.Object.Tariffs** -Информация о тарифе, Тип данных - строка
+-   **PricePart.PricingDebug.Object.Taxes** - Информация об определённой таксе (сборе). Тип данных — строка
+-   **PricePart.PricingDebug.Object.AirlinesAndClasses** - информация о соотношении кодов базовых классов в формате конкретной а/к с серверным форматом. Тип данных - строка.
+-   **PricePart.PricingDebug.Object.ID** - идентификатор перелёта. Тип данных — строка. 
+-   **PricePart.PricingDebug.Object.FlightDateDeparture** - дата и время вылета Тип данных - строка
+-   **PricePart.PricingDebug.Object.SalePoint** - Пункт продажи. Тип данных - строка
+-   **PricePart.PricingDebug.Object.BrandCode** -  Код бренда на стороне поставщика. Тип данных — строка
+-   **PricePart.PricingDebug.Object.SsrCodes** - Код SSR, ассоциированного с данной допуслуглй. Тип данных - строка.
+-   **PricePart.PricingDebug.Object.FormOfPayment** - Форма оплаты.  Тип данных - строка
+-   **PricePart.PricingDebug.Object.AgencyCode** - Код агентства. Тип данных — строка.
 -   **PricePart.SubAgentMarkup** - Суммарный сбор субагента в валюте пакета реквизитов. Тип данных - [Money](/avia/common/money).
 -   **PricePart.SubAgentChargeBreakdown** - Разбивка сбора субагента в валюте субагентства. 
 -   **SubAgentChargeBreakdown.Charge** — Информация о конкретном сборе. Тип данных — массив.
