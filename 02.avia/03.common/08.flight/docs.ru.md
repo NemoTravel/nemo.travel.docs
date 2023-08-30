@@ -231,4 +231,6 @@ taxonomy:
 -   **Flight.BusinessRules.Rule** - информация о бизнес-правиле, сработавшего для данного перелёта. Тип данных — сложный.
 -   **Flight.BusinessRules.Rule.Id** - идентификатор сработавшего для данного перелёта бизнес-правила. Тип данных - строка.
 -   **Flight.BusinessRules.Rule.AdditionalParameters** - дополнительная информация о параметрах бизнес-правила, сработавшего для данного перелёта. Тип данных — сложный.
-
+-   **Flight.BusinessRules.Rule.AdditionalParameters.Parameter** - информация о конкретном бизнес правиле . Тип данных — сложный.
+-   **Flight.BusinessRules.Rule.AdditionalParameters.Parameter.Name** - наименование правила. Тип данных строка 
+-   **Flight.BusinessRules.Rule.AdditionalParameters.Parameter.Value** - значение параметра правила. Тип данных строка
