@@ -5,22 +5,23 @@ taxonomy:
         - docs
 ---
 
-### Сегмент перелёта (FlightSegment)
+### FlightSegment
 
-Содержит следующие параметры:
+Contains the following parameters:
 
--   **ID** - Уникальный номер данного сегмента перелёта, по которому система будет отличать его от других. Тип данных - целое 64-битное число.
--   **ItineraryID** - Номер [маршрута](/avia/grouping/airitinerary), к которому относится данный сегмент перелёта. Тип данных - целое 64-битное число.
--   **OperatingCompany** - Код а/к, непосредственно выполняющей данный рейс. Тип данных - строка.
--   **MarketingCompany** - Код а/к, предоставляющей данный рейс. Тип данных - строка.
--   **FlightNumber** - Код номера рейса. Тип данных - строка.
--   **AircraftType** - Код типа самолёта. Тип данных - строка.
--   **DepatureDateTime** - Дата и время отправления в формате yyyy-mm-ddthh:mm:ss. Тип данных - строка.
--   **ArrivalDateTime** - Дата и время прибытия в формате yyyy-mm-ddthh:mm:ss. Тип данных - строка.
--   **FlightTime** - Время в пути в минутах. Тип данных - целое 32-битное число.
--   **NotAirplaneSegmentInd** - Признак/идентификатор наземного сегмента. Тип данных - булевый.
+-   **ID** - unique ID of the flight segment, according to which the system will differ it from others. Data type - 64-bit integer.
+-   **IDInPNR** -  идентификатор заказа в системе поставщика (номер PNR в ГРС, ID заказа в отельной системе). Возвращается в ответе после создания брони перелёта.
+-   **ItineraryID** - [itinerary](/avia/grouping/airitinerary) number to which this segment of the flight belongs. Data type - 64-bit integer.
+-   **OperatingCompany** - code of the airline directly operating this flight. Data type - string.
+-   **MarketingCompany** - code of the airline providing this flight. Data type - string.
+-   **FlightNumber** - flight number code. Data type - string.
+-   **AircraftType** - aircraft type code. Data type - string.
+-   **DepatureDateTime** - date and time of departure in the <code>yyyy-mm-ddthh:mm:ss</code> format. Data type - string.
+-   **ArrivalDateTime** - date and time of arrival in the format <code>yyyy-mm-ddthh:mm:ss</code> format. Data type - string.
+-   **FlightTime** - flight time in minutes. Data type - 32-bit integer.
+-   **NotAirplaneSegmentInd** - ground/not airplane segment ID. Data type: bool.
 
-##### Пример
+##### Sample
 
 ```xml
 <?xml version="1.0"?>
@@ -78,8 +79,8 @@ taxonomy:
                 <ArrivalDateTime>2017-09-06T09:35:00</ArrivalDateTime>
                 <FlightTime>190</FlightTime>
                 <ETicket>true</ETicket>
+		 <a:NotAirplaneSegmentInd>false</a:NotAirplaneSegmentInd>
               </FlightSegment>
-
             </FlightSegments>
             <FlightPriceGroups>
               <FlightPriceGroup/>
