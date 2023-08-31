@@ -19,6 +19,22 @@ Contains the following parameters:
 -   **DepatureDateTime** - date and time of departure in the <code>yyyy-mm-ddthh:mm:ss</code> format. Data type - string.
 -   **ArrivalDateTime** - date and time of arrival in the format <code>yyyy-mm-ddthh:mm:ss</code> format. Data type - string.
 -   **FlightTime** - flight time in minutes. Data type - 32-bit integer.
+-   **OperatingAirline** - код авиакомпании, чей самолёт выполняет перевозку пассажиров. Тип данных — строка.
+-   **MarketingAirline** - код авиакомпании, которая выполняет продажу мест на данный рейс. Тип данных — строка.
+-   **ETicket** -сегменты перелёта. Тип данных — булевский.
+-   **BookingClassCode** - литера класса бронирования да данном сегменте. Тип данных — строка.
+-   **Status** -  статус сегмента. Тип данных — перечисление, возможные значения:
+	* **Confirmed;** 
+	* **NeedConfirmation;**
+	* **NotConfirmed;**
+	* **Canceled;**
+	* **Flew;**
+	* **OnRequest;**
+	* **Rejected.**
+-   **StatusCode** - индустриальный код статуса сегмента. Тип данных — строка.
+-   **SupplierRef** - идентификатор брони сегмента в инвенторной системе авиакомпании. Тип данных — строка.
+-   **RequestedSegment** - ссылка на сегмента из запроса пользователя. Тип данных — целое 32-битное число.
+-   **OperatingFlightNumber** - номер рейса для данного сегмента перелёта. Тип данных — целое 32-битное число.
 -   **NotAirplaneSegmentInd** - ground/not airplane segment ID. Data type: bool.
 
 ##### Sample
