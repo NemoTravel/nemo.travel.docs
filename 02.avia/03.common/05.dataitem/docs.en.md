@@ -86,7 +86,7 @@ To store different booking content.
 -  **FOPInfo** - form of payment for transfer to the service provider's system (optional). Data type - array.
 -  **FOPInfo.FOPs** - contains a list of payment forms for adding to the booking. Data type - array.
 -  **FOPInfo.FOPs.FOP** - information about one of the payment forms in the booking. Data type - array.
--  **FOPInfo.FOPs.FOP.type** - XML attribute, contains the indication of the type of the payment form class, necessary for the correct transfer of credit card data via CML. Data type - string. For the credit card data it must contain CreditCardFOP value with the xmlns of this type; for a payment with only the (PP/IN) number it is required to indicate NumberedFOP with the xmlns of this type. 
+-  **FOPInfo.FOPs.FOP.type** - XML attribute, contains the indication of the type of the payment form class, necessary for the correct transfer of credit card data via CML. Data type - string. For the credit card data it must contain CreditCardFOP value with the xmlns of this type; for a payment with only the (PP/IN) number it is required to indicate NumberedFOP with the xmlns of this type; for a payment with (AV) it is required to indicate PrepaymentFOP with the xmlns of this type. 
 -  **FOPInfo.FOPs.FOP.Amount** - amount of payment within this FOP. Data type - [Money](/avia/common/money). Required when using multi-FOP.
 -  **FOPInfo.FOPs.FOP.Type** - type of this FOP. Data type - enumeration, possible values:
 	-  **CA** - cash
@@ -94,6 +94,7 @@ To store different booking content.
 	-  **CK** - bank check
 	-  **IN** - invoice
 	-  **VZ** - clearing
+	-  **AV** - advance
 	-  **PP** - Payment Order, with its use, the indication of the <code>type = NumberedFOP</code> attribute and the filling of the Number field are required
 -  **FOPInfo.FOPs.FOP.VendorCode** - two-letter code of the credit card provider. Data type - string.
 -  **FOPInfo.FOPs.FOP.Number** - document number of the payment form (credit card or document for payment). Data type - string.
