@@ -42,3 +42,5 @@ process:
 -   **[StartTicketExchange](/avia/request/startticketexchange)** - Used to start a two-factor exchange.
 -   **[CancelTicketExchange](/avia/request/cancelticketexchange)** - Used to cancel after the start of a two-factor exchange operation.
 -   **[CompleteTicketExchange](/avia/request/completeticketexchange)** - Used to complete a two-factor exchange operation.
+
+The actual list of supported operations for each GDS is available in the following [**table**](https://docs.google.com/spreadsheets/d/1ufQbczW0UJ8ZoXIFy7ZQKgBa_rnVjA2A77x8bGPAIJw/edit?usp=sharing)
