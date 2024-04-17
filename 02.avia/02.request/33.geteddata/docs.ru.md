@@ -7,7 +7,7 @@ taxonomy:
 
 ### GetEDData
 
-Получение маски электронного документа из GDS. На текущий момент поддерживается получение маски из GDS Sirena, Galileo UAPI, Amadeus, S7, Farelogix.
+Получение маски электронного документа из GDS. На текущий момент поддерживается получение маски из GDS Sirena, Galileo UAPI, Amadeus, S7, Farelogix, SU.
 
 #### Запрос
 
