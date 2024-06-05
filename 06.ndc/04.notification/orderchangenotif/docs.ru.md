@@ -4,9 +4,9 @@ visible: true
 ---
 
 ### OrderChangeNotif
-`OrderChangeNotif` — нотификация при изменениях в заказе.
+OrderChangeNotif — нотификация при изменениях в заказе.
 #### Описание
-Нотификация `OrderChangeNotif` отправляется на URL, указанный в разделе админпанели `.../settings__nc_notifications`:
+Нотификация OrderChangeNotif отправляется на URL, указанный в разделе админпанели .../settings__nc_notifications:
 * при вызове OrderRetrieve, если в заказе произошли изменения;
 * при обновлении заказа;
 * при получении авиа-нотификаций.
