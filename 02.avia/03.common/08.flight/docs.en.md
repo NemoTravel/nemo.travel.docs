@@ -151,7 +151,7 @@ Flight representation format 1.1.
     - **Size** - baggage size;
     - **Weight** - baggage weight.
 -   **PassengerFare.Tariffs.Tariff.CarryOn.Value** - amount of carryon for this fare. Data type - string.
--   **PassengerFare.Tariffs.Tariff.FareFamilyFromSupplier** - attribute saying that tariffs from the supplier will be used directly, bypassing information from the static.
+-   **PassengerFare.Tariffs.Tariff.FareFamilyFromSupplier** - attribute saying that tariffs from the supplier will be used directly, bypassing information from the static. Data type - bool.
 -   **PassengerFare.Commission** - information about the commission for this price component from GDS. Data type - array.
 -   **PassengerFare.Commission.Amount** - absolute value of the commission. Data type - fractional number.
 -   **PassengerFare.Commission.Percent** - commission value in percents. Data type - fractional number.

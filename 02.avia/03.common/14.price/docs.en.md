@@ -128,6 +128,7 @@ Formula for calculating the final ticket cost: TotalAgencyFare * number of PAX (
     -   Refreshment
     -   Snack
 -   **Tariff.IsSystemTransfer** - attribute of the system transfer. Data type - bool.
+-   **PassengerFare.Tariffs.Tariff.FareFamilyFromSupplier** - attribute saying that tariffs from the supplier will be used directly, bypassing information from the static. Data type - bool.
 -   **PassengerTypePrice.FareCalc** - line for calculating the price. Data type - string.
 -   **PassengerTypePrice.Markup** - tax. Data type - [Money](/avia/common/money).
 -   **PassengerTypePrice.AgencyFare** - fare price in the agency currency. Data type - [Money](/avia/common/money).
