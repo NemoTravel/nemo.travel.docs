@@ -182,7 +182,7 @@ taxonomy:
 -   **PassengerFare.Tariffs.Tariff.SubsidyInfoID** - номер подходящего пакета субсидий для этого тарифа. Тип данных - целое 32-битное число.
 -   **PassengerFare.Tariffs.Tariff.SubType** - информации о тарифе означающая оценку по М2 условиям.Тип данных — строка.
    -    **M2** — М2 оценка.
--   **PassengerFare.Tariffs.Tariff.FareFamilyFromSupplier** - Признак того будут ли напрямую использоваться тарифы от поставщика в обход статики.
+-   **PassengerFare.Tariffs.Tariff.FareFamilyFromSupplier** - Признак того будут ли напрямую использоваться тарифы от поставщика в обход статики. Тип данных - bool.
 -   **PassengerFare.Commission** — информация о комиссии для данной ценовой составляющей от GDS. Тип данных — сложный.
 -   **PassengerFare.Commission.Amount** — абсолютное значение комиссии. Тип данных — дробное число.
 -   **PassengerFare.Commission.Percent** — значение комиссии в процентах. Тип данных — дробное число.

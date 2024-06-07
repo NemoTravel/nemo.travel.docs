@@ -193,6 +193,7 @@ Price
     -   Refreshment
     -   Snack
 -   **Tariff.IsSystemTransfer** — Признак системного трансфера. Тип данных — bool.
+-   **PassengerFare.Tariffs.Tariff.FareFamilyFromSupplier** - Признак того будут ли напрямую использоваться тарифы от поставщика в обход статики. Тип данных - bool.
 -   **PassengerTypePrice.FareCalc** — Строка рассчёта цены. Тип данных — строка.
 -   **PassengerTypePrice.Markup** — Сбор. Тип данных - [Money](/avia/common/money).
 -   **PassengerTypePrice.AgencyFare** — Cумма тарифа в валюте агентства. Тип данных — [Money](/avia/common/money).
