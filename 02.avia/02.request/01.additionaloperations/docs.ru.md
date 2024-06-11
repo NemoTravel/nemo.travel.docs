@@ -20,7 +20,7 @@ taxonomy:
 	- **GetFareRules** - получение тарифных правил;
 	- **GetSeatMap** - получение карты мест;
 	- **GetPrice** - получение актуальной цены перелёта, выполняется только для перелёта;
-	- **SearchAncillaryServices** - получение списка доступных дополнительных услуг для перелета или брони (реализован только для GDS Sirena и Amadeus);
+	- **SearchAncillaryServices** - получение списка доступных дополнительных услуг для перелета или брони;
 	- **GetAllowedCCs** - получение списка кодов кредитных карт, которыми можно оплатить данную бронь через GDS-процессинг; <!--    	- **GetAllowedLoyaltyCards** - get information about loyalty cards that can be used on this flight. At the moment there is no support for this operation. -->
 	- **ActualizeFlight** - актуализация перелёта;
 	- **GetFareFamilies** - получение варианта оценки перелёта тарифами из разных семейств;
