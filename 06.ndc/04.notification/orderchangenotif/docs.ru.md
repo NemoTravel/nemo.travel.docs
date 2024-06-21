@@ -20,7 +20,7 @@ OrderChangeNotif — нотификация при изменениях в за�
 #### Запрос
 Отправляется разница между состояниями бронирования.
 
-#### Пример
+#### Пример AviaAPI
 ```
 <?xml version="1.0"?>
 <OrderChangeNotificationRequest xmlns="http://nemo.travel/Avia" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
@@ -32,7 +32,7 @@ OrderChangeNotif — нотификация при изменениях в за�
 </OrderChangeNotificationRequest>
 ```
 
-#### Пример
+#### Пример NDC
 ```xml
 <?xml version="1.0"?>
 <OrderChangeNotif xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.iata.org/IATA/EDIST/2017.2" Target="Test" Version="17.2">
