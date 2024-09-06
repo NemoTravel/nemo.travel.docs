@@ -179,6 +179,17 @@ taxonomy:
     -   **Size** — размер багажа;
    -    **Weight** — вес.
 -   **PassengerFare.Tariffs.Tariff.CarryOn.Value** — количество ручной клади по данному тарифу. Тип данных — строка.
+-   **PassengerFare.Tariffs.Tariff.BaggageDetailsList** — содержит информацию о ручной клади (**CarryOn**) и о бесплатном багаже по данному тарифу (**FreeBaggage**), по каждой единице багажа/клади. Тип данных - сложный.
+-   **PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage** — описание единицы багажа. Тип данных — сложный.
+-   **PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage.Type** — тип описываемого багажа. Тип данных — строка, возможные значения:
+	-   **HandLuggage** — ручная кладь;
+	-   **CheckedBaggage** — бесплатный багаж по данному тарифу.
+-   **PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage.Count** — количество багажа/клади. Тип данных — целое 32-битное число.
+-   **PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage.Weight** — вес багажа/клади. Тип данных — целое 32-битное число.
+-   **PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage.WeightUnit** — единица измерения багажа/клади. Тип данных — строка, возможные значения:
+	-	**kg** — килограммы;
+	-	**lb** — фунты.
+-	**PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage.Size** — размер багажа/клади. Тип данных — строка.
 -   **PassengerFare.Tariffs.Tariff.SubsidyInfoID** - номер подходящего пакета субсидий для этого тарифа. Тип данных - целое 32-битное число.
 -   **PassengerFare.Tariffs.Tariff.SubType** - информации о тарифе означающая оценку по М2 условиям.Тип данных — строка.
    -    **M2** — М2 оценка.
