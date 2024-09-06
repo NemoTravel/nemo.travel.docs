@@ -179,17 +179,17 @@ taxonomy:
     -   **Size** — размер багажа;
    -    **Weight** — вес.
 -   **PassengerFare.Tariffs.Tariff.CarryOn.Value** — количество ручной клади по данному тарифу. Тип данных — строка.
--   **PassengerFare.Tariffs.Tariff.BaggageDetailsList** — содержит информацию о ручной клади (**CarryOn**) и о бесплатном багаже по данному тарифу (**FreeBaggage**), по каждой единице багажа/клади. Тип данных — сложный.
+-   **PassengerFare.Tariffs.Tariff.BaggageDetailsList** — содержит информацию о ручной клади (**CarryOn**) и о бесплатном багаже по данному тарифу (**FreeBaggage**), по каждой единице багажа/клади. Тип данных — сложный, может содержать 1 и более элементов **Baggage**.
 -   **PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage** — описание единицы багажа. Тип данных — сложный.
--   **PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage.Type** — тип описываемого багажа. Тип данных — строка, возможные значения:
+-   **PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage.Type** — тип описываемого багажа, обязательное поле. Тип данных — строка, возможные значения:
 	-   **HandLuggage** — ручная кладь;
 	-   **CheckedBaggage** — бесплатный багаж по данному тарифу.
--   **PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage.Count** — количество багажа/клади. Тип данных — целое 32-битное число.
--   **PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage.Weight** — вес багажа/клади. Тип данных — целое 32-битное число.
--   **PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage.WeightUnit** — единица измерения багажа/клади. Тип данных — строка, возможные значения:
+-   **PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage.Count** — количество багажа/клади, обязательное поле. Тип данных — целое 32-битное число. Может принимать значения больше или равное нулю. Если значение 0, это означает, что бесплатный багаж данного типа не включен в данный тариф.
+-   **PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage.Weight** — вес багажа/клади, необязательное поле. Тип данных — целое 32-битное число. Поле может не иметь значения "< Weight i:nil="true"/ >".
+-   **PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage.WeightUnit** — единица измерения багажа/клади, необязательное поле. Тип данных — строка, возможные значения (поле может не иметь значения "< WeightUnit i:nil="true"/ >"):
 	-	**kg** — килограммы;
 	-	**lb** — фунты.
--	**PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage.Size** — размер багажа/клади. Тип данных — строка.
+-	**PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage.Size** — размер багажа/клади, необязательное поле. Тип данных — строка, формат заполнения произвольный. Поле может не иметь значения "< Size i:nil="true"/ >".
 -   **PassengerFare.Tariffs.Tariff.SubsidyInfoID** - номер подходящего пакета субсидий для этого тарифа. Тип данных - целое 32-битное число.
 -   **PassengerFare.Tariffs.Tariff.SubType** - информации о тарифе означающая оценку по М2 условиям.Тип данных — строка.
    -    **M2** — М2 оценка.
