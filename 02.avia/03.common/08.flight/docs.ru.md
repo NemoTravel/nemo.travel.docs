@@ -179,7 +179,7 @@ taxonomy:
     -   **Size** — размер багажа;
    -    **Weight** — вес.
 -   **PassengerFare.Tariffs.Tariff.CarryOn.Value** — количество ручной клади по данному тарифу. Тип данных — строка.
--   **PassengerFare.Tariffs.Tariff.BaggageDetailsList** — содержит информацию о ручной клади (**CarryOn**) и о бесплатном багаже по данному тарифу (**FreeBaggage**), по каждой единице багажа/клади. Тип данных - сложный.
+-   **PassengerFare.Tariffs.Tariff.BaggageDetailsList** — содержит информацию о ручной клади (**CarryOn**) и о бесплатном багаже по данному тарифу (**FreeBaggage**), по каждой единице багажа/клади. Тип данных — сложный.
 -   **PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage** — описание единицы багажа. Тип данных — сложный.
 -   **PassengerFare.Tariffs.Tariff.BaggageDetailsList.Baggage.Type** — тип описываемого багажа. Тип данных — строка, возможные значения:
 	-   **HandLuggage** — ручная кладь;
