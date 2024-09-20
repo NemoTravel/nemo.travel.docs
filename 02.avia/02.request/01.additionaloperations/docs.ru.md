@@ -131,7 +131,7 @@ taxonomy:
 -   **GetFareRulesResult.Rules.Rule.Tariff** — код тарифа, к которому применяется данное правило. Тип данных - строка.
 -   **GetFareRulesResult.Rules.Rule.Name** — заголовок тарифного правила. Тип данных - строка.
 -   **GetFareRulesResult.Rules.Rule.RuleText** — текст тарифного правила. Тип данных - строка.
--   **GetFareRulesResult.Rules.Rule.SegmentRefs** — ссылка на сегменты кода тарифов. Тип данных — RefList.
+-   **GetFareRulesResult.Rules.Rule.SegmentRefs** — ссылка на сегменты кода тарифов. Тип данных — [RefList](/avia/common/reflist).
 -   **GetFareRulesResult.Rules.Rule.SegmentRefs.Ref** — Ссылка на сегмент.Тип данных - int.
 -   **GetSeatMapResult** — Результат получения карты мест. Тип данных - массив.
 -   **GetSeatMapResult.SeatMapSegments** — контейнер для карт мест по каждому из сегментов перелёта. Тип данных - массив.
