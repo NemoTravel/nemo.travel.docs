@@ -165,11 +165,11 @@ taxonomy:
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment** -
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.Columns** -
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.Columns.ColumnID** -
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.CabinComponents** -
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.CabinComponents.CabinComponent** -
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.CabinComponents.CabinComponent.CabinComponentTypeCode** -
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.FirstRowNumber** -
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.LastRowNumber** -
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.CabinComponents** - контейнер для списка компоновок кресел. Тип данных - массив.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.CabinComponents.CabinComponent** - список компоновок кресел. Тип данных - массив.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.CabinComponents.CabinComponent.CabinComponentTypeCode** - тип компоновок кресел 
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.FirstRowNumber** - номер первого ряда
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.LastRowNumber** - номер последнего ряда
 
 -   **GetPriceResult** - результат получения актуальной цены перелёта. Тип данных - массив.
 -   **GetPriceResult.Flight** - плоский перелёт v1.1. Тип данных - массив.
