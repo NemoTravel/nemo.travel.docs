@@ -161,8 +161,8 @@ taxonomy:
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Characteristics** - характеристика ряда мест. Тип данных - строка.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.CabinCode** - класс, к которому принадлежит место. Только для MixvelPlatform. Тип данных - строка.
 
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments** -
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment** -
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments** - контейнер с информацией по компоновке воздушного судна. Тип данных - массив.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment** - информация по компоновке воздушного судна. Тип данных - массив.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.Columns** -
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.Columns.ColumnID** -
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.CabinComponents** - контейнер для списка компоновок кресел. Тип данных - массив.
