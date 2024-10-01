@@ -160,7 +160,6 @@ taxonomy:
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.RFISC** - RFISC места. Тип данных - строка.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Characteristics** - характеристика ряда мест. Тип данных - строка.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.CabinCode** - класс, к которому принадлежит место. Только для MixvelPlatform. Тип данных - строка.
-
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments** - контейнер с информацией по компоновке воздушного судна. Тип данных - массив.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment** - информация по компоновке воздушного судна. Тип данных - массив.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.Columns** - массив идентификаторов мест в ряду.
@@ -170,7 +169,6 @@ taxonomy:
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.CabinComponents.CabinComponent.CabinComponentTypeCode** - тип компоновок кресел 
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.FirstRowNumber** - номер первого ряда. Тип данных - целое 32 битное число.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.LastRowNumber** - номер последнего ряда. Тип данных - целое 32 битное число.
-
 -   **GetPriceResult** - результат получения актуальной цены перелёта. Тип данных - массив.
 -   **GetPriceResult.Flight** - плоский перелёт v1.1. Тип данных - массив.
 -   **FindAdditionalServicesResult** - результат получения списка доступных допуслуг. Тип данных - массив.
