@@ -163,8 +163,8 @@ taxonomy:
 
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments** - контейнер с информацией по компоновке воздушного судна. Тип данных - массив.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment** - информация по компоновке воздушного судна. Тип данных - массив.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.Columns** -
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.Columns.ColumnID** -
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.Columns** - массив идентификаторов мест в ряду.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.Columns.ColumnID** - идентификатор места в ряду. Тип данных — перечисление.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.CabinComponents** - контейнер для списка компоновок кресел. Тип данных - массив.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.CabinComponents.CabinComponent** - список компоновок кресел. Тип данных - массив.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.CabinComponents.CabinComponent.CabinComponentTypeCode** - тип компоновок кресел 
