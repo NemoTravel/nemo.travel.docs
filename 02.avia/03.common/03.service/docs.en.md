@@ -110,6 +110,7 @@ The description of the flight
 	-   **FlightSegment.RequestedSegment** - segment reference from the user's request. Data type - int32.
 	-   **FlightSegment.FlightDistance** - numerical value of flight distance in miles (relevant fo GDS Amadeus). Data type - int32.
 	-   **FlightSegment.CO2Emission** - CO2 exhaust in kg/m (relevant for GDS Amadeus). Data type - int32.
+-   **HasSupplierVirtualInterline** - indication of the flight for which one or more PNRs will return. Data type - bool.
 -   **BusinessRules** - information about the business rules for this flight. Data type - array of **Rule** elements.
 -   **BusinessRules.Rule** - information about the business rule that worked for this flight. Data type — **BusinessRule**.
 -   **BusinessRules.Rule.Id** - ID of the business rule that worked for this flight. Data type - string.
