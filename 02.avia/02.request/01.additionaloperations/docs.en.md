@@ -217,7 +217,7 @@ Includes the set of elements caused by operstion in the request:
                  <a:DefaultTicketingRequisiteID>I37H</a:DefaultTicketingRequisiteID>
                  <a:CustomTicketingRequisites xmlns:b="http://nemo.travel/Avia">
                     <b:RequisiteConfig>
-                        <b:AppliesToCompanies>S7,A9,ET,NT,U6,Z6,5N</b:AppliesToCompanies>
+                        <b:AppliesToCompanies>A9,ET,NT,ZZ</b:AppliesToCompanies>
                         <b:RequisiteID>RM5G</b:RequisiteID>
                     </b:RequisiteConfig>
                  </a:CustomTicketingRequisites>
@@ -237,9 +237,9 @@ Includes the set of elements caused by operstion in the request:
               <Segment>
                 <a:ID>1</a:ID>
                 <DepAirp>
-                  <AirportCode>DME</AirportCode>
-                  <CityCode>MOW</CityCode>
-                  <UTC>3</UTC>
+                  <AirportCode>CDG</AirportCode>
+                  <CityCode>PAR</CityCode>
+                  <UTC>2</UTC>
                 </DepAirp>
                 <ArrAirp>
                   <AirportCode>BCN</AirportCode>
@@ -248,8 +248,8 @@ Includes the set of elements caused by operstion in the request:
                 </ArrAirp>
                 <FlightNumber>845</FlightNumber>
                 <FlightTime>285</FlightTime>
-                <OpAirline>U6</OpAirline>
-                <MarkAirline>U6</MarkAirline>
+                <OpAirline>ZZ</OpAirline>
+                <MarkAirline>ZZ</MarkAirline>
                 <AircraftType>321</AircraftType>
                 <DepDateTime>2017-10-09T07:55:00</DepDateTime>
                 <ArrDateTime>2017-10-09T11:40:00</ArrDateTime>
@@ -279,8 +279,8 @@ Includes the set of elements caused by operstion in the request:
           </a:ArrAirp>
           <a:FlightNumber>148</a:FlightNumber>
           <a:FlightTime>120</a:FlightTime>
-          <a:OpAirline>Э4</a:OpAirline>
-          <a:MarkAirline>Э4</a:MarkAirline>
+          <a:OpAirline>ZZ</a:OpAirline>
+          <a:MarkAirline>ZZ</a:MarkAirline>
           <a:AircraftType>BUS</a:AircraftType>
           <a:DepDateTime>2019-06-28T00:35:00</a:DepDateTime>
           <a:ArrDateTime>2019-06-28T02:35:00</a:ArrDateTime>
@@ -301,7 +301,7 @@ Includes the set of elements caused by operstion in the request:
             <PriceInfo>
               <Price>
                 <a:ID>1</a:ID>
-                <ValidatingCompany>U6</ValidatingCompany>
+                <ValidatingCompany>ZZ</ValidatingCompany>
                 <Refundable>NonRefundable</Refundable>
                 <PrivateFareInd>false</PrivateFareInd>
                 <TicketTimeLimit>2017-09-08T18:54:00</TicketTimeLimit>
@@ -313,23 +313,15 @@ Includes the set of elements caused by operstion in the request:
                       <a:Amount>78</a:Amount>
                       <a:Currency>EUR</a:Currency>
                     </BaseFare>
-                    <EquiveFare>
-                      <a:Amount>5385</a:Amount>
-                      <a:Currency>RUB</a:Currency>
-                    </EquiveFare>
-                    <TotalFare>
-                      <a:Amount>6834</a:Amount>
-                      <a:Currency>RUB</a:Currency>
-                    </TotalFare>
                     <Taxes>
                       <Tax>
-                        <a:Amount>1104</a:Amount>
-                        <a:Currency>RUB</a:Currency>
+                        <a:Amount>11</a:Amount>
+                        <a:Currency>EUR</a:Currency>
                         <TaxCode>YQF</TaxCode>
                       </Tax>
                       <Tax>
-                        <a:Amount>345</a:Amount>
-                        <a:Currency>RUB</a:Currency>
+                        <a:Amount>34</a:Amount>
+                        <a:Currency>EUR</a:Currency>
                         <TaxCode>YRI</TaxCode>
                       </Tax>
                     </Taxes>
@@ -353,8 +345,8 @@ Includes the set of elements caused by operstion in the request:
             <FareFamiliesDescription>
               <a:Description>
                 <a:ID>0</a:ID>
-                <a:Name>Промо</a:Name>
-                <a:Carryon>1 место до 5 кг</a:Carryon>
+                <a:Name>Name</a:Name>
+                <a:Carryon>Decsription</a:Carryon>
                 <a:Refundable>NonRefundable</a:Refundable>
                 <a:Exchangable>true</a:Exchangable>
                 <a:UniversalParameters>
@@ -368,10 +360,6 @@ Includes the set of elements caused by operstion in the request:
                       <a:LangItem>
                         <a:Code>DE</a:Code>
                         <a:Value>bis zu 5 kg</a:Value>
-                      </a:LangItem>
-                      <a:LangItem>
-                        <a:Code>RU</a:Code>
-                        <a:Value>5 кг </a:Value>
                       </a:LangItem>
                     </a:ShortDescription>
                     <a:FullDescription/>
@@ -389,10 +377,6 @@ Includes the set of elements caused by operstion in the request:
                         <a:Code>DE</a:Code>
                         <a:Value>eine Tasche bis zu 10 kg</a:Value>
                       </a:LangItem>
-                      <a:LangItem>
-                        <a:Code>RU</a:Code>
-                        <a:Value>один чемодан 10 кг</a:Value>
-                      </a:LangItem>
                     </a:ShortDescription>
                     <a:FullDescription/>
                     <a:NeedToPay>Free</a:NeedToPay>
@@ -409,10 +393,6 @@ Includes the set of elements caused by operstion in the request:
                         <a:Code>DE</a:Code>
                         <a:Value>Änderungen am Ticket vor der Abreise</a:Value>
                       </a:LangItem>
-                      <a:LangItem>
-                        <a:Code>RU</a:Code>
-                        <a:Value>Изменения в билете до вылета</a:Value>
-                      </a:LangItem>
                     </a:ShortDescription>
                     <a:FullDescription>
                       <a:LangItem>
@@ -422,10 +402,6 @@ Includes the set of elements caused by operstion in the request:
                       <a:LangItem>
                         <a:Code>DE</a:Code>
                         <a:Value>Änderungen am Ticket vor der Abreise (40 Minuten vor dem Ende der Anmeldung) sind mit einem Aufpreis für jedes Segment erlaubt.</a:Value>
-                      </a:LangItem>
-                      <a:LangItem>
-                        <a:Code>RU</a:Code>
-                        <a:Value>Изменения в билете до вылета (за 40 мин. до окончания регистрации) разрешены со сбором за каждый сегмент.</a:Value>
                       </a:LangItem>
                     </a:FullDescription>
                     <a:NeedToPay>Charge</a:NeedToPay>
@@ -442,10 +418,6 @@ Includes the set of elements caused by operstion in the request:
                         <a:Code>DE</a:Code>
                         <a:Value>Ticketrückerstattung</a:Value>
                       </a:LangItem>
-                      <a:LangItem>
-                        <a:Code>RU</a:Code>
-                        <a:Value>Возврат билета</a:Value>
-                      </a:LangItem>
                     </a:ShortDescription>
                     <a:FullDescription>
                       <a:LangItem>
@@ -455,10 +427,6 @@ Includes the set of elements caused by operstion in the request:
                       <a:LangItem>
                         <a:Code>DE</a:Code>
                         <a:Value>Fare ist völlig nicht rückzahlbar.</a:Value>
-                      </a:LangItem>
-                      <a:LangItem>
-                        <a:Code>RU</a:Code>
-                        <a:Value>Тариф полностью невозвратный.</a:Value>
                       </a:LangItem>
                     </a:FullDescription>
                     <a:NeedToPay>NotAvailable</a:NeedToPay>
@@ -474,10 +442,6 @@ Includes the set of elements caused by operstion in the request:
                       <a:LangItem>
                         <a:Code>DE</a:Code>
                         <a:Value>Promo</a:Value>
-                      </a:LangItem>
-                      <a:LangItem>
-                        <a:Code>RU</a:Code>
-                        <a:Value>Промо</a:Value>
                       </a:LangItem>
                     </a:ShortDescription>
                     <a:FullDescription/>
@@ -495,10 +459,6 @@ Includes the set of elements caused by operstion in the request:
                         <a:Code>DE</a:Code>
                         <a:Value>Mahlzeiten an Bord</a:Value>
                       </a:LangItem>
-                      <a:LangItem>
-                        <a:Code>RU</a:Code>
-                        <a:Value>Питание на борту</a:Value>
-                      </a:LangItem>
                     </a:ShortDescription>
                     <a:FullDescription/>
                     <a:NeedToPay>Free</a:NeedToPay>
@@ -515,10 +475,6 @@ Includes the set of elements caused by operstion in the request:
                         <a:Code>DE</a:Code>
                         <a:Value>Erste Reihe Sitze</a:Value>
                       </a:LangItem>
-                      <a:LangItem>
-                        <a:Code>RU</a:Code>
-                        <a:Value>Рассадка на первых рядах</a:Value>
-                      </a:LangItem>
                     </a:ShortDescription>
                     <a:FullDescription>
                       <a:LangItem>
@@ -528,10 +484,6 @@ Includes the set of elements caused by operstion in the request:
                       <a:LangItem>
                         <a:Code>DE</a:Code>
                         <a:Value>Erste Reihe Sitze — nicht verfügbar.</a:Value>
-                      </a:LangItem>
-                      <a:LangItem>
-                        <a:Code>RU</a:Code>
-                        <a:Value>Рассадка на первых рядах — недоступно.</a:Value>
                       </a:LangItem>
                     </a:FullDescription>
                     <a:NeedToPay>NotAvailable</a:NeedToPay>
@@ -548,10 +500,6 @@ Includes the set of elements caused by operstion in the request:
                         <a:Code>DE</a:Code>
                         <a:Value>Vorrangiger Check-in für einen Flug</a:Value>
                       </a:LangItem>
-                      <a:LangItem>
-                        <a:Code>RU</a:Code>
-                        <a:Value>Приоритетная регистрация на рейс</a:Value>
-                      </a:LangItem>
                     </a:ShortDescription>
                     <a:FullDescription>
                       <a:LangItem>
@@ -561,10 +509,6 @@ Includes the set of elements caused by operstion in the request:
                       <a:LangItem>
                         <a:Code>DE</a:Code>
                         <a:Value>Vorrangiger Check-in für einen Flug — nicht verfügbar.</a:Value>
-                      </a:LangItem>
-                      <a:LangItem>
-                        <a:Code>RU</a:Code>
-                        <a:Value>Приоритетная регистрация на рейс — недоступно.</a:Value>
                       </a:LangItem>
                     </a:FullDescription>
                     <a:NeedToPay>NotAvailable</a:NeedToPay>
@@ -581,10 +525,6 @@ Includes the set of elements caused by operstion in the request:
                         <a:Code>DE</a:Code>
                         <a:Value>Vorrangiges Einsteigen</a:Value>
                       </a:LangItem>
-                      <a:LangItem>
-                        <a:Code>RU</a:Code>
-                        <a:Value>Приоритетная посадка в самолёт</a:Value>
-                      </a:LangItem>
                     </a:ShortDescription>
                     <a:FullDescription>
                       <a:LangItem>
@@ -594,10 +534,6 @@ Includes the set of elements caused by operstion in the request:
                       <a:LangItem>
                         <a:Code>DE</a:Code>
                         <a:Value>Vorrangiges Einsteigen — nicht verfügbar.</a:Value>
-                      </a:LangItem>
-                      <a:LangItem>
-                        <a:Code>RU</a:Code>
-                        <a:Value>Приоритетная посадка в самолёт — недоступно.</a:Value>
                       </a:LangItem>
                     </a:FullDescription>
                     <a:NeedToPay>NotAvailable</a:NeedToPay>
@@ -614,10 +550,6 @@ Includes the set of elements caused by operstion in the request:
                         <a:Code>DE</a:Code>
                         <a:Value>«Wings» Boni</a:Value>
                       </a:LangItem>
-                      <a:LangItem>
-                        <a:Code>RU</a:Code>
-                        <a:Value>Начисление бонусов</a:Value>
-                      </a:LangItem>
                     </a:ShortDescription>
                     <a:FullDescription>
                       <a:LangItem>
@@ -627,10 +559,6 @@ Includes the set of elements caused by operstion in the request:
                       <a:LangItem>
                         <a:Code>DE</a:Code>
                         <a:Value>Alle Mitglieder von «Wings Loyalty Program» bekommen Punkte zu Wings Loyalty Account (ca. 5% des geltenden Tarifs).</a:Value>
-                      </a:LangItem>
-                      <a:LangItem>
-                        <a:Code>RU</a:Code>
-                        <a:Value>Участники программы «Крылья» получают на свой счет бонусы (5% от оплаченного тарифа).</a:Value>
                       </a:LangItem>
                     </a:FullDescription>
                     <a:NeedToPay>Free</a:NeedToPay>
