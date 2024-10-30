@@ -4,7 +4,7 @@ title: CloseSession
 
 #### CloseSession
 
-Request for session opening.
+Request for session closing.
 
 #### Request
 
