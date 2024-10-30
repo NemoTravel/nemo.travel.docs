@@ -11,7 +11,6 @@ Request for getting information on bans.
 ##### Format Description
 
 -   **SubAgenciesIDs** — list of external subagents, on which you want to get bans information (optional field). Data type — array.
-
 -   **SubAgencyID** — ID of external subagent (mandatory field). Data type — 32-bit integer.
 
 ##### Examples
