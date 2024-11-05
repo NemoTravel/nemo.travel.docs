@@ -22,7 +22,7 @@ taxonomy:
 * **data.coupons.ID_CPN_N** — container with N-coupon data. Data type - custom.
 * **data.coupons.ID_CPN_N.document** - document identificator.
 * **data.coupons.ID_CPN_N.status** - coupon status. Data type - string.
-* **data.coupons.ID_CPN_N.statusCode** - coupon substatus. Data tyoe - string.
+* **data.coupons.ID_CPN_N.statusCode** - coupon status code. Data tyoe - string.
 * **data.coupons.ID_CPN_N.segment** - coupon segment identificator.
 * **data.currentServerDate** — upload date by server time. Data type - string.
 * **data.customer** — container with customer data. Data type - custom.

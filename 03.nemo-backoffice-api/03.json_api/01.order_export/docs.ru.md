@@ -23,8 +23,8 @@ taxonomy:
 * **data.coupons.ID_CPN_N** — контейнер с данными об N-м купоне. Тип данных — сложный.
 * **data.coupons.ID_CPN_N.document** - идентификатор документа.
 * **data.coupons.ID_CPN_N.status** - статус купона. Тип данных - строка
-* **data.coupons.ID_CPN_N.statusCode** - статус код купона. Тип данных - строка
-* **data.coupons.ID_CPN_N.segment** - Идентификатор сегмента
+* **data.coupons.ID_CPN_N.statusCode** - сатус код купона. Тип данных - строка
+* **data.coupons.ID_CPN_N.segment** - Идентификатор сегмента купона.
 * **data.currentServerDate** — дата выгрузки по серверному времени. Тип данных — строка.
 * **data.customer** — контейнер с данными о покупателе. Тип данных — сложный.
 * **data.customer.userId** — идентификатор пользователя, которому принадлежит объект выгрузки. Тип данных — целое 64-битное число.
