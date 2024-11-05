@@ -18,6 +18,12 @@ taxonomy:
 * **data.system** — instance to which the upload object belongs. Data type - string.
 * **data.id** — ID of the upload object Nemo.Travel. Data type - 64-bit integer.
 * **data.lastModifiedDate** — date of the last modification of the upload object. Data type - string.
+* **data.coupons** — container with coupon data. Data type - custom.
+* **data.coupons.ID_CPN_N** — container with N-coupon data. Data type - custom.
+* **data.coupons.ID_CPN_N.document** - document identificator.
+* **data.coupons.ID_CPN_N.status** - coupon status. Data type - string.
+* **data.coupons.ID_CPN_N.statusCode** - coupon substatus. Data tyoe - string.
+* **data.coupons.ID_CPN_N.segment** - Идентификатор сегмента
 * **data.currentServerDate** — upload date by server time. Data type - string.
 * **data.customer** — container with customer data. Data type - custom.
 * **data.customer.userId** — user ID to which the upload object belongs. Data type - 64-bit integer.
