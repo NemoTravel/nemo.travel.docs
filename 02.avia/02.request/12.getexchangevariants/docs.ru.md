@@ -95,6 +95,7 @@ taxonomy:
 ##### Описание формата
 
 -   **PlaneFlights** - Аналогичен параметру *PlaneFlights* из ответа [Search](/avia/request/search).
+-   **ForChange** - Признак сегмента на котором происходит обмен.Тип данных - bool.
 -   **SimpleGroupedFlights** - Аналогичен параметру *SimpleGroupedFlights* из ответа [Search](/avia/request/search).
 -   **ServicesToRefund** - контейнер с информацией по доп. услугам, которые будут возвращены. Тип данных - сложный.
 -   **ServicesToRefund.ID** - идентификатор доп. услуги, которая будет возвращена. Тип данный - int.
