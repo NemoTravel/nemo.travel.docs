@@ -74,6 +74,7 @@ If the request does not indicate the packages for which it is necessary to read 
  - WaitingConfirmation - queue of waiting confirmation
  - ServiceInfoChanged - queue with changes in SSR
  - TimeLimit - queue with expiring TL
+ - VendorRemarks - books with SSR from airline
 -  **UpdateAll** - attribute of the need to update all found orders. Data type - bool.
 -  **RemoveAfterRead** - remove orders from the queue after reading. Data type - bool.
 -  **ListAgencyQueues** - attribute of the need to read queues from the agency settings. Data type - bool.
