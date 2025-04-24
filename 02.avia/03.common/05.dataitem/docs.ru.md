@@ -58,7 +58,9 @@ taxonomy:
     -   **Vendor**;
     -   **NemoInternal**;
     -   **Confidential**;
-    -   **MiniItinerary**.
+    -   **MiniItinerary**;
+    -   **YCategory**;
+    -   **Rmz**.
 -   **Remark.Text** — текст ремарки. Тип данных — строка.
 -   **TimeLimits** — таймлимиты (необязательный). Тип данных — массив.
 -   **TimeLimits.EffectiveTimeLimit** — эффективный таймлимит, определяется как минимальный из всех таймлимитов, кроме таймлимита на войдирование и агентского таймлимита. Тип данных — дата и время с указанием часового пояса: YYYY-MM-DD hh:mm:ss ±hh:mm
