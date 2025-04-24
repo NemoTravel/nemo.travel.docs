@@ -58,6 +58,8 @@ To store different booking content.
     -   **NemoInternal**
     -   **Confidential**
     -   **MiniItinerary**
+    -   **YCategory**
+    -   **Rmz**
 -  **Remark.Text** - remark text. Data type - string.
 -  **TimeLimits** - time limits (optional). Data type - array.
 -  **TimeLimits.EffectiveTimeLimit** - effective TL, defined as the minimal of all TLs except TL for voiding. Data type - date and time with the time zone specified: YYYY-MM-DD hh:mm:ss ±hh:mm
