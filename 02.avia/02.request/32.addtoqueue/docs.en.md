@@ -26,6 +26,7 @@ Adding a booking to the GDS queue.
     * **WaitingConfirmation** - Confirmation Waiting Queue
     * **ServiceInfoChanged** - Queue with SSR changes
     * **TimeLimit** - Queue with expiring TL
+    * **VendorRemarks** - Queue with SSR from airline
 - **AddToQueueConfig.QueuesByNumber** - container with queue sequence numbers. Data type - array.
 - **AddToQueueConfig.QueuesByNumber.QueueNumber** - sequence number of the queue. Data type - int.
 - **AddToQueueConfig.SupplierRequisiteIds** - list of agency IDs in the GDS. Data type - array.

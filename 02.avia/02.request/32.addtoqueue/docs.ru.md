@@ -26,6 +26,7 @@ taxonomy:
     *  **WaitingConfirmation** - Очередь ожидания подтверждения
     *  **ServiceInfoChanged** - Очередь с изменениями в SSR
     *  **TimeLimit** - Очередь с истекающими ТЛ
+    *  **VendorRemarks** - очередь с SSR от авиа компании.
 - **AddToQueueConfig.QueuesByNumber** - контейнер, в котором указаны порядковые номера очередей. Тип данных  - массив. 
 - **AddToQueueConfig.QueuesByNumber.QueueNumber** - порядковый номер очереди. Тип данных - int. (обязательное поле)
 - **AddToQueueConfig.SupplierRequisiteIds** - список идентификаторов агентства в GDS. Тип данных - массив.
