@@ -70,7 +70,8 @@ title: DeleteFromQueue
 	*  UnconfirmedSegments 
 	*  WaitingConfirmation 
 	*  ServiceInfoChanged  
-	*  TimeLimit  
+	*  TimeLimit
+	*  VendorRemarks
 - **.BookQueueInfo.UnnamedQueues** - список номеров неименованных очередей, из которых требуется удалить бронь (необязательный). Тип данных - массив. 
 - **.BookQueueInfo.UnnamedQueues.Queue** - номер очереди, из которой требуется удалить бронь. Тип данных - строка.
 

@@ -69,7 +69,8 @@ If no errors were returned, the operation had been successful.
 	*  UnconfirmedSegments 
 	*  WaitingConfirmation 
 	*  ServiceInfoChanged  
-	*  TimeLimit  
+	*  TimeLimit
+	*  VendorRemarks
 - **.BookQueueInfo.UnnamedQueues** - list of numbers of unnamed queues from which you want to delete the booking (optional). Data type - array.
 - **.BookQueueInfo.UnnamedQueues.Queue** - number of the queue from which you want to delete the booking. Data type - string.
 
