@@ -12,7 +12,7 @@ Contains the following parameters:
 - ** OrderedFlightSegments ** - ordered set of flight segments. Data type - array.
 - ** OrderedFlightSegments.FlightSegment ** - information about the flight segment, contains the flight segment number. Data type - array.
 - ** OrderedFlightSegments.FlightSegment.RequestedSegment ** - flight segment number from the search request. Data type - 32-bit integer.
-- ** OrderedFlightSegments.FlightSegment.SegmentNumber ** - flight segment number. Data type - 64-bit integer.
+- ** OrderedFlightSegments.FlightSegment.SegmentNumber ** - flight segment number. The value is not a reference to the segment ID in the rendition, but is its sequence number within that flight. Data type - 64-bit integer.
 - ** Flights ** - array of flights that are based on this set of segments. Data type - array.
 - ** Flights.Flight ** - contains information about one flight based on a given set of segments. Data type - array.
 - ** Flights.Flight.FlightID ** - flight number, in fact the identifier of a certain combination of a flight segments set, each of which is uniquely associated with a certain itinerary and a particular price. Booking a flight is made by it. Data type - string.
