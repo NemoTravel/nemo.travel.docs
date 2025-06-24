@@ -18,7 +18,7 @@ Execution of the additional operations of 1.2. version.
 -  **Operations.Operation** - one of the operations you want to perform. Data type - enumeration. Possible values are:
 	- **CheckAvailability** - availability check, performed only for the flight.
 	- **GetFareRules** - get fare rules.
-	- **GetSeatMap** - get the seat map.
+	- **GetSeatMap** - get the seat map*.
 	- **GetPrice** - get the current flight price. Performed only for the flight.
 	- **SearchAncillaryServices** - obtaining a list of available services for a flight or booking (only for GDS Sirena and Amadeus).
 	- **GetAllowedCCs** - get the list of credit card codes that can be used to pay this reservation through GDS processing.
@@ -68,6 +68,16 @@ Execution of the additional operations of 1.2. version.
 -   **OperationsRestrictions.SelectedAncillaryServices.Service.PassengerType** - type of passenger for pricing. Data type - string.
 -   **OperationsRestrictions.SelectedAncillaryServices.Service.EMDType** - EMD type. Data type - string.
 -   **OperationsRestrictions.Language** - response language. Data type - string.
+
+>>> *The seat map obtained by GetSeatMap request does not support linking to passengers to display seat prices, if the supplier returns seat offers for each passenger in the order.
+
+To get actual seat prices for passengers in such case it is required to perform additional services request (SearchAncillaryServices) in addition to seat map request (GetSeatMap), mandatory within the same AdditionalOperations request together.
+Getting the price for a seat is performed according to the following algorithm:
+1. In the response to the SearchAncillaryServices request, among the services, seat services with Characteristics and RFISC corresponding to the Characteristics and RFISC of the seat from the seat map are searched. Characteristics and RFISC are mandatory to be provided;
+2. From the obtained subset, a service with the corresponding passenger type (if received for flights) or passenger references (if for bookings) is selected;
+3. A price is selected from the received service.
+
+Return of services for seats in a seat map is not supported yet for all suppliers, so in case it is not possible to find the required service, the price for a seat should be taken from the seat map directly.
 
 ##### Sample
 ```xml
