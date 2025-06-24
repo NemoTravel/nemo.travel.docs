@@ -73,7 +73,7 @@ Execution of the additional operations of 1.2. version.
 
 To get actual seat prices for passengers in such case it is required to perform additional services request (SearchAncillaryServices) in addition to seat map request (GetSeatMap), mandatory within the same AdditionalOperations request together.
 Getting the price for a seat is performed according to the following algorithm:
-1. In the response to the SearchAncillaryServices request, among the services, seat services with Characteristics and RFISC corresponding to the Characteristics and RFISC of the seat from the seat map are searched. Characteristics and RFISC are mandatory to be provided;
+1. In the response to the SearchAncillaryServices request, among the services, seat services with Characteristics and RFISC corresponding to the Characteristics and RFISC of the seat from the seat map are searched. RFISC is mandatory to be provided (if Characteristics are missing, matching will be done by RFISC);
 2. From the obtained subset, a service with the corresponding passenger type (if received for flights) or passenger references (if for bookings) is selected;
 3. A price is selected from the received service.
 
