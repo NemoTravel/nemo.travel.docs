@@ -16,6 +16,7 @@ The latest version of the request, differences are only in the response to the r
 
 -  **BookID** - ID of the booking that you want to update. Data type - long.
 -  **CancelPayment** - attribute of the need to cancel the old booking payment (optional). Data type - boolean.
+-  **RefererID** – The ID of Nemo 1 user used for calculating pricing estimation (optional). Data type: int
 -  **PricingOptions** - additional options for tariffing of the booking (optional). Data type - array.
 -  **PricingOptions.FOPsForAlternativePrices** - FOPs for which you need to get an additional estimation of the booking. Data type - array.
 -  **PricingOptions.FOPsForAlternativePrices.Type** - FOP, for which you need to get an additional estimation of the booking. Data type - string.
