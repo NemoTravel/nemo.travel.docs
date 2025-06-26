@@ -14,6 +14,7 @@ The latest request version, the differences are only in the response in the anci
 #### Request
 
 -  **BookID** - ID of the booking you want to receive. Data type - long.
+-  **RefererID** – The ID of Nemo 1 user used for calculating pricing estimation (optional). Data type: int
 -   **PNRParams:**
   -   **Locator** - Locator of order in GDS. Data type - string.
   -   **PCC** - ID of the agency in GDS which allows to determine unambiguously which agency executes the request.
