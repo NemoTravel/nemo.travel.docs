@@ -77,5 +77,4 @@ taxonomy:
 | ConstitutionalCourtJudgeDocument | Удостоверение судьи Конституционного Суда                                          | F                 | KS                                                                                                                                              |                                           |
 ||
 | MilitaryOfficerDocument          | Удостоверение личности офицера, прапорщика, мичмана                                | M                 | UL                                                                                                                                              |                                           |
-                                                                                                                                    |                                           |
-||
+                                                                                                                                                                            
