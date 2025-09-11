@@ -193,7 +193,9 @@ taxonomy:
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRCode** - код SSR, которую необходимо добавить в PNR в случае бронирования данной допуслуги. Тип данных - строка.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Type** - тип допуслуги (На данный момент - специфика Сирены). Тип данных - строка.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.CompanyCode** - ИАТА код а/к, предоставляющей данную допуслугу. Тип данных - строка.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.EmdType** - тип EMD (A - связан с рейсом, S - для неавиационных сборов). Тип данных - строка. 
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Refundability** - возвратность услуги. Тип данных - перечисление.
+-   **FindAdditionalServicesResult.Services.AncillaryServiceRS.MaxQuantityPerTraveller** - ограничение по количеству услуги на пассажира. Тип данных - строка.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRDescriptionRequired** - признак того, что для бронирования данной допуслуги нужно передавать её описание от пользователя. Тип данных - булево значение.
 -   **FindAdditionalServicesResult.Services.Prices** - список цен доступных допуслуг. Тип данных - массив.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice**  - цена допуслуг. Тип данных - массив.
