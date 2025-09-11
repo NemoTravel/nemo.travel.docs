@@ -77,6 +77,5 @@ taxonomy:
 | ConstitutionalCourtJudgeDocument | Удостоверение судьи Конституционного Суда                                          | F                 | KS                                                                                                                                              |                                           |
 ||
 | MilitaryOfficerDocument          | Удостоверение личности офицера, прапорщика, мичмана                                | M                 | UL                                                                                                                                              |                                           |
-||
-| KZIdentification                 | Удостоверение личности Республики Казахстан                                        | I                 | NP                                                                                                                                              |                                           |
+                                                                                                                                    |                                           |
 ||
