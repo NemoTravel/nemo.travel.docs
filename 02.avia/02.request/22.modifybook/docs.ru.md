@@ -214,15 +214,16 @@ taxonomy:
               <ns1:DataItem>
                 <ns1:ID>-1</ns1:ID>
                 <ns1:TravellerRef>
-                  <ns1:Ref>2</ns1:Ref>
+                  <ns1:Ref>1</ns1:Ref>
                 </ns1:TravellerRef>
-                <ns1:Type>IDDocument</ns1:Type>
-                <ns1:Document>
-                  <ns1:Type>P</ns1:Type>
-                  <ns1:Number>5454545454</ns1:Number>
-                  <ns1:IssueCountryCode>RU</ns1:IssueCountryCode>
-                  <ns1:ElapsedTime>07.09.2022</ns1:ElapsedTime>
-                </ns1:Document>
+                <ns1:Type>LoyaltyCard</ns1:Type>
+                <ns1:LoyaltyCard>
+                  <ns1:OwnerType>Airline</ns1:OwnerType>
+                  <ns1:Owner>SU</ns1:Owner>
+                  <ns1:Number>123123124</ns1:Number>
+                  <ns1:Status>OnRequest</ns1:Status>
+                  <ns1:StatusCode>NN</ns1:StatusCode>
+                </ns1:LoyaltyCard>
               </ns1:DataItem>
             </ns1:ModifyDataItem>
           </ns2:DataItems>
@@ -516,7 +517,7 @@ taxonomy:
              <a:LoyaltyCard>
                <a:OwnerType>Airline</a:OwnerType>
                <a:Owner>SU</a:Owner>
-               <a:Number>111111111</a:Number>
+               <a:Number>123123124</a:Number>
                <a:Status>Confirmed</a:Status>
                <a:StatusCode>HK</a:StatusCode>
              </a:LoyaltyCard>
