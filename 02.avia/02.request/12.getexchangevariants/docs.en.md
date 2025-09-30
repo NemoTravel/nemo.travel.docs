@@ -98,6 +98,7 @@ To exchange all segments for a completely new flight, you do not need to indicat
 -  **SimpleGroupedFlights** - similar to the *SimpleGroupedFlights* parameter from the [Search](/avia/request/search) response.
 -  **ServicesToRefund** - container with infromation about ancillaries. Data type - complex.
 -  **ServicesToRefund.ID** - additional service identifier. Data type - integer.
+-  **PassDataExchangePrice** - ticket exchange fee when changing passenger details. Data type - Money.
 
 ##### Sample
 
