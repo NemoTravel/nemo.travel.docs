@@ -100,6 +100,7 @@ taxonomy:
 -   **SimpleGroupedFlights** - Аналогичен параметру *SimpleGroupedFlights* из ответа [Search](/avia/request/search).
 -   **ServicesToRefund** - контейнер с информацией по доп. услугам, которые будут возвращены. Тип данных - сложный.
 -   **ServicesToRefund.ID** - идентификатор доп. услуги, которая будет возвращена. Тип данный - int.
+-   **PassDataExchangePrice** - цена обмена билетов при изменении данных пассажира. Тип данных - Money.
 
 ##### Примеры
 
