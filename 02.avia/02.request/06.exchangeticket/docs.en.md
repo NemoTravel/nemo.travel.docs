@@ -22,6 +22,7 @@ The latest request version, the differences are only in the response in the anci
 -  **Passengers** - numbers of passengers in the booking whose tickets are required to be exchanged. Data type - array.
 -  **Passengers.Ref** - passenger number in the booking. Data type - 32-bit integer.
 -  **AutoRefundForEmdA** - flag for automatic return of additional services. Works only for Amadeus and Sirena. Data type - boolean.
+-  **Traveller** - New passenger information for exchange. Switches the exchange scenario to calculate the exchange cost when personal data changes. Data type - element type [ExchangeTraveller](/avia/common/exchangetraveller)
 
 ##### Sample
 
