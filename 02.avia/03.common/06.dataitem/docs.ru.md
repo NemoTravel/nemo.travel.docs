@@ -233,6 +233,7 @@ taxonomy:
     -  **ExchangedToPaper** — заменен на бумажный документ; 
     -  **Closed** — закрыт;
     -  **AirportControl** — контроль.
+-   **ElectronicDocument.CouponInfoList.CouponInfo.AllowSecondaryOperations** - признак доступности вторичных операций (обмен/возврат) на сегменте.  Тип данных — булевский. 
 -   **PaperDocument** — бумажный документ (необязательный). Тип данных — массив. 
 -   **PaperDocument.Type** — тип документ. Тип данных — перечисление, возможные значения:
     -   **ItinReceipt** — маршрут-квитанция;
