@@ -197,21 +197,21 @@ taxonomy:
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.Refundability** - возвратность услуги. Тип данных - перечисление.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.MaxQuantityPerTraveller** - ограничение по количеству услуги на пассажира. Тип данных - строка.
 -   **FindAdditionalServicesResult.Services.AncillaryServiceRS.SSRDescriptionRequired** - признак того, что для бронирования данной допуслуги нужно передавать её описание от пользователя. Тип данных - булево значение.
--   **FindAdditionalServicesResult.Services.Prices** - список цен доступных допуслуг. Тип данных - массив.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice**  - цена допуслуг. Тип данных - массив.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value** - объект цены. Тип данных - массив.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value.Amount** - сумма. Тип данных - плавающее c двойной точностью.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.Value.Currency** - валюта. Тип данных - строка.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.ServiceRef** - ссылки на услуги, для которых применима данная цена. Тип данных - массив.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.ServiceRef.Ref** - ссылка на услугу. Тип данных - целое 32 битное число.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.SegmentRef** - ссылки на сегменты, которым принадлежит услуга. Тип данных - массив. 
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.SegmentRef.Ref** - ссылка на сегмент. Тип данных - целое 32 битное число.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes** - типы пассажиров, к которым применима данная цена. Тип данных - массив.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellersTypes.PassTypes** - тип пассажира. Тип данных - перечисление.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellerRef** - ссылка на пассажиров, к которым применена данная цена. Тип данных - массив.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellerRef.Ref** - ссылка на пассажира. Тип данных - целое 32 битное число.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.OfferToken** - токен услуги с динамической ценой, только для поставщика Sirena. Тип данных - строка.
--   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.OfferTtl** - срок действия услуги с динамической ценой, только для поставщика Sirena. Тип данных - datetime.
+-   **FindAdditionalServicesResult.Prices** - список цен доступных допуслуг. Тип данных - массив.
+-   **FindAdditionalServicesResult.Prices.AncillaryServicePrice**  - цена допуслуг. Тип данных - массив.
+-   **FindAdditionalServicesResult.Prices.AncillaryServicePrice.Value** - объект цены. Тип данных - массив.
+-   **FindAdditionalServicesResult.Prices.AncillaryServicePrice.Value.Amount** - сумма. Тип данных - плавающее c двойной точностью.
+-   **FindAdditionalServicesResult.Prices.AncillaryServicePrice.Value.Currency** - валюта. Тип данных - строка.
+-   **FindAdditionalServicesResult.Prices.AncillaryServicePrice.ServiceRef** - ссылки на услуги, для которых применима данная цена. Тип данных - массив.
+-   **FindAdditionalServicesResult.Prices.AncillaryServicePrice.ServiceRef.Ref** - ссылка на услугу. Тип данных - целое 32 битное число.
+-   **FindAdditionalServicesResult.Prices.AncillaryServicePrice.SegmentRef** - ссылки на сегменты, которым принадлежит услуга. Тип данных - массив. 
+-   **FindAdditionalServicesResult.Prices.AncillaryServicePrice.SegmentRef.Ref** - ссылка на сегмент. Тип данных - целое 32 битное число.
+-   **FindAdditionalServicesResult.Prices.AncillaryServicePrice.TravellersTypes** - типы пассажиров, к которым применима данная цена. Тип данных - массив.
+-   **FindAdditionalServicesResult.Prices.AncillaryServicePrice.TravellersTypes.PassTypes** - тип пассажира. Тип данных - перечисление.
+-   **FindAdditionalServicesResult.Prices.AncillaryServicePrice.TravellerRef** - ссылка на пассажиров, к которым применена данная цена. Тип данных - массив.
+-   **FindAdditionalServicesResult.Prices.AncillaryServicePrice.TravellerRef.Ref** - ссылка на пассажира. Тип данных - целое 32 битное число.
+-   **FindAdditionalServicesResult.Prices.AncillaryServicePrice.OfferToken** - токен услуги с динамической ценой, только для поставщика Sirena. Тип данных - строка.
+-   **FindAdditionalServicesResult.Prices.AncillaryServicePrice.OfferTtl** - срок действия услуги с динамической ценой, только для поставщика Sirena. Тип данных - datetime.
 -   **GetAllowedCCsResult** - результат получения списка кодов карт для оплаты GDS процессингом. Тип данных - массив.
 -   **GetAllowedCCsResult.AllowedCCs** - список кодов допустимых карт для оплаты брони GDS процессингом. Тип данных - массив.
 -   **GetAllowedCCsResult.AllowedCCs.Code** - код кредитной карты, которой можно оплатить указанную бронь с помощью GDS процессинга. Тип данных - строка.
