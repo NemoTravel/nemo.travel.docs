@@ -169,6 +169,7 @@ taxonomy:
 -   **SearchData.Sources.SourceInfo** — описание источника, откуда получены результаты. Тип данных — массив.
 -   **SearchData.Sources.SourceInfo.ID** — идентификатор источника, откуда получены результаты. Тип данных — целое 64-битное число.
 -   **SearchData.Sources.SourceInfo.Supplier** — поставщик данного источника. Тип данных — перечисление с поставщиками авиа.
+-   **SearchData.Sources.SourceInfo.DefaultTicketingRequisiteID** — реквизиты выписки данного источника. Тип данных — строка.
 -   **SearchData.SearchThreads** — данные о поисковых потоках с запросами к поставщикам. Тип данных — массив.
 -   **SearchData.SearchThreads.SearchThreadInfo** — данные об одном из поисковых потоков. Тип данных — массив.
 -   **SearchThreadInfo.SourceID** — идентификатор источника, в рамках которого был запущен поисковый поток. Тип данных — целое 64-битное число.
