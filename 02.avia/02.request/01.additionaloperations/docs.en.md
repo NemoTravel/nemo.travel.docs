@@ -201,6 +201,7 @@ Includes the set of elements caused by operstion in the request:
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.TravellerRef.Ref** - traveller reference. Data type - 32-bit integer.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.OfferToken** - token for service with dynamic price, only for Sirena. Data type - string.
 -   **FindAdditionalServicesResult.Services.Prices.AncillaryServicePrice.OfferTtl** - timelimit for service with dynamic price, only for Sirena. Data type - datetime.
+-   **FindAdditionalServicesResult.Prices.AncillaryServicePrice.PriceFreezeTimeLimit** - timilimit for ancillary service price. Data type - datetime.
 -   **GetAllowedCCsResult** - result of obtaining a list of card codes for payment via the GDS processing. Data type - custom.
 -   **GetAllowedCCsResult.AllowedCCs** - list of codes of acceptable cards for booking payment via the GDS processing. Data type - custom.
 -   **GetAllowedCCsResult.AllowedCCs.Code** - code of the credit card which you can use to pay for the specified reservation via the GDS processing. Data type - string.
