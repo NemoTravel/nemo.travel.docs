@@ -114,6 +114,9 @@ Formula for calculating the final ticket cost: TotalAgencyFare * number of PAX (
     -   ValueOfMeasure
     -   Weight
 -   **Tariff.CarryOn.Size** - information on the size restrictions imposed on carryon. Data type - string.
+-   **Tariff.FareFamilyDescID** - ID of the fare families description. Data type - int.
+-   **Tariff.FareFamilyCode** - fare family airline code. Data type - string.
+-   **Tariff.Cabin** - base class of the flight. Data type - string.
 -   **Tariff.FreeMeal** - free meals in this fare. Data type - MealType array.
 -   **MealType** - type of free meals according to the fare. Data type - enumeration, possible values:
     -   AlcoholBeverages
