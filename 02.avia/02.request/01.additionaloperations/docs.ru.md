@@ -179,6 +179,7 @@ taxonomy:
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.CabinComponents.CabinComponent.CabinComponentTypeCode** - тип компоновок кресел 
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.FirstRowNumber** - номер первого ряда. Тип данных - целое 32 битное число.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.CabinCompartments.CabinCompartment.LastRowNumber** - номер последнего ряда. Тип данных - целое 32 битное число.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.Type** — тип этажа (палубы). Тип данных - строка
 -   **GetPriceResult** - результат получения актуальной цены перелёта. Тип данных - массив.
 -   **GetPriceResult.Flight** - плоский перелёт v1.1. Тип данных - массив.
 -   **FindAdditionalServicesResult** - результат получения списка доступных допуслуг. Тип данных - массив.
