@@ -65,6 +65,8 @@ Flight representation format 1.1.
 -   **Segment.BookingClass.BookingClassCode** - flight class code. Data type - string.
 -   **Segment.BookingClass.FreeSeatCount** - number of available seats for this flight class. Data type - 32-bit integer.
 -   **Segment.BookingClass.MealType** - available type of meal for this flight class. Data type - string.
+-   **Segment.OpFlightNumber** - flight number for this segment of flight. Data type - string.
+-   **Segment.CabinLayout** - Seat configuration. Data type - string.
 -   **Segment.CouponStatus** — status of the coupon. Returned when the [GetEDData](/avia/request/geteddata) request is executed. Data type - enumeration, possible values:
     -  **Open** — open for use;
     -  **Used** — used; 
