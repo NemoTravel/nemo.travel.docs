@@ -76,6 +76,8 @@ taxonomy:
     -   **OnRequest**
     -   **Rejected**
 -   **Segment.RequestedSegment** - Ссылка на сегмента из запроса пользователя. Тип данных - Int32.
+-   **Segment.OpFlightNumber** - код авиакомпании, непосредственно выполняющей данный рейс. Тип данных — строка.
+-   **Segment.CabinLayout** - код планировки салона. Тип данных — строка.
 -   **Segment.BookingClass.MealType** — доступный тип питания на данном классе перелёта. Тип данных — строка.
 -   **Segment.CouponStatus** — статус купона. Возвращается при запросе [GetEDData](/avia/request/geteddata). Тип данных — перечисление. Возможные значения:
     -  **Open** — открыт для использования;
