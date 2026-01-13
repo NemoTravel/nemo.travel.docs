@@ -213,6 +213,7 @@ taxonomy:
 -   **FindAdditionalServicesResult.Prices.AncillaryServicePrice.TravellerRef.Ref** - ссылка на пассажира. Тип данных - целое 32 битное число.
 -   **FindAdditionalServicesResult.Prices.AncillaryServicePrice.OfferToken** - токен услуги с динамической ценой, только для поставщика Sirena. Тип данных - строка.
 -   **FindAdditionalServicesResult.Prices.AncillaryServicePrice.OfferTtl** - срок действия услуги с динамической ценой, только для поставщика Sirena. Тип данных - datetime.
+-   **FindAdditionalServicesResult.Prices.AncillaryServicePrice.PriceFreezeTimeLimit** - таймлимит цены на доп. услугу Тип данных - datetime.
 -   **GetAllowedCCsResult** - результат получения списка кодов карт для оплаты GDS процессингом. Тип данных - массив.
 -   **GetAllowedCCsResult.AllowedCCs** - список кодов допустимых карт для оплаты брони GDS процессингом. Тип данных - массив.
 -   **GetAllowedCCsResult.AllowedCCs.Code** - код кредитной карты, которой можно оплатить указанную бронь с помощью GDS процессинга. Тип данных - строка.
