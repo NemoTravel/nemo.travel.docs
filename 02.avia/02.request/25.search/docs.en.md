@@ -162,6 +162,7 @@ Version 1.2. flight search.
 -  **SearchData.Now** - similar to SearchData.EndTime.
 -  **SearchData.StartTime** - date and time of the search beginning on the server. Data type - string, the format is <code>yyyy-mm-dd hh:mm:ss ±hh:mm</code>.
 -  **SearchData.EndTime** - date and time of the search end on the server. Data type - string, the format is <code>yyyy-mm-dd hh:mm:ss ±hh:mm</code>.
+-  **SearchData.IsComplete** — attribute that indicating whether the search result has been generated. Data type - bool.
 -  **SearchData.IsAsync** - attribute of asynchronous search. Data type - bool.
 -  **SearchData.Sources** - data on the sources (packages), where the results were obtained. Data type - array.
 -  **SearchData.Sources.SourceInfo** - description of the source from which the results were obtained. Data type - array.
