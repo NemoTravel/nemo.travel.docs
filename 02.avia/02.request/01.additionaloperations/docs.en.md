@@ -208,6 +208,7 @@ Includes the set of elements caused by operstion in the request:
 -  **ActualizedFlight.Segments.Segment.SupplierInfo** - information about the segment statuses if the flight is unavailable for booking and operation was executed via the seat taking request. Data type - string. Supported by GalileoUapi, Sabre, Amadeus, Galileo.
 -  **FlightsByFareFamily** - contains the result of the GetFareFamilies operation. Data type - [Flight](/avia/common/flight) array.
 -  **SubsidizedTariffs** - contains the result of GetSubsidizedTariffs operation. Data type - [Flight](/avia/common/flight) array.
+-  **PricingDebugLogs** - Pricing rules debugging logs
 
 >>>> The flight with a new ID will be received as a result of the request. This ID should be used in further operations (for example, in the booking).
 
