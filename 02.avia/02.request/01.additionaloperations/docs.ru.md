@@ -221,6 +221,7 @@ taxonomy:
 -  **FlightsByFareFamily** - содержит результат операции GetFareFamilies. Тип данных — массив - [Flight](/avia/common/flight).
 -  **SubsidizedTariffs** - содержит результат операции GetSubsidizedTariffs. Тип данных — массив - [Flight](/avia/common/flight).
 -  -   **ResultsFiltersApplied** - применение фильтров результата. Тип данных - bool.
+-  **PricingDebugLogs** - отладка правил ЦО
 
 >>>> В качестве результата запроса будет получен полет с новым ИД. Этот ИД необходимо использовать в дальнейших операциях (например, при бронировании).
 
