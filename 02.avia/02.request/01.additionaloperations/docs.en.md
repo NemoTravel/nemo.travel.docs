@@ -169,7 +169,7 @@ Includes the set of elements caused by operstion in the request:
 - **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.RFISC** - RFISC of the seat. Data type - string.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Characteristics** - seat row characteristics. Data type - string.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.CabinCode** - the class to which the seat belongs. Only for MixvelPlatform. Data type - string.
--   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.Type** — name of floor (deck). Data type - string.
+-   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.Type** — type of floor (deck). Data type - string.
 -   **GetPriceResult** - result of getting the actual price of the flight. Data type - custom.
 -   **GetPriceResult.Flight** - flat flight v1.1. Data type - custom.
 -   **FindAdditionalServicesResult** - result of obtaining a list of available ancillary services. Data type - custom.
