@@ -168,6 +168,7 @@ Version 1.2. flight search.
 -  **SearchData.Sources.SourceInfo** - description of the source from which the results were obtained. Data type - array.
 -  **SearchData.Sources.SourceInfo.ID** - ID of the source where the results were obtained. Data type - int64.
 -  **SearchData.Sources.SourceInfo.Supplier** - provider of this search. Data type - enumeration with air providers.
+-  **SearchData.Sources.SourceInfo.DefaultTicketingRequisiteID** - Ticketing details for this source. Data type — string.
 -  **SearchData.SearchThreads** - data about search threads with requests to providers. Data type - array.
 -  **SearchData.SearchThreads.SearchThreadInfo** - data about one of the search thread. Data type - array.
 -  **SearchThreadInfo.SourceID** - ID in which the search thread was launched. The data type is int64.
