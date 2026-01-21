@@ -29,11 +29,11 @@ taxonomy:
 -   **UnnamedQueueInfoList** - контейнер с информацией по неименованным очередям. Тип данных - массив.
 -   **QueueInfo** - информация об очереди. Тип данных - массив.
 -   **QueueInfo.Queue** - номер/название очереди (в зависимости от GDS). Тип данных - строка.
--   **QueueInfo.BookInfoList** - список заказов, находящихся в очереди.
--   **BookInfoList.BookInfo** - информация о заказе.
--   **BookInfo.BookID** - идентификатор заказа. Тип данных - long.
--   **BookInfo.Locator** - локатор заказа в GDS. Тип данных - строка.
--   **BookInfo.Supplier** - поставщик. Тип данных - перечисление. Возможные значения:
+-   **QueueInfo.ExternalBookInfoList** - список заказов, находящихся в очереди.
+-   **ExternalBookInfoList.ExternalBookInfo** - информация о заказе.
+-   **ExternalBookInfo.BookID** - идентификатор заказа. Тип данных - long.
+-   **ExternalBookInfo.Locator** - локатор заказа в GDS. Тип данных - строка.
+-   **ExternalBookInfo.Supplier** - поставщик. Тип данных - перечисление. Возможные значения:
  -   Sabre
  -   Sirena
  -   Galileo
@@ -48,6 +48,9 @@ taxonomy:
  -   GalileoUAPI
  -   SolringNDC
  -   Farelogix
+- 	**ExternalBookInfo.QueueCategory** - номер категории. Тип данных - int.
+- 	**ExternalBookInfo.SupplierRequisiteID** - Название пакета рекизитов. Тип данных - строка
+- 	**ExternalBookInfo.SourceID** - ID пакета рекизитов. Тип данных - int
 -   **BookInfo.RecordInfoList** - контейнер с информацией об уведомлениях по заказам, находящихся в очереди. Тип данных - сложный. 
 -   **RecordInfoList.RecordInfo** - контейнер с информация об уведомлениях. Тип данных - сложный.
 -   **RecordInfo.ID** - идентификатор уведомления. Тип данных - строка.
