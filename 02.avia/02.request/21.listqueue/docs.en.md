@@ -47,6 +47,9 @@ Travelfusion
 Mystifly
 GalileoUAPI
 SolringNDC
+- **ExternalBookInfo.QueueCategory** - number of queue category. Data type - int.
+- **ExternalBookInfo.SupplierRequisiteID** - name of requisite . Data type - string.
+- **ExternalBookInfo.SourceID** - id of requisite. Data type - int.
 - **BookInfo.RecordInfoList** - сontainer with information about notifications for orders in queue. Data type - array.
 - **RecordInfoList.RecordInfo** - container with information about notification. Data type - array.
 - **RecordInfo.ID** - record id. Data type - string.
