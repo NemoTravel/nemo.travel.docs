@@ -120,6 +120,8 @@ Search by the schedule.
     - **Business** - Business class (both standard and premium).
     - **First** - First class (both standard and premium).
     - **Other** - All other classes that do not belong to any of the above.
+- **ScheduleSegment.ETicket** - attribute of the possibility of issuing an e-ticket on this segment. Data type - bool.
+- **ScheduleSegment.OperatingFlightNumber** — light number for this flight segment. Data type - 32-bit integer.
 
 ##### Sample
 
