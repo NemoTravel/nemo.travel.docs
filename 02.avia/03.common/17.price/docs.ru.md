@@ -214,6 +214,27 @@ Price
 -   **PassengerTypePrice.AgencyFare** — Cумма тарифа в валюте агентства. Тип данных — [Money](/avia/common/money).
 -   **PassengerTypePrice.TotalAgencyFare** — Cумма тарифа и такс в валюте агентства. Тип данных — [Money](/avia/common/money).
 -   **PassengerTypePrice.ChargeBreakdown** - Разбивка сборов. Тип данных - массив ChargeBreakdown.
+-   **PassengerTypePrice.VATBreakdown** - Структура НДС по услуге данного электронного документа. Тип данных — сложный.
+-   **PassengerTypePrice.VATBreakdown.Tariff** - контейнер с информацией по НДС от тарифа. Тип данных — сложный.
+-   **PassengerTypePrice.VATBreakdown.Tariff.Amount** - сумма. Тип данных — decimal.
+-   **PassengerTypePrice.VATBreakdown.Tariff.Currency** - ISO Alpha3 код валюты. Тип данных — string.
+-   **PassengerTypePrice.VATBreakdown.Tariff.Percent** - налоговая ставка НДС в процентах. Тип данных - double.   
+-   **PassengerTypePrice.VATBreakdown.Tariff.Breakdown** - контейнер с информацией по НДС с посегментной разбивкой. Тип данных — сложный. 
+-   **PassengerTypePrice.VATBreakdown.Tariff.Breakdown.Tariff** - контейнер с информацией по НДС от тарифа для каждого сегмента.  Тип данных — сложный.
+-   **PassengerTypePrice.VATBreakdown.Tariff.Breakdown.Tariff.Amount** - сумма. Тип данных — decimal.
+-   **PassengerTypePrice.VATBreakdown.Tariff.Breakdown.Tariff.Currency** - ISO Alpha3 код валюты. Тип данных — string.
+-   **PassengerTypePrice.VATBreakdown.Tariff.Breakdown.Tariff.Percent** - налоговая ставка НДС в процентах. Тип данных - double.
+-   **PassengerTypePrice.VATBreakdown.Tariff.Breakdown.Tariff.SegmentRefs** - ссылка на сегменты. Тип данных — [RefList](/avia/common/reflist).
+-   **PassengerTypePrice.VATBreakdown.Taxes** - НДС от суммы такс. Тип данных — сложный.
+-   **PassengerTypePrice.VATBreakdown.Taxes.Amount** - сумма. Тип данных — decimal.
+-   **PassengerTypePrice.VATBreakdown.Taxes.Currency** - ISO Alpha3 код валюты. Тип данных — string.
+-   **PassengerTypePrice.VATBreakdown.Taxes.Breakdown** - контейнер с информацией по НДС от такс. Тип данных — сложный.
+-   **PassengerTypePrice.VATBreakdown.Taxes.Breakdown.Tax** - контейнер с информацией по НДС от конкретной таксы.  Тип данных — сложный.
+-   **PassengerTypePrice.VATBreakdown.Taxes.Breakdown.Tax.Amount** - сумма. Тип данных — decimal.
+-   **PassengerTypePrice.VATBreakdown.Taxes.Breakdown.Tax.Currency** - ISO Alpha3 код валюты. Тип данных — string.
+-   **PassengerTypePrice.VATBreakdown.Taxes.Breakdown.Tax.Percent** - налоговая ставка НДС в процентах. Тип данных - double.
+-   **PassengerTypePrice.VATBreakdown.Taxes.Breakdown.Tax.Code** - код таксы. Тип данных — string.
+-   **PassengerTypePrice.VATBreakdown.Total** - НДС от суммы тарифа и такс. Тип данных - [Money](/avia/common/money).
 -   **ChargeBreakdown** — Содержит разбивку составляющих сбора из ценообразования на пассажира, а также величину округления при конвертации в валюту агентства.
 -   **ChargeBreakdown.Charge** — Информация о конкретном сборе, величине округления. Тип данных — массив.
 -   **ChargeBreakdown.Charge.Amount** — Абсолютное значение сбора, округления. Тип данных — дробное число.
