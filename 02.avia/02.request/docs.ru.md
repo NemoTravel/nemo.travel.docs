@@ -60,4 +60,4 @@ process:
 -   **[GroupSearch](/avia/request/groupsearch)** - Запрос поиска перелётов с сгруппированной выдачей.
 -   **[ImportPnrFromHost](/avia/request/importpnrfromhost)** - Запрос используется для получение ГРС локатора, если есть данные по локатору а/к..
 
-Актуальный список поддержки запросов для каждой из GDS необходимо смотреть в данной [**таблице**](https://docs.google.com/spreadsheets/d/1ufQbczW0UJ8ZoXIFy7ZQKgBa_rnVjA2A77x8bGPAIJw/edit?usp=sharing)
+Актуальный список поддержки запросов для каждой из GDS необходимо смотреть в данной [**таблице**](https://disk.yandex.ru/i/orGXwxD13pz_sg)
