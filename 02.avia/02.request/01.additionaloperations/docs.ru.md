@@ -160,6 +160,8 @@ taxonomy:
     -   **W** — у окна;
     -   **NPW** — у прохода (Near Passenger Way);
     -   **M** —  месту между W и NPW;
+    -   **несколько значений** через пробел: например, NPW W;
+    -   **"любой тип" NE** - место не существует;
 <!--    -   **any type + postfix "NE"** — seat does not exist.-->
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.Characteristics** — дефолтная характеристика места. Тип данных - строка.
 -   **GetSeatMapResult.SeatMapSegments.SeatMapSegment.Floors.Floor.SeatRows.SeatRow.Seats.Seat.IsFree** — признак свободного места. Тип данных - bool.
