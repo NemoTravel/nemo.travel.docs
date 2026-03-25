@@ -251,6 +251,7 @@ taxonomy:
                     <b:CouponStatus>Open</b:CouponStatus>
                  </b:CouponInfo>
                 </CouponInfoList>
+                <a:SalePoint>47600167</a:SalePoint>
               </a:ElectronicDocument>
             </a:DataItem>
             <a:DataItem>
