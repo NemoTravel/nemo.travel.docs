@@ -243,6 +243,7 @@ The latest version of the request, differences are only in the response in the a
                     <a:Currency>RUB</a:Currency>
                   </a:Total>
                 </a:VATBreakdown>
+                <a:SalePoint>47600167</a:SalePoint>
               </a:ElectronicDocument>
             </a:DataItem>
            </a:DataItems>
