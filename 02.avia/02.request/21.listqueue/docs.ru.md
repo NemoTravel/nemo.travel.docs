@@ -93,7 +93,6 @@ taxonomy:
           <stl:AuthToken>token010203D</stl:AuthToken>
         </ns1:Requisites>
         <ns1:UserID>100</ns1:UserID>
-        <ns1:RequestType>P</ns1:RequestType>
         <ns1:RequestBody>
           <ns2:QueueList>
             <ns2:Queue>TicketsAdded</ns2:Queue>
