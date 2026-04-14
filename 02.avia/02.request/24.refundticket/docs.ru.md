@@ -33,7 +33,6 @@ taxonomy:
           <ns1:UserContextId>12796</ns1:UserContextId>
         </ns1:Requisites>
         <ns1:UserID>12796</ns1:UserID>
-        <ns1:RequestType>P</ns1:RequestType>
         <ns1:RequestBody>
           <ns2:BookID>1410815</ns2:BookID>
           <ns2:Passengers>
