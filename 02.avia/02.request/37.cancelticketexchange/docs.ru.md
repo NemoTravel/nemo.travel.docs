@@ -23,7 +23,6 @@ title: CancelTicketExchange
                <stl:AuthToken>token010203D</stl:AuthToken>
             </stl:Requisites>
             <stl:UserID>100</stl:UserID>
-            <stl:RequestType>P</stl:RequestType>
             <stl:RequestBody>
                <avia:BookID>790417</avia:BookID>
             </stl:RequestBody>

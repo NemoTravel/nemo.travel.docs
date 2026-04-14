@@ -30,7 +30,6 @@ admin:
           <stl:AuthToken>token010203D</stl:AuthToken>
         </ns1:Requisites>
         <ns1:UserID>100</ns1:UserID>
-        <ns1:RequestType>P</ns1:RequestType>
         <ns1:RequestBody>
           <ns2:BookID>790415</ns2:BookID>
           <ns2:FlightID>1145898262000000</ns2:FlightID>
