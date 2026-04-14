@@ -23,7 +23,6 @@ Request for session opening.
                <stl:AuthToken>token010203D</stl:AuthToken>
             </stl:Requisites>
             <stl:UserID>100</stl:UserID>
-            <stl:RequestType>Р</stl:RequestType>
             <stl:RequestBody>
                <avia:Source>-12345</avia:Source>
             </stl:RequestBody>

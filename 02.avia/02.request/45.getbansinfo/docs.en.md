@@ -25,7 +25,6 @@ Request for getting information on bans.
                <stl:AuthToken>token010203D</stl:AuthToken>
             </stl:Requisites>
             <stl:UserID>100</stl:UserID>
-            <stl:RequestType>P</stl:RequestType>
             <stl:RequestBody>
                <avia:SubAgenciesIDs>
                   <avia:ID>1</avia:ID>
