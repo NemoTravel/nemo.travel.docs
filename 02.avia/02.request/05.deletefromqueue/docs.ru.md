@@ -88,7 +88,6 @@ title: DeleteFromQueue
           <ns1:UserContextId>10001</ns1:UserContextId>
         </ns1:Requisites>
         <ns1:UserID>10000</ns1:UserID>
-        <ns1:RequestType>P</ns1:RequestType>
         <ns1:RequestBody>
           <ns2:BookQueueList>
             <ns2:BookQueueInfo>
