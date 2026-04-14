@@ -1,5 +1,6 @@
 ---
 title: 'Nemo Connect Hotels'
+published: false
 ---
 
 ### Chapter 5
