@@ -26,7 +26,6 @@ taxonomy:
           <stl:AuthToken>token010203D</stl:AuthToken>
         </ns1:Requisites>
         <ns1:UserID>100</ns1:UserID>
-        <ns1:RequestType>P</ns1:RequestType>
         <ns1:RequestBody>
           <ns2:FlightID>1111110222000002</ns2:FlightID>
         </ns1:RequestBody>
