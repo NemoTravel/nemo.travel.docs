@@ -65,7 +65,6 @@ Request for date range search.
     <stl:AuthToken>token010203D</stl:AuthToken>
   </Requisites>
   <UserID>100</UserID>
-  <RequestType>P</RequestType>
   <RequestBody>
     <a:RequestedFlightInfo>
       <a:ODPairs>
