@@ -29,7 +29,6 @@ title: RestoreBook
                <stl:AuthToken>token010203D</stl:AuthToken>
             </stl:Requisites>
             <stl:UserID>100</stl:UserID>
-            <stl:RequestType>P</stl:RequestType>
             <stl:RequestBody>
                <avia:BookID>555555</avia:BookID>
                <avia1:RequestorTags>
