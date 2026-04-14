@@ -29,16 +29,14 @@ taxonomy:
          <!--Optional:-->
          <avia:Request>
             <stl:Requisites>
-               <stl:AuthToken>71D685584105397D2DC761C93F93E405</stl:AuthToken>
+               <stl:AuthToken>test1234</stl:AuthToken>
                <!--Optional:-->
-               <stl:NemoOneAuthToken>71D685584105397D2DC761C93F93E405</stl:NemoOneAuthToken>
+               <stl:NemoOneAuthToken>test1324</stl:NemoOneAuthToken>
                <!--Optional:-->
-               <stl:UserContextId>3599</stl:UserContextId>
+               <stl:UserContextId>1111</stl:UserContextId>
 
             </stl:Requisites>
-            <stl:UserID>3599</stl:UserID>
-            <!--Optional:-->
-            <stl:RequestType>P</stl:RequestType>
+            <stl:UserID>1111</stl:UserID>
             <stl:RequestBody>
                <avia:Source>-10179</avia:Source>
                <avia:StaticType>ClassOfService</avia:StaticType>
