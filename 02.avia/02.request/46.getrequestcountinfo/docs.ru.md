@@ -27,7 +27,6 @@ title: GetRequestCountInfo
                <stl:AuthToken>token010203D</stl:AuthToken>
             </stl:Requisites>
             <stl:UserID>100</stl:UserID>
-            <stl:RequestType>P</stl:RequestType>
             <stl:RequestBody>
                <avia:StartDate>2021-02-26T00:00:00</avia:StartDate>
                <avia:EndDate>2022-03-15T00:00:00</avia:EndDate>
