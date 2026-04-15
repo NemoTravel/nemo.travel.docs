@@ -136,7 +136,6 @@ Creation of a flight booking. Works with a 2.0 booking structure. Differences ar
                <stl:AuthToken>token</stl:AuthToken>
             </stl:Requisites>
             <stl:UserID>123</stl:UserID>
-            <stl:RequestType>P</stl:RequestType>
             <stl:RequestBody>
           <avia:FlightID>123</avia:FlightID>
                <avia1:Travellers>
