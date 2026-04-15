@@ -33,7 +33,6 @@ The latest request version, the differences are only in the response in the anci
     <stl:AuthToken>token010203D</stl:AuthToken>
   </Requisites>
   <UserID>100</UserID>
-  <RequestType>P</RequestType>
   <RequestBody xmlns:a="http://nemo-ibe.com/Avia">
     <a:BookID>790550</a:BookID>
     <a:FlightID>1145941926000000</a:FlightID>

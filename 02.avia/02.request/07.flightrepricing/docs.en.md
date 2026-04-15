@@ -43,7 +43,6 @@ Flight repricing. The request includes the availability check of the flight. Sav
                     <stl:AuthToken>token010203D</stl:AuthToken>
                 </ns1:Requisites>
                 <ns1:UserID>100</ns1:UserID>
-                <ns1:RequestType>U</ns1:RequestType>
                 <ns1:RequestBody>
                     <ns2:FlightID>11100011100011100</ns2:FlightID>
                     <ns2:PricingInfo>
