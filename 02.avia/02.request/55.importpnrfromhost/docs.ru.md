@@ -24,7 +24,6 @@ title: ImportPnrFromHost
     <stl:AuthToken>token010203D</stl:AuthToken>
   </Requisites>
   <UserID>100</UserID>
-  <RequestType>P</RequestType>
   <RequestBody>
     <a:HostLocator>XXX123</a:HostLocator>
     <a:AirlineCode>XX</a:AirlineCode>
