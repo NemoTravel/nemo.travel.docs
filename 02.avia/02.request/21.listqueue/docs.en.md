@@ -93,7 +93,6 @@ If the request does not indicate the packages for which it is necessary to read 
           <stl:AuthToken>token010203D</stl:AuthToken>
         </ns1:Requisites>
         <ns1:UserID>100</ns1:UserID>
-        <ns1:RequestType>P</ns1:RequestType>
         <ns1:RequestBody>
           <ns2:QueueList>
             <ns2:Queue>TicketsAdded</ns2:Queue>
