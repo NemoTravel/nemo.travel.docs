@@ -85,6 +85,16 @@ taxonomy:
 - 	 **VATBreakdown.Total** - НДС от суммы тарифа и такс. Тип данных - [Money](/avia/common/money).
 -    **IssuierSupplierID** - идентификатор реквизита выписки. Тип данных - строка. 
 -    **AgencyIATACode** - IATA код агента. Тип данных - строка. 
+-    **CouponInfoList** - структура с информацией о купонах. Тип данных — сложный.
+-    **CouponInfoList.CouponInfo** - секция с информацией о купонах. Тип данных — сложный.
+-    **CouponInfoList.CouponInfo.CouponNumber** - номер купона. Тип данных — строка.
+-    **CouponInfoList.CouponInfo.SegmentRef** - ссылка на сегмент, к которому относится данный купон. Тип данных — целое 32-битное число.
+-    **CouponInfoList.CouponInfo.CouponStatusCode** - статус купона, получаемый от поставщика. Тип данных — строка.
+
+В GDS Sirena также добавлены поля:
+-    **CouponInfoList.CouponInfo.CouponStatus** - статус купона. Тип данных — перечисление.
+-    **CouponInfoList.CouponInfo.AllowSecondaryOperations** - признак доступности вторичных операций (обмен/возврат) на сегменте. Тип данных — булевский.
+
 
 ##### Пример
 ```xml
