@@ -527,6 +527,8 @@ D 993 ПЛАТА ПРИ ИЗМЕНЕНИИ</a:Description>
                            <b:CouponNumber>1</b:CouponNumber>
                            <b:SegmentRef>0</b:SegmentRef>
                            <b:CouponStatusCode>O</b:CouponStatusCode>
+                           <b:CouponStatus>Open</b:CouponStatus>
+                           <b:AllowSecondaryOperations>true</b:AllowSecondaryOperations>
                         </b:CouponInfo>
                      </CouponInfoList>
                   </c:EDMask>
