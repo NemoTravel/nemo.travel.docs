@@ -34,6 +34,7 @@ taxonomy:
 -  **OperationsRestrictions.PricingInfo.BookingClassCodes.BookingClassCodesForSegment.BookingClassCode** - литера класса перелёта для данного сегмента. Тип данных — строка.
 -  **OperationsRestrictions.PricingInfo.Passengers** - содержит информацию о пассажирах, для которых требуется найти цену перелёта. Тип данных — массив.
 -  **OperationsRestrictions.PricingInfo.Passengers.Passenger** - содержит информацию об одном из типов пассажиров, для которых требуется найти цену перелёта. Тип данных — массив.
+-  **OperationsRestrictions.PricingInfo.Passengers.Passenger.Id** - ИД конкретного пассажира в бронировании (необязательный). Тип данных — int.
 -  **OperationsRestrictions.PricingInfo.Passengers.Passenger.Type** - тип пассажира. Тип данных — перечисление.
 -  **OperationsRestrictions.PricingInfo.Passengers.Passenger.Count** - количество пассажиров данного типа. Тип данных — целое 32-битное число.
 -  -   **OperationsRestrictions.PricingInfo.Passengers.Passenger.Age** - возраст пассажира. Тип данных - строка.
