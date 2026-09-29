@@ -104,6 +104,11 @@ taxonomy:
     -   **Refundable** — возвратный;
     -   **NonRefundable** — невозвратный;
     -   **PenaltiesApplies** — возвратный со штрафами.
+-   **Flight.PriceInfo.Price.Exchangeable** — тип возможности обмена билета перелёта. Тип данных — перечисление, возможные значения:
+    -   **Unknown** — неизвестно;
+    -   **Exchangeable** — возможен обмен;
+    -   **NonExchangeable** — обмен невозможен;
+    -   **PenaltiesApplies** — возможен обмен со штрафами.
 -   **Flight.PriceInfo.Price.PrivateFareInd** — признак наличия приватных тарифов в данной цене. Тип данных — булевский.
 -   **Flight.PriceInfo.Price.TicketTimeLimit** — таймлимит данной цены (цена действительная до) в формате <code>yyyy-mm-ddthh:mm:ss</code>. Тип данных — строка.
 -   **Flight.PriceInfo.Price.PassengerFares** — массив ценовых составляющих по типам пассажиров. Тип данных — сложный.
