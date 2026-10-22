@@ -120,6 +120,7 @@ Price
 -   **PricePart.PricingDebug.Object.SsrCodes** - Код SSR, ассоциированного с данной допуслуглй. Тип данных - строка.
 -   **PricePart.PricingDebug.Object.FormOfPayment** - Форма оплаты.  Тип данных - строка
 -   **PricePart.PricingDebug.Object.AgencyCode** - Код агентства. Тип данных — строка.
+-   **PricePart.PricingDebug.Object.HoursAfterTicketing** - Время после выписки заказа. Тип данных — строка.
 -   **PricePart.SubAgentMarkup** - Суммарный сбор субагента в валюте пакета реквизитов. Тип данных - [Money](/avia/common/money).
 -   **PricePart.SubAgentChargeBreakdown** - Разбивка сбора субагента в валюте субагентства. 
 -   **SubAgentChargeBreakdown.Charge** — Информация о конкретном сборе. Тип данных — массив.
