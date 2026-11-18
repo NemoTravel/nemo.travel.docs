@@ -50,7 +50,7 @@ taxonomy:
 * **OfferToken** - токен услуги с динамической ценой, только для поставщика Sirena. Тип данных - строка.
 * **OfferTtl** - срок действия услуги с динамической ценой, только для поставщика Sirena. Тип данных - datetime.
 * **IsEmulated** - признак доп. услуги, которая не добавлена в GDS, однако добавление произойдет в процессе выписки ПНРа. Поле актуально для следующих GDS: Accelaero, AerTicket, BritishAirwaysNdc, IberiaNdc, NavitaireJson, S7 NDC, LydiaPSS, SabreDigitalConnect. Тип данных - bool.
-* **StableIdentity** - уникальный внутренний идентификатор услуги поставщика. Тип данных - строка.
+* **Identity** - уникальный внутренний идентификатор услуги поставщика. Тип данных - строка.
 
 Вызов списка доступных допуслуг инициируется параметром SearchAncillaryServices в запросе [AdditionalOperations](/avia/request/additionaloperations). В ответе на этот запрос вы получите список допуслуг доступных на данный рейс.
 
